@@ -1,0 +1,1 @@
+BM25는 키워드 기반의 sparse retrieval 방식이다.
