@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# 인덱스 (자동 생성됨)
+indexes/
+
+# 세션 이력
+sessions/
+
+# 업로드된 문서 (용량 큼)
+corpus_docs/
+malicious_docs/
+
+# 모델 캐시
+.cache/
+*.bin
+*.pt
+*.safetensors
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

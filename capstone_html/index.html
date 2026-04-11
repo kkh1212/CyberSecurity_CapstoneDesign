@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MutedRAG — 회사 AI 어시스턴트</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    /* ─── 기본 리셋 ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:        #1B2A4A;
+      --navy-light:  #243660;
+      --navy-hover:  #2d4278;
+      --accent:      #4A90D9;
+      --accent-glow: rgba(74,144,217,0.35);
+      --sidebar-w:   260px;
+      --bg:          #111827;
+      --surface:     #1e293b;
+      --surface2:    #263347;
+      --border:      rgba(255,255,255,0.07);
+      --text:        #e2e8f0;
+      --text-muted:  #94a3b8;
+      --user-bubble: #1d4ed8;
+      --bot-bubble:  #1e293b;
+      --radius:      12px;
+    }
+
+    html, body { height: 100%; overflow: hidden; font-family: 'Segoe UI', sans-serif; }
+    body { background: var(--bg); color: var(--text); display: flex; }
+
+    /* ─── 사이드바 ─── */
+    #sidebar {
+      width: var(--sidebar-w);
+      min-width: var(--sidebar-w);
+      background: var(--navy);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      border-right: 1px solid var(--border);
+      transition: transform 0.3s;
+    }
+
+    #sidebar-header {
+      padding: 20px 16px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    #sidebar-header .logo {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.03em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #sidebar-header .logo .dot {
+      width: 8px; height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent);
+    }
+
+    #new-chat-btn {
+      width: 100%;
+      margin-top: 12px;
+      background: var(--navy-hover);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+    #new-chat-btn:hover { background: var(--accent); }
+
+    #chat-history-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px;
+    }
+
+    .history-item {
+      padding: 9px 12px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: background 0.15s, color 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .history-item:hover { background: var(--navy-hover); color: var(--text); }
+    .history-item.active { background: var(--navy-hover); color: #fff; }
+
+    #sidebar-footer {
+      padding: 12px 16px;
+      border-top: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    #status-dot {
+      display: inline-block;
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #6b7280;
+      margin-right: 5px;
+      transition: background 0.3s;
+    }
+    #status-dot.online  { background: #22c55e; box-shadow: 0 0 6px #22c55e; }
+    #status-dot.offline { background: #ef4444; }
+
+    /* ─── 보안 로그 패널 ─── */
+    #security-panel {
+      border-top: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    #security-panel-header {
+      padding: 8px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+      transition: color 0.2s;
+    }
+    #security-panel-header:hover { color: var(--text); }
+
+    #security-panel-header .sec-title {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    #sec-badge {
+      background: #ef4444;
+      color: #fff;
+      border-radius: 10px;
+      font-size: 0.68rem;
+      padding: 1px 6px;
+      display: none;
+      animation: pulse-badge 1.5s ease infinite;
+    }
+
+    @keyframes pulse-badge {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.5; }
+    }
+
+    #security-log {
+      max-height: 180px;
+      overflow-y: auto;
+      padding: 0 8px 8px;
+      display: none;
+    }
+    #security-log::-webkit-scrollbar { width: 3px; }
+    #security-log::-webkit-scrollbar-thumb { background: var(--navy-hover); }
+
+    .sec-event {
+      font-size: 0.72rem;
+      padding: 5px 8px;
+      border-radius: 6px;
+      margin-bottom: 4px;
+      border-left: 3px solid transparent;
+      line-height: 1.4;
+    }
+    .sec-event.malicious {
+      background: rgba(239,68,68,0.1);
+      border-color: #ef4444;
+      color: #fca5a5;
+    }
+    .sec-event.suspicious {
+      background: rgba(234,179,8,0.1);
+      border-color: #eab308;
+      color: #fde047;
+    }
+    .sec-event .ev-source {
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 180px;
+      display: block;
+    }
+    .sec-event .ev-meta { color: var(--text-muted); font-size: 0.68rem; }
+
+    /* ─── 필터 배지 (봇 메시지 하단) ─── */
+    .filter-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(239,68,68,0.15);
+      border: 1px solid rgba(239,68,68,0.4);
+      color: #fca5a5;
+      border-radius: 6px;
+      padding: 3px 9px;
+      font-size: 0.72rem;
+      margin-top: 6px;
+    }
+
+    /* ─── 메인 영역 ─── */
+    #main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ─── 채팅 헤더 ─── */
+    #chat-header {
+      padding: 14px 24px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    #chat-header .title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    #chat-header .subtitle {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 1px;
+    }
+
+    /* ─── 채팅 메시지 영역 ─── */
+    #chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px 0;
+      scroll-behavior: smooth;
+    }
+
+    #chat-messages::-webkit-scrollbar { width: 4px; }
+    #chat-messages::-webkit-scrollbar-track { background: transparent; }
+    #chat-messages::-webkit-scrollbar-thumb { background: var(--navy-light); border-radius: 4px; }
+
+    .msg-row {
+      display: flex;
+      padding: 6px 24px;
+      max-width: 860px;
+      margin: 0 auto;
+      width: 100%;
+      gap: 12px;
+      animation: fadeUp 0.2s ease;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .msg-row.user { flex-direction: row-reverse; }
+
+    .avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      font-weight: 600;
+    }
+
+    .avatar.bot  { background: var(--accent); color: #fff; }
+    .avatar.user { background: var(--user-bubble); color: #fff; }
+
+    .bubble {
+      max-width: 72%;
+      padding: 11px 16px;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      line-height: 1.65;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .bubble.bot {
+      background: var(--bot-bubble);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-top-left-radius: 4px;
+    }
+
+    .bubble.user {
+      background: var(--user-bubble);
+      color: #fff;
+      border-top-right-radius: 4px;
+    }
+
+    /* 웰컴 화면 */
+    #welcome {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+    }
+
+    #welcome .icon-wrap {
+      width: 72px; height: 72px;
+      background: var(--surface2);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      box-shadow: 0 0 30px var(--accent-glow);
+    }
+
+    #welcome h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    #welcome p { font-size: 0.88rem; max-width: 360px; line-height: 1.6; }
+
+    .suggestion-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 24px;
+      max-width: 560px;
+    }
+
+    .chip {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      border-radius: 20px;
+      padding: 7px 14px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .chip:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* 타이핑 인디케이터 */
+    .typing-indicator {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 0;
+    }
+
+    .typing-indicator span {
+      width: 7px; height: 7px;
+      background: var(--text-muted);
+      border-radius: 50%;
+      display: inline-block;
+      animation: bounce 1.2s infinite;
+    }
+
+    .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes bounce {
+      0%, 80%, 100% { transform: scale(0.7); opacity: 0.5; }
+      40%           { transform: scale(1.0); opacity: 1; }
+    }
+
+    /* ─── 입력 영역 ─── */
+    #input-area {
+      padding: 16px 24px 20px;
+      background: var(--bg);
+      flex-shrink: 0;
+    }
+
+    #input-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+      padding: 10px 12px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    #input-wrap:focus-within {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    #file-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px 6px;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      transition: color 0.2s, background 0.2s;
+      flex-shrink: 0;
+      align-self: flex-end;
+      margin-bottom: 2px;
+    }
+    #file-btn:hover { color: var(--accent); background: var(--surface2); }
+
+    #msg-input {
+      flex: 1;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 0.9rem;
+      resize: none;
+      outline: none;
+      line-height: 1.5;
+      max-height: 160px;
+      min-height: 24px;
+      overflow-y: auto;
+    }
+    #msg-input::placeholder { color: var(--text-muted); }
+
+    #send-btn {
+      background: var(--accent);
+      border: none;
+      color: #fff;
+      border-radius: 9px;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      font-size: 0.95rem;
+      transition: background 0.2s, transform 0.1s;
+      align-self: flex-end;
+    }
+    #send-btn:hover   { background: #3a7bc8; }
+    #send-btn:active  { transform: scale(0.93); }
+    #send-btn:disabled { background: var(--surface2); cursor: not-allowed; }
+
+    /* 파일 업로드 뱃지 */
+    #file-badge {
+      max-width: 820px;
+      margin: 0 auto 8px;
+      display: none;
+    }
+
+    .file-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .file-tag .remove-file {
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .file-tag .remove-file:hover { color: #ef4444; }
+
+    /* ─── 소스 토글 ─── */
+    .sources-toggle {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      margin-top: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .sources-toggle:hover { color: var(--accent); }
+
+    .sources-list {
+      margin-top: 6px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: var(--surface2);
+      border-radius: 8px;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+    }
+
+    /* ─── 대화 중 추천 질문 ─── */
+    #inline-chips {
+      max-width: 820px;
+      margin: 0 auto 8px;
+      display: none;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    #inline-chips .chip {
+      font-size: 0.78rem;
+      padding: 5px 12px;
+    }
+
+    /* 반응형 */
+    @media (max-width: 640px) {
+      #sidebar { position: absolute; z-index: 100; transform: translateX(-100%); }
+      #sidebar.open { transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ 사이드바 ══════════════ -->
+<aside id="sidebar">
+  <div id="sidebar-header">
+    <div class="logo">
+      <span class="dot"></span>
+      MutedRAG
+    </div>
+    <button id="new-chat-btn">
+      <i class="bi bi-plus-lg"></i>
+      새 대화
+    </button>
+  </div>
+
+  <div id="chat-history-list">
+    <!-- JS로 동적 생성 -->
+  </div>
+
+  <!-- 보안 로그 패널 -->
+  <div id="security-panel">
+    <div id="security-panel-header" onclick="toggleSecurityPanel()">
+      <span class="sec-title">
+        <i class="bi bi-shield-exclamation"></i>
+        MutedRAG 보안 로그
+        <span id="sec-badge">0</span>
+      </span>
+      <i class="bi bi-chevron-up" id="sec-chevron"></i>
+    </div>
+    <div id="security-log">
+      <div style="color:var(--text-muted);font-size:0.72rem;padding:4px 8px;">
+        탐지된 공격 없음
+      </div>
+    </div>
+  </div>
+
+  <div id="sidebar-footer">
+    <span id="status-dot"></span>
+    <span id="status-text">서버 연결 중...</span>
+  </div>
+</aside>
+
+<!-- ══════════════ 메인 ══════════════ -->
+<div id="main">
+
+  <!-- 채팅 헤더 -->
+  <div id="chat-header">
+    <div>
+      <div class="title">회사 AI 어시스턴트</div>
+      <div class="subtitle">사내 규정 · HR · 보안 · IT · 법무 문서 기반 Q&A</div>
+    </div>
+    <button
+      class="btn btn-sm"
+      style="background:var(--surface2);border:1px solid var(--border);color:var(--text-muted);font-size:0.78rem;"
+      onclick="toggleSidebar()"
+    >
+      <i class="bi bi-layout-sidebar-reverse"></i>
+    </button>
+  </div>
+
+  <!-- 채팅 메시지 -->
+  <div id="chat-messages">
+    <!-- 웰컴 화면 -->
+    <div id="welcome">
+      <div class="icon-wrap"><i class="bi bi-robot"></i></div>
+      <h2>무엇이든 물어보세요</h2>
+      <p>사내 문서(HR, 보안, IT, 재무, 법무)를 기반으로 정확하게 답변해드립니다.</p>
+      <div class="suggestion-chips" id="chips">
+        <div class="chip" onclick="sendChip(this)">회사에서 금지하는 행동이 뭐야?</div>
+        <div class="chip" onclick="sendChip(this)">팀장 승인이 필요한 경우가 뭐야?</div>
+        <div class="chip" onclick="sendChip(this)">정보보안 관련 직원 의무는?</div>
+        <div class="chip" onclick="sendChip(this)">규정 위반 시 징계는?</div>
+        <div class="chip" onclick="sendChip(this)">입사 시 의무 교육이 뭐야?</div>
+        <div class="chip" onclick="sendChip(this)">개인정보 외부 유출 시 처벌?</div>
+        <div class="chip" onclick="sendChip(this)">업무 중 사용 금지 항목은?</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 입력 영역 -->
+  <div id="input-area">
+    <!-- 대화 중 추천 질문 -->
+    <div id="inline-chips" style="display:none; max-width:820px; margin:0 auto 8px; display:none; flex-wrap:wrap; gap:6px;"></div>
+
+    <div id="file-badge">
+      <!-- JS로 생성 -->
+    </div>
+    <div id="input-wrap">
+      <button id="file-btn" title="파일 첨부" onclick="document.getElementById('file-input').click()">
+        <i class="bi bi-paperclip"></i>
+      </button>
+      <input
+        type="file"
+        id="file-input"
+        style="display:none"
+        accept=".pdf,.docx,.txt"
+        onchange="handleFileSelect(event)"
+      />
+      <textarea
+        id="msg-input"
+        rows="1"
+        placeholder="질문을 입력하세요... (Shift+Enter 줄바꿈)"
+        oninput="autoResize(this)"
+        onkeydown="handleKeyDown(event)"
+      ></textarea>
+      <button id="send-btn" onclick="sendMessage()" disabled>
+        <i class="bi bi-arrow-up"></i>
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // ══════════════════════════════════════
+  // 상태
+  // ══════════════════════════════════════
+  const API_BASE = "http://localhost:8000";
+
+  let sessionId   = generateId();
+  let isWaiting   = false;
+  let pendingFile = null;
+
+  // 대화 이력 목록 (사이드바용)
+  let conversations = [{ id: sessionId, title: "새 대화", messages: [] }];
+  let currentConvId = sessionId;
+
+  // ──────────────────────────────────────
+  // 유틸
+  // ──────────────────────────────────────
+  function generateId() {
+    return Math.random().toString(36).slice(2, 10);
+  }
+
+  function autoResize(el) {
+    el.style.height = "auto";
+    el.style.height = Math.min(el.scrollHeight, 160) + "px";
+    document.getElementById("send-btn").disabled = el.value.trim() === "" || isWaiting;
+  }
+
+  function handleKeyDown(e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  }
+
+  function scrollToBottom() {
+    const el = document.getElementById("chat-messages");
+    el.scrollTop = el.scrollHeight;
+  }
+
+  function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("open");
+  }
+
+  // ──────────────────────────────────────
+  // 상태 표시
+  // ──────────────────────────────────────
+  async function checkHealth() {
+    try {
+      const r = await fetch(`${API_BASE}/health`);
+      const dot  = document.getElementById("status-dot");
+      const text = document.getElementById("status-text");
+      if (r.ok) {
+        const d = await r.json();
+        dot.className  = "online";
+        text.textContent = `연결됨 · ${d.model}`;
+      } else {
+        throw new Error();
+      }
+    } catch {
+      document.getElementById("status-dot").className  = "offline";
+      document.getElementById("status-text").textContent = "서버 연결 안됨";
+    }
+  }
+
+  // ──────────────────────────────────────
+  // 메시지 렌더링
+  // ──────────────────────────────────────
+  function hideWelcome() {
+    const w = document.getElementById("welcome");
+    if (w) w.remove();
+  }
+
+  function appendMessage(role, text, sources = [], filtered = false) {
+    hideWelcome();
+
+    const container = document.getElementById("chat-messages");
+    const row = document.createElement("div");
+    row.className = `msg-row ${role}`;
+
+    const avatar = document.createElement("div");
+    avatar.className = `avatar ${role}`;
+    avatar.textContent = role === "user" ? "나" : "AI";
+
+    const bubble = document.createElement("div");
+    bubble.className = `bubble ${role}`;
+    bubble.textContent = text;
+
+    row.appendChild(avatar);
+    row.appendChild(bubble);
+
+    container.appendChild(row);
+
+    // 봇 메시지 하단 메타 영역 (소스 + 필터 배지)
+    if (role === "bot") {
+      const metaWrap = document.createElement("div");
+      metaWrap.style.cssText = "display:flex;flex-direction:column;padding:0 24px;max-width:860px;margin:0 auto;width:100%;padding-left:70px;gap:4px;margin-top:2px;";
+
+      // MutedRAG 필터 배지
+      if (filtered) {
+        const badge = document.createElement("span");
+        badge.className = "filter-badge";
+        badge.innerHTML = `<i class="bi bi-shield-fill-exclamation"></i> MutedRAG 필터 작동 — 공격 시도 감지 및 차단`;
+        metaWrap.appendChild(badge);
+      }
+
+      // 소스 토글
+      if (sources && sources.length > 0) {
+        const toggle = document.createElement("span");
+        toggle.className = "sources-toggle";
+        toggle.innerHTML = `<i class="bi bi-file-text"></i> 참고 문서 ${sources.length}개 보기`;
+
+        const list = document.createElement("div");
+        list.className = "sources-list";
+        list.style.display = "none";
+        list.innerHTML = sources.map(s => `<div>• ${escapeHtml(s)}</div>`).join("");
+
+        toggle.onclick = () => {
+          const open = list.style.display === "block";
+          list.style.display = open ? "none" : "block";
+          toggle.innerHTML = open
+            ? `<i class="bi bi-file-text"></i> 참고 문서 ${sources.length}개 보기`
+            : `<i class="bi bi-file-text"></i> 참고 문서 접기`;
+        };
+
+        metaWrap.appendChild(toggle);
+        metaWrap.appendChild(list);
+      }
+
+      if (metaWrap.children.length > 0) {
+        container.appendChild(metaWrap);
+      }
+    }
+
+    scrollToBottom();
+    return bubble;
+  }
+
+  function appendTypingIndicator() {
+    hideWelcome();
+    const container = document.getElementById("chat-messages");
+    const row = document.createElement("div");
+    row.className = "msg-row bot";
+    row.id = "typing-row";
+
+    const avatar = document.createElement("div");
+    avatar.className = "avatar bot";
+    avatar.textContent = "AI";
+
+    const bubble = document.createElement("div");
+    bubble.className = "bubble bot";
+    bubble.innerHTML = `
+      <div class="typing-indicator">
+        <span></span><span></span><span></span>
+      </div>`;
+
+    row.appendChild(avatar);
+    row.appendChild(bubble);
+    container.appendChild(row);
+    scrollToBottom();
+  }
+
+  function removeTypingIndicator() {
+    const el = document.getElementById("typing-row");
+    if (el) el.remove();
+  }
+
+  // ──────────────────────────────────────
+  // 대화 이력 (사이드바)
+  // ──────────────────────────────────────
+  function renderHistoryList() {
+    const list = document.getElementById("chat-history-list");
+    list.innerHTML = "";
+    [...conversations].reverse().forEach(conv => {
+      const item = document.createElement("div");
+      item.className = `history-item ${conv.id === currentConvId ? "active" : ""}`;
+      item.innerHTML = `<i class="bi bi-chat"></i> ${escapeHtml(conv.title)}`;
+      item.onclick = () => switchConversation(conv.id);
+      list.appendChild(item);
+    });
+  }
+
+  function escapeHtml(str) {
+    return str.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+
+  function newChat() {
+    const id = generateId();
+    conversations.push({ id, title: "새 대화", messages: [] });
+    switchConversation(id);
+  }
+
+  // ──────────────────────────────────────
+  // 파일 업로드
+  // ──────────────────────────────────────
+  function handleFileSelect(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    pendingFile = file;
+
+    const badge = document.getElementById("file-badge");
+    badge.style.display = "block";
+    badge.innerHTML = `
+      <div class="file-tag">
+        <i class="bi bi-file-earmark-text"></i>
+        ${escapeHtml(file.name)}
+        <span class="remove-file" onclick="removeFile()">
+          <i class="bi bi-x"></i>
+        </span>
+      </div>`;
+
+    // 파일 업로드 즉시 처리
+    uploadFile(file);
+
+    event.target.value = "";
+  }
+
+  function removeFile() {
+    pendingFile = null;
+    const badge = document.getElementById("file-badge");
+    badge.style.display = "none";
+    badge.innerHTML = "";
+  }
+
+  async function uploadFile(file) {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      const resp = await fetch(`${API_BASE}/upload`, {
+        method: "POST",
+        body: formData,
+      });
+      const data = await resp.json();
+
+      if (data.success) {
+        appendMessage(
+          "bot",
+          `📎 "${data.filename}" 파일을 업로드했습니다. (${data.chunk_count}개 청크로 분할)\n이제 해당 문서에 대해 질문하실 수 있습니다.`
+        );
+      } else {
+        appendMessage("bot", "파일 업로드에 실패했습니다.");
+      }
+    } catch (e) {
+      appendMessage("bot", `파일 업로드 오류: ${e.message}`);
+    }
+  }
+
+  // ──────────────────────────────────────
+  // 메시지 전송
+  // ──────────────────────────────────────
+  function sendChip(el) {
+    document.getElementById("msg-input").value = el.textContent;
+    sendMessage();
+  }
+
+  async function sendMessage() {
+    const input = document.getElementById("msg-input");
+    const text = input.value.trim();
+    if (!text || isWaiting) return;
+
+    isWaiting = true;
+    input.value = "";
+    input.style.height = "auto";
+    document.getElementById("send-btn").disabled = true;
+
+    // 사용자 메시지 표시
+    appendMessage("user", text);
+
+    // 대화 이력 기록
+    const conv = conversations.find(c => c.id === currentConvId);
+    if (conv) {
+      conv.messages.push({ role: "user", text, sources: [] });
+      if (conv.title === "새 대화") {
+        conv.title = text.slice(0, 28) + (text.length > 28 ? "…" : "");
+      }
+    }
+    renderHistoryList();
+
+    // 타이핑 인디케이터
+    appendTypingIndicator();
+
+    try {
+      const resp = await fetch(`${API_BASE}/chat`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message: text,
+          history: conv ? conv.messages.slice(-10).map(m => ({
+            role: m.role === "bot" ? "assistant" : "user",
+            content: m.text,
+          })) : [],
+          session_id: sessionId,
+        }),
+      });
+
+      const data = await resp.json();
+      removeTypingIndicator();
+
+      if (!resp.ok) {
+        appendMessage("bot", `오류: ${data.detail || "서버 오류가 발생했습니다."}`);
+      } else {
+        appendMessage("bot", data.answer, data.sources, data.filtered);
+        if (conv) {
+          conv.messages.push({ role: "bot", text: data.answer, sources: data.sources, filtered: data.filtered });
+        }
+        showInlineChips();
+      }
+
+    } catch (err) {
+      removeTypingIndicator();
+      appendMessage("bot", `연결 오류: ${err.message}\n서버가 실행 중인지 확인하세요.`);
+    }
+
+    isWaiting = false;
+    document.getElementById("send-btn").disabled = false;
+  }
+
+  const INLINE_CHIP_POOL = [
+    "회사에서 금지하는 행동이 뭐야?",
+    "팀장 승인이 필요한 경우가 뭐야?",
+    "정보보안 관련 직원 의무는?",
+    "규정 위반 시 징계는?",
+    "입사 시 의무 교육이 뭐야?",
+    "개인정보 외부 유출 시 처벌?",
+    "업무 중 사용 금지 항목은?",
+    "연차 신청 절차가 어떻게 돼?",
+    "출장 비용 처리 방법은?",
+    "재택근무 신청은 어떻게 해?",
+    "사내 메신저 보안 규정은?",
+    "비밀유지 의무 대상은?",
+  ];
+
+  let _lastInlineChips = [];
+
+  function showInlineChips() {
+    const container = document.getElementById("inline-chips");
+    if (!container) return;
+
+    // 이전과 다른 3개 선택
+    const pool = INLINE_CHIP_POOL.filter(c => !_lastInlineChips.includes(c));
+    const shuffled = pool.sort(() => Math.random() - 0.5);
+    const picked = shuffled.slice(0, 3);
+    _lastInlineChips = picked;
+
+    container.innerHTML = picked.map(q =>
+      `<div class="chip" onclick="sendChipInline(this)">${q}</div>`
+    ).join("");
+    container.style.display = "flex";
+  }
+
+  function sendChipInline(el) {
+    document.getElementById("msg-input").value = el.textContent;
+    document.getElementById("inline-chips").style.display = "none";
+    sendMessage();
+  }
+
+  // ──────────────────────────────────────
+  // 보안 로그 패널
+  // ──────────────────────────────────────
+  let _secPanelOpen  = false;
+  let _lastEventCount = 0;
+
+  function toggleSecurityPanel() {
+    _secPanelOpen = !_secPanelOpen;
+    document.getElementById("security-log").style.display = _secPanelOpen ? "block" : "none";
+    document.getElementById("sec-chevron").className =
+      _secPanelOpen ? "bi bi-chevron-down" : "bi bi-chevron-up";
+  }
+
+  function renderSecurityEvents(events) {
+    const log = document.getElementById("security-log");
+    const badge = document.getElementById("sec-badge");
+
+    if (!events || events.length === 0) {
+      log.innerHTML = `<div style="color:var(--text-muted);font-size:0.72rem;padding:4px 8px;">탐지된 공격 없음</div>`;
+      badge.style.display = "none";
+      return;
+    }
+
+    // 배지 업데이트
+    badge.style.display = "inline";
+    badge.textContent   = events.length;
+
+    // 새 이벤트가 있으면 패널 자동 오픈
+    if (events.length > _lastEventCount && !_secPanelOpen) {
+      toggleSecurityPanel();
+    }
+    _lastEventCount = events.length;
+
+    // 최신 이벤트가 위로 오도록 역순 렌더
+    log.innerHTML = [...events].reverse().map(ev => `
+      <div class="sec-event ${ev.type}">
+        <span class="ev-source">
+          <i class="bi bi-${ev.type === 'malicious' ? 'x-circle-fill' : 'exclamation-triangle-fill'}"></i>
+          ${escapeHtml(ev.source)}
+        </span>
+        <span class="ev-meta">
+          ${ev.time} &nbsp;|&nbsp;
+          총점 ${ev.total_score}
+          (키워드 ${ev.keyword_score} · 의미 ${ev.semantic_score} · PPL ${ev.ppl_score})
+        </span>
+      </div>`).join("");
+  }
+
+  async function fetchSecurityEvents() {
+    try {
+      const r = await fetch(`${API_BASE}/api/security-events?limit=50`);
+      if (r.ok) {
+        const d = await r.json();
+        renderSecurityEvents(d.events);
+      }
+    } catch { /* 서버 미연결 시 무시 */ }
+  }
+
+  // ──────────────────────────────────────
+  // 대화 복원 시 filtered 배지도 복원
+  // ──────────────────────────────────────
+  function switchConversation(id) {
+    currentConvId = id;
+    sessionId = id;
+    const container = document.getElementById("chat-messages");
+    container.innerHTML = "";
+    const conv = conversations.find(c => c.id === id);
+    if (!conv || conv.messages.length === 0) {
+      container.innerHTML = `
+        <div id="welcome">
+          <div class="icon-wrap"><i class="bi bi-robot"></i></div>
+          <h2>무엇이든 물어보세요</h2>
+          <p>사내 문서(HR, 보안, IT, 재무, 법무)를 기반으로 정확하게 답변해드립니다.</p>
+          <div class="suggestion-chips" id="chips">
+            <div class="chip" onclick="sendChip(this)">회사에서 금지하는 행동이 뭐야?</div>
+            <div class="chip" onclick="sendChip(this)">팀장 승인이 필요한 경우가 뭐야?</div>
+            <div class="chip" onclick="sendChip(this)">정보보안 관련 직원 의무는?</div>
+            <div class="chip" onclick="sendChip(this)">규정 위반 시 징계는?</div>
+            <div class="chip" onclick="sendChip(this)">입사 시 의무 교육이 뭐야?</div>
+            <div class="chip" onclick="sendChip(this)">개인정보 외부 유출 시 처벌?</div>
+            <div class="chip" onclick="sendChip(this)">업무 중 사용 금지 항목은?</div>
+          </div>
+        </div>`;
+    } else {
+      conv.messages.forEach(m => appendMessage(m.role, m.text, m.sources || [], m.filtered || false));
+    }
+    renderHistoryList();
+  }
+
+  // ──────────────────────────────────────
+  // 초기화
+  // ──────────────────────────────────────
+  document.getElementById("new-chat-btn").onclick = newChat;
+  document.getElementById("msg-input").addEventListener("input", function () {
+    document.getElementById("send-btn").disabled =
+      this.value.trim() === "" || isWaiting;
+  });
+
+  renderHistoryList();
+  checkHealth();
+  fetchSecurityEvents();
+  setInterval(checkHealth, 30000);
+  setInterval(fetchSecurityEvents, 5000); // 5초마다 보안 이벤트 갱신
+</script>
+
+</body>
+</html>
