@@ -1,0 +1,106 @@
+{
+  "domain": "A. 공통 정책 문서",
+  "detector_enabled": true,
+  "detector_version": "mutedrag-detector-v1",
+  "detector_fail_mode": "allow",
+  "policy_actions": {
+    "low": "index",
+    "medium": "review",
+    "high": "quarantine",
+    "critical": "quarantine"
+  },
+  "total_chunks": 591,
+  "risk_counts": {
+    "low": 591,
+    "medium": 0,
+    "high": 0,
+    "critical": 0
+  },
+  "action_counts": {
+    "index": 591,
+    "review": 0,
+    "quarantine": 0
+  },
+  "review_chunk_count": 0,
+  "quarantine_chunk_count": 0,
+  "document_summaries": [
+    {
+      "document_id": "A. 공통 정책 문서/A1_사내정보보호정책.docx",
+      "total_chunks": 99,
+      "low": 99,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "A. 공통 정책 문서/A3_비밀번호MFA정책.docx",
+      "total_chunks": 92,
+      "low": 92,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "A. 공통 정책 문서/A2_계정권한관리정책.docx",
+      "total_chunks": 90,
+      "low": 90,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "A. 공통 정책 문서/A7_생성형AI사용정책.docx",
+      "total_chunks": 84,
+      "low": 84,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "A. 공통 정책 문서/A6_문서등급분류정책.docx",
+      "total_chunks": 79,
+      "low": 79,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "A. 공통 정책 문서/A4_데이터반출정책.docx",
+      "total_chunks": 78,
+      "low": 78,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "A. 공통 정책 문서/A5_외부저장매체정책.docx",
+      "total_chunks": 69,
+      "low": 69,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    }
+  ],
+  "top_triggered_rules": []
+}

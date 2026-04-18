@@ -1,0 +1,12 @@
+{
+  "char_length_mean": 171.05414551607444,
+  "char_length_std": 153.18092698323815,
+  "avg_sentence_length_mean": 5.988174257590501,
+  "avg_sentence_length_std": 2.8665402030600746,
+  "modal_ratio_mean": 0.000926258516091344,
+  "modal_ratio_std": 0.006171539932006065,
+  "policy_term_density_mean": 0.08262193418007201,
+  "policy_term_density_std": 0.04317549559121601,
+  "punctuation_density_mean": 0.1381922905869757,
+  "punctuation_density_std": 0.024251777283913176
+}

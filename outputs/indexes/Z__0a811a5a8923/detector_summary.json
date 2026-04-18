@@ -1,0 +1,106 @@
+{
+  "domain": "Z. 평가용_추가문서",
+  "detector_enabled": true,
+  "detector_version": "mutedrag-detector-v1",
+  "detector_fail_mode": "allow",
+  "policy_actions": {
+    "low": "index",
+    "medium": "review",
+    "high": "quarantine",
+    "critical": "quarantine"
+  },
+  "total_chunks": 42,
+  "risk_counts": {
+    "low": 42,
+    "medium": 0,
+    "high": 0,
+    "critical": 0
+  },
+  "action_counts": {
+    "index": 42,
+    "review": 0,
+    "quarantine": 0
+  },
+  "review_chunk_count": 0,
+  "quarantine_chunk_count": 0,
+  "document_summaries": [
+    {
+      "document_id": "Z. 평가용_추가문서/benign_it_support_01.txt",
+      "total_chunks": 6,
+      "low": 6,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "Z. 평가용_추가문서/benign_policy_admin_01.txt",
+      "total_chunks": 6,
+      "low": 6,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "Z. 평가용_추가문서/mutedrag_mixed_itsec_01.txt",
+      "total_chunks": 6,
+      "low": 6,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "Z. 평가용_추가문서/mutedrag_mixed_policy_01.txt",
+      "total_chunks": 6,
+      "low": 6,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "Z. 평가용_추가문서/mutedrag_mixed_support_01.txt",
+      "total_chunks": 6,
+      "low": 6,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "Z. 평가용_추가문서/mutedrag_multilingual_01.txt",
+      "total_chunks": 6,
+      "low": 6,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "Z. 평가용_추가문서/mutedrag_obvious_01.txt",
+      "total_chunks": 6,
+      "low": 6,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    }
+  ],
+  "top_triggered_rules": []
+}

@@ -6,7 +6,17 @@ from typing import Dict, List, Optional
 import faiss
 import numpy as np
 
-from src.config import DENSE_TOP_K, ENABLE_DENSE, SPARSE_TOP_K, get_domain_index_dir, get_index_file_paths, list_domain_dirs
+from src.config import (
+    DENSE_TOP_K,
+    ENABLE_DENSE,
+    RETRIEVAL_INCLUDE_FLAGGED_DEFAULT,
+    RETRIEVAL_INCLUDE_QUARANTINED_DEFAULT,
+    SPARSE_TOP_K,
+    get_domain_index_dir,
+    get_index_file_paths,
+    list_domain_dirs,
+)
+from src.detector_pipeline import filter_retrieval_results, log_retrieval_filter_summary, merge_filter_summaries
 from src.embedder import embed_texts
 from src.query_analysis import build_query_profile, compact_text, normalize_text
 
@@ -74,9 +84,20 @@ def load_resources(domain_name: str):
     return index, chunks, bm25
 
 
-def dense_search(query, index, chunks, top_k=DENSE_TOP_K):
+def dense_search(
+    query,
+    index,
+    chunks,
+    top_k=DENSE_TOP_K,
+    include_flagged: bool = RETRIEVAL_INCLUDE_FLAGGED_DEFAULT,
+    include_quarantined: bool = RETRIEVAL_INCLUDE_QUARANTINED_DEFAULT,
+):
+    if not chunks:
+        return [], {"excluded_flagged": 0, "excluded_quarantined": 0, "excluded": []}
+
     q_emb = np.asarray(embed_texts(query), dtype="float32")
-    scores, indices = index.search(q_emb, top_k)
+    search_k = min(max(top_k * 5, top_k), len(chunks))
+    scores, indices = index.search(q_emb, search_k)
 
     results = []
     for score, idx in zip(scores[0], indices[0]):
@@ -90,7 +111,12 @@ def dense_search(query, index, chunks, top_k=DENSE_TOP_K):
             }
         )
 
-    return results
+    filtered_results, filter_summary = filter_retrieval_results(
+        results,
+        include_flagged=include_flagged,
+        include_quarantined=include_quarantined,
+    )
+    return filtered_results[:top_k], filter_summary
 
 
 def _count_matches(text: str, terms: List[str]) -> int:
@@ -225,7 +251,14 @@ def score_sparse_exact_candidate(query: str, chunk: Dict, raw_score: float) -> f
     return score
 
 
-def sparse_search(query, bm25, chunks, top_k=SPARSE_TOP_K):
+def sparse_search(
+    query,
+    bm25,
+    chunks,
+    top_k=SPARSE_TOP_K,
+    include_flagged: bool = RETRIEVAL_INCLUDE_FLAGGED_DEFAULT,
+    include_quarantined: bool = RETRIEVAL_INCLUDE_QUARANTINED_DEFAULT,
+):
     profile = build_query_profile(query)
     tokens = tokenize_text(query)
     scores = bm25.get_scores(tokens)
@@ -282,22 +315,46 @@ def sparse_search(query, bm25, chunks, top_k=SPARSE_TOP_K):
             if len(bonus_matches) >= top_k * 2:
                 break
 
-    combined = rescored[:top_k] + bonus_matches
+    combined = rescored[: max(top_k * 5, 24)] + bonus_matches
     combined.sort(key=lambda item: item["score"], reverse=True)
-    return combined[: max(top_k * 3, 24)]
+    filtered_results, filter_summary = filter_retrieval_results(
+        combined,
+        include_flagged=include_flagged,
+        include_quarantined=include_quarantined,
+    )
+    filtered_results.sort(key=lambda item: item["score"], reverse=True)
+    return filtered_results[: max(top_k * 3, 24)], filter_summary
 
 
-def hybrid_search_domain(query, domain_name: str):
+def hybrid_search_domain(
+    query,
+    domain_name: str,
+    include_flagged: bool = RETRIEVAL_INCLUDE_FLAGGED_DEFAULT,
+    include_quarantined: bool = RETRIEVAL_INCLUDE_QUARANTINED_DEFAULT,
+):
     index, chunks, bm25 = load_resources(domain_name)
 
     dense_results = []
+    dense_filter_summary = {"excluded_flagged": 0, "excluded_quarantined": 0, "excluded": []}
     if ENABLE_DENSE:
         try:
-            dense_results = dense_search(query, index, chunks)
+            dense_results, dense_filter_summary = dense_search(
+                query,
+                index,
+                chunks,
+                include_flagged=include_flagged,
+                include_quarantined=include_quarantined,
+            )
         except Exception as exc:
             print(f"[WARN] Dense retrieval failed, falling back to sparse-only search: {exc}")
 
-    sparse_results = sparse_search(query, bm25, chunks)
+    sparse_results, sparse_filter_summary = sparse_search(
+        query,
+        bm25,
+        chunks,
+        include_flagged=include_flagged,
+        include_quarantined=include_quarantined,
+    )
 
     merged = []
     seen = set()
@@ -310,12 +367,15 @@ def hybrid_search_domain(query, domain_name: str):
         seen.add(chunk_id)
 
     merged.sort(key=lambda item: item["score"], reverse=True)
+    filter_summary = merge_filter_summaries(dense_filter_summary, sparse_filter_summary)
+    log_retrieval_filter_summary(domain_name, filter_summary)
 
     return {
         "domain": domain_name,
         "dense_results": dense_results,
         "sparse_results": sparse_results,
         "merged_results": merged,
+        "filter_summary": filter_summary,
     }
 
 
@@ -350,7 +410,12 @@ def rank_domain_results(query: str, domain_result: Dict) -> float:
     return score
 
 
-def hybrid_search(query, preferred_domain: Optional[str] = None):
+def hybrid_search(
+    query,
+    preferred_domain: Optional[str] = None,
+    include_flagged: bool = RETRIEVAL_INCLUDE_FLAGGED_DEFAULT,
+    include_quarantined: bool = RETRIEVAL_INCLUDE_QUARANTINED_DEFAULT,
+):
     domain_names = [path.name for path in list_domain_dirs()]
     if preferred_domain and preferred_domain in domain_names:
         domain_names = [preferred_domain]
@@ -358,7 +423,12 @@ def hybrid_search(query, preferred_domain: Optional[str] = None):
     domain_results = []
     for domain_name in domain_names:
         try:
-            result = hybrid_search_domain(query, domain_name)
+            result = hybrid_search_domain(
+                query,
+                domain_name,
+                include_flagged=include_flagged,
+                include_quarantined=include_quarantined,
+            )
             result["domain_score"] = rank_domain_results(query, result)
             domain_results.append(result)
         except FileNotFoundError:
@@ -384,6 +454,7 @@ def hybrid_search(query, preferred_domain: Optional[str] = None):
             seen.add(chunk_id)
 
     merged.sort(key=lambda item: item["score"], reverse=True)
+    filter_summary = merge_filter_summaries(*(item.get("filter_summary", {}) for item in domains_to_merge))
 
     best = domain_results[0] if domain_results else {"dense_results": [], "sparse_results": [], "merged_results": [], "domain": None, "domain_score": 0.0}
     return {
@@ -394,4 +465,5 @@ def hybrid_search(query, preferred_domain: Optional[str] = None):
         "dense_results": best.get("dense_results", []),
         "sparse_results": best.get("sparse_results", []),
         "merged_results": merged,
+        "filter_summary": filter_summary,
     }

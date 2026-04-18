@@ -1,0 +1,84 @@
+{
+  "domain": "B. 인사총무 문서",
+  "detector_enabled": true,
+  "detector_version": "mutedrag-detector-v1",
+  "detector_fail_mode": "allow",
+  "policy_actions": {
+    "low": "index",
+    "medium": "review",
+    "high": "quarantine",
+    "critical": "quarantine"
+  },
+  "total_chunks": 484,
+  "risk_counts": {
+    "low": 484,
+    "medium": 0,
+    "high": 0,
+    "critical": 0
+  },
+  "action_counts": {
+    "index": 484,
+    "review": 0,
+    "quarantine": 0
+  },
+  "review_chunk_count": 0,
+  "quarantine_chunk_count": 0,
+  "document_summaries": [
+    {
+      "document_id": "B. 인사총무 문서/B1_연차재택근무신청규정.docx",
+      "total_chunks": 106,
+      "low": 106,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "B. 인사총무 문서/B2_출장법인카드사용규정.docx",
+      "total_chunks": 104,
+      "low": 104,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "B. 인사총무 문서/B4_소프트웨어설치승인절차.docx",
+      "total_chunks": 95,
+      "low": 95,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "B. 인사총무 문서/B3_장비지급회수절차.docx",
+      "total_chunks": 93,
+      "low": 93,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "B. 인사총무 문서/B5_외부교육신청절차.docx",
+      "total_chunks": 86,
+      "low": 86,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    }
+  ],
+  "top_triggered_rules": []
+}

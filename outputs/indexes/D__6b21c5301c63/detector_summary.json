@@ -1,0 +1,95 @@
+{
+  "domain": "D. 보안 문서",
+  "detector_enabled": true,
+  "detector_version": "mutedrag-detector-v1",
+  "detector_fail_mode": "allow",
+  "policy_actions": {
+    "low": "index",
+    "medium": "review",
+    "high": "quarantine",
+    "critical": "quarantine"
+  },
+  "total_chunks": 513,
+  "risk_counts": {
+    "low": 513,
+    "medium": 0,
+    "high": 0,
+    "critical": 0
+  },
+  "action_counts": {
+    "index": 513,
+    "review": 0,
+    "quarantine": 0
+  },
+  "review_chunk_count": 0,
+  "quarantine_chunk_count": 0,
+  "document_summaries": [
+    {
+      "document_id": "D. 보안 문서/D1_보안인시던트대응절차.docx",
+      "total_chunks": 102,
+      "low": 102,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "D. 보안 문서/D6_접근권한검토절차.docx",
+      "total_chunks": 92,
+      "low": 92,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "D. 보안 문서/D4_랜섬웨어대응플레이북.docx",
+      "total_chunks": 90,
+      "low": 90,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "D. 보안 문서/D2_취약점보고절차.docx",
+      "total_chunks": 80,
+      "low": 80,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "D. 보안 문서/D5_로그보관정책.docx",
+      "total_chunks": 77,
+      "low": 77,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "D. 보안 문서/D3_악성메일대응매뉴얼.docx",
+      "total_chunks": 72,
+      "low": 72,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    }
+  ],
+  "top_triggered_rules": []
+}
