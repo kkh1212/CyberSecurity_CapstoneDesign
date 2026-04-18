@@ -1,0 +1,56 @@
+{
+  "domain": "business_docs",
+  "detector_enabled": true,
+  "detector_version": "mutedrag-detector-v1",
+  "detector_fail_mode": "allow",
+  "policy_actions": {
+    "low": "index",
+    "medium": "review",
+    "high": "quarantine",
+    "critical": "quarantine"
+  },
+  "total_chunks": 2,
+  "risk_counts": {
+    "low": 1,
+    "medium": 0,
+    "high": 1,
+    "critical": 0
+  },
+  "action_counts": {
+    "index": 1,
+    "review": 0,
+    "quarantine": 1
+  },
+  "review_chunk_count": 0,
+  "quarantine_chunk_count": 1,
+  "document_summaries": [
+    {
+      "document_id": "business_docs/doc2.txt",
+      "total_chunks": 1,
+      "low": 0,
+      "medium": 0,
+      "high": 1,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 1,
+      "highest_risk": "high"
+    },
+    {
+      "document_id": "business_docs/doc1.txt",
+      "total_chunks": 1,
+      "low": 1,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    }
+  ],
+  "top_triggered_rules": [
+    [
+      "multiple_explicit_high_risk_patterns",
+      1
+    ]
+  ]
+}

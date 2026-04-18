@@ -1,0 +1,73 @@
+{
+  "domain": "E. 제품지원 문서",
+  "detector_enabled": true,
+  "detector_version": "mutedrag-detector-v1",
+  "detector_fail_mode": "allow",
+  "policy_actions": {
+    "low": "index",
+    "medium": "review",
+    "high": "quarantine",
+    "critical": "quarantine"
+  },
+  "total_chunks": 335,
+  "risk_counts": {
+    "low": 335,
+    "medium": 0,
+    "high": 0,
+    "critical": 0
+  },
+  "action_counts": {
+    "index": 335,
+    "review": 0,
+    "quarantine": 0
+  },
+  "review_chunk_count": 0,
+  "quarantine_chunk_count": 0,
+  "document_summaries": [
+    {
+      "document_id": "E. 제품지원 문서/E1_제품기능가이드.docx",
+      "total_chunks": 117,
+      "low": 117,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "E. 제품지원 문서/E3_내부지원매뉴얼.docx",
+      "total_chunks": 96,
+      "low": 96,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "E. 제품지원 문서/E2_고객문의FAQ.docx",
+      "total_chunks": 65,
+      "low": 65,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "E. 제품지원 문서/E4_장애공지템플릿.docx",
+      "total_chunks": 57,
+      "low": 57,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    }
+  ],
+  "top_triggered_rules": []
+}

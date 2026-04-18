@@ -1,0 +1,95 @@
+{
+  "domain": "C. IT 운영 문서",
+  "detector_enabled": true,
+  "detector_version": "mutedrag-detector-v1",
+  "detector_fail_mode": "allow",
+  "policy_actions": {
+    "low": "index",
+    "medium": "review",
+    "high": "quarantine",
+    "critical": "quarantine"
+  },
+  "total_chunks": 566,
+  "risk_counts": {
+    "low": 566,
+    "medium": 0,
+    "high": 0,
+    "critical": 0
+  },
+  "action_counts": {
+    "index": 566,
+    "review": 0,
+    "quarantine": 0
+  },
+  "review_chunk_count": 0,
+  "quarantine_chunk_count": 0,
+  "document_summaries": [
+    {
+      "document_id": "C. IT 운영 문서/C3_장애대응Runbook.docx",
+      "total_chunks": 106,
+      "low": 106,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "C. IT 운영 문서/C1_신규계정발급매뉴얼.docx",
+      "total_chunks": 102,
+      "low": 102,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "C. IT 운영 문서/C6_인프라변경승인절차.docx",
+      "total_chunks": 97,
+      "low": 97,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "C. IT 운영 문서/C5_서버점검체크리스트.docx",
+      "total_chunks": 93,
+      "low": 93,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "C. IT 운영 문서/C4_배포절차서.docx",
+      "total_chunks": 90,
+      "low": 90,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "C. IT 운영 문서/C2_VPN접속가이드.docx",
+      "total_chunks": 78,
+      "low": 78,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    }
+  ],
+  "top_triggered_rules": []
+}

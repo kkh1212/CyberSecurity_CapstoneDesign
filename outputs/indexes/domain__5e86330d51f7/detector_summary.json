@@ -1,0 +1,205 @@
+{
+  "domain": "일반 문서",
+  "detector_enabled": true,
+  "detector_version": "mutedrag-detector-v1",
+  "detector_fail_mode": "allow",
+  "policy_actions": {
+    "low": "index",
+    "medium": "review",
+    "high": "quarantine",
+    "critical": "quarantine"
+  },
+  "total_chunks": 1006,
+  "risk_counts": {
+    "low": 1006,
+    "medium": 0,
+    "high": 0,
+    "critical": 0
+  },
+  "action_counts": {
+    "index": 1006,
+    "review": 0,
+    "quarantine": 0
+  },
+  "review_chunk_count": 0,
+  "quarantine_chunk_count": 0,
+  "document_summaries": [
+    {
+      "document_id": "일반 문서/회의록/개발팀_신규기능기획회의록_20250312.docx",
+      "total_chunks": 106,
+      "low": 106,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "일반 문서/개발팀_온보딩가이드.docx",
+      "total_chunks": 78,
+      "low": 78,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "일반 문서/회의록/개발팀_장애사후분석회의록_20250319.docx",
+      "total_chunks": 78,
+      "low": 78,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "일반 문서/DankFlow_v3.3_PRD.docx",
+      "total_chunks": 75,
+      "low": 75,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "일반 문서/회의록/영업팀_월간파이프라인리뷰_20250401.docx",
+      "total_chunks": 62,
+      "low": 62,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "일반 문서/회의록/마케팅팀_Q2콘텐츠전략회의록_20250404.docx",
+      "total_chunks": 61,
+      "low": 61,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "일반 문서/영업팀_F사_RFP대응문서.docx",
+      "total_chunks": 58,
+      "low": 58,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "일반 문서/DankFlow_v3.3_QA테스트계획서.docx",
+      "total_chunks": 57,
+      "low": 57,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "일반 문서/회의록/개발팀_주간기술회의록_20250402.docx",
+      "total_chunks": 57,
+      "low": 57,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "일반 문서/회의록/디자인팀_UI시안리뷰회의록_20250409.docx",
+      "total_chunks": 56,
+      "low": 56,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "일반 문서/2025_Q1_서비스지표보고서.docx",
+      "total_chunks": 55,
+      "low": 55,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "일반 문서/회의록/데이터팀_Q1분석리뷰회의록_20250403.docx",
+      "total_chunks": 55,
+      "low": 55,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "일반 문서/회의록/제품팀_Q2로드맵검토회의록_20250407.docx",
+      "total_chunks": 55,
+      "low": 55,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "일반 문서/DankFlow_v3.3_출시마케팅기획서.docx",
+      "total_chunks": 53,
+      "low": 53,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "일반 문서/DankFlow_SSO_기술설계서.docx",
+      "total_chunks": 50,
+      "low": 50,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    },
+    {
+      "document_id": "일반 문서/DankFlow_v3.3_스프린트보고서.docx",
+      "total_chunks": 50,
+      "low": 50,
+      "medium": 0,
+      "high": 0,
+      "critical": 0,
+      "review_required": 0,
+      "quarantined": 0,
+      "highest_risk": "low"
+    }
+  ],
+  "top_triggered_rules": []
+}

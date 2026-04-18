@@ -8,12 +8,14 @@ from src.chunking import load_documents_from_dir
 from src.config import (
     INDEX_DIR,
     RAW_DOCS_DIR,
+    get_detector_file_paths,
     get_domain_index_dir,
     get_domain_name,
     get_index_file_paths,
     get_requested_domain,
     list_domain_dirs,
 )
+from src.detector_pipeline import analyze_chunks_for_ingestion, print_detector_ingestion_summary, write_detector_artifacts
 from src.embedder import embed_texts
 from src.retrievers import tokenize_text
 
@@ -28,10 +30,35 @@ def build_domain_index(domain_name, domain_dir):
         print(f"[SKIP] No documents found in {domain_dir}")
         return
 
-    texts = [chunk["text"] for chunk in chunks]
-
     print(f"\n[DOMAIN] {domain_name}")
     print(f"Total chunks: {len(chunks)}")
+    detector_result = analyze_chunks_for_ingestion(domain_name, chunks)
+    sanitized_chunks = detector_result["indexed_chunks"]
+    flagged_chunks = detector_result["flagged_chunks"]
+    quarantined_chunks = detector_result["quarantined_chunks"]
+    summary = detector_result["summary"]
+    corpus_stats = detector_result["corpus_stats"]
+
+    write_detector_artifacts(
+        index_dir,
+        summary,
+        corpus_stats,
+        flagged_chunks,
+        quarantined_chunks,
+        get_detector_file_paths,
+    )
+    print_detector_ingestion_summary(summary)
+
+    if not sanitized_chunks:
+        for output_path in paths.values():
+            if output_path.exists():
+                output_path.unlink()
+        with open(paths["chunks"], "wb") as file:
+            pickle.dump([], file)
+        print("[SKIP] No indexable chunks remain after detector policy.")
+        return
+
+    texts = [chunk["text"] for chunk in sanitized_chunks]
     print("Generating embeddings...")
     embeddings = np.asarray(embed_texts(texts), dtype="float32")
 
@@ -44,7 +71,7 @@ def build_domain_index(domain_name, domain_dir):
     bm25 = BM25Okapi(tokenized_corpus)
 
     with open(paths["chunks"], "wb") as file:
-        pickle.dump(chunks, file)
+        pickle.dump(sanitized_chunks, file)
 
     with open(paths["bm25"], "wb") as file:
         pickle.dump(bm25, file)
@@ -53,6 +80,8 @@ def build_domain_index(domain_name, domain_dir):
     print(f"FAISS: {paths['faiss']}")
     print(f"Chunks: {paths['chunks']}")
     print(f"BM25: {paths['bm25']}")
+    print(f"Flagged review chunks: {len(flagged_chunks)}")
+    print(f"Quarantined chunks: {len(quarantined_chunks)}")
 
 
 def main():
