@@ -12,9 +12,11 @@ indexes/
 # 세션 이력
 sessions/
 
-# 업로드된 문서
-# corpus_docs/    # 팀원 공유를 위해 포함
-# malicious_docs/ # 팀원 공유를 위해 포함
+# 승인 대기 문서 (개인정보 포함 가능)
+pending_docs/
+
+# DB
+users.db
 
 # 모델 캐시
 .cache/

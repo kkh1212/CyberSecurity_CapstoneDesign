@@ -38,7 +38,7 @@ from rag.query_analysis import build_query_profile
 from rag.detector import MutedRAGDetector, estimate_corpus_stats
 
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("availrag")
+logger = logging.getLogger("mutedrag")
 
 # ─────────────────────────────────────────
 # 설정
@@ -46,7 +46,8 @@ logger = logging.getLogger("availrag")
 OLLAMA_HOST  = os.getenv("OLLAMA_HOST",  "http://localhost:11434")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen3:8b")
 
-CORPUS_DIRS   = [Path("../data/docs")]
+# data/docs 기본 문서 + corpus_docs 승인된 업로드 문서 모두 인덱싱
+CORPUS_DIRS   = [Path("data/docs"), Path("corpus_docs")]
 SESSIONS_DIR  = Path("sessions")
 PENDING_DIR   = Path("pending_docs")   # 관리자 승인 대기 문서
 REGISTRY_FILE = Path("doc_registry.json")  # 문서 등록 현황 영속화
@@ -71,9 +72,6 @@ MAX_SECURITY_EVENTS = 100
 
 
 # ─────────────────────────────────────────
-# Pydantic 모델
-# ─────────────────────────────────────────
-# ─────────────────────────────────────────
 # 인메모리 토큰 저장소
 # ─────────────────────────────────────────
 _tokens: dict[str, dict] = {}  # token -> {username, role}
@@ -93,6 +91,9 @@ def _revoke_token(token: str):
     _tokens.pop(token, None)
 
 
+# ─────────────────────────────────────────
+# Pydantic 모델
+# ─────────────────────────────────────────
 class LoginRequest(BaseModel):
     username: str
     password: str
@@ -175,12 +176,10 @@ def _mask_with_redacted(chunk_text: str, triggered_rules: list) -> str:
     """Way B: 위험 문장 [REDACTED] 마스킹"""
     if not triggered_rules:
         return chunk_text
-    # 위험 패턴 이름이 포함된 라인 마스킹
     lines = chunk_text.split("\n")
     masked = []
     for line in lines:
         line_lower = line.lower()
-        # 명확한 지시 전환 키워드 포함 라인 마스킹
         dangerous = any(kw in line_lower for kw in [
             "ignore", "forget", "pretend", "override",
             "무시", "잊어", "지금부터", "이제부터", "대신",
@@ -255,10 +254,6 @@ def cleanse_chunks(items: list) -> tuple[list, bool]:
 
 
 # ─────────────────────────────────────────
-# 세션 영속성
-# ─────────────────────────────────────────
-
-# ─────────────────────────────────────────
 # 문서 레지스트리 관리
 # ─────────────────────────────────────────
 
@@ -311,16 +306,16 @@ def analyze_document_chunks(chunks: list) -> tuple[list, dict]:
         risk_counts[risk_level] = risk_counts.get(risk_level, 0) + 1
 
         chunk_results.append({
-            "chunk_id":        chunk.get("chunk_id", ""),
-            "text_preview":    chunk.get("text", "")[:300],
-            "text_full":       chunk.get("text", ""),
-            "risk_level":      risk_level,
-            "adjusted_risk":   round(result["adjusted_risk"], 3),
+            "chunk_id":         chunk.get("chunk_id", ""),
+            "text_preview":     chunk.get("text", "")[:300],
+            "text_full":        chunk.get("text", ""),
+            "risk_level":       risk_level,
+            "adjusted_risk":    round(result["adjusted_risk"], 3),
             "instructionality": round(result["instructionality"], 3),
             "refusal_inducing": round(result["refusal_inducing"], 3),
-            "outlier":         round(result["outlier"], 3),
-            "triggered_rules": result["triggered_rules"],
-            "explanation":     result["explanation"],
+            "outlier":          round(result["outlier"], 3),
+            "triggered_rules":  result["triggered_rules"],
+            "explanation":      result["explanation"],
         })
 
     # 전체 위험도 = 가장 높은 위험도
@@ -333,6 +328,10 @@ def analyze_document_chunks(chunks: list) -> tuple[list, dict]:
     risk_summary = {**risk_counts, "overall": overall, "total": len(chunks)}
     return chunk_results, risk_summary
 
+
+# ─────────────────────────────────────────
+# 세션 영속성
+# ─────────────────────────────────────────
 
 def load_sessions():
     """sessions/ 디렉토리에서 이전 대화 이력 복원"""
@@ -392,7 +391,7 @@ def init_index(force_rebuild: bool = False):
             return
 
     if not _has_docs():
-        logger.info("corpus_docs/ 비어있음 — 인덱스 빌드 생략")
+        logger.info("문서 없음 — 인덱스 빌드 생략")
         return
 
     logger.info("인덱스 빌드 시작...")
@@ -428,12 +427,6 @@ async def call_ollama(
     history:       list,
     temperature:   float = 0.5,
 ) -> str:
-    """
-    Ollama /api/chat 호출 (멀티턴 지원)
-    system_prompt : RAG 컨텍스트 + 지시사항
-    user_query    : 현재 사용자 질문 (user 메시지로 명확히 분리)
-    history       : 이전 대화 이력
-    """
     messages = [{"role": "system", "content": system_prompt}]
     for turn in history:
         messages.append({"role": turn["role"], "content": turn["content"]})
@@ -443,13 +436,13 @@ async def call_ollama(
         "model": OLLAMA_MODEL,
         "messages": messages,
         "stream": False,
-        "keep_alive": -1,          # 모델을 메모리에서 해제하지 않음
+        "keep_alive": -1,
         "options": {
             "temperature": temperature,
             "top_p": 0.9,
             "repeat_penalty": 1.05,
-            "num_ctx": 2048,       # KV 캐시 절약 → 전체 레이어 GPU 유지
-            "num_gpu": 99,         # 모든 레이어를 GPU에 올림
+            "num_ctx": 2048,
+            "num_gpu": 99,
         },
     }
 
@@ -497,19 +490,16 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="AvailRAG", version="2.1.0", lifespan=lifespan)
+app = FastAPI(title="MutedRAG", version="2.1.0", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
+    allow_credentials=True,
 )
 
-
-# ─────────────────────────────────────────
-# API 엔드포인트
-# ─────────────────────────────────────────
 
 # ─────────────────────────────────────────
 # 인증 엔드포인트
@@ -524,8 +514,8 @@ async def login(req: LoginRequest, response: Response):
     response.set_cookie(
         key="session",
         value=token,
-        httponly=True,   # JS에서 document.cookie로 접근 불가 (XSS 방어)
-        samesite="lax",  # CSRF 기본 방어
+        httponly=True,
+        samesite="lax",
         max_age=3600 * 8,
         path="/",
     )
@@ -571,16 +561,11 @@ async def health():
 
 @app.get("/api/security-events")
 async def security_events(limit: int = 50):
-    """최근 보안 이벤트 반환 (UI 보안 로그용)"""
     return {"events": _security_events[-limit:]}
 
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(req: ChatRequest):
-    """
-    채팅 엔드포인트
-    흐름: 라우터 → 하이브리드 검색 → MutedRAG 필터 → 리랭킹 → LLM
-    """
     session_id = req.session_id or str(uuid.uuid4())
     if session_id not in session_histories:
         session_histories[session_id] = []
@@ -617,7 +602,7 @@ async def chat(req: ChatRequest):
     candidate_pool = merged[:30]
     clean_items, was_filtered = cleanse_chunks(candidate_pool)
 
-    # Way C 보충: 관련성 있는 후순위 문서로 보충 (최소 임계값 0.005)
+    # Way C 보충: 관련성 있는 후순위 문서로 보충
     if was_filtered and len(clean_items) < 3:
         fallback = [
             item for item in merged[30:60]
@@ -666,7 +651,7 @@ def _save_history(session_id: str, user_msg: str, assistant_msg: str):
 @app.post("/upload", response_model=UploadResponse)
 async def upload_file(
     file: UploadFile = File(...),
-    doc_type: str = "internal",   # internal | external_trusted | external_untrusted
+    doc_type: str = "internal",
 ):
     """
     파일 업로드 → pending_docs에 저장 → MutedRAG 분석 → 관리자 승인 대기
@@ -686,18 +671,15 @@ async def upload_file(
     content = await file.read()
     save_path.write_bytes(content)
 
-    # 청크 분석
     from rag.chunking import load_document_blocks, chunk_blocks
     blocks     = load_document_blocks(save_path)
     new_chunks = chunk_blocks(blocks, save_path)
 
-    # MutedRAG 분석 (백그라운드)
     loop = asyncio.get_event_loop()
     chunk_results, risk_summary = await loop.run_in_executor(
         None, lambda: analyze_document_chunks(new_chunks)
     )
 
-    # 레지스트리 등록
     _doc_registry[doc_id] = {
         "doc_id":       doc_id,
         "filename":     file.filename or f"upload{ext}",
@@ -710,7 +692,6 @@ async def upload_file(
     }
     save_registry()
 
-    # 보안 이벤트 로깅
     if risk_summary["high"] > 0 or risk_summary["critical"] > 0:
         logger.warning(f"[Upload] 고위험 청크 감지: {file.filename} "
                        f"high={risk_summary['high']} critical={risk_summary['critical']}")
@@ -731,7 +712,6 @@ async def upload_file(
 
 @app.get("/api/admin/documents")
 async def admin_list_documents():
-    """등록된 모든 문서 목록 반환 (청크 내용 제외, 요약만)"""
     docs = []
     for doc in _doc_registry.values():
         docs.append({
@@ -748,7 +728,6 @@ async def admin_list_documents():
 
 @app.get("/api/admin/documents/{doc_id}")
 async def admin_get_document(doc_id: str):
-    """문서 상세 조회 (청크별 위험도 포함)"""
     doc = _doc_registry.get(doc_id)
     if not doc:
         raise HTTPException(status_code=404, detail="문서를 찾을 수 없습니다.")
@@ -768,7 +747,6 @@ async def admin_approve_document(doc_id: str):
     if not src.exists():
         raise HTTPException(status_code=400, detail="파일이 존재하지 않습니다.")
 
-    # corpus_docs로 이동
     dest_dir = Path("corpus_docs")
     dest_dir.mkdir(exist_ok=True)
     dest = dest_dir / doc["filename"]
@@ -778,7 +756,6 @@ async def admin_approve_document(doc_id: str):
     _doc_registry[doc_id]["file_path"] = str(dest)
     save_registry()
 
-    # 인덱스 재빌드
     asyncio.create_task(async_rebuild_index())
     logger.info(f"[Admin] 승인: {doc['filename']} → corpus_docs, 재빌드 시작")
 
@@ -811,7 +788,6 @@ async def admin_reject_document(doc_id: str):
 
 @app.get("/login")
 async def serve_login(session: str = Cookie(None)):
-    # 이미 로그인된 경우 역할에 맞는 페이지로 이동
     if session:
         user = _verify_token(session)
         if user:
@@ -821,7 +797,6 @@ async def serve_login(session: str = Cookie(None)):
 
 @app.get("/")
 async def serve_index(session: str = Cookie(None)):
-    # 서버사이드 인증 검사 — 미인증이면 로그인 페이지로
     if not session or not _verify_token(session):
         return RedirectResponse("/login")
     return FileResponse("index.html")
@@ -829,13 +804,11 @@ async def serve_index(session: str = Cookie(None)):
 
 @app.get("/admin")
 async def serve_admin(session: str = Cookie(None)):
-    # 서버사이드 인증 검사 — 미인증이면 로그인 페이지로
     if not session:
         return RedirectResponse("/login")
     user = _verify_token(session)
     if not user:
         return RedirectResponse("/login")
-    # 관리자가 아니면 메인 페이지로
     if user["role"] != "admin":
         return RedirectResponse("/")
     return FileResponse("admin.html")

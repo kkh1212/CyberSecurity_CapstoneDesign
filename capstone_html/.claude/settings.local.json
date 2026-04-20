@@ -8,7 +8,11 @@
       "Bash(cp \"C:/Users/user/Downloads/CyberSecurity_CapstoneDesign-main-extracted/CyberSecurity_CapstoneDesign-main/detector/patterns.py\" \"C:/Users/user/OneDrive/Desktop/capstone_html/rag/detector/patterns.py\")",
       "Bash(cp \"C:/Users/user/Downloads/CyberSecurity_CapstoneDesign-main-extracted/CyberSecurity_CapstoneDesign-main/detector/risk.py\" \"C:/Users/user/OneDrive/Desktop/capstone_html/rag/detector/risk.py\")",
       "Bash(cp \"C:/Users/user/Downloads/CyberSecurity_CapstoneDesign-main-extracted/CyberSecurity_CapstoneDesign-main/detector/scoring.py\" \"C:/Users/user/OneDrive/Desktop/capstone_html/rag/detector/scoring.py\")",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(python3 -c \"import zipfile; zf = zipfile.ZipFile\\('CyberSecurity_CapstoneDesign-main \\(1\\).zip'\\); [print\\(f\\) for f in sorted\\(zf.namelist\\(\\)\\)]\")",
+      "Bash(powershell.exe -Command 'Add-Type -AssemblyName System.IO.Compression.FileSystem; $zip = [System.IO.Compression.ZipFile]::OpenRead\\('\\\\''C:\\\\Users\\\\user\\\\Downloads\\\\CyberSecurity_CapstoneDesign-main \\(1\\).zip'\\\\''\\); $zip.Entries | ForEach-Object { $_.FullName } | Sort-Object')",
+      "Bash(powershell.exe -Command ' *)",
+      "Bash(Move-Item \"C:\\\\Users\\\\user\\\\OneDrive\\\\Desktop\\\\data\" \"C:\\\\Users\\\\user\\\\OneDrive\\\\Desktop\\\\capstone_html\\\\data\")"
     ]
   }
 }
