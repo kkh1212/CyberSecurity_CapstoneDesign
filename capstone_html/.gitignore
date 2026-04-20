@@ -12,9 +12,9 @@ indexes/
 # 세션 이력
 sessions/
 
-# 업로드된 문서 (용량 큼)
-corpus_docs/
-malicious_docs/
+# 업로드된 문서
+# corpus_docs/    # 팀원 공유를 위해 포함
+# malicious_docs/ # 팀원 공유를 위해 포함
 
 # 모델 캐시
 .cache/
