@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MutedRAG 관리자 패널</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #22263a;
+      --border: #2e3250;
+      --text: #e8eaf0;
+      --muted: #8b90a8;
+      --accent: #5b6af0;
+      --risk-low: #22c55e;
+      --risk-medium: #f59e0b;
+      --risk-high: #ef4444;
+      --risk-critical: #dc2626;
+      --approved: #22c55e;
+      --pending: #f59e0b;
+      --rejected: #ef4444;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; display: flex; height: 100vh; overflow: hidden; }
+
+    /* ── 사이드바 ── */
+    #sidebar {
+      width: 300px; min-width: 300px; background: var(--surface);
+      border-right: 1px solid var(--border);
+      display: flex; flex-direction: column; overflow: hidden;
+    }
+    #sidebar-header {
+      padding: 18px 16px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    #sidebar-header .logo {
+      font-size: 1.1rem; font-weight: 700; color: var(--text);
+      display: flex; align-items: center; gap: 8px; margin-bottom: 4px;
+    }
+    #sidebar-header .logo .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+    #sidebar-header .subtitle { font-size: 0.78rem; color: var(--muted); }
+
+    #filter-bar {
+      padding: 10px 12px; display: flex; gap: 6px; flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+    }
+    .filter-btn {
+      font-size: 0.72rem; padding: 3px 10px; border-radius: 20px;
+      border: 1px solid var(--border); background: transparent;
+      color: var(--muted); cursor: pointer; transition: all .15s;
+    }
+    .filter-btn.active, .filter-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    #doc-list { flex: 1; overflow-y: auto; padding: 8px 0; }
+    .doc-item {
+      padding: 12px 14px; cursor: pointer; border-left: 3px solid transparent;
+      transition: all .15s; border-bottom: 1px solid var(--border);
+    }
+    .doc-item:hover { background: var(--surface2); }
+    .doc-item.active { background: var(--surface2); border-left-color: var(--accent); }
+    .doc-item .doc-name { font-size: 0.85rem; font-weight: 500; margin-bottom: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .doc-item .doc-meta { font-size: 0.72rem; color: var(--muted); display: flex; gap: 8px; align-items: center; }
+    .status-badge {
+      font-size: 0.65rem; padding: 1px 7px; border-radius: 10px; font-weight: 600;
+    }
+    .status-badge.pending  { background: rgba(245,158,11,.15); color: var(--pending); }
+    .status-badge.approved { background: rgba(34,197,94,.15);  color: var(--approved); }
+    .status-badge.rejected { background: rgba(239,68,68,.15);  color: var(--rejected); }
+
+    .risk-mini { display: flex; gap: 3px; align-items: center; }
+    .risk-dot { width: 6px; height: 6px; border-radius: 50%; }
+    .risk-dot.low      { background: var(--risk-low); }
+    .risk-dot.medium   { background: var(--risk-medium); }
+    .risk-dot.high     { background: var(--risk-high); }
+    .risk-dot.critical { background: var(--risk-critical); }
+
+    /* ── 메인 영역 ── */
+    #main { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+    #top-bar {
+      padding: 14px 24px; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--surface);
+    }
+    #top-bar h2 { font-size: 0.95rem; font-weight: 600; }
+    #top-bar .actions { display: flex; gap: 8px; }
+    .btn {
+      padding: 7px 18px; border-radius: 8px; border: none; cursor: pointer;
+      font-size: 0.82rem; font-weight: 600; transition: opacity .15s;
+    }
+    .btn:hover { opacity: .85; }
+    .btn-approve { background: var(--risk-low); color: #fff; }
+    .btn-reject  { background: var(--risk-high); color: #fff; }
+    .btn-disabled { background: var(--border); color: var(--muted); cursor: not-allowed; }
+    .btn:disabled { opacity: .4; cursor: not-allowed; }
+
+    #content { flex: 1; overflow-y: auto; padding: 20px 24px; }
+
+    /* ── 빈 화면 ── */
+    #empty-state {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      height: 100%; color: var(--muted); gap: 12px;
+    }
+    #empty-state i { font-size: 3rem; }
+
+    /* ── 문서 정보 헤더 ── */
+    #doc-header {
+      background: var(--surface); border-radius: 10px; padding: 16px 20px;
+      margin-bottom: 16px; border: 1px solid var(--border);
+    }
+    #doc-header .doc-title { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+    #doc-header .doc-info  { font-size: 0.78rem; color: var(--muted); display: flex; gap: 20px; flex-wrap: wrap; }
+
+    /* ── 위험도 요약 바 ── */
+    #risk-summary {
+      background: var(--surface); border-radius: 10px; padding: 14px 20px;
+      margin-bottom: 16px; border: 1px solid var(--border);
+    }
+    #risk-summary h4 { font-size: 0.82rem; color: var(--muted); margin-bottom: 10px; }
+    .risk-bar { display: flex; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 10px; }
+    .risk-bar-seg { transition: width .3s; }
+    .risk-bar-seg.low      { background: var(--risk-low); }
+    .risk-bar-seg.medium   { background: var(--risk-medium); }
+    .risk-bar-seg.high     { background: var(--risk-high); }
+    .risk-bar-seg.critical { background: var(--risk-critical); }
+    .risk-counts { display: flex; gap: 16px; }
+    .risk-count-item { display: flex; align-items: center; gap: 5px; font-size: 0.78rem; }
+    .risk-label { color: var(--muted); }
+    .risk-val   { font-weight: 600; }
+    .risk-val.low      { color: var(--risk-low); }
+    .risk-val.medium   { color: var(--risk-medium); }
+    .risk-val.high     { color: var(--risk-high); }
+    .risk-val.critical { color: var(--risk-critical); }
+
+    /* ── 청크 목록 ── */
+    #chunk-list-header {
+      font-size: 0.82rem; color: var(--muted); margin-bottom: 10px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .chunk-filter { display: flex; gap: 6px; }
+
+    .chunk-card {
+      background: var(--surface); border-radius: 8px; margin-bottom: 10px;
+      border: 1px solid var(--border); border-left: 4px solid var(--border);
+      transition: border-color .15s;
+    }
+    .chunk-card.low      { border-left-color: var(--risk-low); }
+    .chunk-card.medium   { border-left-color: var(--risk-medium); }
+    .chunk-card.high     { border-left-color: var(--risk-high); }
+    .chunk-card.critical { border-left-color: var(--risk-critical); }
+
+    .chunk-card-header {
+      padding: 10px 14px; display: flex; align-items: center; gap: 10px;
+      cursor: pointer; user-select: none;
+    }
+    .chunk-num { font-size: 0.72rem; color: var(--muted); min-width: 50px; }
+    .risk-badge {
+      font-size: 0.65rem; padding: 2px 8px; border-radius: 10px; font-weight: 700;
+      text-transform: uppercase;
+    }
+    .risk-badge.low      { background: rgba(34,197,94,.15);  color: var(--risk-low); }
+    .risk-badge.medium   { background: rgba(245,158,11,.15); color: var(--risk-medium); }
+    .risk-badge.high     { background: rgba(239,68,68,.15);  color: var(--risk-high); }
+    .risk-badge.critical { background: rgba(220,38,38,.25);  color: var(--risk-critical); }
+    .chunk-preview { flex: 1; font-size: 0.8rem; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .chunk-score { font-size: 0.75rem; color: var(--muted); min-width: 70px; text-align: right; }
+    .expand-icon { color: var(--muted); font-size: 0.8rem; transition: transform .2s; }
+    .chunk-card.expanded .expand-icon { transform: rotate(180deg); }
+
+    .chunk-card-body {
+      display: none; padding: 0 14px 14px; border-top: 1px solid var(--border);
+    }
+    .chunk-card.expanded .chunk-card-body { display: block; }
+
+    .chunk-text {
+      font-size: 0.8rem; line-height: 1.7; color: var(--text);
+      background: var(--surface2); border-radius: 6px; padding: 10px 12px;
+      margin: 10px 0; max-height: 200px; overflow-y: auto;
+      white-space: pre-wrap; word-break: break-word;
+    }
+    .score-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 8px;
+    }
+    .score-item { text-align: center; background: var(--surface2); border-radius: 6px; padding: 8px; }
+    .score-item .slabel { font-size: 0.65rem; color: var(--muted); margin-bottom: 2px; }
+    .score-item .sval   { font-size: 0.9rem; font-weight: 600; }
+    .rules-list { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px; }
+    .rule-tag {
+      font-size: 0.65rem; background: rgba(239,68,68,.12); color: #f87171;
+      border-radius: 4px; padding: 2px 7px;
+    }
+    .explanation { font-size: 0.75rem; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+
+    /* ── 감사 로그 탭 ── */
+    #audit-log { display: none; }
+    .log-entry {
+      background: var(--surface); border-radius: 8px; padding: 10px 14px;
+      margin-bottom: 8px; border: 1px solid var(--border);
+      display: flex; gap: 12px; align-items: flex-start;
+    }
+    .log-time { font-size: 0.72rem; color: var(--muted); min-width: 70px; }
+    .log-type { font-size: 0.72rem; font-weight: 700; min-width: 80px; }
+    .log-type.suspicious { color: var(--risk-medium); }
+    .log-type.malicious  { color: var(--risk-high); }
+    .log-source { font-size: 0.78rem; flex: 1; }
+    .log-risk { font-size: 0.72rem; color: var(--muted); }
+
+    /* ── 탭 ── */
+    #tab-bar {
+      display: flex; gap: 0; border-bottom: 1px solid var(--border);
+      padding: 0 24px; background: var(--surface);
+    }
+    .tab-btn {
+      padding: 10px 18px; font-size: 0.82rem; cursor: pointer;
+      border: none; background: transparent; color: var(--muted);
+      border-bottom: 2px solid transparent; transition: all .15s;
+    }
+    .tab-btn.active { color: var(--text); border-bottom-color: var(--accent); }
+
+    /* 스크롤바 */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+    .toast {
+      position: fixed; bottom: 24px; right: 24px; z-index: 999;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 10px 16px; font-size: 0.82rem;
+      display: flex; align-items: center; gap: 8px;
+      animation: slideUp .2s ease;
+    }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  </style>
+</head>
+<body>
+
+<!-- 사이드바 -->
+<aside id="sidebar">
+  <div id="sidebar-header">
+    <div class="logo"><span class="dot"></span>MutedRAG</div>
+    <div class="subtitle">관리자 패널 — 문서 심의</div>
+  </div>
+  <div id="filter-bar">
+    <button class="filter-btn active" onclick="setFilter('all', this)">전체</button>
+    <button class="filter-btn" onclick="setFilter('pending', this)">대기중</button>
+    <button class="filter-btn" onclick="setFilter('approved', this)">승인됨</button>
+    <button class="filter-btn" onclick="setFilter('rejected', this)">거부됨</button>
+  </div>
+  <div id="doc-list">
+    <div style="padding:20px;text-align:center;color:var(--muted);font-size:.8rem;">불러오는 중...</div>
+  </div>
+</aside>
+
+<!-- 메인 -->
+<div id="main">
+  <!-- 탭 바 -->
+  <div id="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('docs', this)"><i class="bi bi-file-earmark-text"></i> 문서 심의</button>
+    <button class="tab-btn" onclick="switchTab('audit', this)"><i class="bi bi-shield-check"></i> 감사 로그</button>
+    <button class="tab-btn" style="margin-left:auto" onclick="location.href='/'"><i class="bi bi-chat-dots"></i> 사용자 화면</button>
+  </div>
+
+  <!-- 액션 바 -->
+  <div id="top-bar" style="display:none">
+    <h2 id="top-doc-name">—</h2>
+    <div class="actions">
+      <button class="btn btn-approve" id="btn-approve" onclick="approveDoc()"><i class="bi bi-check-lg"></i> 승인</button>
+      <button class="btn btn-reject"  id="btn-reject"  onclick="rejectDoc()"><i class="bi bi-x-lg"></i> 거부</button>
+    </div>
+  </div>
+
+  <!-- 콘텐츠 -->
+  <div id="content">
+    <!-- 문서 탭 -->
+    <div id="tab-docs">
+      <div id="empty-state">
+        <i class="bi bi-folder2-open"></i>
+        <span>왼쪽에서 문서를 선택하세요</span>
+      </div>
+      <div id="doc-detail" style="display:none">
+        <div id="doc-header">
+          <div class="doc-title" id="detail-filename">—</div>
+          <div class="doc-info">
+            <span><i class="bi bi-clock"></i> <span id="detail-time">—</span></span>
+            <span><i class="bi bi-tag"></i> <span id="detail-type">—</span></span>
+            <span><i class="bi bi-file-earmark"></i> <span id="detail-chunks">—</span> 청크</span>
+          </div>
+        </div>
+
+        <div id="risk-summary">
+          <h4>위험도 분포</h4>
+          <div class="risk-bar" id="risk-bar"></div>
+          <div class="risk-counts" id="risk-counts"></div>
+        </div>
+
+        <div id="chunk-list-header">
+          <span id="chunk-count-label">청크 목록</span>
+          <div class="chunk-filter">
+            <button class="filter-btn active" onclick="filterChunks('all', this)" style="font-size:.7rem;padding:2px 8px">전체</button>
+            <button class="filter-btn" onclick="filterChunks('medium', this)" style="font-size:.7rem;padding:2px 8px;color:var(--risk-medium)">Medium+</button>
+            <button class="filter-btn" onclick="filterChunks('high', this)" style="font-size:.7rem;padding:2px 8px;color:var(--risk-high)">High+</button>
+          </div>
+        </div>
+        <div id="chunk-list"></div>
+      </div>
+    </div>
+
+    <!-- 감사 로그 탭 -->
+    <div id="tab-audit" style="display:none">
+      <div id="audit-log-list" style="display:none"></div>
+      <div id="audit-empty" style="padding:40px;text-align:center;color:var(--muted)">
+        <i class="bi bi-shield-check" style="font-size:2rem"></i><br><br>보안 이벤트 없음
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const API = 'http://localhost:8000';
+let allDocs = [];
+let currentDoc = null;
+let currentFilter = 'all';
+let currentChunkFilter = 'all';
+
+// ── 문서 목록 로드 ──────────────────────────────
+async function loadDocs() {
+  const res = await fetch(`${API}/api/admin/documents`);
+  const data = await res.json();
+  allDocs = data.documents;
+  renderDocList();
+}
+
+function setFilter(f, btn) {
+  currentFilter = f;
+  document.querySelectorAll('#filter-bar .filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderDocList();
+}
+
+function renderDocList() {
+  const list = document.getElementById('doc-list');
+  const filtered = currentFilter === 'all' ? allDocs : allDocs.filter(d => d.status === currentFilter);
+
+  if (!filtered.length) {
+    list.innerHTML = `<div style="padding:20px;text-align:center;color:var(--muted);font-size:.8rem;">문서 없음</div>`;
+    return;
+  }
+
+  list.innerHTML = filtered.map(doc => {
+    const rs = doc.risk_summary;
+    const overall = rs.overall || 'low';
+    return `
+    <div class="doc-item ${currentDoc?.doc_id === doc.doc_id ? 'active' : ''}"
+         onclick="selectDoc('${doc.doc_id}')">
+      <div class="doc-name" title="${doc.filename}">${doc.filename}</div>
+      <div class="doc-meta">
+        <span class="status-badge ${doc.status}">${statusLabel(doc.status)}</span>
+        <span class="risk-mini">
+          <span class="risk-dot ${overall}"></span>
+          <span style="font-size:.68rem">${overall.toUpperCase()}</span>
+        </span>
+        <span>${doc.upload_time.slice(5)}</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function statusLabel(s) {
+  return s === 'pending' ? '대기중' : s === 'approved' ? '승인됨' : '거부됨';
+}
+
+// ── 문서 선택 ────────────────────────────────────
+async function selectDoc(docId) {
+  const res = await fetch(`${API}/api/admin/documents/${docId}`);
+  currentDoc = await res.json();
+  renderDocList();
+  renderDocDetail();
+}
+
+function renderDocDetail() {
+  const doc = currentDoc;
+  document.getElementById('empty-state').style.display = 'none';
+  document.getElementById('doc-detail').style.display  = 'block';
+  document.getElementById('top-bar').style.display     = 'flex';
+
+  document.getElementById('top-doc-name').textContent  = doc.filename;
+  document.getElementById('detail-filename').textContent = doc.filename;
+  document.getElementById('detail-time').textContent   = doc.upload_time;
+  document.getElementById('detail-type').textContent   = docTypeLabel(doc.doc_type);
+  document.getElementById('detail-chunks').textContent = doc.risk_summary.total;
+
+  // 승인/거부 버튼 상태
+  const isPending = doc.status === 'pending';
+  document.getElementById('btn-approve').disabled = !isPending;
+  document.getElementById('btn-reject').disabled  = !isPending;
+
+  renderRiskBar(doc.risk_summary);
+  renderChunks(doc.chunks, currentChunkFilter);
+}
+
+function docTypeLabel(t) {
+  return t === 'internal' ? '내부 문서' : t === 'external_trusted' ? '외부(신뢰)' : '외부(미검증)';
+}
+
+function renderRiskBar(rs) {
+  const total = rs.total || 1;
+  document.getElementById('risk-bar').innerHTML = ['low','medium','high','critical'].map(lv =>
+    rs[lv] ? `<div class="risk-bar-seg ${lv}" style="width:${rs[lv]/total*100}%"></div>` : ''
+  ).join('');
+
+  document.getElementById('risk-counts').innerHTML = ['low','medium','high','critical'].map(lv => `
+    <div class="risk-count-item">
+      <span class="risk-label">${lv.toUpperCase()}</span>
+      <span class="risk-val ${lv}">${rs[lv] || 0}</span>
+    </div>
+  `).join('');
+}
+
+// ── 청크 렌더링 ──────────────────────────────────
+function filterChunks(f, btn) {
+  currentChunkFilter = f;
+  document.querySelectorAll('.chunk-filter .filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderChunks(currentDoc.chunks, f);
+}
+
+function renderChunks(chunks, filter) {
+  const RISK_RANK = { low: 0, medium: 1, high: 2, critical: 3 };
+  const minRank = filter === 'high' ? 2 : filter === 'medium' ? 1 : 0;
+  const visible = chunks.filter(c => (RISK_RANK[c.risk_level] || 0) >= minRank);
+
+  document.getElementById('chunk-count-label').textContent =
+    `청크 목록 (${visible.length}/${chunks.length})`;
+
+  if (!visible.length) {
+    document.getElementById('chunk-list').innerHTML =
+      `<div style="padding:20px;text-align:center;color:var(--muted);font-size:.8rem;">해당 위험도 청크 없음</div>`;
+    return;
+  }
+
+  document.getElementById('chunk-list').innerHTML = visible.map((c, i) => `
+    <div class="chunk-card ${c.risk_level}" id="cc-${i}">
+      <div class="chunk-card-header" onclick="toggleChunk(${i})">
+        <span class="chunk-num">#${i + 1}</span>
+        <span class="risk-badge ${c.risk_level}">${c.risk_level}</span>
+        <span class="chunk-preview">${escHtml(c.text_preview)}</span>
+        <span class="chunk-score">${(c.adjusted_risk * 100).toFixed(0)}%</span>
+        <i class="bi bi-chevron-down expand-icon"></i>
+      </div>
+      <div class="chunk-card-body">
+        <div class="chunk-text">${escHtml(c.text_full || c.text_preview)}</div>
+        <div class="score-grid">
+          <div class="score-item">
+            <div class="slabel">종합 위험도</div>
+            <div class="sval" style="color:var(--risk-${c.risk_level})">${(c.adjusted_risk*100).toFixed(1)}%</div>
+          </div>
+          <div class="score-item">
+            <div class="slabel">지시성</div>
+            <div class="sval">${(c.instructionality*100).toFixed(1)}%</div>
+          </div>
+          <div class="score-item">
+            <div class="slabel">거부 유도</div>
+            <div class="sval">${(c.refusal_inducing*100).toFixed(1)}%</div>
+          </div>
+          <div class="score-item">
+            <div class="slabel">이상도</div>
+            <div class="sval">${(c.outlier*100).toFixed(1)}%</div>
+          </div>
+        </div>
+        ${c.triggered_rules.length ? `
+          <div class="rules-list">${c.triggered_rules.map(r => `<span class="rule-tag">${r}</span>`).join('')}</div>
+        ` : ''}
+        ${c.explanation ? `<div class="explanation">${escHtml(c.explanation)}</div>` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+function toggleChunk(i) {
+  const card = document.getElementById(`cc-${i}`);
+  card.classList.toggle('expanded');
+}
+
+function escHtml(str) {
+  return (str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// ── 승인 / 거부 ──────────────────────────────────
+async function approveDoc() {
+  if (!currentDoc || currentDoc.status !== 'pending') return;
+  if (!confirm(`'${currentDoc.filename}'을 승인하시겠습니까?\n인덱스에 추가되어 검색에 반영됩니다.`)) return;
+
+  const res = await fetch(`${API}/api/admin/documents/${currentDoc.doc_id}/approve`, { method: 'POST' });
+  const data = await res.json();
+  showToast(data.message, 'success');
+  await loadDocs();
+  selectDoc(currentDoc.doc_id);
+}
+
+async function rejectDoc() {
+  if (!currentDoc || currentDoc.status !== 'pending') return;
+  if (!confirm(`'${currentDoc.filename}'을 거부하시겠습니까?\n파일이 삭제됩니다.`)) return;
+
+  const res = await fetch(`${API}/api/admin/documents/${currentDoc.doc_id}/reject`, { method: 'POST' });
+  const data = await res.json();
+  showToast(data.message, 'warn');
+  await loadDocs();
+  selectDoc(currentDoc.doc_id);
+}
+
+// ── 감사 로그 탭 ─────────────────────────────────
+async function loadAuditLog() {
+  const res = await fetch(`${API}/api/security-events?limit=100`);
+  const data = await res.json();
+  const events = data.events || [];
+
+  if (!events.length) {
+    document.getElementById('audit-log-list').style.display = 'none';
+    document.getElementById('audit-empty').style.display = 'block';
+    return;
+  }
+
+  document.getElementById('audit-empty').style.display    = 'none';
+  document.getElementById('audit-log-list').style.display = 'block';
+  document.getElementById('audit-log-list').innerHTML = [...events].reverse().map(e => `
+    <div class="log-entry">
+      <span class="log-time">${e.time}</span>
+      <span class="log-type ${e.type}">${e.type === 'malicious' ? '🔴 악성' : '🟡 의심'}</span>
+      <span class="log-source">${e.source}</span>
+      <span class="log-risk">위험도 ${((e.adjusted_risk||0)*100).toFixed(0)}%</span>
+    </div>
+  `).join('');
+}
+
+// ── 탭 전환 ──────────────────────────────────────
+function switchTab(tab, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-docs').style.display  = tab === 'docs'  ? 'block' : 'none';
+  document.getElementById('tab-audit').style.display = tab === 'audit' ? 'block' : 'none';
+  document.getElementById('top-bar').style.display   = tab === 'docs' && currentDoc ? 'flex' : 'none';
+  if (tab === 'audit') loadAuditLog();
+}
+
+// ── 토스트 ───────────────────────────────────────
+function showToast(msg, type = 'info') {
+  const icon = type === 'success' ? '✅' : type === 'warn' ? '❌' : 'ℹ️';
+  const t = document.createElement('div');
+  t.className = 'toast';
+  t.innerHTML = `${icon} ${msg}`;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 3000);
+}
+
+// ── 초기화 ───────────────────────────────────────
+loadDocs();
+setInterval(loadDocs, 10000); // 10초마다 자동 갱신
+</script>
+</body>
+</html>

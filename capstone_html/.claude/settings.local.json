@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/user/Downloads/**)",
+      "Bash(python -c \"import zipfile; z = zipfile.ZipFile\\('CyberSecurity_CapstoneDesign-main.zip'\\); z.extractall\\('CyberSecurity_CapstoneDesign-main-extracted'\\)\")",
+      "Bash(cp \"C:/Users/user/Downloads/CyberSecurity_CapstoneDesign-main-extracted/CyberSecurity_CapstoneDesign-main/detector/__init__.py\" \"C:/Users/user/OneDrive/Desktop/capstone_html/rag/detector/__init__.py\")",
+      "Bash(cp \"C:/Users/user/Downloads/CyberSecurity_CapstoneDesign-main-extracted/CyberSecurity_CapstoneDesign-main/detector/detector.py\" \"C:/Users/user/OneDrive/Desktop/capstone_html/rag/detector/detector.py\")",
+      "Bash(cp \"C:/Users/user/Downloads/CyberSecurity_CapstoneDesign-main-extracted/CyberSecurity_CapstoneDesign-main/detector/patterns.py\" \"C:/Users/user/OneDrive/Desktop/capstone_html/rag/detector/patterns.py\")",
+      "Bash(cp \"C:/Users/user/Downloads/CyberSecurity_CapstoneDesign-main-extracted/CyberSecurity_CapstoneDesign-main/detector/risk.py\" \"C:/Users/user/OneDrive/Desktop/capstone_html/rag/detector/risk.py\")",
+      "Bash(cp \"C:/Users/user/Downloads/CyberSecurity_CapstoneDesign-main-extracted/CyberSecurity_CapstoneDesign-main/detector/scoring.py\" \"C:/Users/user/OneDrive/Desktop/capstone_html/rag/detector/scoring.py\")",
+      "Bash(python -c ' *)"
+    ]
+  }
+}

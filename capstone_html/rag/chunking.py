@@ -11,8 +11,8 @@ import pdfplumber
 from docx import Document
 from pypdf import PdfReader
 
-CHUNK_SIZE = 500
-CHUNK_OVERLAP = 120
+CHUNK_SIZE = 900
+CHUNK_OVERLAP = 180
 
 TITLE_FIELDS = {"교과목명", "프로그램명", "사업명"}
 POLICY_DOC_KEYWORDS = ("규정", "지침", "세칙", "학칙", "방침", "절차", "기준", "규칙")

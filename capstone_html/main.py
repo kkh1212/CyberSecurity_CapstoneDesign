@@ -1,9 +1,9 @@
 """
-AvailRAG - FastAPI Backend
+MutedRAG - FastAPI Backend
 MutedRAG 방어 시스템이 내장된 회사 AI 어시스턴트
 
 RAG 파이프라인: 조원 코드(chunking / retrievers / reranker / prompts / router) 통합
-보안 레이어:   MutedRAG 탐지 + 3-Way Cleansing (AvailRAG 고유 기능)
+보안 레이어:   MutedRAG 탐지 + 3-Way Cleansing (detector 패키지 업그레이드)
 """
 
 import asyncio
@@ -23,12 +23,16 @@ from pydantic import BaseModel
 import httpx
 import numpy as np
 
-# ── RAG 패키지 (조원 코드 통합) ──────────────────────────────
+# ── RAG 패키지 ────────────────────────────────────────────────
 from rag.index_builder import build_index, load_index, index_is_stale, INDEX_DIR
 from rag.retrievers   import hybrid_search
 from rag.reranker     import rerank_results
 from rag.router       import is_general_chat, should_use_rag
 from rag.prompts      import build_rag_system_prompt, build_general_system_prompt
+from rag.query_analysis import build_query_profile
+
+# ── MutedRAG Detector (업그레이드) ───────────────────────────
+from rag.detector import MutedRAGDetector, estimate_corpus_stats
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("availrag")
@@ -39,8 +43,10 @@ logger = logging.getLogger("availrag")
 OLLAMA_HOST  = os.getenv("OLLAMA_HOST",  "http://localhost:11434")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen3:8b")
 
-CORPUS_DIRS  = [Path("corpus_docs"), Path("malicious_docs")]
-SESSIONS_DIR = Path("sessions")
+CORPUS_DIRS   = [Path("corpus_docs"), Path("malicious_docs")]
+SESSIONS_DIR  = Path("sessions")
+PENDING_DIR   = Path("pending_docs")   # 관리자 승인 대기 문서
+REGISTRY_FILE = Path("doc_registry.json")  # 문서 등록 현황 영속화
 
 # ─────────────────────────────────────────
 # 전역 상태
@@ -51,6 +57,10 @@ _faiss_index  = None
 _chunks       = None
 _bm25         = None
 _is_rebuilding = False
+
+# 문서 등록 레지스트리
+# {doc_id: {filename, file_path, status, upload_time, doc_type, risk_summary, chunks[]}}
+_doc_registry: dict[str, dict] = {}
 
 # 보안 이벤트 로그 (최근 100건)
 _security_events: list = []
@@ -77,125 +87,35 @@ class UploadResponse(BaseModel):
 
 
 # ─────────────────────────────────────────
-# MutedRAG 탐지 로직 (AvailRAG 핵심 기여)
+# MutedRAG 탐지 로직 (detector 패키지 기반 업그레이드)
 # ─────────────────────────────────────────
 
-JAILBREAK_KEYWORDS = [
-    # 영어 패턴 — 반드시 명확한 지시 전환 문구
-    "forget the previous",
-    "forget all previous",
-    "focus on my new question",
-    "ignore previous instructions",
-    "ignore all previous instructions",
-    "disregard the above",
-    "disregard previous instructions",
-    "new instruction:",
-    "new instructions:",
-    "ignore your instructions",
-    "you are now a",
-    "pretend you are",
-    "forget everything above",
-    "your new task is",
-    "instead, tell me",
-    "instead answer the following",
-    "answer the following instead",
-    # 한국어 패턴 — 명확한 지시 전환 문구
-    "이전 내용을 무시하고",
-    "이전 지시를 무시하고",
-    "이전 지시를 잊어",
-    "지금부터 너는",
-    "이제부터 너는",
-    "대신 다음 질문에 답해",
-    "새 지시사항:",
-    "시스템 프롬프트:",
-]
-
-
-def keyword_score(chunk: str) -> int:
-    """키워드 스코어링 (0~30점)"""
-    text_lower = chunk.lower()
-    score = sum(15 for kw in JAILBREAK_KEYWORDS if kw.lower() in text_lower)
-    return min(score, 30)
-
-
-def _cos(a, b) -> float:
-    return float(np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b) + 1e-9))
-
-
-def semantic_inconsistency_score_from_vecs(vecs) -> int:
+def compute_muted_rag_score(chunk_text: str, corpus_stats: dict | None = None) -> dict:
     """
-    미리 계산된 임베딩으로 의미적 불일치 점수 계산 (0~10점)
-    vecs: 2개(짧은 청크) 또는 3개(긴 청크) numpy 벡터
+    MutedRAGDetector로 청크 위험도 분석.
+    반환: verdict (clean/suspicious/malicious), risk_level, adjusted_risk, triggered_rules
     """
-    if len(vecs) == 2:
-        cos = _cos(vecs[0], vecs[1])
-        if cos < 0.35: return 10
-        if cos < 0.55: return 5
-        return 0
+    detector = MutedRAGDetector(corpus_stats=corpus_stats)
+    result = detector.analyze(chunk_text)
 
-    c_01 = _cos(vecs[0], vecs[1])
-    c_12 = _cos(vecs[1], vecs[2])
-    c_02 = _cos(vecs[0], vecs[2])
-    # 앞/뒤 유사하지만 중간이 이질적 → 중간에 주입 의심
-    if c_02 > 0.55 and min(c_01, c_12) < 0.35:
-        return 10
-    if min(c_01, c_12, c_02) < 0.25:
-        return 10
-    if min(c_01, c_12, c_02) < 0.45:
-        return 5
-    return 0
-
-
-def _chunk_segments(chunk: str):
-    """청크를 2~3개 세그먼트로 분할"""
-    lines = [l.strip() for l in chunk.split('\n') if l.strip()]
-    if len(lines) < 4:
-        mid = len(chunk) // 2
-        return [chunk[:mid], chunk[mid:]]
-    seg = max(1, len(lines) // 3)
-    return [
-        '\n'.join(lines[:seg]),
-        '\n'.join(lines[seg:2*seg]),
-        '\n'.join(lines[2*seg:]),
-    ]
-
-
-def ppl_score(chunk: str) -> int:
-    """PPL 탐지 (0~10점) — 명확한 지시 전환 패턴만 탐지"""
-    transition_kws = [
-        "however, your new task",
-        "your new task is",
-        "ignore the above and",
-        "from now on you must",
-        "starting now you are",
-        "지금부터 너는",
-        "이제부터 너는",
-        "대신 다음에 답해",
-    ]
-    for line in chunk.split('\n'):
-        if any(kw in line.lower() for kw in transition_kws):
-            return 7
-    return 0
-
-
-def compute_muted_rag_score(chunk: str, semantic_score: int = 0) -> dict:
-    """
-    semantic_score는 cleanse_chunks()에서 배치 임베딩 후 외부에서 전달.
-    단독 호출 시에는 0으로 처리 (fast path).
-    """
-    k = keyword_score(chunk)
-    p = ppl_score(chunk)
-    s = semantic_score
-    total = k + s + p
-
-    verdict = "clean"
-    if total >= 20:
+    risk_level = result.get("risk_level", "low")
+    if risk_level in ("high", "critical"):
         verdict = "malicious"
-    elif total >= 10:
+    elif risk_level == "medium":
         verdict = "suspicious"
+    else:
+        verdict = "clean"
 
-    return {"keyword_score": k, "semantic_score": s, "ppl_score": p,
-            "total_score": total, "verdict": verdict}
+    return {
+        "verdict":          verdict,
+        "risk_level":       risk_level,
+        "adjusted_risk":    result.get("adjusted_risk", 0.0),
+        "instructionality": result.get("instructionality", {}).get("normalized_score", 0.0),
+        "refusal_inducing": result.get("refusal_inducing", {}).get("normalized_score", 0.0),
+        "outlier":          result.get("outlier", {}).get("normalized_score", 0.0),
+        "triggered_rules":  result.get("triggered_rules", []),
+        "explanation":      result.get("explanation", ""),
+    }
 
 
 # ─────────────────────────────────────────
@@ -204,78 +124,77 @@ def compute_muted_rag_score(chunk: str, semantic_score: int = 0) -> dict:
 
 def _log_security_event(event_type: str, source: str, score: dict):
     _security_events.append({
-        "time":           datetime.now().strftime("%H:%M:%S"),
-        "type":           event_type,           # "suspicious" | "malicious"
-        "source":         source,
-        "total_score":    score["total_score"],
-        "keyword_score":  score["keyword_score"],
-        "semantic_score": score["semantic_score"],
-        "ppl_score":      score["ppl_score"],
+        "time":             datetime.now().strftime("%H:%M:%S"),
+        "type":             event_type,           # "suspicious" | "malicious"
+        "source":           source,
+        "risk_level":       score.get("risk_level", ""),
+        "adjusted_risk":    round(score.get("adjusted_risk", 0.0), 3),
+        "instructionality": round(score.get("instructionality", 0.0), 3),
+        "refusal_inducing": round(score.get("refusal_inducing", 0.0), 3),
+        "outlier":          round(score.get("outlier", 0.0), 3),
+        "triggered_rules":  score.get("triggered_rules", []),
+        "explanation":      score.get("explanation", ""),
     })
     if len(_security_events) > MAX_SECURITY_EVENTS:
         _security_events.pop(0)
 
 
 # ─────────────────────────────────────────
-# 3-Way Cleansing
+# 3-Way Cleansing (detector 패키지 기반)
 # ─────────────────────────────────────────
 
-def _mask_suspicious_region(chunk: str) -> str:
-    """Way B: 의심 구간 [REDACTED] 마스킹"""
-    return "\n".join(
-        "[REDACTED]" if any(kw.lower() in line.lower() for kw in JAILBREAK_KEYWORDS) else line
-        for line in chunk.split("\n")
-    )
+def _mask_with_redacted(chunk_text: str, triggered_rules: list) -> str:
+    """Way B: 위험 문장 [REDACTED] 마스킹"""
+    if not triggered_rules:
+        return chunk_text
+    # 위험 패턴 이름이 포함된 라인 마스킹
+    lines = chunk_text.split("\n")
+    masked = []
+    for line in lines:
+        line_lower = line.lower()
+        # 명확한 지시 전환 키워드 포함 라인 마스킹
+        dangerous = any(kw in line_lower for kw in [
+            "ignore", "forget", "pretend", "override",
+            "무시", "잊어", "지금부터", "이제부터", "대신",
+        ])
+        masked.append("[REDACTED]" if dangerous else line)
+    return "\n".join(masked)
 
 
 def cleanse_chunks(items: list) -> tuple[list, bool]:
     """
-    검색 결과 아이템 목록에 MutedRAG 필터 적용 (배치 임베딩으로 최적화)
+    검색 결과 아이템 목록에 MutedRAG 필터 적용.
 
     흐름:
-    1. 모든 청크에 keyword + ppl 빠른 검사
-    2. 의심 신호가 있는 청크만 배치 임베딩 → semantic 검사
-    3. 최종 verdict 결정
+    1. corpus_stats 추정 (배치)
+    2. MutedRAGDetector로 각 청크 분석
+    3. low → 유지 / medium → Way B 마스킹 / high/critical → Way C 제거
     """
+    if not items:
+        return [], False
+
     cleaned  = []
     filtered = False
+    texts    = [item["chunk"]["text"] for item in items]
 
-    texts       = [item["chunk"]["text"] for item in items]
-    kw_scores   = [keyword_score(t) for t in texts]
-    ppl_scores  = [ppl_score(t) for t in texts]
-
-    # 의심 신호가 있는 청크 인덱스만 semantic 검사 대상
-    need_semantic = [
-        i for i, (k, p) in enumerate(zip(kw_scores, ppl_scores)) if k > 0 or p > 0
-    ]
-
-    sem_scores = [0] * len(items)
-    if need_semantic:
-        try:
-            from rag.embedder import embed_texts as _embed
-            # 세그먼트 목록 구성 (배치 한 번에)
-            seg_map   = []   # (item_idx, seg_count)
-            all_segs  = []
-            for i in need_semantic:
-                segs = _chunk_segments(texts[i])
-                seg_map.append((i, len(segs)))
-                all_segs.extend(segs)
-
-            all_vecs = _embed(all_segs)  # GPU에서 한 번에 처리
-
-            ptr = 0
-            for item_idx, seg_cnt in seg_map:
-                vecs = all_vecs[ptr:ptr + seg_cnt]
-                sem_scores[item_idx] = semantic_inconsistency_score_from_vecs(vecs)
-                ptr += seg_cnt
-        except Exception as e:
-            logger.warning(f"[MutedRAG] 배치 임베딩 실패, semantic 검사 건너뜀: {e}")
+    # 코퍼스 통계 계산 (outlier 검출 정확도 향상)
+    try:
+        corpus_stats = estimate_corpus_stats(texts)
+    except Exception:
+        corpus_stats = None
 
     for i, item in enumerate(items):
         chunk_text = texts[i]
-        result     = compute_muted_rag_score(chunk_text, semantic_score=sem_scores[i])
-        verdict    = result["verdict"]
-        source     = item["chunk"]["source"]
+        source     = item["chunk"].get("source", "unknown")
+
+        try:
+            result = compute_muted_rag_score(chunk_text, corpus_stats=corpus_stats)
+        except Exception as e:
+            logger.warning(f"[MutedRAG] 분석 실패, 청크 통과: {e}")
+            cleaned.append(item)
+            continue
+
+        verdict = result["verdict"]
 
         if verdict == "clean":
             cleaned.append(item)
@@ -283,17 +202,25 @@ def cleanse_chunks(items: list) -> tuple[list, bool]:
         elif verdict == "suspicious":
             # Way B: 의심 구간 마스킹 후 유지
             filtered = True
-            logger.warning(f"[MutedRAG] 의심 청크: source={source} score={result['total_score']}")
+            logger.warning(
+                f"[MutedRAG] 의심 청크: source={source} "
+                f"risk={result['risk_level']} score={result['adjusted_risk']:.3f} "
+                f"rules={result['triggered_rules']}"
+            )
             _log_security_event("suspicious", source, result)
             new_item = dict(item)
             new_item["chunk"] = dict(item["chunk"])
-            new_item["chunk"]["text"] = _mask_suspicious_region(chunk_text)
+            new_item["chunk"]["text"] = _mask_with_redacted(chunk_text, result["triggered_rules"])
             cleaned.append(new_item)
 
-        else:  # malicious
+        else:  # malicious (high/critical)
             # Way C: 제거
             filtered = True
-            logger.error(f"[MutedRAG] 악성 청크 차단: source={source} score={result['total_score']}")
+            logger.error(
+                f"[MutedRAG] 악성 청크 차단: source={source} "
+                f"risk={result['risk_level']} score={result['adjusted_risk']:.3f} "
+                f"rules={result['triggered_rules']}"
+            )
             _log_security_event("malicious", source, result)
 
     return cleaned, filtered
@@ -302,6 +229,82 @@ def cleanse_chunks(items: list) -> tuple[list, bool]:
 # ─────────────────────────────────────────
 # 세션 영속성
 # ─────────────────────────────────────────
+
+# ─────────────────────────────────────────
+# 문서 레지스트리 관리
+# ─────────────────────────────────────────
+
+def load_registry():
+    """doc_registry.json에서 문서 등록 현황 복원"""
+    global _doc_registry
+    if REGISTRY_FILE.exists():
+        try:
+            _doc_registry = json.loads(REGISTRY_FILE.read_text(encoding="utf-8"))
+            logger.info(f"문서 레지스트리 복원: {len(_doc_registry)}개")
+        except Exception as e:
+            logger.warning(f"레지스트리 로드 실패: {e}")
+            _doc_registry = {}
+
+
+def save_registry():
+    """문서 레지스트리를 파일에 저장"""
+    try:
+        REGISTRY_FILE.write_text(
+            json.dumps(_doc_registry, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+    except Exception as e:
+        logger.warning(f"레지스트리 저장 실패: {e}")
+
+
+def analyze_document_chunks(chunks: list) -> tuple[list, dict]:
+    """
+    청크 목록에 MutedRAG 분석 적용.
+    반환: (chunk_results, risk_summary)
+    """
+    texts = [c.get("text", "") for c in chunks]
+    try:
+        corpus_stats = estimate_corpus_stats(texts)
+    except Exception:
+        corpus_stats = None
+
+    chunk_results = []
+    risk_counts = {"low": 0, "medium": 0, "high": 0, "critical": 0}
+
+    for chunk in chunks:
+        try:
+            result = compute_muted_rag_score(chunk.get("text", ""), corpus_stats=corpus_stats)
+        except Exception:
+            result = {"verdict": "clean", "risk_level": "low", "adjusted_risk": 0.0,
+                      "instructionality": 0.0, "refusal_inducing": 0.0, "outlier": 0.0,
+                      "triggered_rules": [], "explanation": ""}
+
+        risk_level = result["risk_level"]
+        risk_counts[risk_level] = risk_counts.get(risk_level, 0) + 1
+
+        chunk_results.append({
+            "chunk_id":        chunk.get("chunk_id", ""),
+            "text_preview":    chunk.get("text", "")[:300],
+            "text_full":       chunk.get("text", ""),
+            "risk_level":      risk_level,
+            "adjusted_risk":   round(result["adjusted_risk"], 3),
+            "instructionality": round(result["instructionality"], 3),
+            "refusal_inducing": round(result["refusal_inducing"], 3),
+            "outlier":         round(result["outlier"], 3),
+            "triggered_rules": result["triggered_rules"],
+            "explanation":     result["explanation"],
+        })
+
+    # 전체 위험도 = 가장 높은 위험도
+    overall = "low"
+    for level in ["critical", "high", "medium", "low"]:
+        if risk_counts[level] > 0:
+            overall = level
+            break
+
+    risk_summary = {**risk_counts, "overall": overall, "total": len(chunks)}
+    return chunk_results, risk_summary
+
 
 def load_sessions():
     """sessions/ 디렉토리에서 이전 대화 이력 복원"""
@@ -458,8 +461,10 @@ async def lifespan(app: FastAPI):
     logger.info("리랭커 로딩...")
     get_reranker()
     load_sessions()
+    load_registry()
+    PENDING_DIR.mkdir(exist_ok=True)
     init_index()
-    logger.info("AvailRAG 서버 시작 완료")
+    logger.info("MutedRAG 서버 시작 완료")
     yield
 
 
@@ -563,7 +568,8 @@ async def chat(req: ChatRequest):
 
     # ── 7. 프롬프트 빌드 & LLM 호출 ─────────────────────────
     if final_items:
-        system      = build_rag_system_prompt(final_items)
+        profile     = build_query_profile(req.message)
+        system      = build_rag_system_prompt(final_items, query=req.message, profile=profile)
         temperature = 0.4
     else:
         system      = build_general_system_prompt()
@@ -590,8 +596,14 @@ def _save_history(session_id: str, user_msg: str, assistant_msg: str):
 
 
 @app.post("/upload", response_model=UploadResponse)
-async def upload_file(file: UploadFile = File(...)):
-    """파일 업로드 → corpus_docs에 저장 → 백그라운드 인덱스 재빌드"""
+async def upload_file(
+    file: UploadFile = File(...),
+    doc_type: str = "internal",   # internal | external_trusted | external_untrusted
+):
+    """
+    파일 업로드 → pending_docs에 저장 → MutedRAG 분석 → 관리자 승인 대기
+    (자동 인덱싱 없음, 관리자가 승인해야 검색에 반영)
+    """
     allowed = {".pdf", ".docx", ".txt"}
     ext     = Path(file.filename or "").suffix.lower()
 
@@ -599,28 +611,130 @@ async def upload_file(file: UploadFile = File(...)):
         raise HTTPException(status_code=400,
             detail=f"지원하지 않는 파일 형식. 허용: {', '.join(allowed)}")
 
-    save_dir  = Path("corpus_docs")
-    save_dir.mkdir(exist_ok=True)
-    save_path = save_dir / (file.filename or f"upload{ext}")
+    PENDING_DIR.mkdir(exist_ok=True)
+    doc_id    = str(uuid.uuid4())[:8]
+    save_path = PENDING_DIR / f"{doc_id}_{file.filename or f'upload{ext}'}"
 
     content = await file.read()
     save_path.write_bytes(content)
 
-    # 청크 수 계산 (표시용)
+    # 청크 분석
     from rag.chunking import load_document_blocks, chunk_blocks
-    blocks      = load_document_blocks(save_path)
-    new_chunks  = chunk_blocks(blocks, save_path)
-    chunk_count = len(new_chunks)
+    blocks     = load_document_blocks(save_path)
+    new_chunks = chunk_blocks(blocks, save_path)
 
-    # 백그라운드 재빌드 (즉시 응답 반환)
-    asyncio.create_task(async_rebuild_index())
-    logger.info(f"[Upload] {file.filename}: {chunk_count}개 청크, 백그라운드 재빌드 시작")
+    # MutedRAG 분석 (백그라운드)
+    loop = asyncio.get_event_loop()
+    chunk_results, risk_summary = await loop.run_in_executor(
+        None, lambda: analyze_document_chunks(new_chunks)
+    )
+
+    # 레지스트리 등록
+    _doc_registry[doc_id] = {
+        "doc_id":       doc_id,
+        "filename":     file.filename or f"upload{ext}",
+        "file_path":    str(save_path),
+        "status":       "pending",
+        "doc_type":     doc_type,
+        "upload_time":  datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "risk_summary": risk_summary,
+        "chunks":       chunk_results,
+    }
+    save_registry()
+
+    # 보안 이벤트 로깅
+    if risk_summary["high"] > 0 or risk_summary["critical"] > 0:
+        logger.warning(f"[Upload] 고위험 청크 감지: {file.filename} "
+                       f"high={risk_summary['high']} critical={risk_summary['critical']}")
+
+    logger.info(f"[Upload] {file.filename}: {len(new_chunks)}개 청크, "
+                f"overall_risk={risk_summary['overall']}, 관리자 승인 대기")
 
     return UploadResponse(
         success=True,
         filename=file.filename or "unknown",
-        chunk_count=chunk_count,
+        chunk_count=len(new_chunks),
     )
+
+
+# ─────────────────────────────────────────
+# 관리자 API
+# ─────────────────────────────────────────
+
+@app.get("/api/admin/documents")
+async def admin_list_documents():
+    """등록된 모든 문서 목록 반환 (청크 내용 제외, 요약만)"""
+    docs = []
+    for doc in _doc_registry.values():
+        docs.append({
+            "doc_id":       doc["doc_id"],
+            "filename":     doc["filename"],
+            "status":       doc["status"],
+            "doc_type":     doc["doc_type"],
+            "upload_time":  doc["upload_time"],
+            "risk_summary": doc["risk_summary"],
+        })
+    docs.sort(key=lambda d: d["upload_time"], reverse=True)
+    return {"documents": docs}
+
+
+@app.get("/api/admin/documents/{doc_id}")
+async def admin_get_document(doc_id: str):
+    """문서 상세 조회 (청크별 위험도 포함)"""
+    doc = _doc_registry.get(doc_id)
+    if not doc:
+        raise HTTPException(status_code=404, detail="문서를 찾을 수 없습니다.")
+    return doc
+
+
+@app.post("/api/admin/documents/{doc_id}/approve")
+async def admin_approve_document(doc_id: str):
+    """문서 승인 → corpus_docs로 이동 → 인덱스 재빌드"""
+    doc = _doc_registry.get(doc_id)
+    if not doc:
+        raise HTTPException(status_code=404, detail="문서를 찾을 수 없습니다.")
+    if doc["status"] != "pending":
+        raise HTTPException(status_code=400, detail=f"이미 처리된 문서입니다: {doc['status']}")
+
+    src = Path(doc["file_path"])
+    if not src.exists():
+        raise HTTPException(status_code=400, detail="파일이 존재하지 않습니다.")
+
+    # corpus_docs로 이동
+    dest_dir = Path("corpus_docs")
+    dest_dir.mkdir(exist_ok=True)
+    dest = dest_dir / doc["filename"]
+    src.rename(dest)
+
+    _doc_registry[doc_id]["status"]    = "approved"
+    _doc_registry[doc_id]["file_path"] = str(dest)
+    save_registry()
+
+    # 인덱스 재빌드
+    asyncio.create_task(async_rebuild_index())
+    logger.info(f"[Admin] 승인: {doc['filename']} → corpus_docs, 재빌드 시작")
+
+    return {"success": True, "message": f"'{doc['filename']}' 승인 완료. 인덱스 재빌드 중..."}
+
+
+@app.post("/api/admin/documents/{doc_id}/reject")
+async def admin_reject_document(doc_id: str):
+    """문서 거부 → 파일 삭제"""
+    doc = _doc_registry.get(doc_id)
+    if not doc:
+        raise HTTPException(status_code=404, detail="문서를 찾을 수 없습니다.")
+    if doc["status"] != "pending":
+        raise HTTPException(status_code=400, detail=f"이미 처리된 문서입니다: {doc['status']}")
+
+    src = Path(doc["file_path"])
+    if src.exists():
+        src.unlink()
+
+    _doc_registry[doc_id]["status"] = "rejected"
+    save_registry()
+    logger.info(f"[Admin] 거부: {doc['filename']} 삭제됨")
+
+    return {"success": True, "message": f"'{doc['filename']}' 거부 및 삭제 완료."}
 
 
 # ─────────────────────────────────────────
@@ -630,6 +744,11 @@ async def upload_file(file: UploadFile = File(...)):
 @app.get("/")
 async def serve_index():
     return FileResponse("index.html")
+
+
+@app.get("/admin")
+async def serve_admin():
+    return FileResponse("admin.html")
 
 
 if __name__ == "__main__":
