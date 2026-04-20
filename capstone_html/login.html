@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MutedRAG — 로그인</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:        #1B2A4A;
+      --navy-light:  #243660;
+      --navy-hover:  #2d4278;
+      --accent:      #4A90D9;
+      --accent-glow: rgba(74,144,217,0.35);
+      --bg:          #111827;
+      --surface:     #1e293b;
+      --surface2:    #263347;
+      --border:      rgba(255,255,255,0.07);
+      --text:        #e2e8f0;
+      --text-muted:  #94a3b8;
+      --error:       #ef4444;
+      --radius:      12px;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    /* 배경 그리드 패턴 */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(74,144,217,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(74,144,217,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    .login-wrapper {
+      width: 100%;
+      max-width: 420px;
+      padding: 24px 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* 로고 영역 */
+    .logo-area {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .logo-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--navy);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 14px;
+      box-shadow: 0 0 30px var(--accent-glow);
+    }
+
+    .logo-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      letter-spacing: 0.03em;
+    }
+
+    .logo-title .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent);
+    }
+
+    .logo-sub {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* 카드 */
+    .login-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-title i {
+      color: var(--accent);
+    }
+
+    /* 폼 */
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-wrap .input-icon {
+      position: absolute;
+      left: 12px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      pointer-events: none;
+    }
+
+    .form-input {
+      width: 100%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 10px 12px 10px 36px;
+      color: var(--text);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    .form-input::placeholder {
+      color: var(--text-muted);
+      opacity: 0.7;
+    }
+
+    /* 비밀번호 토글 */
+    .pw-toggle {
+      position: absolute;
+      right: 10px;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    .pw-toggle:hover { color: var(--accent); }
+
+    /* 에러 메시지 */
+    .error-msg {
+      display: none;
+      background: rgba(239,68,68,0.1);
+      border: 1px solid rgba(239,68,68,0.3);
+      color: #fca5a5;
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-size: 0.82rem;
+      margin-bottom: 16px;
+      display: none;
+      align-items: center;
+      gap: 8px;
+    }
+    .error-msg.show {
+      display: flex;
+    }
+
+    /* 로그인 버튼 */
+    .login-btn {
+      width: 100%;
+      background: var(--accent);
+      border: none;
+      color: #fff;
+      border-radius: 9px;
+      padding: 11px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+    }
+    .login-btn:hover {
+      background: #3a7bc8;
+      box-shadow: 0 4px 16px var(--accent-glow);
+    }
+    .login-btn:active { transform: scale(0.98); }
+    .login-btn:disabled {
+      background: var(--surface2);
+      color: var(--text-muted);
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    /* 로딩 스피너 */
+    .spinner {
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      display: none;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* 디바이더 */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 20px 0;
+    }
+
+    /* 기본 계정 안내 */
+    .hint-box {
+      background: rgba(74,144,217,0.05);
+      border: 1px solid rgba(74,144,217,0.15);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .hint-box strong {
+      color: var(--accent);
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .hint-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 4px;
+    }
+    .hint-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--surface2);
+      border-radius: 5px;
+      padding: 2px 7px;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+    .hint-badge.admin-badge { color: #818cf8; }
+    .hint-badge.user-badge  { color: #4ade80; }
+
+    /* 하단 상태 */
+    .footer-status {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.73rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    #status-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #6b7280;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+    #status-dot.online  { background: #22c55e; box-shadow: 0 0 6px #22c55e; }
+    #status-dot.offline { background: #ef4444; }
+
+    /* 입력 애니메이션 */
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+    .shake { animation: shake 0.4s ease; }
+  </style>
+</head>
+<body>
+
+<div class="login-wrapper">
+
+  <!-- 로고 -->
+  <div class="logo-area">
+    <div class="logo-icon"><i class="bi bi-shield-lock-fill"></i></div>
+    <div class="logo-title">
+      <span class="dot"></span>
+      MutedRAG
+    </div>
+    <div class="logo-sub">회사 AI 어시스턴트 — 보안 접근</div>
+  </div>
+
+  <!-- 카드 -->
+  <div class="login-card">
+    <div class="card-title">
+      <i class="bi bi-person-badge"></i>
+      사원 로그인
+    </div>
+
+    <div class="error-msg" id="error-msg">
+      <i class="bi bi-exclamation-circle-fill"></i>
+      <span id="error-text">아이디 또는 비밀번호가 틀렸습니다.</span>
+    </div>
+
+    <form id="login-form" onsubmit="handleLogin(event)">
+      <div class="form-group">
+        <label class="form-label" for="username">아이디</label>
+        <div class="input-wrap">
+          <i class="bi bi-person input-icon"></i>
+          <input
+            type="text"
+            id="username"
+            class="form-input"
+            placeholder="아이디를 입력하세요"
+            autocomplete="username"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="password">비밀번호</label>
+        <div class="input-wrap">
+          <i class="bi bi-lock input-icon"></i>
+          <input
+            type="password"
+            id="password"
+            class="form-input"
+            placeholder="비밀번호를 입력하세요"
+            autocomplete="current-password"
+            required
+          />
+          <button type="button" class="pw-toggle" onclick="togglePassword()" id="pw-toggle-btn">
+            <i class="bi bi-eye" id="pw-icon"></i>
+          </button>
+        </div>
+      </div>
+
+      <button type="submit" class="login-btn" id="login-btn">
+        <div class="spinner" id="spinner"></div>
+        <i class="bi bi-box-arrow-in-right" id="login-icon"></i>
+        <span id="login-text">로그인</span>
+      </button>
+    </form>
+
+    <hr class="divider" />
+
+    <div class="hint-box">
+      <strong><i class="bi bi-info-circle"></i> 기본 테스트 계정</strong>
+      <div class="hint-row">
+        <span class="hint-badge admin-badge">
+          <i class="bi bi-shield-fill"></i> admin / admin123 (관리자)
+        </span>
+      </div>
+      <div class="hint-row" style="margin-top:6px;">
+        <span class="hint-badge user-badge">
+          <i class="bi bi-person-fill"></i> user / user123 (일반 사용자)
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-status">
+    <span id="status-dot"></span>
+    <span id="status-text">서버 연결 중...</span>
+  </div>
+
+</div>
+
+<script>
+  const API_BASE = "http://localhost:8000";
+
+  // 이미 로그인된 경우 서버가 리다이렉트 처리 (쿠키 기반)
+  // — 별도 JS 체크 불필요
+
+  // 서버 상태 확인
+  async function checkHealth() {
+    try {
+      const r = await fetch(`${API_BASE}/health`);
+      const dot  = document.getElementById("status-dot");
+      const text = document.getElementById("status-text");
+      if (r.ok) {
+        dot.className = "online";
+        text.textContent = "서버 연결됨";
+      } else throw new Error();
+    } catch {
+      document.getElementById("status-dot").className = "offline";
+      document.getElementById("status-text").textContent = "서버 연결 안됨";
+    }
+  }
+
+  function togglePassword() {
+    const input = document.getElementById("password");
+    const icon  = document.getElementById("pw-icon");
+    if (input.type === "password") {
+      input.type = "text";
+      icon.className = "bi bi-eye-slash";
+    } else {
+      input.type = "password";
+      icon.className = "bi bi-eye";
+    }
+  }
+
+  function showError(msg) {
+    const box  = document.getElementById("error-msg");
+    const text = document.getElementById("error-text");
+    text.textContent = msg;
+    box.classList.add("show");
+
+    // 카드 흔들기
+    document.querySelector(".login-card").classList.add("shake");
+    setTimeout(() => document.querySelector(".login-card").classList.remove("shake"), 400);
+  }
+
+  function hideError() {
+    document.getElementById("error-msg").classList.remove("show");
+  }
+
+  function setLoading(on) {
+    const btn     = document.getElementById("login-btn");
+    const spinner = document.getElementById("spinner");
+    const icon    = document.getElementById("login-icon");
+    const text    = document.getElementById("login-text");
+    btn.disabled          = on;
+    spinner.style.display = on ? "block" : "none";
+    icon.style.display    = on ? "none"  : "inline";
+    text.textContent      = on ? "확인 중..." : "로그인";
+  }
+
+  async function handleLogin(e) {
+    e.preventDefault();
+    hideError();
+
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value;
+
+    if (!username || !password) {
+      showError("아이디와 비밀번호를 모두 입력해주세요.");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const r = await fetch(`${API_BASE}/api/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",   // 쿠키 수신을 위해 필수
+        body: JSON.stringify({ username, password }),
+      });
+      const data = await r.json();
+
+      if (!r.ok) {
+        showError(data.detail || "로그인에 실패했습니다.");
+        return;
+      }
+
+      // 토큰은 HttpOnly 쿠키로 서버가 자동 설정 — JS에서 저장 불필요
+      window.location.href = data.role === "admin" ? "/admin" : "/";
+
+    } catch (err) {
+      showError("서버에 연결할 수 없습니다.");
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  checkHealth();
+</script>
+
+</body>
+</html>

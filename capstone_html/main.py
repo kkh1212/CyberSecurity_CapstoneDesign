@@ -9,6 +9,7 @@ RAG 파이프라인: 조원 코드(chunking / retrievers / reranker / prompts / 
 import asyncio
 import json
 import os
+import secrets
 import uuid
 import logging
 from contextlib import asynccontextmanager
@@ -16,12 +17,14 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
-from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi import Cookie, FastAPI, Header, Response, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, RedirectResponse
 from pydantic import BaseModel
 import httpx
 import numpy as np
+
+from auth import init_db, verify_user
 
 # ── RAG 패키지 ────────────────────────────────────────────────
 from rag.index_builder import build_index, load_index, index_is_stale, INDEX_DIR
@@ -43,7 +46,7 @@ logger = logging.getLogger("availrag")
 OLLAMA_HOST  = os.getenv("OLLAMA_HOST",  "http://localhost:11434")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen3:8b")
 
-CORPUS_DIRS   = [Path("corpus_docs"), Path("malicious_docs")]
+CORPUS_DIRS   = [Path("../data/docs")]
 SESSIONS_DIR  = Path("sessions")
 PENDING_DIR   = Path("pending_docs")   # 관리자 승인 대기 문서
 REGISTRY_FILE = Path("doc_registry.json")  # 문서 등록 현황 영속화
@@ -70,6 +73,31 @@ MAX_SECURITY_EVENTS = 100
 # ─────────────────────────────────────────
 # Pydantic 모델
 # ─────────────────────────────────────────
+# ─────────────────────────────────────────
+# 인메모리 토큰 저장소
+# ─────────────────────────────────────────
+_tokens: dict[str, dict] = {}  # token -> {username, role}
+
+
+def _create_token(username: str, role: str) -> str:
+    token = secrets.token_hex(32)
+    _tokens[token] = {"username": username, "role": role}
+    return token
+
+
+def _verify_token(token: str) -> dict | None:
+    return _tokens.get(token)
+
+
+def _revoke_token(token: str):
+    _tokens.pop(token, None)
+
+
+class LoginRequest(BaseModel):
+    username: str
+    password: str
+
+
 class ChatRequest(BaseModel):
     message:    str
     history:    list = []
@@ -460,6 +488,7 @@ async def lifespan(app: FastAPI):
     get_embedder()
     logger.info("리랭커 로딩...")
     get_reranker()
+    init_db()
     load_sessions()
     load_registry()
     PENDING_DIR.mkdir(exist_ok=True)
@@ -481,6 +510,45 @@ app.add_middleware(
 # ─────────────────────────────────────────
 # API 엔드포인트
 # ─────────────────────────────────────────
+
+# ─────────────────────────────────────────
+# 인증 엔드포인트
+# ─────────────────────────────────────────
+
+@app.post("/api/login")
+async def login(req: LoginRequest, response: Response):
+    user = verify_user(req.username, req.password)
+    if not user:
+        raise HTTPException(status_code=401, detail="아이디 또는 비밀번호가 틀렸습니다.")
+    token = _create_token(user["username"], user["role"])
+    response.set_cookie(
+        key="session",
+        value=token,
+        httponly=True,   # JS에서 document.cookie로 접근 불가 (XSS 방어)
+        samesite="lax",  # CSRF 기본 방어
+        max_age=3600 * 8,
+        path="/",
+    )
+    return {"role": user["role"], "username": user["username"], "name": user.get("name")}
+
+
+@app.get("/api/me")
+async def me(session: str = Cookie(None)):
+    if not session:
+        raise HTTPException(status_code=401, detail="인증이 필요합니다.")
+    user = _verify_token(session)
+    if not user:
+        raise HTTPException(status_code=401, detail="유효하지 않은 토큰입니다.")
+    return user
+
+
+@app.post("/api/logout")
+async def logout(response: Response, session: str = Cookie(None)):
+    if session:
+        _revoke_token(session)
+    response.delete_cookie("session", path="/")
+    return {"success": True}
+
 
 @app.get("/health")
 async def health():
@@ -741,13 +809,35 @@ async def admin_reject_document(doc_id: str):
 # 정적 파일 서빙
 # ─────────────────────────────────────────
 
+@app.get("/login")
+async def serve_login(session: str = Cookie(None)):
+    # 이미 로그인된 경우 역할에 맞는 페이지로 이동
+    if session:
+        user = _verify_token(session)
+        if user:
+            return RedirectResponse("/admin" if user["role"] == "admin" else "/")
+    return FileResponse("login.html")
+
+
 @app.get("/")
-async def serve_index():
+async def serve_index(session: str = Cookie(None)):
+    # 서버사이드 인증 검사 — 미인증이면 로그인 페이지로
+    if not session or not _verify_token(session):
+        return RedirectResponse("/login")
     return FileResponse("index.html")
 
 
 @app.get("/admin")
-async def serve_admin():
+async def serve_admin(session: str = Cookie(None)):
+    # 서버사이드 인증 검사 — 미인증이면 로그인 페이지로
+    if not session:
+        return RedirectResponse("/login")
+    user = _verify_token(session)
+    if not user:
+        return RedirectResponse("/login")
+    # 관리자가 아니면 메인 페이지로
+    if user["role"] != "admin":
+        return RedirectResponse("/")
     return FileResponse("admin.html")
 
 

@@ -319,6 +319,18 @@
 </div>
 
 <script>
+// ── 인증 체크 (쿠키 자동 전송, 서버가 1차 보호)
+(async function authCheck() {
+  try {
+    const r = await fetch("/api/me", { credentials: "include" });
+    if (!r.ok) { window.location.href = "/login"; return; }
+    const user = await r.json();
+    if (user.role !== "admin") { window.location.href = "/"; }
+  } catch {
+    window.location.href = "/login";
+  }
+})();
+
 const API = 'http://localhost:8000';
 let allDocs = [];
 let currentDoc = null;

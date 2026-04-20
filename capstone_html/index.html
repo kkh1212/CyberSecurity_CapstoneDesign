@@ -661,6 +661,19 @@
 
 <script>
   // ══════════════════════════════════════
+  // 인증 체크 (쿠키는 자동 전송)
+  // 서버사이드에서 1차 보호 — JS는 2차 UX 보호
+  // ══════════════════════════════════════
+  (async function authCheck() {
+    try {
+      const r = await fetch("/api/me", { credentials: "include" });
+      if (!r.ok) { window.location.href = "/login"; }
+    } catch {
+      window.location.href = "/login";
+    }
+  })();
+
+  // ══════════════════════════════════════
   // 상태
   // ══════════════════════════════════════
   const API_BASE = "http://localhost:8000";
