@@ -503,7 +503,7 @@
     "doc_id": "4d95be05",
     "filename": "test_malicious.txt",
     "file_path": "pending_docs\\4d95be05_test_malicious.txt",
-    "status": "pending",
+    "status": "rejected",
     "doc_type": "internal",
     "upload_time": "2026-04-20 14:36:48",
     "risk_summary": {
