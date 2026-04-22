@@ -46,8 +46,8 @@ logger = logging.getLogger("mutedrag")
 OLLAMA_HOST  = os.getenv("OLLAMA_HOST",  "http://localhost:11434")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen3:8b")
 
-# data/docs 기본 문서 + corpus_docs 승인된 업로드 문서 모두 인덱싱
-CORPUS_DIRS   = [Path("data/docs"), Path("corpus_docs")]
+# docs 내의 모든 문서 인덱싱
+CORPUS_DIRS   = [Path("docs")]
 SESSIONS_DIR  = Path("sessions")
 PENDING_DIR   = Path("pending_docs")   # 관리자 승인 대기 문서
 REGISTRY_FILE = Path("doc_registry.json")  # 문서 등록 현황 영속화
@@ -735,8 +735,8 @@ async def admin_get_document(doc_id: str):
 
 
 @app.post("/api/admin/documents/{doc_id}/approve")
-async def admin_approve_document(doc_id: str):
-    """문서 승인 → corpus_docs로 이동 → 인덱스 재빌드"""
+async def admin_approve_document(doc_id: str, doc_type: str = "internal"):
+    """문서 승인 → 선택된 폴더로 이동 → 인덱스 재빌드"""
     doc = _doc_registry.get(doc_id)
     if not doc:
         raise HTTPException(status_code=404, detail="문서를 찾을 수 없습니다.")
@@ -747,8 +747,12 @@ async def admin_approve_document(doc_id: str):
     if not src.exists():
         raise HTTPException(status_code=400, detail="파일이 존재하지 않습니다.")
 
-    dest_dir = Path("corpus_docs")
-    dest_dir.mkdir(exist_ok=True)
+    if doc_type == "external":
+        dest_dir = Path("docs/reference")
+    else:
+        dest_dir = Path("docs/corpus/benign")
+        
+    dest_dir.mkdir(parents=True, exist_ok=True)
     dest = dest_dir / doc["filename"]
     src.rename(dest)
 

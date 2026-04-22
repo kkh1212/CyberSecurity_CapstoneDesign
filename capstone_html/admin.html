@@ -266,7 +266,11 @@
   <!-- 액션 바 -->
   <div id="top-bar" style="display:none">
     <h2 id="top-doc-name">—</h2>
-    <div class="actions">
+    <div class="actions" style="display:flex; align-items:center; gap:8px;">
+      <select id="doc-type-select" style="padding: 6px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface2); color: var(--text); font-size: 0.82rem;">
+        <option value="internal">내부 문서 (corpus/benign)</option>
+        <option value="external">외부 문서 (reference)</option>
+      </select>
       <button class="btn btn-approve" id="btn-approve" onclick="approveDoc()"><i class="bi bi-check-lg"></i> 승인</button>
       <button class="btn btn-reject"  id="btn-reject"  onclick="rejectDoc()"><i class="bi bi-x-lg"></i> 거부</button>
     </div>
@@ -491,6 +495,8 @@ function escHtml(str) {
 // ── 승인 / 거부 ──────────────────────────────────
 async function approveDoc() {
   if (!currentDoc || currentDoc.status !== 'pending') return;
+  const docType = document.getElementById('doc-type-select').value;
+  const typeLabel = docType === 'internal' ? '내부 문서' : '외부 문서';
   if (!confirm(`'${currentDoc.filename}'을 승인하시겠습니까?\n인덱스에 추가되어 검색에 반영됩니다.`)) return;
 
   const res = await fetch(`${API}/api/admin/documents/${currentDoc.doc_id}/approve`, { method: 'POST' });
