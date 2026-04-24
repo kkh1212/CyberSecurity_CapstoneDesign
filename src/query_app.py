@@ -5,16 +5,33 @@ import time
 from pathlib import Path
 from typing import Dict, List
 
-from src.config import ENABLE_RERANK, RAW_DOCS_DIR, get_domain_index_dir, get_index_file_paths, get_requested_domain, list_domain_dirs
+from src.config import (
+    ENABLE_DENSE,
+    ENABLE_RERANK,
+    RAW_DOCS_DIR,
+    RUNTIME_REQUERY_MAX_ATTEMPTS,
+    get_domain_index_dir,
+    get_index_file_paths,
+    get_requested_domain,
+    list_domain_dirs,
+)
 from src.ollama_client import ask_ollama
 from src.prompts import build_general_prompt, build_rag_prompt
 from src.query_analysis import FIELD_ALIASES, QueryProfile, build_query_profile, compact_text, normalize_text
 from src.reranker import rerank_results
 from src.retrievers import hybrid_search
 from src.router import should_use_rag
-from src.runtime_guard import apply_runtime_guard, build_runtime_fallback_message, summarize_runtime_guard
+from src.runtime_guard import (
+    apply_runtime_guard,
+    build_runtime_fallback_message,
+    runtime_detector_enabled,
+    runtime_sanitizer_enabled,
+    runtime_security_mode,
+    summarize_runtime_guard,
+)
 from src.structured_qa import build_structured_answer
 from src.chunking import POLICY_DOC_KEYWORDS
+from src.detector_pipeline import filter_expansion_chunks
 
 STRUCTURED_FRIENDLY_BLOCK_TYPES = {"table_row", "table", "text_section"}
 POLICY_HEAVY_BLOCK_TYPES = {"clause_section", "paragraph", "page_text", "doc_text", "hwp_text", "hwpx_xml"}
@@ -71,31 +88,87 @@ def print_debug_info(
     merged_domains: List[str] | None = None,
     retrieval_filter_summary: Dict | None = None,
     runtime_guard_summary: Dict | None = None,
+    expansion_filter_summary: Dict | None = None,
+    security_mode: str = "",
+    runtime_detector_flag: bool | None = None,
+    runtime_sanitizer_flag: bool | None = None,
+    final_result_count: int = 0,
+    context_chunk_count: int = 0,
 ):
     print("\n=== Debug ===")
     print(f"route={route}")
+    if security_mode:
+        print(f"security_mode={security_mode}")
+    if runtime_detector_flag is not None:
+        print(f"runtime_detector_enabled={str(runtime_detector_flag).lower()}")
+    if runtime_sanitizer_flag is not None:
+        print(f"runtime_sanitizer_enabled={str(runtime_sanitizer_flag).lower()}")
     if selected_domain:
         print(f"selected_domain={selected_domain}")
     if merged_domains:
         print(f"merged_domains={','.join(merged_domains)}")
     if structured_candidates_count:
         print(f"structured_candidates={structured_candidates_count}")
+    if final_result_count:
+        print(f"final_result_count={final_result_count}")
+    if context_chunk_count:
+        print(f"context_chunk_count={context_chunk_count}")
     if retrieval_filter_summary:
         excluded_flagged = retrieval_filter_summary.get("excluded_flagged", 0)
         excluded_quarantined = retrieval_filter_summary.get("excluded_quarantined", 0)
-        if excluded_flagged or excluded_quarantined:
+        excluded_runtime = retrieval_filter_summary.get("excluded_runtime", 0)
+        if excluded_flagged or excluded_quarantined or excluded_runtime:
             print(f"excluded_flagged={excluded_flagged}")
             print(f"excluded_quarantined={excluded_quarantined}")
+            print(f"excluded_runtime={excluded_runtime}")
+    if expansion_filter_summary:
+        expansion_skipped_flagged = int(expansion_filter_summary.get("expansion_skipped_flagged", 0))
+        expansion_skipped_quarantined = int(expansion_filter_summary.get("expansion_skipped_quarantined", 0))
+        expansion_skipped_runtime = int(expansion_filter_summary.get("expansion_skipped_runtime", 0))
+        if expansion_skipped_flagged or expansion_skipped_quarantined or expansion_skipped_runtime:
+            print(f"expansion_skipped_flagged={expansion_skipped_flagged}")
+            print(f"expansion_skipped_quarantined={expansion_skipped_quarantined}")
+            print(f"expansion_skipped_runtime={expansion_skipped_runtime}")
     if runtime_guard_summary:
+        runtime_warning = runtime_guard_summary.get("runtime_configuration_warning", "")
+        if runtime_warning:
+            print(f"runtime_configuration_warning={runtime_warning}")
         print(f"runtime_risk_level={runtime_guard_summary.get('runtime_risk_level', 'low')}")
         print(f"runtime_action={runtime_guard_summary.get('runtime_action', 'allow')}")
+        detector_action = runtime_guard_summary.get("runtime_detector_action")
+        if detector_action and detector_action != runtime_guard_summary.get("runtime_action", "allow"):
+            print(f"runtime_detector_action={detector_action}")
         print(f"runtime_adjusted_risk={runtime_guard_summary.get('runtime_adjusted_risk', 0.0):.4f}")
+        runtime_profile = runtime_guard_summary.get("runtime_profile")
+        if runtime_profile:
+            print(f"runtime_profile={runtime_profile}")
+        runtime_requery_attempt = int(runtime_guard_summary.get("runtime_requery_attempt", 0))
+        if runtime_requery_attempt:
+            print(f"runtime_requery_attempt={runtime_requery_attempt}")
         removed_chunk_count = int(runtime_guard_summary.get("removed_chunk_count", 0))
         if removed_chunk_count:
             print(f"runtime_removed_chunks={removed_chunk_count}")
+        removed_chunk_ids = runtime_guard_summary.get("runtime_removed_chunk_ids", [])
+        if removed_chunk_ids:
+            print(f"runtime_removed_chunk_ids={','.join(removed_chunk_ids)}")
         triggered_rules = runtime_guard_summary.get("runtime_triggered_rules", [])
         if triggered_rules:
             print(f"runtime_rules={','.join(triggered_rules)}")
+        sanitization_rules = runtime_guard_summary.get("runtime_sanitization_rules", [])
+        if sanitization_rules:
+            print(f"runtime_sanitization_rules={','.join(sanitization_rules)}")
+        requery_sources = runtime_guard_summary.get("runtime_requery_sources", [])
+        if requery_sources:
+            print(f"runtime_requery_sources={','.join(requery_sources)}")
+        exclusion_strategy = runtime_guard_summary.get("runtime_exclusion_strategy")
+        if exclusion_strategy:
+            print(f"runtime_exclusion_strategy={exclusion_strategy}")
+        requery_failure_reason = runtime_guard_summary.get("runtime_requery_failure_reason")
+        if requery_failure_reason:
+            print(f"runtime_requery_failure_reason={requery_failure_reason}")
+        remove_failure_reason = runtime_guard_summary.get("runtime_remove_failure_reason")
+        if remove_failure_reason:
+            print(f"runtime_remove_failure_reason={remove_failure_reason}")
     print(f"elapsed_seconds={elapsed_seconds:.3f}")
 
 
@@ -131,14 +204,17 @@ def validate_index_ready():
     index_files = []
     for domain_dir in domain_dirs:
         paths = get_index_file_paths(get_domain_index_dir(domain_dir.name))
-        missing = [str(path) for path in paths.values() if not path.exists()]
+        required_paths = [paths["chunks"], paths["bm25"]]
+        if ENABLE_DENSE:
+            required_paths.append(paths["faiss"])
+        missing = [str(path) for path in required_paths if not path.exists()]
         if missing:
             missing_str = ", ".join(missing)
             raise FileNotFoundError(
                 "RAG indexes are missing. Run `python -m src.ingest_app` first.\n"
                 f"Missing: {missing_str}"
             )
-        index_files.extend(paths.values())
+        index_files.extend(required_paths)
 
     oldest_index_mtime = min(path.stat().st_mtime for path in index_files)
     if latest_doc_mtime > oldest_index_mtime:
@@ -941,20 +1017,45 @@ def run_query(query: str):
 
     requested_domain = get_requested_domain()
     profile = build_query_profile(query)
-    search_output = hybrid_search(query, preferred_domain=requested_domain)
-    selected_domain = search_output.get("selected_domain") or ""
-    merged_domains = search_output.get("merged_domains", [])
-    retrieval_filter_summary = search_output.get("filter_summary", {})
-    all_index_chunks = load_all_index_chunks(merged_domains or ([selected_domain] if selected_domain else []))
-    dense_results = search_output["dense_results"]
-    sparse_results = search_output["sparse_results"]
-    merged_results = search_output["merged_results"]
-    source_rankings = rank_sources(profile, merged_results)
-    requested_sources = resolve_requested_sources(profile, all_index_chunks)
+    security_mode = runtime_security_mode()
+    runtime_detector_flag = runtime_detector_enabled()
+    runtime_sanitizer_flag = runtime_sanitizer_enabled()
+    include_flagged = security_mode == "baseline_rag"
+    include_quarantined = security_mode == "baseline_rag"
+    excluded_chunk_ids: set[str] = set()
+    excluded_sources: set[str] = set()
+    requery_attempt = 0
 
-    use_rag = should_use_rag(query, dense_results, sparse_results)
+    while True:
+        search_output = hybrid_search(
+            query,
+            preferred_domain=requested_domain,
+            include_flagged=include_flagged,
+            include_quarantined=include_quarantined,
+            exclude_chunk_ids=excluded_chunk_ids,
+            exclude_sources=excluded_sources,
+        )
+        selected_domain = search_output.get("selected_domain") or ""
+        merged_domains = search_output.get("merged_domains", [])
+        retrieval_filter_summary = search_output.get("filter_summary", {})
+        all_index_chunks = load_all_index_chunks(merged_domains or ([selected_domain] if selected_domain else []))
+        all_index_chunks, expansion_filter_summary = filter_expansion_chunks(
+            all_index_chunks,
+            include_flagged=include_flagged,
+            include_quarantined=include_quarantined,
+            exclude_chunk_ids=excluded_chunk_ids,
+            exclude_sources=excluded_sources,
+        )
+        dense_results = search_output["dense_results"]
+        sparse_results = search_output["sparse_results"]
+        merged_results = search_output["merged_results"]
+        source_rankings = rank_sources(profile, merged_results)
+        requested_sources = resolve_requested_sources(profile, all_index_chunks)
 
-    if use_rag:
+        use_rag = should_use_rag(query, dense_results, sparse_results)
+        if not use_rag:
+            break
+
         document_first_results = expand_results_for_top_sources(profile, merged_results, all_index_chunks, requested_sources)
         document_first_results = dedupe_chunk_items(document_first_results, max_per_source=10)
         final_chunks = rerank_results(query, document_first_results)
@@ -966,102 +1067,230 @@ def run_query(query: str):
                 requested_sources,
                 max_total=4,
             )
-        if final_chunks:
-            print_retrieval(dense_results, sparse_results, final_chunks)
-            structured_candidates = collect_structured_candidates(profile, final_chunks, document_first_results)
-            if (
-                (profile.entity_terms or profile.document_hints or profile.requested_fields)
-                and should_use_global_structured_candidates(profile, source_rankings)
-            ):
-                global_structured_candidates = collect_global_structured_candidates(profile, all_index_chunks)
-                structured_candidates = dedupe_raw_chunks(global_structured_candidates + structured_candidates, max_per_source=12)
-            structured_result = None
-            if should_attempt_structured_route(profile, final_chunks, structured_candidates):
-                structured_result = build_structured_answer(query, structured_candidates)
-            if structured_result:
-                print_structured_answer(structured_result)
-                print_debug_info(
-                    route="structured",
-                    elapsed_seconds=time.perf_counter() - started_at,
-                    structured_candidates_count=len(structured_candidates),
-                    selected_domain=selected_domain,
-                    merged_domains=merged_domains,
-                    retrieval_filter_summary=retrieval_filter_summary,
-                )
-                return
 
-            context_chunks = select_context_chunks(profile, final_chunks, document_first_results, requested_sources)
-            context_chunks = dedupe_chunk_items(context_chunks, max_per_source=8)[:8]
-            guard_result = apply_runtime_guard(query, context_chunks)
-            runtime_guard_summary = summarize_runtime_guard(guard_result)
-            runtime_result = guard_result["runtime_result"]
-            sanitization = guard_result["sanitization"]
+        if not final_chunks:
+            break
 
-            if sanitization.get("action") == "block":
-                print("\n=== RAG Response ===")
-                print(build_runtime_fallback_message(runtime_result))
-                print_debug_info(
-                    route="runtime_block",
-                    elapsed_seconds=time.perf_counter() - started_at,
-                    structured_candidates_count=len(structured_candidates),
-                    selected_domain=selected_domain,
-                    merged_domains=merged_domains,
-                    retrieval_filter_summary=retrieval_filter_summary,
-                    runtime_guard_summary=runtime_guard_summary,
-                )
-                return
+        print_retrieval(dense_results, sparse_results, final_chunks)
+        structured_candidates = collect_structured_candidates(profile, final_chunks, document_first_results)
+        if (
+            (profile.entity_terms or profile.document_hints or profile.requested_fields)
+            and should_use_global_structured_candidates(profile, source_rankings)
+        ):
+            global_structured_candidates = collect_global_structured_candidates(profile, all_index_chunks)
+            structured_candidates = dedupe_raw_chunks(global_structured_candidates + structured_candidates, max_per_source=12)
 
-            if sanitization.get("action") == "requery":
-                print("\n=== RAG Response ===")
-                print(build_runtime_fallback_message(runtime_result) or "현재 검색 문맥은 안전하지 않아 답변을 보류합니다.")
-                print("\n=== Sources ===")
-                print("(runtime guard blocked current context)")
-                print_debug_info(
-                    route,
-                    domains,
-                    structured_result.get("metadata", {}),
-                    len(structured_result["records"]),
-                    elapsed,
-                    domains if merged_results else [],
-                    excluded_flagged=excluded_flagged,
-                    excluded_quarantined=excluded_quarantined,
-                    runtime_guard_summary=runtime_guard_summary,
-                )
-                return
-
-            if sanitization.get("action") == "sanitize":
-                context_chunks = dedupe_chunk_items(list(sanitization.get("sanitized_chunks", [])), max_per_source=8)[:8]
-                if not context_chunks:
-                    print("\n=== RAG Response ===")
-                    print(build_runtime_fallback_message(runtime_result) or "현재 검색 문맥은 안전하지 않아 답변을 보류합니다.")
-                    print_debug_info(
-                        route="runtime_block",
-                        elapsed_seconds=time.perf_counter() - started_at,
-                        structured_candidates_count=len(structured_candidates),
-                        selected_domain=selected_domain,
-                        merged_domains=merged_domains,
-                        retrieval_filter_summary=retrieval_filter_summary,
-                        runtime_guard_summary=runtime_guard_summary,
-                    )
-                    return
-
-            prompt = build_rag_prompt(query, context_chunks, profile)
-            response = ask_ollama(prompt)
-            normalized_response = normalize_rag_response_text(response.get("response", ""), context_chunks)
-
-            print("\n=== RAG Response ===")
-            print(normalized_response)
-            print_sources(context_chunks)
+        structured_result = None
+        if should_attempt_structured_route(profile, final_chunks, structured_candidates):
+            structured_result = build_structured_answer(query, structured_candidates)
+        if structured_result:
+            print_structured_answer(structured_result)
             print_debug_info(
-                route="llm",
+                route="structured",
                 elapsed_seconds=time.perf_counter() - started_at,
                 structured_candidates_count=len(structured_candidates),
                 selected_domain=selected_domain,
                 merged_domains=merged_domains,
                 retrieval_filter_summary=retrieval_filter_summary,
+                expansion_filter_summary=expansion_filter_summary,
+                security_mode=security_mode,
+                runtime_detector_flag=runtime_detector_flag,
+                runtime_sanitizer_flag=runtime_sanitizer_flag,
+                final_result_count=len(final_chunks),
+            )
+            return
+
+        context_chunks = select_context_chunks(profile, final_chunks, document_first_results, requested_sources)
+        context_chunks = dedupe_chunk_items(context_chunks, max_per_source=8)[:8]
+        guard_result = apply_runtime_guard(query, context_chunks, prior_requery_attempts=requery_attempt)
+        runtime_guard_summary = summarize_runtime_guard(guard_result)
+        runtime_guard_summary["runtime_requery_attempt"] = requery_attempt
+        runtime_result = guard_result["runtime_result"]
+        sanitization = guard_result["sanitization"]
+
+        if sanitization.get("action") in {"block", "fallback"}:
+            print("\n=== RAG Response ===")
+            print(build_runtime_fallback_message(runtime_result) or "?꾩옱 寃??臾몃㎘? ?덉쟾?섏? ?딆븘 ?듬???蹂대쪟?⑸땲??")
+            print_debug_info(
+                route="runtime_block" if sanitization.get("action") == "block" else "runtime_fallback",
+                elapsed_seconds=time.perf_counter() - started_at,
+                structured_candidates_count=len(structured_candidates),
+                selected_domain=selected_domain,
+                merged_domains=merged_domains,
+                retrieval_filter_summary=retrieval_filter_summary,
+                expansion_filter_summary=expansion_filter_summary,
+                security_mode=security_mode,
+                runtime_detector_flag=runtime_detector_flag,
+                runtime_sanitizer_flag=runtime_sanitizer_flag,
+                final_result_count=len(final_chunks),
+                context_chunk_count=len(context_chunks),
                 runtime_guard_summary=runtime_guard_summary,
             )
             return
+
+        if sanitization.get("action") == "requery":
+            exclusion_filters = sanitization.get("exclusion_filters", {})
+            next_chunk_ids = {chunk_id for chunk_id in exclusion_filters.get("chunk_ids", []) if chunk_id}
+            next_sources = {source for source in exclusion_filters.get("sources", []) if source}
+            next_chunk_ids -= excluded_chunk_ids
+            next_sources -= excluded_sources
+
+            if requery_attempt < RUNTIME_REQUERY_MAX_ATTEMPTS and (next_chunk_ids or next_sources):
+                excluded_chunk_ids.update(next_chunk_ids)
+                excluded_sources.update(next_sources)
+                requery_attempt += 1
+                runtime_guard_summary["runtime_requery_chunk_ids"] = sorted(excluded_chunk_ids)
+                runtime_guard_summary["runtime_requery_sources"] = sorted(excluded_sources)
+                continue
+
+            runtime_guard_summary["runtime_requery_failure_reason"] = (
+                "max_attempts_reached"
+                if requery_attempt >= RUNTIME_REQUERY_MAX_ATTEMPTS
+                else "no_new_exclusions"
+            )
+
+            print("\n=== RAG Response ===")
+            print(build_runtime_fallback_message(runtime_result) or "현재 검색 문맥은 안전하지 않아 답변을 보류합니다.")
+            print("\n=== Sources ===")
+            print("(runtime guard blocked current context)")
+            print_debug_info(
+                route="runtime_requery_fallback",
+                elapsed_seconds=time.perf_counter() - started_at,
+                structured_candidates_count=len(structured_candidates),
+                selected_domain=selected_domain,
+                merged_domains=merged_domains,
+                retrieval_filter_summary=retrieval_filter_summary,
+                expansion_filter_summary=expansion_filter_summary,
+                security_mode=security_mode,
+                runtime_detector_flag=runtime_detector_flag,
+                runtime_sanitizer_flag=runtime_sanitizer_flag,
+                final_result_count=len(final_chunks),
+                context_chunk_count=len(context_chunks),
+                runtime_guard_summary=runtime_guard_summary,
+            )
+            return
+
+        if sanitization.get("action") == "remove":
+            context_chunks = dedupe_chunk_items(list(sanitization.get("sanitized_context", [])), max_per_source=8)[:8]
+            if not context_chunks:
+                print("\n=== RAG Response ===")
+                print(build_runtime_fallback_message(runtime_result) or "현재 검색 문맥은 안전하지 않아 답변을 보류합니다.")
+                print_debug_info(
+                    route="runtime_remove_fallback",
+                    elapsed_seconds=time.perf_counter() - started_at,
+                    structured_candidates_count=len(structured_candidates),
+                    selected_domain=selected_domain,
+                    merged_domains=merged_domains,
+                    retrieval_filter_summary=retrieval_filter_summary,
+                    expansion_filter_summary=expansion_filter_summary,
+                    security_mode=security_mode,
+                    runtime_detector_flag=runtime_detector_flag,
+                    runtime_sanitizer_flag=runtime_sanitizer_flag,
+                    final_result_count=len(final_chunks),
+                    context_chunk_count=len(context_chunks),
+                    runtime_guard_summary=runtime_guard_summary,
+                )
+                return
+
+            post_remove_guard = apply_runtime_guard(query, context_chunks, prior_requery_attempts=requery_attempt)
+            post_remove_summary = summarize_runtime_guard(post_remove_guard)
+            post_remove_summary["runtime_requery_attempt"] = requery_attempt
+            post_remove_summary["runtime_removed_chunk_ids"] = sanitization.get("removed_chunk_ids", [])
+            post_remove_summary["runtime_sanitization_rules"] = (
+                list(runtime_guard_summary.get("runtime_sanitization_rules", []))
+                + [rule for rule in post_remove_summary.get("runtime_sanitization_rules", []) if rule not in runtime_guard_summary.get("runtime_sanitization_rules", [])]
+            )
+            post_remove_result = post_remove_guard["runtime_result"]
+            post_remove_sanitization = post_remove_guard["sanitization"]
+
+            if post_remove_sanitization.get("action") in {"block", "fallback", "remove"}:
+                print("\n=== RAG Response ===")
+                print(build_runtime_fallback_message(post_remove_result) or "?꾩옱 寃??臾몃㎘? ?덉쟾?섏? ?딆븘 ?듬???蹂대쪟?⑸땲??")
+                print_debug_info(
+                    route="runtime_remove_fallback",
+                    elapsed_seconds=time.perf_counter() - started_at,
+                    structured_candidates_count=len(structured_candidates),
+                    selected_domain=selected_domain,
+                    merged_domains=merged_domains,
+                    retrieval_filter_summary=retrieval_filter_summary,
+                    expansion_filter_summary=expansion_filter_summary,
+                    security_mode=security_mode,
+                    runtime_detector_flag=runtime_detector_flag,
+                    runtime_sanitizer_flag=runtime_sanitizer_flag,
+                    final_result_count=len(final_chunks),
+                    context_chunk_count=len(context_chunks),
+                    runtime_guard_summary=post_remove_summary,
+                )
+                return
+
+            if post_remove_sanitization.get("action") == "requery":
+                exclusion_filters = post_remove_sanitization.get("exclusion_filters", {})
+                next_chunk_ids = {chunk_id for chunk_id in exclusion_filters.get("chunk_ids", []) if chunk_id}
+                next_sources = {source for source in exclusion_filters.get("sources", []) if source}
+                next_chunk_ids -= excluded_chunk_ids
+                next_sources -= excluded_sources
+
+                if requery_attempt < RUNTIME_REQUERY_MAX_ATTEMPTS and (next_chunk_ids or next_sources):
+                    excluded_chunk_ids.update(next_chunk_ids)
+                    excluded_sources.update(next_sources)
+                    requery_attempt += 1
+                    post_remove_summary["runtime_requery_chunk_ids"] = sorted(excluded_chunk_ids)
+                    post_remove_summary["runtime_requery_sources"] = sorted(excluded_sources)
+                    continue
+
+                post_remove_summary["runtime_requery_failure_reason"] = (
+                    "max_attempts_reached"
+                    if requery_attempt >= RUNTIME_REQUERY_MAX_ATTEMPTS
+                    else "no_new_exclusions"
+                )
+
+                print("\n=== RAG Response ===")
+                print(build_runtime_fallback_message(post_remove_result) or "?꾩옱 寃??臾몃㎘? ?덉쟾?섏? ?딆븘 ?듬???蹂대쪟?⑸땲??")
+                print("\n=== Sources ===")
+                print("(runtime guard blocked current context)")
+                print_debug_info(
+                    route="runtime_requery_fallback",
+                    elapsed_seconds=time.perf_counter() - started_at,
+                    structured_candidates_count=len(structured_candidates),
+                    selected_domain=selected_domain,
+                    merged_domains=merged_domains,
+                    retrieval_filter_summary=retrieval_filter_summary,
+                    expansion_filter_summary=expansion_filter_summary,
+                    security_mode=security_mode,
+                    runtime_detector_flag=runtime_detector_flag,
+                    runtime_sanitizer_flag=runtime_sanitizer_flag,
+                    final_result_count=len(final_chunks),
+                    context_chunk_count=len(context_chunks),
+                    runtime_guard_summary=post_remove_summary,
+                )
+                return
+
+            runtime_guard_summary = post_remove_summary
+            runtime_result = post_remove_result
+
+        prompt = build_rag_prompt(query, context_chunks, profile)
+        response = ask_ollama(prompt)
+        normalized_response = normalize_rag_response_text(response.get("response", ""), context_chunks)
+
+        print("\n=== RAG Response ===")
+        print(normalized_response)
+        print_sources(context_chunks)
+        print_debug_info(
+            route="llm",
+            elapsed_seconds=time.perf_counter() - started_at,
+            structured_candidates_count=len(structured_candidates),
+            selected_domain=selected_domain,
+            merged_domains=merged_domains,
+            retrieval_filter_summary=retrieval_filter_summary,
+            expansion_filter_summary=expansion_filter_summary,
+            security_mode=security_mode,
+            runtime_detector_flag=runtime_detector_flag,
+            runtime_sanitizer_flag=runtime_sanitizer_flag,
+            final_result_count=len(final_chunks),
+            context_chunk_count=len(context_chunks),
+            runtime_guard_summary=runtime_guard_summary,
+        )
+        return
 
     prompt = build_general_prompt(query)
     response = ask_ollama(prompt)
@@ -1074,6 +1303,9 @@ def run_query(query: str):
         selected_domain=selected_domain,
         merged_domains=merged_domains,
         retrieval_filter_summary=retrieval_filter_summary,
+        security_mode=security_mode,
+        runtime_detector_flag=runtime_detector_flag,
+        runtime_sanitizer_flag=runtime_sanitizer_flag,
     )
 
 

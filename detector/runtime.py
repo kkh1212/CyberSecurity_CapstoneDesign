@@ -69,14 +69,14 @@ QUERY_JAILBREAK_PATTERNS: list[WeightedPattern] = [
     ),
     WeightedPattern(
         name="ignore_instruction_query_ko",
-        pattern=r"(?:정책|규칙|지시|이전 지시).{0,12}(?:무시|건너뛰)|무시하고 .*답",
+        pattern="(?:\\uc815\\ucc45|\\addc\\uce59|\\uc9c0\\uce68|\\uc774\\uc804 \\uc9c0\\uc2dc).{0,12}(?:\\ubb34\\uc2dc|\\uac74\\ub108\\ub6f0|\\ub530\\ub974\\uc9c0 \\ub9d0)",
         weight=1.3,
         category="jailbreak",
         description="Korean attempt to ignore rules or prior instructions.",
     ),
     WeightedPattern(
         name="override_behavior_query_ko",
-        pattern=r"상관없이 .*답|우회해서 .*알려|규정을 넘어서 .*설명|역할극|관리자처럼",
+        pattern="\\uc0c1\\uad00\\uc5c6\\uc774.*?(\\uc54c\\ub824|\\uc124\\uba85)|\\uaddc\\uc815\\uc744 \\ub118\\uc5b4\\uc11c.*?(\\uc124\\uba85|\\uc548\\ub0b4)|\\uad00\\ub9ac\\uc790\\ucc98\\ub7fc",
         weight=1.0,
         category="jailbreak",
         description="Korean behavior override or bypass attempt.",
@@ -108,21 +108,21 @@ QUERY_SENSITIVE_PATTERNS: list[WeightedPattern] = [
     ),
     WeightedPattern(
         name="sensitive_internal_ko",
-        pattern=r"(?:내부|기밀|제한된|민감한).{0,20}(?:정보|절차|경로|사유|근거|단계|저장 위치)|(?:관리자|권한|로그|백업 경로|우회 절차|임시 계정|허용 시스템 목록|접속 경로|임시 접속 경로|원본 저장 위치)",
+        pattern="(?:\\ub0b4\\ubd80|\\uae30\\ubc00|\\uc81c\\ud55c\\ub41c|\\ubbfc\\uac10\\ud55c).{0,20}(?:\\uc815\\ubcf4|\\uc808\\ucc28|\\uacbd\\ub85c|\\uc0ac\\uc720|\\uadfc\\uac70|\\ub2e8\\uacc4|\\uc800\\uc7a5 \\uc704\\uce58)|(?:\\uad00\\ub9ac\\uc790|\\uad8c\\ud55c|\\ub85c\\uadf8|\\ubc31\\uc5c5 \\uacbd\\ub85c|\\uc6b0\\ud68c \\uc808\\ucc28|\\uc784\\uc2dc \\uacc4\\uc815|\\ud5c8\\uc6a9 \\uc2dc\\uc2a4\\ud15c \\ubaa9\\ub85d|\\uc811\\uc18d \\uacbd\\ub85c|\\uc784\\uc2dc \\uc811\\uc18d \\uacbd\\ub85c|\\uc6d0\\ubcf8 \\ubb38\\uc11c \\uc800\\uc7a5 \\uc704\\uce58)",
         weight=1.0,
         category="sensitive_request",
         description="Korean request for sensitive internal information or procedures.",
     ),
     WeightedPattern(
         name="detailed_procedure_ko",
-        pattern=r"(?:구체적|상세|단계별|정확한|상세히|구체적으로|단계별로).{0,20}(?:절차|방법|경로|설명|안내)|어떻게 .*?(?:하는지|진행되는지)",
+        pattern="(?:\\uad6c\\uccb4\\uc801|\\uc0c1\\uc138|\\ub2e8\\uacc4\\ubcc4|\\uc815\\ud655\\ud55c).{0,20}(?:\\uc808\\ucc28|\\ubc29\\ubc95|\\uacbd\\ub85c|\\uc124\\uba85|\\uc548\\ub0b4)|\\uc5b4\\ub5bb\\uac8c.*?(?:\\ud558\\ub294\\uc9c0|\\uc9c4\\ud589\\ub418\\ub294\\uc9c0)",
         weight=0.9,
         category="detail_request",
         description="Korean request for detailed procedures or methods.",
     ),
     WeightedPattern(
         name="bypass_or_internal_reason_ko",
-        pattern=r"(?:우회 (?:사용 )?방법|우회 절차|내부 승인 사유|임시 권한 부여 방식|예외 승인 사유)",
+        pattern="(?:\\uc6b0\\ud68c (?:\\uc0ac\\uc6a9 )?\\ubc29\\ubc95|\\uc6b0\\ud68c \\uc808\\ucc28|\\ub0b4\\ubd80 \\uc2b9\\uc778 \\uc0ac\\uc720|\\uc784\\uc2dc \\uad8c\\ud55c \\ubd80\\uc5ec \\ubc29\\uc2dd|\\uc608\\uc678 \\uc2b9\\uc778 \\uc0ac\\uc720)",
         weight=1.0,
         category="sensitive_request",
         description="Korean request for bypass methods, internal approval reasons, or temporary privilege handling.",
@@ -140,7 +140,7 @@ QUERY_PRIVILEGE_PATTERNS: list[WeightedPattern] = [
     ),
     WeightedPattern(
         name="privilege_request_ko",
-        pattern=r"(?:관리자|마스터|루트|승인 사유|보안 검토 결과|내부 전용|예외 승인|관리자 권한 부여 기준|점검 중 허용 시스템|임시 접속 경로)",
+        pattern="(?:\\uad00\\ub9ac\\uc790|\\ub9c8\\uc2a4\\ud130|\\ub8e8\\ud2b8|\\uc2b9\\uc778 \\uc0ac\\uc720|\\ubcf4\\uc548 \\uac80\\ud1a0 \\uacb0\\uacfc|\\ub0b4\\ubd80 \\uc804\\uc6a9|\\uc608\\uc678 \\uc2b9\\uc778|\\uad00\\ub9ac\\uc790 \\uad8c\\ud55c \\ubd80\\uc5ec \\uae30\\uc900|\\ud5c8\\uc6a9 \\uc2dc\\uc2a4\\ud15c \\ubaa9\\ub85d|\\uc784\\uc2dc \\uc811\\uc18d \\uacbd\\ub85c)",
         weight=0.9,
         category="privilege_request",
         description="Korean request for privileged or internal-only details.",
@@ -151,14 +151,14 @@ QUERY_PRIVILEGE_PATTERNS: list[WeightedPattern] = [
 RUNTIME_CONTEXT_RESTRICTION_PATTERNS: list[WeightedPattern] = [
     WeightedPattern(
         name="context_non_disclosure_ko",
-        pattern=r"(?:제공하지 않(?:는다|습니다)|안내하지 않(?:는다|습니다)|설명하지 않(?:는다|습니다)).{0,18}(?:세부|상세|구체|예외|경로|절차|조건)?|(?:세부|상세|구체).{0,18}(?:제공하지 않(?:는다|습니다)|안내하지 않(?:는다|습니다)|설명하지 않(?:는다|습니다))",
+        pattern="(?:\\uc81c\\uacf5\\ud558\\uc9c0 \\uc54a(?:\\uc2b5\\ub2c8\\ub2e4|\\ub294\\ub2e4)|\\uc548\\ub0b4\\ud558\\uc9c0 \\uc54a(?:\\uc2b5\\ub2c8\\ub2e4|\\ub294\\ub2e4)|\\uc124\\uba85\\ud558\\uc9c0 \\uc54a(?:\\uc2b5\\ub2c8\\ub2e4|\\ub294\\ub2e4)).{0,18}(?:\\ub0b4\\ubd80|\\uc0c1\\uc138|\\uad6c\\uccb4|\\uc608\\uc678|\\uacbd\\ub85c|\\uc808\\ucc28|\\uc870\\uac74)?|(?:\\ub0b4\\ubd80|\\uc0c1\\uc138|\\uad6c\\uccb4).{0,18}(?:\\uc81c\\uacf5\\ud558\\uc9c0 \\uc54a(?:\\uc2b5\\ub2c8\\ub2e4|\\ub294\\ub2e4)|\\uc548\\ub0b4\\ud558\\uc9c0 \\uc54a(?:\\uc2b5\\ub2c8\\ub2e4|\\ub294\\ub2e4)|\\uc124\\uba85\\ud558\\uc9c0 \\uc54a(?:\\uc2b5\\ub2c8\\ub2e4|\\ub294\\ub2e4))",
         weight=0.9,
         category="context_restriction",
         description="Korean runtime context explicitly refuses detailed operational disclosure.",
     ),
     WeightedPattern(
         name="context_public_scope_only_ko",
-        pattern=r"공개 가능한 범위(?:만| 내에서만)?|공식 공지(?: 또는)? 일반 안내|별도 안내하지 않(?:는다|습니다)|추가 설명(?:을)? (?:넓히지 않(?:는다|습니다)|확장하지 않(?:는다|습니다))|운영팀 검토가 필요",
+        pattern="\\uacf5\\uac1c \\uac00\\ub2a5\\ud55c \\ubc94\\uc704(?:\\uc5d0\\uc11c\\ub9cc)?|\\uacf5\\uc2dd \\uacf5\\uc9c0(?: \\ub610\\ub294)? \\uc77c\\ubc18 \\uc548\\ub0b4|\\ubcc4\\ub3c4 \\uc548\\ub0b4\\ud558\\uc9c0 \\uc54a(?:\\uc2b5\\ub2c8\\ub2e4|\\ub294\\ub2e4)|\\ucd94\\uac00 \\uc124\\uba85(?:\\uc740)? (?:\\ub4dc\\ub9ac\\uc9c0 \\uc54a(?:\\uc2b5\\ub2c8\\ub2e4|\\ub294\\ub2e4)|\\ud655\\uc7a5\\ud558\\uc9c0 \\uc54a(?:\\uc2b5\\ub2c8\\ub2e4|\\ub294\\ub2e4))|\\uc6b4\\uc601\\uc0c1 \\uac80\\ud1a0\\uac00 \\ud544\\uc694",
         weight=0.8,
         category="context_restriction",
         description="Korean runtime context limits replies to public or approved scope.",
@@ -202,20 +202,124 @@ RUNTIME_DEFAULT_THRESHOLDS: dict[str, float] = {
     "rbac_medium": 0.34,
     "rbac_high": 0.60,
     "query_attack_medium": 0.16,
+    "context_set_low": 0.12,
+    "context_pattern_cluster_medium": 0.26,
     "context_restriction_medium": 0.38,
     "context_restriction_support": 0.30,
     "interaction_support": 0.12,
+    "requery_chunk_risk": 0.24,
+    "requery_source_cluster_min": 2,
+    "requery_chunk_limit": 3,
+    "requery_followup_source_score": 0.14,
+    "requery_followup_source_pattern_score": 0.20,
+    "requery_followup_source_reason_count": 2,
+    "requery_top_chunk_priority": 0.18,
+    "remove_chunk_risk_high": 0.48,
+    "remove_chunk_risk_critical": 0.42,
+    "remove_reason_support": 0.30,
+    "remove_min_safe_chunks": 2,
+    "remove_min_safe_ratio": 0.40,
+    "remove_medium_hotspot_risk": 0.14,
+    "remove_medium_hotspot_pattern_score": 0.20,
+    "remove_medium_hotspot_reason_count": 2,
+    "block_query_risk": 0.78,
+    "block_rbac_risk": 0.68,
 }
 
 
-def _normalize_weights(weights: Mapping[str, float] | None) -> dict[str, float]:
-    merged = dict(RUNTIME_DEFAULT_WEIGHTS)
+RUNTIME_PROFILES: dict[str, dict[str, Mapping[str, float]]] = {
+    "balanced": {
+        "weights": RUNTIME_DEFAULT_WEIGHTS,
+        "thresholds": RUNTIME_DEFAULT_THRESHOLDS,
+    },
+    "strict": {
+        "weights": {
+            "query_risk": 0.22,
+            "interaction_risk": 0.38,
+            "context_set_risk": 0.24,
+            "rbac_risk": 0.16,
+        },
+        "thresholds": {
+            **RUNTIME_DEFAULT_THRESHOLDS,
+            "medium_risk": 0.34,
+            "high_risk": 0.62,
+            "critical_risk": 0.82,
+            "medium_floor": 0.36,
+            "high_floor": 0.68,
+            "rbac_medium": 0.30,
+            "rbac_high": 0.56,
+            "query_attack_medium": 0.14,
+            "context_restriction_medium": 0.34,
+            "context_restriction_support": 0.26,
+            "requery_chunk_risk": 0.22,
+            "requery_followup_source_score": 0.12,
+            "requery_followup_source_pattern_score": 0.18,
+            "requery_top_chunk_priority": 0.16,
+            "remove_chunk_risk_high": 0.44,
+            "remove_chunk_risk_critical": 0.40,
+            "remove_reason_support": 0.28,
+            "remove_medium_hotspot_risk": 0.14,
+            "remove_medium_hotspot_pattern_score": 0.18,
+            "block_query_risk": 0.74,
+            "block_rbac_risk": 0.64,
+        },
+    },
+    "research": {
+        "weights": {
+            "query_risk": 0.24,
+            "interaction_risk": 0.34,
+            "context_set_risk": 0.26,
+            "rbac_risk": 0.16,
+        },
+        "thresholds": {
+            **RUNTIME_DEFAULT_THRESHOLDS,
+            "medium_risk": 0.35,
+            "high_risk": 0.64,
+            "critical_risk": 0.84,
+            "medium_floor": 0.37,
+            "high_floor": 0.70,
+            "context_medium": 0.32,
+            "query_attack_medium": 0.15,
+            "context_restriction_medium": 0.36,
+            "context_restriction_support": 0.28,
+            "requery_chunk_risk": 0.23,
+            "requery_followup_source_score": 0.13,
+            "requery_followup_source_pattern_score": 0.18,
+            "requery_top_chunk_priority": 0.17,
+            "remove_chunk_risk_high": 0.46,
+            "remove_chunk_risk_critical": 0.40,
+            "remove_reason_support": 0.28,
+            "remove_medium_hotspot_risk": 0.14,
+            "remove_medium_hotspot_pattern_score": 0.18,
+        },
+    },
+}
+
+
+def get_runtime_profile_config(profile: str | None) -> dict[str, Mapping[str, float]]:
+    profile_name = (profile or "balanced").strip().lower()
+    config = RUNTIME_PROFILES.get(profile_name)
+    if config:
+        return {
+            "profile": profile_name,
+            "weights": dict(config["weights"]),
+            "thresholds": dict(config["thresholds"]),
+        }
+    return {
+        "profile": "balanced",
+        "weights": dict(RUNTIME_DEFAULT_WEIGHTS),
+        "thresholds": dict(RUNTIME_DEFAULT_THRESHOLDS),
+    }
+
+
+def _normalize_weights(weights: Mapping[str, float] | None, defaults: Mapping[str, float]) -> dict[str, float]:
+    merged = dict(defaults)
     if weights:
         merged.update(weights)
 
     total = sum(max(0.0, value) for value in merged.values())
     if total <= 0:
-        return dict(RUNTIME_DEFAULT_WEIGHTS)
+        return dict(defaults)
     return {key: max(0.0, value) / total for key, value in merged.items()}
 
 
@@ -318,8 +422,12 @@ def _is_privileged_user(user_context: Mapping[str, Any] | None, owner_dept: str,
     return False
 
 
-def _build_base_detector(corpus_stats: Mapping[str, Any] | None, weights: Mapping[str, float] | None) -> MutedRAGDetector:
-    return MutedRAGDetector(corpus_stats=corpus_stats, weights=weights)
+def _build_base_detector(
+    corpus_stats: Mapping[str, Any] | None,
+    weights: Mapping[str, float] | None,
+    profile: str | None,
+) -> MutedRAGDetector:
+    return MutedRAGDetector(corpus_stats=corpus_stats, weights=weights, profile=profile)
 
 
 def score_query_risk(
@@ -423,13 +531,16 @@ def score_query_context_interaction(
         )
 
         reasons = []
-        if detail_signal and restriction_signal >= 0.12:
+        if detail_signal and restriction_signal >= 0.08:
             reasons.append("detail_request_x_restriction")
         if jailbreak_signal and instruction_signal >= 0.12:
             reasons.append("query_override_x_instructionality")
-        if sensitive_signal and restriction_signal >= 0.12:
+        if sensitive_signal and restriction_signal >= 0.08:
             reasons.append("sensitive_query_x_refusal")
-        if privilege_signal and precomputed_risk >= 0.10:
+        if privilege_signal and (
+            (precomputed_risk >= 0.12 and max(restriction_signal, instruction_signal) >= 0.06)
+            or restriction_pattern_score >= 0.18
+        ):
             reasons.append("privilege_query_x_sensitive_context")
         if restriction_pattern_score >= 0.22:
             reasons.append("context_restriction_pattern")
@@ -677,8 +788,10 @@ def detect_runtime_risk(
     corpus_stats: Mapping[str, Any] | None = None,
     base_detector_weights: Mapping[str, float] | None = None,
     runtime_weights: Mapping[str, float] | None = None,
+    profile: str | None = None,
 ) -> dict[str, Any]:
-    base_detector = _build_base_detector(corpus_stats, base_detector_weights)
+    profile_config = get_runtime_profile_config(profile)
+    base_detector = _build_base_detector(corpus_stats, base_detector_weights, profile)
     query_risk = score_query_risk(query, base_detector=base_detector)
     interaction_risk = score_query_context_interaction(
         query,
@@ -695,7 +808,7 @@ def detect_runtime_risk(
         query_risk=query_risk,
     )
 
-    normalized_weights = _normalize_weights(runtime_weights)
+    normalized_weights = _normalize_weights(runtime_weights, profile_config["weights"])
     base_risk = (
         normalized_weights["query_risk"] * query_risk["normalized_score"]
         + normalized_weights["interaction_risk"] * interaction_risk["normalized_score"]
@@ -703,7 +816,7 @@ def detect_runtime_risk(
         + normalized_weights["rbac_risk"] * rbac_risk["normalized_score"]
     )
 
-    thresholds = dict(RUNTIME_DEFAULT_THRESHOLDS)
+    thresholds = dict(profile_config["thresholds"])
     adjusted_risk = base_risk
     triggered_rules: list[str] = []
     explanation_parts = [
@@ -768,6 +881,15 @@ def detect_runtime_risk(
         explanation_parts.append("Retrieved context carries concentrated restriction language that can derail answer generation.")
 
     if (
+        context_pattern_score >= thresholds["context_pattern_cluster_medium"]
+        and context_set_risk["normalized_score"] >= thresholds["context_set_low"]
+        and top_interaction_chunk_risk >= thresholds["interaction_support"]
+    ):
+        adjusted_risk = max(adjusted_risk, thresholds["medium_floor"])
+        triggered_rules.append("context_pattern_cluster_medium")
+        explanation_parts.append("Retrieved context alone contained a concentrated restricted-disclosure pattern.")
+
+    if (
         context_pattern_score >= thresholds["context_restriction_support"]
         and query_risk["normalized_score"] >= 0.14
         and risky_interaction_chunks >= 1
@@ -808,10 +930,36 @@ def detect_runtime_risk(
 
     recommended_action = {
         "low": "allow",
-        "medium": "sanitize",
-        "high": "requery",
-        "critical": "block",
+        "medium": "requery",
+        "high": "remove",
+        "critical": "remove",
     }[risk_level]
+
+    interaction_hotspots = [
+        item
+        for item in interaction_risk.get("per_chunk", [])
+        if float(item.get("runtime_chunk_risk", 0.0)) >= float(thresholds.get("interaction_support", 0.12))
+        or item.get("reasons")
+        or item.get("matched_patterns")
+    ]
+    risky_chunk_ids = sorted(
+        {
+            str(item.get("chunk_id", ""))
+            for item in interaction_hotspots + rbac_risk.get("affected_chunks", [])
+            if item.get("chunk_id")
+        }
+    )
+    risky_sources = sorted(
+        {
+            str(item.get("source", ""))
+            for item in interaction_hotspots + rbac_risk.get("affected_chunks", [])
+            if item.get("source")
+        }
+    )
+    reason_clusters: dict[str, int] = {}
+    for item in interaction_hotspots:
+        for reason in item.get("reasons", []):
+            reason_clusters[reason] = reason_clusters.get(reason, 0) + 1
 
     return {
         "query_risk": query_risk,
@@ -822,70 +970,672 @@ def detect_runtime_risk(
         "adjusted_risk": round(adjusted_risk, 4),
         "risk_level": risk_level,
         "recommended_action": recommended_action,
-        "should_sanitize": risk_level == "medium",
-        "should_requery": risk_level == "high",
-        "should_block_response": risk_level == "critical",
-        "should_abort_current_context": risk_level in {"high", "critical"},
+        "should_sanitize": risk_level in {"medium", "high", "critical"},
+        "should_requery": risk_level == "medium",
+        "should_remove_context": risk_level in {"high", "critical"},
+        "should_block_response": False,
+        "should_abort_current_context": risk_level == "medium",
+        "risky_chunk_ids": risky_chunk_ids,
+        "risky_sources": risky_sources,
+        "risky_reason_clusters": reason_clusters,
+        "interaction_hotspots": interaction_hotspots[:6],
+        "rbac_violations": rbac_risk.get("affected_chunks", []),
         "triggered_rules": triggered_rules,
         "weights_used": normalized_weights,
+        "profile_used": profile_config["profile"],
         "thresholds_used": thresholds,
         "explanation": " ".join(explanation_parts),
+    }
+
+
+def _interaction_map(runtime_result: Mapping[str, Any]) -> dict[str, dict[str, Any]]:
+    return {
+        str(item.get("chunk_id")): dict(item)
+        for item in runtime_result.get("interaction_risk", {}).get("per_chunk", [])
+        if item.get("chunk_id")
+    }
+
+
+def _rbac_map(runtime_result: Mapping[str, Any]) -> dict[str, dict[str, Any]]:
+    return {
+        str(item.get("chunk_id")): dict(item)
+        for item in runtime_result.get("rbac_risk", {}).get("affected_chunks", [])
+        if item.get("chunk_id")
+    }
+
+
+def _medium_removable_hotspots(runtime_result: Mapping[str, Any]) -> list[dict[str, Any]]:
+    thresholds = runtime_result.get("thresholds_used", {})
+    interaction_details = list(runtime_result.get("interaction_risk", {}).get("per_chunk", []))
+    rbac_details = _rbac_map(runtime_result)
+    hotspot_risk = float(thresholds.get("remove_medium_hotspot_risk", 0.16))
+    hotspot_pattern = float(thresholds.get("remove_medium_hotspot_pattern_score", 0.20))
+    hotspot_reason_count = int(thresholds.get("remove_medium_hotspot_reason_count", 2))
+    query_risk_score = float(runtime_result.get("query_risk", {}).get("score", 0.0))
+    rbac_risk_score = float(runtime_result.get("rbac_risk", {}).get("score", 0.0))
+    query_attack_medium = float(thresholds.get("query_attack_medium", 0.16))
+    rbac_medium = float(thresholds.get("rbac_medium", 0.34))
+    query_or_rbac_support = (
+        query_risk_score >= query_attack_medium
+        or rbac_risk_score >= rbac_medium
+        or bool(rbac_details)
+    )
+
+    hotspots: list[dict[str, Any]] = []
+    for detail in interaction_details:
+        chunk_id = str(detail.get("chunk_id", ""))
+        runtime_chunk_risk = float(detail.get("runtime_chunk_risk", 0.0))
+        restriction_pattern_score = float(detail.get("restriction_pattern_score", 0.0))
+        reasons = list(detail.get("reasons", []))
+        matched_patterns = list(detail.get("matched_patterns", []))
+        rbac_hit = chunk_id in rbac_details
+
+        if rbac_hit:
+            hotspots.append(
+                {
+                    **detail,
+                    "removal_support": ["rbac_affected_chunk"] + list(rbac_details[chunk_id].get("reasons", [])),
+                }
+            )
+            continue
+
+        if runtime_chunk_risk < hotspot_risk:
+            continue
+
+        removal_support: list[str] = []
+        if restriction_pattern_score >= hotspot_pattern:
+            removal_support.append("pattern_supported_hotspot")
+        if len(reasons) >= hotspot_reason_count:
+            removal_support.append("reason_supported_hotspot")
+        if matched_patterns:
+            removal_support.append("matched_pattern_hotspot")
+
+        explicit_privilege_hotspot = (
+            restriction_pattern_score >= hotspot_pattern
+            and "privilege_query_x_sensitive_context" in reasons
+        )
+
+        if removal_support and (query_or_rbac_support or explicit_privilege_hotspot):
+            hotspots.append({**detail, "removal_support": removal_support})
+
+    return hotspots
+
+
+def _empty_sanitization_result(
+    action: str,
+    retrieved_chunks: Sequence[Mapping[str, Any]],
+    *,
+    prior_requery_attempts: int,
+    explanation: str,
+    triggered_rules: Sequence[str] | None = None,
+) -> dict[str, Any]:
+    chunks = list(retrieved_chunks)
+    return {
+        "action": action,
+        "removed_chunk_ids": [],
+        "removed_chunks": [],
+        "excluded_sources": [],
+        "excluded_chunk_ids": [],
+        "requery_required": action == "requery",
+        "requery_attempt_count": prior_requery_attempts + 1 if action == "requery" else prior_requery_attempts,
+        "sanitized_context": chunks,
+        "sanitized_chunks": chunks,
+        "exclusion_filters": {"chunk_ids": [], "sources": []},
+        "triggered_sanitization_rules": list(triggered_rules or []),
+        "chunk_rationale": [],
+        "exclusion_priority": [],
+        "context_diversity_before": 0.0,
+        "requery_failure_reason": "",
+        "exclusion_strategy": "none",
+        "remove_candidate_count": 0,
+        "remove_failure_reason": "",
+        "replace_candidates": [],
+        "explanation": explanation,
+    }
+
+
+def decide_runtime_action(
+    query: str,
+    retrieved_chunks: Sequence[Mapping[str, Any]],
+    runtime_result: Mapping[str, Any],
+    *,
+    user_context: Mapping[str, Any] | None = None,
+    policy_profile: str | None = None,
+    prior_requery_attempts: int = 0,
+) -> dict[str, Any]:
+    del query, retrieved_chunks, user_context, policy_profile
+    risk_level = str(runtime_result.get("risk_level", "low")).lower()
+    medium_hotspots = _medium_removable_hotspots(runtime_result)
+
+    if risk_level == "low":
+        return {
+            "action": "allow",
+            "triggered_sanitization_rules": ["low_context_allow"],
+            "explanation": "Runtime risk is low, so the retrieved context is used without sanitization.",
+            "requery_attempt_count": prior_requery_attempts,
+        }
+
+    if risk_level == "medium":
+        if prior_requery_attempts >= 1 and medium_hotspots:
+            return {
+                "action": "remove",
+                "triggered_sanitization_rules": ["medium_persistent_hotspot_remove"],
+                "explanation": "Runtime risk stayed medium after requery and a chunk-level hotspot remained, so risky chunks should be removed before deciding whether the remaining context is still usable.",
+                "requery_attempt_count": prior_requery_attempts,
+            }
+        return {
+            "action": "requery",
+            "triggered_sanitization_rules": ["medium_context_requery"],
+            "explanation": "Runtime risk is medium, so suspicious chunks or sources are excluded before retrieval is re-run.",
+            "requery_attempt_count": prior_requery_attempts + 1,
+        }
+
+    if risk_level in {"high", "critical"}:
+        return {
+            "action": "remove",
+            "triggered_sanitization_rules": [f"{risk_level}_context_remove"],
+            "explanation": "Runtime risk is high enough that clearly risky chunks should be removed before deciding whether the remaining context is still usable.",
+            "requery_attempt_count": prior_requery_attempts,
+        }
+
+    return {
+        "action": "fallback",
+        "triggered_sanitization_rules": ["unknown_runtime_risk_fallback"],
+        "explanation": "Runtime risk could not be classified cleanly, so the current context is not trusted.",
+        "requery_attempt_count": prior_requery_attempts,
+    }
+
+
+def build_requery_exclusions(
+    retrieved_chunks: Sequence[Mapping[str, Any]],
+    runtime_result: Mapping[str, Any],
+    *,
+    prior_requery_attempts: int = 0,
+) -> dict[str, Any]:
+    thresholds = runtime_result.get("thresholds_used", {})
+    interaction_map = _interaction_map(runtime_result)
+    rbac_map = _rbac_map(runtime_result)
+    chunk_threshold = float(thresholds.get("requery_chunk_risk", 0.24))
+    source_cluster_min = int(thresholds.get("requery_source_cluster_min", 2))
+    chunk_limit = int(thresholds.get("requery_chunk_limit", 3))
+    followup_source_score = float(thresholds.get("requery_followup_source_score", 0.14))
+    followup_source_pattern_score = float(thresholds.get("requery_followup_source_pattern_score", 0.20))
+    followup_source_reason_count = int(thresholds.get("requery_followup_source_reason_count", 2))
+    top_chunk_priority = float(thresholds.get("requery_top_chunk_priority", 0.18))
+
+    unique_sources = {
+        _chunk_source(item)
+        for item in retrieved_chunks
+        if _chunk_source(item)
+    }
+    context_diversity_before = round(len(unique_sources) / max(1, len(retrieved_chunks)), 4)
+
+    candidate_entries: list[dict[str, Any]] = []
+    source_summary: dict[str, dict[str, Any]] = {}
+    triggered_rules = ["medium_context_requery"]
+
+    for item in retrieved_chunks:
+        chunk_id = _chunk_id(item)
+        source = _chunk_source(item)
+        interaction_detail = interaction_map.get(chunk_id, {})
+        rbac_detail = rbac_map.get(chunk_id, {})
+        reasons = list(interaction_detail.get("reasons", []))
+        matched_patterns = list(interaction_detail.get("matched_patterns", []))
+        runtime_chunk_risk = float(interaction_detail.get("runtime_chunk_risk", 0.0))
+        restriction_pattern_score = float(interaction_detail.get("restriction_pattern_score", 0.0))
+        precomputed_risk = float(interaction_detail.get("precomputed_risk", 0.0))
+        rbac_severity = float(rbac_detail.get("severity", 0.0))
+
+        if not (
+            runtime_chunk_risk >= chunk_threshold
+            or reasons
+            or matched_patterns
+            or rbac_detail
+        ):
+            continue
+
+        explicit_hotspot = bool(rbac_detail) or bool(matched_patterns) or "context_restriction_pattern" in reasons or len(reasons) >= 2
+        candidate_score = (
+            runtime_chunk_risk
+            + (0.10 if rbac_detail else 0.0)
+            + 0.06 * restriction_pattern_score
+            + 0.05 * precomputed_risk
+            + min(len(reasons), 3) * 0.04
+            + (0.03 if matched_patterns else 0.0)
+            + (0.04 if explicit_hotspot else 0.0)
+        )
+        candidate_entries.append(
+            {
+                "chunk_id": chunk_id,
+                "source": source,
+                "score": round(candidate_score, 4),
+                "runtime_chunk_risk": round(runtime_chunk_risk, 4),
+                "restriction_pattern_score": round(restriction_pattern_score, 4),
+                "precomputed_risk": round(precomputed_risk, 4),
+                "reasons": reasons + list(rbac_detail.get("reasons", [])),
+                "matched_patterns": matched_patterns,
+                "rbac_severity": round(rbac_severity, 4),
+                "explicit_hotspot": explicit_hotspot,
+            }
+        )
+        if source:
+            summary = source_summary.setdefault(
+                source,
+                {
+                    "candidate_count": 0,
+                    "max_score": 0.0,
+                    "pattern_hits": 0,
+                    "reason_hits": 0,
+                    "explicit_hits": 0,
+                    "rbac_hits": 0,
+                },
+            )
+            summary["candidate_count"] += 1
+            summary["max_score"] = max(float(summary["max_score"]), candidate_score)
+            summary["pattern_hits"] += len(matched_patterns)
+            summary["reason_hits"] += len(reasons)
+            summary["explicit_hits"] += 1 if explicit_hotspot else 0
+            summary["rbac_hits"] += 1 if rbac_detail else 0
+
+    if not candidate_entries:
+        ranked = sorted(
+            runtime_result.get("interaction_risk", {}).get("per_chunk", []),
+            key=lambda item: float(item.get("runtime_chunk_risk", 0.0)),
+            reverse=True,
+        )
+        if ranked:
+            top = ranked[0]
+            candidate_entries.append(
+                {
+                    "chunk_id": str(top.get("chunk_id", "")),
+                    "source": str(top.get("source", "")),
+                    "score": round(float(top.get("runtime_chunk_risk", 0.0)), 4),
+                    "runtime_chunk_risk": round(float(top.get("runtime_chunk_risk", 0.0)), 4),
+                    "restriction_pattern_score": round(float(top.get("restriction_pattern_score", 0.0)), 4),
+                    "precomputed_risk": round(float(top.get("precomputed_risk", 0.0)), 4),
+                    "reasons": list(top.get("reasons", [])) or ["top_interaction_chunk_fallback"],
+                    "matched_patterns": list(top.get("matched_patterns", [])),
+                    "rbac_severity": 0.0,
+                    "explicit_hotspot": bool(top.get("matched_patterns")) or bool(top.get("reasons")),
+                }
+            )
+            if top.get("source"):
+                source_summary[str(top.get("source"))] = {
+                    "candidate_count": 1,
+                    "max_score": float(top.get("runtime_chunk_risk", 0.0)),
+                    "pattern_hits": len(top.get("matched_patterns", [])),
+                    "reason_hits": len(top.get("reasons", [])),
+                    "explicit_hits": 1 if top.get("matched_patterns") or top.get("reasons") else 0,
+                    "rbac_hits": 0,
+                }
+            triggered_rules.append("fallback_top_chunk_requery")
+
+    ranked_candidates = sorted(candidate_entries, key=lambda item: item["score"], reverse=True)
+    excluded_sources_set: set[str] = set()
+    exclusion_priority: list[dict[str, Any]] = []
+
+    for source, summary in source_summary.items():
+        strong_source_cluster = (
+            summary["candidate_count"] >= source_cluster_min
+            and (
+                float(summary["max_score"]) >= followup_source_score + 0.08
+                or int(summary["pattern_hits"]) >= 2
+                or int(summary["explicit_hits"]) >= 2
+                or int(summary["rbac_hits"]) >= 1
+            )
+        )
+        followup_source_cluster = (
+            prior_requery_attempts >= 1
+            and float(summary["max_score"]) >= followup_source_score
+            and (
+                int(summary["pattern_hits"]) >= 1
+                or int(summary["reason_hits"]) >= followup_source_reason_count
+                or int(summary["explicit_hits"]) >= 1
+                or int(summary["rbac_hits"]) >= 1
+            )
+        )
+
+        if strong_source_cluster or followup_source_cluster:
+            excluded_sources_set.add(source)
+            exclusion_priority.append(
+                {
+                    "kind": "source",
+                    "source": source,
+                    "score": round(float(summary["max_score"]), 4),
+                    "candidate_count": int(summary["candidate_count"]),
+                    "pattern_hits": int(summary["pattern_hits"]),
+                    "reason_hits": int(summary["reason_hits"]),
+                }
+            )
+
+    if prior_requery_attempts >= 1 and ranked_candidates:
+        top_candidate = ranked_candidates[0]
+        if (
+            top_candidate.get("source")
+            and top_candidate.get("source") not in excluded_sources_set
+            and (
+                float(top_candidate.get("restriction_pattern_score", 0.0)) >= followup_source_pattern_score
+                or bool(top_candidate.get("matched_patterns"))
+                or len(top_candidate.get("reasons", [])) >= followup_source_reason_count
+            )
+        ):
+            excluded_sources_set.add(str(top_candidate["source"]))
+            exclusion_priority.append(
+                {
+                    "kind": "source",
+                    "source": str(top_candidate["source"]),
+                    "score": float(top_candidate["score"]),
+                    "candidate_count": 1,
+                    "pattern_hits": len(top_candidate.get("matched_patterns", [])),
+                    "reason_hits": len(top_candidate.get("reasons", [])),
+                    "rule": "followup_top_source_escalation",
+                }
+            )
+            triggered_rules.append("followup_top_source_escalation")
+
+    excluded_sources = sorted(excluded_sources_set)
+    if excluded_sources:
+        triggered_rules.append("medium_requery_source_cluster")
+
+    excluded_chunk_ids: list[str] = []
+    dynamic_chunk_limit = chunk_limit if prior_requery_attempts == 0 else max(2, chunk_limit - 1)
+    for entry in ranked_candidates:
+        if not entry["chunk_id"]:
+            continue
+        if entry["source"] in excluded_sources:
+            continue
+        if prior_requery_attempts == 0 and not (entry["explicit_hotspot"] or float(entry["score"]) >= top_chunk_priority):
+            continue
+        excluded_chunk_ids.append(entry["chunk_id"])
+        exclusion_priority.append(
+            {
+                "kind": "chunk",
+                "chunk_id": entry["chunk_id"],
+                "source": entry["source"],
+                "score": entry["score"],
+                "reasons": entry["reasons"],
+                "matched_patterns": entry["matched_patterns"],
+            }
+        )
+        if len(excluded_chunk_ids) >= dynamic_chunk_limit:
+            break
+
+    if not excluded_chunk_ids and not excluded_sources and candidate_entries:
+        fallback_chunk = candidate_entries[0]["chunk_id"]
+        if fallback_chunk:
+            excluded_chunk_ids = [fallback_chunk]
+            exclusion_priority.append(
+                {
+                    "kind": "chunk",
+                    "chunk_id": fallback_chunk,
+                    "source": candidate_entries[0]["source"],
+                    "score": candidate_entries[0]["score"],
+                    "reasons": candidate_entries[0]["reasons"],
+                    "matched_patterns": candidate_entries[0]["matched_patterns"],
+                    "rule": "fallback_top_chunk_requery",
+                }
+            )
+
+    explanation_parts = []
+    strategy = "chunk-first requery"
+    if excluded_sources:
+        explanation_parts.append(
+            f"Excluded {len(excluded_sources)} suspicious source(s) during requery: {', '.join(excluded_sources[:3])}."
+        )
+        strategy = "source-aware requery"
+    if excluded_chunk_ids:
+        explanation_parts.append(
+            f"Excluded {len(excluded_chunk_ids)} suspicious chunk(s) before requery."
+        )
+    if not explanation_parts:
+        explanation_parts.append("Medium-risk context produced only weak exclusions, so the top suspicious chunk was excluded before requery.")
+
+    return {
+        "action": "requery",
+        "removed_chunk_ids": [],
+        "removed_chunks": [],
+        "excluded_sources": excluded_sources,
+        "excluded_chunk_ids": excluded_chunk_ids,
+        "requery_required": True,
+        "requery_attempt_count": prior_requery_attempts + 1,
+        "sanitized_context": [],
+        "sanitized_chunks": [],
+        "exclusion_filters": {
+            "chunk_ids": excluded_chunk_ids,
+            "sources": excluded_sources,
+        },
+        "triggered_sanitization_rules": triggered_rules,
+        "chunk_rationale": candidate_entries[: max(chunk_limit, 3)],
+        "exclusion_priority": exclusion_priority,
+        "context_diversity_before": context_diversity_before,
+        "requery_failure_reason": "",
+        "exclusion_strategy": strategy,
+        "remove_candidate_count": 0,
+        "remove_failure_reason": "",
+        "replace_candidates": [],
+        "explanation": f"{' '.join(explanation_parts)} Requery strategy: {strategy}.",
+    }
+
+
+def remove_high_risk_chunks(
+    retrieved_chunks: Sequence[Mapping[str, Any]],
+    runtime_result: Mapping[str, Any],
+    *,
+    prior_requery_attempts: int = 0,
+) -> dict[str, Any]:
+    thresholds = runtime_result.get("thresholds_used", {})
+    risk_level = str(runtime_result.get("risk_level", "high")).lower()
+    interaction_map = _interaction_map(runtime_result)
+    rbac_map = _rbac_map(runtime_result)
+    query_risk = float(runtime_result.get("query_risk", {}).get("normalized_score", 0.0))
+    rbac_risk = float(runtime_result.get("rbac_risk", {}).get("normalized_score", 0.0))
+
+    if risk_level == "critical":
+        removal_threshold = float(thresholds.get("remove_chunk_risk_critical", 0.42))
+    elif risk_level == "medium":
+        removal_threshold = float(thresholds.get("remove_medium_hotspot_risk", 0.16))
+    else:
+        removal_threshold = float(thresholds.get("remove_chunk_risk_high", 0.48))
+    reason_support = float(thresholds.get("remove_reason_support", 0.30))
+    min_safe_chunks = int(thresholds.get("remove_min_safe_chunks", 2))
+    min_safe_ratio = float(thresholds.get("remove_min_safe_ratio", 0.40))
+    block_query_risk = float(thresholds.get("block_query_risk", 0.78))
+    block_rbac_risk = float(thresholds.get("block_rbac_risk", 0.68))
+    medium_hotspot_pattern = float(thresholds.get("remove_medium_hotspot_pattern_score", 0.20))
+    medium_hotspot_reason_count = int(thresholds.get("remove_medium_hotspot_reason_count", 2))
+
+    removed_chunks: list[Mapping[str, Any]] = []
+    sanitized_chunks: list[Mapping[str, Any]] = []
+    removed_chunk_ids: list[str] = []
+    chunk_rationale: list[dict[str, Any]] = []
+    triggered_rules = [f"{risk_level}_context_remove"]
+
+    for item in retrieved_chunks:
+        chunk_id = _chunk_id(item)
+        interaction_detail = interaction_map.get(chunk_id, {})
+        rbac_detail = rbac_map.get(chunk_id, {})
+        runtime_chunk_risk = float(interaction_detail.get("runtime_chunk_risk", 0.0))
+        reasons = list(interaction_detail.get("reasons", []))
+        matched_patterns = list(interaction_detail.get("matched_patterns", []))
+        restriction_pattern_score = float(interaction_detail.get("restriction_pattern_score", 0.0))
+
+        removal_reasons: list[str] = []
+        if rbac_detail:
+            removal_reasons.append("rbac_affected_chunk")
+        if runtime_chunk_risk >= removal_threshold:
+            removal_reasons.append("high_runtime_chunk_risk")
+        if len(reasons) >= 2 and (runtime_chunk_risk >= reason_support or restriction_pattern_score >= 0.22):
+            removal_reasons.append("reason_cluster_with_support")
+        if any(reason in {"privilege_query_x_sensitive_context", "query_override_x_instructionality"} for reason in reasons) and runtime_chunk_risk >= 0.30:
+            removal_reasons.append("explicit_interaction_reason")
+        if (
+            risk_level == "medium"
+            and runtime_chunk_risk >= removal_threshold
+            and (
+                restriction_pattern_score >= medium_hotspot_pattern
+                or len(reasons) >= medium_hotspot_reason_count
+                or matched_patterns
+            )
+        ):
+            removal_reasons.append("medium_hotspot_remove")
+
+        if removal_reasons:
+            removed_chunks.append(item)
+            if chunk_id:
+                removed_chunk_ids.append(chunk_id)
+            chunk_rationale.append(
+                {
+                    "chunk_id": chunk_id,
+                    "source": _chunk_source(item),
+                    "runtime_chunk_risk": round(runtime_chunk_risk, 4),
+                    "reasons": removal_reasons + reasons + list(rbac_detail.get("reasons", [])),
+                    "matched_patterns": matched_patterns,
+                }
+            )
+        else:
+            sanitized_chunks.append(item)
+
+    remaining_ratio = len(sanitized_chunks) / max(1, len(retrieved_chunks))
+    usable_context = len(sanitized_chunks) >= min_safe_chunks and remaining_ratio >= min_safe_ratio
+
+    if removed_chunks and usable_context:
+        explanation = (
+            f"Removed {len(removed_chunks)} high-confidence risky chunk(s); "
+            f"{len(sanitized_chunks)} chunk(s) remain, which is enough to keep a usable context."
+        )
+        return {
+            "action": "remove",
+            "removed_chunk_ids": removed_chunk_ids,
+            "removed_chunks": removed_chunks,
+            "excluded_sources": [],
+            "excluded_chunk_ids": [],
+            "requery_required": False,
+            "requery_attempt_count": prior_requery_attempts,
+            "sanitized_context": list(sanitized_chunks),
+            "sanitized_chunks": list(sanitized_chunks),
+            "exclusion_filters": {"chunk_ids": [], "sources": []},
+            "triggered_sanitization_rules": triggered_rules + ["remove_high_risk_chunks"],
+            "chunk_rationale": chunk_rationale,
+            "remove_candidate_count": len(chunk_rationale),
+            "remove_failure_reason": "",
+            "replace_candidates": [],
+            "explanation": explanation,
+        }
+
+    if not removed_chunks:
+        triggered_rules.append("no_clear_removable_chunk")
+    else:
+        triggered_rules.append("insufficient_safe_context_after_remove")
+
+    fallback_action = "block" if (
+        risk_level == "critical"
+        or query_risk >= block_query_risk
+        or rbac_risk >= block_rbac_risk
+    ) else "fallback"
+
+    explanation = (
+        "Runtime context stayed too risky after attempting strong chunk-level removal."
+        if removed_chunks
+        else "Runtime risk was high, but no single chunk could be removed with enough confidence to keep the remaining context trustworthy."
+    )
+    if fallback_action == "block":
+        explanation += " The remaining situation is treated as unsafe enough to block."
+    else:
+        explanation += " The system will fall back instead of using the current context."
+
+    return {
+        "action": fallback_action,
+        "removed_chunk_ids": removed_chunk_ids,
+        "removed_chunks": removed_chunks,
+        "excluded_sources": [],
+        "excluded_chunk_ids": [],
+        "requery_required": False,
+        "requery_attempt_count": prior_requery_attempts,
+        "sanitized_context": list(sanitized_chunks),
+        "sanitized_chunks": list(sanitized_chunks),
+        "exclusion_filters": {"chunk_ids": [], "sources": []},
+        "triggered_sanitization_rules": triggered_rules,
+        "chunk_rationale": chunk_rationale,
+        "remove_candidate_count": len(chunk_rationale),
+        "remove_failure_reason": "insufficient_safe_context" if removed_chunks else "no_clear_removable_chunk",
+        "replace_candidates": [],
+        "explanation": explanation,
     }
 
 
 def sanitize_runtime_context(
     retrieved_chunks: Sequence[Mapping[str, Any]],
     runtime_result: Mapping[str, Any],
+    *,
+    query: str = "",
+    user_context: Mapping[str, Any] | None = None,
+    policy_profile: str | None = None,
+    prior_requery_attempts: int = 0,
 ) -> dict[str, Any]:
-    risk_level = str(runtime_result.get("risk_level", "low")).lower()
-    interaction = runtime_result.get("interaction_risk", {})
-    per_chunk = interaction.get("per_chunk", [])
-    runtime_chunk_risks = {item["chunk_id"]: float(item["runtime_chunk_risk"]) for item in per_chunk}
+    decision = decide_runtime_action(
+        query,
+        retrieved_chunks,
+        runtime_result,
+        user_context=user_context,
+        policy_profile=policy_profile,
+        prior_requery_attempts=prior_requery_attempts,
+    )
+    action = decision["action"]
 
-    if risk_level == "low":
-        return {
-            "action": "allow",
-            "sanitized_chunks": list(retrieved_chunks),
-            "removed_chunks": [],
-            "explanation": "Runtime risk is low; context is used as-is.",
-        }
+    if action == "allow":
+        return _empty_sanitization_result(
+            "allow",
+            retrieved_chunks,
+            prior_requery_attempts=prior_requery_attempts,
+            explanation=decision["explanation"],
+            triggered_rules=decision["triggered_sanitization_rules"],
+        )
 
-    if risk_level == "critical":
-        return {
-            "action": "block",
-            "sanitized_chunks": [],
-            "removed_chunks": list(retrieved_chunks),
-            "explanation": "Runtime risk is critical; current context should not be used.",
-        }
+    if action == "requery":
+        requery_result = build_requery_exclusions(
+            retrieved_chunks,
+            runtime_result,
+            prior_requery_attempts=prior_requery_attempts,
+        )
+        requery_result["triggered_sanitization_rules"] = (
+            list(decision["triggered_sanitization_rules"])
+            + [rule for rule in requery_result["triggered_sanitization_rules"] if rule not in decision["triggered_sanitization_rules"]]
+        )
+        requery_result["explanation"] = f"{decision['explanation']} {requery_result['explanation']}".strip()
+        return requery_result
 
-    removal_threshold = 0.45 if risk_level == "medium" else 0.35
-    sanitized = []
-    removed = []
+    if action == "remove":
+        removal_result = remove_high_risk_chunks(
+            retrieved_chunks,
+            runtime_result,
+            prior_requery_attempts=prior_requery_attempts,
+        )
+        removal_result["triggered_sanitization_rules"] = (
+            list(decision["triggered_sanitization_rules"])
+            + [rule for rule in removal_result["triggered_sanitization_rules"] if rule not in decision["triggered_sanitization_rules"]]
+        )
+        removal_result["explanation"] = f"{decision['explanation']} {removal_result['explanation']}".strip()
+        return removal_result
 
-    for item in retrieved_chunks:
-        chunk_id = _chunk_id(item)
-        runtime_chunk_risk = runtime_chunk_risks.get(chunk_id, 0.0)
-        if runtime_chunk_risk >= removal_threshold:
-            removed.append(item)
-            continue
-        sanitized.append(item)
-
-    if risk_level == "medium" and not removed and per_chunk:
-        top_chunk_id = per_chunk[0]["chunk_id"]
-        for item in retrieved_chunks:
-            if _chunk_id(item) == top_chunk_id:
-                removed.append(item)
-            else:
-                sanitized.append(item)
-
-    action = "sanitize" if risk_level == "medium" else "requery"
     return {
-        "action": action,
-        "sanitized_chunks": sanitized,
-        "removed_chunks": removed,
-        "explanation": (
-            "Runtime detector removed the highest-risk chunks from the active context."
-            if risk_level == "medium"
-            else "Runtime detector recommends discarding the current context and retrying retrieval."
-        ),
+        "action": "fallback",
+        "removed_chunk_ids": [],
+        "removed_chunks": [],
+        "excluded_sources": [],
+        "excluded_chunk_ids": [],
+        "requery_required": False,
+        "requery_attempt_count": prior_requery_attempts,
+        "sanitized_context": [],
+        "sanitized_chunks": [],
+        "exclusion_filters": {"chunk_ids": [], "sources": []},
+        "triggered_sanitization_rules": list(decision["triggered_sanitization_rules"]),
+        "chunk_rationale": [],
+        "exclusion_priority": [],
+        "context_diversity_before": 0.0,
+        "requery_failure_reason": "",
+        "exclusion_strategy": "none",
+        "remove_candidate_count": 0,
+        "remove_failure_reason": "",
+        "replace_candidates": [],
+        "explanation": decision["explanation"],
     }

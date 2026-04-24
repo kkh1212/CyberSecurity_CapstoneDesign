@@ -1,10 +1,17 @@
 import pickle
 import re
+from math import log
 from pathlib import Path
 from typing import Dict, List, Optional
 
-import faiss
-import numpy as np
+try:
+    import faiss
+except ModuleNotFoundError:  # pragma: no cover - optional in sparse-only environments
+    faiss = None
+try:
+    import numpy as np
+except ModuleNotFoundError:  # pragma: no cover - optional in sparse-only environments
+    np = None
 
 from src.config import (
     DENSE_TOP_K,
@@ -17,17 +24,26 @@ from src.config import (
     list_domain_dirs,
 )
 from src.detector_pipeline import filter_retrieval_results, log_retrieval_filter_summary, merge_filter_summaries
-from src.embedder import embed_texts
+try:
+    from src.embedder import embed_texts
+except ModuleNotFoundError:  # pragma: no cover - optional in sparse-only environments
+    embed_texts = None
 from src.query_analysis import build_query_profile, compact_text, normalize_text
 
 
 def tokenize_text(text: str) -> List[str]:
     normalized = re.sub(r"\s+", " ", text.lower()).strip()
+    hangul_safe_pattern = r"[가-힣]+|[a-zA-Z]+|\d+"
     base_tokens = re.findall(r"[가-힣]+|[a-zA-Z]+|\d+", normalized)
 
+    base_tokens = re.findall(f"[{chr(0xAC00)}-{chr(0xD7A3)}]+|[a-zA-Z]+|\\d+", normalized)
     tokens = list(base_tokens)
     for token in base_tokens:
         if re.fullmatch(r"[가-힣]+", token) and len(token) >= 2:
+            tokens.extend(token[i : i + 2] for i in range(len(token) - 1))
+
+    for token in base_tokens:
+        if re.fullmatch(f"[{chr(0xAC00)}-{chr(0xD7A3)}]+", token) and len(token) >= 2:
             tokens.extend(token[i : i + 2] for i in range(len(token) - 1))
 
     return tokens
@@ -63,9 +79,66 @@ def source_tag(source: str) -> str:
     return ""
 
 
+def build_sparse_fallback_index(chunks: List[Dict]) -> Dict[str, object]:
+    tokenized_corpus = [tokenize_text(chunk.get("text", "")) for chunk in chunks]
+    doc_freq: Dict[str, int] = {}
+    doc_lengths: List[int] = []
+    for tokens in tokenized_corpus:
+        doc_lengths.append(len(tokens))
+        for token in set(tokens):
+            doc_freq[token] = doc_freq.get(token, 0) + 1
+
+    avgdl = sum(doc_lengths) / len(doc_lengths) if doc_lengths else 0.0
+    return {
+        "mode": "fallback_sparse",
+        "tokenized_corpus": tokenized_corpus,
+        "doc_freq": doc_freq,
+        "doc_lengths": doc_lengths,
+        "avgdl": avgdl,
+    }
+
+
+def _fallback_bm25_scores(index_data: Dict[str, object], query_tokens: List[str]) -> List[float]:
+    tokenized_corpus = index_data.get("tokenized_corpus", [])
+    doc_freq = index_data.get("doc_freq", {})
+    doc_lengths = index_data.get("doc_lengths", [])
+    avgdl = float(index_data.get("avgdl", 0.0) or 0.0)
+
+    if not tokenized_corpus:
+        return []
+
+    k1 = 1.5
+    b = 0.75
+    total_docs = len(tokenized_corpus)
+    unique_query_tokens = [token for token in dict.fromkeys(query_tokens) if token]
+    scores: List[float] = []
+
+    for doc_tokens, doc_length in zip(tokenized_corpus, doc_lengths):
+        tf: Dict[str, int] = {}
+        for token in doc_tokens:
+            tf[token] = tf.get(token, 0) + 1
+
+        score = 0.0
+        for token in unique_query_tokens:
+            freq = tf.get(token, 0)
+            if freq == 0:
+                continue
+            df = int(doc_freq.get(token, 0))
+            idf = log(1.0 + (total_docs - df + 0.5) / (df + 0.5))
+            denominator = freq + k1 * (1 - b + b * (doc_length / avgdl if avgdl else 0.0))
+            score += idf * ((freq * (k1 + 1)) / max(denominator, 1e-9))
+
+        scores.append(score)
+
+    return scores
+
+
 def load_resources(domain_name: str):
     paths = get_index_file_paths(get_domain_index_dir(domain_name))
-    missing = [path for path in paths.values() if not path.exists()]
+    required_paths = [paths["chunks"], paths["bm25"]]
+    if ENABLE_DENSE:
+        required_paths.append(paths["faiss"])
+    missing = [path for path in required_paths if not path.exists()]
     if missing:
         missing_str = ", ".join(str(path) for path in missing)
         raise FileNotFoundError(
@@ -73,13 +146,23 @@ def load_resources(domain_name: str):
             f"Missing: {missing_str}"
         )
 
-    index = faiss.read_index(str(paths["faiss"]))
+    if ENABLE_DENSE:
+        if faiss is None:
+            raise ModuleNotFoundError(
+                "faiss is required when ENABLE_DENSE=true. Install faiss or rerun with ENABLE_DENSE=false."
+            )
+        index = faiss.read_index(str(paths["faiss"]))
+    else:
+        index = None
 
     with open(paths["chunks"], "rb") as file:
         chunks = pickle.load(file)
 
     with open(paths["bm25"], "rb") as file:
-        bm25 = pickle.load(file)
+        try:
+            bm25 = pickle.load(file)
+        except Exception:
+            bm25 = build_sparse_fallback_index(chunks)
 
     return index, chunks, bm25
 
@@ -91,9 +174,16 @@ def dense_search(
     top_k=DENSE_TOP_K,
     include_flagged: bool = RETRIEVAL_INCLUDE_FLAGGED_DEFAULT,
     include_quarantined: bool = RETRIEVAL_INCLUDE_QUARANTINED_DEFAULT,
+    exclude_chunk_ids: Optional[set[str]] = None,
+    exclude_sources: Optional[set[str]] = None,
 ):
     if not chunks:
         return [], {"excluded_flagged": 0, "excluded_quarantined": 0, "excluded": []}
+    if np is None or embed_texts is None:
+        raise ModuleNotFoundError(
+            "Dense retrieval requires numpy and embedding dependencies. "
+            "Install them or rerun with ENABLE_DENSE=false."
+        )
 
     q_emb = np.asarray(embed_texts(query), dtype="float32")
     search_k = min(max(top_k * 5, top_k), len(chunks))
@@ -115,6 +205,8 @@ def dense_search(
         results,
         include_flagged=include_flagged,
         include_quarantined=include_quarantined,
+        exclude_chunk_ids=exclude_chunk_ids,
+        exclude_sources=exclude_sources,
     )
     return filtered_results[:top_k], filter_summary
 
@@ -258,10 +350,15 @@ def sparse_search(
     top_k=SPARSE_TOP_K,
     include_flagged: bool = RETRIEVAL_INCLUDE_FLAGGED_DEFAULT,
     include_quarantined: bool = RETRIEVAL_INCLUDE_QUARANTINED_DEFAULT,
+    exclude_chunk_ids: Optional[set[str]] = None,
+    exclude_sources: Optional[set[str]] = None,
 ):
     profile = build_query_profile(query)
     tokens = tokenize_text(query)
-    scores = bm25.get_scores(tokens)
+    if hasattr(bm25, "get_scores"):
+        scores = bm25.get_scores(tokens)
+    else:
+        scores = _fallback_bm25_scores(bm25, tokens)
 
     rescored = []
     for idx, raw_score in enumerate(scores):
@@ -321,6 +418,8 @@ def sparse_search(
         combined,
         include_flagged=include_flagged,
         include_quarantined=include_quarantined,
+        exclude_chunk_ids=exclude_chunk_ids,
+        exclude_sources=exclude_sources,
     )
     filtered_results.sort(key=lambda item: item["score"], reverse=True)
     return filtered_results[: max(top_k * 3, 24)], filter_summary
@@ -331,6 +430,8 @@ def hybrid_search_domain(
     domain_name: str,
     include_flagged: bool = RETRIEVAL_INCLUDE_FLAGGED_DEFAULT,
     include_quarantined: bool = RETRIEVAL_INCLUDE_QUARANTINED_DEFAULT,
+    exclude_chunk_ids: Optional[set[str]] = None,
+    exclude_sources: Optional[set[str]] = None,
 ):
     index, chunks, bm25 = load_resources(domain_name)
 
@@ -344,6 +445,8 @@ def hybrid_search_domain(
                 chunks,
                 include_flagged=include_flagged,
                 include_quarantined=include_quarantined,
+                exclude_chunk_ids=exclude_chunk_ids,
+                exclude_sources=exclude_sources,
             )
         except Exception as exc:
             print(f"[WARN] Dense retrieval failed, falling back to sparse-only search: {exc}")
@@ -354,6 +457,8 @@ def hybrid_search_domain(
         chunks,
         include_flagged=include_flagged,
         include_quarantined=include_quarantined,
+        exclude_chunk_ids=exclude_chunk_ids,
+        exclude_sources=exclude_sources,
     )
 
     merged = []
@@ -415,6 +520,8 @@ def hybrid_search(
     preferred_domain: Optional[str] = None,
     include_flagged: bool = RETRIEVAL_INCLUDE_FLAGGED_DEFAULT,
     include_quarantined: bool = RETRIEVAL_INCLUDE_QUARANTINED_DEFAULT,
+    exclude_chunk_ids: Optional[set[str]] = None,
+    exclude_sources: Optional[set[str]] = None,
 ):
     domain_names = [path.name for path in list_domain_dirs()]
     if preferred_domain and preferred_domain in domain_names:
@@ -428,6 +535,8 @@ def hybrid_search(
                 domain_name,
                 include_flagged=include_flagged,
                 include_quarantined=include_quarantined,
+                exclude_chunk_ids=exclude_chunk_ids,
+                exclude_sources=exclude_sources,
             )
             result["domain_score"] = rank_domain_results(query, result)
             domain_results.append(result)
