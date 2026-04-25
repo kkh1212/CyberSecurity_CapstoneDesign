@@ -53,10 +53,17 @@ INSTRUCTIONALITY_PATTERNS: Final[list[WeightedPattern]] = [
     ),
     WeightedPattern(
         name="ignore_previous_en",
-        pattern=r"\bignore (?:all )?previous instructions\b",
+        pattern=r"\bignore (?:all )?previous (?:instructions|information|context|details)\b",
         weight=1.4,
         category="override",
         description="Attempts to override prior behavior or context.",
+    ),
+    WeightedPattern(
+        name="answer_new_question_en",
+        pattern=r"\banswer (?:my|the) new question\b",
+        weight=1.2,
+        category="response_control",
+        description="Redirects the model to answer an injected new question.",
     ),
     WeightedPattern(
         name="forget_previous_en",
@@ -211,7 +218,7 @@ REFUSAL_PATTERNS: Final[list[WeightedPattern]] = [
     ),
     WeightedPattern(
         name="dangerous_topic_en",
-        pattern=r"\b(?:bomb|explosive|weapon|hack|malware|ransomware|methamphetamine|drugs?)\b",
+        pattern=r"\b(?:bomb|explosive|weapon|hack|malware|ransomware|methamphetamine|drugs?|bypass|phishing|steal|falsify|forge|fraud|exfiltrate|unauthorized|disrupt|tamper|manipulate)\b",
         weight=0.7,
         category="dangerous_topic",
         description="Dangerous or safety-sensitive topic associated with refusal behavior.",
@@ -355,10 +362,18 @@ REFUSAL_PATTERNS: Final[list[WeightedPattern]] = [
 EXPLICIT_HIGH_RISK_PATTERNS: Final[list[WeightedPattern]] = [
     WeightedPattern(
         name="ignore_previous_high_risk_en",
-        pattern=r"\bignore previous instructions\b",
+        pattern=r"\bignore previous (?:instructions|information|context|details)\b",
         weight=1.8,
         category="explicit_override",
         description="Classic override prompt pattern.",
+    ),
+    WeightedPattern(
+        name="mutedrag_new_question_suffix_en",
+        pattern=r"\bignore previous (?:instructions|information|context|details)\b.{0,160}\banswer (?:my|the) new question\b",
+        weight=2.0,
+        category="explicit_override",
+        description="MutedRAG-style suffix that redirects the answer to a new question.",
+        flags=re.IGNORECASE | re.MULTILINE | re.DOTALL,
     ),
     WeightedPattern(
         name="regardless_of_question_en",
@@ -443,6 +458,7 @@ EXPLICIT_HIGH_RISK_PATTERNS: Final[list[WeightedPattern]] = [
 PROMPT_TEMPLATE_MARKERS: Final[tuple[str, ...]] = (
     r"^\s*(?:user|assistant|instruction|response|system)\s*:",
     r"^\s*(?:사용자|어시스턴트|지시|응답|시스템)\s*:",
+    r"^\s*(?:question|context)\s*:",
 )
 
 
