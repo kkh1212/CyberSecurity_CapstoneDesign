@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from dataclasses import dataclass, field
 from typing import Any, Mapping
 
 from .scoring import score_instructionality, score_outlier, score_refusal_inducing
@@ -27,6 +26,7 @@ DEFAULT_THRESHOLDS: dict[str, float] = {
     "cluster_refusal_low": 0.11,
     "cluster_outlier_medium": 0.17,
     "cluster_outlier_support": 0.20,
+    "strong_pair_outlier_support": 0.17,
     "high_risk": 0.64,
     "critical_risk": 0.86,
     "high_floor": 0.72,
@@ -34,14 +34,78 @@ DEFAULT_THRESHOLDS: dict[str, float] = {
 }
 
 
-def _normalize_weights(weights: Mapping[str, float] | None) -> dict[str, float]:
-    merged = dict(DEFAULT_RISK_WEIGHTS)
+RISK_PROFILES: dict[str, dict[str, Mapping[str, float]]] = {
+    "balanced": {
+        "weights": DEFAULT_RISK_WEIGHTS,
+        "thresholds": DEFAULT_THRESHOLDS,
+    },
+    "strict": {
+        "weights": {
+            "instructionality": 0.32,
+            "refusal_inducing": 0.43,
+            "outlier": 0.25,
+        },
+        "thresholds": {
+            **DEFAULT_THRESHOLDS,
+            "medium_risk": 0.32,
+            "high_risk": 0.60,
+            "critical_risk": 0.82,
+            "medium_floor": 0.35,
+            "high_floor": 0.68,
+            "critical_floor": 0.88,
+            "cluster_refusal_low": 0.10,
+            "cluster_refusal_medium": 0.13,
+            "cluster_outlier_medium": 0.16,
+            "cluster_outlier_support": 0.18,
+        },
+    },
+    "research": {
+        "weights": {
+            "instructionality": 0.33,
+            "refusal_inducing": 0.42,
+            "outlier": 0.25,
+        },
+        "thresholds": {
+            **DEFAULT_THRESHOLDS,
+            "medium_risk": 0.34,
+            "high_risk": 0.62,
+            "critical_risk": 0.84,
+            "medium_floor": 0.36,
+            "high_floor": 0.70,
+            "critical_floor": 0.89,
+            "cluster_refusal_low": 0.10,
+            "cluster_refusal_medium": 0.12,
+            "cluster_outlier_medium": 0.15,
+            "cluster_outlier_support": 0.18,
+        },
+    },
+}
+
+
+def get_risk_profile_config(profile: str | None) -> dict[str, Mapping[str, float]]:
+    profile_name = (profile or "balanced").strip().lower()
+    config = RISK_PROFILES.get(profile_name)
+    if config:
+        return {
+            "profile": profile_name,
+            "weights": dict(config["weights"]),
+            "thresholds": dict(config["thresholds"]),
+        }
+    return {
+        "profile": "balanced",
+        "weights": dict(DEFAULT_RISK_WEIGHTS),
+        "thresholds": dict(DEFAULT_THRESHOLDS),
+    }
+
+
+def _normalize_weights(weights: Mapping[str, float] | None, defaults: Mapping[str, float]) -> dict[str, float]:
+    merged = dict(defaults)
     if weights:
         merged.update(weights)
 
     total = sum(max(0.0, value) for value in merged.values())
     if total <= 0:
-        return dict(DEFAULT_RISK_WEIGHTS)
+        return dict(defaults)
 
     return {key: max(0.0, value) / total for key, value in merged.items()}
 
@@ -50,12 +114,14 @@ def compute_risk(
     text: str,
     corpus_stats: Mapping[str, Any] | None = None,
     weights: Mapping[str, float] | None = None,
+    profile: str | None = None,
 ) -> dict[str, Any]:
+    profile_config = get_risk_profile_config(profile)
     instructionality = score_instructionality(text)
     refusal_inducing = score_refusal_inducing(text)
     outlier = score_outlier(text, corpus_stats=corpus_stats)
 
-    normalized_weights = _normalize_weights(weights)
+    normalized_weights = _normalize_weights(weights, profile_config["weights"])
     base_risk = (
         normalized_weights["instructionality"] * instructionality["normalized_score"]
         + normalized_weights["refusal_inducing"] * refusal_inducing["normalized_score"]
@@ -68,7 +134,8 @@ def compute_risk(
         "outlier": outlier,
         "base_risk": round(base_risk, 4),
         "weights_used": normalized_weights,
-        "thresholds_used": dict(DEFAULT_THRESHOLDS),
+        "thresholds_used": dict(profile_config["thresholds"]),
+        "profile_used": profile_config["profile"],
         "triggered_rules": [],
         "explicit_high_risk_patterns": refusal_inducing.get("explicit_high_risk_patterns", []),
         "explanation": (
@@ -101,6 +168,18 @@ def classify_risk(score_dict: Mapping[str, Any]) -> dict[str, Any]:
     explicit_matches = refusal_inducing.get("explicit_high_risk_patterns", [])
     refusal_matches = refusal_inducing.get("matched_patterns", [])
     refusal_pattern_count = len(refusal_matches) + len(explicit_matches)
+    strong_refusal_names = {
+        "detailed_info_restricted_ko",
+        "security_reason_no_detail_ko",
+        "internal_sensitive_ko",
+        "unsafe_restricted_ko",
+        "limited_response_en",
+        "security_reason_no_detail_en",
+        "limited_detail_en",
+        "context_non_disclosure_ko",
+        "context_non_disclosure_en",
+    }
+    strong_refusal_match_count = sum(1 for pattern in refusal_matches if pattern.get("name") in strong_refusal_names)
     if explicit_matches and r_score >= thresholds["refusal_extreme"]:
         adjusted_risk = max(adjusted_risk, thresholds["critical_floor"])
         triggered_rules.append("explicit_high_risk_refusal_escalation")
@@ -145,6 +224,16 @@ def classify_risk(score_dict: Mapping[str, Any]) -> dict[str, Any]:
         triggered_rules.append("refusal_pattern_pair_with_outlier")
         explanation_parts.append(
             "Repeated refusal or non-disclosure patterns appeared together with structural outlier evidence."
+        )
+    elif (
+        strong_refusal_match_count >= 2
+        and r_score >= thresholds["cluster_refusal_low"] * 0.9
+        and o_score >= thresholds["strong_pair_outlier_support"]
+    ):
+        adjusted_risk = max(adjusted_risk, thresholds["medium_floor"])
+        triggered_rules.append("strong_refusal_pair_medium")
+        explanation_parts.append(
+            "A paired restricted-disclosure signal appeared together with moderate structural outlier evidence."
         )
 
     if (

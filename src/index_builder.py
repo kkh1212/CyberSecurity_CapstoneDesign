@@ -1,6 +1,9 @@
 import pickle
 
-import faiss
+try:
+    import faiss
+except ModuleNotFoundError:  # pragma: no cover - optional in sparse-only environments
+    faiss = None
 import numpy as np
 from rank_bm25 import BM25Okapi
 
@@ -8,6 +11,7 @@ from src.chunking import load_documents_from_dir
 from src.config import (
     INDEX_DIR,
     RAW_DOCS_DIR,
+    ENABLE_DENSE,
     get_detector_file_paths,
     get_domain_index_dir,
     get_domain_name,
@@ -59,13 +63,20 @@ def build_domain_index(domain_name, domain_dir):
         return
 
     texts = [chunk["text"] for chunk in sanitized_chunks]
-    print("Generating embeddings...")
-    embeddings = np.asarray(embed_texts(texts), dtype="float32")
+    if ENABLE_DENSE:
+        if faiss is None:
+            raise ModuleNotFoundError(
+                "faiss is required when ENABLE_DENSE=true. Install faiss or rerun with ENABLE_DENSE=false."
+            )
+        print("Generating embeddings...")
+        embeddings = np.asarray(embed_texts(texts), dtype="float32")
 
-    dim = embeddings.shape[1]
-    index = faiss.IndexFlatIP(dim)
-    index.add(embeddings)
-    faiss.write_index(index, str(paths["faiss"]))
+        dim = embeddings.shape[1]
+        index = faiss.IndexFlatIP(dim)
+        index.add(embeddings)
+        faiss.write_index(index, str(paths["faiss"]))
+    elif paths["faiss"].exists():
+        paths["faiss"].unlink()
 
     tokenized_corpus = [tokenize_text(text) for text in texts]
     bm25 = BM25Okapi(tokenized_corpus)
@@ -77,7 +88,10 @@ def build_domain_index(domain_name, domain_dir):
         pickle.dump(bm25, file)
 
     print("Index build complete")
-    print(f"FAISS: {paths['faiss']}")
+    if ENABLE_DENSE:
+        print(f"FAISS: {paths['faiss']}")
+    else:
+        print("FAISS: skipped (ENABLE_DENSE=false)")
     print(f"Chunks: {paths['chunks']}")
     print(f"BM25: {paths['bm25']}")
     print(f"Flagged review chunks: {len(flagged_chunks)}")
