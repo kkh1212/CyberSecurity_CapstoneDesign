@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Dict, List
 
 from src.config import (
+    DEBUG_CONTEXT_PREVIEW,
     ENABLE_DENSE,
     ENABLE_RERANK,
     RAW_DOCS_DIR,
@@ -19,7 +20,7 @@ from src.ollama_client import ask_ollama
 from src.prompts import build_general_prompt, build_rag_prompt
 from src.query_analysis import FIELD_ALIASES, QueryProfile, build_query_profile, compact_text, normalize_text
 from src.reranker import rerank_results
-from src.retrievers import hybrid_search
+from src.retrievers import build_query_coverage_terms, chunk_coverage_stats, hybrid_search, source_coverage_stats
 from src.router import should_use_rag
 from src.runtime_guard import (
     apply_runtime_guard,
@@ -94,6 +95,11 @@ def print_debug_info(
     runtime_sanitizer_flag: bool | None = None,
     final_result_count: int = 0,
     context_chunk_count: int = 0,
+    selected_context_items: List[Dict] | None = None,
+    query_coverage_terms: Dict | None = None,
+    source_coverage_summary: List[str] | None = None,
+    final_result_coverage_summary: List[str] | None = None,
+    context_coverage_summary: List[str] | None = None,
 ):
     print("\n=== Debug ===")
     print(f"route={route}")
@@ -169,6 +175,46 @@ def print_debug_info(
         remove_failure_reason = runtime_guard_summary.get("runtime_remove_failure_reason")
         if remove_failure_reason:
             print(f"runtime_remove_failure_reason={remove_failure_reason}")
+    if selected_context_items:
+        selected_chunk_ids = [item["chunk"].get("chunk_id", "") for item in selected_context_items if item.get("chunk")]
+        selected_sources: List[str] = []
+        selected_block_types: List[str] = []
+        for item in selected_context_items:
+            chunk = item.get("chunk", {})
+            source = chunk.get("source", "")
+            block_type = chunk.get("block_type", "")
+            if source and source not in selected_sources:
+                selected_sources.append(source)
+            if block_type and block_type not in selected_block_types:
+                selected_block_types.append(block_type)
+
+        if selected_chunk_ids:
+            print(f"selected_context_chunk_ids={','.join(selected_chunk_ids)}")
+        if selected_sources:
+            print(f"selected_context_sources={','.join(selected_sources)}")
+        if selected_block_types:
+            print(f"selected_context_block_types={','.join(selected_block_types)}")
+
+        if DEBUG_CONTEXT_PREVIEW:
+            if query_coverage_terms:
+                entity_terms = query_coverage_terms.get("entity_terms", [])
+                field_terms = query_coverage_terms.get("field_terms", [])
+                document_hints = query_coverage_terms.get("document_hints", [])
+                if entity_terms:
+                    print(f"query_entity_terms={','.join(entity_terms[:8])}")
+                if field_terms:
+                    print(f"query_requested_fields={','.join(field_terms[:8])}")
+                if document_hints:
+                    print(f"query_document_hints={','.join(document_hints[:8])}")
+            for idx, summary in enumerate(source_coverage_summary or [], start=1):
+                print(f"source_coverage_summary_{idx}={summary}")
+            for idx, summary in enumerate(final_result_coverage_summary or [], start=1):
+                print(f"final_result_coverage_summary_{idx}={summary}")
+            for idx, summary in enumerate(context_coverage_summary or [], start=1):
+                print(f"context_coverage_summary_{idx}={summary}")
+            for idx, item in enumerate(selected_context_items, start=1):
+                preview = re.sub(r"\s+", " ", chunk_content_text(item["chunk"]))[:240].strip()
+                print(f"selected_context_preview_{idx}={preview}")
     print(f"elapsed_seconds={elapsed_seconds:.3f}")
 
 
@@ -261,6 +307,7 @@ def source_tag(source: str) -> str:
 
 
 def score_source_name(profile: QueryProfile, source: str) -> float:
+    coverage_terms = build_query_coverage_terms(profile)
     title = source_title(source)
     compact_title = compact_text(title)
     compact_query = compact_text(profile.query)
@@ -269,7 +316,7 @@ def score_source_name(profile: QueryProfile, source: str) -> float:
     if compact_title and compact_title in compact_query:
         score += 320.0
 
-    for term in profile.quoted_terms + profile.document_hints + profile.entity_terms:
+    for term in coverage_terms["quoted_terms"] + coverage_terms["document_hints"] + coverage_terms["entity_terms"]:
         if not term:
             continue
         compact_term = compact_text(term)
@@ -357,6 +404,115 @@ def chunk_position_key(item: Dict) -> tuple:
     )
 
 
+def anchor_group_key(item: Dict) -> tuple:
+    chunk = item["chunk"]
+    source = chunk.get("source", "")
+    block_type = chunk.get("block_type", "")
+    block_index = chunk.get("block_index")
+    clause_title = chunk.get("clause_title", "")
+
+    if block_type == "table_row":
+        return (source, "table_group", block_index)
+    if block_type == "clause_section" and clause_title:
+        return (source, "clause_group", clause_title)
+    return (source, block_type, block_index, chunk.get("sub_block_index"))
+
+
+def select_anchor_items(ranked_items: List[Dict], max_anchors: int) -> List[Dict]:
+    anchors: List[Dict] = []
+    seen_groups = set()
+
+    for item in ranked_items:
+        group_key = anchor_group_key(item)
+        if group_key in seen_groups and len(anchors) < max_anchors:
+            continue
+        anchors.append(item)
+        seen_groups.add(group_key)
+        if len(anchors) >= max_anchors:
+            break
+
+    return anchors
+
+
+def related_context_indexes(ordered_items: List[Dict], anchor_index: int) -> List[int]:
+    if anchor_index < 0 or anchor_index >= len(ordered_items):
+        return []
+
+    anchor_chunk = ordered_items[anchor_index]["chunk"]
+    source = anchor_chunk.get("source", "")
+    block_type = anchor_chunk.get("block_type")
+    block_index = anchor_chunk.get("block_index")
+    clause_title = anchor_chunk.get("clause_title", "")
+    entity_title = normalize_text(anchor_chunk.get("entity_title", ""))
+
+    scored_indexes: List[tuple[float, int]] = []
+    for idx, item in enumerate(ordered_items):
+        if idx == anchor_index:
+            continue
+        chunk = item["chunk"]
+        if chunk.get("source") != source:
+            continue
+
+        distance = abs(idx - anchor_index)
+        if distance > 5:
+            continue
+
+        candidate_block_type = chunk.get("block_type")
+        score = 0.0
+
+        if block_index is not None and chunk.get("block_index") == block_index:
+            score += 55.0
+
+        if block_type == "table_row":
+            if candidate_block_type == "table":
+                score += 80.0
+            elif candidate_block_type in {"text_section", "clause_section"}:
+                score += 48.0
+            elif candidate_block_type == "table_row":
+                score += 18.0
+        elif block_type == "clause_section":
+            if candidate_block_type == "text_section":
+                score += 58.0
+            elif candidate_block_type == "clause_section":
+                score += 30.0
+            elif candidate_block_type == "table":
+                score += 16.0
+        elif block_type == "text_section":
+            if candidate_block_type == "clause_section":
+                score += 34.0
+            elif candidate_block_type == "table":
+                score += 22.0
+            elif candidate_block_type == "text_section":
+                score += 16.0
+
+        if clause_title and chunk.get("clause_title") == clause_title:
+            score += 30.0
+        if entity_title and normalize_text(chunk.get("entity_title", "")) == entity_title:
+            score += 12.0
+
+        score -= distance * 6.0
+        if score > 0:
+            scored_indexes.append((score, idx))
+
+    scored_indexes.sort(key=lambda item: item[0], reverse=True)
+    prioritized = [anchor_index]
+    seen = {anchor_index}
+
+    for _, idx in scored_indexes:
+        if idx in seen:
+            continue
+        prioritized.append(idx)
+        seen.add(idx)
+
+    for offset in (-1, 1, -2, 2, -3, 3):
+        idx = anchor_index + offset
+        if 0 <= idx < len(ordered_items) and idx not in seen and ordered_items[idx]["chunk"].get("source") == source:
+            prioritized.append(idx)
+            seen.add(idx)
+
+    return prioritized
+
+
 def build_source_anchor_context(items: List[Dict], max_anchors: int, max_total: int) -> List[Dict]:
     if not items:
         return []
@@ -372,7 +528,7 @@ def build_source_anchor_context(items: List[Dict], max_anchors: int, max_total: 
         ),
         max_per_source=max_total,
     )
-    anchors = ranked_items[:max_anchors]
+    anchors = select_anchor_items(ranked_items, max_anchors)
     if not anchors:
         return []
 
@@ -387,15 +543,13 @@ def build_source_anchor_context(items: List[Dict], max_anchors: int, max_total: 
         if anchor_index is None:
             continue
 
-        for offset in (0, -1, 1, -2, 2):
-            neighbor_index = anchor_index + offset
-            if neighbor_index < 0 or neighbor_index >= len(ordered_items):
-                continue
+        for neighbor_index in related_context_indexes(ordered_items, anchor_index):
             candidate = ordered_items[neighbor_index]
             candidate_id = candidate["chunk"]["chunk_id"]
             if candidate_id in seen:
                 continue
-            chosen.append(candidate)
+            add_reason = "anchor" if neighbor_index == anchor_index else "neighbor"
+            chosen.append({**candidate, "context_add_reason": add_reason})
             seen.add(candidate_id)
             if len(chosen) >= max_total:
                 break
@@ -445,14 +599,15 @@ def score_source_hint_match(hint: str, source: str) -> float:
 
 
 def resolve_requested_sources(profile: QueryProfile, all_index_chunks: List[Dict]) -> List[str]:
-    if not profile.document_hints:
+    coverage_terms = build_query_coverage_terms(profile)
+    if not coverage_terms["document_hints"]:
         return []
 
     sources = sorted({chunk.get("source", "") for chunk in all_index_chunks if chunk.get("source")})
     resolved: List[str] = []
     seen = set()
 
-    for hint in profile.document_hints:
+    for hint in coverage_terms["document_hints"]:
         ranked_sources = sorted(
             ((source, score_source_hint_match(hint, source)) for source in sources),
             key=lambda item: item[1],
@@ -475,6 +630,7 @@ def rank_sources(profile: QueryProfile, merged_results: List[Dict]) -> List[Dict
     for item in merged_results:
         grouped.setdefault(item["chunk"]["source"], []).append(item)
 
+    coverage_terms = build_query_coverage_terms(profile)
     rankings = []
     for source, items in grouped.items():
         items = sorted(items, key=lambda item: item["score"], reverse=True)
@@ -485,19 +641,27 @@ def rank_sources(profile: QueryProfile, merged_results: List[Dict]) -> List[Dict
 
         source_score += score_source_name(profile, source)
 
-        for hint in profile.document_hints:
+        for hint in coverage_terms["document_hints"]:
             if hint and hint in combined_text:
                 source_score += 180.0
             if hint and hint in source:
                 source_score += 220.0
 
-        for term in profile.entity_terms:
+        for term in coverage_terms["entity_terms"]:
             if term and term in combined_text:
                 source_score += 35.0
 
         if profile.compare_entities:
             coverage = sum(1 for entity in profile.compare_entities if entity and entity in combined_text)
             source_score += 60.0 * coverage
+
+        source_coverage = source_coverage_stats(items[:8], profile, coverage_terms)
+        if source_coverage["combined_coverage"]:
+            source_score += 60.0 + (12.0 * min(source_coverage["entity_coverage"], source_coverage["field_coverage"]))
+        elif source_coverage["field_coverage"] and not source_coverage["entity_coverage"]:
+            source_score -= 28.0
+        if source_coverage["title_coverage"]:
+            source_score += 15.0
 
         rankings.append({"source": source, "items": items, "score": source_score})
 
@@ -586,6 +750,151 @@ def dedupe_raw_chunks(chunks: List[Dict], max_per_source: int | None = None) -> 
         per_source_counts[source] = per_source_counts.get(source, 0) + 1
 
     return deduped
+
+
+def chunk_profile_terms(chunk: Dict, profile: QueryProfile) -> set[str]:
+    coverage = chunk_coverage_stats(chunk, profile)
+    return set(coverage["entity_terms"]) | set(coverage["document_hints"])
+
+
+def count_profile_field_hits(chunk: Dict, profile: QueryProfile, coverage_terms: Dict | None = None) -> int:
+    coverage = chunk_coverage_stats(chunk, profile, coverage_terms)
+    return int(coverage["field_coverage"])
+
+
+def context_profile_coverage(items: List[Dict], profile: QueryProfile) -> tuple[int, int]:
+    coverage = source_coverage_stats(items, profile)
+    return int(coverage["entity_coverage"]), int(coverage["field_coverage"])
+
+
+def should_add_support_context(primary_items: List[Dict], profile: QueryProfile) -> bool:
+    if not primary_items:
+        return True
+
+    block_types = {item["chunk"].get("block_type") for item in primary_items if item.get("chunk")}
+    matched_terms, matched_fields = context_profile_coverage(primary_items, profile)
+    total_context_chars = sum(len(chunk_content_text(item["chunk"])) for item in primary_items)
+
+    if len(block_types) <= 1:
+        return True
+
+    coverage_terms = build_query_coverage_terms(profile)
+    if coverage_terms["entity_terms"] and matched_terms < min(3, len(coverage_terms["entity_terms"])):
+        return True
+
+    if coverage_terms["field_terms"] and matched_fields < min(2, len(coverage_terms["field_terms"])):
+        return True
+
+    if profile.procedure_requested and len(primary_items) <= 2:
+        return True
+
+    if profile.procedure_requested and total_context_chars < 800:
+        return True
+
+    return False
+
+
+def format_coverage_summary(label: str, coverage: Dict[str, object], add_reason: str = "", item_count: int | None = None) -> str:
+    parts = [
+        f"{label}",
+        f"entity_coverage={coverage.get('entity_coverage', 0)}",
+        f"field_coverage={coverage.get('field_coverage', 0)}",
+        f"title_coverage={coverage.get('title_coverage', 0)}",
+    ]
+    entity_terms = ",".join(list(coverage.get("entity_terms", []))[:4])
+    field_terms = ",".join(list(coverage.get("field_terms", []))[:4])
+    if entity_terms:
+        parts.append(f"entities={entity_terms}")
+    if field_terms:
+        parts.append(f"fields={field_terms}")
+    if item_count is not None:
+        parts.append(f"candidate_count={item_count}")
+    if add_reason:
+        parts.append(f"add_reason={add_reason}")
+    return "|".join(parts)
+
+
+def build_source_debug_summaries(source_rankings: List[Dict], profile: QueryProfile, limit: int = 3) -> List[str]:
+    summaries: List[str] = []
+    coverage_terms = build_query_coverage_terms(profile)
+    for ranking in source_rankings[:limit]:
+        coverage = source_coverage_stats(ranking["items"][:8], profile, coverage_terms)
+        summaries.append(
+            format_coverage_summary(
+                label=f"source={ranking['source']}",
+                coverage=coverage,
+                add_reason="source_rank_debug",
+                item_count=len(ranking["items"]),
+            )
+        )
+    return summaries
+
+
+def build_item_coverage_summaries(items: List[Dict], profile: QueryProfile) -> List[str]:
+    summaries: List[str] = []
+    coverage_terms = build_query_coverage_terms(profile)
+    for item in items:
+        chunk = item["chunk"]
+        coverage = chunk_coverage_stats(chunk, profile, coverage_terms)
+        add_reason = item.get("context_add_reason", item.get("retrieval_type", "selected"))
+        summaries.append(
+            format_coverage_summary(
+                label=f"chunk_id={chunk.get('chunk_id', '')}",
+                coverage=coverage,
+                add_reason=add_reason,
+            )
+        )
+    return summaries
+
+
+def annotate_context_items(items: List[Dict], reason: str) -> List[Dict]:
+    annotated: List[Dict] = []
+    for item in items:
+        existing_reason = item.get("context_add_reason", "")
+        context_reason = reason if not existing_reason else f"{reason}:{existing_reason}"
+        annotated.append({**item, "context_add_reason": context_reason})
+    return annotated
+
+
+def supplement_source_context(
+    profile: QueryProfile,
+    selected_items: List[Dict],
+    source_items: List[Dict],
+    max_total: int,
+) -> List[Dict]:
+    if len(selected_items) >= max_total:
+        return selected_items[:max_total]
+
+    coverage_terms = build_query_coverage_terms(profile)
+    selected_ids = {item["chunk"]["chunk_id"] for item in selected_items}
+    supplement_pool = filter_items_for_profile(source_items, profile)
+    if len(supplement_pool) <= len(selected_items):
+        supplement_pool = source_items
+
+    candidates = []
+    for item in build_source_anchor_context(supplement_pool, max_anchors=2, max_total=max_total):
+        chunk_id = item["chunk"]["chunk_id"]
+        if chunk_id in selected_ids:
+            continue
+        coverage = chunk_coverage_stats(item["chunk"], profile, coverage_terms)
+        candidates.append(
+            (
+                int(coverage["combined_coverage"]),
+                int(coverage["field_coverage"]),
+                int(coverage["entity_coverage"]),
+                item.get("rerank_score", item.get("score", 0.0)),
+                item,
+            )
+        )
+
+    candidates.sort(reverse=True)
+    supplemented = list(selected_items)
+    for _, _, _, _, item in candidates:
+        supplemented.append({**item, "context_add_reason": "source_internal_support"})
+        if len(supplemented) >= max_total:
+            break
+
+    return dedupe_chunk_items(supplemented, max_per_source=max_total)[:max_total]
 
 
 def with_rerank_fallback(item: Dict) -> Dict:
@@ -734,9 +1043,11 @@ def score_chunk_for_profile(profile: QueryProfile, chunk: Dict) -> float:
     source = chunk.get("source", "")
     entity_title = normalize_text(chunk.get("entity_title", ""))
     clause_title = normalize_text(chunk.get("clause_title", ""))
+    coverage_terms = build_query_coverage_terms(profile)
+    coverage_stats = chunk_coverage_stats(chunk, profile, coverage_terms)
     score = score_source_name(profile, source)
 
-    for term in profile.quoted_terms + profile.document_hints + profile.entity_terms:
+    for term in coverage_terms["quoted_terms"] + coverage_terms["document_hints"] + coverage_terms["entity_terms"]:
         if not term:
             continue
         compact_term = compact_text(term)
@@ -747,7 +1058,11 @@ def score_chunk_for_profile(profile: QueryProfile, chunk: Dict) -> float:
         elif compact_term and compact_term in compact_text(text):
             score += 70.0
 
-    score += 30.0 * count_field_hits(chunk, profile.requested_fields)
+    score += 34.0 * int(coverage_stats["field_coverage"])
+    if coverage_stats["combined_coverage"]:
+        score += 55.0
+    elif profile.procedure_requested and coverage_stats["field_coverage"] and not coverage_stats["entity_coverage"]:
+        score -= 22.0
 
     block_type = chunk.get("block_type")
     if block_type == "table_row":
@@ -828,26 +1143,12 @@ def expand_results_for_top_sources(profile: QueryProfile, merged_results: List[D
 
 
 def chunk_matches_profile(chunk: Dict, profile: QueryProfile) -> bool:
-    text = normalize_text(chunk.get("text", ""))
-    source = normalize_text(chunk.get("source", ""))
-    entity_title = normalize_text(chunk.get("entity_title", ""))
-    clause_title = normalize_text(chunk.get("clause_title", ""))
-    haystacks = [text, source, entity_title, clause_title]
-
-    def matches(term: str) -> bool:
-        compact_term = compact_text(term)
-        return any(term in haystack or compact_term in compact_text(haystack) for haystack in haystacks if haystack)
-
-    if profile.document_hints and any(matches(term) for term in profile.document_hints):
-        return True
-
-    if profile.entity_terms and any(matches(term) for term in profile.entity_terms):
-        return True
-
-    if profile.requested_fields and count_field_hits(chunk, profile.requested_fields):
-        return True
-
-    return False
+    coverage = chunk_coverage_stats(chunk, profile)
+    return bool(
+        coverage["entity_coverage"]
+        or coverage["field_coverage"]
+        or coverage["title_coverage"]
+    )
 
 
 def filter_items_for_profile(items: List[Dict], profile: QueryProfile) -> List[Dict]:
@@ -900,14 +1201,23 @@ def select_context_chunks(
         primary_ranking = preferred_rankings[0] if preferred_rankings else source_rankings[0]
         primary_items = filter_items_for_profile(primary_ranking["items"], profile)
         primary = build_source_anchor_context(primary_items, max_anchors=3, max_total=8)
+        if should_add_support_context(primary, profile):
+            primary = supplement_source_context(profile, primary, primary_ranking["items"], max_total=8)
         support_rankings = [ranking for ranking in source_rankings if ranking["source"] != primary_ranking["source"]]
-        if profile.multi_document_requested and support_rankings:
+        if support_rankings and (
+            profile.multi_document_requested
+            or requested_sources
+            or should_add_support_context(primary, profile)
+        ):
             filtered_support_rankings = [
                 {**ranking, "items": filter_items_for_profile(ranking["items"], profile)}
                 for ranking in support_rankings
             ]
-            support = build_multisource_context(filtered_support_rankings, max_sources=2, max_per_source=2)
-            return dedupe_chunk_items(primary + support, max_per_source=8)[:10]
+            support_max_sources = 2 if profile.multi_document_requested else 1
+            support = build_multisource_context(filtered_support_rankings, max_sources=support_max_sources, max_per_source=2)
+            if support:
+                support = annotate_context_items(support, "support_source")
+                return dedupe_chunk_items(primary + support, max_per_source=8)[:10]
         if primary:
             return primary
 
@@ -921,7 +1231,7 @@ def select_context_chunks(
         ranked_items = sorted(
             best_source_items,
             key=lambda item: (
-                count_field_hits(item["chunk"], profile.requested_fields),
+                count_profile_field_hits(item["chunk"], profile),
                 item.get("rerank_score", item.get("score", 0.0)),
             ),
             reverse=True,
@@ -942,11 +1252,23 @@ def select_context_chunks(
     source_pool = filter_items_for_profile(source_pool, profile)
     max_total = 8 if source_is_notice_like(top_source) else 6
     source_filtered = build_source_anchor_context(source_pool, max_anchors=3 if source_is_notice_like(top_source) else 2, max_total=max_total)
+    if should_add_support_context(source_filtered, profile):
+        source_filtered = supplement_source_context(
+            profile,
+            source_filtered,
+            top_ranking["items"] if top_ranking else source_pool,
+            max_total=max_total,
+        )
 
-    if len(source_rankings) > 1 and source_rankings[1]["score"] >= source_rankings[0]["score"] * 0.92:
+    if len(source_rankings) > 1 and (
+        source_rankings[1]["score"] >= source_rankings[0]["score"] * 0.92
+        or should_add_support_context(source_filtered, profile)
+    ):
         total_context_chars = sum(len(chunk_content_text(item["chunk"])) for item in source_filtered)
-        if total_context_chars < 900:
-            support_items = build_source_anchor_context(source_rankings[1]["items"], max_anchors=1, max_total=2)
+        if total_context_chars < 1200:
+            support_pool = filter_items_for_profile(source_rankings[1]["items"], profile)
+            support_items = build_source_anchor_context(support_pool, max_anchors=1, max_total=2)
+            support_items = annotate_context_items(support_items, "support_source")
             source_filtered = dedupe_chunk_items(source_filtered + support_items, max_per_source=max_total)
 
     if source_filtered:
@@ -1027,6 +1349,7 @@ def run_query(query: str):
     requery_attempt = 0
 
     while True:
+        query_coverage_terms = build_query_coverage_terms(profile)
         search_output = hybrid_search(
             query,
             preferred_domain=requested_domain,
@@ -1050,6 +1373,7 @@ def run_query(query: str):
         sparse_results = search_output["sparse_results"]
         merged_results = search_output["merged_results"]
         source_rankings = rank_sources(profile, merged_results)
+        source_coverage_summary = build_source_debug_summaries(source_rankings, profile)
         requested_sources = resolve_requested_sources(profile, all_index_chunks)
 
         use_rag = should_use_rag(query, dense_results, sparse_results)
@@ -1058,6 +1382,8 @@ def run_query(query: str):
 
         document_first_results = expand_results_for_top_sources(profile, merged_results, all_index_chunks, requested_sources)
         document_first_results = dedupe_chunk_items(document_first_results, max_per_source=10)
+        expanded_source_rankings = rank_sources(profile, document_first_results)
+        source_coverage_summary = build_source_debug_summaries(expanded_source_rankings, profile)
         final_chunks = rerank_results(query, document_first_results)
         final_chunks = dedupe_chunk_items(final_chunks, max_per_source=4)
         if profile.multi_document_requested or profile.compare_requested or profile.synthesis_requested:
@@ -1070,6 +1396,8 @@ def run_query(query: str):
 
         if not final_chunks:
             break
+
+        final_result_coverage_summary = build_item_coverage_summaries(final_chunks, profile)
 
         print_retrieval(dense_results, sparse_results, final_chunks)
         structured_candidates = collect_structured_candidates(profile, final_chunks, document_first_results)
@@ -1097,11 +1425,15 @@ def run_query(query: str):
                 runtime_detector_flag=runtime_detector_flag,
                 runtime_sanitizer_flag=runtime_sanitizer_flag,
                 final_result_count=len(final_chunks),
+                query_coverage_terms=query_coverage_terms,
+                source_coverage_summary=source_coverage_summary,
+                final_result_coverage_summary=final_result_coverage_summary,
             )
             return
 
         context_chunks = select_context_chunks(profile, final_chunks, document_first_results, requested_sources)
         context_chunks = dedupe_chunk_items(context_chunks, max_per_source=8)[:8]
+        context_coverage_summary = build_item_coverage_summaries(context_chunks, profile)
         guard_result = apply_runtime_guard(query, context_chunks, prior_requery_attempts=requery_attempt)
         runtime_guard_summary = summarize_runtime_guard(guard_result)
         runtime_guard_summary["runtime_requery_attempt"] = requery_attempt
@@ -1125,6 +1457,11 @@ def run_query(query: str):
                 final_result_count=len(final_chunks),
                 context_chunk_count=len(context_chunks),
                 runtime_guard_summary=runtime_guard_summary,
+                selected_context_items=context_chunks,
+                query_coverage_terms=query_coverage_terms,
+                source_coverage_summary=source_coverage_summary,
+                final_result_coverage_summary=final_result_coverage_summary,
+                context_coverage_summary=context_coverage_summary,
             )
             return
 
@@ -1167,6 +1504,11 @@ def run_query(query: str):
                 final_result_count=len(final_chunks),
                 context_chunk_count=len(context_chunks),
                 runtime_guard_summary=runtime_guard_summary,
+                selected_context_items=context_chunks,
+                query_coverage_terms=query_coverage_terms,
+                source_coverage_summary=source_coverage_summary,
+                final_result_coverage_summary=final_result_coverage_summary,
+                context_coverage_summary=context_coverage_summary,
             )
             return
 
@@ -1189,6 +1531,11 @@ def run_query(query: str):
                     final_result_count=len(final_chunks),
                     context_chunk_count=len(context_chunks),
                     runtime_guard_summary=runtime_guard_summary,
+                    selected_context_items=context_chunks,
+                    query_coverage_terms=query_coverage_terms,
+                    source_coverage_summary=source_coverage_summary,
+                    final_result_coverage_summary=final_result_coverage_summary,
+                    context_coverage_summary=context_coverage_summary,
                 )
                 return
 
@@ -1220,6 +1567,11 @@ def run_query(query: str):
                     final_result_count=len(final_chunks),
                     context_chunk_count=len(context_chunks),
                     runtime_guard_summary=post_remove_summary,
+                    selected_context_items=context_chunks,
+                    query_coverage_terms=query_coverage_terms,
+                    source_coverage_summary=source_coverage_summary,
+                    final_result_coverage_summary=final_result_coverage_summary,
+                    context_coverage_summary=context_coverage_summary,
                 )
                 return
 
@@ -1262,6 +1614,11 @@ def run_query(query: str):
                     final_result_count=len(final_chunks),
                     context_chunk_count=len(context_chunks),
                     runtime_guard_summary=post_remove_summary,
+                    selected_context_items=context_chunks,
+                    query_coverage_terms=query_coverage_terms,
+                    source_coverage_summary=source_coverage_summary,
+                    final_result_coverage_summary=final_result_coverage_summary,
+                    context_coverage_summary=context_coverage_summary,
                 )
                 return
 
@@ -1289,6 +1646,11 @@ def run_query(query: str):
             final_result_count=len(final_chunks),
             context_chunk_count=len(context_chunks),
             runtime_guard_summary=runtime_guard_summary,
+            selected_context_items=context_chunks,
+            query_coverage_terms=query_coverage_terms,
+            source_coverage_summary=source_coverage_summary,
+            final_result_coverage_summary=final_result_coverage_summary,
+            context_coverage_summary=context_coverage_summary,
         )
         return
 

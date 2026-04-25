@@ -28,7 +28,7 @@ try:
     from src.embedder import embed_texts
 except ModuleNotFoundError:  # pragma: no cover - optional in sparse-only environments
     embed_texts = None
-from src.query_analysis import build_query_profile, compact_text, normalize_text
+from src.query_analysis import build_query_profile, compact_text, normalize_keyword, normalize_text
 
 
 def tokenize_text(text: str) -> List[str]:
@@ -77,6 +77,215 @@ def source_tag(source: str) -> str:
         prefix = stem.split("_", 1)[0]
         return prefix.split("-", 1)[0].lower()
     return ""
+
+
+QUERY_NOISE_TERMS = {
+    "문서",
+    "기준",
+    "기준으로",
+    "정리",
+    "정리해줘",
+    "알려줘",
+    "알려줄래",
+    "설명",
+    "내용",
+    "관련",
+    "자세히",
+    "상세",
+    "어떻게",
+    "무엇",
+    "어떤",
+    "해주세요",
+    "해줘",
+    "하는",
+    "해야",
+}
+
+PROCEDURAL_FIELD_TERMS = {
+    "신청",
+    "신청서",
+    "요청",
+    "요청서",
+    "승인",
+    "절차",
+    "검토",
+    "제출",
+    "자료",
+    "서류",
+    "방법",
+    "단계",
+    "순서",
+    "과정",
+    "확인",
+    "등록",
+    "검사",
+    "반출",
+    "발급",
+    "기간",
+    "기한",
+    "목록",
+    "주관",
+}
+
+
+def _dedupe_terms(terms: List[str]) -> List[str]:
+    deduped: List[str] = []
+    seen = set()
+    for term in terms:
+        normalized = normalize_for_match(term)
+        if not normalized or normalized in seen:
+            continue
+        deduped.append(normalized)
+        seen.add(normalized)
+    return deduped
+
+
+def _extract_phrase_tokens(text: str) -> List[str]:
+    tokens: List[str] = []
+    for raw_token in re.findall(f"[{chr(0xAC00)}-{chr(0xD7A3)}A-Za-z0-9]+", normalize_text(text)):
+        token = normalize_for_match(normalize_keyword(raw_token))
+        if len(token) < 2:
+            continue
+        tokens.append(token)
+    return tokens
+
+
+def _resolve_procedural_field_token(token: str) -> Optional[str]:
+    for field in sorted(PROCEDURAL_FIELD_TERMS, key=len, reverse=True):
+        if token == field or token.startswith(field):
+            return field
+    return None
+
+
+def _specific_phrase_tokens(text: str) -> List[str]:
+    specific = []
+    for token in _extract_phrase_tokens(text):
+        if token in QUERY_NOISE_TERMS or _resolve_procedural_field_token(token):
+            continue
+        specific.append(token)
+    return specific
+
+
+def build_query_coverage_terms(profile) -> Dict[str, List[str]]:
+    query_tokens = _extract_phrase_tokens(profile.query)
+    fallback_field_terms = []
+    for token in query_tokens:
+        procedural_field = _resolve_procedural_field_token(token)
+        if procedural_field:
+            fallback_field_terms.append(procedural_field)
+
+    field_terms = _dedupe_terms([*profile.requested_fields, *fallback_field_terms])
+    quoted_terms = _dedupe_terms(profile.quoted_terms)
+
+    entity_terms: List[str] = []
+    for term in [*profile.quoted_terms, *profile.entity_terms]:
+        specific_tokens = _specific_phrase_tokens(term)
+        normalized_term = normalize_for_match(term)
+        if normalized_term and specific_tokens:
+            entity_terms.append(normalized_term)
+        entity_terms.extend(specific_tokens)
+    entity_terms = [term for term in _dedupe_terms(entity_terms) if term not in field_terms]
+
+    document_hints: List[str] = []
+    for hint in profile.document_hints:
+        specific_tokens = _specific_phrase_tokens(hint)
+        normalized_hint = normalize_for_match(hint)
+        if normalized_hint and specific_tokens:
+            document_hints.append(normalized_hint)
+        document_hints.extend(specific_tokens)
+    document_hints = [term for term in _dedupe_terms(document_hints) if term not in field_terms]
+
+    return {
+        "entity_terms": entity_terms,
+        "field_terms": field_terms,
+        "document_hints": document_hints,
+        "quoted_terms": quoted_terms,
+    }
+
+
+def chunk_coverage_stats(chunk: Dict, profile, coverage_terms: Optional[Dict[str, List[str]]] = None) -> Dict[str, object]:
+    coverage_terms = coverage_terms or build_query_coverage_terms(profile)
+
+    chunk_text = normalize_for_match(chunk.get("text", ""))
+    source_text = normalize_for_match(chunk.get("source", ""))
+    entity_title = normalize_for_match(chunk.get("entity_title", ""))
+    clause_title = normalize_for_match(chunk.get("clause_title", ""))
+    source_title_text = normalize_for_match(source_title(chunk.get("source", "")))
+    title_texts = [source_title_text, entity_title, clause_title]
+    body_texts = [chunk_text, source_text]
+
+    matched_entities = set()
+    matched_document_hints = set()
+    matched_fields = set()
+    matched_title_terms = set()
+
+    for term in coverage_terms.get("entity_terms", []):
+        if any(contains_term(text, term) for text in title_texts if text):
+            matched_entities.add(term)
+            matched_title_terms.add(term)
+        elif any(contains_term(text, term) for text in body_texts if text):
+            matched_entities.add(term)
+
+    for term in coverage_terms.get("document_hints", []):
+        if any(contains_term(text, term) for text in title_texts if text):
+            matched_document_hints.add(term)
+            matched_title_terms.add(term)
+        elif any(contains_term(text, term) for text in body_texts if text):
+            matched_document_hints.add(term)
+
+    for term in coverage_terms.get("field_terms", []):
+        if any(contains_term(text, term) for text in title_texts if text):
+            matched_fields.add(term)
+            matched_title_terms.add(term)
+        elif any(contains_term(text, term) for text in body_texts if text):
+            matched_fields.add(term)
+
+    entity_coverage = len(matched_entities | matched_document_hints)
+    field_coverage = len(matched_fields)
+    title_coverage = len(matched_title_terms)
+
+    return {
+        "entity_terms": sorted(matched_entities),
+        "document_hints": sorted(matched_document_hints),
+        "field_terms": sorted(matched_fields),
+        "title_terms": sorted(matched_title_terms),
+        "entity_coverage": entity_coverage,
+        "field_coverage": field_coverage,
+        "title_coverage": title_coverage,
+        "combined_coverage": entity_coverage > 0 and field_coverage > 0,
+    }
+
+
+def source_coverage_stats(items: List[Dict], profile, coverage_terms: Optional[Dict[str, List[str]]] = None) -> Dict[str, object]:
+    coverage_terms = coverage_terms or build_query_coverage_terms(profile)
+
+    matched_entities = set()
+    matched_document_hints = set()
+    matched_fields = set()
+    matched_titles = set()
+
+    for item in items:
+        chunk = item.get("chunk", item)
+        stats = chunk_coverage_stats(chunk, profile, coverage_terms)
+        matched_entities.update(stats["entity_terms"])
+        matched_document_hints.update(stats["document_hints"])
+        matched_fields.update(stats["field_terms"])
+        matched_titles.update(stats["title_terms"])
+
+    entity_coverage = len(matched_entities | matched_document_hints)
+    field_coverage = len(matched_fields)
+    title_coverage = len(matched_titles)
+
+    return {
+        "entity_terms": sorted(matched_entities),
+        "document_hints": sorted(matched_document_hints),
+        "field_terms": sorted(matched_fields),
+        "title_terms": sorted(matched_titles),
+        "entity_coverage": entity_coverage,
+        "field_coverage": field_coverage,
+        "title_coverage": title_coverage,
+        "combined_coverage": entity_coverage > 0 and field_coverage > 0,
+    }
 
 
 def build_sparse_fallback_index(chunks: List[Dict]) -> Dict[str, object]:
@@ -217,17 +426,20 @@ def _count_matches(text: str, terms: List[str]) -> int:
 
 def compute_keyword_bonus(query: str, chunk: Dict) -> float:
     profile = build_query_profile(query)
+    coverage_terms = build_query_coverage_terms(profile)
     chunk_text = normalize_for_match(chunk.get("text", ""))
     source_text = normalize_for_match(chunk.get("source", ""))
     entity_title = normalize_for_match(chunk.get("entity_title", ""))
+    clause_title = normalize_for_match(chunk.get("clause_title", ""))
     source_title_text = normalize_for_match(source_title(chunk.get("source", "")))
     source_prefix = source_tag(chunk.get("source", ""))
     compact_query = compact_text(profile.query)
 
-    entity_terms = [normalize_for_match(term) for term in profile.entity_terms]
-    document_hints = [normalize_for_match(term) for term in profile.document_hints]
-    field_terms = [normalize_for_match(field) for field in profile.requested_fields]
-    quoted_terms = [normalize_for_match(term) for term in profile.quoted_terms]
+    entity_terms = coverage_terms["entity_terms"]
+    document_hints = coverage_terms["document_hints"]
+    field_terms = coverage_terms["field_terms"]
+    quoted_terms = coverage_terms["quoted_terms"]
+    coverage_stats = chunk_coverage_stats(chunk, profile, coverage_terms)
 
     score = 0.0
 
@@ -240,12 +452,17 @@ def compute_keyword_bonus(query: str, chunk: Dict) -> float:
             score += 120.0
 
     entity_hits = 0
+    source_title_entity_hits = 0
     for term in entity_terms:
         if contains_term(source_title_text, term):
             score += 125.0
             entity_hits += 1
+            source_title_entity_hits += 1
         elif contains_term(entity_title, term):
             score += 95.0
+            entity_hits += 1
+        elif contains_term(clause_title, term):
+            score += 88.0
             entity_hits += 1
         elif contains_term(chunk_text, term):
             score += 50.0
@@ -258,7 +475,7 @@ def compute_keyword_bonus(query: str, chunk: Dict) -> float:
         if contains_term(source_title_text, term) or contains_term(source_text, term):
             score += 130.0
             document_hits += 1
-        elif contains_term(chunk_text, term) or contains_term(entity_title, term):
+        elif contains_term(chunk_text, term) or contains_term(entity_title, term) or contains_term(clause_title, term):
             score += 90.0
             document_hits += 1
 
@@ -270,16 +487,35 @@ def compute_keyword_bonus(query: str, chunk: Dict) -> float:
 
     field_hits = 0
     for term in field_terms:
-        if contains_term(chunk_text, term):
+        if contains_term(entity_title, term) or contains_term(clause_title, term):
+            score += 20.0
+            field_hits += 1
+        elif contains_term(chunk_text, term):
             score += 14.0
             field_hits += 1
 
+    entity_coverage = int(coverage_stats["entity_coverage"])
+    field_coverage = int(coverage_stats["field_coverage"])
+    title_coverage = int(coverage_stats["title_coverage"])
+
     if entity_hits >= 2:
         score += 35.0
+    if source_title_entity_hits and field_hits:
+        score += 40.0 * min(source_title_entity_hits, 2)
     if field_hits == len(field_terms) and field_hits > 0:
         score += 45.0
+    if entity_hits >= 2 and field_hits:
+        score += 55.0
+    if coverage_stats["combined_coverage"]:
+        score += 48.0 + (10.0 * min(entity_coverage, field_coverage))
+    if title_coverage and coverage_stats["combined_coverage"]:
+        score += 18.0
     if profile.compare_requested and entity_hits:
         score += 24.0
+    if profile.procedure_requested and field_coverage and not entity_coverage:
+        score -= 22.0
+    if profile.procedure_requested and len(entity_terms) >= 3 and entity_hits == 1:
+        score -= 10.0
 
     block_type = chunk.get("block_type")
     if block_type == "table_row":
@@ -291,7 +527,7 @@ def compute_keyword_bonus(query: str, chunk: Dict) -> float:
     elif block_type == "table":
         score += 8.0
 
-    if (entity_terms or document_hints) and not (entity_hits or document_hits):
+    if (entity_terms or document_hints) and not (entity_coverage or document_hits):
         score -= 25.0
 
     return score
@@ -299,29 +535,34 @@ def compute_keyword_bonus(query: str, chunk: Dict) -> float:
 
 def score_sparse_exact_candidate(query: str, chunk: Dict, raw_score: float) -> float:
     profile = build_query_profile(query)
+    coverage_terms = build_query_coverage_terms(profile)
     text = normalize_for_match(chunk.get("text", ""))
     source = normalize_for_match(chunk.get("source", ""))
     entity_title = normalize_for_match(chunk.get("entity_title", ""))
+    clause_title = normalize_for_match(chunk.get("clause_title", ""))
     source_title_text = normalize_for_match(source_title(chunk.get("source", "")))
 
-    entity_terms = [normalize_for_match(term) for term in profile.entity_terms]
-    document_hints = [normalize_for_match(term) for term in profile.document_hints]
-    field_terms = [normalize_for_match(field) for field in profile.requested_fields]
-    quoted_terms = [normalize_for_match(term) for term in profile.quoted_terms]
+    entity_terms = coverage_terms["entity_terms"]
+    document_hints = coverage_terms["document_hints"]
+    field_terms = coverage_terms["field_terms"]
+    quoted_terms = coverage_terms["quoted_terms"]
+    coverage_stats = chunk_coverage_stats(chunk, profile, coverage_terms)
 
     source_title_hits = _count_matches(source_title_text, entity_terms + document_hints + quoted_terms)
     entity_title_hits = _count_matches(entity_title, entity_terms + quoted_terms)
+    clause_title_hits = _count_matches(clause_title, entity_terms + document_hints + quoted_terms)
     text_hits = _count_matches(text, entity_terms + document_hints)
     source_hits = _count_matches(source, document_hints)
-    field_hits = _count_matches(text, field_terms)
+    field_hits = int(coverage_stats["field_coverage"])
 
-    hit_count = source_title_hits + entity_title_hits + text_hits + source_hits + field_hits
+    hit_count = source_title_hits + entity_title_hits + clause_title_hits + text_hits + source_hits + field_hits
     if hit_count == 0:
         return 0.0
 
     score = 22.0
     score += 52.0 * source_title_hits
     score += 34.0 * entity_title_hits
+    score += 30.0 * clause_title_hits
     score += 18.0 * text_hits
     score += 20.0 * source_hits
     score += 8.0 * field_hits
@@ -335,8 +576,18 @@ def score_sparse_exact_candidate(query: str, chunk: Dict, raw_score: float) -> f
     elif block_type == "clause_section":
         score += 14.0
 
-    if source_title_hits and (entity_title_hits or text_hits):
+    entity_coverage = int(coverage_stats["entity_coverage"])
+    title_coverage = int(coverage_stats["title_coverage"])
+    if source_title_hits and (entity_title_hits or clause_title_hits or text_hits):
         score += 18.0
+    if source_title_hits + entity_title_hits + clause_title_hits >= 2:
+        score += 16.0
+    if coverage_stats["combined_coverage"]:
+        score += 22.0 + (8.0 * min(entity_coverage, field_hits))
+    if profile.procedure_requested and field_hits and title_coverage:
+        score += 14.0
+    if profile.procedure_requested and field_hits and not entity_coverage and text_hits <= 1:
+        score -= 16.0
     if profile.compare_requested and text_hits:
         score += 10.0
 
@@ -486,6 +737,7 @@ def hybrid_search_domain(
 
 def rank_domain_results(query: str, domain_result: Dict) -> float:
     profile = build_query_profile(query)
+    coverage_terms = build_query_coverage_terms(profile)
     sparse = domain_result["sparse_results"]
     merged = domain_result["merged_results"]
 
@@ -498,12 +750,14 @@ def rank_domain_results(query: str, domain_result: Dict) -> float:
         chunk = item["chunk"]
         text = normalize_for_match(chunk.get("text", ""))
         title = normalize_for_match(chunk.get("entity_title", ""))
+        clause_title = normalize_for_match(chunk.get("clause_title", ""))
         source = normalize_for_match(chunk.get("source", ""))
         source_title_text = normalize_for_match(source_title(chunk.get("source", "")))
-        for term in profile.entity_terms + profile.document_hints:
+        coverage_stats = chunk_coverage_stats(chunk, profile, coverage_terms)
+        for term in coverage_terms["entity_terms"] + coverage_terms["document_hints"]:
             if contains_term(source_title_text, term):
                 score += 42.0
-            elif contains_term(title, term):
+            elif contains_term(title, term) or contains_term(clause_title, term):
                 score += 32.0
             elif contains_term(text, term) or contains_term(source, term):
                 score += 18.0
@@ -511,6 +765,10 @@ def rank_domain_results(query: str, domain_result: Dict) -> float:
         tag = source_tag(chunk.get("source", ""))
         if tag and re.search(rf"(?<![a-z]){re.escape(tag)}(?![a-z])", profile.query.lower()):
             score += 45.0
+        if coverage_stats["combined_coverage"]:
+            score += 36.0
+        elif coverage_stats["field_coverage"] and not coverage_stats["entity_coverage"]:
+            score -= 14.0
 
     return score
 
