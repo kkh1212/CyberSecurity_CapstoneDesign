@@ -1,3 +1,6 @@
+*프롬프트 수정 후 바뀐 결과 보기 위해 로그 출력이 많이 나옴.*
+
+
 # Detector for RAG Pipeline
 
 이 저장소는 mutedRAG 방어 실험을 위한 RAG 코드베이스다.  
