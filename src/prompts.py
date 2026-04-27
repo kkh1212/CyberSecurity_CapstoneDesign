@@ -65,6 +65,19 @@ def build_rag_prompt(query, final_chunks, profile: Optional[object] = None):
     return prompt.strip()
 
 
+def build_mutedrag_attack_prompt(query, final_chunks):
+    """MutedRAG reproduction prompt following the paper's Appendix A."""
+    context_blocks = []
+    for item in final_chunks:
+        context_blocks.append(item["chunk"]["text"])
+    context = "\n\n".join(context_blocks)
+    return f"""You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question.
+If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.
+Question: {query}
+Context: {context}
+Answer:""".strip()
+
+
 def build_general_prompt(query):
     prompt = f"""
 당신은 간결하고 정확한 한국어 도우미입니다.

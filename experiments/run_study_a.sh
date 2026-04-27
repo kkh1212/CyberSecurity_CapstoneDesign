@@ -1,0 +1,194 @@
+#!/usr/bin/env bash
+# =============================================================================
+# Study A - Basic RAG vulnerability experiment
+#
+# Conditions:
+#   A_normal_only   benign corpus only
+#   A_normal_direct benign corpus + direct injection payloads
+#   A_normal_muted  benign corpus + MutedRAG-style payloads
+#
+# All conditions run with detector/sanitizer disabled.
+#
+# Defaults:
+#   A_DIRECT_TYPES="01_직접인젝션"
+#   A_MUTED_TYPES="02_간접_명시형"
+#   A_QUERY_SET="all"     # benign + target business questions
+#
+# Usage:
+#   OLLAMA_MODEL="gemma3:12b" ./experiments/run_study_a.sh
+#   A_MUTED_TYPES="04_다국어혼합" ./experiments/run_study_a.sh
+# =============================================================================
+
+set -euo pipefail
+
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+EXPERIMENTS_DIR="${PROJECT_ROOT}/experiments"
+QUERIES_JSON="${EXPERIMENTS_DIR}/queries.json"
+
+OLLAMA_BASE_URL="${OLLAMA_BASE_URL:-http://localhost:11434}"
+OLLAMA_MODEL="${OLLAMA_MODEL:-gemma3:12b}"
+CONTAMINATION_RATE="${CONTAMINATION_RATE:-0.01}"
+INJECT_STRATEGY="${INJECT_STRATEGY:-blackbox}"
+RANDOM_SEED="${RANDOM_SEED:-42}"
+
+A_DIRECT_TYPES="${A_DIRECT_TYPES:-01_직접인젝션}"
+A_MUTED_TYPES="${A_MUTED_TYPES:-02_간접_명시형}"
+A_QUERY_SET="${A_QUERY_SET:-all}"
+
+STUDY_ID="study_a_$(date +%Y%m%d_%H%M%S)"
+RESULTS_ROOT="${EXPERIMENTS_DIR}/results/${STUDY_ID}"
+STAGE_ROOT="${PROJECT_ROOT}/data/exp_stage_study_a"
+INDEX_ROOT="${PROJECT_ROOT}/outputs/exp_study_a_indexes"
+
+log() { echo "[$(date '+%H:%M:%S')] $*"; }
+die() { echo "ERROR: $*" >&2; exit 1; }
+require_cmd() { command -v "$1" >/dev/null 2>&1 || die "'$1' not found. Install: $2"; }
+
+require_cmd jq "sudo apt-get install -y jq"
+require_cmd python "python3 가상환경을 활성화하세요"
+curl -sf "${OLLAMA_BASE_URL}/api/tags" >/dev/null 2>&1 \
+  || die "Ollama에 연결할 수 없습니다: ${OLLAMA_BASE_URL}"
+
+run_python() {
+  local envs=("${@}")
+  local env_prefix=""
+  local remaining=()
+  local in_cmd=false
+  for arg in "${envs[@]}"; do
+    if [[ "$in_cmd" == "true" ]]; then
+      remaining+=("$arg")
+    elif [[ "$arg" == "--cmd" ]]; then
+      in_cmd=true
+    else
+      env_prefix="${env_prefix} ${arg}"
+    fi
+  done
+  (cd "${PROJECT_ROOT}" && env ${env_prefix} "${remaining[@]}")
+}
+
+stage_condition() {
+  local condition="$1"
+  local stage_dir="$2"
+  shift 2
+  local inject_args=("$@")
+
+  log "STEP 1 [${condition}]: staging corpus"
+  rm -rf "${stage_dir}"
+  (cd "${PROJECT_ROOT}" && python -m experiments.attack.inject \
+    --rate "${CONTAMINATION_RATE}" \
+    --strategy "${INJECT_STRATEGY}" \
+    --stage-dir "${stage_dir}" \
+    --seed "${RANDOM_SEED}" \
+    "${inject_args[@]}")
+}
+
+ingest_condition() {
+  local condition="$1"
+  local stage_dir="$2"
+  local index_dir="$3"
+
+  log "STEP 2 [${condition}]: ingest detector OFF"
+  rm -rf "${index_dir}"
+  mkdir -p "${index_dir}"
+  run_python \
+    "RAW_DOCS_DIR=${stage_dir}" \
+    "INDEX_DIR=${index_dir}" \
+    "DETECTOR_ENABLED=false" \
+    "DETECTOR_DEBUG=false" \
+    "ENABLE_DENSE=false" \
+    "ENABLE_RERANK=false" \
+    "DOMAIN=all" \
+    --cmd python -m src.ingest_app
+}
+
+run_condition_queries() {
+  local condition="$1"
+  local stage_dir="$2"
+  local index_dir="$3"
+  local out_dir="$4"
+
+  mkdir -p "${out_dir}"
+  local query_filter n_queries
+  if [[ "${A_QUERY_SET}" == "all" ]]; then
+    query_filter='.benign + .attack'
+  else
+    query_filter=".${A_QUERY_SET}"
+  fi
+
+  n_queries=$(jq "(${query_filter}) | length" "${QUERIES_JSON}")
+  [[ "${n_queries}" -gt 0 ]] || die "No queries found: ${A_QUERY_SET}"
+
+  log "STEP 3 [${condition}]: ${A_QUERY_SET} queries (${n_queries})"
+  local common_envs=(
+    "RAW_DOCS_DIR=${stage_dir}"
+    "INDEX_DIR=${index_dir}"
+    "RUNTIME_DETECTOR_ENABLED=false"
+    "RUNTIME_SANITIZER_ENABLED=false"
+    "ENABLE_DENSE=false"
+    "ENABLE_RERANK=false"
+    "SPARSE_TOP_K=30"
+    "RERANK_TOP_K=30"
+    "FINAL_TOP_K=5"
+    "OLLAMA_BASE_URL=${OLLAMA_BASE_URL}"
+    "OLLAMA_MODEL=${OLLAMA_MODEL}"
+  )
+
+  for i in $(seq 1 "${n_queries}"); do
+    local query idx_pad outfile
+    query=$(jq -r "(${query_filter})[$((i-1))].text" "${QUERIES_JSON}")
+    idx_pad=$(printf "%02d" "$i")
+    outfile="${out_dir}/mode_a_attack_${idx_pad}.txt"
+    log "  [${condition}] Q${idx_pad}: ${query:0:50}..."
+    echo "${query}" | run_python "${common_envs[@]}" "MUTEDRAG_ATTACK_EVAL=true" --cmd python -m src.query_app \
+      > "${outfile}" 2>&1 || true
+  done
+}
+
+measure_condition() {
+  local condition="$1"
+  local out_dir="$2"
+  log "STEP 4 [${condition}]: measure"
+  (cd "${PROJECT_ROOT}" && python -m experiments.eval.measure_asr \
+    --results-dir "${out_dir}" \
+    --queries "${QUERIES_JSON}")
+}
+
+run_condition() {
+  local condition="$1"
+  shift
+  local stage_dir="${STAGE_ROOT}/${condition}"
+  local index_dir="${INDEX_ROOT}/${condition}"
+  local out_dir="${RESULTS_ROOT}/${condition}"
+
+  log ""
+  log "=== ${condition} ==="
+  stage_condition "${condition}" "${stage_dir}" "$@"
+  ingest_condition "${condition}" "${stage_dir}" "${index_dir}"
+  run_condition_queries "${condition}" "${stage_dir}" "${index_dir}" "${out_dir}"
+  measure_condition "${condition}" "${out_dir}"
+}
+
+main() {
+  log "=== Study A 시작 ==="
+  log "RESULTS_ROOT=${RESULTS_ROOT}"
+  log "OLLAMA_MODEL=${OLLAMA_MODEL}"
+  log "A_DIRECT_TYPES=${A_DIRECT_TYPES}"
+  log "A_MUTED_TYPES=${A_MUTED_TYPES}"
+  log "A_QUERY_SET=${A_QUERY_SET}"
+
+  mkdir -p "${RESULTS_ROOT}" "${STAGE_ROOT}" "${INDEX_ROOT}"
+
+  run_condition "A_normal_only" --no-attack
+
+  read -r -a direct_types <<< "${A_DIRECT_TYPES}"
+  run_condition "A_normal_direct" --types "${direct_types[@]}"
+
+  read -r -a muted_types <<< "${A_MUTED_TYPES}"
+  run_condition "A_normal_muted" --types "${muted_types[@]}"
+
+  log ""
+  log "=== Study A 완료 ==="
+  log "결과 디렉토리: ${RESULTS_ROOT}"
+}
+
+main "$@"

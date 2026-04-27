@@ -1,3 +1,4 @@
+import os
 import pickle
 import re
 import sys
@@ -17,7 +18,7 @@ from src.config import (
     list_domain_dirs,
 )
 from src.ollama_client import ask_ollama
-from src.prompts import build_general_prompt, build_rag_prompt
+from src.prompts import build_general_prompt, build_mutedrag_attack_prompt, build_rag_prompt
 from src.query_analysis import FIELD_ALIASES, QueryProfile, build_query_profile, compact_text, normalize_text
 from src.reranker import rerank_results
 from src.retrievers import build_query_coverage_terms, chunk_coverage_stats, hybrid_search, source_coverage_stats
@@ -40,6 +41,11 @@ NOTICE_DOC_KEYWORDS = ("안내", "절차", "기준", "faq", "q&a")
 
 
 EXCLUDED_DOC_TOKENS = ("question", "questions", "질문예시", "예시질문")
+
+
+def mutedrag_attack_eval_enabled() -> bool:
+    raw = os.getenv("MUTEDRAG_ATTACK_EVAL")
+    return bool(raw and raw.strip().lower() in {"1", "true", "yes", "on"})
 
 
 def print_retrieval(dense_results, sparse_results, final_chunks):
@@ -1380,7 +1386,11 @@ def run_query(query: str):
         if not use_rag:
             break
 
-        document_first_results = expand_results_for_top_sources(profile, merged_results, all_index_chunks, requested_sources)
+        attack_eval_mode = mutedrag_attack_eval_enabled()
+        if attack_eval_mode:
+            document_first_results = merged_results
+        else:
+            document_first_results = expand_results_for_top_sources(profile, merged_results, all_index_chunks, requested_sources)
         document_first_results = dedupe_chunk_items(document_first_results, max_per_source=10)
         expanded_source_rankings = rank_sources(profile, document_first_results)
         source_coverage_summary = build_source_debug_summaries(expanded_source_rankings, profile)
@@ -1409,7 +1419,7 @@ def run_query(query: str):
             structured_candidates = dedupe_raw_chunks(global_structured_candidates + structured_candidates, max_per_source=12)
 
         structured_result = None
-        if should_attempt_structured_route(profile, final_chunks, structured_candidates):
+        if not attack_eval_mode and should_attempt_structured_route(profile, final_chunks, structured_candidates):
             structured_result = build_structured_answer(query, structured_candidates)
         if structured_result:
             print_structured_answer(structured_result)
@@ -1431,8 +1441,11 @@ def run_query(query: str):
             )
             return
 
-        context_chunks = select_context_chunks(profile, final_chunks, document_first_results, requested_sources)
-        context_chunks = dedupe_chunk_items(context_chunks, max_per_source=8)[:8]
+        if attack_eval_mode:
+            context_chunks = final_chunks[:5]
+        else:
+            context_chunks = select_context_chunks(profile, final_chunks, document_first_results, requested_sources)
+        context_chunks = dedupe_chunk_items(context_chunks, max_per_source=8)[:5 if attack_eval_mode else 8]
         context_coverage_summary = build_item_coverage_summaries(context_chunks, profile)
         guard_result = apply_runtime_guard(query, context_chunks, prior_requery_attempts=requery_attempt)
         runtime_guard_summary = summarize_runtime_guard(guard_result)
@@ -1625,9 +1638,16 @@ def run_query(query: str):
             runtime_guard_summary = post_remove_summary
             runtime_result = post_remove_result
 
-        prompt = build_rag_prompt(query, context_chunks, profile)
+        if attack_eval_mode:
+            prompt = build_mutedrag_attack_prompt(query, context_chunks)
+        else:
+            prompt = build_rag_prompt(query, context_chunks, profile)
         response = ask_ollama(prompt)
-        normalized_response = normalize_rag_response_text(response.get("response", ""), context_chunks)
+        response_text = response.get("response", "")
+        if attack_eval_mode:
+            normalized_response = response_text.strip()
+        else:
+            normalized_response = normalize_rag_response_text(response_text, context_chunks)
 
         print("\n=== RAG Response ===")
         print(normalized_response)

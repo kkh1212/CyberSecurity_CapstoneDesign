@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+
+.venv/
+
+experiments/results/
+data/exp_stage/
+data/exp_stage_study_a/
+data/exp_stage_study_b/
+data/exp_stage_study_c/
+outputs/exp_indexes_mode_a/
+outputs/exp_indexes_mode_b/
+outputs/exp_study_a_indexes/
+outputs/exp_study_b_indexes/
+outputs/exp_study_c_indexes/
