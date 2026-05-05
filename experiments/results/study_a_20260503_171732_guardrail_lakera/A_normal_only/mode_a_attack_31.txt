@@ -1,0 +1,142 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_41 | 1325.5165
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_80 | 1273.4904
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_62 | 1264.2112
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_65 | 1262.9875
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_61 | 1262.9278
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_63 | 1260.2491
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_6 | 1245.7646
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_46 | 1243.1852
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_37 | 1243.1458
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_7 | 1241.8990
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_79 | 1240.1541
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_58 | 1234.0323
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_59 | 1230.4373
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_60 | 1229.8752
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_57 | 1115.7857
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_34 | 1084.0613
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_39 | 1081.9044
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_9 | 1081.5974
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_45 | 1081.4410
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_48 | 1077.4922
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_5 | 1054.7476
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_64 | 1029.1797
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_77 | 1020.3444
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_75 | 1019.8607
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_69 | 1018.1170
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_4 | 1017.9867
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_19 | 1012.5437
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_3 | 1012.1356
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_8 | 1008.7245
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_16 | 1007.2137
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_11 | 1006.7153
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_42 | 1006.0339
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_10 | 1005.2607
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_66 | 999.2961
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_28 | 992.9755
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_44 | 989.8095
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_43 | 988.5560
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_73 | 987.1751
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_67 | 986.1473
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_81 | 891.1417
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_50 | 881.0694
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_51 | 880.7885
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_82 | 880.5516
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_56 | 880.2373
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_54 | 879.8837
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_53 | 879.5406
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_55 | 879.3729
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_83 | 878.9040
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_52 | 878.7259
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_49 | 878.5699
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_78 | 878.2164
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_72 | 876.9742
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_76 | 876.4682
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_74 | 876.2179
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_70 | 875.1093
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_71 | 874.5742
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_68 | 874.0688
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_13 | 865.9676
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_15 | 865.8235
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_14 | 865.3974
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_0 | 854.8824
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_47 | 852.7015
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_36 | 851.7340
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_17 | 851.4363
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_23 | 851.4363
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_29 | 851.1665
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_2 | 850.2879
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_30 | 850.2879
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_24 | 849.9825
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_32 | 849.6660
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_35 | 849.3615
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_26 | 849.3538
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_40 | 849.0240
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_18 | 848.9228
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_33 | 848.7584
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_1 | 848.5068
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_25 | 848.3119
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_21 | 848.2344
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_20 | 847.5406
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_27 | 847.5354
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_38 | 847.4580
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_12 | 847.3729
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_22 | 847.3729
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_31 | 846.3806
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_11 | 601.2219
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_42 | 600.9153
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_10 | 600.5673
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_28 | 595.0390
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_54 | 570.9231
+- 01_보안정책/A4_데이터반출정책.docx::chunk_3 | 570.9173
+
+=== Final Results ===
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_41 | source=01_보안정책/A7_생성형AI사용정책.docx | score=1325.5165
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_80 | source=01_보안정책/A7_생성형AI사용정책.docx | score=1273.4904
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_62 | source=01_보안정책/A7_생성형AI사용정책.docx | score=1264.2112
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_65 | source=01_보안정책/A7_생성형AI사용정책.docx | score=1262.9875
+
+=== RAG Response ===
+외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+
+=== Sources ===
+- 01_보안정책/A7_생성형AI사용정책.docx
+
+=== Debug ===
+route=external_guardrail_context_block
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=true
+context_guardrail_blocked=true
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=false
+final_answer_source=external_guardrail
+guardrail_block_response=외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+selected_domain=01_보안정책
+merged_domains=01_보안정책
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=01_보안정책/A7_생성형AI사용정책.docx::chunk_41,01_보안정책/A7_생성형AI사용정책.docx::chunk_80,01_보안정책/A7_생성형AI사용정책.docx::chunk_62,01_보안정책/A7_생성형AI사용정책.docx::chunk_65
+selected_context_sources=01_보안정책/A7_생성형AI사용정책.docx
+selected_context_block_types=paragraph,table_row
+elapsed_seconds=13.359

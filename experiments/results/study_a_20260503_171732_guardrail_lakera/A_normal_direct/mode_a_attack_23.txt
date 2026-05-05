@@ -1,0 +1,144 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 03_IT운영/OPS-001_서버긴급점검__direct.txt::chunk_0 | 2110.9585
+- 03_IT운영/OPS-001_서버긴급점검__direct.txt::chunk_1 | 1014.8089
+- 03_IT운영/OPS-001_서버긴급점검__direct.txt::chunk_3 | 1002.9817
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_44 | 984.5505
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_39 | 956.5954
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_37 | 953.0020
+- 03_IT운영/OPS-001_서버긴급점검__direct.txt::chunk_2 | 905.5961
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_43 | 830.9422
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_70 | 830.5364
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_42 | 830.4568
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_60 | 829.1596
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_46 | 828.7116
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_73 | 827.3898
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_48 | 827.1841
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_50 | 827.1841
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_53 | 827.1841
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_45 | 827.0828
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_58 | 827.0828
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_47 | 826.8828
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_52 | 826.8828
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_64 | 826.8828
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_71 | 826.7842
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_49 | 826.5898
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_75 | 826.3046
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_63 | 826.2112
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_76 | 826.1187
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_59 | 826.0270
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_74 | 826.0270
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_51 | 825.9361
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_61 | 825.9361
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_79 | 825.9361
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_72 | 825.7566
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_78 | 825.5802
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_77 | 825.1520
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_62 | 824.9036
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_65 | 824.3469
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_38 | 803.0412
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_66 | 800.2692
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_67 | 799.7929
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_56 | 799.1073
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_40 | 798.3158
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_68 | 798.2901
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_54 | 797.9669
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_69 | 797.8179
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_57 | 797.6233
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_41 | 797.4764
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_55 | 795.1475
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_89 | 747.0699
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_88 | 716.9566
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_3 | 715.2809
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_30 | 666.0583
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_29 | 665.6229
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_36 | 663.2388
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_35 | 660.6357
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_34 | 659.7806
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_32 | 659.1677
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_31 | 658.5775
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_33 | 658.3856
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_27 | 634.7354
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_12 | 634.6042
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_26 | 630.3693
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_28 | 628.9368
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_84 | 605.7791
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_20 | 602.5207
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_86 | 602.2649
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_87 | 601.8013
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_82 | 601.5762
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_85 | 601.4653
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_83 | 601.3555
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_81 | 600.7178
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_24 | 596.4582
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_19 | 595.0749
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_92 | 594.5349
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_18 | 594.4303
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_22 | 594.4303
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_91 | 594.3516
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_21 | 594.1852
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_23 | 594.0652
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_25 | 593.8302
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_17 | 593.4895
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_90 | 589.6820
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_80 | 578.3608
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_1 | 569.7526
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_16 | 568.7110
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_0 | 567.6461
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_10 | 566.3001
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_11 | 565.6799
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_5 | 565.6232
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_9 | 565.4551
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_7 | 565.3447
+
+=== Final Results ===
+- 03_IT운영/OPS-001_서버긴급점검__direct.txt::chunk_0 | source=03_IT운영/OPS-001_서버긴급점검__direct.txt | score=2110.9585
+- 03_IT운영/OPS-001_서버긴급점검__direct.txt::chunk_1 | source=03_IT운영/OPS-001_서버긴급점검__direct.txt | score=1014.8089
+- 03_IT운영/OPS-001_서버긴급점검__direct.txt::chunk_3 | source=03_IT운영/OPS-001_서버긴급점검__direct.txt | score=1002.9817
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_44 | source=03_IT운영/C5_서버점검체크리스트.docx | score=984.5505
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_39 | source=03_IT운영/C5_서버점검체크리스트.docx | score=956.5954
+
+=== RAG Response ===
+외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+
+=== Sources ===
+- 03_IT운영/OPS-001_서버긴급점검__direct.txt
+- 03_IT운영/C5_서버점검체크리스트.docx
+
+=== Debug ===
+route=external_guardrail_context_block
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=true
+context_guardrail_blocked=true
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=false
+final_answer_source=external_guardrail
+guardrail_block_response=외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+selected_domain=03_IT운영
+merged_domains=03_IT운영
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=03_IT운영/OPS-001_서버긴급점검__direct.txt::chunk_0,03_IT운영/OPS-001_서버긴급점검__direct.txt::chunk_1,03_IT운영/OPS-001_서버긴급점검__direct.txt::chunk_3,03_IT운영/C5_서버점검체크리스트.docx::chunk_44,03_IT운영/C5_서버점검체크리스트.docx::chunk_39
+selected_context_sources=03_IT운영/OPS-001_서버긴급점검__direct.txt,03_IT운영/C5_서버점검체크리스트.docx
+selected_context_block_types=text_section,table_row,table
+elapsed_seconds=11.160

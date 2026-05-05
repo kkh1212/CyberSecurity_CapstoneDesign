@@ -22,6 +22,14 @@
 set -euo pipefail
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# Load .env from project root if present (API keys, provider settings)
+if [[ -f "${PROJECT_ROOT}/.env" ]]; then
+    set -a
+    # shellcheck source=/dev/null
+    source "${PROJECT_ROOT}/.env"
+    set +a
+fi
 EXPERIMENTS_DIR="${PROJECT_ROOT}/experiments"
 QUERIES_JSON="${EXPERIMENTS_DIR}/queries.json"
 
@@ -34,8 +42,25 @@ RANDOM_SEED="${RANDOM_SEED:-42}"
 A_DIRECT_TYPES="${A_DIRECT_TYPES:-01_직접인젝션}"
 A_MUTED_TYPES="${A_MUTED_TYPES:-02_간접_명시형}"
 A_QUERY_SET="${A_QUERY_SET:-all}"
+A_MAX_QUESTIONS="${A_MAX_QUESTIONS:-0}"
 
-STUDY_ID="study_a_$(date +%Y%m%d_%H%M%S)"
+EXTERNAL_GUARDRAIL_ENABLED="${EXTERNAL_GUARDRAIL_ENABLED:-false}"
+EXTERNAL_GUARDRAIL_PROVIDER="${EXTERNAL_GUARDRAIL_PROVIDER:-off}"
+EXTERNAL_GUARDRAIL_STAGES="${EXTERNAL_GUARDRAIL_STAGES:-context}"
+EXTERNAL_GUARDRAIL_ACTION="${EXTERNAL_GUARDRAIL_ACTION:-block}"
+EXTERNAL_GUARDRAIL_FAIL_MODE="${EXTERNAL_GUARDRAIL_FAIL_MODE:-open}"
+EXTERNAL_GUARDRAIL_API_URL="${EXTERNAL_GUARDRAIL_API_URL:-}"
+EXTERNAL_GUARDRAIL_API_KEY="${EXTERNAL_GUARDRAIL_API_KEY:-}"
+EXTERNAL_GUARDRAIL_TIMEOUT_SEC="${EXTERNAL_GUARDRAIL_TIMEOUT_SEC:-10}"
+
+if [[ "${EXTERNAL_GUARDRAIL_ENABLED,,}" == "true" || "${EXTERNAL_GUARDRAIL_ENABLED}" == "1" ]]; then
+  GUARDRAIL_SUFFIX="guardrail_${EXTERNAL_GUARDRAIL_PROVIDER}"
+else
+  GUARDRAIL_SUFFIX="guardrail_off"
+fi
+GUARDRAIL_SUFFIX="$(echo "${GUARDRAIL_SUFFIX}" | tr -cd '[:alnum:]_-')"
+
+STUDY_ID="study_a_$(date +%Y%m%d_%H%M%S)_${GUARDRAIL_SUFFIX}"
 RESULTS_ROOT="${EXPERIMENTS_DIR}/results/${STUDY_ID}"
 STAGE_ROOT="${PROJECT_ROOT}/data/exp_stage_study_a"
 INDEX_ROOT="${PROJECT_ROOT}/outputs/exp_study_a_indexes"
@@ -51,7 +76,7 @@ curl -sf "${OLLAMA_BASE_URL}/api/tags" >/dev/null 2>&1 \
 
 run_python() {
   local envs=("${@}")
-  local env_prefix=""
+  local env_prefix=()
   local remaining=()
   local in_cmd=false
   for arg in "${envs[@]}"; do
@@ -60,10 +85,10 @@ run_python() {
     elif [[ "$arg" == "--cmd" ]]; then
       in_cmd=true
     else
-      env_prefix="${env_prefix} ${arg}"
+      env_prefix+=("$arg")
     fi
   done
-  (cd "${PROJECT_ROOT}" && env ${env_prefix} "${remaining[@]}")
+  (cd "${PROJECT_ROOT}" && env "${env_prefix[@]}" "${remaining[@]}")
 }
 
 stage_condition() {
@@ -117,6 +142,9 @@ run_condition_queries() {
 
   n_queries=$(jq "(${query_filter}) | length" "${QUERIES_JSON}")
   [[ "${n_queries}" -gt 0 ]] || die "No queries found: ${A_QUERY_SET}"
+  if [[ "${A_MAX_QUESTIONS}" =~ ^[0-9]+$ ]] && [[ "${A_MAX_QUESTIONS}" -gt 0 ]] && [[ "${A_MAX_QUESTIONS}" -lt "${n_queries}" ]]; then
+    n_queries="${A_MAX_QUESTIONS}"
+  fi
 
   log "STEP 3 [${condition}]: ${A_QUERY_SET} queries (${n_queries})"
   local common_envs=(
@@ -131,6 +159,16 @@ run_condition_queries() {
     "FINAL_TOP_K=5"
     "OLLAMA_BASE_URL=${OLLAMA_BASE_URL}"
     "OLLAMA_MODEL=${OLLAMA_MODEL}"
+    "STUDY_A_CONDITION=${condition}"
+    "STUDY_A_QUERY_SET=${A_QUERY_SET}"
+    "EXTERNAL_GUARDRAIL_ENABLED=${EXTERNAL_GUARDRAIL_ENABLED}"
+    "EXTERNAL_GUARDRAIL_PROVIDER=${EXTERNAL_GUARDRAIL_PROVIDER}"
+    "EXTERNAL_GUARDRAIL_STAGES=${EXTERNAL_GUARDRAIL_STAGES}"
+    "EXTERNAL_GUARDRAIL_ACTION=${EXTERNAL_GUARDRAIL_ACTION}"
+    "EXTERNAL_GUARDRAIL_FAIL_MODE=${EXTERNAL_GUARDRAIL_FAIL_MODE}"
+    "EXTERNAL_GUARDRAIL_API_URL=${EXTERNAL_GUARDRAIL_API_URL}"
+    "EXTERNAL_GUARDRAIL_API_KEY=${EXTERNAL_GUARDRAIL_API_KEY}"
+    "EXTERNAL_GUARDRAIL_TIMEOUT_SEC=${EXTERNAL_GUARDRAIL_TIMEOUT_SEC}"
   )
 
   for i in $(seq 1 "${n_queries}"); do
@@ -139,7 +177,7 @@ run_condition_queries() {
     idx_pad=$(printf "%02d" "$i")
     outfile="${out_dir}/mode_a_attack_${idx_pad}.txt"
     log "  [${condition}] Q${idx_pad}: ${query:0:50}..."
-    echo "${query}" | run_python "${common_envs[@]}" "MUTEDRAG_ATTACK_EVAL=true" --cmd python -m src.query_app \
+    echo "${query}" | run_python "${common_envs[@]}" "MUTEDRAG_ATTACK_EVAL=true" "STUDY_A_QUERY_INDEX=${idx_pad}" --cmd python -m src.query_app \
       > "${outfile}" 2>&1 || true
   done
 }
@@ -175,6 +213,11 @@ main() {
   log "A_DIRECT_TYPES=${A_DIRECT_TYPES}"
   log "A_MUTED_TYPES=${A_MUTED_TYPES}"
   log "A_QUERY_SET=${A_QUERY_SET}"
+  log "A_MAX_QUESTIONS=${A_MAX_QUESTIONS}"
+  log "EXTERNAL_GUARDRAIL_ENABLED=${EXTERNAL_GUARDRAIL_ENABLED}"
+  log "EXTERNAL_GUARDRAIL_PROVIDER=${EXTERNAL_GUARDRAIL_PROVIDER}"
+  log "EXTERNAL_GUARDRAIL_STAGES=${EXTERNAL_GUARDRAIL_STAGES}"
+  log "EXTERNAL_GUARDRAIL_ACTION=${EXTERNAL_GUARDRAIL_ACTION}"
 
   mkdir -p "${RESULTS_ROOT}" "${STAGE_ROOT}" "${INDEX_ROOT}"
 

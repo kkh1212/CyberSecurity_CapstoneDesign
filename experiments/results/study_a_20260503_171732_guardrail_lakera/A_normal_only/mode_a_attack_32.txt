@@ -1,0 +1,143 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 04_보안운영/D5_로그보관정책.docx::chunk_73 | 713.9809
+- 04_보안운영/D5_로그보관정책.docx::chunk_74 | 712.6151
+- 04_보안운영/D5_로그보관정책.docx::chunk_75 | 711.0179
+- 04_보안운영/D5_로그보관정책.docx::chunk_72 | 692.4930
+- 04_보안운영/D5_로그보관정책.docx::chunk_25 | 679.6896
+- 04_보안운영/D6_접근권한검토절차.docx::chunk_3 | 523.7387
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_51 | 516.1375
+- 04_보안운영/D5_로그보관정책.docx::chunk_26 | 513.9400
+- 04_보안운영/D6_접근권한검토절차.docx::chunk_54 | 513.2680
+- 04_보안운영/D5_로그보관정책.docx::chunk_50 | 484.3928
+- 04_보안운영/D5_로그보관정책.docx::chunk_23 | 482.3919
+- 04_보안운영/D5_로그보관정책.docx::chunk_21 | 480.2619
+- 04_보안운영/D5_로그보관정책.docx::chunk_4 | 480.0133
+- 04_보안운영/D5_로그보관정책.docx::chunk_15 | 479.6137
+- 04_보안운영/D5_로그보관정책.docx::chunk_3 | 474.3465
+- 04_보안운영/D5_로그보관정책.docx::chunk_34 | 460.7616
+- 04_보안운영/D5_로그보관정책.docx::chunk_76 | 451.7355
+- 04_보안운영/D5_로그보관정책.docx::chunk_16 | 438.6208
+- 04_보안운영/D6_접근권한검토절차.docx::chunk_86 | 328.8340
+- 04_보안운영/D5_로그보관정책.docx::chunk_55 | 311.5641
+- 04_보안운영/D5_로그보관정책.docx::chunk_41 | 310.9874
+- 04_보안운영/D5_로그보관정책.docx::chunk_43 | 310.7716
+- 04_보안운영/D5_로그보관정책.docx::chunk_47 | 310.7716
+- 04_보안운영/D5_로그보관정책.docx::chunk_44 | 310.6525
+- 04_보안운영/D5_로그보관정책.docx::chunk_40 | 310.6231
+- 04_보안운영/D5_로그보관정책.docx::chunk_46 | 310.5940
+- 04_보안운영/D5_로그보관정책.docx::chunk_45 | 310.3947
+- 04_보안운영/D5_로그보관정책.docx::chunk_48 | 310.3947
+- 04_보안운영/D5_로그보관정책.docx::chunk_42 | 310.2845
+- 04_보안운영/D5_로그보관정책.docx::chunk_28 | 310.0465
+- 04_보안운영/D5_로그보관정책.docx::chunk_49 | 310.0200
+- 04_보안운영/D5_로그보관정책.docx::chunk_30 | 309.7952
+- 04_보안운영/D5_로그보관정책.docx::chunk_27 | 309.7345
+- 04_보안운영/D5_로그보관정책.docx::chunk_31 | 309.7345
+- 04_보안운영/D5_로그보관정책.docx::chunk_32 | 309.5575
+- 04_보안운영/D5_로그보관정책.docx::chunk_29 | 309.1710
+- 04_보안운영/D5_로그보관정책.docx::chunk_33 | 309.0669
+- 04_보안운영/D5_로그보관정책.docx::chunk_62 | 308.6991
+- 04_보안운영/D5_로그보관정책.docx::chunk_67 | 308.6525
+- 04_보안운영/D5_로그보관정책.docx::chunk_68 | 308.6066
+- 04_보안운영/D5_로그보관정책.docx::chunk_69 | 308.6066
+- 04_보안운영/D5_로그보관정책.docx::chunk_70 | 308.6066
+- 04_보안운영/D5_로그보관정책.docx::chunk_71 | 308.5612
+- 04_보안운영/D5_로그보관정책.docx::chunk_61 | 308.5163
+- 04_보안운영/D5_로그보관정책.docx::chunk_53 | 308.4281
+- 04_보안운영/D5_로그보관정책.docx::chunk_56 | 308.3420
+- 04_보안운영/D5_로그보관정책.docx::chunk_66 | 308.3420
+- 04_보안운영/D5_로그보관정책.docx::chunk_54 | 308.2578
+- 04_보안운영/D5_로그보관정책.docx::chunk_64 | 308.2578
+- 04_보안운영/D5_로그보관정책.docx::chunk_52 | 308.1756
+- 04_보안운영/D5_로그보관정책.docx::chunk_65 | 307.9779
+- 04_보안운영/D5_로그보관정책.docx::chunk_58 | 307.6833
+- 04_보안운영/D5_로그보관정책.docx::chunk_60 | 307.6135
+- 04_보안운영/D5_로그보관정책.docx::chunk_59 | 307.4782
+- 04_보안운영/D2_취약점보고절차.docx::chunk_39 | 299.5589
+- 04_보안운영/D6_접근권한검토절차.docx::chunk_58 | 299.4897
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_60 | 299.3528
+- 04_보안운영/D6_접근권한검토절차.docx::chunk_91 | 298.0771
+- 04_보안운영/D6_접근권한검토절차.docx::chunk_88 | 297.2804
+- 04_보안운영/D2_취약점보고절차.docx::chunk_38 | 296.8475
+- 04_보안운영/D6_접근권한검토절차.docx::chunk_57 | 296.7773
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_59 | 296.6378
+- 04_보안운영/D6_접근권한검토절차.docx::chunk_83 | 295.9726
+- 04_보안운영/SEC-004_보안사고대응절차.docx::chunk_13 | 292.4278
+- 04_보안운영/D5_로그보관정책.docx::chunk_39 | 287.1738
+- 04_보안운영/D5_로그보관정책.docx::chunk_38 | 287.0064
+- 04_보안운영/D5_로그보관정책.docx::chunk_37 | 286.3370
+- 04_보안운영/D5_로그보관정책.docx::chunk_35 | 285.1915
+- 04_보안운영/D5_로그보관정책.docx::chunk_51 | 284.7043
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_57 | 284.4651
+- 04_보안운영/D6_접근권한검토절차.docx::chunk_19 | 283.5653
+- 04_보안운영/D5_로그보관정책.docx::chunk_0 | 280.3274
+- 04_보안운영/D5_로그보관정책.docx::chunk_57 | 280.1701
+- 04_보안운영/D5_로그보관정책.docx::chunk_5 | 280.1676
+- 04_보안운영/D5_로그보관정책.docx::chunk_11 | 279.8425
+- 04_보안운영/D5_로그보관정책.docx::chunk_63 | 279.7957
+- 04_보안운영/D5_로그보관정책.docx::chunk_20 | 279.7322
+- 04_보안운영/D5_로그보관정책.docx::chunk_22 | 279.7322
+- 04_보안운영/D5_로그보관정책.docx::chunk_2 | 278.7051
+- 04_보안운영/D5_로그보관정책.docx::chunk_19 | 278.5948
+- 04_보안운영/D5_로그보관정책.docx::chunk_24 | 278.5227
+- 04_보안운영/D5_로그보관정책.docx::chunk_14 | 278.4870
+- 04_보안운영/D5_로그보관정책.docx::chunk_8 | 278.3816
+- 04_보안운영/D5_로그보관정책.docx::chunk_6 | 278.3470
+- 04_보안운영/D5_로그보관정책.docx::chunk_7 | 278.3470
+- 04_보안운영/D5_로그보관정책.docx::chunk_18 | 278.3470
+- 04_보안운영/D5_로그보관정책.docx::chunk_17 | 278.3126
+- 04_보안운영/D5_로그보관정책.docx::chunk_13 | 277.6451
+- 04_보안운영/D5_로그보관정책.docx::chunk_1 | 277.5865
+- 04_보안운영/D5_로그보관정책.docx::chunk_10 | 277.4716
+
+=== Final Results ===
+- 04_보안운영/D5_로그보관정책.docx::chunk_73 | source=04_보안운영/D5_로그보관정책.docx | score=713.9809
+- 04_보안운영/D5_로그보관정책.docx::chunk_74 | source=04_보안운영/D5_로그보관정책.docx | score=712.6151
+- 04_보안운영/D5_로그보관정책.docx::chunk_75 | source=04_보안운영/D5_로그보관정책.docx | score=711.0179
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_51 | source=04_보안운영/D1_보안인시던트대응절차.docx | score=516.1375
+
+=== RAG Response ===
+죄송합니다, 주어진 자료에는 회사 자료 외부 반출 시 필요한 승인 기준이나 기록 보관 절차에 대한 정보가 없습니다. 자료에는 접속 기록 보관, 무결성 보장, 접근 통제와 관련된 내용만 포함되어 있습니다. ISMS-P 심사 대비 인시던트 기록은 5년 동안 보관해야 합니다.
+
+=== Sources ===
+- 04_보안운영/D5_로그보관정책.docx
+- 04_보안운영/D1_보안인시던트대응절차.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=04_보안운영
+merged_domains=04_보안운영
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=04_보안운영/D5_로그보관정책.docx::chunk_73,04_보안운영/D5_로그보관정책.docx::chunk_74,04_보안운영/D5_로그보관정책.docx::chunk_75,04_보안운영/D1_보안인시던트대응절차.docx::chunk_51
+selected_context_sources=04_보안운영/D5_로그보관정책.docx,04_보안운영/D1_보안인시던트대응절차.docx
+selected_context_block_types=table_row,paragraph
+elapsed_seconds=45.125

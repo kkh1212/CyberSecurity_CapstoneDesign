@@ -1,0 +1,143 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 01_보안정책/SEC-007_데이터반출__direct.txt::chunk_0 | 1681.0380
+- 01_보안정책/SEC-007_데이터반출__direct.txt::chunk_1 | 776.1530
+- 01_보안정책/A4_데이터반출정책.docx::chunk_3 | 649.1939
+- 01_보안정책/SEC-007_데이터반출__direct.txt::chunk_2 | 576.2782
+- 01_보안정책/A4_데이터반출정책.docx::chunk_19 | 564.9867
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_43 | 378.9957
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_72 | 368.3388
+- 01_보안정책/A4_데이터반출정책.docx::chunk_59 | 317.9494
+- 01_보안정책/SEC-007_데이터반출__direct.txt::chunk_3 | 317.8341
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_84 | 301.5532
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_8 | 295.9819
+- 01_보안정책/A4_데이터반출정책.docx::chunk_39 | 295.9597
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_13 | 295.7435
+- 01_보안정책/A4_데이터반출정책.docx::chunk_65 | 294.6100
+- 01_보안정책/A4_데이터반출정책.docx::chunk_60 | 294.5155
+- 01_보안정책/A4_데이터반출정책.docx::chunk_63 | 294.4221
+- 01_보안정책/A4_데이터반출정책.docx::chunk_58 | 294.3295
+- 01_보안정책/A4_데이터반출정책.docx::chunk_57 | 294.1925
+- 01_보안정책/A4_데이터반출정책.docx::chunk_33 | 293.1195
+- 01_보안정책/A4_데이터반출정책.docx::chunk_55 | 289.4861
+- 01_보안정책/A4_데이터반출정책.docx::chunk_53 | 289.2525
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_74 | 289.2456
+- 01_보안정책/A4_데이터반출정책.docx::chunk_38 | 287.6405
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_53 | 286.0636
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_77 | 282.9460
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_76 | 282.8394
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_75 | 281.3433
+- 01_보안정책/A4_데이터반출정책.docx::chunk_26 | 281.1581
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_62 | 280.3757
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_74 | 280.0172
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_63 | 279.5235
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_12 | 274.5567
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_3 | 273.5430
+- 01_보안정책/A4_데이터반출정책.docx::chunk_54 | 270.5857
+- 01_보안정책/A4_데이터반출정책.docx::chunk_56 | 269.9562
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_65 | 266.1034
+- 01_보안정책/SEC-001_정보보안정책__direct.txt::chunk_1 | 264.7469
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_73 | 261.9785
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_15 | 261.8649
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_71 | 257.9632
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_47 | 255.5522
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_37 | 255.3266
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_13 | 255.2633
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_58 | 254.9622
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_60 | 253.9494
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_43 | 252.7259
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_47 | 252.6491
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_53 | 252.5351
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_45 | 252.5351
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_48 | 252.4974
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_59 | 251.8461
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_41 | 251.3705
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_7 | 250.2963
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_25 | 249.3166
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_11 | 248.4693
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_7 | 246.6248
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_66 | 240.7538
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_86 | 221.6465
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_74 | 206.1910
+- 01_보안정책/SEC-006_생성형AI사용__direct.txt::chunk_2 | 205.4375
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_38 | 205.2002
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_68 | 201.3378
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_3 | 201.2845
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_44 | 200.7440
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_69 | 200.7175
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_49 | 200.7128
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_54 | 200.6817
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_48 | 200.6817
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_46 | 200.6817
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_85 | 199.4988
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_71 | 199.0265
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_73 | 198.9940
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_3 | 195.1384
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_16 | 195.0174
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_14 | 194.7672
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_1 | 190.3460
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_15 | 189.9182
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_96 | 186.0000
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_20 | 184.9011
+- 01_보안정책/SEC-001_정보보안정책__direct.txt::chunk_3 | 184.8247
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_44 | 183.3102
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_37 | 176.0901
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_3 | 175.9144
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_78 | 173.7500
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_15 | 173.1230
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_21 | 173.0119
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_13 | 172.8453
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_28 | 172.6928
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_29 | 172.5593
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_30 | 172.2551
+
+=== Final Results ===
+- 01_보안정책/SEC-007_데이터반출__direct.txt::chunk_0 | source=01_보안정책/SEC-007_데이터반출__direct.txt | score=1681.0380
+- 01_보안정책/SEC-007_데이터반출__direct.txt::chunk_1 | source=01_보안정책/SEC-007_데이터반출__direct.txt | score=776.1530
+- 01_보안정책/A4_데이터반출정책.docx::chunk_3 | source=01_보안정책/A4_데이터반출정책.docx | score=649.1939
+- 01_보안정책/SEC-007_데이터반출__direct.txt::chunk_2 | source=01_보안정책/SEC-007_데이터반출__direct.txt | score=576.2782
+
+=== RAG Response ===
+외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+
+=== Sources ===
+- 01_보안정책/SEC-007_데이터반출__direct.txt
+- 01_보안정책/A4_데이터반출정책.docx
+
+=== Debug ===
+route=external_guardrail_context_block
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=true
+context_guardrail_blocked=true
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=false
+final_answer_source=external_guardrail
+guardrail_block_response=외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+selected_domain=01_보안정책
+merged_domains=01_보안정책
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=01_보안정책/SEC-007_데이터반출__direct.txt::chunk_0,01_보안정책/SEC-007_데이터반출__direct.txt::chunk_1,01_보안정책/A4_데이터반출정책.docx::chunk_3,01_보안정책/SEC-007_데이터반출__direct.txt::chunk_2
+selected_context_sources=01_보안정책/SEC-007_데이터반출__direct.txt,01_보안정책/A4_데이터반출정책.docx
+selected_context_block_types=text_section,paragraph
+elapsed_seconds=13.453

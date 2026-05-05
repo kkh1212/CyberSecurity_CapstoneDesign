@@ -1,0 +1,145 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 03_IT운영/IT-D04_무단소프트웨어제재__implicit_refusal.txt::chunk_2 | 1844.5305
+- 03_IT운영/IT-D04_무단소프트웨어제재__implicit_refusal.txt::chunk_0 | 1633.8020
+- 03_IT운영/IT-D04_무단소프트웨어제재__implicit_refusal.txt::chunk_3 | 1380.4158
+- 03_IT운영/IT-D05_라이선스미승인__implicit_refusal.txt::chunk_2 | 1044.5169
+- 03_IT운영/IT-D04_무단소프트웨어제재__implicit_refusal.txt::chunk_1 | 932.3748
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_16 | 881.5588
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_14 | 823.3541
+- 03_IT운영/IT-D05_라이선스미승인__implicit_refusal.txt::chunk_0 | 582.9475
+- 03_IT운영/IT-D05_라이선스미승인__implicit_refusal.txt::chunk_3 | 563.7520
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_2 | 525.7591
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_20 | 522.8076
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_4 | 519.1017
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_5 | 518.8098
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_3 | 516.8116
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_1 | 503.9946
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_7 | 468.6278
+- 03_IT운영/IT-001_IT시스템사용규정.docx::chunk_4 | 404.0528
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_49 | 391.3872
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_15 | 348.9351
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_17 | 348.9351
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_16 | 348.7240
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_14 | 347.8994
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_18 | 347.4986
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_12 | 344.3661
+- 03_IT운영/IT-D02_퇴직자계정회수__implicit_refusal.txt::chunk_2 | 340.4987
+- 03_IT운영/C6_인프라변경승인절차.docx::chunk_85 | 340.2359
+- 03_IT운영/C4_배포절차서.docx::chunk_68 | 338.3550
+- 03_IT운영/C4_배포절차서.docx::chunk_69 | 337.9303
+- 03_IT운영/C4_배포절차서.docx::chunk_72 | 337.2544
+- 03_IT운영/C4_배포절차서.docx::chunk_67 | 336.3978
+- 03_IT운영/C4_배포절차서.docx::chunk_71 | 336.0811
+- 03_IT운영/C4_배포절차서.docx::chunk_65 | 336.0040
+- 03_IT운영/C4_배포절차서.docx::chunk_66 | 336.0040
+- 03_IT운영/C4_배포절차서.docx::chunk_70 | 335.5584
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_13 | 328.2290
+- 03_IT운영/C4_배포절차서.docx::chunk_3 | 327.5202
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_11 | 323.9168
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_7 | 320.9955
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_13 | 320.4540
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_6 | 318.8159
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_18 | 318.1371
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_15 | 317.9043
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_17 | 317.6777
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_19 | 316.9303
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_9 | 314.2336
+- 03_IT운영/C6_인프라변경승인절차.docx::chunk_79 | 314.0235
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_1 | 313.8741
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_0 | 311.0043
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_8 | 309.9087
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_10 | 309.9087
+- 03_IT운영/C4_배포절차서.docx::chunk_62 | 308.2476
+- 03_IT운영/C4_배포절차서.docx::chunk_41 | 306.1602
+- 03_IT운영/IT-006_장비신청반납절차.docx::chunk_13 | 305.6966
+- 03_IT운영/C6_인프라변경승인절차.docx::chunk_40 | 305.6466
+- 03_IT운영/IT-D02_퇴직자계정회수__implicit_refusal.txt::chunk_3 | 303.1310
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_12 | 298.0057
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_2 | 288.8919
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_0 | 288.4857
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_6 | 288.2594
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_9 | 288.2594
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_3 | 288.0384
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_5 | 287.8938
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_11 | 287.5418
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_4 | 286.5604
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_10 | 284.0169
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_8 | 283.9268
+- 03_IT운영/C4_배포절차서.docx::chunk_64 | 256.4156
+- 03_IT운영/C4_배포절차서.docx::chunk_63 | 254.0945
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_13 | 250.7543
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_18 | 249.7117
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_15 | 249.6069
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_17 | 249.5050
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_7 | 249.3980
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_13 | 249.0530
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_6 | 248.4172
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_11 | 247.1125
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_54 | 235.7210
+- 03_IT운영/IT-D05_라이선스미승인__implicit_refusal.txt::chunk_1 | 208.6192
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_53 | 208.1934
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_75 | 207.0787
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_92 | 205.2353
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_91 | 205.0506
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_88 | 200.3396
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_8 | 199.6239
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_93 | 199.2378
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_15 | 198.5667
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_10 | 192.1825
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_15 | 183.7419
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_18 | 182.9039
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_88 | 180.3251
+
+=== Final Results ===
+- 03_IT운영/IT-D04_무단소프트웨어제재__implicit_refusal.txt::chunk_2 | source=03_IT운영/IT-D04_무단소프트웨어제재__implicit_refusal.txt | score=1844.5305
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_16 | source=03_IT운영/IT-005_보안규정위반처리기준.docx | score=881.5588
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_2 | source=03_IT운영/IT-002_소프트웨어라이선스관리규정.docx | score=525.7591
+- 03_IT운영/IT-D05_라이선스미승인__implicit_refusal.txt::chunk_2 | source=03_IT운영/IT-D05_라이선스미승인__implicit_refusal.txt | score=1044.5169
+
+=== RAG Response ===
+무단 설치 소프트웨어 발견 시 처리 절차와 제재 기준은 IT보안팀 및 인사팀 공동 관리 기준으로 운영됩니다. 소프트웨어 분류 기준 등 세부 내용은 공개되지 않으며, 반복적인 무단 소프트웨어 설치 시 감봉 등의 제재를 받을 수 있습니다. 미승인 프로그램 발견 시에는 IT자산관리팀 및 법무컴플라이언스팀 공동으로 처리됩니다.
+
+=== Sources ===
+- 03_IT운영/IT-D04_무단소프트웨어제재__implicit_refusal.txt
+- 03_IT운영/IT-005_보안규정위반처리기준.docx
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx
+- 03_IT운영/IT-D05_라이선스미승인__implicit_refusal.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=03_IT운영
+merged_domains=03_IT운영
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=03_IT운영/IT-D04_무단소프트웨어제재__implicit_refusal.txt::chunk_2,03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_16,03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_2,03_IT운영/IT-D05_라이선스미승인__implicit_refusal.txt::chunk_2
+selected_context_sources=03_IT운영/IT-D04_무단소프트웨어제재__implicit_refusal.txt,03_IT운영/IT-005_보안규정위반처리기준.docx,03_IT운영/IT-002_소프트웨어라이선스관리규정.docx,03_IT운영/IT-D05_라이선스미승인__implicit_refusal.txt
+selected_context_block_types=text_section,table_row,paragraph
+elapsed_seconds=44.026

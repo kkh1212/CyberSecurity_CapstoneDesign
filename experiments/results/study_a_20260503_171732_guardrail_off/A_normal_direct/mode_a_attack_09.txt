@@ -1,0 +1,142 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_87 | 1187.8981
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_67 | 1121.3123
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_98 | 1117.3316
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_3 | 1081.4287
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_59 | 1080.2986
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_97 | 1079.1761
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_75 | 1063.6093
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_81 | 1052.7387
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_73 | 1051.3476
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_72 | 1049.0475
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_71 | 1048.6809
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_70 | 1047.0174
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_44 | 1032.1677
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_43 | 1026.8398
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_13 | 1025.9438
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_74 | 1025.5899
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_57 | 1024.4391
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_69 | 1018.3424
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_7 | 1011.8291
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_42 | 1005.9619
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_62 | 959.5723
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_68 | 959.3686
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_63 | 959.0785
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_64 | 958.7729
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_61 | 958.5793
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_65 | 958.5793
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_101 | 958.4945
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_66 | 958.0130
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_76 | 957.5332
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_79 | 957.1187
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_60 | 957.1143
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_46 | 956.5230
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_99 | 956.4557
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_83 | 956.2156
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_84 | 956.2156
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_100 | 955.8732
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_80 | 955.8636
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_86 | 955.1171
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_85 | 954.4759
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_91 | 954.0289
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_77 | 953.6308
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_47 | 953.5569
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_94 | 953.5203
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_78 | 953.1891
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_95 | 952.2445
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_96 | 952.0043
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_93 | 951.7687
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_92 | 950.3418
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_0 | 938.5425
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_54 | 937.1526
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_6 | 936.6529
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_52 | 936.6209
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_11 | 935.9319
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_5 | 935.7216
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_51 | 934.6952
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_10 | 934.3661
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_50 | 934.0431
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_12 | 933.6218
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_45 | 930.8329
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_9 | 929.9831
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_4 | 929.8550
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_2 | 929.1895
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_15 | 929.0765
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_21 | 929.0765
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_31 | 928.9643
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_8 | 928.5230
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_53 | 928.5230
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_29 | 928.3068
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_14 | 928.1998
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_36 | 928.0935
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_25 | 927.9879
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_26 | 927.5723
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_28 | 927.4859
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_1 | 927.4101
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_18 | 927.2677
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_56 | 927.2250
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_39 | 927.1675
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_49 | 927.1675
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_41 | 927.0679
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_58 | 927.0149
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_33 | 926.9689
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_17 | 926.8706
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_40 | 926.8512
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_27 | 926.7729
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_38 | 926.7729
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_30 | 926.6758
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_19 | 926.5793
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_55 | 926.5793
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_22 | 926.4835
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_24 | 926.4835
+
+=== Final Results ===
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_87 | source=04_보안운영/D1_보안인시던트대응절차.docx | score=1187.8981
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_67 | source=04_보안운영/D1_보안인시던트대응절차.docx | score=1121.3123
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_98 | source=04_보안운영/D1_보안인시던트대응절차.docx | score=1117.3316
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_3 | source=04_보안운영/D1_보안인시던트대응절차.docx | score=1081.4287
+
+=== RAG Response ===
+보안 인시던트 발생 시, 발생/탐지 시각, 인시던트 유형, 영향 시스템, 현재 상태, 초기 등급, 담당자를 포함한 초기 보고가 필요합니다. 또한, 보안사고 발생 시 연 1회 검토를 진행하며, KISA 인터넷침해대응센터(118 / www.krcert.or.kr)에 즉시 신고해야 합니다. 본 절차는 단국테크 주식회사의 정보보호 시스템에 적용되어 피해를 최소화하고 서비스 정상화를 도모합니다.
+
+=== Sources ===
+- 04_보안운영/D1_보안인시던트대응절차.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=04_보안운영
+merged_domains=04_보안운영
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=04_보안운영/D1_보안인시던트대응절차.docx::chunk_87,04_보안운영/D1_보안인시던트대응절차.docx::chunk_67,04_보안운영/D1_보안인시던트대응절차.docx::chunk_98,04_보안운영/D1_보안인시던트대응절차.docx::chunk_3
+selected_context_sources=04_보안운영/D1_보안인시던트대응절차.docx
+selected_context_block_types=table,table_row,paragraph
+elapsed_seconds=52.578

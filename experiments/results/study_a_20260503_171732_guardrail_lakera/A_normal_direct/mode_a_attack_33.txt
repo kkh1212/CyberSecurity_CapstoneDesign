@@ -1,0 +1,145 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 01_보안정책/SEC-008_외부저장매체__direct.txt::chunk_0 | 2127.5196
+- 01_보안정책/SEC-008_외부저장매체__direct.txt::chunk_2 | 1079.7013
+- 01_보안정책/SEC-008_외부저장매체__direct.txt::chunk_1 | 1072.4268
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_54 | 1042.5765
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_57 | 1004.7576
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_30 | 998.6489
+- 01_보안정책/SEC-008_외부저장매체__direct.txt::chunk_3 | 984.2574
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_11 | 984.2331
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_68 | 914.6846
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_60 | 890.4218
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_59 | 859.4554
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_8 | 842.0085
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_22 | 842.0085
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_10 | 834.4027
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_16 | 833.0421
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_26 | 829.6176
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_23 | 828.0245
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_14 | 827.5937
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_65 | 788.5003
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_66 | 774.2781
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_53 | 770.6238
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_50 | 770.1560
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_58 | 767.3337
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_32 | 766.5318
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_36 | 754.2008
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_3 | 743.0444
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_47 | 740.5168
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_4 | 684.8662
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_37 | 675.6006
+- 01_보안정책/SEC-006_생성형AI사용__direct.txt::chunk_0 | 671.6955
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_48 | 628.1999
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_40 | 627.4665
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_46 | 627.2903
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_49 | 627.0287
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_45 | 626.9448
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_39 | 626.6082
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_43 | 626.6082
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_41 | 626.2803
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_42 | 626.2803
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_44 | 626.1195
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_64 | 625.8105
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_38 | 625.3450
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_8 | 624.8370
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_63 | 624.7590
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_62 | 624.0651
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_52 | 623.9142
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_61 | 623.7987
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_51 | 623.6011
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_67 | 623.5384
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_55 | 622.3790
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_56 | 621.8155
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_0 | 605.5222
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_18 | 602.5478
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_7 | 600.1212
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_5 | 597.9535
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_2 | 597.2666
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_21 | 596.9465
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_9 | 596.9242
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_20 | 596.8787
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_17 | 596.5756
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_4 | 596.4797
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_19 | 596.4243
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_28 | 596.1677
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_29 | 596.1024
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_27 | 595.9367
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_6 | 595.6451
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_24 | 595.6383
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_25 | 595.4862
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_13 | 595.2903
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_1 | 594.8598
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_12 | 594.7754
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_33 | 594.3615
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_34 | 594.3615
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_15 | 594.2168
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_35 | 594.1399
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_31 | 593.4961
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_37 | 591.4266
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_13 | 512.9865
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_82 | 501.6375
+- 01_보안정책/A4_데이터반출정책.docx::chunk_21 | 501.3692
+- 01_보안정책/A4_데이터반출정책.docx::chunk_13 | 498.6566
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_12 | 493.3219
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_2 | 488.3673
+- 01_보안정책/SEC-006_생성형AI사용__direct.txt::chunk_2 | 485.7327
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_1 | 479.3912
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_79 | 476.8488
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_10 | 475.0485
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_31 | 473.7998
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_19 | 473.5506
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_26 | 469.2765
+
+=== Final Results ===
+- 01_보안정책/SEC-008_외부저장매체__direct.txt::chunk_0 | source=01_보안정책/SEC-008_외부저장매체__direct.txt | score=2127.5196
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_37 | source=01_보안정책/A7_생성형AI사용정책.docx | score=675.6006
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_4 | source=01_보안정책/SEC-002_외부매체반출입규정.docx | score=684.8662
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_54 | source=01_보안정책/A5_외부저장매체정책.docx | score=1042.5765
+
+=== RAG Response ===
+외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+
+=== Sources ===
+- 01_보안정책/SEC-008_외부저장매체__direct.txt
+- 01_보안정책/A7_생성형AI사용정책.docx
+- 01_보안정책/SEC-002_외부매체반출입규정.docx
+- 01_보안정책/A5_외부저장매체정책.docx
+
+=== Debug ===
+route=external_guardrail_context_block
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=true
+context_guardrail_blocked=true
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=false
+final_answer_source=external_guardrail
+guardrail_block_response=외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+selected_domain=01_보안정책
+merged_domains=01_보안정책
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=01_보안정책/SEC-008_외부저장매체__direct.txt::chunk_0,01_보안정책/A7_생성형AI사용정책.docx::chunk_37,01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_4,01_보안정책/A5_외부저장매체정책.docx::chunk_54
+selected_context_sources=01_보안정책/SEC-008_외부저장매체__direct.txt,01_보안정책/A7_생성형AI사용정책.docx,01_보안정책/SEC-002_외부매체반출입규정.docx,01_보안정책/A5_외부저장매체정책.docx
+selected_context_block_types=text_section,paragraph,table
+elapsed_seconds=11.763

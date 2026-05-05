@@ -1,0 +1,144 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 06_제품지원/PRD-001_DankFlow__direct.txt::chunk_0 | 1240.2375
+- 06_제품지원/PRD-001_DankFlow__direct.txt::chunk_3 | 756.6463
+- 06_제품지원/PRD-001_DankFlow__direct.txt::chunk_1 | 754.9608
+- 06_제품지원/PRD-001_DankFlow__direct.txt::chunk_2 | 435.0903
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_46 | 372.2749
+- 06_제품지원/SVC-001_고객문의__direct.txt::chunk_0 | 287.9967
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_47 | 287.5674
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_44 | 287.5603
+- 06_제품지원/E1_제품기능가이드.docx::chunk_111 | 283.2757
+- 06_제품지원/E1_제품기능가이드.docx::chunk_48 | 275.2943
+- 06_제품지원/E1_제품기능가이드.docx::chunk_115 | 223.3296
+- 06_제품지원/E1_제품기능가이드.docx::chunk_72 | 207.0234
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_51 | 194.1019
+- 06_제품지원/E1_제품기능가이드.docx::chunk_41 | 193.2198
+- 06_제품지원/E1_제품기능가이드.docx::chunk_50 | 192.1860
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_16 | 186.3748
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_58 | 180.8914
+- 06_제품지원/E1_제품기능가이드.docx::chunk_68 | 170.6664
+- 06_제품지원/E1_제품기능가이드.docx::chunk_38 | 159.9016
+- 06_제품지원/E1_제품기능가이드.docx::chunk_1 | 156.8817
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_92 | 155.9057
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_45 | 150.4880
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_89 | 150.2935
+- 06_제품지원/E1_제품기능가이드.docx::chunk_36 | 150.1706
+- 06_제품지원/E1_제품기능가이드.docx::chunk_3 | 149.4059
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_17 | 109.2194
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_60 | 99.6771
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_55 | 96.1357
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_30 | 96.1350
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_25 | 95.9118
+- 06_제품지원/E1_제품기능가이드.docx::chunk_108 | 94.7906
+- 06_제품지원/E1_제품기능가이드.docx::chunk_62 | 92.3522
+- 06_제품지원/E1_제품기능가이드.docx::chunk_54 | 91.6338
+- 06_제품지원/E1_제품기능가이드.docx::chunk_88 | 91.3097
+- 06_제품지원/E1_제품기능가이드.docx::chunk_95 | 90.8689
+- 06_제품지원/E1_제품기능가이드.docx::chunk_71 | 90.6755
+- 06_제품지원/E1_제품기능가이드.docx::chunk_89 | 90.1420
+- 06_제품지원/E1_제품기능가이드.docx::chunk_116 | 89.9279
+- 06_제품지원/E1_제품기능가이드.docx::chunk_82 | 87.7198
+- 06_제품지원/E1_제품기능가이드.docx::chunk_49 | 78.6453
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_59 | 71.8352
+- 06_제품지원/E1_제품기능가이드.docx::chunk_108 | 66.2558
+- 06_제품지원/E1_제품기능가이드.docx::chunk_104 | 65.1879
+- 06_제품지원/E1_제품기능가이드.docx::chunk_62 | 65.1585
+- 06_제품지원/E1_제품기능가이드.docx::chunk_54 | 64.8352
+- 06_제품지원/E1_제품기능가이드.docx::chunk_88 | 64.6894
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_56 | 64.6388
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_52 | 64.0989
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_27 | 63.8306
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_22 | 63.5053
+- 06_제품지원/E1_제품기능가이드.docx::chunk_74 | 63.2580
+- 06_제품지원/E1_제품기능가이드.docx::chunk_85 | 62.3845
+- 06_제품지원/E1_제품기능가이드.docx::chunk_32 | 62.2681
+- 06_제품지원/E1_제품기능가이드.docx::chunk_75 | 61.3009
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_1 | 60.2802
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_1 | 60.0332
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_1 | 59.3609
+- 06_제품지원/E1_제품기능가이드.docx::chunk_92 | 59.3573
+- 06_제품지원/E1_제품기능가이드.docx::chunk_17 | 59.3135
+- 06_제품지원/E1_제품기능가이드.docx::chunk_56 | 58.6138
+- 06_제품지원/E1_제품기능가이드.docx::chunk_55 | 58.6087
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_54 | 57.2803
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_19 | 57.1300
+- 06_제품지원/E1_제품기능가이드.docx::chunk_11 | 56.1458
+- 06_제품지원/E1_제품기능가이드.docx::chunk_76 | 55.9268
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_3 | 55.7368
+- 06_제품지원/E1_제품기능가이드.docx::chunk_18 | 55.6585
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_48 | 55.3480
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_21 | 54.9778
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_43 | 53.0871
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_20 | 52.8226
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_22 | 52.5264
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_49 | 50.8064
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_1 | 49.1261
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_1 | 49.0149
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_1 | 48.7124
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_19 | 47.7085
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_56 | 47.4875
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_52 | 47.2445
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_27 | 47.1238
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_22 | 46.9774
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_95 | 43.8928
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_94 | 43.4706
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_48 | 43.3066
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_3 | 42.3189
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_43 | 42.2892
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_3 | 42.2548
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_87 | 32.6962
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_95 | 29.8729
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_94 | 28.9347
+
+=== Final Results ===
+- 06_제품지원/PRD-001_DankFlow__direct.txt::chunk_0 | source=06_제품지원/PRD-001_DankFlow__direct.txt | score=1240.2375
+- 06_제품지원/PRD-001_DankFlow__direct.txt::chunk_3 | source=06_제품지원/PRD-001_DankFlow__direct.txt | score=756.6463
+- 06_제품지원/PRD-001_DankFlow__direct.txt::chunk_1 | source=06_제품지원/PRD-001_DankFlow__direct.txt | score=754.9608
+- 06_제품지원/PRD-001_DankFlow__direct.txt::chunk_2 | source=06_제품지원/PRD-001_DankFlow__direct.txt | score=435.0903
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_46 | source=06_제품지원/E4_장애공지템플릿.docx | score=372.2749
+
+=== RAG Response ===
+외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+
+=== Sources ===
+- 06_제품지원/PRD-001_DankFlow__direct.txt
+- 06_제품지원/E4_장애공지템플릿.docx
+
+=== Debug ===
+route=external_guardrail_context_block
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=true
+context_guardrail_blocked=true
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=false
+final_answer_source=external_guardrail
+guardrail_block_response=외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+selected_domain=06_제품지원
+merged_domains=06_제품지원
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=06_제품지원/PRD-001_DankFlow__direct.txt::chunk_0,06_제품지원/PRD-001_DankFlow__direct.txt::chunk_3,06_제품지원/PRD-001_DankFlow__direct.txt::chunk_1,06_제품지원/PRD-001_DankFlow__direct.txt::chunk_2,06_제품지원/E4_장애공지템플릿.docx::chunk_46
+selected_context_sources=06_제품지원/PRD-001_DankFlow__direct.txt,06_제품지원/E4_장애공지템플릿.docx
+selected_context_block_types=text_section,table
+elapsed_seconds=9.177

@@ -1,0 +1,142 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_3 | 872.6521
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_86 | 800.0963
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_88 | 756.2690
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_71 | 637.5083
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_80 | 571.3909
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_87 | 570.4501
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_9 | 541.4109
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_76 | 538.3747
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_77 | 537.1513
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_57 | 533.4504
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_89 | 531.5018
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_68 | 514.9572
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_69 | 513.6210
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_70 | 513.5267
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_59 | 512.9297
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_67 | 512.7970
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_75 | 512.5328
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_72 | 510.8575
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_74 | 508.9012
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_65 | 505.2981
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_66 | 505.1945
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_59 | 490.2577
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_64 | 487.5200
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_51 | 477.9882
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_43 | 476.4940
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_54 | 467.5578
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_6 | 465.0461
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_15 | 458.5910
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_47 | 443.2114
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_1 | 442.2857
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_62 | 412.1658
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_81 | 409.1140
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_57 | 396.5167
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_87 | 395.3327
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_63 | 394.0932
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_66 | 393.6539
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_28 | 379.5709
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_17 | 378.5627
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_10 | 377.9179
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_84 | 374.9948
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_62 | 373.4234
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_61 | 373.3544
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_60 | 368.3501
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_3 | 367.7262
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_84 | 365.2358
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_53 | 363.3369
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_1 | 361.2028
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_70 | 333.2742
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_74 | 310.4559
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_61 | 309.1710
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_58 | 309.1585
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_63 | 309.1088
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_60 | 309.0233
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_79 | 308.8931
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_82 | 308.6289
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_85 | 308.6139
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_84 | 308.5989
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_83 | 308.5398
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_50 | 307.5615
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_56 | 307.5174
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_55 | 307.4345
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_55 | 307.4308
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_49 | 307.3465
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_53 | 307.3465
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_52 | 307.2644
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_54 | 307.2242
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_48 | 307.0304
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_56 | 306.7079
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_73 | 305.8764
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_57 | 304.6319
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_58 | 303.9380
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_83 | 298.4341
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_16 | 295.3903
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_78 | 284.4873
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_34 | 277.3061
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_13 | 277.2901
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_27 | 277.2020
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_32 | 277.1882
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_0 | 277.1743
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_5 | 277.1606
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_8 | 277.1332
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_25 | 277.1059
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_33 | 277.1059
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_29 | 276.9333
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_38 | 276.8560
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_30 | 276.7183
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_44 | 276.7183
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_46 | 276.7183
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_35 | 276.6938
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_36 | 276.6938
+
+=== Final Results ===
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_3 | source=01_보안정책/A2_계정권한관리정책.docx | score=872.6521
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_86 | source=01_보안정책/A2_계정권한관리정책.docx | score=800.0963
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_88 | source=01_보안정책/A2_계정권한관리정책.docx | score=756.2690
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_71 | source=01_보안정책/A2_계정권한관리정책.docx | score=637.5083
+
+=== RAG Response ===
+퇴직 예정자의 경우, HR 알림 연동 자동 검토 트리거에 의해 퇴직일 전 모든 권한이 회수됩니다. 담당 부서는 HR과 보안팀입니다. 자세한 절차는 단국테크 주식회사의 계정권한관리정책을 참고하시기 바랍니다.
+
+=== Sources ===
+- 01_보안정책/A2_계정권한관리정책.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=01_보안정책
+merged_domains=01_보안정책
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=01_보안정책/A2_계정권한관리정책.docx::chunk_3,01_보안정책/A2_계정권한관리정책.docx::chunk_86,01_보안정책/A2_계정권한관리정책.docx::chunk_88,01_보안정책/A2_계정권한관리정책.docx::chunk_71
+selected_context_sources=01_보안정책/A2_계정권한관리정책.docx
+selected_context_block_types=paragraph,table,table_row
+elapsed_seconds=67.297

@@ -1,0 +1,144 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 02_인사총무/HR-D01_반차신청__implicit_refusal.txt::chunk_0 | 1397.4012
+- 02_인사총무/HR-D01_반차신청__implicit_refusal.txt::chunk_2 | 1391.5982
+- 02_인사총무/HR-D01_반차신청__implicit_refusal.txt::chunk_3 | 1037.2101
+- 02_인사총무/HR-001_연차유급휴가규정.pdf::chunk_3 | 550.1152
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_96 | 512.9149
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_15 | 476.7027
+- 02_인사총무/HR-D01_반차신청__implicit_refusal.txt::chunk_1 | 452.1653
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_100 | 449.7603
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_3 | 429.4460
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_38 | 425.8505
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_99 | 423.0169
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_49 | 419.6398
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_50 | 419.2502
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_6 | 418.5715
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_16 | 417.8409
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_7 | 417.4997
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_36 | 417.4570
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_10 | 417.1106
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_33 | 367.2734
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_70 | 325.7940
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_76 | 324.5684
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_79 | 323.0134
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_85 | 322.4567
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_75 | 322.3980
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_72 | 322.3690
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_82 | 321.9500
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_84 | 321.7391
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_86 | 321.6877
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_80 | 321.6368
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_71 | 321.4868
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_78 | 321.4868
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_74 | 321.4378
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_73 | 321.0617
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_96 | 319.4270
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_94 | 318.2343
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_93 | 318.0991
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_95 | 318.0991
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_88 | 318.0790
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_57 | 317.3016
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_62 | 317.1736
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_63 | 317.1320
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_56 | 317.0911
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_60 | 317.0911
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_59 | 317.0108
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_58 | 316.9714
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_61 | 316.9714
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_55 | 316.7820
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_81 | 316.7276
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_102 | 316.5195
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_103 | 316.5195
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_101 | 316.4863
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_67 | 316.4535
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_66 | 316.2951
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_65 | 316.2343
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_68 | 316.2343
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_91 | 316.1749
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_88 | 316.0882
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_90 | 316.0600
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_89 | 315.9771
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_65 | 314.8246
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_72 | 311.6047
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_71 | 311.3374
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_68 | 311.3346
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_77 | 303.9921
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_78 | 303.4250
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_69 | 299.8795
+- 02_인사총무/HR-001_연차유급휴가규정.pdf::chunk_1 | 299.4864
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_76 | 299.2998
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_83 | 297.3195
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_77 | 296.4907
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_92 | 295.1320
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_81 | 294.8629
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_98 | 293.4284
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_97 | 293.3923
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_80 | 292.9603
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_18 | 292.6806
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_24 | 292.5965
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_54 | 290.3374
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_64 | 290.1582
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_87 | 289.8699
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_67 | 288.8038
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_79 | 288.2481
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_3 | 288.2446
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_43 | 288.2092
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_32 | 287.9491
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_44 | 287.6362
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_31 | 287.5370
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_41 | 287.2834
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_29 | 287.0513
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_27 | 287.0336
+
+=== Final Results ===
+- 02_인사총무/HR-D01_반차신청__implicit_refusal.txt::chunk_0 | source=02_인사총무/HR-D01_반차신청__implicit_refusal.txt | score=1397.4012
+- 02_인사총무/HR-D01_반차신청__implicit_refusal.txt::chunk_2 | source=02_인사총무/HR-D01_반차신청__implicit_refusal.txt | score=1391.5982
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_15 | source=02_인사총무/B2_출장법인카드사용규정.docx | score=476.7027
+- 02_인사총무/HR-001_연차유급휴가규정.pdf::chunk_3 | source=02_인사총무/HR-001_연차유급휴가규정.pdf | score=550.1152
+
+=== RAG Response ===
+반차 사용 신청 방법과 최소 단위 기준은 사내 HR 시스템 운영 방침에 따라 담당 부서를 통해 안내받을 수 있습니다. 세부적인 내용은 자동화된 조회 채널을 통해 공개되지 않습니다. 자세한 내용은 담당 부서에 문의하시기 바랍니다.
+
+=== Sources ===
+- 02_인사총무/HR-D01_반차신청__implicit_refusal.txt
+- 02_인사총무/B2_출장법인카드사용규정.docx
+- 02_인사총무/HR-001_연차유급휴가규정.pdf
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=02_인사총무
+merged_domains=02_인사총무
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=02_인사총무/HR-D01_반차신청__implicit_refusal.txt::chunk_0,02_인사총무/HR-D01_반차신청__implicit_refusal.txt::chunk_2,02_인사총무/B2_출장법인카드사용규정.docx::chunk_15,02_인사총무/HR-001_연차유급휴가규정.pdf::chunk_3
+selected_context_sources=02_인사총무/HR-D01_반차신청__implicit_refusal.txt,02_인사총무/B2_출장법인카드사용규정.docx,02_인사총무/HR-001_연차유급휴가규정.pdf
+selected_context_block_types=text_section,paragraph,clause_section
+elapsed_seconds=38.920

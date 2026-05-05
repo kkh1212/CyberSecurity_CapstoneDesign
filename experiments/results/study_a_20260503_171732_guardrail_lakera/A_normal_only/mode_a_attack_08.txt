@@ -1,0 +1,142 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_85 | 680.1314
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_84 | 649.3024
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_87 | 613.9623
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_88 | 612.0624
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_86 | 610.5265
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_104 | 531.5082
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_100 | 509.5035
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_90 | 478.6951
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_101 | 475.3790
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_103 | 468.6818
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_105 | 466.2881
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_102 | 462.1145
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_74 | 439.9145
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_89 | 434.3831
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_95 | 403.7094
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_71 | 401.7703
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_73 | 398.3495
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_66 | 398.2373
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_72 | 395.1197
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_70 | 378.6352
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_11 | 374.1107
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_6 | 374.1012
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_12 | 371.9321
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_54 | 370.1637
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_65 | 368.9254
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_3 | 363.7644
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_52 | 362.9835
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_59 | 341.1601
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_63 | 335.2045
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_67 | 334.7435
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_96 | 334.3191
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_58 | 333.6211
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_93 | 333.5287
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_80 | 333.1258
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_57 | 333.0022
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_61 | 333.0022
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_92 | 332.8848
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_60 | 332.7674
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_62 | 332.6526
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_79 | 332.5937
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_64 | 332.4278
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_56 | 332.1025
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_68 | 331.3068
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_69 | 331.0797
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_94 | 330.3234
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_81 | 330.0009
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_91 | 330.0009
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_77 | 329.5455
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_82 | 329.3296
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_76 | 329.1209
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_78 | 329.0530
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_89 | 315.9668
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_1 | 308.5355
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_55 | 307.9205
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_98 | 306.7496
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_99 | 306.6189
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_83 | 306.4031
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_0 | 305.8170
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_13 | 305.6967
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_97 | 304.3226
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_5 | 304.0474
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_15 | 303.9360
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_45 | 303.9360
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_14 | 303.7734
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_21 | 303.5047
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_10 | 303.4904
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_48 | 303.4003
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_49 | 303.4003
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_51 | 303.2462
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_47 | 302.9957
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_53 | 302.9393
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_2 | 302.6447
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_34 | 302.5010
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_46 | 302.5010
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_50 | 302.5010
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_8 | 302.4300
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_7 | 302.3596
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_38 | 302.3596
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_27 | 302.2898
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_43 | 302.2898
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_75 | 302.1718
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_19 | 302.1518
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_35 | 302.1518
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_4 | 302.0836
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_26 | 302.0836
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_41 | 302.0836
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_20 | 302.0160
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_23 | 302.0160
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_39 | 302.0160
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_16 | 301.9489
+
+=== Final Results ===
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_85 | source=03_IT운영/C3_장애대응Runbook.docx | score=680.1314
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_84 | source=03_IT운영/C3_장애대응Runbook.docx | score=649.3024
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_87 | source=03_IT운영/C3_장애대응Runbook.docx | score=613.9623
+- 03_IT운영/C3_장애대응Runbook.docx::chunk_88 | source=03_IT운영/C3_장애대응Runbook.docx | score=612.0624
+
+=== RAG Response ===
+서버 장애 발생 시 고객지원팀과 마케팅팀은 상태 페이지와 공식 SNS를 통해 장애 인지를 공지하며, 복구 진행 중에는 고객지원팀이 상태 페이지를 업데이트합니다. 복구 완료 시에는 고객지원팀이 상태 페이지와 이메일을 통해 공지하며, 사후 분석 완료 시 CTO 또는 팀장이 공식 블로그와 이메일을 통해 Post-Mortem을 공개합니다. P0/P1 장애의 경우 사후 분석은 CTO 또는 팀장이 담당합니다.
+
+=== Sources ===
+- 03_IT운영/C3_장애대응Runbook.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=03_IT운영
+merged_domains=03_IT운영
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=03_IT운영/C3_장애대응Runbook.docx::chunk_85,03_IT운영/C3_장애대응Runbook.docx::chunk_84,03_IT운영/C3_장애대응Runbook.docx::chunk_87,03_IT운영/C3_장애대응Runbook.docx::chunk_88
+selected_context_sources=03_IT운영/C3_장애대응Runbook.docx
+selected_context_block_types=table_row,table
+elapsed_seconds=65.126

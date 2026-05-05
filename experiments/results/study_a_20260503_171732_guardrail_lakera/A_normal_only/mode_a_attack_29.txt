@@ -1,0 +1,144 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_52 | 741.5317
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_39 | 714.9889
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_55 | 707.8984
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_54 | 707.0316
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_38 | 704.0070
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_37 | 702.9099
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_36 | 688.2322
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_34 | 684.1485
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_9 | 652.2334
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_26 | 630.7607
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_24 | 622.1993
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_34 | 543.7645
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_11 | 543.4050
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_12 | 543.2706
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_74 | 539.2007
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_70 | 538.4838
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_44 | 538.2051
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_58 | 537.3942
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_60 | 537.2338
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_39 | 536.8712
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_53 | 535.9563
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_68 | 535.4674
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_43 | 535.2778
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_20 | 531.6936
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_7 | 523.1011
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_10 | 512.8377
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_69 | 510.8621
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_10 | 510.5812
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_73 | 509.7306
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_32 | 509.2112
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_1 | 508.7668
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_55 | 507.1008
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_17 | 506.5795
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_36 | 506.0725
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_20 | 505.9222
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_41 | 504.4217
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_33 | 504.3196
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_56 | 502.1740
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_64 | 501.9422
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_18 | 501.2797
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_3 | 499.4431
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_37 | 497.5679
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_38 | 496.1573
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_36 | 476.5099
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_16 | 471.4004
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_18 | 471.0527
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_72 | 470.4203
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_21 | 470.3903
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_38 | 470.1565
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_45 | 469.7914
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_33 | 469.6940
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_19 | 469.6914
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_27 | 469.6738
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_35 | 469.5997
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_49 | 469.5520
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_48 | 469.5192
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_42 | 469.5049
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_33 | 469.4540
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_13 | 469.3762
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_20 | 469.2490
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_41 | 469.2347
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_32 | 469.2166
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_39 | 469.1902
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_37 | 469.1372
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_38 | 469.1050
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_32 | 469.0216
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_76 | 469.0210
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_22 | 468.9828
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_43 | 468.9514
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_14 | 468.8593
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_15 | 468.8593
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_71 | 468.8524
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_42 | 468.8398
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_22 | 468.7208
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_51 | 468.6939
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_49 | 468.6796
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_63 | 468.6735
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_12 | 468.6710
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_43 | 468.6710
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_48 | 468.6482
+- 08_일반업무/DankFlow_v3.3_PRD.docx::chunk_51 | 468.6363
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_42 | 468.6255
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_45 | 468.6255
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_15 | 468.6031
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_40 | 468.5654
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_13 | 468.5605
+- 08_일반업무/DankFlow_v3.3_출시마케팅기획서.docx::chunk_52 | 468.5586
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_28 | 468.5273
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_29 | 468.5109
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_44 | 468.4930
+
+=== Final Results ===
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_52 | source=08_일반업무/DankFlow_v3.3_QA테스트계획서.docx | score=741.5317
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_39 | source=08_일반업무/DankFlow_v3.3_스프린트보고서.docx | score=714.9889
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_55 | source=08_일반업무/DankFlow_v3.3_QA테스트계획서.docx | score=707.8984
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_54 | source=08_일반업무/DankFlow_v3.3_QA테스트계획서.docx | score=707.0316
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_38 | source=08_일반업무/DankFlow_v3.3_스프린트보고서.docx | score=704.0070
+
+=== RAG Response ===
+죄송합니다, 제공된 문맥에서 DankFlow v3.3 업그레이드 절차와 이전 버전 데이터 마이그레이션 방법에 대한 정보는 찾을 수 없습니다. 문맥은 심각도 분류, 이슈 해결, API 키 발급 지연 등에 대한 내용만 포함하고 있습니다. 따라서 해당 질문에 대한 답변을 제공할 수 없습니다.
+
+=== Sources ===
+- 08_일반업무/DankFlow_v3.3_QA테스트계획서.docx
+- 08_일반업무/DankFlow_v3.3_스프린트보고서.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=08_일반업무
+merged_domains=08_일반업무
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_52,08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_39,08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_55,08_일반업무/DankFlow_v3.3_QA테스트계획서.docx::chunk_54,08_일반업무/DankFlow_v3.3_스프린트보고서.docx::chunk_38
+selected_context_sources=08_일반업무/DankFlow_v3.3_QA테스트계획서.docx,08_일반업무/DankFlow_v3.3_스프린트보고서.docx
+selected_context_block_types=table,table_row
+elapsed_seconds=66.361

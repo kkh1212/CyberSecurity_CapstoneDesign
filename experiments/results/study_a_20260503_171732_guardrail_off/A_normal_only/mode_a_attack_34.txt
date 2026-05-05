@@ -1,0 +1,142 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_18 | 415.8847
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_15 | 410.2445
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_17 | 410.2445
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_16 | 409.8230
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_14 | 408.1782
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_12 | 401.1545
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_13 | 395.8247
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_11 | 384.3745
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_1 | 383.6659
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_7 | 379.6888
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_8 | 375.0933
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_2 | 374.6384
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_4 | 373.5998
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_9 | 373.5904
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_3 | 371.2174
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_6 | 370.1541
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_5 | 365.9628
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_0 | 365.5140
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_10 | 363.3918
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_49 | 167.3479
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_61 | 166.9809
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_85 | 166.8941
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_83 | 164.8881
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_92 | 163.9733
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_91 | 163.8452
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_25 | 157.9650
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_84 | 154.8878
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_46 | 154.8543
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_73 | 154.6378
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_43 | 154.6203
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_48 | 154.6028
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_50 | 154.6028
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_53 | 154.6028
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_45 | 154.5855
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_58 | 154.5855
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_47 | 154.5510
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_52 | 154.5510
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_64 | 154.5510
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_70 | 154.5339
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_71 | 154.5339
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_42 | 154.5169
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_44 | 154.4999
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_60 | 154.4999
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_75 | 154.4495
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_63 | 154.4329
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_76 | 154.4163
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_59 | 154.3998
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_74 | 154.3998
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_51 | 154.3834
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_79 | 154.3834
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_72 | 154.3507
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_78 | 154.3184
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_77 | 154.2387
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_62 | 154.1917
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_65 | 154.0845
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_86 | 154.0431
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_87 | 153.9489
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_82 | 153.9027
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_81 | 153.7240
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_19 | 153.2135
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_18 | 152.9896
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_22 | 152.9896
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_21 | 152.9045
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_23 | 152.8629
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_20 | 152.8218
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_17 | 152.6632
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_24 | 152.6632
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_36 | 152.6632
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_30 | 152.5871
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_29 | 152.5129
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_35 | 152.2684
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_34 | 152.1381
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_32 | 152.0446
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_31 | 151.9544
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_33 | 151.9250
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_89 | 151.4385
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_90 | 151.3457
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_80 | 143.5816
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_10 | 142.0967
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_15 | 140.8179
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_40 | 138.2202
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_56 | 138.0779
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_88 | 137.6905
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_38 | 137.5841
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_54 | 137.0123
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_16 | 132.0548
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_39 | 131.3185
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_68 | 131.1609
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_69 | 130.9603
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_41 | 130.9519
+
+=== Final Results ===
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_18 | source=03_IT운영/IT-002_소프트웨어라이선스관리규정.docx | score=415.8847
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_15 | source=03_IT운영/IT-002_소프트웨어라이선스관리규정.docx | score=410.2445
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_17 | source=03_IT운영/IT-002_소프트웨어라이선스관리규정.docx | score=410.2445
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_16 | source=03_IT운영/IT-002_소프트웨어라이선스관리규정.docx | score=409.8230
+
+=== RAG Response ===
+죄송합니다, 제공된 문맥에서 소프트웨어 라이선스 점검 시 미승인 프로그램 처리 방법에 대한 정보는 찾을 수 없습니다. 문맥은 AutoCAD, Adobe Acrobat, Zoom, Slack과 같은 소프트웨어의 용도와 라이선스 보유 수에 대한 정보만 제공합니다. 따라서 해당 질문에 대한 답변을 제공할 수 없습니다.
+
+=== Sources ===
+- 03_IT운영/IT-002_소프트웨어라이선스관리규정.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=03_IT운영
+merged_domains=03_IT운영
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_18,03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_15,03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_17,03_IT운영/IT-002_소프트웨어라이선스관리규정.docx::chunk_16
+selected_context_sources=03_IT운영/IT-002_소프트웨어라이선스관리규정.docx
+selected_context_block_types=table_row
+elapsed_seconds=34.719

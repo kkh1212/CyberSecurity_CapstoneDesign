@@ -1,0 +1,142 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_3 | 412.0366
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_61 | 357.5722
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_56 | 336.6547
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_53 | 335.0023
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_43 | 334.8622
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_49 | 334.7381
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_66 | 334.4951
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_45 | 334.3761
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_42 | 334.2587
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_46 | 334.2587
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_54 | 334.1709
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_44 | 334.0286
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_47 | 333.9158
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_65 | 333.4792
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_60 | 333.4736
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_41 | 333.3736
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_68 | 333.3583
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_48 | 332.9642
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_55 | 332.4997
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_63 | 332.4706
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_70 | 332.3872
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_71 | 331.4308
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_69 | 331.1903
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_62 | 330.9577
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_67 | 330.9577
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_51 | 330.7325
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_52 | 330.5864
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_59 | 321.3665
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_7 | 319.1547
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_27 | 317.0934
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_58 | 308.7301
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_50 | 308.5603
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_0 | 306.7697
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_6 | 305.8726
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_15 | 305.8220
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_5 | 305.7216
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_17 | 305.6222
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_8 | 305.4749
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_57 | 305.4471
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_21 | 304.9092
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_32 | 304.6330
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_16 | 304.5048
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_26 | 304.4552
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_4 | 304.3239
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_2 | 304.1334
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_37 | 303.8212
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_22 | 303.8105
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_33 | 303.7128
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_24 | 303.5805
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_25 | 303.5094
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_29 | 303.5094
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_28 | 303.4772
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_23 | 303.4426
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_18 | 303.2450
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_34 | 303.1800
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_35 | 303.1559
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_38 | 302.8971
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_39 | 302.8971
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_11 | 302.8622
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_64 | 302.7445
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_19 | 302.6768
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_36 | 302.6158
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_9 | 302.4951
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_1 | 302.4354
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_10 | 302.4354
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_40 | 302.1713
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_20 | 302.0855
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_14 | 301.9720
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_30 | 301.9158
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_12 | 301.6947
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_31 | 301.3736
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_13 | 301.0143
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_0 | 205.7963
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_6 | 205.3927
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_15 | 205.3699
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_5 | 205.3247
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_91 | 201.9021
+- 04_보안운영/SEC-004_보안사고대응절차.docx::chunk_18 | 187.3741
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_69 | 166.5992
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_88 | 164.0845
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_89 | 162.6129
+- 04_보안운영/SEC-004_보안사고대응절차.docx::chunk_14 | 158.2883
+- 04_보안운영/D4_랜섬웨어대응플레이북.docx::chunk_29 | 151.8045
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_73 | 107.1941
+- 04_보안운영/SEC-004_보안사고대응절차.docx::chunk_15 | 94.5808
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_71 | 94.1015
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_72 | 93.8059
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_84 | 91.3158
+- 04_보안운영/D4_랜섬웨어대응플레이북.docx::chunk_84 | 90.9867
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_91 | 89.7060
+
+=== Final Results ===
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_3 | source=04_보안운영/D3_악성메일대응매뉴얼.docx | score=412.0366
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_61 | source=04_보안운영/D3_악성메일대응매뉴얼.docx | score=357.5722
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_56 | source=04_보안운영/D3_악성메일대응매뉴얼.docx | score=336.6547
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_53 | source=04_보안운영/D3_악성메일대응매뉴얼.docx | score=335.0023
+
+=== RAG Response ===
+악성 메일을 수신했을 경우, 원본 메일을 첨부(EML 형식)하여 security@dankooktech.com으로 발송하여 신고해야 합니다. 이렇게 하면 분석용 원본을 보존할 수 있습니다. 또한, 이메일 내 QR코드나 악성 첨부파일이 포함된 경우 특히 주의해야 합니다.
+
+=== Sources ===
+- 04_보안운영/D3_악성메일대응매뉴얼.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=04_보안운영
+merged_domains=04_보안운영
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_3,04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_61,04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_56,04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_53
+selected_context_sources=04_보안운영/D3_악성메일대응매뉴얼.docx
+selected_context_block_types=paragraph,table_row
+elapsed_seconds=39.530

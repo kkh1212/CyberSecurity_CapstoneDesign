@@ -1,0 +1,143 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_35 | 660.7775
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_33 | 657.3601
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_34 | 657.2885
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_24 | 538.8447
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_32 | 504.9381
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_40 | 491.9484
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_3 | 486.9192
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_38 | 427.2337
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_36 | 425.6033
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_26 | 425.0300
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_6 | 417.7573
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_47 | 417.6247
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_101 | 341.2660
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_94 | 338.7249
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_93 | 337.8861
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_95 | 337.8861
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_96 | 336.7016
+- 02_인사총무/HR-009_직장내괴롭힘예방규정.docx::chunk_6 | 320.1120
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_57 | 318.0022
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_62 | 317.6564
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_63 | 317.5442
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_92 | 317.4468
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_56 | 317.4336
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_60 | 317.4336
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_59 | 317.2166
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_58 | 317.1103
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_61 | 317.1103
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_55 | 316.5988
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_76 | 316.5947
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_81 | 316.4517
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_70 | 316.2772
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_79 | 316.1655
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_100 | 316.1655
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_102 | 315.8898
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_103 | 315.8898
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_67 | 315.7114
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_85 | 315.3673
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_66 | 315.2838
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_75 | 315.2838
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_72 | 315.2424
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_65 | 315.1196
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_68 | 315.1196
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_91 | 314.9591
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_88 | 314.7252
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_82 | 314.6489
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_90 | 314.6489
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_89 | 314.4251
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_84 | 314.3522
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_86 | 314.2800
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_80 | 314.2086
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_71 | 313.9989
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_78 | 313.9989
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_74 | 313.9305
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_73 | 313.4081
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_24 | 308.3749
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_99 | 308.3475
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_83 | 299.6496
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_48 | 295.8026
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_23 | 294.7989
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_0 | 294.1679
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_25 | 294.1001
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_42 | 293.0120
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_46 | 292.8315
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_50 | 292.3657
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_11 | 292.0302
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_98 | 290.2556
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_43 | 289.3234
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_97 | 288.7550
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_44 | 288.1451
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_31 | 287.9396
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_41 | 287.4130
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_2 | 287.1987
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_4 | 287.1987
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_22 | 287.1316
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_53 | 287.0649
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_19 | 286.9987
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_20 | 286.9987
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_21 | 286.9331
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_37 | 286.8031
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_5 | 286.7388
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_49 | 286.6769
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_14 | 286.6750
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_18 | 286.6117
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_54 | 285.9992
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_8 | 285.9436
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_83 | 285.8692
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_1 | 285.5442
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_64 | 285.5157
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_9 | 285.4887
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_16 | 285.2703
+
+=== Final Results ===
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_35 | source=02_인사총무/B2_출장법인카드사용규정.docx | score=660.7775
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_33 | source=02_인사총무/B2_출장법인카드사용규정.docx | score=657.3601
+- 02_인사총무/B2_출장법인카드사용규정.docx::chunk_34 | source=02_인사총무/B2_출장법인카드사용규정.docx | score=657.2885
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_24 | source=02_인사총무/B3_장비지급회수절차.docx | score=538.8447
+
+=== RAG Response ===
+법인카드 분실 시 즉시 카드사에 분실 신고를 하고, 재무팀에 분실 사실을 보고 분실 신고서를 제출해야 합니다. 분실 신고 완료 전까지 부정 사용 금액에 대한 책임이 있을 수 있으므로 신속하게 신고하는 것이 중요합니다. 카드 재발급은 재무팀을 통해 진행될 수 있습니다.
+
+=== Sources ===
+- 02_인사총무/B2_출장법인카드사용규정.docx
+- 02_인사총무/B3_장비지급회수절차.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=02_인사총무
+merged_domains=02_인사총무
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=02_인사총무/B2_출장법인카드사용규정.docx::chunk_35,02_인사총무/B2_출장법인카드사용규정.docx::chunk_33,02_인사총무/B2_출장법인카드사용규정.docx::chunk_34,02_인사총무/B3_장비지급회수절차.docx::chunk_24
+selected_context_sources=02_인사총무/B2_출장법인카드사용규정.docx,02_인사총무/B3_장비지급회수절차.docx
+selected_context_block_types=paragraph
+elapsed_seconds=35.361

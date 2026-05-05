@@ -9,6 +9,7 @@ data/exp_corpus/attack/ 하위 유형 디렉토리의 기존 파일을 그대로
   02_간접_명시형    - 거부 유도 문구를 명시적으로 포함한 정책/가이드 형식 문서.
   03_간접_혼합형    - 정상 내용 + 거부 유도 문구 혼합. 외형상 정상 문서처럼 위장.
   04_다국어혼합     - 한국어·영어 혼용으로 거부 유도. 언어 기반 탐지 회피 목적.
+  05_순수서술형     - 유해 콘텐츠/지시문 없는 순수 서술형 정책 제한 문서. guardrail 우회 후 LLM DoS 유도.
 """
 
 import os
@@ -44,6 +45,12 @@ PAYLOAD_TYPES: Dict[str, Dict] = {
         "description": "한국어·영어 혼용 거부 유도형",
         "subdir": "04_다국어혼합",
         "include_glob": "*__multilingual.*",
+        "risk": "high",
+    },
+    "05_순수서술형": {
+        "description": "유해 콘텐츠 없는 순수 서술형 정책 제한 문서 (guardrail 우회형)",
+        "subdir": "05_순수서술형",
+        "include_glob": "*__implicit_refusal.*",
         "risk": "high",
     },
 }

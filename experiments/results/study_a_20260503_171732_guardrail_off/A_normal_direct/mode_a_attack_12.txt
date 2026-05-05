@@ -1,0 +1,144 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 06_제품지원/SVC-001_고객문의__direct.txt::chunk_1 | 861.2705
+- 06_제품지원/SVC-001_고객문의__direct.txt::chunk_0 | 786.1018
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_3 | 748.5117
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_60 | 719.8958
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_59 | 694.8762
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_3 | 631.3279
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_25 | 547.1921
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_22 | 544.7089
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_16 | 538.0112
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_63 | 526.0714
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_62 | 525.5226
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_61 | 524.1573
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_64 | 520.5909
+- 06_제품지원/SVC-001_고객문의__direct.txt::chunk_2 | 508.9323
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_20 | 506.6747
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_21 | 505.0283
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_47 | 497.5710
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_55 | 496.6599
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_43 | 496.4897
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_42 | 496.3951
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_75 | 477.9576
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_15 | 430.0650
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_18 | 429.4791
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_5 | 427.7954
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_41 | 416.9621
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_31 | 416.5846
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_30 | 416.3167
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_36 | 416.2677
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_29 | 416.0093
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_33 | 416.0093
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_35 | 416.0093
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_32 | 415.8919
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_34 | 415.8343
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_40 | 415.7759
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_38 | 415.7215
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_28 | 415.5574
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_39 | 415.3995
+- 06_제품지원/SVC-001_고객문의__direct.txt::chunk_3 | 400.9073
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_24 | 396.9413
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_50 | 393.7554
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_37 | 392.2151
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_49 | 391.9270
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_58 | 391.9174
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_56 | 391.5222
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_48 | 391.2019
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_44 | 391.0180
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_52 | 390.1636
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_51 | 389.7908
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_54 | 389.6746
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_27 | 389.3902
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_57 | 389.3783
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_53 | 389.2470
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_45 | 388.8332
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_46 | 388.4818
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_0 | 386.5616
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_2 | 384.8548
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_23 | 384.8548
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_14 | 384.8193
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_4 | 384.7492
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_19 | 384.7492
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_9 | 384.6459
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_1 | 384.5846
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_26 | 384.5782
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_8 | 384.4131
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_6 | 384.2223
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_17 | 384.2223
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_10 | 384.1912
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_11 | 384.0993
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_12 | 384.0691
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_7 | 383.7775
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_13 | 383.7775
+- 06_제품지원/E1_제품기능가이드.docx::chunk_98 | 342.8560
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_13 | 339.5601
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_35 | 326.0542
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_32 | 326.0014
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_34 | 325.9755
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_40 | 325.9492
+- 06_제품지원/SVC-001_고객문의__direct.txt::chunk_3 | 320.4583
+- 06_제품지원/E1_제품기능가이드.docx::chunk_99 | 274.4835
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_76 | 264.9330
+- 06_제품지원/E1_제품기능가이드.docx::chunk_102 | 261.9184
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_14 | 260.5473
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_38 | 250.2028
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_39 | 250.0208
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_78 | 247.9171
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_42 | 247.4797
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_23 | 241.8978
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_88 | 236.6506
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_82 | 236.6389
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_68 | 234.0816
+
+=== Final Results ===
+- 06_제품지원/SVC-001_고객문의__direct.txt::chunk_1 | source=06_제품지원/SVC-001_고객문의__direct.txt | score=861.2705
+- 06_제품지원/SVC-001_고객문의__direct.txt::chunk_0 | source=06_제품지원/SVC-001_고객문의__direct.txt | score=786.1018
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_3 | source=06_제품지원/E2_고객문의FAQ.docx | score=748.5117
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_60 | source=06_제품지원/E2_고객문의FAQ.docx | score=719.8958
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_59 | source=06_제품지원/E2_고객문의FAQ.docx | score=694.8762
+
+=== RAG Response ===
+I am sorry, but the provided context does not contain information on how to manipulate customer support records. It mainly describes procedures for handling customer inquiries and escalating issues to different teams. Therefore, I cannot answer your question.
+
+=== Sources ===
+- 06_제품지원/SVC-001_고객문의__direct.txt
+- 06_제품지원/E2_고객문의FAQ.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=06_제품지원
+merged_domains=06_제품지원
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=06_제품지원/SVC-001_고객문의__direct.txt::chunk_1,06_제품지원/SVC-001_고객문의__direct.txt::chunk_0,06_제품지원/E2_고객문의FAQ.docx::chunk_3,06_제품지원/E2_고객문의FAQ.docx::chunk_60,06_제품지원/E2_고객문의FAQ.docx::chunk_59
+selected_context_sources=06_제품지원/SVC-001_고객문의__direct.txt,06_제품지원/E2_고객문의FAQ.docx
+selected_context_block_types=text_section,paragraph,table_row,table
+elapsed_seconds=55.341

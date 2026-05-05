@@ -1,0 +1,142 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_6 | 1041.9532
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_3 | 1029.5290
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_91 | 997.1148
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_36 | 965.6375
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_8 | 962.4728
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_83 | 956.9196
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_82 | 900.0617
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_81 | 899.7747
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_78 | 899.5872
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_80 | 896.4953
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_79 | 895.9697
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_77 | 872.3397
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_39 | 871.2111
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_68 | 830.0712
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_71 | 830.0712
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_99 | 830.0005
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_87 | 829.9039
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_90 | 829.5261
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_74 | 829.3474
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_72 | 828.8832
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_76 | 828.4844
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_69 | 828.2902
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_70 | 828.0994
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_73 | 827.4563
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_75 | 827.3674
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_85 | 827.1180
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_58 | 827.0379
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_84 | 826.1637
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_57 | 826.1451
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_61 | 826.1451
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_59 | 825.8056
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_60 | 825.8056
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_62 | 825.6393
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_100 | 825.5571
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_94 | 825.3951
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_64 | 825.3138
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_56 | 824.8419
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_63 | 824.8419
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_89 | 824.7651
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_86 | 824.0246
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_101 | 824.0246
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_88 | 822.6793
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_96 | 821.9482
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_95 | 821.4889
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_97 | 821.3774
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_93 | 819.5675
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_12 | 812.8992
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_7 | 811.3583
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_98 | 801.9405
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_0 | 801.4284
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_65 | 801.1793
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_27 | 799.8396
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_52 | 799.3258
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_5 | 799.1827
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_33 | 798.9709
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_46 | 798.9709
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_67 | 798.9518
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_35 | 798.6940
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_37 | 798.5577
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_66 | 798.5564
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_9 | 798.0269
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_34 | 797.9683
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_22 | 797.9253
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_47 | 797.2097
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_24 | 796.9805
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_2 | 796.9300
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_14 | 796.7174
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_54 | 796.7174
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_29 | 796.6124
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_38 | 796.5816
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_50 | 796.4938
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_53 | 796.3023
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_16 | 796.2005
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_20 | 796.0995
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_15 | 795.9993
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_28 | 795.7032
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_13 | 795.6060
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_48 | 795.5753
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_17 | 795.5096
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_40 | 795.5096
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_4 | 795.2245
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_42 | 794.9457
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_44 | 794.7632
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_19 | 794.6730
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_23 | 794.6730
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_30 | 794.6730
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_32 | 794.5834
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_1 | 794.4062
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_51 | 794.4062
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_11 | 794.2315
+
+=== Final Results ===
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_6 | source=03_IT운영/C1_신규계정발급매뉴얼.docx | score=1041.9532
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_3 | source=03_IT운영/C1_신규계정발급매뉴얼.docx | score=1029.5290
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_91 | source=03_IT운영/C1_신규계정발급매뉴얼.docx | score=997.1148
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_36 | source=03_IT운영/C1_신규계정발급매뉴얼.docx | score=965.6375
+
+=== RAG Response ===
+신규 입사자 계정 발급 절차는 단국테크 주식회사 신규 입사자 및 재직 중 추가 계정이 필요한 임직원을 대상으로 진행됩니다. 계정 발급 절차는 계정·권한 관리 정책(DK-SEC-POL-002)과 함께 운용됩니다. 또한, 신규 입사자에게 "IT 환경 설정 안내서"(DK-IT-GDL-ONBOARD-001) 이메일이 발송됩니다.
+
+=== Sources ===
+- 03_IT운영/C1_신규계정발급매뉴얼.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=03_IT운영
+merged_domains=03_IT운영
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_6,03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_3,03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_91,03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_36
+selected_context_sources=03_IT운영/C1_신규계정발급매뉴얼.docx
+selected_context_block_types=paragraph,table_row
+elapsed_seconds=42.381

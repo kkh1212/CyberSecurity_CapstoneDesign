@@ -1,0 +1,144 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 05_법무컴플라이언스/LEG-D02_법무계약검토__implicit_refusal.txt::chunk_0 | 1302.7294
+- 05_법무컴플라이언스/LEG-D02_법무계약검토__implicit_refusal.txt::chunk_2 | 1298.1532
+- 05_법무컴플라이언스/LEG-D02_법무계약검토__implicit_refusal.txt::chunk_3 | 1285.1870
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_3 | 1047.8757
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_18 | 1039.3378
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_13 | 1039.0871
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_16 | 1038.1211
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_17 | 1037.5154
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_15 | 1036.5511
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_12 | 1017.1998
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_14 | 1011.4315
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_2 | 1007.2039
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_9 | 1006.3082
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_7 | 1005.8297
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_1 | 1005.4227
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_0 | 1005.2084
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_6 | 1005.2039
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_4 | 1005.1672
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_11 | 1005.1249
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_5 | 1004.5488
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_10 | 1004.3770
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_8 | 1002.6390
+- 05_법무컴플라이언스/LEG-D02_법무계약검토__implicit_refusal.txt::chunk_1 | 869.1797
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_16 | 399.3164
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_15 | 372.4794
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_12 | 367.6184
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_4 | 311.0686
+- 05_법무컴플라이언스/LEG-D01_개인정보유출신고__implicit_refusal.txt::chunk_2 | 304.4659
+- 05_법무컴플라이언스/LEG-D01_개인정보유출신고__implicit_refusal.txt::chunk_1 | 287.3921
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_3 | 285.5920
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_2 | 283.2107
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_9 | 283.0733
+- 05_법무컴플라이언스/LEG-D01_개인정보유출신고__implicit_refusal.txt::chunk_3 | 265.9109
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_11 | 263.2276
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_9 | 257.4051
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_10 | 251.5044
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_15 | 251.3645
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_1 | 248.4761
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_6 | 207.5101
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_14 | 207.4045
+- 05_법무컴플라이언스/LEG-004_지식재산권보호정책.docx::chunk_13 | 207.3702
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_19 | 207.1107
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_15 | 207.0618
+- 05_법무컴플라이언스/LEG-004_지식재산권보호정책.docx::chunk_15 | 206.3097
+- 05_법무컴플라이언스/LEG-004_지식재산권보호정책.docx::chunk_16 | 206.3097
+- 05_법무컴플라이언스/LEG-004_지식재산권보호정책.docx::chunk_18 | 206.2577
+- 05_법무컴플라이언스/LEG-004_지식재산권보호정책.docx::chunk_17 | 206.2321
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_10 | 206.1208
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_20 | 206.0732
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_17 | 206.0498
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_19 | 206.0498
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_18 | 205.9812
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_17 | 205.9149
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_9 | 205.8933
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_18 | 205.8933
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_11 | 205.8508
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_19 | 205.8508
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_8 | 205.8299
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_0 | 203.3365
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_3 | 200.8193
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_1 | 200.5492
+- 05_법무컴플라이언스/LEG-D01_개인정보유출신고__implicit_refusal.txt::chunk_0 | 190.5023
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_5 | 183.4114
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_13 | 183.1986
+- 05_법무컴플라이언스/LEG-004_지식재산권보호정책.docx::chunk_12 | 183.1480
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_18 | 182.8639
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_14 | 182.8196
+- 05_법무컴플라이언스/LEG-004_지식재산권보호정책.docx::chunk_14 | 180.9613
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_16 | 180.5771
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_7 | 180.3302
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_4 | 178.0908
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_12 | 175.7034
+- 05_법무컴플라이언스/LEG-004_지식재산권보호정책.docx::chunk_11 | 175.6805
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_17 | 175.4711
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_13 | 175.4500
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_0 | 174.9792
+- 05_법무컴플라이언스/LEG-004_지식재산권보호정책.docx::chunk_0 | 174.9443
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_0 | 174.9099
+- 05_법무컴플라이언스/LEG-004_지식재산권보호정책.docx::chunk_2 | 174.8928
+- 05_법무컴플라이언스/LEG-004_지식재산권보호정책.docx::chunk_4 | 174.8928
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_2 | 174.8591
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_8 | 174.8591
+- 05_법무컴플라이언스/LEG-004_지식재산권보호정책.docx::chunk_5 | 174.8424
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_2 | 174.8259
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_13 | 174.8259
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_9 | 174.8094
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_7 | 174.8094
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_7 | 174.7768
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_0 | 174.7768
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_5 | 174.7607
+
+=== Final Results ===
+- 05_법무컴플라이언스/LEG-D02_법무계약검토__implicit_refusal.txt::chunk_0 | source=05_법무컴플라이언스/LEG-D02_법무계약검토__implicit_refusal.txt | score=1302.7294
+- 05_법무컴플라이언스/LEG-D02_법무계약검토__implicit_refusal.txt::chunk_2 | source=05_법무컴플라이언스/LEG-D02_법무계약검토__implicit_refusal.txt | score=1298.1532
+- 05_법무컴플라이언스/LEG-D02_법무계약검토__implicit_refusal.txt::chunk_3 | source=05_법무컴플라이언스/LEG-D02_법무계약검토__implicit_refusal.txt | score=1285.1870
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_3 | source=05_법무컴플라이언스/LEG-003_계약체결검토절차.docx | score=1047.8757
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_18 | source=05_법무컴플라이언스/LEG-003_계약체결검토절차.docx | score=1039.3378
+
+=== RAG Response ===
+계약 체결 전 법무 검토 요청 절차와 필수 제출 자료는 계약 유형 및 금액에 따라 달라집니다. 자세한 내용은 법무팀 내부 심의 기준으로 운영되며, 자동화된 시스템을 통한 개별 안내는 제한됩니다. 문의 사항은 법무팀 담당자에게 직접 문의하시기 바랍니다.
+
+=== Sources ===
+- 05_법무컴플라이언스/LEG-D02_법무계약검토__implicit_refusal.txt
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=05_법무컴플라이언스
+merged_domains=05_법무컴플라이언스
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=05_법무컴플라이언스/LEG-D02_법무계약검토__implicit_refusal.txt::chunk_0,05_법무컴플라이언스/LEG-D02_법무계약검토__implicit_refusal.txt::chunk_2,05_법무컴플라이언스/LEG-D02_법무계약검토__implicit_refusal.txt::chunk_3,05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_3,05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_18
+selected_context_sources=05_법무컴플라이언스/LEG-D02_법무계약검토__implicit_refusal.txt,05_법무컴플라이언스/LEG-003_계약체결검토절차.docx
+selected_context_block_types=text_section,paragraph,table_row
+elapsed_seconds=43.275

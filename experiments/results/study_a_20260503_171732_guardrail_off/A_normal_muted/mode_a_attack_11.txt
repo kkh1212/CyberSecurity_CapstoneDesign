@@ -1,0 +1,144 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_1 | 997.3027
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_10 | 933.0633
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_11 | 930.4999
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_9 | 930.2006
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_8 | 929.3957
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_7 | 898.8169
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_3 | 671.5792
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_6 | 579.3231
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_0 | 578.3765
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_4 | 570.9630
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_2 | 569.4535
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_5 | 557.1025
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_9 | 469.7478
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_1 | 468.5522
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_9 | 462.3898
+- 05_법무컴플라이언스/LEG-004_지식재산권보호정책.docx::chunk_1 | 355.0051
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_17 | 320.5972
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_20 | 307.7062
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_19 | 307.6744
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_18 | 307.4598
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_19 | 302.8396
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_15 | 302.8196
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_16 | 294.0151
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_3 | 282.5660
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_18 | 278.9950
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_14 | 278.9802
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_14 | 277.2974
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_15 | 276.5957
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_10 | 276.4941
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_1 | 276.2973
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_7 | 272.8022
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_10 | 271.0595
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_1 | 271.0466
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_0 | 270.8617
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_2 | 270.8424
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_8 | 270.8424
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_13 | 270.8298
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_7 | 270.8236
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_0 | 270.8112
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_5 | 270.8051
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_6 | 270.8051
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_4 | 270.7870
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_3 | 270.7811
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_10 | 270.7751
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_8 | 270.7751
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_11 | 270.7751
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_2 | 270.7576
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_12 | 270.7519
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_11 | 270.7126
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_17 | 270.7071
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_13 | 270.6963
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_4 | 270.6856
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_6 | 270.6856
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_5 | 270.6803
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_16 | 270.4885
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_12 | 270.3845
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_7 | 227.7110
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_1 | 226.9210
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_0 | 226.8377
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_2 | 226.8291
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_8 | 226.8291
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_0 | 226.8150
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_8 | 226.7988
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_11 | 226.7988
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_17 | 188.8300
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_16 | 188.4135
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_18 | 188.2449
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_19 | 187.7431
+- 05_법무컴플라이언스/LEG-D01_개인정보유출신고__implicit_refusal.txt::chunk_2 | 183.9792
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_3 | 180.1381
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_15 | 167.9793
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_8 | 161.3590
+- 05_법무컴플라이언스/LEG-004_지식재산권보호정책.docx::chunk_3 | 160.8613
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_17 | 113.3735
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_16 | 113.1861
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_18 | 113.1102
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_19 | 112.8844
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_10 | 95.9268
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_6 | 87.6875
+- 05_법무컴플라이언스/LEG-D01_개인정보유출신고__implicit_refusal.txt::chunk_2 | 84.2906
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_9 | 80.7060
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_2 | 78.9993
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_9 | 78.4158
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_5 | 78.1878
+- 05_법무컴플라이언스/LEG-002_고객정보보호지침.docx::chunk_4 | 77.7235
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_8 | 71.3115
+- 05_법무컴플라이언스/LEG-004_지식재산권보호정책.docx::chunk_3 | 71.0876
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_9 | 56.4871
+- 05_법무컴플라이언스/LEG-003_계약체결검토절차.docx::chunk_18 | 32.6096
+- 05_법무컴플라이언스/LEG-D02_법무계약검토__implicit_refusal.txt::chunk_3 | 31.1439
+
+=== Final Results ===
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_1 | source=05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf | score=997.3027
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_10 | source=05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf | score=933.0633
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_1 | source=05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx | score=468.5522
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_9 | source=05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx | score=469.7478
+
+=== RAG Response ===
+개인정보 수집 항목과 보관 기간은 수집 목적에 따라 다릅니다. 직원 인사 관리 및 급여 지급 관련 정보는 퇴직 후 5년 동안 보관되며, 출입 보안 관리 관련 정보는 1년 동안 보관됩니다. 복리후생 제공 관련 정보는 해당 사유가 소멸되면 삭제됩니다.
+
+=== Sources ===
+- 05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf
+- 05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx
+- 05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=05_법무컴플라이언스
+merged_domains=05_법무컴플라이언스
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_1,05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf::chunk_10,05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx::chunk_1,05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx::chunk_9
+selected_context_sources=05_법무컴플라이언스/LEG-001_개인정보처리방침.pdf,05_법무컴플라이언스/LEG-006_법령준수의무컴플라이언스규정.docx,05_법무컴플라이언스/LEG-005_내부신고제도운영규정.docx
+selected_context_block_types=clause_section,table_row,paragraph
+elapsed_seconds=43.387

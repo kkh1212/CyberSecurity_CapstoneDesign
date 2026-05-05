@@ -1,0 +1,145 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 01_보안정책/SEC-D03_비밀번호재사용__implicit_refusal.txt::chunk_3 | 1655.9835
+- 01_보안정책/SEC-D03_비밀번호재사용__implicit_refusal.txt::chunk_2 | 1536.9444
+- 01_보안정책/SEC-D03_비밀번호재사용__implicit_refusal.txt::chunk_0 | 1529.2649
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_54 | 984.7291
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_58 | 981.2912
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_55 | 980.9320
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_57 | 979.5296
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_56 | 973.2533
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_53 | 951.9414
+- 01_보안정책/SEC-D03_비밀번호재사용__implicit_refusal.txt::chunk_1 | 889.9502
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_5 | 821.8375
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_84 | 800.1011
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_86 | 685.7054
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_76 | 679.7274
+- 01_보안정책/A4_데이터반출정책.docx::chunk_53 | 671.7058
+- 01_보안정책/A4_데이터반출정책.docx::chunk_55 | 669.4067
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_3 | 663.9236
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_67 | 641.5970
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_66 | 637.9709
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_72 | 637.3273
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_9 | 635.4617
+- 01_보안정책/SEC-D04_생성형AI도구__implicit_refusal.txt::chunk_2 | 533.9894
+- 01_보안정책/SEC-D04_생성형AI도구__implicit_refusal.txt::chunk_3 | 532.9580
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_60 | 531.6913
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_88 | 531.6815
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_89 | 530.9500
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_78 | 530.4770
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_87 | 530.2447
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_90 | 527.4559
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_85 | 527.2001
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_68 | 526.9212
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_80 | 522.5729
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_72 | 511.8920
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_18 | 511.1460
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_59 | 509.1320
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_17 | 508.7273
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_7 | 508.4867
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_70 | 508.1015
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_71 | 507.7097
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_40 | 504.7210
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_41 | 504.6829
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_7 | 503.7288
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_31 | 501.8394
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_13 | 501.0450
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_21 | 499.3032
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_8 | 499.2994
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_32 | 496.3743
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_38 | 496.1418
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_11 | 487.0774
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_79 | 481.9200
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_14 | 481.7645
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_24 | 480.8873
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_18 | 479.6905
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_28 | 479.4358
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_35 | 479.4358
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_26 | 479.1371
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_11 | 478.8456
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_14 | 478.7189
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_8 | 477.9295
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_27 | 476.6460
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_10 | 475.3536
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_8 | 471.7264
+- 01_보안정책/SEC-D06_외부저장매체__implicit_refusal.txt::chunk_0 | 467.2629
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_64 | 425.4987
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_86 | 412.2102
+- 01_보안정책/A4_데이터반출정책.docx::chunk_60 | 410.4997
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_50 | 396.1955
+- 01_보안정책/A4_데이터반출정책.docx::chunk_58 | 394.6102
+- 01_보안정책/SEC-D06_외부저장매체__implicit_refusal.txt::chunk_2 | 391.3766
+- 01_보안정책/SEC-D04_생성형AI도구__implicit_refusal.txt::chunk_0 | 386.8271
+- 01_보안정책/SEC-D06_외부저장매체__implicit_refusal.txt::chunk_3 | 376.6846
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_36 | 376.5906
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_3 | 376.5231
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_84 | 371.5431
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_47 | 371.1623
+- 01_보안정책/A4_데이터반출정책.docx::chunk_54 | 370.5201
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_37 | 363.6206
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_38 | 363.4428
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_3 | 361.2009
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_45 | 345.7000
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_46 | 344.6546
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_16 | 344.4924
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_52 | 344.4107
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_51 | 343.9336
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_49 | 343.4704
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_47 | 343.0203
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_48 | 343.0203
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_50 | 342.8000
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_44 | 341.7436
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_75 | 341.0640
+
+=== Final Results ===
+- 01_보안정책/SEC-D03_비밀번호재사용__implicit_refusal.txt::chunk_3 | source=01_보안정책/SEC-D03_비밀번호재사용__implicit_refusal.txt | score=1655.9835
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_18 | source=01_보안정책/SEC-002_외부매체반출입규정.docx | score=511.1460
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_67 | source=01_보안정책/A7_생성형AI사용정책.docx | score=641.5970
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_54 | source=01_보안정책/A3_비밀번호MFA정책.docx | score=984.7291
+
+=== RAG Response ===
+비밀번호 재사용 금지 기준과 이전 비밀번호 사용 제한에 대한 자세한 내용은 보안 정책에 따라 안내가 제한됩니다. 정보보안팀 담당자에게 문의하시면 더 자세한 정보를 얻을 수 있습니다. 일반 사용자 계정의 경우, 최근 12개의 비밀번호 재사용을 제한하고 있습니다.
+
+=== Sources ===
+- 01_보안정책/SEC-D03_비밀번호재사용__implicit_refusal.txt
+- 01_보안정책/SEC-002_외부매체반출입규정.docx
+- 01_보안정책/A7_생성형AI사용정책.docx
+- 01_보안정책/A3_비밀번호MFA정책.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=01_보안정책
+merged_domains=01_보안정책
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=01_보안정책/SEC-D03_비밀번호재사용__implicit_refusal.txt::chunk_3,01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_18,01_보안정책/A7_생성형AI사용정책.docx::chunk_67,01_보안정책/A3_비밀번호MFA정책.docx::chunk_54
+selected_context_sources=01_보안정책/SEC-D03_비밀번호재사용__implicit_refusal.txt,01_보안정책/SEC-002_외부매체반출입규정.docx,01_보안정책/A7_생성형AI사용정책.docx,01_보안정책/A3_비밀번호MFA정책.docx
+selected_context_block_types=text_section,table_row,table
+elapsed_seconds=59.852

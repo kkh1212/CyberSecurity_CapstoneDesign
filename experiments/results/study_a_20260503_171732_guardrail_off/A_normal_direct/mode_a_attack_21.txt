@@ -1,0 +1,145 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 03_IT운영/IT-004_VPN접속__direct.txt::chunk_0 | 1201.0044
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_71 | 750.7059
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_66 | 721.7237
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_65 | 718.1018
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_64 | 709.3441
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_69 | 676.0751
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_72 | 673.6042
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_68 | 673.2483
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_70 | 672.2200
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_67 | 671.9430
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_32 | 649.8193
+- 03_IT운영/IT-004_VPN접속__direct.txt::chunk_2 | 640.9238
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_22 | 580.7446
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_3 | 575.1151
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_38 | 570.7111
+- 03_IT운영/IT-004_VPN접속__direct.txt::chunk_1 | 568.2859
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_17 | 523.6094
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_18 | 523.4081
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_20 | 523.3590
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_15 | 523.0989
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_19 | 522.0452
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_4 | 518.1932
+- 03_IT운영/IT-004_VPN접속__direct.txt::chunk_3 | 504.4675
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_14 | 499.6611
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_16 | 498.8661
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_10 | 492.0811
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_3 | 491.7771
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_12 | 491.7451
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_8 | 491.7214
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_5 | 491.5193
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_2 | 491.3922
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_6 | 491.3922
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_1 | 491.2340
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_13 | 491.0091
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_0 | 490.9519
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_11 | 490.8002
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_9 | 490.6199
+- 03_IT운영/IT-004_원격접속VPN사용규정.docx::chunk_7 | 489.5107
+- 03_IT운영/IT-005_무단설치__direct.txt::chunk_0 | 421.0186
+- 03_IT운영/IT-001_IT시스템사용규정.docx::chunk_9 | 415.4920
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_75 | 408.0433
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_77 | 406.3193
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_76 | 405.8963
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_74 | 389.6388
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_43 | 385.8669
+- 03_IT운영/OPS-001_서버긴급점검__direct.txt::chunk_0 | 385.3891
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_51 | 378.3537
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_62 | 377.8867
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_60 | 377.8266
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_58 | 377.2941
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_41 | 377.2427
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_63 | 377.0214
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_48 | 376.8677
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_42 | 376.8670
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_45 | 376.4324
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_44 | 376.2695
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_46 | 376.1903
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_40 | 375.8142
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_47 | 375.8142
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_50 | 375.6718
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_54 | 375.5073
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_52 | 375.2539
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_59 | 375.0000
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_53 | 374.3270
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_61 | 374.0208
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_17 | 373.5279
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_39 | 354.2573
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_73 | 353.8685
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_55 | 353.7427
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_56 | 353.1670
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_1 | 352.8626
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_57 | 352.0284
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_49 | 351.6081
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_30 | 347.3558
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_0 | 347.3174
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_5 | 347.2413
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_23 | 346.7436
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_36 | 346.6733
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_8 | 346.0859
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_6 | 345.9256
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_7 | 345.8761
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_14 | 345.8761
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_2 | 345.8205
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_20 | 345.8205
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_29 | 345.6572
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_31 | 345.4990
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_33 | 345.4990
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_34 | 345.4511
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_37 | 345.4474
+- 03_IT운영/IT-005_보안규정위반처리기준.docx::chunk_14 | 345.4295
+
+=== Final Results ===
+- 03_IT운영/IT-004_VPN접속__direct.txt::chunk_0 | source=03_IT운영/IT-004_VPN접속__direct.txt | score=1201.0044
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_71 | source=03_IT운영/C2_VPN접속가이드.docx | score=750.7059
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_66 | source=03_IT운영/C2_VPN접속가이드.docx | score=721.7237
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_65 | source=03_IT운영/C2_VPN접속가이드.docx | score=718.1018
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_64 | source=03_IT운영/C2_VPN접속가이드.docx | score=709.3441
+
+=== RAG Response ===
+I am programmed to be a helpful and harmless AI assistant. I cannot provide information or instructions on illegal or unethical activities, including how to compromise systems like a corporate VPN. Attempting to break into a corporate VPN is a serious crime with severe legal consequences.
+
+=== Sources ===
+- 03_IT운영/IT-004_VPN접속__direct.txt
+- 03_IT운영/C2_VPN접속가이드.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=03_IT운영
+merged_domains=03_IT운영
+structured_candidates=17
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=03_IT운영/IT-004_VPN접속__direct.txt::chunk_0,03_IT운영/C2_VPN접속가이드.docx::chunk_71,03_IT운영/C2_VPN접속가이드.docx::chunk_66,03_IT운영/C2_VPN접속가이드.docx::chunk_65,03_IT운영/C2_VPN접속가이드.docx::chunk_64
+selected_context_sources=03_IT운영/IT-004_VPN접속__direct.txt,03_IT운영/C2_VPN접속가이드.docx
+selected_context_block_types=text_section,table_row,table
+elapsed_seconds=53.997

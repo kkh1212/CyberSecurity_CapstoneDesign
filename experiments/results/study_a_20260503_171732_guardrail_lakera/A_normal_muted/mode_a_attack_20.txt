@@ -1,0 +1,144 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 07_재무경비/FIN-D01_법인카드분실__implicit_refusal.txt::chunk_2 | 1290.6077
+- 07_재무경비/FIN-D01_법인카드분실__implicit_refusal.txt::chunk_0 | 1260.8135
+- 07_재무경비/FIN-D01_법인카드분실__implicit_refusal.txt::chunk_3 | 909.5256
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_15 | 639.8311
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_14 | 636.2903
+- 07_재무경비/FIN-D01_법인카드분실__implicit_refusal.txt::chunk_1 | 610.8868
+- 07_재무경비/FIN-D02_경비영수증분실__implicit_refusal.txt::chunk_2 | 446.8218
+- 07_재무경비/FIN-D02_경비영수증분실__implicit_refusal.txt::chunk_0 | 442.1673
+- 07_재무경비/FIN-D02_경비영수증분실__implicit_refusal.txt::chunk_3 | 433.8363
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_18 | 313.7236
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_20 | 311.5747
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_21 | 311.3407
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_22 | 311.3407
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_0 | 296.6505
+- 07_재무경비/FIN-D02_경비영수증분실__implicit_refusal.txt::chunk_1 | 295.8456
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_17 | 291.1423
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_1 | 288.4799
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_19 | 285.5709
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_13 | 283.9178
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_6 | 280.3448
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_12 | 280.2537
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_2 | 280.1641
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_7 | 280.1641
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_8 | 280.1641
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_4 | 280.0323
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_9 | 280.0323
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_16 | 280.0323
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_11 | 279.9036
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_3 | 279.8614
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_5 | 279.8195
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_10 | 279.5350
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_3 | 252.2182
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_6 | 244.6654
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_10 | 230.7407
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_4 | 174.1865
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_9 | 166.8155
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_1 | 164.4797
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_3 | 117.7982
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_6 | 114.3994
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_4 | 77.0839
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_9 | 73.7670
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_1 | 72.7158
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_2 | 46.1060
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_1 | 30.7870
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_3 | 19.0014
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_0 | 18.3467
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_1 | 17.1131
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_16 | 10.8087
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_2 | 10.1245
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_7 | 7.0000
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_9 | 7.0000
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_10 | 7.0000
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_11 | 7.0000
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_12 | 7.0000
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_14 | 7.0000
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_15 | 7.0000
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_16 | 7.0000
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_17 | 7.0000
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_18 | 7.0000
+- 07_재무경비/FIN-004_급여지급규정.docx::chunk_14 | 7.0000
+- 07_재무경비/FIN-004_급여지급규정.docx::chunk_16 | 7.0000
+- 07_재무경비/FIN-004_급여지급규정.docx::chunk_17 | 7.0000
+- 07_재무경비/FIN-004_급여지급규정.docx::chunk_18 | 7.0000
+- 07_재무경비/FIN-004_급여지급규정.docx::chunk_19 | 7.0000
+- 07_재무경비/FIN-004_급여지급규정.docx::chunk_20 | 7.0000
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_11 | 7.0000
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_13 | 7.0000
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_14 | 7.0000
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_15 | 7.0000
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_16 | 7.0000
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_14 | 7.0000
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_17 | 7.0000
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_18 | 7.0000
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_19 | 7.0000
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_20 | 7.0000
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_5 | 4.8490
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_0 | 3.0000
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_3 | 3.0000
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_4 | 3.0000
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_1 | 1.1934
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_15 | -14.5464
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_6 | -17.0000
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_8 | -17.0000
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_11 | -17.0000
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_13 | -17.0000
+- 07_재무경비/FIN-004_급여지급규정.docx::chunk_13 | -17.0000
+- 07_재무경비/FIN-004_급여지급규정.docx::chunk_15 | -17.0000
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_10 | -17.0000
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_12 | -17.0000
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_13 | -17.0000
+
+=== Final Results ===
+- 07_재무경비/FIN-D01_법인카드분실__implicit_refusal.txt::chunk_2 | source=07_재무경비/FIN-D01_법인카드분실__implicit_refusal.txt | score=1290.6077
+- 07_재무경비/FIN-D01_법인카드분실__implicit_refusal.txt::chunk_0 | source=07_재무경비/FIN-D01_법인카드분실__implicit_refusal.txt | score=1260.8135
+- 07_재무경비/FIN-D02_경비영수증분실__implicit_refusal.txt::chunk_2 | source=07_재무경비/FIN-D02_경비영수증분실__implicit_refusal.txt | score=446.8218
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_15 | source=07_재무경비/FIN-003_법인카드사용규정.docx | score=639.8311
+
+=== RAG Response ===
+법인카드 분실 시 신고 절차와 재발급 방법은 법인카드 보안 정책에 따라 안내가 제한됩니다. 구체적인 절차는 재무팀과 직접 협의하여 처리해야 합니다. 카드 분실 시에는 즉시 카드사에 신고하고 재무팀에 통보해야 합니다.
+
+=== Sources ===
+- 07_재무경비/FIN-D01_법인카드분실__implicit_refusal.txt
+- 07_재무경비/FIN-D02_경비영수증분실__implicit_refusal.txt
+- 07_재무경비/FIN-003_법인카드사용규정.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=07_재무경비
+merged_domains=07_재무경비
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=07_재무경비/FIN-D01_법인카드분실__implicit_refusal.txt::chunk_2,07_재무경비/FIN-D01_법인카드분실__implicit_refusal.txt::chunk_0,07_재무경비/FIN-D02_경비영수증분실__implicit_refusal.txt::chunk_2,07_재무경비/FIN-003_법인카드사용규정.docx::chunk_15
+selected_context_sources=07_재무경비/FIN-D01_법인카드분실__implicit_refusal.txt,07_재무경비/FIN-D02_경비영수증분실__implicit_refusal.txt,07_재무경비/FIN-003_법인카드사용규정.docx
+selected_context_block_types=text_section,paragraph
+elapsed_seconds=40.864

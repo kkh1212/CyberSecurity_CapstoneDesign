@@ -1,0 +1,145 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_1 | 1170.5352
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_3 | 1062.4725
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_9 | 1010.4093
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_2 | 1003.1523
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_7 | 981.5453
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_6 | 865.5505
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_0 | 862.6541
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_14 | 860.1785
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_8 | 858.4075
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_10 | 857.7656
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_4 | 855.9655
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_5 | 843.6102
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_13 | 840.0370
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_4 | 825.3444
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_12 | 824.3498
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_1 | 820.8767
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_16 | 709.5212
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_17 | 701.3961
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_19 | 701.2651
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_18 | 700.1024
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_3 | 696.2864
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_3 | 693.9783
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_13 | 693.6744
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_8 | 682.0241
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_2 | 681.9198
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_10 | 681.8039
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_0 | 680.4308
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_9 | 679.9132
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_6 | 679.2376
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_7 | 677.6146
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_5 | 676.8103
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_15 | 670.7167
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_11 | 670.1207
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_12 | 669.5311
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_11 | 662.6346
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_87 | 661.2921
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_28 | 644.8498
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_3 | 639.3928
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_18 | 632.3562
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_86 | 628.5173
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_76 | 590.2896
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_70 | 559.1638
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_18 | 554.1631
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_17 | 551.7623
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_16 | 544.2955
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_15 | 543.9287
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_14 | 524.6069
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_78 | 523.2946
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_82 | 521.1431
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_66 | 517.9404
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_50 | 517.2806
+- 01_보안정책/A4_데이터반출정책.docx::chunk_50 | 517.0074
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_74 | 516.3087
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_1 | 516.0482
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_75 | 515.8720
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_65 | 515.6889
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_61 | 515.4436
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_63 | 514.8564
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_0 | 514.8527
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_73 | 514.7360
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_3 | 514.6318
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_7 | 514.6318
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_64 | 514.6275
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_9 | 514.5592
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_2 | 514.1341
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_5 | 514.1243
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_4 | 514.0651
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_6 | 513.3987
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_58 | 513.0882
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_10 | 512.4423
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_57 | 512.1785
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_92 | 511.6719
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_8 | 510.4543
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_72 | 496.5293
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_43 | 495.4014
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_50 | 494.1787
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_77 | 493.9086
+- 01_보안정책/A4_데이터반출정책.docx::chunk_3 | 493.7922
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_8 | 490.8628
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_60 | 489.2022
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_3 | 488.5992
+- 01_보안정책/A4_데이터반출정책.docx::chunk_31 | 488.5407
+- 01_보안정책/A4_데이터반출정책.docx::chunk_48 | 487.1141
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_47 | 486.7434
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_60 | 486.4574
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_66 | 486.1081
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_8 | 483.5902
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_51 | 482.8206
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_46 | 482.0988
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_89 | 482.0509
+
+=== Final Results ===
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_1 | source=01_보안정책/SEC-001_정보보안정책.pdf | score=1170.5352
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_13 | source=01_보안정책/SEC-002_외부매체반출입규정.docx | score=693.6744
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_3 | source=01_보안정책/A1_사내정보보호정책.docx | score=639.3928
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_14 | source=01_보안정책/SEC-005_임직원보안서약의무사항.docx | score=860.1785
+
+=== RAG Response ===
+죄송합니다, 제공된 문맥에서 임직원 정보보안 정책에서 규정하는 주요 의무사항과 금지행위에 대한 구체적인 내용은 찾을 수 없습니다. 하지만 정보 자산을 보호하고 정보보안 사고를 예방하기 위한 기본 원칙과 임직원의 준수사항을 규정한다고 언급되어 있습니다. 추가 정보는 "단국테크 주식회사 임직원 정보보안 서약 및 의무 사항" 문서(SEC-2024-005)를 참고하시기 바랍니다.
+
+=== Sources ===
+- 01_보안정책/SEC-001_정보보안정책.pdf
+- 01_보안정책/SEC-002_외부매체반출입규정.docx
+- 01_보안정책/A1_사내정보보호정책.docx
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=01_보안정책
+merged_domains=01_보안정책
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=01_보안정책/SEC-001_정보보안정책.pdf::chunk_1,01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_13,01_보안정책/A1_사내정보보호정책.docx::chunk_3,01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_14
+selected_context_sources=01_보안정책/SEC-001_정보보안정책.pdf,01_보안정책/SEC-002_외부매체반출입규정.docx,01_보안정책/A1_사내정보보호정책.docx,01_보안정책/SEC-005_임직원보안서약의무사항.docx
+selected_context_block_types=clause_section,table_row,paragraph
+elapsed_seconds=114.866

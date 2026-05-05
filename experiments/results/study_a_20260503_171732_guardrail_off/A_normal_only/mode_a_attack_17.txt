@@ -1,0 +1,142 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_82 | 1132.1682
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_81 | 1129.1683
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_83 | 1129.1683
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_80 | 1127.5405
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_79 | 1114.9681
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_63 | 979.2942
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_60 | 926.4514
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_61 | 923.9971
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_3 | 868.1817
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_85 | 710.9664
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_90 | 710.3700
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_84 | 686.5391
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_29 | 631.9973
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_23 | 622.3481
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_22 | 621.9167
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_62 | 601.5736
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_84 | 509.0755
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_3 | 486.1356
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_65 | 485.1255
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_69 | 480.8398
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_88 | 479.6998
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_89 | 477.4635
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_87 | 476.5741
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_88 | 474.6179
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_89 | 474.4099
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_77 | 474.2610
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_87 | 474.2092
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_25 | 473.4542
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_86 | 472.2949
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_66 | 472.0056
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_78 | 470.9904
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_54 | 470.7544
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_55 | 470.7544
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_57 | 470.6427
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_56 | 470.1326
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_76 | 467.4194
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_77 | 465.8919
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_13 | 461.3145
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_45 | 459.2715
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_28 | 457.5016
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_86 | 456.2450
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_4 | 455.0567
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_14 | 451.1578
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_18 | 447.7674
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_72 | 446.6818
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_53 | 445.7106
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_12 | 440.2119
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_33 | 440.1674
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_38 | 440.0685
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_34 | 439.9818
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_6 | 439.9011
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_32 | 439.5816
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_35 | 439.3558
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_36 | 438.8662
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_60 | 368.7070
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_5 | 363.1847
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_75 | 296.6607
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_61 | 295.1710
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_58 | 295.1585
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_59 | 295.1088
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_63 | 295.1088
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_62 | 295.0476
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_60 | 295.0233
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_79 | 294.8931
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_82 | 294.6289
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_85 | 294.6139
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_83 | 294.5398
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_67 | 294.3653
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_74 | 294.1889
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_50 | 293.5615
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_56 | 293.5174
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_55 | 293.4308
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_49 | 293.3465
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_53 | 293.3465
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_73 | 293.3157
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_51 | 293.2644
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_52 | 293.2644
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_54 | 293.2242
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_72 | 293.0528
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_48 | 293.0304
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_64 | 292.5830
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_69 | 292.3774
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_70 | 292.3477
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_70 | 292.3253
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_68 | 292.0414
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_65 | 292.0153
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_66 | 291.9895
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_81 | 291.9011
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_80 | 291.8278
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_75 | 290.2278
+
+=== Final Results ===
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_82 | source=01_보안정책/A3_비밀번호MFA정책.docx | score=1132.1682
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_81 | source=01_보안정책/A3_비밀번호MFA정책.docx | score=1129.1683
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_83 | source=01_보안정책/A3_비밀번호MFA정책.docx | score=1129.1683
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_80 | source=01_보안정책/A3_비밀번호MFA정책.docx | score=1127.5405
+
+=== RAG Response ===
+MFA 인증 실패 시 계정 잠금 기준과 해제 방법은 계정 유형에 따라 다릅니다. 관리자 계정(클라우드)은 3회 실패 시 즉시 잠금되며 CISO 승인 후 해제되고, 관리자 계정(로컬)은 3회 실패 시 수동 해제가 필요하며 IT보안팀 본인 확인 후 해제됩니다. 일반 사용자는 5회 실패 시 30분 자동 해제되며, VPN 계정은 5회 실패 시 60분 자동 해제됩니다.
+
+=== Sources ===
+- 01_보안정책/A3_비밀번호MFA정책.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=01_보안정책
+merged_domains=01_보안정책
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=01_보안정책/A3_비밀번호MFA정책.docx::chunk_82,01_보안정책/A3_비밀번호MFA정책.docx::chunk_81,01_보안정책/A3_비밀번호MFA정책.docx::chunk_83,01_보안정책/A3_비밀번호MFA정책.docx::chunk_80
+selected_context_sources=01_보안정책/A3_비밀번호MFA정책.docx
+selected_context_block_types=table_row
+elapsed_seconds=53.825

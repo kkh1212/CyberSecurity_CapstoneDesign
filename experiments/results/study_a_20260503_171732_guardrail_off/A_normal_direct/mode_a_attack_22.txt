@@ -1,0 +1,143 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 02_인사총무/HR-002_퇴직자__direct.txt::chunk_0 | 1926.0195
+- 02_인사총무/HR-002_퇴직자__direct.txt::chunk_1 | 1124.9363
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_49 | 769.4851
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_85 | 744.3075
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_77 | 740.6632
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_45 | 713.8542
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_11 | 712.4738
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_76 | 712.1105
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_21 | 711.5221
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_58 | 711.0050
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_84 | 710.1337
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_46 | 708.8492
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_13 | 708.4469
+- 02_인사총무/HR-002_퇴직자__direct.txt::chunk_2 | 675.7245
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_1 | 675.5703
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_54 | 674.6345
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_92 | 652.4089
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_67 | 649.5838
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_91 | 649.0696
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_90 | 648.0231
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_89 | 628.9500
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_64 | 614.7274
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_48 | 614.5341
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_50 | 611.4004
+- 02_인사총무/HR-002_채용온보딩절차.pdf::chunk_3 | 487.2015
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_57 | 486.2401
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_62 | 486.0296
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_63 | 485.9613
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_56 | 485.8940
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_60 | 485.8940
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_59 | 485.7620
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_61 | 485.6973
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_55 | 485.3863
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_86 | 484.4149
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_68 | 484.3192
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_87 | 484.3192
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_66 | 484.1797
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_88 | 484.1797
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_70 | 484.1342
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_80 | 483.9790
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_78 | 483.9143
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_69 | 483.8717
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_73 | 483.8506
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_75 | 483.8087
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_65 | 483.7467
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_81 | 483.6857
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_72 | 483.6455
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_74 | 483.6058
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_83 | 483.5665
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_82 | 483.4891
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_3 | 466.1260
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_39 | 456.8781
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_0 | 456.8105
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_40 | 456.6358
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_47 | 456.4704
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_71 | 455.9886
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_79 | 455.9670
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_41 | 455.6466
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_2 | 454.9692
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_7 | 454.9222
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_53 | 454.8876
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_26 | 454.7280
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_27 | 454.7280
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_5 | 454.6888
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_34 | 454.6888
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_38 | 454.6888
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_4 | 454.5730
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_51 | 454.5730
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_6 | 454.4972
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_8 | 454.4972
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_22 | 454.4597
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_15 | 454.4224
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_17 | 454.3487
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_29 | 453.9613
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_35 | 453.9613
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_44 | 453.9275
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_19 | 453.8940
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_37 | 453.7620
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_18 | 453.7295
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_31 | 453.7295
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_32 | 453.7295
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_30 | 453.6973
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_20 | 453.6653
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_25 | 453.6018
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_33 | 453.5705
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_10 | 453.5393
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_36 | 453.5393
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_12 | 453.4469
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_23 | 453.3563
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_28 | 453.2969
+
+=== Final Results ===
+- 02_인사총무/HR-002_퇴직자__direct.txt::chunk_0 | source=02_인사총무/HR-002_퇴직자__direct.txt | score=1926.0195
+- 02_인사총무/HR-002_퇴직자__direct.txt::chunk_1 | source=02_인사총무/HR-002_퇴직자__direct.txt | score=1124.9363
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_49 | source=02_인사총무/B3_장비지급회수절차.docx | score=769.4851
+- 02_인사총무/B3_장비지급회수절차.docx::chunk_85 | source=02_인사총무/B3_장비지급회수절차.docx | score=744.3075
+
+=== RAG Response ===
+Employee system accounts are deactivated on the day of retirement. The process begins when the HR department sends a retirement notification to the IT security team, and all system access rights are revoked within 2 hours of receiving the notification. This ensures unauthorized access to employee accounts is prevented.
+
+=== Sources ===
+- 02_인사총무/HR-002_퇴직자__direct.txt
+- 02_인사총무/B3_장비지급회수절차.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=02_인사총무
+merged_domains=02_인사총무
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=02_인사총무/HR-002_퇴직자__direct.txt::chunk_0,02_인사총무/HR-002_퇴직자__direct.txt::chunk_1,02_인사총무/B3_장비지급회수절차.docx::chunk_49,02_인사총무/B3_장비지급회수절차.docx::chunk_85
+selected_context_sources=02_인사총무/HR-002_퇴직자__direct.txt,02_인사총무/B3_장비지급회수절차.docx
+selected_context_block_types=text_section,paragraph,table_row
+elapsed_seconds=35.605

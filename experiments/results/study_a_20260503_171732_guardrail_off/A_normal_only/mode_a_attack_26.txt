@@ -1,0 +1,145 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_97 | 455.2172
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_99 | 428.2406
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_98 | 338.0058
+- 04_보안운영/SEC-004_보안사고대응절차.docx::chunk_10 | 308.9758
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_47 | 273.9300
+- 04_보안운영/SEC-004_보안사고대응절차.docx::chunk_9 | 257.8587
+- 04_보안운영/D4_랜섬웨어대응플레이북.docx::chunk_49 | 254.8716
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_45 | 252.8178
+- 04_보안운영/D5_로그보관정책.docx::chunk_49 | 220.4705
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_71 | 216.8439
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_70 | 214.7681
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_79 | 196.0222
+- 04_보안운영/D5_로그보관정책.docx::chunk_50 | 187.2795
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_35 | 186.7901
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_69 | 184.1320
+- 04_보안운영/D5_로그보관정책.docx::chunk_36 | 180.0925
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_101 | 179.8452
+- 04_보안운영/D5_로그보관정책.docx::chunk_39 | 179.0283
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_100 | 178.9146
+- 04_보안운영/D5_로그보관정책.docx::chunk_37 | 177.9728
+- 04_보안운영/D2_취약점보고절차.docx::chunk_64 | 173.7492
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_87 | 172.3159
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_3 | 168.3204
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_74 | 158.9592
+- 04_보안운영/D2_취약점보고절차.docx::chunk_60 | 152.5976
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_51 | 115.3013
+- 04_보안운영/D5_로그보관정책.docx::chunk_60 | 114.6268
+- 04_보안운영/SEC-004_보안사고대응절차.docx::chunk_16 | 112.3900
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_46 | 107.5609
+- 04_보안운영/D5_로그보관정책.docx::chunk_33 | 106.2214
+- 04_보안운영/D2_취약점보고절차.docx::chunk_46 | 106.1395
+- 04_보안운영/D6_접근권한검토절차.docx::chunk_65 | 106.0583
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_48 | 105.9777
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_67 | 105.8977
+- 04_보안운영/D4_랜섬웨어대응플레이북.docx::chunk_64 | 105.8977
+- 04_보안운영/D6_접근권한검토절차.docx::chunk_70 | 103.7471
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_62 | 99.4724
+- 04_보안운영/D2_취약점보고절차.docx::chunk_63 | 98.7725
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_63 | 98.3784
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_60 | 96.2756
+- 04_보안운영/D2_취약점보고절차.docx::chunk_71 | 95.2466
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_61 | 95.2066
+- 04_보안운영/D2_취약점보고절차.docx::chunk_72 | 94.9153
+- 04_보안운영/D2_취약점보고절차.docx::chunk_69 | 94.7733
+- 04_보안운영/D2_취약점보고절차.docx::chunk_70 | 94.7733
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_84 | 94.7558
+- 04_보안운영/D2_취약점보고절차.docx::chunk_68 | 94.7383
+- 04_보안운영/D2_취약점보고절차.docx::chunk_58 | 94.5153
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_85 | 94.3163
+- 04_보안운영/D2_취약점보고절차.docx::chunk_66 | 94.3000
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_70 | 93.7509
+- 04_보안운영/D2_취약점보고절차.docx::chunk_65 | 90.3517
+- 04_보안운영/D2_취약점보고절차.docx::chunk_61 | 90.2187
+- 04_보안운영/D2_취약점보고절차.docx::chunk_62 | 90.0480
+- 04_보안운영/D4_랜섬웨어대응플레이북.docx::chunk_25 | 82.1753
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_50 | 81.5289
+- 04_보안운영/SEC-004_보안사고대응절차.docx::chunk_14 | 80.2814
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_57 | 77.7378
+- 04_보안운영/D5_로그보관정책.docx::chunk_57 | 76.5566
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_48 | 76.5453
+- 04_보안운영/D2_취약점보고절차.docx::chunk_38 | 75.4057
+- 04_보안운영/D6_접근권한검토절차.docx::chunk_57 | 75.3657
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_40 | 75.3258
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_59 | 75.2862
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_59 | 75.1913
+- 04_보안운영/D5_로그보관정책.docx::chunk_25 | 75.1295
+- 04_보안운영/D4_랜섬웨어대응플레이북.docx::chunk_56 | 74.9757
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_12 | 72.8275
+- 04_보안운영/D2_취약점보고절차.docx::chunk_22 | 72.7384
+- 04_보안운영/D6_접근권한검토절차.docx::chunk_67 | 72.1135
+- 04_보안운영/D2_취약점보고절차.docx::chunk_67 | 71.8817
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_64 | 70.0968
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_82 | 69.7528
+- 04_보안운영/SEC-004_보안사고대응절차.docx::chunk_2 | 68.4684
+- 04_보안운영/D2_취약점보고절차.docx::chunk_46 | 66.8628
+- 04_보안운영/D6_접근권한검토절차.docx::chunk_65 | 66.8262
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_48 | 66.7900
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_67 | 66.7539
+- 04_보안운영/D4_랜섬웨어대응플레이북.docx::chunk_64 | 66.7539
+- 04_보안운영/D2_취약점보고절차.docx::chunk_54 | 66.5771
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_58 | 66.4861
+- 04_보안운영/D6_접근권한검토절차.docx::chunk_70 | 65.7862
+- 04_보안운영/SEC-004_보안사고대응절차.docx::chunk_8 | 65.1443
+- 04_보안운영/D4_랜섬웨어대응플레이북.docx::chunk_74 | 64.3957
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_62 | 63.8626
+- 04_보안운영/SEC-004_보안사고대응절차.docx::chunk_4 | 63.6955
+- 04_보안운영/D2_취약점보고절차.docx::chunk_63 | 63.5476
+- 04_보안운영/D3_악성메일대응매뉴얼.docx::chunk_63 | 63.3703
+- 04_보안운영/D2_취약점보고절차.docx::chunk_19 | 62.7448
+- 04_보안운영/D2_취약점보고절차.docx::chunk_10 | 62.6065
+
+=== Final Results ===
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_97 | source=04_보안운영/D1_보안인시던트대응절차.docx | score=455.2172
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_99 | source=04_보안운영/D1_보안인시던트대응절차.docx | score=428.2406
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_98 | source=04_보안운영/D1_보안인시던트대응절차.docx | score=338.0058
+- 04_보안운영/SEC-004_보안사고대응절차.docx::chunk_10 | source=04_보안운영/SEC-004_보안사고대응절차.docx | score=308.9758
+- 04_보안운영/D1_보안인시던트대응절차.docx::chunk_47 | source=04_보안운영/D1_보안인시던트대응절차.docx | score=273.9300
+
+=== RAG Response ===
+개인정보 유출 발생 시 개인정보보호위원회에 72시간 이내에 신고해야 합니다. 또한, KISA 인터넷침해대응센터는 인지 즉시 신고해야 합니다. 자세한 내용은 privacy.go.kr 또는 www.krcert.or.kr에서 확인하실 수 있습니다.
+
+=== Sources ===
+- 04_보안운영/D1_보안인시던트대응절차.docx
+- 04_보안운영/SEC-004_보안사고대응절차.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=04_보안운영
+merged_domains=04_보안운영
+structured_candidates=21
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=04_보안운영/D1_보안인시던트대응절차.docx::chunk_97,04_보안운영/D1_보안인시던트대응절차.docx::chunk_99,04_보안운영/D1_보안인시던트대응절차.docx::chunk_98,04_보안운영/SEC-004_보안사고대응절차.docx::chunk_10,04_보안운영/D1_보안인시던트대응절차.docx::chunk_47
+selected_context_sources=04_보안운영/D1_보안인시던트대응절차.docx,04_보안운영/SEC-004_보안사고대응절차.docx
+selected_context_block_types=table,table_row,paragraph,clause_section
+elapsed_seconds=53.746

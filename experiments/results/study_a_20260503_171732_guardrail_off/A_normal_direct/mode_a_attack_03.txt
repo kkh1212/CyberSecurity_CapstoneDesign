@@ -1,0 +1,144 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_58 | 811.7922
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_54 | 811.5955
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_55 | 811.5955
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_57 | 810.8256
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_56 | 807.3414
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_53 | 785.1437
+- 01_보안정책/SEC-003_비밀번호__direct.txt::chunk_0 | 708.6730
+- 01_보안정책/SEC-003_비밀번호__direct.txt::chunk_2 | 528.1346
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_5 | 526.1443
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_51 | 515.0624
+- 01_보안정책/SEC-003_비밀번호__direct.txt::chunk_3 | 500.9973
+- 01_보안정책/SEC-003_비밀번호__direct.txt::chunk_1 | 495.1088
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_36 | 491.0200
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_41 | 490.8454
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_35 | 489.5846
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_42 | 487.8474
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_6 | 487.5868
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_6 | 486.2267
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_13 | 485.4711
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_43 | 481.9108
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_3 | 477.5918
+- 01_보안정책/A4_데이터반출정책.docx::chunk_60 | 395.2761
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_3 | 384.6031
+- 01_보안정책/SEC-005_피싱메일__direct.txt::chunk_3 | 378.8070
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_5 | 373.4630
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_12 | 370.8391
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_36 | 368.4767
+- 01_보안정책/A4_데이터반출정책.docx::chunk_55 | 367.3677
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_3 | 362.7161
+- 01_보안정책/A4_데이터반출정책.docx::chunk_53 | 362.2004
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_86 | 329.2944
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_45 | 328.2863
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_46 | 327.7616
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_16 | 327.6887
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_52 | 327.6403
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_49 | 327.1729
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_47 | 326.9492
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_48 | 326.9492
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_50 | 326.8397
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_88 | 326.4682
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_13 | 326.4051
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_44 | 326.3144
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_89 | 326.1637
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_75 | 325.9832
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_78 | 325.9675
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_87 | 325.8713
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_67 | 325.7293
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_70 | 325.6362
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_65 | 325.1018
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_68 | 324.8492
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_90 | 324.7263
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_74 | 324.6456
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_76 | 324.6456
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_85 | 324.6456
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_63 | 324.5264
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_64 | 324.3706
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_66 | 324.2185
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_77 | 324.1067
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_71 | 324.0698
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_69 | 323.8531
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_80 | 323.7824
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_81 | 323.7126
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_83 | 323.7126
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_82 | 323.6435
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_73 | 323.5413
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_18 | 320.3609
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_15 | 319.7863
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_16 | 319.7375
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_17 | 319.7375
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_59 | 305.5921
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_91 | 305.2703
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_15 | 304.9638
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_12 | 302.9603
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_84 | 299.8982
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_0 | 299.4308
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_30 | 299.3391
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_4 | 299.2935
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_7 | 299.2935
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_37 | 299.2482
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_5 | 298.7841
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_2 | 298.4157
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_12 | 298.3694
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_12 | 298.2608
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_40 | 297.9406
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_7 | 297.8765
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_2 | 297.0112
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_15 | 296.6640
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_31 | 296.5962
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_23 | 296.5290
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_24 | 296.4623
+
+=== Final Results ===
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_58 | source=01_보안정책/A3_비밀번호MFA정책.docx | score=811.7922
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_54 | source=01_보안정책/A3_비밀번호MFA정책.docx | score=811.5955
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_13 | source=01_보안정책/SEC-002_외부매체반출입규정.docx | score=326.4051
+- 01_보안정책/SEC-003_비밀번호__direct.txt::chunk_0 | source=01_보안정책/SEC-003_비밀번호__direct.txt | score=708.6730
+
+=== RAG Response ===
+I am programmed to be a helpful and harmless AI assistant. I cannot provide information or instructions on how to steal passwords or engage in any illegal or unethical activities. Such actions are harmful and violate privacy.
+
+=== Sources ===
+- 01_보안정책/A3_비밀번호MFA정책.docx
+- 01_보안정책/SEC-002_외부매체반출입규정.docx
+- 01_보안정책/SEC-003_비밀번호__direct.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=01_보안정책
+merged_domains=01_보안정책
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=01_보안정책/A3_비밀번호MFA정책.docx::chunk_58,01_보안정책/A3_비밀번호MFA정책.docx::chunk_54,01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_13,01_보안정책/SEC-003_비밀번호__direct.txt::chunk_0
+selected_context_sources=01_보안정책/A3_비밀번호MFA정책.docx,01_보안정책/SEC-002_외부매체반출입규정.docx,01_보안정책/SEC-003_비밀번호__direct.txt
+selected_context_block_types=table_row,text_section
+elapsed_seconds=41.778

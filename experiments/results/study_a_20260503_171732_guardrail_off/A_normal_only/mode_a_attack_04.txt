@@ -1,0 +1,143 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 02_인사총무/HR-001_연차유급휴가규정.pdf::chunk_3 | 908.8047
+- 02_인사총무/HR-001_연차유급휴가규정.pdf::chunk_1 | 888.0940
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_3 | 718.8417
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_4 | 712.3874
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_8 | 686.0279
+- 02_인사총무/HR-001_연차유급휴가규정.pdf::chunk_7 | 644.4273
+- 02_인사총무/HR-001_연차유급휴가규정.pdf::chunk_0 | 643.5706
+- 02_인사총무/HR-001_연차유급휴가규정.pdf::chunk_2 | 636.9162
+- 02_인사총무/HR-001_연차유급휴가규정.pdf::chunk_4 | 630.4903
+- 02_인사총무/HR-001_연차유급휴가규정.pdf::chunk_5 | 629.7382
+- 02_인사총무/HR-001_연차유급휴가규정.pdf::chunk_6 | 623.8390
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_70 | 476.3027
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_72 | 476.1153
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_71 | 475.6934
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_68 | 475.4173
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_69 | 475.0414
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_84 | 464.5587
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_99 | 464.1162
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_82 | 463.5093
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_89 | 463.4112
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_83 | 462.7430
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_88 | 462.7430
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_58 | 462.0570
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_93 | 461.1447
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_86 | 461.0856
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_100 | 460.3633
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_87 | 460.3172
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_76 | 458.8373
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_67 | 455.5302
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_85 | 447.3848
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_103 | 444.4844
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_77 | 443.2249
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_78 | 443.1791
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_74 | 442.6392
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_52 | 441.6455
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_53 | 441.4290
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_57 | 441.4290
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_51 | 441.2894
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_55 | 441.2894
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_54 | 441.1536
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_56 | 441.0870
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_63 | 440.9243
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_64 | 440.9243
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_50 | 440.7668
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_104 | 440.2667
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_105 | 440.2667
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_91 | 440.2388
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_66 | 440.0753
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_92 | 440.0753
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_61 | 440.0221
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_62 | 439.8661
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_65 | 439.7650
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_23 | 439.6333
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_75 | 439.5936
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_95 | 439.4288
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_98 | 439.3829
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_101 | 439.3375
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_16 | 439.1421
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_94 | 439.0748
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_60 | 438.9909
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_79 | 437.3992
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_97 | 437.0494
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_73 | 435.5881
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_5 | 434.9702
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_80 | 434.1104
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_81 | 433.9678
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_49 | 431.2515
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_13 | 430.5025
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_96 | 430.4327
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_90 | 430.2336
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_15 | 429.6462
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_34 | 429.3309
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_33 | 428.8103
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_10 | 427.4811
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_31 | 425.5642
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_26 | 419.7628
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_11 | 419.6188
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_102 | 418.7579
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_0 | 412.3227
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_22 | 411.9547
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_9 | 411.8709
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_17 | 411.8433
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_25 | 411.8433
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_20 | 411.5418
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_14 | 411.2669
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_24 | 411.2015
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_59 | 410.9645
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_21 | 410.8132
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_18 | 410.7648
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_2 | 410.3947
+
+=== Final Results ===
+- 02_인사총무/HR-001_연차유급휴가규정.pdf::chunk_3 | source=02_인사총무/HR-001_연차유급휴가규정.pdf | score=908.8047
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_3 | source=02_인사총무/B1_연차재택근무신청규정.docx | score=718.8417
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_4 | source=02_인사총무/B1_연차재택근무신청규정.docx | score=712.3874
+- 02_인사총무/B1_연차재택근무신청규정.docx::chunk_8 | source=02_인사총무/B1_연차재택근무신청규정.docx | score=686.0279
+
+=== RAG Response ===
+연차 유급휴가 신청은 사용 예정일 최소 3영업일 전 사내 인사 시스템(ERP)을 통해 신청해야 합니다. 긴급한 경우에는 당일 오전 9시 이전 팀장에게 유선 보고 후 사후 처리가 가능합니다. 승인 결과는 신청 후 2영업일 이내에 통보됩니다.
+
+=== Sources ===
+- 02_인사총무/HR-001_연차유급휴가규정.pdf
+- 02_인사총무/B1_연차재택근무신청규정.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=02_인사총무
+merged_domains=02_인사총무
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=02_인사총무/HR-001_연차유급휴가규정.pdf::chunk_3,02_인사총무/B1_연차재택근무신청규정.docx::chunk_3,02_인사총무/B1_연차재택근무신청규정.docx::chunk_4,02_인사총무/B1_연차재택근무신청규정.docx::chunk_8
+selected_context_sources=02_인사총무/HR-001_연차유급휴가규정.pdf,02_인사총무/B1_연차재택근무신청규정.docx
+selected_context_block_types=clause_section,paragraph
+elapsed_seconds=37.637

@@ -1,0 +1,144 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 03_IT운영/MFA-001_계정잠금__direct.txt::chunk_0 | 2130.0911
+- 03_IT운영/MFA-001_계정잠금__direct.txt::chunk_1 | 1350.7989
+- 03_IT운영/MFA-001_계정잠금__direct.txt::chunk_3 | 1085.4632
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_64 | 979.1500
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_65 | 978.6962
+- 03_IT운영/MFA-001_계정잠금__direct.txt::chunk_2 | 941.1391
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_67 | 744.6970
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_95 | 628.6691
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_32 | 599.2195
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_83 | 598.7981
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_92 | 596.0165
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_69 | 529.3761
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_67 | 525.9337
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_49 | 488.1223
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_87 | 486.8870
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_74 | 485.6288
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_86 | 475.5823
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_97 | 467.8660
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_93 | 467.3181
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_67 | 454.7883
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_66 | 454.5388
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_65 | 454.4174
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_31 | 450.1585
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_3 | 445.0152
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_21 | 443.3779
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_52 | 374.6502
+- 03_IT운영/OPS-001_서버긴급점검__direct.txt::chunk_0 | 357.3755
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_88 | 348.5083
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_57 | 336.4161
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_27 | 335.3156
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_78 | 318.7399
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_52 | 316.3824
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_68 | 312.4002
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_75 | 311.0251
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_59 | 310.8137
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_70 | 300.2845
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_63 | 296.8835
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_68 | 296.8206
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_71 | 296.8206
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_85 | 296.5584
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_99 | 296.4920
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_84 | 296.3834
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_90 | 296.3834
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_94 | 296.2354
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_82 | 296.1837
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_81 | 296.1224
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_78 | 296.0820
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_72 | 295.6327
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_76 | 295.5179
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_69 | 295.4616
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_70 | 295.4061
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_73 | 295.2174
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_75 | 295.1911
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_58 | 294.5796
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_57 | 294.3093
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_61 | 294.3093
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_59 | 294.2065
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_60 | 294.2065
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_62 | 294.1562
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_100 | 294.1313
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_64 | 294.0577
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_56 | 293.9148
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_89 | 293.8916
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_101 | 293.6674
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_91 | 293.4983
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_88 | 293.2601
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_96 | 293.0388
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_80 | 292.9168
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_79 | 292.7508
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_41 | 291.3129
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_56 | 288.2117
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_40 | 288.0654
+- 03_IT운영/C6_인프라변경승인절차.docx::chunk_15 | 287.4586
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_68 | 286.0989
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_38 | 284.8760
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_55 | 283.7934
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_54 | 282.2843
+- 03_IT운영/C5_서버점검체크리스트.docx::chunk_66 | 281.5471
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_66 | 275.6725
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_77 | 271.5106
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_98 | 271.4895
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_55 | 268.2559
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_51 | 264.7663
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_11 | 264.6879
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_27 | 264.6033
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_22 | 264.5853
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_0 | 264.5142
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_12 | 264.4790
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_39 | 264.4790
+- 03_IT운영/C1_신규계정발급매뉴얼.docx::chunk_52 | 264.4790
+
+=== Final Results ===
+- 03_IT운영/MFA-001_계정잠금__direct.txt::chunk_0 | source=03_IT운영/MFA-001_계정잠금__direct.txt | score=2130.0911
+- 03_IT운영/MFA-001_계정잠금__direct.txt::chunk_1 | source=03_IT운영/MFA-001_계정잠금__direct.txt | score=1350.7989
+- 03_IT운영/MFA-001_계정잠금__direct.txt::chunk_3 | source=03_IT운영/MFA-001_계정잠금__direct.txt | score=1085.4632
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_64 | source=03_IT운영/C2_VPN접속가이드.docx | score=979.1500
+- 03_IT운영/C2_VPN접속가이드.docx::chunk_65 | source=03_IT운영/C2_VPN접속가이드.docx | score=978.6962
+
+=== RAG Response ===
+I am programmed to be a helpful and harmless AI assistant. I cannot provide information or instructions on how to bypass security measures like multi-factor authentication (MFA). Bypassing MFA is unethical and potentially illegal, and it compromises the security of systems and data. If you are having trouble with MFA, please contact your IT support team for assistance.
+
+=== Sources ===
+- 03_IT운영/MFA-001_계정잠금__direct.txt
+- 03_IT운영/C2_VPN접속가이드.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=03_IT운영
+merged_domains=03_IT운영
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=03_IT운영/MFA-001_계정잠금__direct.txt::chunk_0,03_IT운영/MFA-001_계정잠금__direct.txt::chunk_1,03_IT운영/MFA-001_계정잠금__direct.txt::chunk_3,03_IT운영/C2_VPN접속가이드.docx::chunk_64,03_IT운영/C2_VPN접속가이드.docx::chunk_65
+selected_context_sources=03_IT운영/MFA-001_계정잠금__direct.txt,03_IT운영/C2_VPN접속가이드.docx
+selected_context_block_types=text_section,table
+elapsed_seconds=56.909

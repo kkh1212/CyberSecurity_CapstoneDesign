@@ -1,0 +1,142 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_87 | 1773.6800
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_86 | 1749.0835
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_75 | 1630.1023
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_59 | 1625.8417
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_73 | 1625.0670
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_60 | 1624.4374
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_88 | 1624.2840
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_89 | 1624.2782
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_72 | 1624.2687
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_61 | 1623.8025
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_58 | 1623.6803
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_74 | 1623.3997
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_63 | 1623.2018
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_62 | 1622.6257
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_71 | 1602.7023
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_57 | 1595.5040
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_70 | 1546.0854
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_24 | 1518.7396
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_31 | 1518.3480
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_30 | 1517.3614
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_16 | 1513.1152
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_64 | 1507.9451
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_38 | 1503.4013
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_12 | 1501.1516
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_79 | 1394.0983
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_50 | 1392.7137
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_56 | 1392.5501
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_55 | 1392.2292
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_49 | 1391.9161
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_53 | 1391.9161
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_51 | 1391.6106
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_52 | 1391.6106
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_54 | 1391.4607
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_80 | 1390.9949
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_68 | 1390.7485
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_48 | 1390.7372
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_66 | 1390.5790
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_81 | 1390.2888
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_82 | 1388.9600
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_85 | 1388.8769
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_84 | 1388.7945
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_83 | 1388.4715
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_69 | 1388.2779
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_67 | 1387.3042
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_65 | 1386.8989
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_23 | 1385.7102
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_45 | 1378.1838
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_4 | 1375.8811
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_3 | 1373.3366
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_5 | 1371.3510
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_26 | 1369.5394
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_11 | 1367.4757
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_0 | 1366.4497
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_33 | 1365.7622
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_76 | 1365.5419
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_20 | 1364.8630
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_13 | 1364.7738
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_27 | 1364.2687
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_32 | 1364.1989
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_25 | 1363.7877
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_14 | 1363.6201
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_39 | 1363.5454
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_6 | 1363.1710
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_19 | 1362.9485
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_21 | 1362.9478
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_40 | 1362.9478
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_8 | 1362.7037
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_7 | 1362.4974
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_10 | 1362.1273
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_18 | 1362.0692
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_2 | 1362.0100
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_34 | 1361.9161
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_29 | 1361.6040
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_35 | 1361.4928
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_22 | 1361.3892
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_42 | 1361.3892
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_43 | 1360.7224
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_41 | 1360.6869
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_44 | 1360.4633
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_46 | 1360.4633
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_36 | 1360.3358
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_28 | 1360.2664
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_1 | 1360.1502
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_17 | 1360.1502
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_37 | 1359.8390
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_15 | 1359.6799
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_9 | 1358.9594
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_77 | 1358.7073
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_47 | 1357.2218
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_78 | 1349.4668
+
+=== Final Results ===
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_87 | source=01_보안정책/A2_계정권한관리정책.docx | score=1773.6800
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_86 | source=01_보안정책/A2_계정권한관리정책.docx | score=1749.0835
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_75 | source=01_보안정책/A2_계정권한관리정책.docx | score=1630.1023
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_59 | source=01_보안정책/A2_계정권한관리정책.docx | score=1625.8417
+
+=== RAG Response ===
+계정 권한 관리 정책에서 다중 인증(MFA) 적용 대상과 기준에 대한 직접적인 언급은 없습니다. 하지만 관리자·특권 계정은 월 1회 보안팀이 직접 검토하며, 미응답 시 즉시 회수 및 재발급 절차가 진행됩니다. 또한, 관리자 계정(로컬)은 IT·보안팀 시스템 관리자를 대상으로 IT보안팀에서 발급하며, 재직 기간에 따라 분기별로 검토합니다.
+
+=== Sources ===
+- 01_보안정책/A2_계정권한관리정책.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=01_보안정책
+merged_domains=01_보안정책
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=01_보안정책/A2_계정권한관리정책.docx::chunk_87,01_보안정책/A2_계정권한관리정책.docx::chunk_86,01_보안정책/A2_계정권한관리정책.docx::chunk_75,01_보안정책/A2_계정권한관리정책.docx::chunk_59
+selected_context_sources=01_보안정책/A2_계정권한관리정책.docx
+selected_context_block_types=table_row,table
+elapsed_seconds=68.774

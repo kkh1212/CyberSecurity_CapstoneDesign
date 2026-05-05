@@ -1,0 +1,142 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_3 | 1040.6611
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_60 | 918.2746
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_67 | 918.2746
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_55 | 917.8901
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_54 | 917.7005
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_49 | 917.3489
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_53 | 917.3268
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_59 | 917.3268
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_68 | 917.3268
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_57 | 917.1426
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_63 | 916.9600
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_66 | 916.9600
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_65 | 916.7792
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_69 | 916.7792
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_70 | 916.5999
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_50 | 916.4788
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_61 | 915.5578
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_73 | 915.3895
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_64 | 914.8930
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_56 | 914.1212
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_83 | 913.7444
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_74 | 913.4975
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_79 | 913.1331
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_72 | 913.0925
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_58 | 912.3070
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_92 | 910.8341
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_47 | 910.7603
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_41 | 910.1773
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_46 | 909.3868
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_40 | 908.8773
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_44 | 908.8773
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_43 | 908.3811
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_45 | 908.1378
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_39 | 906.9676
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_42 | 906.9676
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_84 | 904.7353
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_93 | 904.7353
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_94 | 904.3412
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_80 | 902.8525
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_82 | 902.3280
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_90 | 902.3187
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_81 | 902.1570
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_51 | 901.9419
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_78 | 901.8205
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_87 | 901.8205
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_88 | 900.5441
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_89 | 899.9448
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_22 | 895.3852
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_11 | 892.6985
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_52 | 892.6143
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_62 | 892.4855
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_71 | 891.3825
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_0 | 890.3766
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_9 | 889.9387
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_48 | 889.4376
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_12 | 889.3113
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_4 | 886.9919
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_14 | 886.0819
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_26 | 886.0752
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_25 | 885.8204
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_5 | 885.3199
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_85 | 885.1384
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_29 | 882.2271
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_33 | 881.6001
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_2 | 880.9103
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_37 | 880.6048
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_6 | 880.1548
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_10 | 880.1093
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_7 | 880.0070
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_32 | 879.8602
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_8 | 879.7144
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_27 | 879.7144
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_17 | 879.5697
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_75 | 879.3363
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_15 | 879.2817
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_28 | 879.0010
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_36 | 878.1487
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_16 | 878.0585
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_91 | 877.8116
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_23 | 877.6135
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_24 | 877.6135
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_21 | 877.2581
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_34 | 876.7520
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_1 | 876.5039
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_30 | 876.2591
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_31 | 875.7789
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_18 | 875.3436
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_35 | 874.7424
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_20 | 874.6308
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_13 | 874.1914
+
+=== Final Results ===
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_3 | source=02_인사총무/B4_소프트웨어설치승인절차.docx | score=1040.6611
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_60 | source=02_인사총무/B4_소프트웨어설치승인절차.docx | score=918.2746
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_67 | source=02_인사총무/B4_소프트웨어설치승인절차.docx | score=918.2746
+- 02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_55 | source=02_인사총무/B4_소프트웨어설치승인절차.docx | score=917.8901
+
+=== RAG Response ===
+단국테크 주식회사의 임직원이 업무용 기기에 소프트웨어를 설치하거나 SaaS 서비스를 신규 도입할 때 필요한 승인 절차와 기준을 규정합니다. 이 절차는 비인가 소프트웨어 설치로 인한 보안 사고, 라이선스 위반, Shadow IT 문제를 예방하기 위한 것입니다. 소프트웨어 배포 방식은 MDM 사전 설치 또는 직접 설치와 같이 다양합니다.
+
+=== Sources ===
+- 02_인사총무/B4_소프트웨어설치승인절차.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=02_인사총무
+merged_domains=02_인사총무
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_3,02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_60,02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_67,02_인사총무/B4_소프트웨어설치승인절차.docx::chunk_55
+selected_context_sources=02_인사총무/B4_소프트웨어설치승인절차.docx
+selected_context_block_types=paragraph,table_row
+elapsed_seconds=39.199

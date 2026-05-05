@@ -1,0 +1,144 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_17 | 689.8304
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_18 | 689.6365
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_15 | 662.6601
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_5 | 658.6796
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_14 | 631.5853
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_16 | 631.0968
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_19 | 630.5970
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_20 | 630.5970
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_11 | 612.4288
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_13 | 608.9379
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_8 | 603.9887
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_2 | 601.6686
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_3 | 601.2548
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_9 | 600.9801
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_5 | 600.6736
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_1 | 600.5993
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_10 | 600.3124
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_0 | 599.6925
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_12 | 599.0339
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_6 | 598.9009
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_4 | 598.6184
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_7 | 598.2905
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_1 | 381.1976
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_4 | 380.5860
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_7 | 331.2736
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_9 | 328.9616
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_11 | 328.8251
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_10 | 328.7581
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_0 | 328.1633
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_2 | 327.6398
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_3 | 326.8913
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_6 | 308.3096
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_8 | 301.7282
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_15 | 296.5218
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_12 | 271.0932
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_3 | 246.2511
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_6 | 222.7837
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_1 | 221.5202
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_5 | 218.1039
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_6 | 202.8893
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_8 | 199.9277
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_17 | 181.1895
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_15 | 168.2848
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_16 | 162.8931
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_11 | 162.3059
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_14 | 161.7303
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_13 | 161.6734
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_13 | 153.0800
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_9 | 152.8695
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_12 | 151.6419
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_4 | 148.8422
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_13 | 148.2951
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_8 | 146.5796
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_1 | 145.1260
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_4 | 138.6415
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_10 | 138.4985
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_8 | 135.5789
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_6 | 133.7527
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_1 | 133.1841
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_0 | 130.6328
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_5 | 130.5923
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_3 | 130.5524
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_7 | 130.5524
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_9 | 130.5130
+- 07_재무경비/FIN-005_경비부정사용처리기준.docx::chunk_2 | 130.5000
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_5 | 102.6967
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_13 | 89.8328
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_1 | 88.4067
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_20 | 86.5094
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_21 | 86.4072
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_22 | 86.4072
+- 07_재무경비/FIN-004_급여지급규정.docx::chunk_19 | 86.3906
+- 07_재무경비/FIN-004_급여지급규정.docx::chunk_20 | 86.3255
+- 07_재무경비/FIN-004_급여지급규정.docx::chunk_16 | 86.0547
+- 07_재무경비/FIN-004_급여지급규정.docx::chunk_18 | 86.0547
+- 07_재무경비/FIN-004_급여지급규정.docx::chunk_17 | 86.0267
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_15 | 85.9450
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_18 | 85.9185
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_14 | 85.8159
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_16 | 85.7186
+- 07_재무경비/FIN-004_급여지급규정.docx::chunk_14 | 85.5706
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_12 | 85.4956
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_18 | 85.4852
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_17 | 80.3853
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_9 | 66.0413
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_4 | 64.2290
+- 07_재무경비/FIN-002_예산편성집행지침.docx::chunk_4 | 62.0020
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_15 | 61.7870
+- 07_재무경비/FIN-003_법인카드사용규정.docx::chunk_19 | 61.6374
+- 07_재무경비/FIN-004_급여지급규정.docx::chunk_13 | 61.2886
+
+=== Final Results ===
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_17 | source=07_재무경비/FIN-006_경비정산서류제출기준.docx | score=689.8304
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_18 | source=07_재무경비/FIN-006_경비정산서류제출기준.docx | score=689.6365
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_15 | source=07_재무경비/FIN-006_경비정산서류제출기준.docx | score=662.6601
+- 07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_5 | source=07_재무경비/FIN-001_출장경비처리규정.pdf | score=658.6796
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_14 | source=07_재무경비/FIN-006_경비정산서류제출기준.docx | score=631.5853
+
+=== RAG Response ===
+외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+
+=== Sources ===
+- 07_재무경비/FIN-006_경비정산서류제출기준.docx
+- 07_재무경비/FIN-001_출장경비처리규정.pdf
+
+=== Debug ===
+route=external_guardrail_context_block
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=true
+context_guardrail_blocked=true
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=false
+final_answer_source=external_guardrail
+guardrail_block_response=외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+selected_domain=07_재무경비
+merged_domains=07_재무경비
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_17,07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_18,07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_15,07_재무경비/FIN-001_출장경비처리규정.pdf::chunk_5,07_재무경비/FIN-006_경비정산서류제출기준.docx::chunk_14
+selected_context_sources=07_재무경비/FIN-006_경비정산서류제출기준.docx,07_재무경비/FIN-001_출장경비처리규정.pdf
+selected_context_block_types=table_row,table,clause_section
+elapsed_seconds=5.602

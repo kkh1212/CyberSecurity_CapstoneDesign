@@ -34,6 +34,13 @@ from src.runtime_guard import (
 from src.structured_qa import build_structured_answer
 from src.chunking import POLICY_DOC_KEYWORDS
 from src.detector_pipeline import filter_expansion_chunks
+from src.external_guardrail import (
+    BLOCK_RESPONSE as EXTERNAL_GUARDRAIL_BLOCK_RESPONSE,
+    check as check_external_guardrail,
+    empty_summary as empty_external_guardrail_summary,
+    load_config as load_external_guardrail_config,
+    merge_stage_result as merge_external_guardrail_result,
+)
 
 STRUCTURED_FRIENDLY_BLOCK_TYPES = {"table_row", "table", "text_section"}
 POLICY_HEAVY_BLOCK_TYPES = {"clause_section", "paragraph", "page_text", "doc_text", "hwp_text", "hwpx_xml"}
@@ -41,6 +48,25 @@ NOTICE_DOC_KEYWORDS = ("안내", "절차", "기준", "faq", "q&a")
 
 
 EXCLUDED_DOC_TOKENS = ("question", "questions", "질문예시", "예시질문")
+
+EXTERNAL_GUARDRAIL_DEBUG_FIELDS = (
+    "external_guardrail_enabled",
+    "external_guardrail_provider",
+    "external_guardrail_stages",
+    "external_guardrail_action",
+    "input_guardrail_flagged",
+    "input_guardrail_blocked",
+    "context_guardrail_flagged",
+    "context_guardrail_blocked",
+    "output_guardrail_flagged",
+    "output_guardrail_blocked",
+    "external_guardrail_reason",
+    "external_guardrail_categories",
+    "external_guardrail_error",
+    "llm_called",
+    "final_answer_source",
+    "guardrail_block_response",
+)
 
 
 def mutedrag_attack_eval_enabled() -> bool:
@@ -106,6 +132,7 @@ def print_debug_info(
     source_coverage_summary: List[str] | None = None,
     final_result_coverage_summary: List[str] | None = None,
     context_coverage_summary: List[str] | None = None,
+    external_guardrail_summary: Dict | None = None,
 ):
     print("\n=== Debug ===")
     print(f"route={route}")
@@ -115,6 +142,9 @@ def print_debug_info(
         print(f"runtime_detector_enabled={str(runtime_detector_flag).lower()}")
     if runtime_sanitizer_flag is not None:
         print(f"runtime_sanitizer_enabled={str(runtime_sanitizer_flag).lower()}")
+    if external_guardrail_summary:
+        for field in EXTERNAL_GUARDRAIL_DEBUG_FIELDS:
+            print(f"{field}={format_debug_value(external_guardrail_summary.get(field, ''))}")
     if selected_domain:
         print(f"selected_domain={selected_domain}")
     if merged_domains:
@@ -694,6 +724,71 @@ def chunk_content_text(chunk: Dict) -> str:
         if first_line.startswith("[SOURCE="):
             return remainder.strip()
     return text.strip()
+
+
+def format_debug_value(value) -> str:
+    if isinstance(value, bool):
+        return str(value).lower()
+    if isinstance(value, (list, tuple, set)):
+        return ",".join(str(item) for item in value)
+    return re.sub(r"\s+", " ", str(value or "")).strip()
+
+
+def selected_context_metadata(context_items: List[Dict]) -> Dict:
+    chunk_ids: List[str] = []
+    sources: List[str] = []
+    block_types: List[str] = []
+    for item in context_items:
+        chunk = item.get("chunk", {})
+        chunk_id = chunk.get("chunk_id", "")
+        source = chunk.get("source", "")
+        block_type = chunk.get("block_type", "")
+        if chunk_id:
+            chunk_ids.append(chunk_id)
+        if source and source not in sources:
+            sources.append(source)
+        if block_type and block_type not in block_types:
+            block_types.append(block_type)
+    return {
+        "condition": os.getenv("STUDY_A_CONDITION", ""),
+        "query_index": os.getenv("STUDY_A_QUERY_INDEX", ""),
+        "query_set": os.getenv("STUDY_A_QUERY_SET", ""),
+        "source_docs": sources,
+        "chunk_ids": chunk_ids,
+        "block_types": block_types,
+    }
+
+
+def build_context_guardrail_text(query: str, context_items: List[Dict]) -> str:
+    metadata = selected_context_metadata(context_items)
+    context_blocks = []
+    for idx, item in enumerate(context_items, start=1):
+        chunk = item.get("chunk", {})
+        context_blocks.append(
+            "\n".join(
+                [
+                    f"[Context {idx}]",
+                    f"source={chunk.get('source', '')}",
+                    f"chunk_id={chunk.get('chunk_id', '')}",
+                    chunk_content_text(chunk),
+                ]
+            )
+        )
+    return "\n\n".join(
+        [
+            "[User Question]",
+            query,
+            "[Retrieved Context]",
+            "\n\n".join(context_blocks),
+            "[Source Info]",
+            f"source_docs={','.join(metadata['source_docs'])}",
+            f"chunk_ids={','.join(metadata['chunk_ids'])}",
+        ]
+    )
+
+
+def build_output_guardrail_text(query: str, answer: str) -> str:
+    return "\n\n".join(["[User Question]", query, "[Model Answer]", answer])
 
 
 def chunks_are_near_duplicates(left: Dict, right: Dict) -> bool:
@@ -1353,6 +1448,37 @@ def run_query(query: str):
     excluded_chunk_ids: set[str] = set()
     excluded_sources: set[str] = set()
     requery_attempt = 0
+    external_guardrail_config = load_external_guardrail_config()
+    external_guardrail_summary = empty_external_guardrail_summary(external_guardrail_config)
+    external_guardrail_metadata = {
+        "condition": os.getenv("STUDY_A_CONDITION", ""),
+        "query_index": os.getenv("STUDY_A_QUERY_INDEX", ""),
+        "query_set": os.getenv("STUDY_A_QUERY_SET", ""),
+    }
+
+    input_guardrail_result = check_external_guardrail(
+        "input",
+        "\n".join(["[User Question]", query]),
+        external_guardrail_metadata,
+        external_guardrail_config,
+    )
+    merge_external_guardrail_result(external_guardrail_summary, input_guardrail_result)
+    if input_guardrail_result.get("blocked"):
+        external_guardrail_summary["llm_called"] = False
+        external_guardrail_summary["final_answer_source"] = "external_guardrail"
+        external_guardrail_summary["guardrail_block_response"] = EXTERNAL_GUARDRAIL_BLOCK_RESPONSE
+        print("\n=== RAG Response ===")
+        print(EXTERNAL_GUARDRAIL_BLOCK_RESPONSE)
+        print_debug_info(
+            route="external_guardrail_input_block",
+            elapsed_seconds=time.perf_counter() - started_at,
+            selected_domain=requested_domain,
+            security_mode=security_mode,
+            runtime_detector_flag=runtime_detector_flag,
+            runtime_sanitizer_flag=runtime_sanitizer_flag,
+            external_guardrail_summary=external_guardrail_summary,
+        )
+        return
 
     while True:
         query_coverage_terms = build_query_coverage_terms(profile)
@@ -1638,16 +1764,71 @@ def run_query(query: str):
             runtime_guard_summary = post_remove_summary
             runtime_result = post_remove_result
 
+        context_guardrail_metadata = {
+            **external_guardrail_metadata,
+            **selected_context_metadata(context_chunks),
+        }
+        context_guardrail_result = check_external_guardrail(
+            "context",
+            build_context_guardrail_text(query, context_chunks),
+            context_guardrail_metadata,
+            external_guardrail_config,
+        )
+        merge_external_guardrail_result(external_guardrail_summary, context_guardrail_result)
+        if context_guardrail_result.get("blocked"):
+            external_guardrail_summary["llm_called"] = False
+            external_guardrail_summary["final_answer_source"] = "external_guardrail"
+            external_guardrail_summary["guardrail_block_response"] = EXTERNAL_GUARDRAIL_BLOCK_RESPONSE
+            print("\n=== RAG Response ===")
+            print(EXTERNAL_GUARDRAIL_BLOCK_RESPONSE)
+            print_sources(context_chunks)
+            print_debug_info(
+                route="external_guardrail_context_block",
+                elapsed_seconds=time.perf_counter() - started_at,
+                structured_candidates_count=len(structured_candidates),
+                selected_domain=selected_domain,
+                merged_domains=merged_domains,
+                retrieval_filter_summary=retrieval_filter_summary,
+                expansion_filter_summary=expansion_filter_summary,
+                security_mode=security_mode,
+                runtime_detector_flag=runtime_detector_flag,
+                runtime_sanitizer_flag=runtime_sanitizer_flag,
+                final_result_count=len(final_chunks),
+                context_chunk_count=len(context_chunks),
+                runtime_guard_summary=runtime_guard_summary,
+                selected_context_items=context_chunks,
+                query_coverage_terms=query_coverage_terms,
+                source_coverage_summary=source_coverage_summary,
+                final_result_coverage_summary=final_result_coverage_summary,
+                context_coverage_summary=context_coverage_summary,
+                external_guardrail_summary=external_guardrail_summary,
+            )
+            return
+
         if attack_eval_mode:
             prompt = build_mutedrag_attack_prompt(query, context_chunks)
         else:
             prompt = build_rag_prompt(query, context_chunks, profile)
+        external_guardrail_summary["llm_called"] = True
+        external_guardrail_summary["final_answer_source"] = "llm"
         response = ask_ollama(prompt)
         response_text = response.get("response", "")
         if attack_eval_mode:
             normalized_response = response_text.strip()
         else:
             normalized_response = normalize_rag_response_text(response_text, context_chunks)
+
+        output_guardrail_result = check_external_guardrail(
+            "output",
+            build_output_guardrail_text(query, normalized_response),
+            context_guardrail_metadata,
+            external_guardrail_config,
+        )
+        merge_external_guardrail_result(external_guardrail_summary, output_guardrail_result)
+        if output_guardrail_result.get("blocked"):
+            normalized_response = EXTERNAL_GUARDRAIL_BLOCK_RESPONSE
+            external_guardrail_summary["final_answer_source"] = "external_guardrail"
+            external_guardrail_summary["guardrail_block_response"] = EXTERNAL_GUARDRAIL_BLOCK_RESPONSE
 
         print("\n=== RAG Response ===")
         print(normalized_response)
@@ -1671,14 +1852,29 @@ def run_query(query: str):
             source_coverage_summary=source_coverage_summary,
             final_result_coverage_summary=final_result_coverage_summary,
             context_coverage_summary=context_coverage_summary,
+            external_guardrail_summary=external_guardrail_summary,
         )
         return
 
     prompt = build_general_prompt(query)
+    external_guardrail_summary["llm_called"] = True
+    external_guardrail_summary["final_answer_source"] = "llm"
     response = ask_ollama(prompt)
+    general_response = response.get("response", "")
+    output_guardrail_result = check_external_guardrail(
+        "output",
+        build_output_guardrail_text(query, general_response),
+        external_guardrail_metadata,
+        external_guardrail_config,
+    )
+    merge_external_guardrail_result(external_guardrail_summary, output_guardrail_result)
+    if output_guardrail_result.get("blocked"):
+        general_response = EXTERNAL_GUARDRAIL_BLOCK_RESPONSE
+        external_guardrail_summary["final_answer_source"] = "external_guardrail"
+        external_guardrail_summary["guardrail_block_response"] = EXTERNAL_GUARDRAIL_BLOCK_RESPONSE
 
     print("\n=== General LLM Response ===")
-    print(response.get("response", ""))
+    print(general_response)
     print_debug_info(
         route="general",
         elapsed_seconds=time.perf_counter() - started_at,
@@ -1688,6 +1884,7 @@ def run_query(query: str):
         security_mode=security_mode,
         runtime_detector_flag=runtime_detector_flag,
         runtime_sanitizer_flag=runtime_sanitizer_flag,
+        external_guardrail_summary=external_guardrail_summary,
     )
 
 

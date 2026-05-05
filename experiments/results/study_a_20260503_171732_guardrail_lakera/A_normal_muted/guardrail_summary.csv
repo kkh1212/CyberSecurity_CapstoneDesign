@@ -1,0 +1,2 @@
+condition,total,external_guardrail_enabled,external_guardrail_provider,context_guardrail_flag_count,context_guardrail_flag_rate,context_guardrail_block_count,context_guardrail_block_rate,output_guardrail_flag_count,output_guardrail_block_count,llm_called_count,llm_called_rate,final_refusal_count,final_refusal_rate,normal_answer_count,normal_answer_rate,error_count
+A_normal_muted,35,True,lakera,8,0.2286,8,0.2286,0,0,27,0.7714,5,0.1429,22,0.6286,0

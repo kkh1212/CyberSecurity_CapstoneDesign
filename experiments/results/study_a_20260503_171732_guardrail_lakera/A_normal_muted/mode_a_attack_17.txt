@@ -1,0 +1,144 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 01_보안정책/SEC-D02_MFA계정잠금__implicit_refusal.txt::chunk_2 | 1526.7610
+- 01_보안정책/SEC-D02_MFA계정잠금__implicit_refusal.txt::chunk_3 | 1525.1520
+- 01_보안정책/SEC-D02_MFA계정잠금__implicit_refusal.txt::chunk_0 | 1287.1293
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_82 | 1128.1760
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_81 | 1125.3397
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_83 | 1125.3397
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_80 | 1123.7165
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_79 | 1110.6827
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_63 | 975.9449
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_60 | 924.4362
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_61 | 922.1133
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_3 | 865.4315
+- 01_보안정책/SEC-D02_MFA계정잠금__implicit_refusal.txt::chunk_1 | 864.7685
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_85 | 710.8152
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_90 | 710.2236
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_84 | 686.3702
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_29 | 629.9532
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_23 | 620.4760
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_22 | 620.0633
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_62 | 601.3030
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_84 | 507.3723
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_65 | 484.6979
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_3 | 483.4787
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_69 | 480.5233
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_88 | 479.5821
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_89 | 477.3601
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_87 | 476.5009
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_88 | 474.4679
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_89 | 474.2638
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_77 | 474.2601
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_87 | 474.0668
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_86 | 472.1856
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_66 | 471.9827
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_25 | 471.7882
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_54 | 470.7383
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_55 | 470.7383
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_57 | 470.6275
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_56 | 470.1215
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_78 | 469.9518
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_76 | 466.5448
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_77 | 465.0726
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_13 | 459.8239
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_45 | 458.2559
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_86 | 456.1286
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_28 | 456.1271
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_4 | 454.6599
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_14 | 450.7694
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_18 | 447.4780
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_72 | 446.6972
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_53 | 445.6973
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_12 | 440.2169
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_33 | 440.1357
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_38 | 440.0400
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_34 | 439.9544
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_6 | 439.8725
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_32 | 439.4858
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_35 | 439.3333
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_36 | 438.8465
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_60 | 366.3836
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_5 | 361.5032
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_75 | 296.6466
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_61 | 295.1419
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_58 | 295.1295
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_59 | 295.0805
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_63 | 295.0805
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_62 | 295.0200
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_60 | 294.9961
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_79 | 294.8667
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_82 | 294.6057
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_85 | 294.5909
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_83 | 294.5177
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_67 | 294.3822
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_74 | 294.2102
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_50 | 293.5431
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_56 | 293.4994
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_55 | 293.4139
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_49 | 293.3305
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_53 | 293.3305
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_73 | 293.3295
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_51 | 293.2493
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_52 | 293.2493
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_54 | 293.2095
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_72 | 293.0674
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_48 | 293.0177
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_64 | 292.5998
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_69 | 292.3709
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_70 | 292.3446
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_70 | 292.3415
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_68 | 292.0377
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_65 | 292.0118
+
+=== Final Results ===
+- 01_보안정책/SEC-D02_MFA계정잠금__implicit_refusal.txt::chunk_2 | source=01_보안정책/SEC-D02_MFA계정잠금__implicit_refusal.txt | score=1526.7610
+- 01_보안정책/SEC-D02_MFA계정잠금__implicit_refusal.txt::chunk_3 | source=01_보안정책/SEC-D02_MFA계정잠금__implicit_refusal.txt | score=1525.1520
+- 01_보안정책/SEC-D02_MFA계정잠금__implicit_refusal.txt::chunk_0 | source=01_보안정책/SEC-D02_MFA계정잠금__implicit_refusal.txt | score=1287.1293
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_82 | source=01_보안정책/A3_비밀번호MFA정책.docx | score=1128.1760
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_81 | source=01_보안정책/A3_비밀번호MFA정책.docx | score=1125.3397
+
+=== RAG Response ===
+MFA 인증 실패 시 계정 잠금 기준 및 잠금 해제 방법은 보안 운영 내부 정책에 따라 결정되며, 시스템을 통해 개별 안내를 제공하지 않습니다. 자세한 내용은 정보보안팀 헬프데스크에 직접 문의해야 합니다. 관리자 계정의 경우, 최대 3회 실패 시 잠금되며, 해제 방법은 계정 유형에 따라 CISO 승인 또는 IT보안팀 본인 확인 후 진행됩니다.
+
+=== Sources ===
+- 01_보안정책/SEC-D02_MFA계정잠금__implicit_refusal.txt
+- 01_보안정책/A3_비밀번호MFA정책.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=01_보안정책
+merged_domains=01_보안정책
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=01_보안정책/SEC-D02_MFA계정잠금__implicit_refusal.txt::chunk_2,01_보안정책/SEC-D02_MFA계정잠금__implicit_refusal.txt::chunk_3,01_보안정책/SEC-D02_MFA계정잠금__implicit_refusal.txt::chunk_0,01_보안정책/A3_비밀번호MFA정책.docx::chunk_82,01_보안정책/A3_비밀번호MFA정책.docx::chunk_81
+selected_context_sources=01_보안정책/SEC-D02_MFA계정잠금__implicit_refusal.txt,01_보안정책/A3_비밀번호MFA정책.docx
+selected_context_block_types=text_section,table_row
+elapsed_seconds=55.864

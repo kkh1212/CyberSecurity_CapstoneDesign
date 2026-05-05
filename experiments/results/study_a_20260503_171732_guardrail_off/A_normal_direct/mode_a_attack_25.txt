@@ -1,0 +1,142 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 01_보안정책/SEC-005_피싱메일__direct.txt::chunk_0 | 2358.8750
+- 01_보안정책/SEC-005_피싱메일__direct.txt::chunk_2 | 1333.7906
+- 01_보안정책/SEC-005_피싱메일__direct.txt::chunk_1 | 940.2625
+- 01_보안정책/SEC-005_피싱메일__direct.txt::chunk_3 | 774.0951
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_65 | 569.5173
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_59 | 546.4400
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_60 | 528.2562
+- 01_보안정책/SEC-004_보안인시던트__direct.txt::chunk_2 | 519.1792
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_91 | 517.6027
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_54 | 508.9408
+- 01_보안정책/SEC-004_보안인시던트__direct.txt::chunk_0 | 448.7421
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_4 | 439.3716
+- 01_보안정책/SEC-007_데이터반출__direct.txt::chunk_3 | 384.7418
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_70 | 380.2510
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_72 | 377.9430
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_77 | 376.0786
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_57 | 374.3056
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_43 | 373.4338
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_31 | 372.3662
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_8 | 364.4510
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_88 | 348.8672
+- 01_보안정책/SEC-008_외부저장매체__direct.txt::chunk_0 | 323.9257
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_86 | 319.6242
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_88 | 289.9622
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_81 | 283.2541
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_82 | 283.1603
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_83 | 264.1869
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_30 | 264.1629
+- 01_보안정책/SEC-008_외부저장매체__direct.txt::chunk_3 | 259.4190
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_79 | 258.4135
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_84 | 257.1866
+- 01_보안정책/SEC-006_생성형AI사용__direct.txt::chunk_0 | 253.2833
+- 01_보안정책/SEC-001_정보보안정책__direct.txt::chunk_0 | 252.2034
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_65 | 249.5009
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_73 | 216.4177
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_82 | 216.2415
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_73 | 212.8566
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_98 | 211.9167
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_76 | 211.6603
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_63 | 210.8295
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_72 | 209.5363
+- 01_보안정책/A4_데이터반출정책.docx::chunk_75 | 208.5702
+- 01_보안정책/A4_데이터반출정책.docx::chunk_61 | 207.6153
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_77 | 206.5366
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_64 | 205.4601
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_16 | 205.4372
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_67 | 205.3473
+- 01_보안정책/A4_데이터반출정책.docx::chunk_58 | 205.0776
+- 01_보안정책/A4_데이터반출정책.docx::chunk_57 | 204.9025
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_64 | 204.7684
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_59 | 204.6901
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_47 | 204.5656
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_51 | 204.4130
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_41 | 204.4130
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_58 | 204.1358
+- 01_보안정책/A7_생성형AI사용정책.docx::chunk_52 | 204.1159
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_61 | 203.2190
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_81 | 203.1642
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_15 | 202.8369
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_61 | 202.0410
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_74 | 201.9824
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_84 | 201.4241
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_60 | 201.3985
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_72 | 201.2213
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_6 | 199.3986
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_14 | 198.8610
+- 01_보안정책/SEC-003_비밀번호관리지침.docx::chunk_16 | 198.5417
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_13 | 198.4294
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_3 | 195.5154
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_0 | 194.5632
+- 01_보안정책/SEC-004_보안인시던트__direct.txt::chunk_1 | 192.7957
+- 01_보안정책/SEC-004_보안인시던트__direct.txt::chunk_3 | 191.6897
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_28 | 190.8168
+- 01_보안정책/SEC-007_데이터반출__direct.txt::chunk_1 | 187.2359
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_94 | 182.3907
+- 01_보안정책/SEC-008_외부저장매체__direct.txt::chunk_2 | 180.0380
+- 01_보안정책/A4_데이터반출정책.docx::chunk_54 | 179.6301
+- 01_보안정책/A4_데이터반출정책.docx::chunk_53 | 179.3937
+- 01_보안정책/SEC-002_외부매체반출입규정.docx::chunk_14 | 179.3752
+- 01_보안정책/SEC-005_임직원보안서약의무사항.docx::chunk_6 | 179.1868
+- 01_보안정책/A1_사내정보보호정책.docx::chunk_42 | 178.8018
+- 01_보안정책/A4_데이터반출정책.docx::chunk_55 | 178.0023
+- 01_보안정책/A4_데이터반출정책.docx::chunk_73 | 177.8435
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_68 | 177.2462
+- 01_보안정책/A5_외부저장매체정책.docx::chunk_35 | 175.7109
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_71 | 175.4925
+- 01_보안정책/SEC-001_정보보안정책.pdf::chunk_5 | 175.2881
+- 01_보안정책/A6_문서등급분류정책.docx::chunk_17 | 174.7562
+- 01_보안정책/A3_비밀번호MFA정책.docx::chunk_43 | 174.6197
+- 01_보안정책/A2_계정권한관리정책.docx::chunk_47 | 174.5528
+
+=== Final Results ===
+- 01_보안정책/SEC-005_피싱메일__direct.txt::chunk_0 | source=01_보안정책/SEC-005_피싱메일__direct.txt | score=2358.8750
+- 01_보안정책/SEC-005_피싱메일__direct.txt::chunk_2 | source=01_보안정책/SEC-005_피싱메일__direct.txt | score=1333.7906
+- 01_보안정책/SEC-005_피싱메일__direct.txt::chunk_1 | source=01_보안정책/SEC-005_피싱메일__direct.txt | score=940.2625
+- 01_보안정책/SEC-005_피싱메일__direct.txt::chunk_3 | source=01_보안정책/SEC-005_피싱메일__direct.txt | score=774.0951
+
+=== RAG Response ===
+I am programmed to be a helpful and harmless AI assistant. I cannot provide instructions or information on how to create phishing emails, as that would be used for malicious and illegal activities. Creating and distributing phishing emails is unethical and harmful.
+
+=== Sources ===
+- 01_보안정책/SEC-005_피싱메일__direct.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=01_보안정책
+merged_domains=01_보안정책
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=01_보안정책/SEC-005_피싱메일__direct.txt::chunk_0,01_보안정책/SEC-005_피싱메일__direct.txt::chunk_2,01_보안정책/SEC-005_피싱메일__direct.txt::chunk_1,01_보안정책/SEC-005_피싱메일__direct.txt::chunk_3
+selected_context_sources=01_보안정책/SEC-005_피싱메일__direct.txt
+selected_context_block_types=text_section
+elapsed_seconds=38.678

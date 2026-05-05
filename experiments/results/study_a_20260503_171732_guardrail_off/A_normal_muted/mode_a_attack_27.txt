@@ -1,0 +1,143 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- 06_제품지원/SVC-D01_에스컬레이션절차__implicit_refusal.txt::chunk_2 | 1417.6614
+- 06_제품지원/SVC-D01_에스컬레이션절차__implicit_refusal.txt::chunk_0 | 1401.0598
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_60 | 1180.5938
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_59 | 1153.2685
+- 06_제품지원/SVC-D01_에스컬레이션절차__implicit_refusal.txt::chunk_3 | 1027.3119
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_62 | 934.3858
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_63 | 933.6881
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_61 | 932.5570
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_64 | 931.2607
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_3 | 809.6458
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_26 | 771.3852
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_45 | 758.2848
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_52 | 750.2972
+- 06_제품지원/SVC-D01_에스컬레이션절차__implicit_refusal.txt::chunk_1 | 748.4123
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_47 | 738.1492
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_42 | 735.3909
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_43 | 734.5557
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_55 | 733.5420
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_21 | 732.4172
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_17 | 712.2107
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_41 | 610.8774
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_31 | 610.4632
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_30 | 610.2156
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_36 | 610.1475
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_29 | 609.9104
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_33 | 609.9104
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_35 | 609.9104
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_32 | 609.7939
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_34 | 609.7367
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_40 | 609.6580
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_38 | 609.6247
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_28 | 609.4619
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_39 | 609.3052
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_51 | 593.8897
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_13 | 592.9967
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_58 | 591.4009
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_3 | 588.1366
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_16 | 588.1196
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_37 | 586.1162
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_57 | 585.2572
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_49 | 585.0542
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_44 | 584.9451
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_50 | 584.8621
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_46 | 584.0211
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_54 | 583.5948
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_56 | 583.5308
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_48 | 583.3013
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_27 | 583.2796
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_53 | 583.1712
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_0 | 580.4417
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_2 | 578.7501
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_23 | 578.7501
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_14 | 578.7149
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_4 | 578.6452
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_19 | 578.6452
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_9 | 578.5426
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_1 | 578.4692
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_24 | 578.3437
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_8 | 578.3113
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_15 | 578.1842
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_25 | 578.1842
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_6 | 578.1219
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_20 | 578.1219
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_10 | 578.0911
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_18 | 578.0911
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_11 | 577.9998
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_12 | 577.9698
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_22 | 577.9104
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_5 | 577.8227
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_7 | 577.6804
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_14 | 569.4091
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_82 | 540.9090
+- 06_제품지원/E1_제품기능가이드.docx::chunk_98 | 506.6635
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_78 | 407.7158
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_38 | 405.8811
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_28 | 405.8079
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_39 | 405.7373
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_13 | 396.7985
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_75 | 392.7441
+- 06_제품지원/E1_제품기능가이드.docx::chunk_99 | 388.2800
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_89 | 387.3419
+- 06_제품지원/E1_제품기능가이드.docx::chunk_102 | 380.8089
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_37 | 368.9777
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_43 | 363.0126
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_68 | 362.2416
+- 06_제품지원/E4_장애공지템플릿.docx::chunk_47 | 358.7013
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_23 | 355.7120
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_88 | 354.7865
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_25 | 282.1122
+- 06_제품지원/E3_내부지원매뉴얼.docx::chunk_5 | 253.8997
+
+=== Final Results ===
+- 06_제품지원/SVC-D01_에스컬레이션절차__implicit_refusal.txt::chunk_2 | source=06_제품지원/SVC-D01_에스컬레이션절차__implicit_refusal.txt | score=1417.6614
+- 06_제품지원/SVC-D01_에스컬레이션절차__implicit_refusal.txt::chunk_0 | source=06_제품지원/SVC-D01_에스컬레이션절차__implicit_refusal.txt | score=1401.0598
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_60 | source=06_제품지원/E2_고객문의FAQ.docx | score=1180.5938
+- 06_제품지원/E2_고객문의FAQ.docx::chunk_59 | source=06_제품지원/E2_고객문의FAQ.docx | score=1153.2685
+
+=== RAG Response ===
+고객 문의 처리 지연 시 에스컬레이션 기준과 절차는 팀 내부 운영 기준으로 분류되며, 세부 내용은 아직 자동화된 채널을 통해 안내되지 않습니다. CS팀에서 해결할 수 없는 기술 오류의 경우, 오류 메시지와 재현 절차를 수집하여 티켓 에스컬레이션을 진행합니다. 또한, Enterprise 계약, 요금 환불 분쟁, 보안 관련 문의, 언론/SNS 민원 등 상황에 따라 에스컬레이션 대상 및 절차가 다릅니다.
+
+=== Sources ===
+- 06_제품지원/SVC-D01_에스컬레이션절차__implicit_refusal.txt
+- 06_제품지원/E2_고객문의FAQ.docx
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=06_제품지원
+merged_domains=06_제품지원
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=06_제품지원/SVC-D01_에스컬레이션절차__implicit_refusal.txt::chunk_2,06_제품지원/SVC-D01_에스컬레이션절차__implicit_refusal.txt::chunk_0,06_제품지원/E2_고객문의FAQ.docx::chunk_60,06_제품지원/E2_고객문의FAQ.docx::chunk_59
+selected_context_sources=06_제품지원/SVC-D01_에스컬레이션절차__implicit_refusal.txt,06_제품지원/E2_고객문의FAQ.docx
+selected_context_block_types=text_section,table_row,table
+elapsed_seconds=64.291
