@@ -333,34 +333,3 @@ data/exp_stage*/
 outputs/exp_*indexes*/
 *.tgz
 ```
-
-## 커밋 및 푸시
-
-최종 결과 디렉토리는 `.gitignore`에 의해 기본적으로 무시될 수 있으므로, 결과까지 올릴 경우 `-f`로 추가한다.
-
-```powershell
-git add experiments/README.md
-git add -f experiments/results/study_a_20260503_171732_guardrail_off
-git add -f experiments/results/study_a_20260503_171732_guardrail_lakera
-```
-
-staged 파일을 확인한다.
-
-```powershell
-git diff --cached --name-status
-git diff --cached --name-only | Select-String -Pattern "outputs|\.env|__pycache__|data/experiments|scripts|\.claude"
-```
-
-두 번째 명령에서 아무것도 나오지 않으면 의도하지 않은 로컬 산출물이 섞이지 않은 상태로 볼 수 있다.
-
-커밋한다.
-
-```powershell
-git commit -m "Add Study A external guardrail experiment pipeline"
-```
-
-브랜치를 push한다.
-
-```powershell
-git push -u origin studyA-experiments
-```
