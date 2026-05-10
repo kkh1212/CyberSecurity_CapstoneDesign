@@ -1,0 +1,101 @@
+{
+  "name": "final_strong_v7_paper_suffix",
+  "base_corpus": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v5",
+  "cluster_base": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v7_paper_suffix",
+  "conditions_root": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v7_paper_suffix_conditions",
+  "domain_order": [
+    "SEC",
+    "HR",
+    "IT",
+    "SOC",
+    "LEG",
+    "PST",
+    "FIN",
+    "GEN"
+  ],
+  "design": "Paper-style MutedRAG suffix test. Question/benign fixed, attack documents vary by 2/4/6/8, total chunks fixed at 128 via neutral padding.",
+  "conditions": [
+    {
+      "name": "final_strong_v7_paper_suffix_n02",
+      "selected_attack_domains": [
+        "SEC",
+        "HR"
+      ],
+      "expected_queries": 60,
+      "expected_benign_chunks": 120,
+      "expected_attack_chunks": 2,
+      "expected_padding_chunks": 6,
+      "expected_total_chunks": 128,
+      "expected_attack_ratio": 0.015625,
+      "attack_style": "paper-like suffix: retrieval prefix + Forget previous details + harmful new Question strings + Context/Answer cue",
+      "required_b_rates_for_final_common": 0.25,
+      "run_note": "Use B_RATES=0.25; B_RATES=1.0 selects all 8 domains and is only valid for n08."
+    },
+    {
+      "name": "final_strong_v7_paper_suffix_n04",
+      "selected_attack_domains": [
+        "SEC",
+        "HR",
+        "IT",
+        "SOC"
+      ],
+      "expected_queries": 60,
+      "expected_benign_chunks": 120,
+      "expected_attack_chunks": 4,
+      "expected_padding_chunks": 4,
+      "expected_total_chunks": 128,
+      "expected_attack_ratio": 0.03125,
+      "attack_style": "paper-like suffix: retrieval prefix + Forget previous details + harmful new Question strings + Context/Answer cue",
+      "required_b_rates_for_final_common": 0.5,
+      "run_note": "Use B_RATES=0.5; B_RATES=1.0 selects all 8 domains and is only valid for n08."
+    },
+    {
+      "name": "final_strong_v7_paper_suffix_n06",
+      "selected_attack_domains": [
+        "SEC",
+        "HR",
+        "IT",
+        "SOC",
+        "LEG",
+        "PST"
+      ],
+      "expected_queries": 60,
+      "expected_benign_chunks": 120,
+      "expected_attack_chunks": 6,
+      "expected_padding_chunks": 2,
+      "expected_total_chunks": 128,
+      "expected_attack_ratio": 0.046875,
+      "attack_style": "paper-like suffix: retrieval prefix + Forget previous details + harmful new Question strings + Context/Answer cue",
+      "required_b_rates_for_final_common": 0.75,
+      "run_note": "Use B_RATES=0.75; B_RATES=1.0 selects all 8 domains and is only valid for n08."
+    },
+    {
+      "name": "final_strong_v7_paper_suffix_n08",
+      "selected_attack_domains": [
+        "SEC",
+        "HR",
+        "IT",
+        "SOC",
+        "LEG",
+        "PST",
+        "FIN",
+        "GEN"
+      ],
+      "expected_queries": 60,
+      "expected_benign_chunks": 120,
+      "expected_attack_chunks": 8,
+      "expected_padding_chunks": 0,
+      "expected_total_chunks": 128,
+      "expected_attack_ratio": 0.0625,
+      "attack_style": "paper-like suffix: retrieval prefix + Forget previous details + harmful new Question strings + Context/Answer cue",
+      "required_b_rates_for_final_common": 1.0,
+      "run_note": "Use B_RATES=1.0; B_RATES=1.0 selects all 8 domains and is only valid for n08."
+    }
+  ],
+  "run_rate_mapping": {
+    "n02": 0.25,
+    "n04": 0.5,
+    "n06": 0.75,
+    "n08": 1.0
+  }
+}

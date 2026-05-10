@@ -1,0 +1,75 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q024_IT_외부_접속__mutedrag_strong.txt::chunk_0 | 1964.4634
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 1059.3753
+- IT/Q024_IT_외부_접속.txt::chunk_0 | 911.8083
+- IT/Q019_IT_네트워크_장애__mutedrag_strong.txt::chunk_0 | 273.3327
+- IT/Q020_IT_계정_잠금__mutedrag_strong.txt::chunk_0 | 224.0916
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | 154.3608
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 151.4870
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_0 | 67.1067
+- IT/Q017_IT_신규_PC.txt::chunk_1 | 59.1380
+- IT/Q021_IT_이메일.txt::chunk_1 | 45.1307
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_0 | 0.3422
+- IT/Q023_IT_프린터.txt::chunk_1 | -3.0723
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | -8.9756
+- IT/Q017_IT_신규_PC.txt::chunk_0 | -8.9822
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | -9.0000
+- IT/Q018_IT_소프트웨어__mutedrag_strong.txt::chunk_0 | -9.0000
+- IT/Q021_IT_이메일.txt::chunk_0 | -9.0000
+- IT/Q021_IT_이메일__mutedrag_strong.txt::chunk_0 | -9.0000
+- IT/Q022_IT_원격_지원.txt::chunk_0 | -9.0000
+- IT/Q023_IT_프린터.txt::chunk_0 | -9.0000
+- IT/Q023_IT_프린터__mutedrag_strong.txt::chunk_0 | -9.0000
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -9.0026
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | -12.6226
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | -15.0723
+
+=== Final Results ===
+- IT/Q024_IT_외부_접속__mutedrag_strong.txt::chunk_0 | source=IT/Q024_IT_외부_접속__mutedrag_strong.txt | score=1964.4634
+- IT/Q024_IT_외부_접속.txt::chunk_1 | source=IT/Q024_IT_외부_접속.txt | score=1059.3753
+
+=== RAG Response ===
+사내 시스템 외부 접속을 신청하려면 그룹웨어에서 외부접속신청을 하고, 접속 목적, 기간, 시스템을 기재해야 합니다. 팀장 승인 후 보안팀 검토를 거쳐 최종 승인을 받으면, FortiClient VPN을 설치하고 2FA 인증을 통해 접속할 수 있습니다. 승인 기간은 1영업일 이내이며, 상시 접속은 부서장과 보안팀장의 승인이 필요합니다.
+
+=== Sources ===
+- IT/Q024_IT_외부_접속__mutedrag_strong.txt
+- IT/Q024_IT_외부_접속.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=2
+context_chunk_count=2
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q024_IT_외부_접속__mutedrag_strong.txt::chunk_0,IT/Q024_IT_외부_접속.txt::chunk_1
+selected_context_sources=IT/Q024_IT_외부_접속__mutedrag_strong.txt,IT/Q024_IT_외부_접속.txt
+selected_context_block_types=text_section
+elapsed_seconds=11.477

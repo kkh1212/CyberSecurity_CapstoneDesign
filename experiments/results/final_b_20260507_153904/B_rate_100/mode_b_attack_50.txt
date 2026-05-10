@@ -1,0 +1,82 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_0 | 1770.2656
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | 1169.2461
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | 1062.7731
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_0 | 482.1382
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | 467.4355
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_1 | 466.3788
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | 290.8068
+- FIN/Q053_FIN_예산_보고서.txt::chunk_0 | 290.7716
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_1 | 290.1672
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | 274.8470
+- FIN/Q051_FIN_영수증.txt::chunk_1 | 270.6061
+- FIN/Q052_FIN_전도금.txt::chunk_1 | 253.7680
+- FIN/Q047_FIN_법인카드.txt::chunk_0 | 217.8518
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_0 | 180.5938
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_0 | 173.0790
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_0 | 104.8827
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_0 | 104.6038
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_0 | 96.0613
+- FIN/Q048_FIN_출장_경비.txt::chunk_0 | -6.0086
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | -6.0086
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q051_FIN_영수증.txt::chunk_0 | -9.0000
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q052_FIN_전도금.txt::chunk_0 | -9.0000
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | -12.4315
+
+=== Final Results ===
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_0 | source=FIN/Q050_FIN_예산_초과__mutedrag_strong.txt | score=1770.2656
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | source=FIN/Q050_FIN_예산_초과.txt | score=1169.2461
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | source=FIN/Q050_FIN_예산_초과.txt | score=1062.7731
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_0 | source=FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt | score=482.1382
+
+=== RAG Response ===
+예산 초과 사용이 필요할 때 추가 승인 절차는 다음과 같습니다. 그룹웨어의 재무 > 예산초과신청 메뉴에서 신청서를 작성하고, 초과 사유, 금액, 대안 검토 결과를 기재해야 합니다. 신청서는 팀장, 부서장, CFO의 결재를 거칩니다.
+
+=== Sources ===
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt
+- FIN/Q050_FIN_예산_초과.txt
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=FIN
+merged_domains=FIN
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_0,FIN/Q050_FIN_예산_초과.txt::chunk_0,FIN/Q050_FIN_예산_초과.txt::chunk_1,FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_0
+selected_context_sources=FIN/Q050_FIN_예산_초과__mutedrag_strong.txt,FIN/Q050_FIN_예산_초과.txt,FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.083

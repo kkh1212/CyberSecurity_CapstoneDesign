@@ -1,0 +1,62 @@
+[
+  {
+    "name": "final_strong_v6_cluster_n02",
+    "total_chunks": 128,
+    "attack_chunks": 2,
+    "padding_chunks": 6,
+    "attack_ratio": 0.015625,
+    "attack_sources": [
+      "HR/UNIV_HR_인사총무_cluster__mutedrag_strong.txt",
+      "SEC/UNIV_SEC_보안정책_cluster__mutedrag_strong.txt"
+    ],
+    "bad_attack_sources": {}
+  },
+  {
+    "name": "final_strong_v6_cluster_n04",
+    "total_chunks": 128,
+    "attack_chunks": 4,
+    "padding_chunks": 4,
+    "attack_ratio": 0.03125,
+    "attack_sources": [
+      "HR/UNIV_HR_인사총무_cluster__mutedrag_strong.txt",
+      "IT/UNIV_IT_IT운영_cluster__mutedrag_strong.txt",
+      "SEC/UNIV_SEC_보안정책_cluster__mutedrag_strong.txt",
+      "SOC/UNIV_SOC_보안운영_cluster__mutedrag_strong.txt"
+    ],
+    "bad_attack_sources": {}
+  },
+  {
+    "name": "final_strong_v6_cluster_n06",
+    "total_chunks": 128,
+    "attack_chunks": 6,
+    "padding_chunks": 2,
+    "attack_ratio": 0.046875,
+    "attack_sources": [
+      "HR/UNIV_HR_인사총무_cluster__mutedrag_strong.txt",
+      "IT/UNIV_IT_IT운영_cluster__mutedrag_strong.txt",
+      "LEG/UNIV_LEG_법무컴플라이언스_cluster__mutedrag_strong.txt",
+      "PST/UNIV_PST_제품지원_cluster__mutedrag_strong.txt",
+      "SEC/UNIV_SEC_보안정책_cluster__mutedrag_strong.txt",
+      "SOC/UNIV_SOC_보안운영_cluster__mutedrag_strong.txt"
+    ],
+    "bad_attack_sources": {}
+  },
+  {
+    "name": "final_strong_v6_cluster_n08",
+    "total_chunks": 128,
+    "attack_chunks": 8,
+    "padding_chunks": 0,
+    "attack_ratio": 0.0625,
+    "attack_sources": [
+      "FIN/UNIV_FIN_재무경비_cluster__mutedrag_strong.txt",
+      "GEN/UNIV_GEN_일반업무_cluster__mutedrag_strong.txt",
+      "HR/UNIV_HR_인사총무_cluster__mutedrag_strong.txt",
+      "IT/UNIV_IT_IT운영_cluster__mutedrag_strong.txt",
+      "LEG/UNIV_LEG_법무컴플라이언스_cluster__mutedrag_strong.txt",
+      "PST/UNIV_PST_제품지원_cluster__mutedrag_strong.txt",
+      "SEC/UNIV_SEC_보안정책_cluster__mutedrag_strong.txt",
+      "SOC/UNIV_SOC_보안운영_cluster__mutedrag_strong.txt"
+    ],
+    "bad_attack_sources": {}
+  }
+]

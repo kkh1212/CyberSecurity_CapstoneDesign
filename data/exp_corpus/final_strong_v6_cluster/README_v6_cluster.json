@@ -1,0 +1,91 @@
+{
+  "name": "final_strong_v6_cluster",
+  "base_corpus": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v5",
+  "cluster_base": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v6_cluster",
+  "conditions_root": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v6_cluster_conditions",
+  "domain_order": [
+    "SEC",
+    "HR",
+    "IT",
+    "SOC",
+    "LEG",
+    "PST",
+    "FIN",
+    "GEN"
+  ],
+  "design": "Question/benign fixed, cluster attack documents vary by 2/4/6/8, neutral padding fills missing attack slots to keep total chunks at 128.",
+  "conditions": [
+    {
+      "name": "final_strong_v6_cluster_n02",
+      "selected_attack_domains": [
+        "SEC",
+        "HR"
+      ],
+      "neutral_padding_replacement_count": 6,
+      "expected_queries": 60,
+      "expected_benign_chunks": 120,
+      "expected_attack_chunks": 2,
+      "expected_padding_chunks": 6,
+      "expected_total_chunks": 128,
+      "expected_attack_ratio": 0.015625,
+      "note": "Cluster attack count experiment with fixed total chunks. Run with B_ATTACK_MODE=universal_rate and B_RATES=1.0 for each condition corpus."
+    },
+    {
+      "name": "final_strong_v6_cluster_n04",
+      "selected_attack_domains": [
+        "SEC",
+        "HR",
+        "IT",
+        "SOC"
+      ],
+      "neutral_padding_replacement_count": 4,
+      "expected_queries": 60,
+      "expected_benign_chunks": 120,
+      "expected_attack_chunks": 4,
+      "expected_padding_chunks": 4,
+      "expected_total_chunks": 128,
+      "expected_attack_ratio": 0.03125,
+      "note": "Cluster attack count experiment with fixed total chunks. Run with B_ATTACK_MODE=universal_rate and B_RATES=1.0 for each condition corpus."
+    },
+    {
+      "name": "final_strong_v6_cluster_n06",
+      "selected_attack_domains": [
+        "SEC",
+        "HR",
+        "IT",
+        "SOC",
+        "LEG",
+        "PST"
+      ],
+      "neutral_padding_replacement_count": 2,
+      "expected_queries": 60,
+      "expected_benign_chunks": 120,
+      "expected_attack_chunks": 6,
+      "expected_padding_chunks": 2,
+      "expected_total_chunks": 128,
+      "expected_attack_ratio": 0.046875,
+      "note": "Cluster attack count experiment with fixed total chunks. Run with B_ATTACK_MODE=universal_rate and B_RATES=1.0 for each condition corpus."
+    },
+    {
+      "name": "final_strong_v6_cluster_n08",
+      "selected_attack_domains": [
+        "SEC",
+        "HR",
+        "IT",
+        "SOC",
+        "LEG",
+        "PST",
+        "FIN",
+        "GEN"
+      ],
+      "neutral_padding_replacement_count": 0,
+      "expected_queries": 60,
+      "expected_benign_chunks": 120,
+      "expected_attack_chunks": 8,
+      "expected_padding_chunks": 0,
+      "expected_total_chunks": 128,
+      "expected_attack_ratio": 0.0625,
+      "note": "Cluster attack count experiment with fixed total chunks. Run with B_ATTACK_MODE=universal_rate and B_RATES=1.0 for each condition corpus."
+    }
+  ]
+}

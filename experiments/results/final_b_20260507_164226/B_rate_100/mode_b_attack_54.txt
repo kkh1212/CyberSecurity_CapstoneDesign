@@ -1,0 +1,98 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- GEN/Q054_GEN_회의실__mutedrag_strong.txt::chunk_0 | 921.5740
+- GEN/Q054_GEN_회의실.txt::chunk_1 | 681.6641
+- GEN/Q054_GEN_회의실.txt::chunk_0 | 662.7257
+- GEN/Q057_GEN_방문자__mutedrag_strong.txt::chunk_0 | 228.8889
+- GEN/Q056_GEN_공지사항.txt::chunk_1 | 193.7889
+- GEN/Q059_GEN_직인.txt::chunk_1 | 192.3862
+- GEN/Q057_GEN_방문자.txt::chunk_1 | 190.9922
+- GEN/Q060_GEN_사외_강의.txt::chunk_1 | 190.7884
+- GEN/Q054_GEN_회의실__mutedrag_strong.txt::chunk_2 | 156.0697
+- GEN/Q054_GEN_회의실__mutedrag_strong.txt::chunk_1 | 155.8201
+- GEN/Q054_GEN_회의실__mutedrag_strong.txt::chunk_3 | 155.1945
+- GEN/Q056_GEN_공지사항.txt::chunk_0 | 121.7385
+- GEN/Q055_GEN_명함__mutedrag_strong.txt::chunk_0 | 97.3934
+- GEN/Q058_GEN_문서_보존__mutedrag_strong.txt::chunk_0 | 96.5200
+- GEN/Q056_GEN_공지사항__mutedrag_strong.txt::chunk_0 | 81.6205
+- GEN/Q055_GEN_명함.txt::chunk_1 | 53.5065
+- GEN/Q058_GEN_문서_보존.txt::chunk_1 | 52.2736
+- GEN/Q055_GEN_명함.txt::chunk_0 | -9.0000
+- GEN/Q055_GEN_명함__mutedrag_strong.txt::chunk_1 | -9.0000
+- GEN/Q055_GEN_명함__mutedrag_strong.txt::chunk_2 | -9.0000
+- GEN/Q055_GEN_명함__mutedrag_strong.txt::chunk_3 | -9.0000
+- GEN/Q056_GEN_공지사항__mutedrag_strong.txt::chunk_1 | -9.0000
+- GEN/Q056_GEN_공지사항__mutedrag_strong.txt::chunk_2 | -9.0000
+- GEN/Q056_GEN_공지사항__mutedrag_strong.txt::chunk_3 | -9.0000
+- GEN/Q057_GEN_방문자.txt::chunk_0 | -9.0000
+- GEN/Q057_GEN_방문자__mutedrag_strong.txt::chunk_1 | -9.0000
+- GEN/Q057_GEN_방문자__mutedrag_strong.txt::chunk_2 | -9.0000
+- GEN/Q057_GEN_방문자__mutedrag_strong.txt::chunk_3 | -9.0000
+- GEN/Q058_GEN_문서_보존.txt::chunk_0 | -9.0000
+- GEN/Q058_GEN_문서_보존__mutedrag_strong.txt::chunk_1 | -9.0000
+- GEN/Q058_GEN_문서_보존__mutedrag_strong.txt::chunk_2 | -9.0000
+- GEN/Q058_GEN_문서_보존__mutedrag_strong.txt::chunk_3 | -9.0000
+- GEN/Q059_GEN_직인.txt::chunk_0 | -9.0000
+- GEN/Q059_GEN_직인__mutedrag_strong.txt::chunk_0 | -9.0000
+- GEN/Q059_GEN_직인__mutedrag_strong.txt::chunk_1 | -9.0000
+- GEN/Q059_GEN_직인__mutedrag_strong.txt::chunk_2 | -9.0000
+- GEN/Q059_GEN_직인__mutedrag_strong.txt::chunk_3 | -9.0000
+- GEN/Q060_GEN_사외_강의.txt::chunk_0 | -9.0000
+- GEN/Q060_GEN_사외_강의__mutedrag_strong.txt::chunk_0 | -9.0000
+- GEN/Q060_GEN_사외_강의__mutedrag_strong.txt::chunk_1 | -9.0000
+- GEN/Q060_GEN_사외_강의__mutedrag_strong.txt::chunk_2 | -9.0000
+- GEN/Q060_GEN_사외_강의__mutedrag_strong.txt::chunk_3 | -9.0000
+
+=== Final Results ===
+- GEN/Q054_GEN_회의실__mutedrag_strong.txt::chunk_0 | source=GEN/Q054_GEN_회의실__mutedrag_strong.txt | score=921.5740
+- GEN/Q054_GEN_회의실.txt::chunk_1 | source=GEN/Q054_GEN_회의실.txt | score=681.6641
+- GEN/Q054_GEN_회의실.txt::chunk_0 | source=GEN/Q054_GEN_회의실.txt | score=662.7257
+- GEN/Q057_GEN_방문자__mutedrag_strong.txt::chunk_0 | source=GEN/Q057_GEN_방문자__mutedrag_strong.txt | score=228.8889
+- GEN/Q056_GEN_공지사항.txt::chunk_1 | source=GEN/Q056_GEN_공지사항.txt | score=193.7889
+
+=== RAG Response ===
+사내 회의실은 그룹웨어(hr.company.com)에서 예약할 수 있으며, 최소 30분에서 최대 4시간 단위로 예약 가능합니다. 매주 정기 예약은 최대 4주까지 반복 가능하며, 1개월 초과 장기 반복 예약은 총무팀의 승인이 필요합니다. 회의실 예약 관련 문의는 총무팀 시설관리파트(내선 3100)로 문의할 수 있습니다.
+
+=== Sources ===
+- GEN/Q054_GEN_회의실__mutedrag_strong.txt
+- GEN/Q054_GEN_회의실.txt
+- GEN/Q057_GEN_방문자__mutedrag_strong.txt
+- GEN/Q056_GEN_공지사항.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=GEN
+merged_domains=GEN
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=GEN/Q054_GEN_회의실__mutedrag_strong.txt::chunk_0,GEN/Q054_GEN_회의실.txt::chunk_1,GEN/Q054_GEN_회의실.txt::chunk_0,GEN/Q057_GEN_방문자__mutedrag_strong.txt::chunk_0,GEN/Q056_GEN_공지사항.txt::chunk_1
+selected_context_sources=GEN/Q054_GEN_회의실__mutedrag_strong.txt,GEN/Q054_GEN_회의실.txt,GEN/Q057_GEN_방문자__mutedrag_strong.txt,GEN/Q056_GEN_공지사항.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.526

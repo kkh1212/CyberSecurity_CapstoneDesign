@@ -1,0 +1,19 @@
+{
+  "name": "final_strong_v5",
+  "source": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v4",
+  "purpose": "Controlled B/C/D experiment base: fixed queries, fixed benign_controlled, fixed universal attack corpus. Add benign_padding per condition to control attack ratio.",
+  "fixed_components": [
+    "queries_final.json",
+    "benign_controlled",
+    "attack_universal_txt"
+  ],
+  "excluded_components": [
+    "attack_strong_txt",
+    "benign_padding",
+    "old experiment-specific generated corpora"
+  ],
+  "notes": [
+    "Universal attack files are converted to the sec_1pct_benign-style single-paragraph format.",
+    "Per-query attack_strong_txt is intentionally not copied because v5 uses universal attacks as the controlled attack set."
+  ]
+}

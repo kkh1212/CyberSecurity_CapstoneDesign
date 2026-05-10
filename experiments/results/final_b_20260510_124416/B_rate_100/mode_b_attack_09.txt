@@ -1,0 +1,85 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q009_HR_연차.txt::chunk_0 | 282.1562
+- HR/Q009_HR_연차.txt::chunk_1 | 210.4209
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_0 | 206.7646
+- HR/Q014_HR_퇴직.txt::chunk_1 | 200.6359
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_0 | 63.7726
+- HR/Q015_HR_인사이동.txt::chunk_1 | 62.1515
+- HR/Q010_HR_출장.txt::chunk_0 | 61.8262
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 61.8071
+- HR/Q015_HR_인사이동.txt::chunk_0 | 61.7788
+- HR/Q011_HR_재택근무.txt::chunk_0 | 61.7694
+- HR/Q016_HR_경조사.txt::chunk_0 | 61.7600
+- HR/Q016_HR_경조사.txt::chunk_1 | 61.4779
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 56.9183
+- HR/Q010_HR_출장.txt::chunk_1 | 56.6690
+- HR/Q011_HR_재택근무.txt::chunk_1 | 56.4473
+- HR/PAD_HR_02.txt::chunk_0 | 54.3072
+- HR/PAD_HR_03.txt::chunk_0 | 54.3072
+- HR/PAD_HR_08.txt::chunk_0 | 54.3072
+- HR/PAD_HR_09.txt::chunk_0 | 54.3072
+- HR/PAD_HR_04.txt::chunk_0 | -6.1260
+- HR/PAD_HR_10.txt::chunk_0 | -6.1260
+- HR/PAD_HR_05.txt::chunk_0 | -6.1294
+- HR/PAD_HR_11.txt::chunk_0 | -6.1294
+- HR/Q012_HR_복지포인트.txt::chunk_1 | -8.1940
+- HR/PAD_HR_01.txt::chunk_0 | -9.0000
+- HR/PAD_HR_06.txt::chunk_0 | -9.0000
+- HR/PAD_HR_07.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q014_HR_퇴직.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- HR/Q009_HR_연차.txt::chunk_0 | source=HR/Q009_HR_연차.txt | score=282.1562
+- HR/Q009_HR_연차.txt::chunk_1 | source=HR/Q009_HR_연차.txt | score=210.4209
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_0 | source=HR/UNIV_HR_상세인사__mutedrag_strong.txt | score=206.7646
+- HR/Q014_HR_퇴직.txt::chunk_1 | source=HR/Q014_HR_퇴직.txt | score=200.6359
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_0 | source=HR/UNIV_HR_인사총무__mutedrag_strong.txt | score=63.7726
+
+=== RAG Response ===
+연차휴가 신청은 사용일 기준 3영업일 전까지 해야 합니다. 신청 시스템은 그룹웨어(hr.company.com) > 근태관리 > 연차신청입니다. 긴급 연차는 팀장 구두 승인 후 사후 결재가 가능합니다.
+
+=== Sources ===
+- HR/Q009_HR_연차.txt
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt
+- HR/Q014_HR_퇴직.txt
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q009_HR_연차.txt::chunk_0,HR/Q009_HR_연차.txt::chunk_1,HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_0,HR/Q014_HR_퇴직.txt::chunk_1,HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_0
+selected_context_sources=HR/Q009_HR_연차.txt,HR/UNIV_HR_상세인사__mutedrag_strong.txt,HR/Q014_HR_퇴직.txt,HR/UNIV_HR_인사총무__mutedrag_strong.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.766

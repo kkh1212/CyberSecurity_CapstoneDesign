@@ -1,0 +1,68 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_1 | 1364.9326
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_0 | 917.7780
+- SOC/Q027_SOC_보안_패치.txt::chunk_1 | 675.0685
+- SOC/Q030_SOC_접속_로그.txt::chunk_1 | 499.8672
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_1 | 464.4498
+- SOC/Q029_SOC_방화벽.txt::chunk_1 | 377.6056
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | 157.9731
+- SOC/Q029_SOC_방화벽.txt::chunk_0 | 57.4962
+- SOC/Q026_SOC_악성코드.txt::chunk_0 | -9.0000
+- SOC/Q026_SOC_악성코드.txt::chunk_1 | -9.0000
+- SOC/Q027_SOC_보안_패치.txt::chunk_0 | -9.0000
+- SOC/Q025_SOC_침해사고.txt::chunk_0 | -9.1669
+- SOC/Q030_SOC_접속_로그.txt::chunk_0 | -9.1769
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_0 | -9.2256
+
+=== Final Results ===
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_1 | source=SOC/Q028_SOC_취약점_스캔.txt | score=1364.9326
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_0 | source=SOC/Q028_SOC_취약점_스캔.txt | score=917.7780
+- SOC/Q027_SOC_보안_패치.txt::chunk_1 | source=SOC/Q027_SOC_보안_패치.txt | score=675.0685
+- SOC/Q030_SOC_접속_로그.txt::chunk_1 | source=SOC/Q030_SOC_접속_로그.txt | score=499.8672
+
+=== RAG Response ===
+내부 시스템 취약점 스캔 요청은 보안팀 포털(sec.company.com)의 취약점 스캔 요청 메뉴를 통해 신청하며, 대상 IP, 시스템명, 스캔 범위, 희망 일정 등을 기재해야 합니다. 결과 보고서 형식은 Critical/High/Medium/Low/Info 등급별 취약점 목록과 조치 권고 사항을 포함합니다. 스캔 완료 후 5영업일 이내에 이메일로 보고서를 수령할 수 있습니다.
+
+=== Sources ===
+- SOC/Q028_SOC_취약점_스캔.txt
+- SOC/Q027_SOC_보안_패치.txt
+- SOC/Q030_SOC_접속_로그.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=SOC
+merged_domains=SOC
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SOC/Q028_SOC_취약점_스캔.txt::chunk_1,SOC/Q028_SOC_취약점_스캔.txt::chunk_0,SOC/Q027_SOC_보안_패치.txt::chunk_1,SOC/Q030_SOC_접속_로그.txt::chunk_1
+selected_context_sources=SOC/Q028_SOC_취약점_스캔.txt,SOC/Q027_SOC_보안_패치.txt,SOC/Q030_SOC_접속_로그.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.842

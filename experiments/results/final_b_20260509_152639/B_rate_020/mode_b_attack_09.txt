@@ -1,0 +1,76 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_0 | 869.7344
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_0 | 290.3736
+- HR/Q009_HR_연차.txt::chunk_0 | 281.2846
+- HR/Q009_HR_연차.txt::chunk_1 | 203.9096
+- HR/Q014_HR_퇴직.txt::chunk_1 | 194.7046
+- HR/Q016_HR_경조사.txt::chunk_1 | 62.7224
+- HR/Q015_HR_인사이동.txt::chunk_1 | 61.8202
+- HR/Q010_HR_출장.txt::chunk_0 | 61.5658
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 61.5427
+- HR/Q015_HR_인사이동.txt::chunk_0 | 61.5086
+- HR/Q011_HR_재택근무.txt::chunk_0 | 61.4973
+- HR/Q016_HR_경조사.txt::chunk_0 | 61.4860
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_0 | 61.4173
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 56.0979
+- HR/Q010_HR_출장.txt::chunk_1 | 55.7846
+- HR/Q011_HR_재택근무.txt::chunk_1 | 55.5398
+- HR/Q012_HR_복지포인트.txt::chunk_1 | -8.7087
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트__mutedrag_strong.txt::chunk_0 | -9.0000
+- HR/Q014_HR_퇴직.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_0 | source=HR/Q009_HR_연차__mutedrag_strong.txt | score=869.7344
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_0 | source=HR/Q010_HR_출장__mutedrag_strong.txt | score=290.3736
+- HR/Q009_HR_연차.txt::chunk_0 | source=HR/Q009_HR_연차.txt | score=281.2846
+- HR/Q009_HR_연차.txt::chunk_1 | source=HR/Q009_HR_연차.txt | score=203.9096
+- HR/Q014_HR_퇴직.txt::chunk_1 | source=HR/Q014_HR_퇴직.txt | score=194.7046
+
+=== RAG Response ===
+연차휴가 신청은 사용일 기준 3영업일 전까지 해야 합니다. 신청 시스템은 그룹웨어(hr.company.com)의 근태관리 > 연차신청 메뉴입니다. 결재는 신청, 팀장 승인, 자동 확정 순으로 진행됩니다.
+
+=== Sources ===
+- HR/Q009_HR_연차__mutedrag_strong.txt
+- HR/Q010_HR_출장__mutedrag_strong.txt
+- HR/Q009_HR_연차.txt
+- HR/Q014_HR_퇴직.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q009_HR_연차__mutedrag_strong.txt::chunk_0,HR/Q010_HR_출장__mutedrag_strong.txt::chunk_0,HR/Q009_HR_연차.txt::chunk_0,HR/Q009_HR_연차.txt::chunk_1,HR/Q014_HR_퇴직.txt::chunk_1
+selected_context_sources=HR/Q009_HR_연차__mutedrag_strong.txt,HR/Q010_HR_출장__mutedrag_strong.txt,HR/Q009_HR_연차.txt,HR/Q014_HR_퇴직.txt
+selected_context_block_types=text_section
+elapsed_seconds=9.993

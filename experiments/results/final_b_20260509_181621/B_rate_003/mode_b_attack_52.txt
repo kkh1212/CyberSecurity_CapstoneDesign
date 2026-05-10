@@ -1,0 +1,65 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- FIN/Q052_FIN_전도금.txt::chunk_1 | 663.3033
+- FIN/Q052_FIN_전도금.txt::chunk_0 | 514.0555
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | 372.7549
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | 323.5228
+- FIN/Q051_FIN_영수증.txt::chunk_1 | 212.1679
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | 159.1172
+- FIN/Q048_FIN_출장_경비.txt::chunk_0 | 112.6723
+- FIN/Q051_FIN_영수증.txt::chunk_0 | 52.1047
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | 35.9837
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | 21.8563
+- FIN/Q047_FIN_법인카드.txt::chunk_0 | -9.0000
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | -9.0000
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | -9.0000
+- FIN/Q053_FIN_예산_보고서.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- FIN/Q052_FIN_전도금.txt::chunk_1 | source=FIN/Q052_FIN_전도금.txt | score=663.3033
+- FIN/Q052_FIN_전도금.txt::chunk_0 | source=FIN/Q052_FIN_전도금.txt | score=514.0555
+
+=== RAG Response ===
+전도금은 선지급이 필요한 출장비, 행사비, 업무 경비 등에 대해 신청할 수 있습니다. 신청 방법은 그룹웨어 > 재무 > 전도금 신청 메뉴를 통해 진행하며, 정산 기한은 지급일로부터 14일 이내 또는 행사 종료 후 5영업일 이내입니다. 자세한 내용은 재무팀 전도금 담당(내선 8015)에게 문의할 수 있습니다.
+
+=== Sources ===
+- FIN/Q052_FIN_전도금.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=FIN
+merged_domains=FIN
+structured_candidates=14
+final_result_count=2
+context_chunk_count=2
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=FIN/Q052_FIN_전도금.txt::chunk_1,FIN/Q052_FIN_전도금.txt::chunk_0
+selected_context_sources=FIN/Q052_FIN_전도금.txt
+selected_context_block_types=text_section
+elapsed_seconds=1.939

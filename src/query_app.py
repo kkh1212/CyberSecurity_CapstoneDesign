@@ -787,6 +787,67 @@ def build_context_guardrail_text(query: str, context_items: List[Dict]) -> str:
     )
 
 
+def build_single_context_guardrail_text(query: str, context_item: Dict, index: int) -> str:
+    chunk = context_item.get("chunk", {})
+    return "\n\n".join(
+        [
+            "[User Question]",
+            query,
+            f"[Retrieved Context {index}]",
+            f"source={chunk.get('source', '')}",
+            f"chunk_id={chunk.get('chunk_id', '')}",
+            chunk_content_text(chunk),
+        ]
+    )
+
+
+def check_context_guardrail(
+    query: str,
+    context_items: List[Dict],
+    metadata: Dict,
+    config,
+) -> Dict:
+    combined_result = check_external_guardrail(
+        "context",
+        build_context_guardrail_text(query, context_items),
+        {**metadata, "context_guardrail_scope": "full_context"},
+        config,
+    )
+    if combined_result.get("blocked") or combined_result.get("flagged"):
+        return combined_result
+
+    chunk_mode = os.getenv("EXTERNAL_GUARDRAIL_CHUNK_MODE", "false").strip().lower() in {"1", "true", "yes", "on"}
+    if not chunk_mode:
+        return combined_result
+
+    for idx, item in enumerate(context_items, start=1):
+        chunk = item.get("chunk", {})
+        chunk_result = check_external_guardrail(
+            "context",
+            build_single_context_guardrail_text(query, item, idx),
+            {
+                **metadata,
+                "context_guardrail_scope": "single_chunk",
+                "context_guardrail_chunk_index": idx,
+                "context_guardrail_chunk_id": chunk.get("chunk_id", ""),
+                "context_guardrail_source": chunk.get("source", ""),
+            },
+            config,
+        )
+        if chunk_result.get("flagged") or chunk_result.get("blocked"):
+            reason = str(chunk_result.get("reason") or "")
+            source = chunk.get("source", "")
+            chunk_id = chunk.get("chunk_id", "")
+            chunk_result["reason"] = "chunk_scope_match"
+            if source or chunk_id:
+                chunk_result["reason"] += f":rank={idx};source={source};chunk_id={chunk_id}"
+            if reason:
+                chunk_result["reason"] += f";{reason}"
+            return chunk_result
+
+    return combined_result
+
+
 def build_output_guardrail_text(query: str, answer: str) -> str:
     return "\n\n".join(["[User Question]", query, "[Model Answer]", answer])
 
@@ -1522,7 +1583,10 @@ def run_query(query: str):
         source_coverage_summary = build_source_debug_summaries(expanded_source_rankings, profile)
         final_chunks = rerank_results(query, document_first_results)
         final_chunks = dedupe_chunk_items(final_chunks, max_per_source=4)
-        if profile.multi_document_requested or profile.compare_requested or profile.synthesis_requested:
+        if (
+            not attack_eval_mode
+            and (profile.multi_document_requested or profile.compare_requested or profile.synthesis_requested)
+        ):
             final_chunks = ensure_source_coverage(
                 final_chunks,
                 document_first_results,
@@ -1768,9 +1832,9 @@ def run_query(query: str):
             **external_guardrail_metadata,
             **selected_context_metadata(context_chunks),
         }
-        context_guardrail_result = check_external_guardrail(
-            "context",
-            build_context_guardrail_text(query, context_chunks),
+        context_guardrail_result = check_context_guardrail(
+            query,
+            context_chunks,
             context_guardrail_metadata,
             external_guardrail_config,
         )

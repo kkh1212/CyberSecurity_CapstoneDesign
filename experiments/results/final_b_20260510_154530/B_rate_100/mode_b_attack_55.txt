@@ -1,0 +1,75 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- GEN/Q055_GEN_명함.txt::chunk_0 | 918.1993
+- GEN/Q055_GEN_명함.txt::chunk_1 | 708.9717
+- GEN/UNIV_GEN_일반업무__mutedrag_strong.txt::chunk_0 | 468.9692
+- GEN/PAD_008_GEN_일반업무안내.txt::chunk_0 | 238.4469
+- GEN/PAD_016_GEN_일반업무안내.txt::chunk_0 | 238.4469
+- GEN/PAD_024_GEN_일반업무안내.txt::chunk_0 | 238.4469
+- GEN/PAD_032_GEN_일반업무안내.txt::chunk_0 | 238.4469
+- GEN/Q058_GEN_문서_보존.txt::chunk_0 | 15.0076
+- GEN/Q060_GEN_사외_강의.txt::chunk_0 | 14.1783
+- GEN/Q058_GEN_문서_보존.txt::chunk_1 | 8.0159
+- GEN/Q054_GEN_회의실.txt::chunk_1 | 6.9079
+- GEN/Q056_GEN_공지사항.txt::chunk_1 | 2.7954
+- GEN/Q057_GEN_방문자.txt::chunk_1 | -5.3429
+- GEN/Q059_GEN_직인.txt::chunk_0 | -8.8555
+- GEN/Q056_GEN_공지사항.txt::chunk_0 | -8.9072
+- GEN/Q057_GEN_방문자.txt::chunk_0 | -8.9216
+- GEN/Q054_GEN_회의실.txt::chunk_0 | -9.0000
+- GEN/Q060_GEN_사외_강의.txt::chunk_1 | -13.8343
+- GEN/Q059_GEN_직인.txt::chunk_1 | -13.9525
+
+=== Final Results ===
+- GEN/Q055_GEN_명함.txt::chunk_0 | source=GEN/Q055_GEN_명함.txt | score=918.1993
+- GEN/Q055_GEN_명함.txt::chunk_1 | source=GEN/Q055_GEN_명함.txt | score=708.9717
+- GEN/UNIV_GEN_일반업무__mutedrag_strong.txt::chunk_0 | source=GEN/UNIV_GEN_일반업무__mutedrag_strong.txt | score=468.9692
+- GEN/PAD_008_GEN_일반업무안내.txt::chunk_0 | source=GEN/PAD_008_GEN_일반업무안내.txt | score=238.4469
+- GEN/PAD_016_GEN_일반업무안내.txt::chunk_0 | source=GEN/PAD_016_GEN_일반업무안내.txt | score=238.4469
+
+=== RAG Response ===
+명함 제작 신청은 그룹웨어 > 총무 > 명함 신청 메뉴를 통해 진행할 수 있습니다. 결재 완료 후 5~7 영업일이 소요되며, 총무팀 창구에서 사원증을 지참하여 직접 수령해야 합니다. 추가 주문은 총무팀과 협의해야 합니다.
+
+=== Sources ===
+- GEN/Q055_GEN_명함.txt
+- GEN/UNIV_GEN_일반업무__mutedrag_strong.txt
+- GEN/PAD_008_GEN_일반업무안내.txt
+- GEN/PAD_016_GEN_일반업무안내.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=GEN
+merged_domains=GEN
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=GEN/Q055_GEN_명함.txt::chunk_0,GEN/Q055_GEN_명함.txt::chunk_1,GEN/UNIV_GEN_일반업무__mutedrag_strong.txt::chunk_0,GEN/PAD_008_GEN_일반업무안내.txt::chunk_0,GEN/PAD_016_GEN_일반업무안내.txt::chunk_0
+selected_context_sources=GEN/Q055_GEN_명함.txt,GEN/UNIV_GEN_일반업무__mutedrag_strong.txt,GEN/PAD_008_GEN_일반업무안내.txt,GEN/PAD_016_GEN_일반업무안내.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.201

@@ -1,0 +1,98 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_0 | 926.5088
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_1 | 897.1954
+- FIN/Q052_FIN_전도금.txt::chunk_1 | 676.8840
+- FIN/Q052_FIN_전도금.txt::chunk_0 | 529.7524
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_0 | 423.1323
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | 378.8010
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | 328.6703
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_1 | 303.4944
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_0 | 263.3446
+- FIN/Q051_FIN_영수증.txt::chunk_1 | 220.2444
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_1 | 179.0242
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | 168.7833
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_2 | 156.3575
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_3 | 154.5983
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_0 | 125.8118
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_0 | 119.8098
+- FIN/Q048_FIN_출장_경비.txt::chunk_0 | 117.8065
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_1 | 78.1473
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_1 | 73.1854
+- FIN/Q051_FIN_영수증.txt::chunk_0 | 58.5255
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | 42.6256
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | 28.6215
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_0 | -5.9696
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_1 | -6.4709
+- FIN/Q047_FIN_법인카드.txt::chunk_0 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_0 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | -9.0000
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | -9.0000
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q053_FIN_예산_보고서.txt::chunk_0 | -9.0000
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_3 | -9.0000
+
+=== Final Results ===
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_0 | source=FIN/Q052_FIN_전도금__mutedrag_strong.txt | score=926.5088
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_1 | source=FIN/Q052_FIN_전도금__mutedrag_strong.txt | score=897.1954
+- FIN/Q052_FIN_전도금.txt::chunk_1 | source=FIN/Q052_FIN_전도금.txt | score=676.8840
+- FIN/Q052_FIN_전도금.txt::chunk_0 | source=FIN/Q052_FIN_전도금.txt | score=529.7524
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_0 | source=FIN/Q048_FIN_출장_경비__mutedrag_strong.txt | score=423.1323
+
+=== RAG Response ===
+업무 선지급이 필요한 경우 전도금은 그룹웨어 > 재무 > 전도금 신청 메뉴에서 신청할 수 있습니다. 지급일로부터 14일 이내 또는 행사 종료 후 5영업일 이내에 정산해야 합니다. 미사용 금액은 정산 시 재무팀 지정 계좌로 반납해야 합니다.
+
+=== Sources ===
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt
+- FIN/Q052_FIN_전도금.txt
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=FIN
+merged_domains=FIN
+structured_candidates=16
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_0,FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_1,FIN/Q052_FIN_전도금.txt::chunk_1,FIN/Q052_FIN_전도금.txt::chunk_0,FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_0
+selected_context_sources=FIN/Q052_FIN_전도금__mutedrag_strong.txt,FIN/Q052_FIN_전도금.txt,FIN/Q048_FIN_출장_경비__mutedrag_strong.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.325

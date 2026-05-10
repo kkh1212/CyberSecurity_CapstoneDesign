@@ -1,0 +1,99 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_0 | 931.8412
+- FIN/Q052_FIN_전도금.txt::chunk_1 | 677.6979
+- FIN/Q052_FIN_전도금.txt::chunk_0 | 532.1772
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | 379.4747
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | 328.8529
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_0 | 316.7315
+- FIN/Q051_FIN_영수증.txt::chunk_1 | 221.7862
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_0 | 188.1240
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | 170.7525
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_1 | 155.9077
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_2 | 155.8284
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_3 | 155.2969
+- FIN/Q048_FIN_출장_경비.txt::chunk_0 | 119.1886
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_0 | 86.0916
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_0 | 79.6895
+- FIN/Q051_FIN_영수증.txt::chunk_0 | 60.6522
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | 43.0616
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | 28.8665
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_0 | -3.8915
+- FIN/Q047_FIN_법인카드.txt::chunk_0 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_0 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | -9.0000
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | -9.0000
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q053_FIN_예산_보고서.txt::chunk_0 | -9.0000
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_3 | -9.0000
+
+=== Final Results ===
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_0 | source=FIN/Q052_FIN_전도금__mutedrag_strong.txt | score=931.8412
+- FIN/Q052_FIN_전도금.txt::chunk_1 | source=FIN/Q052_FIN_전도금.txt | score=677.6979
+- FIN/Q052_FIN_전도금.txt::chunk_0 | source=FIN/Q052_FIN_전도금.txt | score=532.1772
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | source=FIN/Q047_FIN_법인카드.txt | score=379.4747
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | source=FIN/Q050_FIN_예산_초과.txt | score=328.8529
+
+=== RAG Response ===
+업무 선지급이 필요한 경우 전도금은 그룹웨어 > 재무 > 전도금 신청 메뉴에서 신청할 수 있습니다. 신청 항목은 지급 목적, 사용 예정 금액, 사용 기간, 팀장 서명을 포함합니다. 정산 기한은 지급일로부터 14일 이내 또는 행사 종료 후 5영업일 이내입니다.
+
+=== Sources ===
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt
+- FIN/Q052_FIN_전도금.txt
+- FIN/Q047_FIN_법인카드.txt
+- FIN/Q050_FIN_예산_초과.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=FIN
+merged_domains=FIN
+structured_candidates=16
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_0,FIN/Q052_FIN_전도금.txt::chunk_1,FIN/Q052_FIN_전도금.txt::chunk_0,FIN/Q047_FIN_법인카드.txt::chunk_1,FIN/Q050_FIN_예산_초과.txt::chunk_1
+selected_context_sources=FIN/Q052_FIN_전도금__mutedrag_strong.txt,FIN/Q052_FIN_전도금.txt,FIN/Q047_FIN_법인카드.txt,FIN/Q050_FIN_예산_초과.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.447

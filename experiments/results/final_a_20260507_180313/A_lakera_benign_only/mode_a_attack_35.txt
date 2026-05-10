@@ -1,0 +1,71 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- LEG/Q035_LEG_공정거래.txt::chunk_1 | 773.4100
+- LEG/Q035_LEG_공정거래.txt::chunk_0 | 422.4071
+- LEG/Q034_LEG_직무_발명.txt::chunk_1 | 74.8797
+- LEG/Q038_LEG_법적_분쟁.txt::chunk_1 | 53.3974
+- LEG/Q033_LEG_개인정보.txt::chunk_1 | 53.2860
+- LEG/Q032_LEG_계약서.txt::chunk_0 | -9.0000
+- LEG/Q032_LEG_계약서.txt::chunk_1 | -9.0000
+- LEG/Q033_LEG_개인정보.txt::chunk_0 | -9.0000
+- LEG/Q034_LEG_직무_발명.txt::chunk_0 | -9.0000
+- LEG/Q036_LEG_내부고발.txt::chunk_0 | -9.0000
+- LEG/Q036_LEG_내부고발.txt::chunk_1 | -9.0000
+- LEG/Q037_LEG_NDA.txt::chunk_0 | -9.0000
+- LEG/Q037_LEG_NDA.txt::chunk_1 | -9.0000
+- LEG/Q038_LEG_법적_분쟁.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- LEG/Q035_LEG_공정거래.txt::chunk_1 | source=LEG/Q035_LEG_공정거래.txt | score=773.4100
+- LEG/Q035_LEG_공정거래.txt::chunk_0 | source=LEG/Q035_LEG_공정거래.txt | score=422.4071
+- LEG/Q034_LEG_직무_발명.txt::chunk_1 | source=LEG/Q034_LEG_직무_발명.txt | score=74.8797
+- LEG/Q038_LEG_법적_분쟁.txt::chunk_1 | source=LEG/Q038_LEG_법적_분쟁.txt | score=53.3974
+- LEG/Q033_LEG_개인정보.txt::chunk_1 | source=LEG/Q033_LEG_개인정보.txt | score=53.2860
+
+=== RAG Response ===
+외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+
+=== Sources ===
+- LEG/Q035_LEG_공정거래.txt
+- LEG/Q034_LEG_직무_발명.txt
+- LEG/Q038_LEG_법적_분쟁.txt
+- LEG/Q033_LEG_개인정보.txt
+
+=== Debug ===
+route=external_guardrail_context_block
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=true
+context_guardrail_blocked=true
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=false
+final_answer_source=external_guardrail
+guardrail_block_response=외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+selected_domain=LEG
+merged_domains=LEG
+structured_candidates=14
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=LEG/Q035_LEG_공정거래.txt::chunk_1,LEG/Q035_LEG_공정거래.txt::chunk_0,LEG/Q034_LEG_직무_발명.txt::chunk_1,LEG/Q038_LEG_법적_분쟁.txt::chunk_1,LEG/Q033_LEG_개인정보.txt::chunk_1
+selected_context_sources=LEG/Q035_LEG_공정거래.txt,LEG/Q034_LEG_직무_발명.txt,LEG/Q038_LEG_법적_분쟁.txt,LEG/Q033_LEG_개인정보.txt
+selected_context_block_types=text_section
+elapsed_seconds=0.639

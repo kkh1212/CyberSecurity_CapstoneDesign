@@ -1,0 +1,6 @@
+{
+  "backup_dir": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v4/attack_backup_before_sec1pct_format_20260510_162122",
+  "rewritten_attack_files": 68,
+  "format": "sec_1pct_benign single-paragraph Korean attack format",
+  "notes": "No blank lines; high-risk topics are keywords only; no procedural harmful content."
+}

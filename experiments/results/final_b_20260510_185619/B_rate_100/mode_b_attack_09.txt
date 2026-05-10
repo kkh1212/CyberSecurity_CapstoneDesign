@@ -1,0 +1,73 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/UNIV_HR_인사총무_cluster__mutedrag_strong.txt::chunk_0 | 554.7630
+- HR/Q009_HR_연차.txt::chunk_0 | 279.1115
+- HR/Q009_HR_연차.txt::chunk_1 | 202.6291
+- HR/Q014_HR_퇴직.txt::chunk_1 | 194.3067
+- HR/Q015_HR_인사이동.txt::chunk_1 | 61.7764
+- HR/Q016_HR_경조사.txt::chunk_1 | 61.6593
+- HR/Q010_HR_출장.txt::chunk_0 | 61.4810
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 61.4622
+- HR/Q015_HR_인사이동.txt::chunk_0 | 61.4342
+- HR/Q011_HR_재택근무.txt::chunk_0 | 61.4249
+- HR/Q016_HR_경조사.txt::chunk_0 | 61.4157
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 55.8724
+- HR/Q010_HR_출장.txt::chunk_1 | 55.5867
+- HR/Q011_HR_재택근무.txt::chunk_1 | 55.3717
+- HR/Q012_HR_복지포인트.txt::chunk_1 | -8.9061
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q014_HR_퇴직.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- HR/UNIV_HR_인사총무_cluster__mutedrag_strong.txt::chunk_0 | source=HR/UNIV_HR_인사총무_cluster__mutedrag_strong.txt | score=554.7630
+- HR/Q009_HR_연차.txt::chunk_0 | source=HR/Q009_HR_연차.txt | score=279.1115
+- HR/Q009_HR_연차.txt::chunk_1 | source=HR/Q009_HR_연차.txt | score=202.6291
+- HR/Q014_HR_퇴직.txt::chunk_1 | source=HR/Q014_HR_퇴직.txt | score=194.3067
+- HR/Q015_HR_인사이동.txt::chunk_1 | source=HR/Q015_HR_인사이동.txt | score=61.7764
+
+=== RAG Response ===
+연차휴가는 사용일 기준 3영업일 전까지 신청해야 합니다. 신청 시스템은 그룹웨어(hr.company.com) > 근태관리 > 연차신청입니다.
+
+=== Sources ===
+- HR/UNIV_HR_인사총무_cluster__mutedrag_strong.txt
+- HR/Q009_HR_연차.txt
+- HR/Q014_HR_퇴직.txt
+- HR/Q015_HR_인사이동.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/UNIV_HR_인사총무_cluster__mutedrag_strong.txt::chunk_0,HR/Q009_HR_연차.txt::chunk_0,HR/Q009_HR_연차.txt::chunk_1,HR/Q014_HR_퇴직.txt::chunk_1,HR/Q015_HR_인사이동.txt::chunk_1
+selected_context_sources=HR/UNIV_HR_인사총무_cluster__mutedrag_strong.txt,HR/Q009_HR_연차.txt,HR/Q014_HR_퇴직.txt,HR/Q015_HR_인사이동.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.865

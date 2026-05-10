@@ -1,0 +1,97 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_0 | 1581.6219
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_1 | 1228.6982
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | 912.0078
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | 457.2462
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | 344.2246
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_2 | 294.4696
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_3 | 293.6949
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_0 | 247.2083
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | 229.2217
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_1 | 172.8546
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_0 | 146.2161
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_0 | 146.0858
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_1 | 97.2493
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_1 | 97.0799
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_0 | 88.4676
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_1 | 86.9805
+- FIN/Q052_FIN_전도금.txt::chunk_1 | 86.8377
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | 27.3881
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | 26.7704
+- FIN/Q048_FIN_출장_경비.txt::chunk_0 | -5.3739
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | -5.4200
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_0 | -5.9696
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_1 | -6.4709
+- FIN/Q047_FIN_법인카드.txt::chunk_0 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_0 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q051_FIN_영수증.txt::chunk_0 | -9.0000
+- FIN/Q051_FIN_영수증.txt::chunk_1 | -9.0000
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q052_FIN_전도금.txt::chunk_0 | -9.0000
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q053_FIN_예산_보고서.txt::chunk_0 | -9.0000
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | -9.4709
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | -10.8436
+
+=== Final Results ===
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_0 | source=FIN/Q049_FIN_물품_구매__mutedrag_strong.txt | score=1581.6219
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_1 | source=FIN/Q049_FIN_물품_구매__mutedrag_strong.txt | score=1228.6982
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | source=FIN/Q049_FIN_물품_구매.txt | score=912.0078
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | source=FIN/Q049_FIN_물품_구매.txt | score=457.2462
+
+=== RAG Response ===
+사무용품 및 비품 구매 요청은 그룹웨어의 총무 > 물품구매신청 메뉴를 통해 신청할 수 있습니다. 결재 한도는 10만원 미만은 팀장 결재, 10만원 이상 ~ 100만원 미만은 팀장과 부서장 결재, 100만원 이상은 팀장, 부서장, 재무팀장 결재를 거칩니다. 긴급 구매는 팀장의 구두 승인 후 구매 가능하며, 사후 결재를 할 수 있습니다(50만원 이하).
+
+=== Sources ===
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt
+- FIN/Q049_FIN_물품_구매.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=FIN
+merged_domains=FIN
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_0,FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_1,FIN/Q049_FIN_물품_구매.txt::chunk_0,FIN/Q049_FIN_물품_구매.txt::chunk_1
+selected_context_sources=FIN/Q049_FIN_물품_구매__mutedrag_strong.txt,FIN/Q049_FIN_물품_구매.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.152

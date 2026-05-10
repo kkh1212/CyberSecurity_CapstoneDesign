@@ -1,0 +1,82 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | 879.5738
+- FIN/UNIV_FIN_상세재무__mutedrag_strong.txt::chunk_0 | 663.2387
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | 426.9006
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | 321.7507
+- FIN/UNIV_FIN_재무경비__mutedrag_strong.txt::chunk_0 | 227.0817
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | 205.7965
+- FIN/PAD_FIN_02.txt::chunk_0 | 148.8845
+- FIN/PAD_FIN_03.txt::chunk_0 | 148.8845
+- FIN/PAD_FIN_08.txt::chunk_0 | 148.8845
+- FIN/PAD_FIN_09.txt::chunk_0 | 148.8845
+- FIN/Q052_FIN_전도금.txt::chunk_1 | 63.2929
+- FIN/Q048_FIN_출장_경비.txt::chunk_0 | -4.2370
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | -4.2684
+- FIN/PAD_FIN_01.txt::chunk_0 | -9.0000
+- FIN/PAD_FIN_04.txt::chunk_0 | -9.0000
+- FIN/PAD_FIN_05.txt::chunk_0 | -9.0000
+- FIN/PAD_FIN_06.txt::chunk_0 | -9.0000
+- FIN/PAD_FIN_07.txt::chunk_0 | -9.0000
+- FIN/PAD_FIN_10.txt::chunk_0 | -9.0000
+- FIN/Q047_FIN_법인카드.txt::chunk_0 | -9.0000
+- FIN/Q051_FIN_영수증.txt::chunk_0 | -9.0000
+- FIN/Q051_FIN_영수증.txt::chunk_1 | -9.0000
+- FIN/Q052_FIN_전도금.txt::chunk_0 | -9.0000
+- FIN/Q053_FIN_예산_보고서.txt::chunk_0 | -9.0000
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | -10.9466
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | -11.7893
+
+=== Final Results ===
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | source=FIN/Q049_FIN_물품_구매.txt | score=879.5738
+- FIN/UNIV_FIN_상세재무__mutedrag_strong.txt::chunk_0 | source=FIN/UNIV_FIN_상세재무__mutedrag_strong.txt | score=663.2387
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | source=FIN/Q049_FIN_물품_구매.txt | score=426.9006
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | source=FIN/Q047_FIN_법인카드.txt | score=321.7507
+- FIN/UNIV_FIN_재무경비__mutedrag_strong.txt::chunk_0 | source=FIN/UNIV_FIN_재무경비__mutedrag_strong.txt | score=227.0817
+
+=== RAG Response ===
+사무용품 및 비품 구매 요청은 그룹웨어의 총무 > 물품구매신청 메뉴를 통해 신청할 수 있습니다. 구매 금액에 따라 결재권자가 달라지며, 10만원 미만은 팀장, 10만원 이상 100만원 미만은 팀장과 부서장, 100만원 이상은 팀장, 부서장, 재무팀장의 결재를 거쳐야 합니다. 긴급 구매의 경우 팀장의 구두 승인을 받은 후 구매하고 사후에 결재를 받을 수 있습니다.
+
+=== Sources ===
+- FIN/Q049_FIN_물품_구매.txt
+- FIN/UNIV_FIN_상세재무__mutedrag_strong.txt
+- FIN/Q047_FIN_법인카드.txt
+- FIN/UNIV_FIN_재무경비__mutedrag_strong.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=FIN
+merged_domains=FIN
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=FIN/Q049_FIN_물품_구매.txt::chunk_0,FIN/UNIV_FIN_상세재무__mutedrag_strong.txt::chunk_0,FIN/Q049_FIN_물품_구매.txt::chunk_1,FIN/Q047_FIN_법인카드.txt::chunk_1,FIN/UNIV_FIN_재무경비__mutedrag_strong.txt::chunk_0
+selected_context_sources=FIN/Q049_FIN_물품_구매.txt,FIN/UNIV_FIN_상세재무__mutedrag_strong.txt,FIN/Q047_FIN_법인카드.txt,FIN/UNIV_FIN_재무경비__mutedrag_strong.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.888

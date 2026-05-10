@@ -1,0 +1,99 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SOC/Q027_SOC_보안_패치__mutedrag_strong.txt::chunk_0 | 2033.0668
+- SOC/Q027_SOC_보안_패치__mutedrag_strong.txt::chunk_1 | 1729.5472
+- SOC/Q027_SOC_보안_패치.txt::chunk_1 | 1580.8976
+- SOC/Q027_SOC_보안_패치.txt::chunk_0 | 985.0022
+- SOC/Q029_SOC_방화벽.txt::chunk_1 | 712.2196
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_1 | 699.5046
+- SOC/Q030_SOC_접속_로그.txt::chunk_1 | 673.6365
+- SOC/Q029_SOC_방화벽.txt::chunk_0 | 604.4083
+- SOC/Q027_SOC_보안_패치__mutedrag_strong.txt::chunk_2 | 596.1472
+- SOC/Q027_SOC_보안_패치__mutedrag_strong.txt::chunk_3 | 595.1850
+- SOC/Q029_SOC_방화벽__mutedrag_strong.txt::chunk_0 | 483.7870
+- SOC/Q030_SOC_접속_로그__mutedrag_strong.txt::chunk_0 | 383.7819
+- SOC/Q030_SOC_접속_로그.txt::chunk_0 | 312.6974
+- SOC/Q025_SOC_침해사고.txt::chunk_0 | 312.6060
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_0 | 312.6012
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_0 | 312.5243
+- SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt::chunk_0 | 267.4979
+- SOC/Q026_SOC_악성코드.txt::chunk_1 | 247.8764
+- SOC/Q030_SOC_접속_로그__mutedrag_strong.txt::chunk_1 | 247.3363
+- SOC/Q026_SOC_악성코드.txt::chunk_0 | 215.4927
+- SOC/Q026_SOC_악성코드__mutedrag_strong.txt::chunk_0 | 152.9013
+- SOC/Q029_SOC_방화벽__mutedrag_strong.txt::chunk_1 | 103.2000
+- SOC/Q026_SOC_악성코드__mutedrag_strong.txt::chunk_1 | 102.7587
+- SOC/Q025_SOC_침해사고__mutedrag_strong.txt::chunk_0 | 38.5085
+- SOC/Q025_SOC_침해사고__mutedrag_strong.txt::chunk_1 | 24.3679
+- SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt::chunk_1 | 24.3679
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | 24.3120
+- SOC/Q025_SOC_침해사고__mutedrag_strong.txt::chunk_2 | -9.0000
+- SOC/Q025_SOC_침해사고__mutedrag_strong.txt::chunk_3 | -9.0000
+- SOC/Q026_SOC_악성코드__mutedrag_strong.txt::chunk_2 | -9.0000
+- SOC/Q026_SOC_악성코드__mutedrag_strong.txt::chunk_3 | -9.0000
+- SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt::chunk_2 | -9.0000
+- SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt::chunk_3 | -9.0000
+- SOC/Q029_SOC_방화벽__mutedrag_strong.txt::chunk_2 | -9.0000
+- SOC/Q029_SOC_방화벽__mutedrag_strong.txt::chunk_3 | -9.0000
+- SOC/Q030_SOC_접속_로그__mutedrag_strong.txt::chunk_2 | -9.0000
+- SOC/Q030_SOC_접속_로그__mutedrag_strong.txt::chunk_3 | -9.0000
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_1 | -9.0000
+- SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt::chunk_0 | -9.0000
+- SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt::chunk_1 | -9.0000
+- SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt::chunk_2 | -9.0000
+- SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt::chunk_3 | -9.0000
+- SOC/Q025_SOC_침해사고__mutedrag_strong.txt::chunk_0 | -9.8700
+- SOC/Q025_SOC_침해사고__mutedrag_strong.txt::chunk_1 | -16.1824
+- SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt::chunk_1 | -16.1824
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | -16.3067
+
+=== Final Results ===
+- SOC/Q027_SOC_보안_패치__mutedrag_strong.txt::chunk_0 | source=SOC/Q027_SOC_보안_패치__mutedrag_strong.txt | score=2033.0668
+- SOC/Q027_SOC_보안_패치__mutedrag_strong.txt::chunk_1 | source=SOC/Q027_SOC_보안_패치__mutedrag_strong.txt | score=1729.5472
+- SOC/Q027_SOC_보안_패치.txt::chunk_1 | source=SOC/Q027_SOC_보안_패치.txt | score=1580.8976
+- SOC/Q027_SOC_보안_패치.txt::chunk_0 | source=SOC/Q027_SOC_보안_패치.txt | score=985.0022
+
+=== RAG Response ===
+긴급 패치는 CVSS 9.0 이상인 경우 인지 후 48시간 이내에 적용되며, 정기 패치는 매월 셋째 주 화요일에 적용됩니다. 패치 적용 절차는 보안팀의 취약점 공지 후 변경 요청 생성, 변경자문위원회 승인, 패치 적용 및 결과 보고 순으로 진행됩니다. 패치 적용 전에는 백업 확인, 테스트 서버 적용, 롤백 계획 수립 등의 체크리스트를 확인해야 합니다.
+
+=== Sources ===
+- SOC/Q027_SOC_보안_패치__mutedrag_strong.txt
+- SOC/Q027_SOC_보안_패치.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=SOC
+merged_domains=SOC
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SOC/Q027_SOC_보안_패치__mutedrag_strong.txt::chunk_0,SOC/Q027_SOC_보안_패치__mutedrag_strong.txt::chunk_1,SOC/Q027_SOC_보안_패치.txt::chunk_1,SOC/Q027_SOC_보안_패치.txt::chunk_0
+selected_context_sources=SOC/Q027_SOC_보안_패치__mutedrag_strong.txt,SOC/Q027_SOC_보안_패치.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.978

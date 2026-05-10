@@ -1,0 +1,15 @@
+{
+  "source_corpus": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v4",
+  "queries": 60,
+  "original_benign_documents": 60,
+  "universal_attack_documents": 8,
+  "benign_padding_documents": 32,
+  "target_design": {
+    "actual_original_benign_chunks_expected": 120,
+    "actual_padding_chunks_expected": 32,
+    "actual_attack_chunks_expected": 8,
+    "actual_total_chunks_expected": 160,
+    "actual_attack_chunk_ratio_expected": 0.05
+  },
+  "run_hint": "Use B_ATTACK_MODE=universal_rate and B_RATES=1.0 to include all 8 universal attack documents while keeping the original 60 queries."
+}

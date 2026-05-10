@@ -25,7 +25,7 @@ from typing import Iterable
 
 
 ATTACK_DOC_RE = re.compile(
-    r"__(direct|indirect_explicit|indirect_mixed|multilingual)(?:__mutedrag_dup\d+)?\.(?:txt|docx)$"
+    r"__(direct|indirect_explicit|indirect_mixed|multilingual|implicit_refusal|mutedrag_strong)(?:__mutedrag_dup\d+)?\.(?:txt|docx)$"
 )
 
 

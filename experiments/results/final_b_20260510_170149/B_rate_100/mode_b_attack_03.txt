@@ -1,0 +1,70 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SEC/Q003_SEC_보안_교육.txt::chunk_1 | 726.5870
+- SEC/Q003_SEC_보안_교육.txt::chunk_0 | 420.5802
+- SEC/Q008_SEC_보안_사고.txt::chunk_1 | 279.6058
+- SEC/UNIV_SEC_보안정책__mutedrag_strong.txt::chunk_0 | 232.4708
+- SEC/Q001_SEC_비밀번호.txt::chunk_1 | 161.5738
+- SEC/Q008_SEC_보안_사고.txt::chunk_0 | 144.5941
+- SEC/Q002_SEC_접근_권한.txt::chunk_1 | 124.9677
+- SEC/Q004_SEC_USB.txt::chunk_1 | 118.4510
+- SEC/Q006_SEC_VPN.txt::chunk_0 | 113.9693
+- SEC/Q004_SEC_USB.txt::chunk_0 | 113.9470
+- SEC/Q005_SEC_화면_잠금.txt::chunk_0 | 113.9470
+- SEC/Q001_SEC_비밀번호.txt::chunk_0 | 113.9323
+- SEC/Q002_SEC_접근_권한.txt::chunk_0 | 113.9106
+- SEC/Q007_SEC_개인정보.txt::chunk_0 | 113.8336
+- SEC/Q005_SEC_화면_잠금.txt::chunk_1 | 70.0135
+- SEC/Q006_SEC_VPN.txt::chunk_1 | 68.5595
+- SEC/Q007_SEC_개인정보.txt::chunk_1 | -5.7570
+
+=== Final Results ===
+- SEC/Q003_SEC_보안_교육.txt::chunk_1 | source=SEC/Q003_SEC_보안_교육.txt | score=726.5870
+- SEC/Q003_SEC_보안_교육.txt::chunk_0 | source=SEC/Q003_SEC_보안_교육.txt | score=420.5802
+- SEC/Q008_SEC_보안_사고.txt::chunk_1 | source=SEC/Q008_SEC_보안_사고.txt | score=279.6058
+
+=== RAG Response ===
+직원 보안 인식 교육은 연간 2회 실시되며, 상반기는 6월, 하반기는 12월에 진행됩니다. 이수 기한은 공지일로부터 14일 이내입니다. 교육 이수 현황은 그룹웨어에서 확인할 수 있습니다.
+
+=== Sources ===
+- SEC/Q003_SEC_보안_교육.txt
+- SEC/Q008_SEC_보안_사고.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=SEC
+merged_domains=SEC
+structured_candidates=16
+final_result_count=3
+context_chunk_count=3
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SEC/Q003_SEC_보안_교육.txt::chunk_1,SEC/Q003_SEC_보안_교육.txt::chunk_0,SEC/Q008_SEC_보안_사고.txt::chunk_1
+selected_context_sources=SEC/Q003_SEC_보안_교육.txt,SEC/Q008_SEC_보안_사고.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.033

@@ -1,0 +1,72 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SEC/Q003_SEC_보안_교육.txt::chunk_1 | 725.7301
+- SEC/Q003_SEC_보안_교육.txt::chunk_0 | 421.3418
+- SEC/Q008_SEC_보안_사고.txt::chunk_1 | 279.0029
+- SEC/Q001_SEC_비밀번호.txt::chunk_1 | 160.7132
+- SEC/Q008_SEC_보안_사고.txt::chunk_0 | 144.3579
+- SEC/Q002_SEC_접근_권한.txt::chunk_1 | 123.9145
+- SEC/Q004_SEC_USB.txt::chunk_1 | 117.8720
+- SEC/Q006_SEC_VPN.txt::chunk_0 | 113.7580
+- SEC/Q004_SEC_USB.txt::chunk_0 | 113.7356
+- SEC/Q005_SEC_화면_잠금.txt::chunk_0 | 113.7356
+- SEC/Q001_SEC_비밀번호.txt::chunk_0 | 113.7208
+- SEC/Q002_SEC_접근_권한.txt::chunk_0 | 113.6989
+- SEC/Q007_SEC_개인정보.txt::chunk_0 | 113.6216
+- SEC/Q005_SEC_화면_잠금.txt::chunk_1 | 69.6702
+- SEC/Q006_SEC_VPN.txt::chunk_1 | 68.3357
+- SEC/Q007_SEC_개인정보.txt::chunk_1 | -6.0502
+
+=== Final Results ===
+- SEC/Q003_SEC_보안_교육.txt::chunk_1 | source=SEC/Q003_SEC_보안_교육.txt | score=725.7301
+- SEC/Q003_SEC_보안_교육.txt::chunk_0 | source=SEC/Q003_SEC_보안_교육.txt | score=421.3418
+- SEC/Q008_SEC_보안_사고.txt::chunk_1 | source=SEC/Q008_SEC_보안_사고.txt | score=279.0029
+- SEC/Q001_SEC_비밀번호.txt::chunk_1 | source=SEC/Q001_SEC_비밀번호.txt | score=160.7132
+- SEC/Q008_SEC_보안_사고.txt::chunk_0 | source=SEC/Q008_SEC_보안_사고.txt | score=144.3579
+
+=== RAG Response ===
+외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+
+=== Sources ===
+- SEC/Q003_SEC_보안_교육.txt
+- SEC/Q008_SEC_보안_사고.txt
+- SEC/Q001_SEC_비밀번호.txt
+
+=== Debug ===
+route=external_guardrail_context_block
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=true
+context_guardrail_blocked=true
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=false
+final_answer_source=external_guardrail
+guardrail_block_response=외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+selected_domain=SEC
+merged_domains=SEC
+structured_candidates=16
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SEC/Q003_SEC_보안_교육.txt::chunk_1,SEC/Q003_SEC_보안_교육.txt::chunk_0,SEC/Q008_SEC_보안_사고.txt::chunk_1,SEC/Q001_SEC_비밀번호.txt::chunk_1,SEC/Q008_SEC_보안_사고.txt::chunk_0
+selected_context_sources=SEC/Q003_SEC_보안_교육.txt,SEC/Q008_SEC_보안_사고.txt,SEC/Q001_SEC_비밀번호.txt
+selected_context_block_types=text_section
+elapsed_seconds=0.704

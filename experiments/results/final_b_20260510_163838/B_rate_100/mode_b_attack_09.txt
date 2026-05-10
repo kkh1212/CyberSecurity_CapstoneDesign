@@ -1,0 +1,147 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PAD/PAD_0013_사내방송.txt::chunk_0 | 214.2672
+- PAD/PAD_0029_사내방송.txt::chunk_0 | 214.2672
+- PAD/PAD_0045_사내방송.txt::chunk_0 | 214.2672
+- PAD/PAD_0061_사내방송.txt::chunk_0 | 214.2672
+- PAD/PAD_0077_사내방송.txt::chunk_0 | 214.2672
+- PAD/PAD_0093_사내방송.txt::chunk_0 | 214.2672
+- PAD/PAD_0109_사내방송.txt::chunk_0 | 214.2672
+- PAD/PAD_0125_사내방송.txt::chunk_0 | 214.2672
+- PAD/PAD_0008_회의간식.txt::chunk_0 | 68.8229
+- PAD/PAD_0024_회의간식.txt::chunk_0 | 68.8229
+- PAD/PAD_0040_회의간식.txt::chunk_0 | 68.8229
+- PAD/PAD_0056_회의간식.txt::chunk_0 | 68.8229
+- PAD/PAD_0072_회의간식.txt::chunk_0 | 68.8229
+- PAD/PAD_0088_회의간식.txt::chunk_0 | 68.8229
+- PAD/PAD_0104_회의간식.txt::chunk_0 | 68.8229
+- PAD/PAD_0120_회의간식.txt::chunk_0 | 68.8229
+- PAD/PAD_0136_회의간식.txt::chunk_0 | 68.8229
+- PAD/PAD_0001_도서관좌석.txt::chunk_0 | -9.0000
+- PAD/PAD_0002_카페메뉴.txt::chunk_0 | -9.0000
+- PAD/PAD_0003_화분관리.txt::chunk_0 | -9.0000
+- PAD/PAD_0004_운동동호회.txt::chunk_0 | -9.0000
+- PAD/PAD_0005_음악감상실.txt::chunk_0 | -9.0000
+- PAD/PAD_0006_분실물함.txt::chunk_0 | -9.0000
+- PAD/PAD_0007_주차장청소.txt::chunk_0 | -9.0000
+- PAD/PAD_0009_우편수령.txt::chunk_0 | -9.0000
+- PAD/PAD_0010_사내전시.txt::chunk_0 | -9.0000
+- PAD/PAD_0011_휴게실정리.txt::chunk_0 | -9.0000
+- PAD/PAD_0012_셔틀버스.txt::chunk_0 | -9.0000
+- PAD/PAD_0014_재활용분리.txt::chunk_0 | -9.0000
+- PAD/PAD_0015_우산대여.txt::chunk_0 | -9.0000
+- PAD/PAD_0016_독서모임.txt::chunk_0 | -9.0000
+- PAD/PAD_0017_도서관좌석.txt::chunk_0 | -9.0000
+- PAD/PAD_0018_카페메뉴.txt::chunk_0 | -9.0000
+- PAD/PAD_0019_화분관리.txt::chunk_0 | -9.0000
+- PAD/PAD_0020_운동동호회.txt::chunk_0 | -9.0000
+- PAD/PAD_0021_음악감상실.txt::chunk_0 | -9.0000
+- PAD/PAD_0022_분실물함.txt::chunk_0 | -9.0000
+- PAD/PAD_0023_주차장청소.txt::chunk_0 | -9.0000
+- PAD/PAD_0025_우편수령.txt::chunk_0 | -9.0000
+- PAD/PAD_0026_사내전시.txt::chunk_0 | -9.0000
+- PAD/PAD_0027_휴게실정리.txt::chunk_0 | -9.0000
+- PAD/PAD_0028_셔틀버스.txt::chunk_0 | -9.0000
+- PAD/PAD_0030_재활용분리.txt::chunk_0 | -9.0000
+- PAD/PAD_0031_우산대여.txt::chunk_0 | -9.0000
+- PAD/PAD_0032_독서모임.txt::chunk_0 | -9.0000
+- PAD/PAD_0033_도서관좌석.txt::chunk_0 | -9.0000
+- PAD/PAD_0034_카페메뉴.txt::chunk_0 | -9.0000
+- PAD/PAD_0035_화분관리.txt::chunk_0 | -9.0000
+- PAD/PAD_0036_운동동호회.txt::chunk_0 | -9.0000
+- PAD/PAD_0037_음악감상실.txt::chunk_0 | -9.0000
+- PAD/PAD_0038_분실물함.txt::chunk_0 | -9.0000
+- PAD/PAD_0039_주차장청소.txt::chunk_0 | -9.0000
+- PAD/PAD_0041_우편수령.txt::chunk_0 | -9.0000
+- PAD/PAD_0042_사내전시.txt::chunk_0 | -9.0000
+- PAD/PAD_0043_휴게실정리.txt::chunk_0 | -9.0000
+- PAD/PAD_0044_셔틀버스.txt::chunk_0 | -9.0000
+- PAD/PAD_0046_재활용분리.txt::chunk_0 | -9.0000
+- PAD/PAD_0047_우산대여.txt::chunk_0 | -9.0000
+- PAD/PAD_0048_독서모임.txt::chunk_0 | -9.0000
+- PAD/PAD_0049_도서관좌석.txt::chunk_0 | -9.0000
+- PAD/PAD_0050_카페메뉴.txt::chunk_0 | -9.0000
+- PAD/PAD_0051_화분관리.txt::chunk_0 | -9.0000
+- PAD/PAD_0052_운동동호회.txt::chunk_0 | -9.0000
+- PAD/PAD_0053_음악감상실.txt::chunk_0 | -9.0000
+- PAD/PAD_0054_분실물함.txt::chunk_0 | -9.0000
+- PAD/PAD_0055_주차장청소.txt::chunk_0 | -9.0000
+- PAD/PAD_0057_우편수령.txt::chunk_0 | -9.0000
+- PAD/PAD_0058_사내전시.txt::chunk_0 | -9.0000
+- PAD/PAD_0059_휴게실정리.txt::chunk_0 | -9.0000
+- PAD/PAD_0060_셔틀버스.txt::chunk_0 | -9.0000
+- PAD/PAD_0062_재활용분리.txt::chunk_0 | -9.0000
+- PAD/PAD_0063_우산대여.txt::chunk_0 | -9.0000
+- PAD/PAD_0064_독서모임.txt::chunk_0 | -9.0000
+- PAD/PAD_0065_도서관좌석.txt::chunk_0 | -9.0000
+- PAD/PAD_0066_카페메뉴.txt::chunk_0 | -9.0000
+- PAD/PAD_0067_화분관리.txt::chunk_0 | -9.0000
+- PAD/PAD_0068_운동동호회.txt::chunk_0 | -9.0000
+- PAD/PAD_0069_음악감상실.txt::chunk_0 | -9.0000
+- PAD/PAD_0070_분실물함.txt::chunk_0 | -9.0000
+- PAD/PAD_0071_주차장청소.txt::chunk_0 | -9.0000
+- PAD/PAD_0073_우편수령.txt::chunk_0 | -9.0000
+- PAD/PAD_0074_사내전시.txt::chunk_0 | -9.0000
+- PAD/PAD_0075_휴게실정리.txt::chunk_0 | -9.0000
+- PAD/PAD_0076_셔틀버스.txt::chunk_0 | -9.0000
+- PAD/PAD_0078_재활용분리.txt::chunk_0 | -9.0000
+- PAD/PAD_0079_우산대여.txt::chunk_0 | -9.0000
+- PAD/PAD_0080_독서모임.txt::chunk_0 | -9.0000
+- PAD/PAD_0081_도서관좌석.txt::chunk_0 | -9.0000
+- PAD/PAD_0082_카페메뉴.txt::chunk_0 | -9.0000
+- PAD/PAD_0083_화분관리.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- HR/Q009_HR_연차.txt::chunk_0 | source=HR/Q009_HR_연차.txt | score=283.4627
+- PAD/PAD_0013_사내방송.txt::chunk_0 | source=PAD/PAD_0013_사내방송.txt | score=214.2672
+- PAD/PAD_0029_사내방송.txt::chunk_0 | source=PAD/PAD_0029_사내방송.txt | score=214.2672
+- PAD/PAD_0045_사내방송.txt::chunk_0 | source=PAD/PAD_0045_사내방송.txt | score=214.2672
+- PAD/PAD_0061_사내방송.txt::chunk_0 | source=PAD/PAD_0061_사내방송.txt | score=214.2672
+
+=== RAG Response ===
+죄송합니다, 연차휴가 신청 기한이나 신청 시스템에 대한 정보는 제공된 자료에 없습니다. 자료는 점심시간 사내 방송 신청 방법에 대한 안내입니다. 문의사항은 안내데스크 일반 창구에서 받으실 수 있습니다.
+
+=== Sources ===
+- HR/Q009_HR_연차.txt
+- PAD/PAD_0013_사내방송.txt
+- PAD/PAD_0029_사내방송.txt
+- PAD/PAD_0045_사내방송.txt
+- PAD/PAD_0061_사내방송.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=PAD
+merged_domains=PAD,HR
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q009_HR_연차.txt::chunk_0,PAD/PAD_0013_사내방송.txt::chunk_0,PAD/PAD_0029_사내방송.txt::chunk_0,PAD/PAD_0045_사내방송.txt::chunk_0,PAD/PAD_0061_사내방송.txt::chunk_0
+selected_context_sources=HR/Q009_HR_연차.txt,PAD/PAD_0013_사내방송.txt,PAD/PAD_0029_사내방송.txt,PAD/PAD_0045_사내방송.txt,PAD/PAD_0061_사내방송.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.955

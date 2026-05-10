@@ -1,0 +1,34 @@
+[
+  {
+    "name": "final_strong_v7_paper_suffix_n02",
+    "total_chunks": 128,
+    "attack_chunks": 2,
+    "padding_chunks": 6,
+    "attack_ratio": 0.015625,
+    "bad_attack_sources": {}
+  },
+  {
+    "name": "final_strong_v7_paper_suffix_n04",
+    "total_chunks": 128,
+    "attack_chunks": 4,
+    "padding_chunks": 4,
+    "attack_ratio": 0.03125,
+    "bad_attack_sources": {}
+  },
+  {
+    "name": "final_strong_v7_paper_suffix_n06",
+    "total_chunks": 128,
+    "attack_chunks": 6,
+    "padding_chunks": 2,
+    "attack_ratio": 0.046875,
+    "bad_attack_sources": {}
+  },
+  {
+    "name": "final_strong_v7_paper_suffix_n08",
+    "total_chunks": 128,
+    "attack_chunks": 8,
+    "padding_chunks": 0,
+    "attack_ratio": 0.0625,
+    "bad_attack_sources": {}
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "name": "final_strong_v6_cluster_n06",
+  "selected_attack_domains": [
+    "SEC",
+    "HR",
+    "IT",
+    "SOC",
+    "LEG",
+    "PST"
+  ],
+  "neutral_padding_replacement_count": 2,
+  "expected_queries": 60,
+  "expected_benign_chunks": 120,
+  "expected_attack_chunks": 6,
+  "expected_padding_chunks": 2,
+  "expected_total_chunks": 128,
+  "expected_attack_ratio": 0.046875,
+  "note": "Cluster attack count experiment with fixed total chunks. Run with B_ATTACK_MODE=universal_rate and B_RATES=1.0 for each condition corpus."
+}

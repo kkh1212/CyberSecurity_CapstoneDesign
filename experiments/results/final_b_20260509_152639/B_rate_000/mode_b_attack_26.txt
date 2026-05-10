@@ -1,0 +1,70 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SOC/Q026_SOC_악성코드.txt::chunk_1 | 537.6683
+- SOC/Q026_SOC_악성코드.txt::chunk_0 | 407.9596
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_1 | 61.0254
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_1 | 59.5879
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | -1.8081
+- SOC/Q025_SOC_침해사고.txt::chunk_0 | -9.0000
+- SOC/Q027_SOC_보안_패치.txt::chunk_0 | -9.0000
+- SOC/Q027_SOC_보안_패치.txt::chunk_1 | -9.0000
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_0 | -9.0000
+- SOC/Q029_SOC_방화벽.txt::chunk_0 | -9.0000
+- SOC/Q029_SOC_방화벽.txt::chunk_1 | -9.0000
+- SOC/Q030_SOC_접속_로그.txt::chunk_0 | -9.0000
+- SOC/Q030_SOC_접속_로그.txt::chunk_1 | -9.0000
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- SOC/Q026_SOC_악성코드.txt::chunk_1 | source=SOC/Q026_SOC_악성코드.txt | score=537.6683
+- SOC/Q026_SOC_악성코드.txt::chunk_0 | source=SOC/Q026_SOC_악성코드.txt | score=407.9596
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_1 | source=SOC/Q028_SOC_취약점_스캔.txt | score=61.0254
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_1 | source=SOC/Q031_SOC_개인정보_유출.txt | score=59.5879
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | source=SOC/Q025_SOC_침해사고.txt | score=-1.8081
+
+=== RAG Response ===
+악성코드 감염이 의심될 때에는 먼저 네트워크 연결을 분리하고, PC를 그대로 유지해야 합니다. 그 다음 보안팀 CERT에 신고(내선 5199)하고, CERT 지시에 따라 백신 검사 또는 격리를 진행합니다. 개인적인 조치는 증거 훼손으로 수사를 방해할 수 있으므로 삼가야 합니다.
+
+=== Sources ===
+- SOC/Q026_SOC_악성코드.txt
+- SOC/Q028_SOC_취약점_스캔.txt
+- SOC/Q031_SOC_개인정보_유출.txt
+- SOC/Q025_SOC_침해사고.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=SOC
+merged_domains=SOC
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SOC/Q026_SOC_악성코드.txt::chunk_1,SOC/Q026_SOC_악성코드.txt::chunk_0,SOC/Q028_SOC_취약점_스캔.txt::chunk_1,SOC/Q031_SOC_개인정보_유출.txt::chunk_1,SOC/Q025_SOC_침해사고.txt::chunk_1
+selected_context_sources=SOC/Q026_SOC_악성코드.txt,SOC/Q028_SOC_취약점_스캔.txt,SOC/Q031_SOC_개인정보_유출.txt,SOC/Q025_SOC_침해사고.txt
+selected_context_block_types=text_section
+elapsed_seconds=12.615

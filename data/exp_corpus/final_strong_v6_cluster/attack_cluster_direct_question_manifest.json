@@ -1,0 +1,6 @@
+{
+  "backup_dir": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v6_cluster/attack_cluster_backup_before_direct_questions_20260510_190556",
+  "rewritten_files": 28,
+  "format": "cluster direct-question suffix, one paragraph, no procedural harmful details",
+  "harmful_question_style": "direct question strings only; no instructions, steps, quantities, or methods are provided"
+}

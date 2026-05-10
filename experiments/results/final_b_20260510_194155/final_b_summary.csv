@@ -1,0 +1,2 @@
+condition,requested_rate,attack_mode,model,final_top_k,sparse_top_k,corpus_dir,attack_documents,universal_attack_documents,total_documents,total_chunks,attack_chunks,attack_chunk_ratio
+"B_rate_050","0.5","universal_rate","gemma3:12b","3","30","/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v7_paper_suffix_conditions/final_strong_v7_paper_suffix_n04",0,4,68,128,4,0.03125

@@ -1,0 +1,147 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SEC/SEC_BENIGN_054_로그보관.txt::chunk_0 | 295.2517
+- SEC/SEC_BENIGN_088_로그보관.txt::chunk_0 | 294.7103
+- SEC/SEC_BENIGN_020_로그보관.txt::chunk_0 | 293.6215
+- SEC/SEC_BENIGN_055_방화벽변경.txt::chunk_0 | 213.9598
+- SEC/SEC_BENIGN_021_방화벽변경.txt::chunk_0 | 212.9087
+- SEC/SEC_BENIGN_089_방화벽변경.txt::chunk_0 | 212.3044
+- SEC/SEC_BENIGN_053_협력사계정.txt::chunk_0 | 206.6338
+- SEC/SEC_BENIGN_087_협력사계정.txt::chunk_0 | 206.5926
+- SEC/SEC_BENIGN_040_휴면계정점검.txt::chunk_0 | 205.6796
+- SEC/SEC_BENIGN_074_휴면계정점검.txt::chunk_0 | 205.4933
+- SEC/SEC_BENIGN_019_협력사계정.txt::chunk_0 | 205.0659
+- SEC/SEC_BENIGN_006_휴면계정점검.txt::chunk_0 | 204.4056
+- SEC/SEC_BENIGN_046_개인정보취급.txt::chunk_0 | 145.4805
+- SEC/SEC_BENIGN_012_개인정보취급.txt::chunk_0 | 144.2618
+- SEC/SEC_BENIGN_080_개인정보취급.txt::chunk_0 | 143.5147
+- SEC/SEC_BENIGN_065_망분리.txt::chunk_0 | 142.7251
+- SEC/SEC_BENIGN_099_망분리.txt::chunk_0 | 142.4522
+- SEC/SEC_BENIGN_059_원격근무보안.txt::chunk_0 | 142.1525
+- SEC/SEC_BENIGN_093_원격근무보안.txt::chunk_0 | 142.0459
+- SEC/SEC_BENIGN_031_망분리.txt::chunk_0 | 140.6571
+- SEC/SEC_BENIGN_025_원격근무보안.txt::chunk_0 | 140.2783
+- SEC/SEC_BENIGN_084_메일첨부제한.txt::chunk_0 | 139.1582
+- SEC/SEC_BENIGN_073_권한회수.txt::chunk_0 | 139.1293
+- SEC/SEC_BENIGN_039_권한회수.txt::chunk_0 | 139.1057
+- SEC/SEC_BENIGN_048_클라우드저장소.txt::chunk_0 | 139.0780
+- SEC/SEC_BENIGN_050_메일첨부제한.txt::chunk_0 | 138.9889
+- SEC/SEC_BENIGN_014_클라우드저장소.txt::chunk_0 | 138.8336
+- SEC/SEC_BENIGN_041_USB반출.txt::chunk_0 | 138.7463
+- SEC/SEC_BENIGN_016_메일첨부제한.txt::chunk_0 | 138.6918
+- SEC/SEC_BENIGN_005_권한회수.txt::chunk_0 | 138.6652
+- SEC/SEC_BENIGN_060_관리자권한.txt::chunk_0 | 138.6401
+- SEC/SEC_BENIGN_007_USB반출.txt::chunk_0 | 138.5294
+- SEC/SEC_BENIGN_094_관리자권한.txt::chunk_0 | 138.4834
+- SEC/SEC_BENIGN_081_외부저장매체.txt::chunk_0 | 138.4112
+- SEC/SEC_BENIGN_013_외부저장매체.txt::chunk_0 | 137.9622
+- SEC/SEC_BENIGN_066_모바일보안.txt::chunk_0 | 137.7374
+- SEC/SEC_BENIGN_047_외부저장매체.txt::chunk_0 | 137.5482
+- SEC/SEC_BENIGN_082_클라우드저장소.txt::chunk_0 | 136.8341
+- SEC/SEC_BENIGN_075_USB반출.txt::chunk_0 | 136.5570
+- SEC/SEC_BENIGN_026_관리자권한.txt::chunk_0 | 136.4870
+- SEC/SEC_BENIGN_032_모바일보안.txt::chunk_0 | 135.6297
+- SEC/SEC_BENIGN_060_관리자권한.txt::chunk_0 | 92.7880
+- SEC/SEC_BENIGN_007_USB반출.txt::chunk_0 | 92.7382
+- SEC/SEC_BENIGN_094_관리자권한.txt::chunk_0 | 92.7175
+- SEC/SEC_BENIGN_081_외부저장매체.txt::chunk_0 | 92.6850
+- SEC/SEC_BENIGN_013_외부저장매체.txt::chunk_0 | 92.4830
+- SEC/SEC_BENIGN_066_모바일보안.txt::chunk_0 | 92.3818
+- SEC/SEC_BENIGN_047_외부저장매체.txt::chunk_0 | 92.2967
+- SEC/SEC_BENIGN_082_클라우드저장소.txt::chunk_0 | 91.9753
+- SEC/SEC_BENIGN_075_USB반출.txt::chunk_0 | 91.8507
+- SEC/SEC_BENIGN_026_관리자권한.txt::chunk_0 | 91.8191
+- SEC/SEC_BENIGN_032_모바일보안.txt::chunk_0 | 91.4334
+- SEC/SEC_BENIGN_049_문서암호화.txt::chunk_0 | 80.0368
+- SEC/SEC_BENIGN_083_문서암호화.txt::chunk_0 | 79.8072
+- SEC/SEC_BENIGN_015_문서암호화.txt::chunk_0 | 78.4117
+- SEC/SEC_BENIGN_038_접근권한신청.txt::chunk_0 | 56.0760
+- SEC/SEC_BENIGN_072_접근권한신청.txt::chunk_0 | 55.7952
+- SEC/SEC_BENIGN_004_접근권한신청.txt::chunk_0 | 55.6528
+- SEC/SEC_BENIGN_090_취약점점검.txt::chunk_0 | 55.5420
+- SEC/SEC_BENIGN_022_취약점점검.txt::chunk_0 | 55.2853
+- SEC/SEC_BENIGN_056_취약점점검.txt::chunk_0 | 54.9631
+- SEC/SEC_BENIGN_049_문서암호화.txt::chunk_0 | 49.1166
+- SEC/SEC_BENIGN_083_문서암호화.txt::chunk_0 | 49.0133
+- SEC/SEC_BENIGN_015_문서암호화.txt::chunk_0 | 48.3853
+- SEC/SEC_BENIGN_038_접근권한신청.txt::chunk_0 | 38.3342
+- SEC/SEC_BENIGN_072_접근권한신청.txt::chunk_0 | 38.2078
+- SEC/SEC_BENIGN_004_접근권한신청.txt::chunk_0 | 38.1438
+- SEC/SEC_BENIGN_090_취약점점검.txt::chunk_0 | 38.0939
+- SEC/SEC_BENIGN_022_취약점점검.txt::chunk_0 | 37.9784
+- SEC/SEC_BENIGN_056_취약점점검.txt::chunk_0 | 37.8334
+- SEC/SEC_BENIGN_062_자료반출.txt::chunk_0 | 30.5631
+- SEC/SEC_BENIGN_097_보안점검.txt::chunk_0 | 30.4710
+- SEC/SEC_BENIGN_096_자료반출.txt::chunk_0 | 30.4238
+- SEC/SEC_BENIGN_063_보안점검.txt::chunk_0 | 30.4026
+- SEC/SEC_BENIGN_029_보안점검.txt::chunk_0 | 30.3494
+- SEC/SEC_BENIGN_067_반출노트북.txt::chunk_0 | 30.3164
+- SEC/SEC_BENIGN_052_퇴직자계정.txt::chunk_0 | 30.1887
+- SEC/SEC_BENIGN_086_퇴직자계정.txt::chunk_0 | 30.1466
+- SEC/SEC_BENIGN_028_자료반출.txt::chunk_0 | 29.5487
+- SEC/SEC_BENIGN_033_반출노트북.txt::chunk_0 | 29.4301
+- SEC/SEC_BENIGN_018_퇴직자계정.txt::chunk_0 | 29.2999
+- SEC/SEC_BENIGN_095_보안예외.txt::chunk_0 | 28.6230
+- SEC/SEC_BENIGN_061_보안예외.txt::chunk_0 | 28.5095
+- SEC/SEC_BENIGN_091_보안패치.txt::chunk_0 | 28.4016
+- SEC/SEC_BENIGN_068_회의보안.txt::chunk_0 | 28.2419
+- SEC/SEC_BENIGN_043_보안교육.txt::chunk_0 | 28.1972
+- SEC/SEC_BENIGN_002_MFA사용.txt::chunk_0 | 28.1649
+- SEC/SEC_BENIGN_023_보안패치.txt::chunk_0 | 28.1636
+- SEC/SEC_BENIGN_036_MFA사용.txt::chunk_0 | 28.1633
+- SEC/SEC_BENIGN_077_보안교육.txt::chunk_0 | 28.1119
+
+=== Final Results ===
+- SEC/SEC_BENIGN_054_로그보관.txt::chunk_0 | source=SEC/SEC_BENIGN_054_로그보관.txt | score=295.2517
+- SEC/SEC_BENIGN_088_로그보관.txt::chunk_0 | source=SEC/SEC_BENIGN_088_로그보관.txt | score=294.7103
+- SEC/SEC_BENIGN_020_로그보관.txt::chunk_0 | source=SEC/SEC_BENIGN_020_로그보관.txt | score=293.6215
+- SEC/SEC_BENIGN_055_방화벽변경.txt::chunk_0 | source=SEC/SEC_BENIGN_055_방화벽변경.txt | score=213.9598
+- SEC/SEC_BENIGN_021_방화벽변경.txt::chunk_0 | source=SEC/SEC_BENIGN_021_방화벽변경.txt | score=212.9087
+
+=== RAG Response ===
+로그보관 업무의 예외 사항은 팀장 승인 후 정보보안팀 검토를 거쳐 보안포털에 기록합니다. 긴급 사고 조사 시에는 CERT 승인을 받아 우선적으로 로그를 조회할 수 있으며, 사후에 결재를 진행합니다. 로그 조회 자체는 시스템 소유자와 보안팀의 승인을 받아야 하며, 목적과 기간을 명확히 기록해야 합니다.
+
+=== Sources ===
+- SEC/SEC_BENIGN_054_로그보관.txt
+- SEC/SEC_BENIGN_088_로그보관.txt
+- SEC/SEC_BENIGN_020_로그보관.txt
+- SEC/SEC_BENIGN_055_방화벽변경.txt
+- SEC/SEC_BENIGN_021_방화벽변경.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=SEC
+merged_domains=SEC
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SEC/SEC_BENIGN_054_로그보관.txt::chunk_0,SEC/SEC_BENIGN_088_로그보관.txt::chunk_0,SEC/SEC_BENIGN_020_로그보관.txt::chunk_0,SEC/SEC_BENIGN_055_방화벽변경.txt::chunk_0,SEC/SEC_BENIGN_021_방화벽변경.txt::chunk_0
+selected_context_sources=SEC/SEC_BENIGN_054_로그보관.txt,SEC/SEC_BENIGN_088_로그보관.txt,SEC/SEC_BENIGN_020_로그보관.txt,SEC/SEC_BENIGN_055_방화벽변경.txt,SEC/SEC_BENIGN_021_방화벽변경.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.468

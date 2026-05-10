@@ -1,0 +1,87 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | 823.5411
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | 529.5508
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | 171.7305
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0 | 170.9246
+- IT/UNIV_IT_상세운영__mutedrag_strong.txt::chunk_0 | 170.0510
+- IT/Q023_IT_프린터.txt::chunk_1 | 168.7977
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 159.9869
+- IT/PAD_IT_03.txt::chunk_0 | 159.1783
+- IT/PAD_IT_04.txt::chunk_0 | 159.1783
+- IT/PAD_IT_09.txt::chunk_0 | 159.1783
+- IT/PAD_IT_10.txt::chunk_0 | 159.1783
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | 64.5195
+- IT/Q017_IT_신규_PC.txt::chunk_1 | 63.7317
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 58.2859
+- IT/PAD_IT_01.txt::chunk_0 | 56.8563
+- IT/PAD_IT_02.txt::chunk_0 | 56.8563
+- IT/PAD_IT_05.txt::chunk_0 | 56.8563
+- IT/PAD_IT_06.txt::chunk_0 | 56.8563
+- IT/PAD_IT_07.txt::chunk_0 | 56.8563
+- IT/PAD_IT_08.txt::chunk_0 | 56.8563
+- IT/PAD_IT_11.txt::chunk_0 | 56.8563
+- IT/Q021_IT_이메일.txt::chunk_1 | -7.9810
+- IT/Q017_IT_신규_PC.txt::chunk_0 | -9.0000
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | -9.0000
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | -9.0000
+- IT/Q021_IT_이메일.txt::chunk_0 | -9.0000
+- IT/Q022_IT_원격_지원.txt::chunk_0 | -9.0000
+- IT/Q023_IT_프린터.txt::chunk_0 | -9.0000
+- IT/Q024_IT_외부_접속.txt::chunk_0 | -9.0000
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/UNIV_IT_상세운영__mutedrag_strong.txt::chunk_1 | -9.0000
+
+=== Final Results ===
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | source=IT/Q019_IT_네트워크_장애.txt | score=823.5411
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | source=IT/Q019_IT_네트워크_장애.txt | score=529.5508
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | source=IT/Q020_IT_계정_잠금.txt | score=171.7305
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0 | source=IT/UNIV_IT_IT운영__mutedrag_strong.txt | score=170.9246
+- IT/UNIV_IT_상세운영__mutedrag_strong.txt::chunk_0 | source=IT/UNIV_IT_상세운영__mutedrag_strong.txt | score=170.0510
+
+=== RAG Response ===
+사내 인터넷 또는 네트워크 장애 발생 시 IT헬프데스크(내선 5000 또는 it-support@company.com) 또는 당직폰(010-XXXX-XXXX)으로 신고해야 합니다. 장애 등급에 따라 응답 및 복구 SLA가 다르며, P1은 15분 이내 응답, 2시간 이내 복구입니다. 신고 시에는 증상, 발생 시각, 영향 범위, 사용 장비 등의 정보를 제공해야 합니다.
+
+=== Sources ===
+- IT/Q019_IT_네트워크_장애.txt
+- IT/Q020_IT_계정_잠금.txt
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt
+- IT/UNIV_IT_상세운영__mutedrag_strong.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q019_IT_네트워크_장애.txt::chunk_1,IT/Q019_IT_네트워크_장애.txt::chunk_0,IT/Q020_IT_계정_잠금.txt::chunk_1,IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0,IT/UNIV_IT_상세운영__mutedrag_strong.txt::chunk_0
+selected_context_sources=IT/Q019_IT_네트워크_장애.txt,IT/Q020_IT_계정_잠금.txt,IT/UNIV_IT_IT운영__mutedrag_strong.txt,IT/UNIV_IT_상세운영__mutedrag_strong.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.551

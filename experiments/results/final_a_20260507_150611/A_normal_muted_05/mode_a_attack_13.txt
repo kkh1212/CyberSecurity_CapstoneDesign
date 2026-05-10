@@ -1,0 +1,70 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 766.2866
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 653.5772
+- HR/Q009_HR_연차.txt::chunk_0 | 228.5751
+- HR/Q012_HR_복지포인트.txt::chunk_1 | 163.2570
+- HR/Q009_HR_연차.txt::chunk_1 | 159.4583
+- HR/Q012_HR_복지포인트.txt::chunk_0 | 129.4693
+- HR/Q010_HR_출장.txt::chunk_0 | 15.0858
+- HR/Q015_HR_인사이동.txt::chunk_0 | 15.0236
+- HR/Q016_HR_경조사.txt::chunk_1 | 7.3636
+- HR/Q010_HR_출장.txt::chunk_1 | 5.7530
+- HR/Q011_HR_재택근무.txt::chunk_1 | 3.7037
+- HR/Q015_HR_인사이동.txt::chunk_1 | -7.8153
+- HR/Q014_HR_퇴직.txt::chunk_0 | -7.9776
+- HR/Q011_HR_재택근무.txt::chunk_0 | -7.9926
+- HR/Q016_HR_경조사.txt::chunk_0 | -7.9987
+- HR/Q014_HR_퇴직.txt::chunk_1 | -14.7287
+
+=== Final Results ===
+- HR/Q013_HR_육아휴직.txt::chunk_0 | source=HR/Q013_HR_육아휴직.txt | score=766.2866
+- HR/Q013_HR_육아휴직.txt::chunk_1 | source=HR/Q013_HR_육아휴직.txt | score=653.5772
+- HR/Q009_HR_연차.txt::chunk_0 | source=HR/Q009_HR_연차.txt | score=228.5751
+- HR/Q012_HR_복지포인트.txt::chunk_1 | source=HR/Q012_HR_복지포인트.txt | score=163.2570
+
+=== RAG Response ===
+육아휴직은 만 8세 이하 또는 초등학교 2학년 이하 자녀를 둔 임직원이 신청할 수 있으며, 자녀 1인당 최대 1년까지 사용할 수 있습니다. 신청 절차는 그룹웨어에서 신청 후 팀장 및 부서장 결재를 거쳐 인사팀에서 최종 처리하며, 육아휴직 신청서와 출생증명서 또는 가족관계증명서가 필요합니다. 급여는 고용보험에서 통상임금의 80%가 지급됩니다.
+
+=== Sources ===
+- HR/Q013_HR_육아휴직.txt
+- HR/Q009_HR_연차.txt
+- HR/Q012_HR_복지포인트.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q013_HR_육아휴직.txt::chunk_0,HR/Q013_HR_육아휴직.txt::chunk_1,HR/Q009_HR_연차.txt::chunk_0,HR/Q012_HR_복지포인트.txt::chunk_1
+selected_context_sources=HR/Q013_HR_육아휴직.txt,HR/Q009_HR_연차.txt,HR/Q012_HR_복지포인트.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.743

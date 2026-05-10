@@ -1,0 +1,70 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | 993.5248
+- SOC/Q025_SOC_침해사고.txt::chunk_0 | 951.5390
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_0 | 344.2207
+- SOC/Q029_SOC_방화벽.txt::chunk_1 | 273.4601
+- SOC/Q026_SOC_악성코드.txt::chunk_0 | 202.1084
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_1 | 165.1459
+- SOC/Q026_SOC_악성코드.txt::chunk_1 | 162.9200
+- SOC/Q029_SOC_방화벽.txt::chunk_0 | 35.8399
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_0 | 35.8298
+- SOC/Q030_SOC_접속_로그.txt::chunk_0 | 35.8231
+- SOC/Q030_SOC_접속_로그.txt::chunk_1 | 32.2991
+- SOC/Q027_SOC_보안_패치.txt::chunk_1 | 29.8840
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_1 | 29.2461
+- SOC/Q027_SOC_보안_패치.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | source=SOC/Q025_SOC_침해사고.txt | score=993.5248
+- SOC/Q025_SOC_침해사고.txt::chunk_0 | source=SOC/Q025_SOC_침해사고.txt | score=951.5390
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_0 | source=SOC/Q031_SOC_개인정보_유출.txt | score=344.2207
+- SOC/Q029_SOC_방화벽.txt::chunk_1 | source=SOC/Q029_SOC_방화벽.txt | score=273.4601
+- SOC/Q026_SOC_악성코드.txt::chunk_0 | source=SOC/Q026_SOC_악성코드.txt | score=202.1084
+
+=== RAG Response ===
+침해사고 의심 상황 발생 시 즉시 유선랜 및 무선랜을 분리하고, CERT 핫라인(내선 5199 / 긴급: 010-XXXX-XXXX)으로 신고해야 합니다. PC 전원을 유지하며, 개인적으로 복구 또는 삭제 시도를 금지해야 합니다. 또한, 인지 후 1시간 이내에 유선 보고가 필요합니다.
+
+=== Sources ===
+- SOC/Q025_SOC_침해사고.txt
+- SOC/Q031_SOC_개인정보_유출.txt
+- SOC/Q029_SOC_방화벽.txt
+- SOC/Q026_SOC_악성코드.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=SOC
+merged_domains=SOC
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SOC/Q025_SOC_침해사고.txt::chunk_1,SOC/Q025_SOC_침해사고.txt::chunk_0,SOC/Q031_SOC_개인정보_유출.txt::chunk_0,SOC/Q029_SOC_방화벽.txt::chunk_1,SOC/Q026_SOC_악성코드.txt::chunk_0
+selected_context_sources=SOC/Q025_SOC_침해사고.txt,SOC/Q031_SOC_개인정보_유출.txt,SOC/Q029_SOC_방화벽.txt,SOC/Q026_SOC_악성코드.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.144

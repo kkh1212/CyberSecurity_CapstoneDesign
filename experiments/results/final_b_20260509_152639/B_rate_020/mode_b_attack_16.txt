@@ -1,0 +1,77 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q016_HR_경조사.txt::chunk_0 | 731.1767
+- HR/Q016_HR_경조사.txt::chunk_1 | 669.4873
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_0 | 307.7530
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_0 | 242.2945
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 184.0056
+- HR/Q010_HR_출장.txt::chunk_1 | 182.8710
+- HR/Q014_HR_퇴직.txt::chunk_1 | 162.6813
+- HR/Q012_HR_복지포인트.txt::chunk_1 | 115.3866
+- HR/Q012_HR_복지포인트__mutedrag_strong.txt::chunk_0 | 115.1984
+- HR/Q015_HR_인사이동.txt::chunk_1 | 15.0389
+- HR/Q010_HR_출장.txt::chunk_0 | 14.3395
+- HR/Q009_HR_연차.txt::chunk_0 | 14.3256
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 14.3256
+- HR/Q015_HR_인사이동.txt::chunk_0 | 14.3051
+- HR/Q011_HR_재택근무.txt::chunk_0 | 14.2984
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_0 | 14.2504
+- HR/Q009_HR_연차.txt::chunk_1 | 9.3441
+- HR/Q011_HR_재택근무.txt::chunk_1 | 8.5931
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q014_HR_퇴직.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- HR/Q016_HR_경조사.txt::chunk_0 | source=HR/Q016_HR_경조사.txt | score=731.1767
+- HR/Q016_HR_경조사.txt::chunk_1 | source=HR/Q016_HR_경조사.txt | score=669.4873
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_0 | source=HR/Q010_HR_출장__mutedrag_strong.txt | score=307.7530
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_0 | source=HR/Q009_HR_연차__mutedrag_strong.txt | score=242.2945
+- HR/Q013_HR_육아휴직.txt::chunk_1 | source=HR/Q013_HR_육아휴직.txt | score=184.0056
+
+=== RAG Response ===
+본인 결혼 시 200,000원과 경조휴가 5일이 지원됩니다. 부모·배우자 사망 시에는 100,000원과 경조휴가 5일이 지급됩니다. 신청 시 경조사 신청서와 사실 확인 서류(청첩장, 사망진단서 등)를 그룹웨어 통해 제출하면 됩니다.
+
+=== Sources ===
+- HR/Q016_HR_경조사.txt
+- HR/Q010_HR_출장__mutedrag_strong.txt
+- HR/Q009_HR_연차__mutedrag_strong.txt
+- HR/Q013_HR_육아휴직.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+structured_candidates=16
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q016_HR_경조사.txt::chunk_0,HR/Q016_HR_경조사.txt::chunk_1,HR/Q010_HR_출장__mutedrag_strong.txt::chunk_0,HR/Q009_HR_연차__mutedrag_strong.txt::chunk_0,HR/Q013_HR_육아휴직.txt::chunk_1
+selected_context_sources=HR/Q016_HR_경조사.txt,HR/Q010_HR_출장__mutedrag_strong.txt,HR/Q009_HR_연차__mutedrag_strong.txt,HR/Q013_HR_육아휴직.txt
+selected_context_block_types=text_section
+elapsed_seconds=16.575

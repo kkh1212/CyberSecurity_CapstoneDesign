@@ -1,0 +1,108 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_0 | 1466.8949
+- PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_1 | 1437.4323
+- PST/Q044_PST_SLA.txt::chunk_0 | 1201.3943
+- PST/Q044_PST_SLA.txt::chunk_1 | 860.3240
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_0 | 520.9351
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_1 | 517.9556
+- PST/Q039_PST_고객_문의.txt::chunk_1 | 509.4259
+- PST/Q045_PST_교육_자료.txt::chunk_1 | 509.3488
+- PST/Q041_PST_업데이트__mutedrag_strong.txt::chunk_0 | 313.1851
+- PST/Q041_PST_업데이트__mutedrag_strong.txt::chunk_1 | 307.1204
+- PST/Q039_PST_고객_문의.txt::chunk_0 | 270.8846
+- PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_2 | 263.9257
+- PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_3 | 263.4027
+- PST/Q040_PST_버그__mutedrag_strong.txt::chunk_0 | 238.0196
+- PST/Q040_PST_버그__mutedrag_strong.txt::chunk_1 | 234.9561
+- PST/Q046_PST_베타_테스트__mutedrag_strong.txt::chunk_0 | 219.1589
+- PST/Q045_PST_교육_자료.txt::chunk_0 | 200.7453
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | 200.6608
+- PST/Q045_PST_교육_자료__mutedrag_strong.txt::chunk_0 | 200.5848
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | 196.6011
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | 194.0357
+- PST/Q043_PST_라이선스.txt::chunk_1 | 191.3464
+- PST/Q046_PST_베타_테스트__mutedrag_strong.txt::chunk_1 | 169.1813
+- PST/Q042_PST_데이터_백업__mutedrag_strong.txt::chunk_0 | 134.1440
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_2 | 133.0121
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_3 | 132.8517
+- PST/Q042_PST_데이터_백업__mutedrag_strong.txt::chunk_1 | 132.7334
+- PST/Q045_PST_교육_자료__mutedrag_strong.txt::chunk_1 | 130.9378
+- PST/Q040_PST_버그.txt::chunk_0 | 38.7365
+- PST/Q041_PST_업데이트.txt::chunk_0 | 38.7176
+- PST/Q040_PST_버그.txt::chunk_1 | 27.2657
+- PST/Q041_PST_업데이트.txt::chunk_1 | 26.5114
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | 25.2470
+- PST/Q043_PST_라이선스__mutedrag_strong.txt::chunk_0 | -2.3471
+- PST/Q043_PST_라이선스__mutedrag_strong.txt::chunk_1 | -4.8312
+- PST/Q040_PST_버그__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q040_PST_버그__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q041_PST_업데이트__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q041_PST_업데이트__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q042_PST_데이터_백업__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q042_PST_데이터_백업__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q043_PST_라이선스.txt::chunk_0 | -9.0000
+- PST/Q043_PST_라이선스__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q043_PST_라이선스__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q045_PST_교육_자료__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q045_PST_교육_자료__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q046_PST_베타_테스트__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q046_PST_베타_테스트__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q040_PST_버그.txt::chunk_0 | -9.3633
+- PST/Q041_PST_업데이트.txt::chunk_0 | -9.4053
+- PST/Q040_PST_버그.txt::chunk_1 | -9.7429
+- PST/Q041_PST_업데이트.txt::chunk_1 | -11.4191
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | -14.2290
+
+=== Final Results ===
+- PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_0 | source=PST/Q044_PST_SLA__mutedrag_strong.txt | score=1466.8949
+- PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_1 | source=PST/Q044_PST_SLA__mutedrag_strong.txt | score=1437.4323
+- PST/Q044_PST_SLA.txt::chunk_0 | source=PST/Q044_PST_SLA.txt | score=1201.3943
+- PST/Q044_PST_SLA.txt::chunk_1 | source=PST/Q044_PST_SLA.txt | score=860.3240
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_0 | source=PST/Q039_PST_고객_문의__mutedrag_strong.txt | score=520.9351
+
+=== RAG Response ===
+SLA 위반 발생 시 고객지원팀장은 즉시 팀장에게 보고하고, 고객지원 포털에 티켓을 생성합니다. 영향을 받은 고객에게는 2시간 이내에 사과 및 현황 안내를 제공하며, 발생 원인, 영향 범위, 조치 상황, 완료 예상 시각 등을 포함합니다. 내부 보고 경로는 팀장 → 서비스책임자 → CTO이며, 사후 조치로 RCA 보고서를 72시간 이내에 제출합니다.
+
+=== Sources ===
+- PST/Q044_PST_SLA__mutedrag_strong.txt
+- PST/Q044_PST_SLA.txt
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=PST
+merged_domains=PST
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_0,PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_1,PST/Q044_PST_SLA.txt::chunk_0,PST/Q044_PST_SLA.txt::chunk_1,PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_0
+selected_context_sources=PST/Q044_PST_SLA__mutedrag_strong.txt,PST/Q044_PST_SLA.txt,PST/Q039_PST_고객_문의__mutedrag_strong.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.704

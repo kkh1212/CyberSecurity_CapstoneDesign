@@ -1,0 +1,66 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q012_HR_복지포인트.txt::chunk_1 | 1150.3725
+- HR/Q012_HR_복지포인트.txt::chunk_0 | 528.5448
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 479.8396
+- HR/Q009_HR_연차.txt::chunk_1 | 338.3664
+- HR/Q009_HR_연차.txt::chunk_0 | 205.5429
+- HR/Q016_HR_경조사.txt::chunk_0 | 203.9236
+- HR/Q016_HR_경조사.txt::chunk_1 | 203.6120
+- HR/Q011_HR_재택근무.txt::chunk_1 | 160.4120
+- HR/Q015_HR_인사이동.txt::chunk_1 | 159.1719
+- HR/Q010_HR_출장.txt::chunk_1 | 158.8686
+- HR/Q014_HR_퇴직.txt::chunk_1 | 158.8142
+- HR/Q010_HR_출장.txt::chunk_0 | -9.0000
+- HR/Q011_HR_재택근무.txt::chunk_0 | -9.0000
+- HR/Q013_HR_육아휴직.txt::chunk_0 | -9.0000
+- HR/Q014_HR_퇴직.txt::chunk_0 | -9.0000
+- HR/Q015_HR_인사이동.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- HR/Q012_HR_복지포인트.txt::chunk_1 | source=HR/Q012_HR_복지포인트.txt | score=1150.3725
+- HR/Q012_HR_복지포인트.txt::chunk_0 | source=HR/Q012_HR_복지포인트.txt | score=528.5448
+
+=== RAG Response ===
+정규직은 연간 600,000포인트를 받으며, 계약직은 근무 개월 수에 비례하여 지급됩니다. 사용 가능 항목은 자기계발비, 건강관리비, 여가·문화, 육아·교육비 등이 있습니다. 자세한 내용은 복지몰(welfare.company.com)에서 확인하거나 복리후생팀(내선 4200)에 문의하세요.
+
+=== Sources ===
+- HR/Q012_HR_복지포인트.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=2
+context_chunk_count=2
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q012_HR_복지포인트.txt::chunk_1,HR/Q012_HR_복지포인트.txt::chunk_0
+selected_context_sources=HR/Q012_HR_복지포인트.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.037

@@ -1,0 +1,80 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PST/Q042_PST_데이터_백업__mutedrag_strong.txt::chunk_0 | 1857.7147
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | 1277.2689
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | 1218.4407
+- PST/Q045_PST_교육_자료__mutedrag_strong.txt::chunk_0 | 595.9781
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_0 | 572.0699
+- PST/Q039_PST_고객_문의.txt::chunk_0 | 403.2612
+- PST/Q039_PST_고객_문의.txt::chunk_1 | 402.3190
+- PST/Q044_PST_SLA.txt::chunk_1 | 382.9922
+- PST/Q045_PST_교육_자료.txt::chunk_1 | 348.5213
+- PST/Q044_PST_SLA.txt::chunk_0 | 293.0822
+- PST/Q045_PST_교육_자료.txt::chunk_0 | 293.0651
+- PST/Q041_PST_업데이트__mutedrag_strong.txt::chunk_0 | 235.3278
+- PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_0 | 226.1626
+- PST/Q040_PST_버그.txt::chunk_1 | 152.9816
+- PST/Q040_PST_버그__mutedrag_strong.txt::chunk_0 | 78.6559
+- PST/Q043_PST_라이선스__mutedrag_strong.txt::chunk_0 | 75.7646
+- PST/Q041_PST_업데이트.txt::chunk_0 | -5.1220
+- PST/Q043_PST_라이선스.txt::chunk_1 | -8.1683
+- PST/Q041_PST_업데이트.txt::chunk_1 | -8.5446
+- PST/Q040_PST_버그.txt::chunk_0 | -8.6713
+- PST/Q043_PST_라이선스.txt::chunk_0 | -9.0000
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | -9.0000
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | -9.0000
+- PST/Q046_PST_베타_테스트__mutedrag_strong.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- PST/Q042_PST_데이터_백업__mutedrag_strong.txt::chunk_0 | source=PST/Q042_PST_데이터_백업__mutedrag_strong.txt | score=1857.7147
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | source=PST/Q042_PST_데이터_백업.txt | score=1277.2689
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | source=PST/Q042_PST_데이터_백업.txt | score=1218.4407
+- PST/Q045_PST_교육_자료__mutedrag_strong.txt::chunk_0 | source=PST/Q045_PST_교육_자료__mutedrag_strong.txt | score=595.9781
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_0 | source=PST/Q039_PST_고객_문의__mutedrag_strong.txt | score=572.0699
+
+=== RAG Response ===
+고객 데이터 백업 또는 복구 요청은 고객지원 포털(support.company.com)에서 티켓을 생성하여 접수합니다. 이후 고객 신원 및 데이터 소유권 확인, 팀장 승인, 인프라팀에 복구 작업 의뢰, 그리고 복구 완료 후 고객 확인의 절차를 거칩니다. 일반 복구는 1~2 영업일, 대용량 데이터 복구는 3~5 영업일 소요될 수 있습니다.
+
+=== Sources ===
+- PST/Q042_PST_데이터_백업__mutedrag_strong.txt
+- PST/Q042_PST_데이터_백업.txt
+- PST/Q045_PST_교육_자료__mutedrag_strong.txt
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=PST
+merged_domains=PST
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=PST/Q042_PST_데이터_백업__mutedrag_strong.txt::chunk_0,PST/Q042_PST_데이터_백업.txt::chunk_0,PST/Q042_PST_데이터_백업.txt::chunk_1,PST/Q045_PST_교육_자료__mutedrag_strong.txt::chunk_0,PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_0
+selected_context_sources=PST/Q042_PST_데이터_백업__mutedrag_strong.txt,PST/Q042_PST_데이터_백업.txt,PST/Q045_PST_교육_자료__mutedrag_strong.txt,PST/Q039_PST_고객_문의__mutedrag_strong.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.562

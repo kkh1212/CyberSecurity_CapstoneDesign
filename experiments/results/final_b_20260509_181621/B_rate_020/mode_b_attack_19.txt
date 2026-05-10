@@ -1,0 +1,66 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | 812.5174
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | 529.8183
+- IT/Q023_IT_프린터.txt::chunk_1 | 168.5768
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | 162.6255
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 160.2255
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 61.9727
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | 60.9479
+- IT/Q017_IT_신규_PC.txt::chunk_1 | 59.2046
+- IT/Q021_IT_이메일.txt::chunk_1 | -8.8113
+- IT/Q017_IT_신규_PC.txt::chunk_0 | -9.0000
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | -9.0000
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | -9.0000
+- IT/Q021_IT_이메일.txt::chunk_0 | -9.0000
+- IT/Q022_IT_원격_지원.txt::chunk_0 | -9.0000
+- IT/Q023_IT_프린터.txt::chunk_0 | -9.0000
+- IT/Q024_IT_외부_접속.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | source=IT/Q019_IT_네트워크_장애.txt | score=812.5174
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | source=IT/Q019_IT_네트워크_장애.txt | score=529.8183
+
+=== RAG Response ===
+사내 인터넷 또는 네트워크 장애 발생 시 IT헬프데스크(내선 5000 또는 it-support@company.com) 또는 긴급 시 당직폰(010-XXXX-XXXX)으로 신고해야 합니다. 장애 등급에 따라 응답 및 복구 SLA가 다르며, P1은 15분 이내 응답, 2시간 이내 복구입니다. 자세한 내용은 IT포털에서 처리 현황을 실시간으로 확인할 수 있습니다.
+
+=== Sources ===
+- IT/Q019_IT_네트워크_장애.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=2
+context_chunk_count=2
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q019_IT_네트워크_장애.txt::chunk_1,IT/Q019_IT_네트워크_장애.txt::chunk_0
+selected_context_sources=IT/Q019_IT_네트워크_장애.txt
+selected_context_block_types=text_section
+elapsed_seconds=1.984

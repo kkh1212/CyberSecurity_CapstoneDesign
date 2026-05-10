@@ -1,0 +1,71 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | 644.1450
+- FIN/Q051_FIN_영수증.txt::chunk_1 | 423.7303
+- FIN/Q048_FIN_출장_경비.txt::chunk_0 | 406.7871
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | 384.8287
+- FIN/Q052_FIN_전도금.txt::chunk_1 | 337.4791
+- FIN/Q052_FIN_전도금.txt::chunk_0 | 114.3323
+- FIN/Q051_FIN_영수증.txt::chunk_0 | 53.7616
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | 22.1018
+- FIN/Q053_FIN_예산_보고서.txt::chunk_0 | 12.6330
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | -8.3455
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | -8.3831
+- FIN/Q047_FIN_법인카드.txt::chunk_0 | -9.0000
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | -9.0000
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | source=FIN/Q048_FIN_출장_경비.txt | score=644.1450
+- FIN/Q051_FIN_영수증.txt::chunk_1 | source=FIN/Q051_FIN_영수증.txt | score=423.7303
+- FIN/Q048_FIN_출장_경비.txt::chunk_0 | source=FIN/Q048_FIN_출장_경비.txt | score=406.7871
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | source=FIN/Q047_FIN_법인카드.txt | score=384.8287
+- FIN/Q052_FIN_전도금.txt::chunk_1 | source=FIN/Q052_FIN_전도금.txt | score=337.4791
+
+=== RAG Response ===
+출장 후 경비 정산은 출장 복귀 후 5영업일 이내에 해야 합니다. 제출 서류는 경비정산서, 교통비/숙박비/식비 영수증 (식비는 5만원 초과 시 지출결의서 추가)입니다. 자세한 내용은 그룹웨어 > 재무 > 경비정산 메뉴에서 확인하거나 재무팀(내선 8010)에 문의하세요.
+
+=== Sources ===
+- FIN/Q048_FIN_출장_경비.txt
+- FIN/Q051_FIN_영수증.txt
+- FIN/Q047_FIN_법인카드.txt
+- FIN/Q052_FIN_전도금.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=FIN
+merged_domains=FIN
+structured_candidates=14
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=FIN/Q048_FIN_출장_경비.txt::chunk_1,FIN/Q051_FIN_영수증.txt::chunk_1,FIN/Q048_FIN_출장_경비.txt::chunk_0,FIN/Q047_FIN_법인카드.txt::chunk_1,FIN/Q052_FIN_전도금.txt::chunk_1
+selected_context_sources=FIN/Q048_FIN_출장_경비.txt,FIN/Q051_FIN_영수증.txt,FIN/Q047_FIN_법인카드.txt,FIN/Q052_FIN_전도금.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.226

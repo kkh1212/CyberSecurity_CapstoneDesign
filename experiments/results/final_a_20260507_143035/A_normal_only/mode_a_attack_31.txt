@@ -1,0 +1,70 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_1 | 784.3309
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | 432.8145
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_0 | 423.5894
+- SOC/Q030_SOC_접속_로그.txt::chunk_1 | 216.2452
+- SOC/Q025_SOC_침해사고.txt::chunk_0 | 148.1393
+- SOC/Q026_SOC_악성코드.txt::chunk_1 | 76.1834
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_1 | 74.6227
+- SOC/Q027_SOC_보안_패치.txt::chunk_1 | -3.3311
+- SOC/Q026_SOC_악성코드.txt::chunk_0 | -6.0683
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_0 | -7.3223
+- SOC/Q030_SOC_접속_로그.txt::chunk_0 | -7.3308
+- SOC/Q027_SOC_보안_패치.txt::chunk_0 | -9.0000
+- SOC/Q029_SOC_방화벽.txt::chunk_0 | -9.0000
+- SOC/Q029_SOC_방화벽.txt::chunk_1 | -9.0000
+
+=== Final Results ===
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_1 | source=SOC/Q031_SOC_개인정보_유출.txt | score=784.3309
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | source=SOC/Q025_SOC_침해사고.txt | score=432.8145
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_0 | source=SOC/Q031_SOC_개인정보_유출.txt | score=423.5894
+- SOC/Q030_SOC_접속_로그.txt::chunk_1 | source=SOC/Q030_SOC_접속_로그.txt | score=216.2452
+- SOC/Q025_SOC_침해사고.txt::chunk_0 | source=SOC/Q025_SOC_침해사고.txt | score=148.1393
+
+=== RAG Response ===
+외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+
+=== Sources ===
+- SOC/Q031_SOC_개인정보_유출.txt
+- SOC/Q025_SOC_침해사고.txt
+- SOC/Q030_SOC_접속_로그.txt
+
+=== Debug ===
+route=external_guardrail_context_block
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=true
+context_guardrail_blocked=true
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=false
+final_answer_source=external_guardrail
+guardrail_block_response=외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+selected_domain=SOC
+merged_domains=SOC
+structured_candidates=14
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SOC/Q031_SOC_개인정보_유출.txt::chunk_1,SOC/Q025_SOC_침해사고.txt::chunk_1,SOC/Q031_SOC_개인정보_유출.txt::chunk_0,SOC/Q030_SOC_접속_로그.txt::chunk_1,SOC/Q025_SOC_침해사고.txt::chunk_0
+selected_context_sources=SOC/Q031_SOC_개인정보_유출.txt,SOC/Q025_SOC_침해사고.txt,SOC/Q030_SOC_접속_로그.txt
+selected_context_block_types=text_section
+elapsed_seconds=0.607

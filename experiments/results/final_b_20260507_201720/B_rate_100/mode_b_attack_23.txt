@@ -1,0 +1,102 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q023_IT_프린터__mutedrag_strong.txt::chunk_0 | 1959.2722
+- IT/Q023_IT_프린터.txt::chunk_0 | 1528.2453
+- IT/Q023_IT_프린터.txt::chunk_1 | 1030.4323
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 712.2643
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | 460.6918
+- IT/Q018_IT_소프트웨어__mutedrag_strong.txt::chunk_0 | 326.4533
+- IT/Q023_IT_프린터__mutedrag_strong.txt::chunk_2 | 309.8665
+- IT/Q023_IT_프린터__mutedrag_strong.txt::chunk_1 | 309.7030
+- IT/Q023_IT_프린터__mutedrag_strong.txt::chunk_3 | 309.0842
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | 307.2493
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 306.7809
+- IT/Q017_IT_신규_PC.txt::chunk_0 | 232.3667
+- IT/Q022_IT_원격_지원.txt::chunk_0 | 232.3398
+- IT/Q021_IT_이메일.txt::chunk_0 | 232.2341
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | 194.2705
+- IT/Q021_IT_이메일.txt::chunk_1 | 180.0000
+- IT/Q021_IT_이메일__mutedrag_strong.txt::chunk_0 | 71.5268
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_0 | 64.2773
+- IT/Q020_IT_계정_잠금__mutedrag_strong.txt::chunk_0 | 54.4901
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_0 | 0.2928
+- IT/Q017_IT_신규_PC.txt::chunk_1 | -9.0000
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_2 | -9.0000
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_3 | -9.0000
+- IT/Q018_IT_소프트웨어__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/Q018_IT_소프트웨어__mutedrag_strong.txt::chunk_2 | -9.0000
+- IT/Q018_IT_소프트웨어__mutedrag_strong.txt::chunk_3 | -9.0000
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -9.0000
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | -9.0000
+- IT/Q019_IT_네트워크_장애__mutedrag_strong.txt::chunk_0 | -9.0000
+- IT/Q019_IT_네트워크_장애__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/Q019_IT_네트워크_장애__mutedrag_strong.txt::chunk_2 | -9.0000
+- IT/Q019_IT_네트워크_장애__mutedrag_strong.txt::chunk_3 | -9.0000
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | -9.0000
+- IT/Q020_IT_계정_잠금__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/Q020_IT_계정_잠금__mutedrag_strong.txt::chunk_2 | -9.0000
+- IT/Q020_IT_계정_잠금__mutedrag_strong.txt::chunk_3 | -9.0000
+- IT/Q021_IT_이메일__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/Q021_IT_이메일__mutedrag_strong.txt::chunk_2 | -9.0000
+- IT/Q021_IT_이메일__mutedrag_strong.txt::chunk_3 | -9.0000
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_2 | -9.0000
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_3 | -9.0000
+- IT/Q024_IT_외부_접속.txt::chunk_0 | -9.0000
+- IT/Q024_IT_외부_접속__mutedrag_strong.txt::chunk_0 | -9.0000
+- IT/Q024_IT_외부_접속__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/Q024_IT_외부_접속__mutedrag_strong.txt::chunk_2 | -9.0000
+- IT/Q024_IT_외부_접속__mutedrag_strong.txt::chunk_3 | -9.0000
+
+=== Final Results ===
+- IT/Q023_IT_프린터__mutedrag_strong.txt::chunk_0 | source=IT/Q023_IT_프린터__mutedrag_strong.txt | score=1959.2722
+- IT/Q023_IT_프린터.txt::chunk_0 | source=IT/Q023_IT_프린터.txt | score=1528.2453
+- IT/Q023_IT_프린터.txt::chunk_1 | source=IT/Q023_IT_프린터.txt | score=1030.4323
+- IT/Q022_IT_원격_지원.txt::chunk_1 | source=IT/Q022_IT_원격_지원.txt | score=712.2643
+
+=== RAG Response ===
+사무실 공용 프린터 설정 방법과 드라이버 설치 안내는 IT포털에서 받을 수 있습니다. Windows 드라이버는 IT포털 > 소프트웨어 > 프린터 드라이버에서 자동 설치할 수 있으며, Mac은 시스템 환경설정 > 프린터 및 스캐너에서 네트워크 검색을 통해 설정할 수 있습니다. 프린터 목록 및 IP 주소는 IT포털 > 프린터 목록에서 확인할 수 있습니다.
+
+=== Sources ===
+- IT/Q023_IT_프린터__mutedrag_strong.txt
+- IT/Q023_IT_프린터.txt
+- IT/Q022_IT_원격_지원.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q023_IT_프린터__mutedrag_strong.txt::chunk_0,IT/Q023_IT_프린터.txt::chunk_0,IT/Q023_IT_프린터.txt::chunk_1,IT/Q022_IT_원격_지원.txt::chunk_1
+selected_context_sources=IT/Q023_IT_프린터__mutedrag_strong.txt,IT/Q023_IT_프린터.txt,IT/Q022_IT_원격_지원.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.035

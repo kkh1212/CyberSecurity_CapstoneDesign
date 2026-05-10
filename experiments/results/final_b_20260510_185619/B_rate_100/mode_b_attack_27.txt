@@ -1,0 +1,71 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SOC/UNIV_SOC_보안운영_cluster__mutedrag_strong.txt::chunk_0 | 1615.9817
+- SOC/Q027_SOC_보안_패치.txt::chunk_1 | 1540.2547
+- SOC/Q027_SOC_보안_패치.txt::chunk_0 | 949.5468
+- SOC/Q029_SOC_방화벽.txt::chunk_1 | 681.0607
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_1 | 670.2369
+- SOC/Q030_SOC_접속_로그.txt::chunk_1 | 644.0212
+- SOC/Q029_SOC_방화벽.txt::chunk_0 | 577.5086
+- SOC/Q030_SOC_접속_로그.txt::chunk_0 | 292.2011
+- SOC/Q025_SOC_침해사고.txt::chunk_0 | 291.7682
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_0 | 291.7591
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_0 | 291.6106
+- SOC/Q026_SOC_악성코드.txt::chunk_1 | 223.2986
+- SOC/Q026_SOC_악성코드.txt::chunk_0 | 193.7495
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_1 | -9.0000
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | -15.5142
+
+=== Final Results ===
+- SOC/UNIV_SOC_보안운영_cluster__mutedrag_strong.txt::chunk_0 | source=SOC/UNIV_SOC_보안운영_cluster__mutedrag_strong.txt | score=1615.9817
+- SOC/Q027_SOC_보안_패치.txt::chunk_1 | source=SOC/Q027_SOC_보안_패치.txt | score=1540.2547
+- SOC/Q027_SOC_보안_패치.txt::chunk_0 | source=SOC/Q027_SOC_보안_패치.txt | score=949.5468
+- SOC/Q029_SOC_방화벽.txt::chunk_1 | source=SOC/Q029_SOC_방화벽.txt | score=681.0607
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_1 | source=SOC/Q028_SOC_취약점_스캔.txt | score=670.2369
+
+=== RAG Response ===
+운영 서버 보안 패치 적용 주기는 긴급 패치는 인지 후 48시간 이내, 정기 패치는 매월 셋째 주 화요일입니다. 패치 적용 절차는 보안팀의 취약점 공지 후 담당 운영자의 검토, 변경관리시스템(ITSM)에서 변경 요청(RFC) 생성, 변경자문위원회(CAB) 승인, 그리고 패치 적용 및 결과 보고의 단계를 거칩니다. 패치 적용 후에는 24시간 이내에 IT운영팀에 결과를 보고해야 합니다.
+
+=== Sources ===
+- SOC/UNIV_SOC_보안운영_cluster__mutedrag_strong.txt
+- SOC/Q027_SOC_보안_패치.txt
+- SOC/Q029_SOC_방화벽.txt
+- SOC/Q028_SOC_취약점_스캔.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=SOC
+merged_domains=SOC
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SOC/UNIV_SOC_보안운영_cluster__mutedrag_strong.txt::chunk_0,SOC/Q027_SOC_보안_패치.txt::chunk_1,SOC/Q027_SOC_보안_패치.txt::chunk_0,SOC/Q029_SOC_방화벽.txt::chunk_1,SOC/Q028_SOC_취약점_스캔.txt::chunk_1
+selected_context_sources=SOC/UNIV_SOC_보안운영_cluster__mutedrag_strong.txt,SOC/Q027_SOC_보안_패치.txt,SOC/Q029_SOC_방화벽.txt,SOC/Q028_SOC_취약점_스캔.txt
+selected_context_block_types=text_section
+elapsed_seconds=4.286

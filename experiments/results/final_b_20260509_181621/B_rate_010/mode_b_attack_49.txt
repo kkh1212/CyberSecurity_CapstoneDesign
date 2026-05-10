@@ -1,0 +1,64 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | 877.6001
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | 426.4783
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | 320.4869
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | 199.2017
+- FIN/Q052_FIN_전도금.txt::chunk_1 | 61.0603
+- FIN/Q048_FIN_출장_경비.txt::chunk_0 | -7.4787
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | -7.4981
+- FIN/Q047_FIN_법인카드.txt::chunk_0 | -9.0000
+- FIN/Q051_FIN_영수증.txt::chunk_0 | -9.0000
+- FIN/Q051_FIN_영수증.txt::chunk_1 | -9.0000
+- FIN/Q052_FIN_전도금.txt::chunk_0 | -9.0000
+- FIN/Q053_FIN_예산_보고서.txt::chunk_0 | -9.0000
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | -12.7465
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | -13.3912
+
+=== Final Results ===
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | source=FIN/Q049_FIN_물품_구매.txt | score=877.6001
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | source=FIN/Q049_FIN_물품_구매.txt | score=426.4783
+
+=== RAG Response ===
+사무용품 및 비품 구매 요청은 그룹웨어의 총무 > 물품구매신청 메뉴를 통해 신청할 수 있습니다. 결재 한도는 10만원 미만은 팀장 결재, 10만원 이상 ~ 100만원 미만은 팀장과 부서장 결재, 100만원 이상은 팀장, 부서장, 재무팀장 결재를 거쳐야 합니다. 긴급 구매의 경우 팀장의 구두 승인을 받은 후 구매하고 사후 결재가 가능합니다(50만원 이하).
+
+=== Sources ===
+- FIN/Q049_FIN_물품_구매.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=FIN
+merged_domains=FIN
+final_result_count=2
+context_chunk_count=2
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=FIN/Q049_FIN_물품_구매.txt::chunk_0,FIN/Q049_FIN_물품_구매.txt::chunk_1
+selected_context_sources=FIN/Q049_FIN_물품_구매.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.351

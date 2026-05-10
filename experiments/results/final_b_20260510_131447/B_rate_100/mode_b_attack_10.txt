@@ -1,0 +1,88 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q010_HR_출장.txt::chunk_0 | 837.9486
+- HR/Q010_HR_출장.txt::chunk_1 | 445.0469
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_0 | 246.2337
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_0 | 226.9615
+- HR/PAD_HR_03.txt::chunk_0 | 225.2328
+- HR/PAD_HR_09.txt::chunk_0 | 225.2328
+- HR/PAD_HR_04.txt::chunk_0 | 150.6142
+- HR/PAD_HR_10.txt::chunk_0 | 150.6142
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 46.4190
+- HR/Q016_HR_경조사.txt::chunk_1 | 29.6377
+- HR/PAD_HR_08.txt::chunk_0 | 25.1783
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 19.1321
+- HR/Q015_HR_인사이동.txt::chunk_0 | 19.0790
+- HR/Q014_HR_퇴직.txt::chunk_1 | 7.6879
+- HR/Q014_HR_퇴직.txt::chunk_0 | -4.4769
+- HR/Q015_HR_인사이동.txt::chunk_1 | -7.1985
+- HR/Q009_HR_연차.txt::chunk_0 | -7.4025
+- HR/Q011_HR_재택근무.txt::chunk_0 | -7.4276
+- HR/Q016_HR_경조사.txt::chunk_0 | -7.4338
+- HR/PAD_HR_01.txt::chunk_0 | -9.0000
+- HR/PAD_HR_05.txt::chunk_0 | -9.0000
+- HR/PAD_HR_06.txt::chunk_0 | -9.0000
+- HR/PAD_HR_07.txt::chunk_0 | -9.0000
+- HR/PAD_HR_11.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트.txt::chunk_1 | -9.0000
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/Q009_HR_연차.txt::chunk_1 | -13.1151
+- HR/Q011_HR_재택근무.txt::chunk_1 | -13.5319
+- HR/PAD_HR_02.txt::chunk_0 | -14.3815
+- HR/PAD_HR_08.txt::chunk_0 | -14.3815
+
+=== Final Results ===
+- HR/Q010_HR_출장.txt::chunk_0 | source=HR/Q010_HR_출장.txt | score=837.9486
+- HR/Q010_HR_출장.txt::chunk_1 | source=HR/Q010_HR_출장.txt | score=445.0469
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_0 | source=HR/UNIV_HR_상세인사__mutedrag_strong.txt | score=246.2337
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_0 | source=HR/UNIV_HR_인사총무__mutedrag_strong.txt | score=226.9615
+- HR/PAD_HR_03.txt::chunk_0 | source=HR/PAD_HR_03.txt | score=225.2328
+
+=== RAG Response ===
+출장 신청은 출장 2영업일 전까지 그룹웨어 출장신청 메뉴에서 신청해야 합니다. 제출 서류는 출장신청서(그룹웨어 양식)이며, 출장 목적, 일정, 방문처를 기재해야 합니다. 결재 단계는 팀장 승인 후 부서장 확인입니다.
+
+=== Sources ===
+- HR/Q010_HR_출장.txt
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt
+- HR/PAD_HR_03.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q010_HR_출장.txt::chunk_0,HR/Q010_HR_출장.txt::chunk_1,HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_0,HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_0,HR/PAD_HR_03.txt::chunk_0
+selected_context_sources=HR/Q010_HR_출장.txt,HR/UNIV_HR_상세인사__mutedrag_strong.txt,HR/UNIV_HR_인사총무__mutedrag_strong.txt,HR/PAD_HR_03.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.547

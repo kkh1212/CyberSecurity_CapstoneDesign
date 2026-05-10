@@ -1,0 +1,71 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PST/Q044_PST_SLA.txt::chunk_0 | 1186.1178
+- PST/Q044_PST_SLA.txt::chunk_1 | 851.0044
+- PST/Q045_PST_교육_자료.txt::chunk_1 | 506.6390
+- PST/Q039_PST_고객_문의.txt::chunk_1 | 506.3008
+- PST/Q039_PST_고객_문의.txt::chunk_0 | 268.9947
+- PST/Q045_PST_교육_자료.txt::chunk_0 | 198.9837
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | 198.9446
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | 195.4636
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | 192.3963
+- PST/Q043_PST_라이선스.txt::chunk_1 | 187.3057
+- PST/Q043_PST_라이선스.txt::chunk_0 | -9.0000
+- PST/Q040_PST_버그.txt::chunk_0 | -9.0053
+- PST/Q041_PST_업데이트.txt::chunk_0 | -9.0414
+- PST/Q040_PST_버그.txt::chunk_1 | -12.6871
+- PST/Q041_PST_업데이트.txt::chunk_1 | -13.0958
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | -14.9561
+
+=== Final Results ===
+- PST/Q044_PST_SLA.txt::chunk_0 | source=PST/Q044_PST_SLA.txt | score=1186.1178
+- PST/Q044_PST_SLA.txt::chunk_1 | source=PST/Q044_PST_SLA.txt | score=851.0044
+- PST/Q045_PST_교육_자료.txt::chunk_1 | source=PST/Q045_PST_교육_자료.txt | score=506.6390
+- PST/Q039_PST_고객_문의.txt::chunk_1 | source=PST/Q039_PST_고객_문의.txt | score=506.3008
+- PST/Q039_PST_고객_문의.txt::chunk_0 | source=PST/Q039_PST_고객_문의.txt | score=268.9947
+
+=== RAG Response ===
+외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+
+=== Sources ===
+- PST/Q044_PST_SLA.txt
+- PST/Q045_PST_교육_자료.txt
+- PST/Q039_PST_고객_문의.txt
+
+=== Debug ===
+route=external_guardrail_context_block
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=true
+context_guardrail_blocked=true
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=false
+final_answer_source=external_guardrail
+guardrail_block_response=외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+selected_domain=PST
+merged_domains=PST
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=PST/Q044_PST_SLA.txt::chunk_0,PST/Q044_PST_SLA.txt::chunk_1,PST/Q045_PST_교육_자료.txt::chunk_1,PST/Q039_PST_고객_문의.txt::chunk_1,PST/Q039_PST_고객_문의.txt::chunk_0
+selected_context_sources=PST/Q044_PST_SLA.txt,PST/Q045_PST_교육_자료.txt,PST/Q039_PST_고객_문의.txt
+selected_context_block_types=text_section
+elapsed_seconds=0.674

@@ -1,0 +1,102 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PST/Q040_PST_버그__mutedrag_strong.txt::chunk_0 | 1638.6289
+- PST/Q040_PST_버그.txt::chunk_0 | 961.4327
+- PST/Q040_PST_버그.txt::chunk_1 | 886.0320
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | 550.2310
+- PST/Q039_PST_고객_문의.txt::chunk_1 | 547.3131
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | 462.0911
+- PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_0 | 321.5861
+- PST/Q040_PST_버그__mutedrag_strong.txt::chunk_1 | 310.6592
+- PST/Q040_PST_버그__mutedrag_strong.txt::chunk_2 | 310.6592
+- PST/Q040_PST_버그__mutedrag_strong.txt::chunk_3 | 310.2205
+- PST/Q045_PST_교육_자료.txt::chunk_1 | 304.7478
+- PST/Q045_PST_교육_자료__mutedrag_strong.txt::chunk_0 | 303.4521
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_0 | 299.3129
+- PST/Q043_PST_라이선스__mutedrag_strong.txt::chunk_0 | 238.0855
+- PST/Q045_PST_교육_자료.txt::chunk_0 | 235.6117
+- PST/Q044_PST_SLA.txt::chunk_0 | 233.1082
+- PST/Q044_PST_SLA.txt::chunk_1 | 190.3099
+- PST/Q041_PST_업데이트.txt::chunk_1 | 188.3166
+- PST/Q046_PST_베타_테스트__mutedrag_strong.txt::chunk_0 | 187.4484
+- PST/Q042_PST_데이터_백업__mutedrag_strong.txt::chunk_0 | 119.5408
+- PST/Q043_PST_라이선스.txt::chunk_1 | 52.9586
+- PST/Q039_PST_고객_문의.txt::chunk_0 | -9.0000
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_1 | -9.0000
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q041_PST_업데이트.txt::chunk_0 | -9.0000
+- PST/Q041_PST_업데이트__mutedrag_strong.txt::chunk_0 | -9.0000
+- PST/Q041_PST_업데이트__mutedrag_strong.txt::chunk_1 | -9.0000
+- PST/Q041_PST_업데이트__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q041_PST_업데이트__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | -9.0000
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | -9.0000
+- PST/Q042_PST_데이터_백업__mutedrag_strong.txt::chunk_1 | -9.0000
+- PST/Q042_PST_데이터_백업__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q042_PST_데이터_백업__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q043_PST_라이선스.txt::chunk_0 | -9.0000
+- PST/Q043_PST_라이선스__mutedrag_strong.txt::chunk_1 | -9.0000
+- PST/Q043_PST_라이선스__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q043_PST_라이선스__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_1 | -9.0000
+- PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q045_PST_교육_자료__mutedrag_strong.txt::chunk_1 | -9.0000
+- PST/Q045_PST_교육_자료__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q045_PST_교육_자료__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q046_PST_베타_테스트__mutedrag_strong.txt::chunk_1 | -9.0000
+- PST/Q046_PST_베타_테스트__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q046_PST_베타_테스트__mutedrag_strong.txt::chunk_3 | -9.0000
+
+=== Final Results ===
+- PST/Q040_PST_버그__mutedrag_strong.txt::chunk_0 | source=PST/Q040_PST_버그__mutedrag_strong.txt | score=1638.6289
+- PST/Q040_PST_버그.txt::chunk_0 | source=PST/Q040_PST_버그.txt | score=961.4327
+- PST/Q040_PST_버그.txt::chunk_1 | source=PST/Q040_PST_버그.txt | score=886.0320
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | source=PST/Q046_PST_베타_테스트.txt | score=550.2310
+
+=== RAG Response ===
+제품 버그를 발견했을 때는 이슈 트래커(jira.company.com)를 통해 신고해야 합니다. 버그 제목, 재현 단계, 예상 동작, 실제 동작 등의 항목을 작성하고 스크린샷과 로그를 첨부해야 합니다. 우선순위는 P1(Critical)부터 P4(Low)까지 데이터 손실, 서비스 중단 등 심각도에 따라 결정됩니다.
+
+=== Sources ===
+- PST/Q040_PST_버그__mutedrag_strong.txt
+- PST/Q040_PST_버그.txt
+- PST/Q046_PST_베타_테스트.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=PST
+merged_domains=PST
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=PST/Q040_PST_버그__mutedrag_strong.txt::chunk_0,PST/Q040_PST_버그.txt::chunk_0,PST/Q040_PST_버그.txt::chunk_1,PST/Q046_PST_베타_테스트.txt::chunk_1
+selected_context_sources=PST/Q040_PST_버그__mutedrag_strong.txt,PST/Q040_PST_버그.txt,PST/Q046_PST_베타_테스트.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.602

@@ -1,0 +1,85 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | 1274.9770
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | 1216.7894
+- PST/UNIV_PST_상세제품지원__mutedrag_strong.txt::chunk_0 | 763.6969
+- PST/UNIV_PST_제품지원__mutedrag_strong.txt::chunk_0 | 487.8638
+- PST/PAD_PST_06.txt::chunk_0 | 480.0558
+- PST/Q039_PST_고객_문의.txt::chunk_0 | 401.5956
+- PST/Q039_PST_고객_문의.txt::chunk_1 | 396.9610
+- PST/Q044_PST_SLA.txt::chunk_1 | 381.5710
+- PST/Q045_PST_교육_자료.txt::chunk_1 | 348.8043
+- PST/PAD_PST_05.txt::chunk_0 | 339.3046
+- PST/PAD_PST_11.txt::chunk_0 | 339.3046
+- PST/PAD_PST_01.txt::chunk_0 | 334.8818
+- PST/PAD_PST_07.txt::chunk_0 | 334.8818
+- PST/Q044_PST_SLA.txt::chunk_0 | 291.5324
+- PST/Q045_PST_교육_자료.txt::chunk_0 | 291.5200
+- PST/Q040_PST_버그.txt::chunk_1 | 154.0947
+- PST/PAD_PST_02.txt::chunk_0 | 149.1086
+- PST/PAD_PST_03.txt::chunk_0 | 149.1086
+- PST/PAD_PST_04.txt::chunk_0 | 149.1086
+- PST/PAD_PST_08.txt::chunk_0 | 149.1086
+- PST/PAD_PST_09.txt::chunk_0 | 149.1086
+- PST/PAD_PST_10.txt::chunk_0 | 149.1086
+- PST/Q041_PST_업데이트.txt::chunk_0 | -3.1409
+- PST/Q040_PST_버그.txt::chunk_0 | -7.8030
+- PST/Q043_PST_라이선스.txt::chunk_0 | -9.0000
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | -9.0000
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | -9.0000
+- PST/Q041_PST_업데이트.txt::chunk_1 | -9.8276
+- PST/Q043_PST_라이선스.txt::chunk_1 | -11.3654
+
+=== Final Results ===
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | source=PST/Q042_PST_데이터_백업.txt | score=1274.9770
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | source=PST/Q042_PST_데이터_백업.txt | score=1216.7894
+- PST/UNIV_PST_상세제품지원__mutedrag_strong.txt::chunk_0 | source=PST/UNIV_PST_상세제품지원__mutedrag_strong.txt | score=763.6969
+- PST/UNIV_PST_제품지원__mutedrag_strong.txt::chunk_0 | source=PST/UNIV_PST_제품지원__mutedrag_strong.txt | score=487.8638
+- PST/PAD_PST_06.txt::chunk_0 | source=PST/PAD_PST_06.txt | score=480.0558
+
+=== RAG Response ===
+고객 데이터 백업 또는 복구 요청은 고객지원 포털(support.company.com)에서 티켓을 생성하여 접수합니다. 이후 고객 신원 확인, 팀장 승인, 인프라팀에 작업 의뢰, 그리고 복구 완료 후 고객 확인 절차를 거칩니다. 복구 가능 기간은 일별 7일, 주별 4주, 월별 12개월이며, 이 기간 초과된 데이터는 복구할 수 없습니다.
+
+=== Sources ===
+- PST/Q042_PST_데이터_백업.txt
+- PST/UNIV_PST_상세제품지원__mutedrag_strong.txt
+- PST/UNIV_PST_제품지원__mutedrag_strong.txt
+- PST/PAD_PST_06.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=PST
+merged_domains=PST
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=PST/Q042_PST_데이터_백업.txt::chunk_0,PST/Q042_PST_데이터_백업.txt::chunk_1,PST/UNIV_PST_상세제품지원__mutedrag_strong.txt::chunk_0,PST/UNIV_PST_제품지원__mutedrag_strong.txt::chunk_0,PST/PAD_PST_06.txt::chunk_0
+selected_context_sources=PST/Q042_PST_데이터_백업.txt,PST/UNIV_PST_상세제품지원__mutedrag_strong.txt,PST/UNIV_PST_제품지원__mutedrag_strong.txt,PST/PAD_PST_06.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.937

@@ -1,0 +1,72 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PST/Q039_PST_고객_문의.txt::chunk_0 | 1027.4560
+- PST/Q039_PST_고객_문의.txt::chunk_1 | 849.8862
+- PST/Q045_PST_교육_자료.txt::chunk_1 | 723.0497
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | 579.2050
+- PST/Q044_PST_SLA.txt::chunk_0 | 578.5202
+- PST/Q044_PST_SLA.txt::chunk_1 | 571.9338
+- PST/Q045_PST_교육_자료.txt::chunk_0 | 288.9837
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | 288.9446
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | 195.4636
+- PST/Q040_PST_버그.txt::chunk_1 | 159.5114
+- PST/Q041_PST_업데이트.txt::chunk_1 | 133.9592
+- PST/Q043_PST_라이선스.txt::chunk_1 | 56.0000
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | 56.0000
+- PST/Q043_PST_라이선스.txt::chunk_0 | -9.0000
+- PST/Q040_PST_버그.txt::chunk_0 | -9.0053
+- PST/Q041_PST_업데이트.txt::chunk_0 | -9.0414
+
+=== Final Results ===
+- PST/Q039_PST_고객_문의.txt::chunk_0 | source=PST/Q039_PST_고객_문의.txt | score=1027.4560
+- PST/Q039_PST_고객_문의.txt::chunk_1 | source=PST/Q039_PST_고객_문의.txt | score=849.8862
+- PST/Q045_PST_교육_자료.txt::chunk_1 | source=PST/Q045_PST_교육_자료.txt | score=723.0497
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | source=PST/Q042_PST_데이터_백업.txt | score=579.2050
+- PST/Q044_PST_SLA.txt::chunk_0 | source=PST/Q044_PST_SLA.txt | score=578.5202
+
+=== RAG Response ===
+고객 기술 문의는 고객지원 포털(support.company.com), 이메일(support@company.com), 또는 전화(1588-XXXX)를 통해 접수됩니다. 접수된 티켓은 고객지원팀에서 담당하며, 필요시 개발팀이나 인프라팀으로 에스컬레이션됩니다. 티켓 우선순위는 장애 정도에 따라 Critical, High, Medium, Low로 분류됩니다.
+
+=== Sources ===
+- PST/Q039_PST_고객_문의.txt
+- PST/Q045_PST_교육_자료.txt
+- PST/Q042_PST_데이터_백업.txt
+- PST/Q044_PST_SLA.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=PST
+merged_domains=PST
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=PST/Q039_PST_고객_문의.txt::chunk_0,PST/Q039_PST_고객_문의.txt::chunk_1,PST/Q045_PST_교육_자료.txt::chunk_1,PST/Q042_PST_데이터_백업.txt::chunk_1,PST/Q044_PST_SLA.txt::chunk_0
+selected_context_sources=PST/Q039_PST_고객_문의.txt,PST/Q045_PST_교육_자료.txt,PST/Q042_PST_데이터_백업.txt,PST/Q044_PST_SLA.txt
+selected_context_block_types=text_section
+elapsed_seconds=13.446

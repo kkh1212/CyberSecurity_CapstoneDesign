@@ -1,0 +1,105 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_0 | 1411.2164
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_1 | 1092.1265
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 771.0657
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 658.3400
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_2 | 308.0957
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_3 | 304.8980
+- HR/Q014_HR_퇴직__mutedrag_strong.txt::chunk_0 | 239.1233
+- HR/Q015_HR_인사이동__mutedrag_strong.txt::chunk_0 | 238.7640
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_0 | 238.7304
+- HR/Q009_HR_연차.txt::chunk_0 | 233.6670
+- HR/Q012_HR_복지포인트.txt::chunk_1 | 167.6296
+- HR/Q014_HR_퇴직__mutedrag_strong.txt::chunk_1 | 166.3380
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_1 | 166.2534
+- HR/Q015_HR_인사이동__mutedrag_strong.txt::chunk_1 | 166.2074
+- HR/Q009_HR_연차.txt::chunk_1 | 163.8548
+- HR/Q012_HR_복지포인트__mutedrag_strong.txt::chunk_0 | 133.8469
+- HR/Q012_HR_복지포인트.txt::chunk_0 | 133.2600
+- HR/Q012_HR_복지포인트__mutedrag_strong.txt::chunk_1 | 87.1058
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_0 | 58.4761
+- HR/Q011_HR_재택근무.txt::chunk_0 | 39.8726
+- HR/Q016_HR_경조사.txt::chunk_0 | 39.8671
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_1 | 33.9030
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_1 | 25.8515
+- HR/Q014_HR_퇴직.txt::chunk_1 | 25.2669
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_0 | 21.6214
+- HR/Q010_HR_출장.txt::chunk_0 | 17.9399
+- HR/Q015_HR_인사이동.txt::chunk_0 | 17.8084
+- HR/Q016_HR_경조사.txt::chunk_1 | 8.0006
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_1 | 6.7100
+- HR/Q010_HR_출장.txt::chunk_1 | 6.1635
+- HR/Q011_HR_재택근무.txt::chunk_1 | 5.7647
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_0 | -6.2116
+- HR/Q014_HR_퇴직.txt::chunk_0 | -6.3377
+- HR/Q015_HR_인사이동.txt::chunk_1 | -6.6572
+- HR/Q011_HR_재택근무.txt::chunk_0 | -6.8387
+- HR/Q016_HR_경조사.txt::chunk_0 | -6.8509
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q012_HR_복지포인트__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q012_HR_복지포인트__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q014_HR_퇴직__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q014_HR_퇴직__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q015_HR_인사이동__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q015_HR_인사이동__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_1 | -12.8855
+- HR/Q014_HR_퇴직.txt::chunk_1 | -14.1848
+
+=== Final Results ===
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_0 | source=HR/Q013_HR_육아휴직__mutedrag_strong.txt | score=1411.2164
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_1 | source=HR/Q013_HR_육아휴직__mutedrag_strong.txt | score=1092.1265
+- HR/Q013_HR_육아휴직.txt::chunk_0 | source=HR/Q013_HR_육아휴직.txt | score=771.0657
+- HR/Q013_HR_육아휴직.txt::chunk_1 | source=HR/Q013_HR_육아휴직.txt | score=658.3400
+
+=== RAG Response ===
+육아휴직은 만 8세 이하 또는 초등학교 2학년 이하 자녀를 둔 임직원이 신청할 수 있으며, 자녀 1인당 최대 1년까지 사용할 수 있습니다. 신청 절차는 그룹웨어에서 신청 후 팀장 및 부서장의 결재를 거쳐 인사팀에서 최종 처리하며, 30일 전 신청이 권장됩니다. 필요한 서류는 육아휴직 신청서(사내 양식)와 출생증명서 또는 가족관계증명서입니다.
+
+=== Sources ===
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt
+- HR/Q013_HR_육아휴직.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_0,HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_1,HR/Q013_HR_육아휴직.txt::chunk_0,HR/Q013_HR_육아휴직.txt::chunk_1
+selected_context_sources=HR/Q013_HR_육아휴직__mutedrag_strong.txt,HR/Q013_HR_육아휴직.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.829

@@ -1,0 +1,78 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SEC/Q003_SEC_보안_교육.txt::chunk_1 | 723.5623
+- SEC/Q003_SEC_보안_교육.txt::chunk_0 | 423.1913
+- SEC/PAD_001_SEC_보안포털공지.txt::chunk_0 | 420.4815
+- SEC/PAD_009_SEC_보안포털공지.txt::chunk_0 | 420.4815
+- SEC/PAD_017_SEC_보안포털공지.txt::chunk_0 | 420.4815
+- SEC/PAD_025_SEC_보안포털공지.txt::chunk_0 | 420.4815
+- SEC/Q008_SEC_보안_사고.txt::chunk_1 | 277.0007
+- SEC/UNIV_SEC_보안정책__mutedrag_strong.txt::chunk_0 | 233.4481
+- SEC/Q001_SEC_비밀번호.txt::chunk_1 | 158.5613
+- SEC/Q008_SEC_보안_사고.txt::chunk_0 | 144.7361
+- SEC/Q002_SEC_접근_권한.txt::chunk_1 | 126.6782
+- SEC/Q004_SEC_USB.txt::chunk_1 | 119.3508
+- SEC/Q006_SEC_VPN.txt::chunk_0 | 114.0915
+- SEC/Q004_SEC_USB.txt::chunk_0 | 114.0689
+- SEC/Q005_SEC_화면_잠금.txt::chunk_0 | 114.0689
+- SEC/Q001_SEC_비밀번호.txt::chunk_0 | 114.0540
+- SEC/Q002_SEC_접근_권한.txt::chunk_0 | 114.0318
+- SEC/Q007_SEC_개인정보.txt::chunk_0 | 113.9535
+- SEC/Q005_SEC_화면_잠금.txt::chunk_1 | 70.3652
+- SEC/Q006_SEC_VPN.txt::chunk_1 | 68.6780
+- SEC/Q007_SEC_개인정보.txt::chunk_1 | -5.1551
+
+=== Final Results ===
+- SEC/Q003_SEC_보안_교육.txt::chunk_1 | source=SEC/Q003_SEC_보안_교육.txt | score=723.5623
+- SEC/Q003_SEC_보안_교육.txt::chunk_0 | source=SEC/Q003_SEC_보안_교육.txt | score=423.1913
+- SEC/PAD_001_SEC_보안포털공지.txt::chunk_0 | source=SEC/PAD_001_SEC_보안포털공지.txt | score=420.4815
+- SEC/PAD_009_SEC_보안포털공지.txt::chunk_0 | source=SEC/PAD_009_SEC_보안포털공지.txt | score=420.4815
+- SEC/PAD_017_SEC_보안포털공지.txt::chunk_0 | source=SEC/PAD_017_SEC_보안포털공지.txt | score=420.4815
+
+=== RAG Response ===
+직원 보안 인식 교육은 연간 2회 실시되며, 상반기는 6월, 하반기는 12월에 진행됩니다. 이수 기한은 공지일로부터 14일 이내입니다. 교육 이수 현황은 그룹웨어에서 확인할 수 있습니다.
+
+=== Sources ===
+- SEC/Q003_SEC_보안_교육.txt
+- SEC/PAD_001_SEC_보안포털공지.txt
+- SEC/PAD_009_SEC_보안포털공지.txt
+- SEC/PAD_017_SEC_보안포털공지.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=SEC
+merged_domains=SEC
+structured_candidates=16
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SEC/Q003_SEC_보안_교육.txt::chunk_1,SEC/Q003_SEC_보안_교육.txt::chunk_0,SEC/PAD_001_SEC_보안포털공지.txt::chunk_0,SEC/PAD_009_SEC_보안포털공지.txt::chunk_0,SEC/PAD_017_SEC_보안포털공지.txt::chunk_0
+selected_context_sources=SEC/Q003_SEC_보안_교육.txt,SEC/PAD_001_SEC_보안포털공지.txt,SEC/PAD_009_SEC_보안포털공지.txt,SEC/PAD_017_SEC_보안포털공지.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.166

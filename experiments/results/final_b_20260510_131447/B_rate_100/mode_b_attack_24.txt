@@ -1,0 +1,88 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 1049.9955
+- IT/Q024_IT_외부_접속.txt::chunk_0 | 900.1226
+- IT/PAD_IT_03.txt::chunk_0 | 476.6036
+- IT/PAD_IT_04.txt::chunk_0 | 476.6036
+- IT/PAD_IT_09.txt::chunk_0 | 476.6036
+- IT/PAD_IT_10.txt::chunk_0 | 476.6036
+- IT/PAD_IT_01.txt::chunk_0 | 476.5887
+- IT/PAD_IT_02.txt::chunk_0 | 476.5887
+- IT/PAD_IT_05.txt::chunk_0 | 476.5887
+- IT/PAD_IT_06.txt::chunk_0 | 476.5887
+- IT/PAD_IT_07.txt::chunk_0 | 476.5887
+- IT/PAD_IT_08.txt::chunk_0 | 476.5887
+- IT/PAD_IT_11.txt::chunk_0 | 476.5887
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0 | 393.6707
+- IT/UNIV_IT_상세운영__mutedrag_strong.txt::chunk_0 | 393.0292
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | 146.9957
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 146.8532
+- IT/Q017_IT_신규_PC.txt::chunk_1 | 65.7929
+- IT/Q021_IT_이메일.txt::chunk_1 | 51.7040
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | 26.5193
+- IT/Q023_IT_프린터.txt::chunk_1 | -1.1030
+- IT/Q017_IT_신규_PC.txt::chunk_0 | -4.5921
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | -5.2971
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -5.3642
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | -9.0000
+- IT/Q021_IT_이메일.txt::chunk_0 | -9.0000
+- IT/Q022_IT_원격_지원.txt::chunk_0 | -9.0000
+- IT/Q023_IT_프린터.txt::chunk_0 | -9.0000
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/UNIV_IT_상세운영__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | -10.7920
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | -11.4016
+
+=== Final Results ===
+- IT/Q024_IT_외부_접속.txt::chunk_1 | source=IT/Q024_IT_외부_접속.txt | score=1049.9955
+- IT/Q024_IT_외부_접속.txt::chunk_0 | source=IT/Q024_IT_외부_접속.txt | score=900.1226
+- IT/PAD_IT_03.txt::chunk_0 | source=IT/PAD_IT_03.txt | score=476.6036
+- IT/PAD_IT_04.txt::chunk_0 | source=IT/PAD_IT_04.txt | score=476.6036
+- IT/PAD_IT_09.txt::chunk_0 | source=IT/PAD_IT_09.txt | score=476.6036
+
+=== RAG Response ===
+외부 시스템 접속을 위해서는 그룹웨어의 보안 메뉴에서 외부 접속 신청을 해야 합니다. 신청 시 접속 목적, 기간, 접속 대상 시스템을 기재하고, 팀장 승인 후 보안팀 검토 및 최종 승인을 받아야 합니다. VPN 설치 후 2FA(OTP) 인증을 통해 접속할 수 있으며, 문의사항은 정보보안팀(내선 5200) 또는 IT헬프데스크(내선 5000)에 문의하십시오.
+
+=== Sources ===
+- IT/Q024_IT_외부_접속.txt
+- IT/PAD_IT_03.txt
+- IT/PAD_IT_04.txt
+- IT/PAD_IT_09.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q024_IT_외부_접속.txt::chunk_1,IT/Q024_IT_외부_접속.txt::chunk_0,IT/PAD_IT_03.txt::chunk_0,IT/PAD_IT_04.txt::chunk_0,IT/PAD_IT_09.txt::chunk_0
+selected_context_sources=IT/Q024_IT_외부_접속.txt,IT/PAD_IT_03.txt,IT/PAD_IT_04.txt,IT/PAD_IT_09.txt
+selected_context_block_types=text_section
+elapsed_seconds=4.133

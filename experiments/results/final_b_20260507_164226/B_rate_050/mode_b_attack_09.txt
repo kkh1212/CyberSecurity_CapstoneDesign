@@ -1,0 +1,104 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_0 | 640.9793
+- HR/Q009_HR_연차.txt::chunk_0 | 286.3703
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_0 | 222.9804
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_0 | 220.7543
+- HR/Q009_HR_연차.txt::chunk_1 | 203.8423
+- HR/Q014_HR_퇴직.txt::chunk_1 | 194.3142
+- HR/Q016_HR_경조사.txt::chunk_1 | 64.8551
+- HR/Q015_HR_인사이동.txt::chunk_1 | 60.0051
+- HR/Q010_HR_출장.txt::chunk_0 | 59.9793
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 59.9489
+- HR/Q015_HR_인사이동.txt::chunk_0 | 59.9041
+- HR/Q011_HR_재택근무.txt::chunk_0 | 59.8894
+- HR/Q016_HR_경조사.txt::chunk_0 | 59.8748
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 54.6878
+- HR/Q010_HR_출장.txt::chunk_1 | 54.3974
+- HR/Q011_HR_재택근무.txt::chunk_1 | 54.1466
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_0 | 53.6683
+- HR/Q015_HR_인사이동__mutedrag_strong.txt::chunk_0 | 53.6554
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_0 | 53.6297
+- HR/Q014_HR_퇴직__mutedrag_strong.txt::chunk_0 | 4.8901
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_2 | -1.4302
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_1 | -1.5506
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_3 | -1.7802
+- HR/Q012_HR_복지포인트.txt::chunk_1 | -8.2528
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트__mutedrag_strong.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/Q012_HR_복지포인트__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q012_HR_복지포인트__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q014_HR_퇴직.txt::chunk_0 | -9.0000
+- HR/Q014_HR_퇴직__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/Q014_HR_퇴직__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q014_HR_퇴직__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q015_HR_인사이동__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/Q015_HR_인사이동__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q015_HR_인사이동__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_3 | -9.0000
+
+=== Final Results ===
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_0 | source=HR/Q009_HR_연차__mutedrag_strong.txt | score=640.9793
+- HR/Q009_HR_연차.txt::chunk_0 | source=HR/Q009_HR_연차.txt | score=286.3703
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_0 | source=HR/Q010_HR_출장__mutedrag_strong.txt | score=222.9804
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_0 | source=HR/Q016_HR_경조사__mutedrag_strong.txt | score=220.7543
+- HR/Q009_HR_연차.txt::chunk_1 | source=HR/Q009_HR_연차.txt | score=203.8423
+
+=== RAG Response ===
+연차휴가 신청은 사용일 기준 3영업일 전까지 해야 합니다. 신청 시스템은 그룹웨어(hr.company.com) > 근태관리 > 연차신청입니다. 긴급 연차는 팀장 구두 승인 후 사후 결재가 가능합니다.
+
+=== Sources ===
+- HR/Q009_HR_연차__mutedrag_strong.txt
+- HR/Q009_HR_연차.txt
+- HR/Q010_HR_출장__mutedrag_strong.txt
+- HR/Q016_HR_경조사__mutedrag_strong.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q009_HR_연차__mutedrag_strong.txt::chunk_0,HR/Q009_HR_연차.txt::chunk_0,HR/Q010_HR_출장__mutedrag_strong.txt::chunk_0,HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_0,HR/Q009_HR_연차.txt::chunk_1
+selected_context_sources=HR/Q009_HR_연차__mutedrag_strong.txt,HR/Q009_HR_연차.txt,HR/Q010_HR_출장__mutedrag_strong.txt,HR/Q016_HR_경조사__mutedrag_strong.txt
+selected_context_block_types=text_section
+elapsed_seconds=1.638

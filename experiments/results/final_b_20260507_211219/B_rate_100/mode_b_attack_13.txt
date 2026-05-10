@@ -1,0 +1,78 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_0 | 1395.6531
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 767.7628
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 654.6339
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_0 | 237.6765
+- HR/Q015_HR_인사이동__mutedrag_strong.txt::chunk_0 | 237.6297
+- HR/Q014_HR_퇴직__mutedrag_strong.txt::chunk_0 | 236.8345
+- HR/Q009_HR_연차.txt::chunk_0 | 229.7240
+- HR/Q012_HR_복지포인트.txt::chunk_1 | 164.7291
+- HR/Q009_HR_연차.txt::chunk_1 | 160.5878
+- HR/Q012_HR_복지포인트.txt::chunk_0 | 130.1311
+- HR/Q012_HR_복지포인트__mutedrag_strong.txt::chunk_0 | 130.0568
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_0 | 52.2885
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_0 | 18.0649
+- HR/Q010_HR_출장.txt::chunk_0 | 15.2560
+- HR/Q015_HR_인사이동.txt::chunk_0 | 15.1917
+- HR/Q016_HR_경조사.txt::chunk_1 | 6.1708
+- HR/Q010_HR_출장.txt::chunk_1 | 4.9189
+- HR/Q011_HR_재택근무.txt::chunk_1 | 4.6148
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_0 | -7.2942
+- HR/Q015_HR_인사이동.txt::chunk_1 | -7.3166
+- HR/Q011_HR_재택근무.txt::chunk_0 | -7.5209
+- HR/Q016_HR_경조사.txt::chunk_0 | -7.5280
+- HR/Q014_HR_퇴직.txt::chunk_0 | -8.2834
+- HR/Q014_HR_퇴직.txt::chunk_1 | -14.3765
+
+=== Final Results ===
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_0 | source=HR/Q013_HR_육아휴직__mutedrag_strong.txt | score=1395.6531
+- HR/Q013_HR_육아휴직.txt::chunk_0 | source=HR/Q013_HR_육아휴직.txt | score=767.7628
+- HR/Q013_HR_육아휴직.txt::chunk_1 | source=HR/Q013_HR_육아휴직.txt | score=654.6339
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_0 | source=HR/Q011_HR_재택근무__mutedrag_strong.txt | score=237.6765
+
+=== RAG Response ===
+육아휴직 신청은 그룹웨어에서 신청 후 팀장 및 부서장의 결재를 거쳐 인사팀에서 최종 처리합니다. 신청 대상은 만 8세 이하 또는 초등학교 2학년 이하 자녀를 둔 임직원이며, 사용 기간은 자녀 1인당 최대 1년입니다. 필요한 서류는 육아휴직 신청서(사내 양식)와 출생증명서 또는 가족관계증명서입니다.
+
+=== Sources ===
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt
+- HR/Q013_HR_육아휴직.txt
+- HR/Q011_HR_재택근무__mutedrag_strong.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_0,HR/Q013_HR_육아휴직.txt::chunk_0,HR/Q013_HR_육아휴직.txt::chunk_1,HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_0
+selected_context_sources=HR/Q013_HR_육아휴직__mutedrag_strong.txt,HR/Q013_HR_육아휴직.txt,HR/Q011_HR_재택근무__mutedrag_strong.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.360

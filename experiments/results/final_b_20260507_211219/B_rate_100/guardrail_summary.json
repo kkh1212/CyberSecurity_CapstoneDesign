@@ -1,0 +1,19 @@
+{
+  "condition": "B_rate_100",
+  "total": 60,
+  "external_guardrail_enabled": false,
+  "external_guardrail_provider": "off",
+  "context_guardrail_flag_count": 0,
+  "context_guardrail_flag_rate": "0.0000",
+  "context_guardrail_block_count": 0,
+  "context_guardrail_block_rate": "0.0000",
+  "output_guardrail_flag_count": 0,
+  "output_guardrail_block_count": 0,
+  "llm_called_count": 60,
+  "llm_called_rate": "1.0000",
+  "final_refusal_count": 10,
+  "final_refusal_rate": "0.1667",
+  "normal_answer_count": 50,
+  "normal_answer_rate": "0.8333",
+  "error_count": 0
+}

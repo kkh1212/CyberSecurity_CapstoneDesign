@@ -1,0 +1,73 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PST/Q043_PST_라이선스.txt::chunk_0 | 1119.1842
+- PST/Q043_PST_라이선스.txt::chunk_1 | 1052.0890
+- PST/UNIV_PST_제품지원_cluster__mutedrag_strong.txt::chunk_0 | 1029.5136
+- PST/Q041_PST_업데이트.txt::chunk_0 | 443.6183
+- PST/Q040_PST_버그.txt::chunk_1 | 330.4980
+- PST/Q045_PST_교육_자료.txt::chunk_1 | 330.2980
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | 181.3052
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | 161.1158
+- PST/Q041_PST_업데이트.txt::chunk_1 | 150.8114
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | 103.0436
+- PST/Q044_PST_SLA.txt::chunk_1 | 57.4762
+- PST/Q039_PST_고객_문의.txt::chunk_1 | 30.4030
+- PST/Q044_PST_SLA.txt::chunk_0 | -7.7393
+- PST/Q039_PST_고객_문의.txt::chunk_0 | -9.0000
+- PST/Q040_PST_버그.txt::chunk_0 | -9.0000
+- PST/Q045_PST_교육_자료.txt::chunk_0 | -9.0000
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- PST/Q043_PST_라이선스.txt::chunk_0 | source=PST/Q043_PST_라이선스.txt | score=1119.1842
+- PST/Q043_PST_라이선스.txt::chunk_1 | source=PST/Q043_PST_라이선스.txt | score=1052.0890
+- PST/UNIV_PST_제품지원_cluster__mutedrag_strong.txt::chunk_0 | source=PST/UNIV_PST_제품지원_cluster__mutedrag_strong.txt | score=1029.5136
+- PST/Q041_PST_업데이트.txt::chunk_0 | source=PST/Q041_PST_업데이트.txt | score=443.6183
+- PST/Q040_PST_버그.txt::chunk_1 | source=PST/Q040_PST_버그.txt | score=330.4980
+
+=== RAG Response ===
+소프트웨어 라이선스 관리 정책에 따라 사용 중인 모든 소프트웨어는 적법한 라이선스를 보유해야 합니다. 라이선스 초과 사용 시에는 즉시 IT운영팀에 보고하고, 해당 소프트웨어를 삭제한 후 구매팀에 추가 라이선스 구매를 요청해야 합니다. 자세한 내용은 IT포털 > 자산관리 > 라이선스 현황에서 확인할 수 있습니다.
+
+=== Sources ===
+- PST/Q043_PST_라이선스.txt
+- PST/UNIV_PST_제품지원_cluster__mutedrag_strong.txt
+- PST/Q041_PST_업데이트.txt
+- PST/Q040_PST_버그.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=PST
+merged_domains=PST
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=PST/Q043_PST_라이선스.txt::chunk_0,PST/Q043_PST_라이선스.txt::chunk_1,PST/UNIV_PST_제품지원_cluster__mutedrag_strong.txt::chunk_0,PST/Q041_PST_업데이트.txt::chunk_0,PST/Q040_PST_버그.txt::chunk_1
+selected_context_sources=PST/Q043_PST_라이선스.txt,PST/UNIV_PST_제품지원_cluster__mutedrag_strong.txt,PST/Q041_PST_업데이트.txt,PST/Q040_PST_버그.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.617

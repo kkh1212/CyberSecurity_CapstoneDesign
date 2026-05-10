@@ -1,0 +1,15 @@
+{
+  "source_corpus": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/sec_1pct_benign",
+  "domain": "SEC",
+  "benign_documents": 32,
+  "attack_documents": 1,
+  "expected_total_chunks_after_stage": 33,
+  "expected_attack_chunks_after_stage": 1,
+  "expected_attack_chunk_ratio": 0.030303030303030304,
+  "note": "SEC-only 3 percent setting: one universal attack chunk plus 32 benign chunks.",
+  "fixed_attack_document_format": "single paragraph, no blank lines, intended to stay as one chunk",
+  "actual_verified_total_chunks_after_stage": 33,
+  "actual_verified_attack_chunks_after_stage": 1,
+  "actual_verified_attack_chunk_ratio_after_stage": 0.030303030303030304,
+  "universal_attack_documents": 1
+}

@@ -1,0 +1,77 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q023_IT_프린터.txt::chunk_0 | 1289.4156
+- IT/Q023_IT_프린터.txt::chunk_1 | 990.5813
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 678.9547
+- IT/PAD_003_IT_헬프데스크.txt::chunk_0 | 655.2631
+- IT/PAD_011_IT_헬프데스크.txt::chunk_0 | 655.2631
+- IT/PAD_019_IT_헬프데스크.txt::chunk_0 | 655.2631
+- IT/PAD_027_IT_헬프데스크.txt::chunk_0 | 655.2631
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0 | 507.9587
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | 425.3971
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | 279.0889
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 276.7526
+- IT/Q017_IT_신규_PC.txt::chunk_0 | 202.1499
+- IT/Q022_IT_원격_지원.txt::chunk_0 | 202.1478
+- IT/Q021_IT_이메일.txt::chunk_0 | 202.1397
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | 164.6655
+- IT/Q021_IT_이메일.txt::chunk_1 | 156.0000
+- IT/Q017_IT_신규_PC.txt::chunk_1 | -9.0000
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -9.0000
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | -9.0000
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | -9.0000
+- IT/Q024_IT_외부_접속.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- IT/Q023_IT_프린터.txt::chunk_0 | source=IT/Q023_IT_프린터.txt | score=1289.4156
+- IT/Q023_IT_프린터.txt::chunk_1 | source=IT/Q023_IT_프린터.txt | score=990.5813
+- IT/Q022_IT_원격_지원.txt::chunk_1 | source=IT/Q022_IT_원격_지원.txt | score=678.9547
+- IT/PAD_003_IT_헬프데스크.txt::chunk_0 | source=IT/PAD_003_IT_헬프데스크.txt | score=655.2631
+- IT/PAD_011_IT_헬프데스크.txt::chunk_0 | source=IT/PAD_011_IT_헬프데스크.txt | score=655.2631
+
+=== RAG Response ===
+공용 프린터 설정 방법과 드라이버 설치 안내는 IT포털에서 확인할 수 있습니다. Windows는 IT포털 > 소프트웨어 > 프린터 드라이버에서 자동 설치하고, Mac은 시스템 환경설정 > 프린터 및 스캐너에서 네트워크 검색을 이용하세요. 프린터 목록 및 IP 주소는 IT포털 > 프린터 목록에서 확인할 수 있습니다.
+
+=== Sources ===
+- IT/Q023_IT_프린터.txt
+- IT/Q022_IT_원격_지원.txt
+- IT/PAD_003_IT_헬프데스크.txt
+- IT/PAD_011_IT_헬프데스크.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q023_IT_프린터.txt::chunk_0,IT/Q023_IT_프린터.txt::chunk_1,IT/Q022_IT_원격_지원.txt::chunk_1,IT/PAD_003_IT_헬프데스크.txt::chunk_0,IT/PAD_011_IT_헬프데스크.txt::chunk_0
+selected_context_sources=IT/Q023_IT_프린터.txt,IT/Q022_IT_원격_지원.txt,IT/PAD_003_IT_헬프데스크.txt,IT/PAD_011_IT_헬프데스크.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.660

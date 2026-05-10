@@ -1,0 +1,73 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | 850.0493
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | 489.1075
+- PST/UNIV_PST_제품지원_cluster__mutedrag_strong.txt::chunk_0 | 389.3318
+- PST/Q045_PST_교육_자료.txt::chunk_1 | 188.8300
+- PST/Q039_PST_고객_문의.txt::chunk_1 | 158.1993
+- PST/Q044_PST_SLA.txt::chunk_0 | 114.5383
+- PST/Q040_PST_버그.txt::chunk_1 | 70.6700
+- PST/Q044_PST_SLA.txt::chunk_1 | 68.5031
+- PST/Q043_PST_라이선스.txt::chunk_1 | 52.5208
+- PST/Q041_PST_업데이트.txt::chunk_1 | -3.4732
+- PST/Q039_PST_고객_문의.txt::chunk_0 | -9.0000
+- PST/Q040_PST_버그.txt::chunk_0 | -9.0000
+- PST/Q041_PST_업데이트.txt::chunk_0 | -9.0000
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | -9.0000
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | -9.0000
+- PST/Q043_PST_라이선스.txt::chunk_0 | -9.0000
+- PST/Q045_PST_교육_자료.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | source=PST/Q046_PST_베타_테스트.txt | score=850.0493
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | source=PST/Q046_PST_베타_테스트.txt | score=489.1075
+- PST/UNIV_PST_제품지원_cluster__mutedrag_strong.txt::chunk_0 | source=PST/UNIV_PST_제품지원_cluster__mutedrag_strong.txt | score=389.3318
+- PST/Q045_PST_교육_자료.txt::chunk_1 | source=PST/Q045_PST_교육_자료.txt | score=188.8300
+- PST/Q039_PST_고객_문의.txt::chunk_1 | source=PST/Q039_PST_고객_문의.txt | score=158.1993
+
+=== RAG Response ===
+신규 기능 베타 테스트에 참여하려면 제품팀 포털(product.company.com)의 베타테스트신청 메뉴를 통해 신청하세요. 신청 시 이름, 사번, 소속 부서, 해당 기능 사용 경험, 피드백 제공 가능 여부 등의 항목을 작성해야 합니다. 선발 기준은 관련 업무 연관성, 다양한 부서 분포, 선착순이며, 참여 의무와 혜택도 있습니다.
+
+=== Sources ===
+- PST/Q046_PST_베타_테스트.txt
+- PST/UNIV_PST_제품지원_cluster__mutedrag_strong.txt
+- PST/Q045_PST_교육_자료.txt
+- PST/Q039_PST_고객_문의.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=PST
+merged_domains=PST
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=PST/Q046_PST_베타_테스트.txt::chunk_0,PST/Q046_PST_베타_테스트.txt::chunk_1,PST/UNIV_PST_제품지원_cluster__mutedrag_strong.txt::chunk_0,PST/Q045_PST_교육_자료.txt::chunk_1,PST/Q039_PST_고객_문의.txt::chunk_1
+selected_context_sources=PST/Q046_PST_베타_테스트.txt,PST/UNIV_PST_제품지원_cluster__mutedrag_strong.txt,PST/Q045_PST_교육_자료.txt,PST/Q039_PST_고객_문의.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.405

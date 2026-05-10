@@ -1,0 +1,84 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- GEN/Q056_GEN_공지사항.txt::chunk_0 | 1009.3435
+- GEN/Q056_GEN_공지사항.txt::chunk_1 | 812.4029
+- GEN/UNIV_GEN_상세일반업무__mutedrag_strong.txt::chunk_0 | 540.0649
+- GEN/UNIV_GEN_일반업무__mutedrag_strong.txt::chunk_0 | 334.4090
+- GEN/PAD_GEN_04.txt::chunk_0 | 334.1506
+- GEN/PAD_GEN_05.txt::chunk_0 | 334.1506
+- GEN/PAD_GEN_06.txt::chunk_0 | 334.1506
+- GEN/PAD_GEN_10.txt::chunk_0 | 334.1506
+- GEN/PAD_GEN_01.txt::chunk_0 | 334.1423
+- GEN/PAD_GEN_03.txt::chunk_0 | 334.1423
+- GEN/PAD_GEN_07.txt::chunk_0 | 334.1423
+- GEN/PAD_GEN_09.txt::chunk_0 | 334.1423
+- GEN/PAD_GEN_02.txt::chunk_0 | 334.1341
+- GEN/PAD_GEN_08.txt::chunk_0 | 334.1341
+- GEN/Q057_GEN_방문자.txt::chunk_1 | 226.9669
+- GEN/Q054_GEN_회의실.txt::chunk_0 | 194.3300
+- GEN/Q057_GEN_방문자.txt::chunk_0 | 64.4917
+- GEN/Q055_GEN_명함.txt::chunk_0 | -7.2830
+- GEN/Q059_GEN_직인.txt::chunk_0 | -7.3022
+- GEN/Q058_GEN_문서_보존.txt::chunk_0 | -7.4189
+- GEN/Q060_GEN_사외_강의.txt::chunk_0 | -7.4249
+- GEN/Q054_GEN_회의실.txt::chunk_1 | -9.0000
+- GEN/Q055_GEN_명함.txt::chunk_1 | -9.0000
+- GEN/Q059_GEN_직인.txt::chunk_1 | -9.0000
+- GEN/Q060_GEN_사외_강의.txt::chunk_1 | -9.0000
+- GEN/UNIV_GEN_상세일반업무__mutedrag_strong.txt::chunk_1 | -9.0000
+- GEN/UNIV_GEN_일반업무__mutedrag_strong.txt::chunk_1 | -9.0000
+- GEN/Q058_GEN_문서_보존.txt::chunk_1 | -14.4370
+
+=== Final Results ===
+- GEN/Q056_GEN_공지사항.txt::chunk_0 | source=GEN/Q056_GEN_공지사항.txt | score=1009.3435
+- GEN/Q056_GEN_공지사항.txt::chunk_1 | source=GEN/Q056_GEN_공지사항.txt | score=812.4029
+- GEN/UNIV_GEN_상세일반업무__mutedrag_strong.txt::chunk_0 | source=GEN/UNIV_GEN_상세일반업무__mutedrag_strong.txt | score=540.0649
+- GEN/UNIV_GEN_일반업무__mutedrag_strong.txt::chunk_0 | source=GEN/UNIV_GEN_일반업무__mutedrag_strong.txt | score=334.4090
+- GEN/PAD_GEN_04.txt::chunk_0 | source=GEN/PAD_GEN_04.txt | score=334.1506
+
+=== RAG Response ===
+사내 공지사항 게시를 위해서는 그룹웨어의 공지등록신청 메뉴를 통해 신청해야 합니다. 팀 공지는 팀장 결재, 부서 공지는 부서장 결재, 전사 공지는 경영지원팀의 최종 검토를 거쳐 게시됩니다. 긴급 공지는 경영지원팀장의 승인으로 즉시 게시될 수 있습니다.
+
+=== Sources ===
+- GEN/Q056_GEN_공지사항.txt
+- GEN/UNIV_GEN_상세일반업무__mutedrag_strong.txt
+- GEN/UNIV_GEN_일반업무__mutedrag_strong.txt
+- GEN/PAD_GEN_04.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=GEN
+merged_domains=GEN
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=GEN/Q056_GEN_공지사항.txt::chunk_0,GEN/Q056_GEN_공지사항.txt::chunk_1,GEN/UNIV_GEN_상세일반업무__mutedrag_strong.txt::chunk_0,GEN/UNIV_GEN_일반업무__mutedrag_strong.txt::chunk_0,GEN/PAD_GEN_04.txt::chunk_0
+selected_context_sources=GEN/Q056_GEN_공지사항.txt,GEN/UNIV_GEN_상세일반업무__mutedrag_strong.txt,GEN/UNIV_GEN_일반업무__mutedrag_strong.txt,GEN/PAD_GEN_04.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.161

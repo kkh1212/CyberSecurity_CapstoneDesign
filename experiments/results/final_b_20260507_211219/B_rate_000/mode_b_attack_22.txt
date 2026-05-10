@@ -1,0 +1,70 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 803.0906
+- IT/Q022_IT_원격_지원.txt::chunk_0 | 590.1349
+- IT/Q017_IT_신규_PC.txt::chunk_1 | 183.1156
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | 162.9212
+- IT/Q024_IT_외부_접속.txt::chunk_0 | 144.1716
+- IT/Q021_IT_이메일.txt::chunk_1 | 90.9169
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | 88.5203
+- IT/Q023_IT_프린터.txt::chunk_1 | 22.7379
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | 11.9891
+- IT/Q021_IT_이메일.txt::chunk_0 | 11.9872
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | 11.9685
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | 11.4578
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 8.6318
+- IT/Q017_IT_신규_PC.txt::chunk_0 | -8.0031
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -8.0241
+- IT/Q023_IT_프린터.txt::chunk_0 | -8.0278
+
+=== Final Results ===
+- IT/Q022_IT_원격_지원.txt::chunk_1 | source=IT/Q022_IT_원격_지원.txt | score=803.0906
+- IT/Q022_IT_원격_지원.txt::chunk_0 | source=IT/Q022_IT_원격_지원.txt | score=590.1349
+- IT/Q017_IT_신규_PC.txt::chunk_1 | source=IT/Q017_IT_신규_PC.txt | score=183.1156
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | source=IT/Q018_IT_소프트웨어.txt | score=162.9212
+
+=== RAG Response ===
+IT팀의 원격 지원은 전화(내선 5000), 사내 메신저 IT지원 채널, 또는 IT포털을 통해 요청할 수 있습니다. 정규 지원 시간은 평일 09:00~18:00이며, 사전 예약 시 18:00~21:00까지 연장 지원이 가능합니다. 원격 지원을 위해서는 TeamViewer 기업용 소프트웨어 사전 설치가 필수입니다.
+
+=== Sources ===
+- IT/Q022_IT_원격_지원.txt
+- IT/Q017_IT_신규_PC.txt
+- IT/Q018_IT_소프트웨어.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q022_IT_원격_지원.txt::chunk_1,IT/Q022_IT_원격_지원.txt::chunk_0,IT/Q017_IT_신규_PC.txt::chunk_1,IT/Q018_IT_소프트웨어.txt::chunk_1
+selected_context_sources=IT/Q022_IT_원격_지원.txt,IT/Q017_IT_신규_PC.txt,IT/Q018_IT_소프트웨어.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.127

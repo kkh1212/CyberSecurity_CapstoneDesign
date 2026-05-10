@@ -1,0 +1,77 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 1060.5151
+- IT/Q024_IT_외부_접속.txt::chunk_0 | 910.1598
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0 | 629.9743
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | 155.2815
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 152.0696
+- IT/Q017_IT_신규_PC.txt::chunk_1 | 62.0956
+- IT/Q021_IT_이메일.txt::chunk_1 | 46.4735
+- IT/Q023_IT_프린터.txt::chunk_1 | -0.6227
+- IT/Q017_IT_신규_PC.txt::chunk_0 | -8.0925
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | -8.2575
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -8.2912
+- IT/PAD_003_IT_헬프데스크.txt::chunk_0 | -9.0000
+- IT/PAD_011_IT_헬프데스크.txt::chunk_0 | -9.0000
+- IT/PAD_019_IT_헬프데스크.txt::chunk_0 | -9.0000
+- IT/PAD_027_IT_헬프데스크.txt::chunk_0 | -9.0000
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | -9.0000
+- IT/Q021_IT_이메일.txt::chunk_0 | -9.0000
+- IT/Q022_IT_원격_지원.txt::chunk_0 | -9.0000
+- IT/Q023_IT_프린터.txt::chunk_0 | -9.0000
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | -11.5165
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | -14.1961
+
+=== Final Results ===
+- IT/Q024_IT_외부_접속.txt::chunk_1 | source=IT/Q024_IT_외부_접속.txt | score=1060.5151
+- IT/Q024_IT_외부_접속.txt::chunk_0 | source=IT/Q024_IT_외부_접속.txt | score=910.1598
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0 | source=IT/UNIV_IT_IT운영__mutedrag_strong.txt | score=629.9743
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | source=IT/Q019_IT_네트워크_장애.txt | score=155.2815
+- IT/Q022_IT_원격_지원.txt::chunk_1 | source=IT/Q022_IT_원격_지원.txt | score=152.0696
+
+=== RAG Response ===
+외부에서 사내 시스템에 접속하기 위해서는 그룹웨어의 보안 메뉴에서 외부 접속 신청을 해야 합니다. 신청 시 접속 목적, 기간, 대상 시스템을 기재하고, 팀장 승인 후 보안팀의 검토 및 최종 승인을 받아야 합니다. VPN 설치 후 2FA(OTP) 인증을 통해 접속할 수 있습니다.
+
+=== Sources ===
+- IT/Q024_IT_외부_접속.txt
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt
+- IT/Q019_IT_네트워크_장애.txt
+- IT/Q022_IT_원격_지원.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q024_IT_외부_접속.txt::chunk_1,IT/Q024_IT_외부_접속.txt::chunk_0,IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0,IT/Q019_IT_네트워크_장애.txt::chunk_1,IT/Q022_IT_원격_지원.txt::chunk_1
+selected_context_sources=IT/Q024_IT_외부_접속.txt,IT/UNIV_IT_IT운영__mutedrag_strong.txt,IT/Q019_IT_네트워크_장애.txt,IT/Q022_IT_원격_지원.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.469

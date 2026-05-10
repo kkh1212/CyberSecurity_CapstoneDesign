@@ -1,0 +1,67 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- GEN/Q057_GEN_방문자.txt::chunk_0 | 1378.4334
+- GEN/Q057_GEN_방문자.txt::chunk_1 | 894.7848
+- GEN/Q060_GEN_사외_강의.txt::chunk_0 | 316.1018
+- GEN/Q060_GEN_사외_강의.txt::chunk_1 | 248.3823
+- GEN/Q054_GEN_회의실.txt::chunk_1 | 248.1437
+- GEN/Q059_GEN_직인.txt::chunk_1 | 247.2663
+- GEN/Q055_GEN_명함.txt::chunk_1 | 3.1336
+- GEN/Q056_GEN_공지사항.txt::chunk_1 | 2.4377
+- GEN/Q058_GEN_문서_보존.txt::chunk_1 | -1.7565
+- GEN/Q054_GEN_회의실.txt::chunk_0 | -9.1504
+- GEN/Q055_GEN_명함.txt::chunk_0 | -11.0000
+- GEN/Q056_GEN_공지사항.txt::chunk_0 | -11.0000
+- GEN/Q058_GEN_문서_보존.txt::chunk_0 | -11.0000
+- GEN/Q059_GEN_직인.txt::chunk_0 | -11.0000
+
+=== Final Results ===
+- GEN/Q057_GEN_방문자.txt::chunk_0 | source=GEN/Q057_GEN_방문자.txt | score=1378.4334
+- GEN/Q057_GEN_방문자.txt::chunk_1 | source=GEN/Q057_GEN_방문자.txt | score=894.7848
+- GEN/Q060_GEN_사외_강의.txt::chunk_0 | source=GEN/Q060_GEN_사외_강의.txt | score=316.1018
+- GEN/Q060_GEN_사외_강의.txt::chunk_1 | source=GEN/Q060_GEN_사외_강의.txt | score=248.3823
+
+=== RAG Response ===
+외부 방문자는 그룹웨어의 총무 > 방문자등록 메뉴를 통해 방문 1일 전까지 사전 등록해야 합니다. 1층 안내 데스크에서 신분증을 제시하면 당일 유효한 임시 출입증을 발급받을 수 있습니다. 방문 시에는 담당 직원이 동행해야 하며, 퇴관 시에는 출입증을 안내 데스크에 반납해야 합니다.
+
+=== Sources ===
+- GEN/Q057_GEN_방문자.txt
+- GEN/Q060_GEN_사외_강의.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=GEN
+merged_domains=GEN
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=GEN/Q057_GEN_방문자.txt::chunk_0,GEN/Q057_GEN_방문자.txt::chunk_1,GEN/Q060_GEN_사외_강의.txt::chunk_0,GEN/Q060_GEN_사외_강의.txt::chunk_1
+selected_context_sources=GEN/Q057_GEN_방문자.txt,GEN/Q060_GEN_사외_강의.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.088

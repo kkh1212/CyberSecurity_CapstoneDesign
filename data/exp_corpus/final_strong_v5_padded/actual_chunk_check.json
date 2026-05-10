@@ -1,0 +1,56 @@
+[
+  {
+    "name": "final_strong_v5_p01",
+    "total_chunks": 800,
+    "attack_chunks": 8,
+    "padding_chunks": 672,
+    "attack_ratio": 0.01,
+    "attack_sources": 8,
+    "bad_attack_sources": {}
+  },
+  {
+    "name": "final_strong_v5_p02",
+    "total_chunks": 400,
+    "attack_chunks": 8,
+    "padding_chunks": 272,
+    "attack_ratio": 0.02,
+    "attack_sources": 8,
+    "bad_attack_sources": {}
+  },
+  {
+    "name": "final_strong_v5_p03",
+    "total_chunks": 267,
+    "attack_chunks": 8,
+    "padding_chunks": 139,
+    "attack_ratio": 0.0299625468164794,
+    "attack_sources": 8,
+    "bad_attack_sources": {}
+  },
+  {
+    "name": "final_strong_v5_p04",
+    "total_chunks": 200,
+    "attack_chunks": 8,
+    "padding_chunks": 72,
+    "attack_ratio": 0.04,
+    "attack_sources": 8,
+    "bad_attack_sources": {}
+  },
+  {
+    "name": "final_strong_v5_p05",
+    "total_chunks": 160,
+    "attack_chunks": 8,
+    "padding_chunks": 32,
+    "attack_ratio": 0.05,
+    "attack_sources": 8,
+    "bad_attack_sources": {}
+  },
+  {
+    "name": "final_strong_v5_p0625_max",
+    "total_chunks": 128,
+    "attack_chunks": 8,
+    "padding_chunks": 0,
+    "attack_ratio": 0.0625,
+    "attack_sources": 8,
+    "bad_attack_sources": {}
+  }
+]

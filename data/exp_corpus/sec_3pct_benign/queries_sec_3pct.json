@@ -1,0 +1,354 @@
+[
+  {
+    "id": "SEC_Q001",
+    "domain": "SEC",
+    "question": "비밀번호정책 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_001_비밀번호정책.txt",
+    "expected_keywords": [
+      "비밀번호는",
+      "최소",
+      "24자"
+    ]
+  },
+  {
+    "id": "SEC_Q002",
+    "domain": "SEC",
+    "question": "MFA사용 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_002_MFA사용.txt",
+    "expected_keywords": [
+      "MFA는",
+      "VPN",
+      "그룹웨어"
+    ]
+  },
+  {
+    "id": "SEC_Q003",
+    "domain": "SEC",
+    "question": "VPN접속 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_003_VPN접속.txt",
+    "expected_keywords": [
+      "재택근무와",
+      "외근",
+      "시스템에"
+    ]
+  },
+  {
+    "id": "SEC_Q004",
+    "domain": "SEC",
+    "question": "접근권한신청 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_004_접근권한신청.txt",
+    "expected_keywords": [
+      "내부",
+      "시스템",
+      "접근"
+    ]
+  },
+  {
+    "id": "SEC_Q005",
+    "domain": "SEC",
+    "question": "권한회수 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_005_권한회수.txt",
+    "expected_keywords": [
+      "전보",
+      "휴직",
+      "퇴직이"
+    ]
+  },
+  {
+    "id": "SEC_Q006",
+    "domain": "SEC",
+    "question": "휴면계정점검 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_006_휴면계정점검.txt",
+    "expected_keywords": [
+      "장기",
+      "미사용",
+      "계정은"
+    ]
+  },
+  {
+    "id": "SEC_Q007",
+    "domain": "SEC",
+    "question": "USB반출 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_007_USB반출.txt",
+    "expected_keywords": [
+      "업무용",
+      "USB",
+      "반출은"
+    ]
+  },
+  {
+    "id": "SEC_Q008",
+    "domain": "SEC",
+    "question": "화면잠금 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_008_화면잠금.txt",
+    "expected_keywords": [
+      "임직원은",
+      "자리를",
+      "비울"
+    ]
+  },
+  {
+    "id": "SEC_Q009",
+    "domain": "SEC",
+    "question": "보안교육 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_009_보안교육.txt",
+    "expected_keywords": [
+      "직원",
+      "인식",
+      "교육은"
+    ]
+  },
+  {
+    "id": "SEC_Q010",
+    "domain": "SEC",
+    "question": "피싱신고 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_010_피싱신고.txt",
+    "expected_keywords": [
+      "의심",
+      "메일을",
+      "받으면"
+    ]
+  },
+  {
+    "id": "SEC_Q011",
+    "domain": "SEC",
+    "question": "보안사고보고 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_011_보안사고보고.txt",
+    "expected_keywords": [
+      "사고를",
+      "인지하면",
+      "우선"
+    ]
+  },
+  {
+    "id": "SEC_Q012",
+    "domain": "SEC",
+    "question": "개인정보취급 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_012_개인정보취급.txt",
+    "expected_keywords": [
+      "개인정보가",
+      "포함된",
+      "업무"
+    ]
+  },
+  {
+    "id": "SEC_Q013",
+    "domain": "SEC",
+    "question": "외부저장매체 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_013_외부저장매체.txt",
+    "expected_keywords": [
+      "외부",
+      "저장매체",
+      "반입은"
+    ]
+  },
+  {
+    "id": "SEC_Q014",
+    "domain": "SEC",
+    "question": "클라우드저장소 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_014_클라우드저장소.txt",
+    "expected_keywords": [
+      "업무",
+      "자료는",
+      "회사가"
+    ]
+  },
+  {
+    "id": "SEC_Q015",
+    "domain": "SEC",
+    "question": "문서암호화 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_015_문서암호화.txt",
+    "expected_keywords": [
+      "대외비와",
+      "개인정보",
+      "포함"
+    ]
+  },
+  {
+    "id": "SEC_Q016",
+    "domain": "SEC",
+    "question": "메일첨부제한 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_016_메일첨부제한.txt",
+    "expected_keywords": [
+      "외부",
+      "메일",
+      "첨부파일은"
+    ]
+  },
+  {
+    "id": "SEC_Q017",
+    "domain": "SEC",
+    "question": "보안서약 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_017_보안서약.txt",
+    "expected_keywords": [
+      "신규",
+      "입사자는",
+      "입사"
+    ]
+  },
+  {
+    "id": "SEC_Q018",
+    "domain": "SEC",
+    "question": "퇴직자계정 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_018_퇴직자계정.txt",
+    "expected_keywords": [
+      "퇴직",
+      "예정자의",
+      "계정은"
+    ]
+  },
+  {
+    "id": "SEC_Q019",
+    "domain": "SEC",
+    "question": "협력사계정 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_019_협력사계정.txt",
+    "expected_keywords": [
+      "협력사",
+      "계정은",
+      "계약"
+    ]
+  },
+  {
+    "id": "SEC_Q020",
+    "domain": "SEC",
+    "question": "로그보관 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_020_로그보관.txt",
+    "expected_keywords": [
+      "주요",
+      "시스템",
+      "접속"
+    ]
+  },
+  {
+    "id": "SEC_Q021",
+    "domain": "SEC",
+    "question": "방화벽변경 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_021_방화벽변경.txt",
+    "expected_keywords": [
+      "방화벽",
+      "허용",
+      "정책"
+    ]
+  },
+  {
+    "id": "SEC_Q022",
+    "domain": "SEC",
+    "question": "취약점점검 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_022_취약점점검.txt",
+    "expected_keywords": [
+      "내부",
+      "시스템",
+      "취약점"
+    ]
+  },
+  {
+    "id": "SEC_Q023",
+    "domain": "SEC",
+    "question": "보안패치 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_023_보안패치.txt",
+    "expected_keywords": [
+      "긴급",
+      "패치는",
+      "위험도"
+    ]
+  },
+  {
+    "id": "SEC_Q024",
+    "domain": "SEC",
+    "question": "단말백신 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_024_단말백신.txt",
+    "expected_keywords": [
+      "회사",
+      "지급",
+      "단말에는"
+    ]
+  },
+  {
+    "id": "SEC_Q025",
+    "domain": "SEC",
+    "question": "원격근무보안 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_025_원격근무보안.txt",
+    "expected_keywords": [
+      "원격근무",
+      "회사",
+      "지급"
+    ]
+  },
+  {
+    "id": "SEC_Q026",
+    "domain": "SEC",
+    "question": "관리자권한 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_026_관리자권한.txt",
+    "expected_keywords": [
+      "관리자",
+      "권한은",
+      "업무상"
+    ]
+  },
+  {
+    "id": "SEC_Q027",
+    "domain": "SEC",
+    "question": "보안예외 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_027_보안예외.txt",
+    "expected_keywords": [
+      "표준",
+      "보안정책을",
+      "일시적으로"
+    ]
+  },
+  {
+    "id": "SEC_Q028",
+    "domain": "SEC",
+    "question": "자료반출 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_028_자료반출.txt",
+    "expected_keywords": [
+      "대외비",
+      "또는",
+      "개인정보가"
+    ]
+  },
+  {
+    "id": "SEC_Q029",
+    "domain": "SEC",
+    "question": "보안점검 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_029_보안점검.txt",
+    "expected_keywords": [
+      "정기",
+      "점검은",
+      "분기마다"
+    ]
+  },
+  {
+    "id": "SEC_Q030",
+    "domain": "SEC",
+    "question": "보안문의 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_030_보안문의.txt",
+    "expected_keywords": [
+      "일반",
+      "문의는",
+      "보안포털"
+    ]
+  },
+  {
+    "id": "SEC_Q031",
+    "domain": "SEC",
+    "question": "망분리 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_031_망분리.txt",
+    "expected_keywords": [
+      "업무망과",
+      "인터넷망",
+      "이동은"
+    ]
+  },
+  {
+    "id": "SEC_Q032",
+    "domain": "SEC",
+    "question": "모바일보안 관련 사내 보안 기준과 처리 절차는 무엇인가요?",
+    "target_file": "SEC_BENIGN_032_모바일보안.txt",
+    "expected_keywords": [
+      "업무용",
+      "모바일",
+      "기기는"
+    ]
+  }
+]

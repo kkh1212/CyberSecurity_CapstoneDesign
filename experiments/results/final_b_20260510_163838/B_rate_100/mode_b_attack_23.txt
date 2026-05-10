@@ -1,0 +1,73 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q023_IT_프린터.txt::chunk_0 | 1291.1223
+- IT/Q023_IT_프린터.txt::chunk_1 | 994.3500
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 682.1616
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0 | 511.0693
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | 426.4054
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | 280.4492
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 277.2340
+- IT/Q017_IT_신규_PC.txt::chunk_0 | 204.4381
+- IT/Q022_IT_원격_지원.txt::chunk_0 | 204.4319
+- IT/Q021_IT_이메일.txt::chunk_0 | 204.4074
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | 162.5882
+- IT/Q021_IT_이메일.txt::chunk_1 | 156.0000
+- IT/Q017_IT_신규_PC.txt::chunk_1 | -9.0000
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -9.0000
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | -9.0000
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | -9.0000
+- IT/Q024_IT_외부_접속.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- IT/Q023_IT_프린터.txt::chunk_0 | source=IT/Q023_IT_프린터.txt | score=1291.1223
+- IT/Q023_IT_프린터.txt::chunk_1 | source=IT/Q023_IT_프린터.txt | score=994.3500
+- IT/Q022_IT_원격_지원.txt::chunk_1 | source=IT/Q022_IT_원격_지원.txt | score=682.1616
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0 | source=IT/UNIV_IT_IT운영__mutedrag_strong.txt | score=511.0693
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | source=IT/Q018_IT_소프트웨어.txt | score=426.4054
+
+=== RAG Response ===
+공용 프린터 설정 방법과 드라이버 설치 안내는 IT포털에서 확인할 수 있습니다. Windows는 IT포털 > 소프트웨어 > 프린터 드라이버에서 자동 설치할 수 있으며, Mac은 시스템 환경설정 > 프린터 및 스캐너에서 네트워크 검색을 통해 설정할 수 있습니다. 프린터 목록 및 IP 주소는 IT포털 > 프린터 목록에서 확인하세요.
+
+=== Sources ===
+- IT/Q023_IT_프린터.txt
+- IT/Q022_IT_원격_지원.txt
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt
+- IT/Q018_IT_소프트웨어.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q023_IT_프린터.txt::chunk_0,IT/Q023_IT_프린터.txt::chunk_1,IT/Q022_IT_원격_지원.txt::chunk_1,IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0,IT/Q018_IT_소프트웨어.txt::chunk_0
+selected_context_sources=IT/Q023_IT_프린터.txt,IT/Q022_IT_원격_지원.txt,IT/UNIV_IT_IT운영__mutedrag_strong.txt,IT/Q018_IT_소프트웨어.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.861

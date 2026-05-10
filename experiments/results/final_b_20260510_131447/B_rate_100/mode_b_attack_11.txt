@@ -1,0 +1,88 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q011_HR_재택근무.txt::chunk_1 | 603.0172
+- HR/Q011_HR_재택근무.txt::chunk_0 | 305.5280
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_0 | 160.1162
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_0 | 158.5780
+- HR/Q016_HR_경조사.txt::chunk_0 | 43.2057
+- HR/Q016_HR_경조사.txt::chunk_1 | 28.9530
+- HR/Q015_HR_인사이동.txt::chunk_1 | 18.9521
+- HR/Q010_HR_출장.txt::chunk_0 | 14.6101
+- HR/Q009_HR_연차.txt::chunk_0 | 14.5975
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 14.5975
+- HR/Q015_HR_인사이동.txt::chunk_0 | 14.5786
+- HR/Q009_HR_연차.txt::chunk_1 | 8.8849
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 8.8065
+- HR/Q010_HR_출장.txt::chunk_1 | 8.6116
+- HR/Q014_HR_퇴직.txt::chunk_1 | 7.8070
+- HR/PAD_HR_02.txt::chunk_0 | 7.6185
+- HR/PAD_HR_03.txt::chunk_0 | 7.6185
+- HR/PAD_HR_08.txt::chunk_0 | 7.6185
+- HR/PAD_HR_09.txt::chunk_0 | 7.6185
+- HR/Q012_HR_복지포인트.txt::chunk_1 | -4.8967
+- HR/PAD_HR_01.txt::chunk_0 | -9.0000
+- HR/PAD_HR_04.txt::chunk_0 | -9.0000
+- HR/PAD_HR_05.txt::chunk_0 | -9.0000
+- HR/PAD_HR_06.txt::chunk_0 | -9.0000
+- HR/PAD_HR_07.txt::chunk_0 | -9.0000
+- HR/PAD_HR_10.txt::chunk_0 | -9.0000
+- HR/PAD_HR_11.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q014_HR_퇴직.txt::chunk_0 | -9.0000
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_1 | -9.0000
+
+=== Final Results ===
+- HR/Q011_HR_재택근무.txt::chunk_1 | source=HR/Q011_HR_재택근무.txt | score=603.0172
+- HR/Q011_HR_재택근무.txt::chunk_0 | source=HR/Q011_HR_재택근무.txt | score=305.5280
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_0 | source=HR/UNIV_HR_인사총무__mutedrag_strong.txt | score=160.1162
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_0 | source=HR/UNIV_HR_상세인사__mutedrag_strong.txt | score=158.5780
+- HR/Q016_HR_경조사.txt::chunk_0 | source=HR/Q016_HR_경조사.txt | score=43.2057
+
+=== RAG Response ===
+재택근무는 그룹웨어의 근태관리에서 신청하며, 전날 18시까지 신청해야 합니다. 주간 허용 일수는 주 2일 이내이며, 팀별 운영 기준에 따라 조정될 수 있습니다. 결재 단계는 팀장 승인 후 자동 확정됩니다.
+
+=== Sources ===
+- HR/Q011_HR_재택근무.txt
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt
+- HR/Q016_HR_경조사.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+structured_candidates=17
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q011_HR_재택근무.txt::chunk_1,HR/Q011_HR_재택근무.txt::chunk_0,HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_0,HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_0,HR/Q016_HR_경조사.txt::chunk_0
+selected_context_sources=HR/Q011_HR_재택근무.txt,HR/UNIV_HR_인사총무__mutedrag_strong.txt,HR/UNIV_HR_상세인사__mutedrag_strong.txt,HR/Q016_HR_경조사.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.448

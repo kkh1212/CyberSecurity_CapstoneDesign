@@ -1,0 +1,64 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- LEG/Q037_LEG_NDA.txt::chunk_0 | 1151.2881
+- LEG/Q037_LEG_NDA.txt::chunk_1 | 986.4527
+- LEG/Q032_LEG_계약서.txt::chunk_1 | 514.5140
+- LEG/Q033_LEG_개인정보.txt::chunk_1 | 343.6702
+- LEG/Q036_LEG_내부고발.txt::chunk_1 | 274.9650
+- LEG/Q033_LEG_개인정보.txt::chunk_0 | 194.2897
+- LEG/Q038_LEG_법적_분쟁.txt::chunk_1 | 152.6571
+- LEG/Q032_LEG_계약서.txt::chunk_0 | 38.2354
+- LEG/Q038_LEG_법적_분쟁.txt::chunk_0 | 36.2526
+- LEG/Q034_LEG_직무_발명.txt::chunk_0 | 35.8703
+- LEG/Q034_LEG_직무_발명.txt::chunk_1 | 31.7425
+- LEG/Q035_LEG_공정거래.txt::chunk_1 | -8.7893
+- LEG/Q035_LEG_공정거래.txt::chunk_0 | -9.0000
+- LEG/Q036_LEG_내부고발.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- LEG/Q037_LEG_NDA.txt::chunk_0 | source=LEG/Q037_LEG_NDA.txt | score=1151.2881
+- LEG/Q037_LEG_NDA.txt::chunk_1 | source=LEG/Q037_LEG_NDA.txt | score=986.4527
+
+=== RAG Response ===
+외부 파트너사와 비밀유지계약(NDA) 체결 시 표준 절차는 법무팀 포털에서 표준 양식을 다운로드하여 상대방 정보를 기재하는 것으로 시작됩니다. 이후 법무팀의 검토, 부서장 및 법무팀장의 서명, 그리고 원본 보관의 단계를 거치게 됩니다. 상대방이 자체 NDA를 제시하는 경우 반드시 법무팀의 검토를 거쳐야 합니다.
+
+=== Sources ===
+- LEG/Q037_LEG_NDA.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=LEG
+merged_domains=LEG
+final_result_count=2
+context_chunk_count=2
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=LEG/Q037_LEG_NDA.txt::chunk_0,LEG/Q037_LEG_NDA.txt::chunk_1
+selected_context_sources=LEG/Q037_LEG_NDA.txt
+selected_context_block_types=text_section
+elapsed_seconds=1.911

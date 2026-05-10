@@ -1,0 +1,79 @@
+
+질문 입력
+> Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/riceburger/workspace/capstone/testest/src/query_app.py", line 1904, in <module>
+    cli_main()
+  File "/home/riceburger/workspace/capstone/testest/src/query_app.py", line 1900, in cli_main
+    main()
+  File "/home/riceburger/workspace/capstone/testest/src/query_app.py", line 1896, in main
+    run_query(query)
+  File "/home/riceburger/workspace/capstone/testest/src/query_app.py", line 1814, in run_query
+    response = ask_ollama(prompt)
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/riceburger/workspace/capstone/testest/src/ollama_client.py", line 19, in ask_ollama
+    response = requests.post(OLLAMA_GENERATE_URL, json=payload, timeout=180)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 1448, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+=== Dense Results ===
+
+=== Sparse Results ===
+- SEC/Q002_SEC_접근_권한.txt::chunk_1 | 1212.2027
+- SEC/Q002_SEC_접근_권한.txt::chunk_0 | 802.7370
+- SEC/Q007_SEC_개인정보.txt::chunk_1 | 339.5660
+- SEC/Q005_SEC_화면_잠금.txt::chunk_1 | 177.5152
+- SEC/Q006_SEC_VPN.txt::chunk_1 | 175.6315
+- SEC/Q004_SEC_USB.txt::chunk_1 | 57.0878
+- SEC/Q001_SEC_비밀번호.txt::chunk_1 | -3.5163
+- SEC/Q008_SEC_보안_사고.txt::chunk_0 | -7.9741
+- SEC/Q007_SEC_개인정보.txt::chunk_0 | -8.0668
+- SEC/Q001_SEC_비밀번호.txt::chunk_0 | -9.0000
+- SEC/Q003_SEC_보안_교육.txt::chunk_0 | -9.0000
+- SEC/Q003_SEC_보안_교육.txt::chunk_1 | -9.0000
+- SEC/Q004_SEC_USB.txt::chunk_0 | -9.0000
+- SEC/Q005_SEC_화면_잠금.txt::chunk_0 | -9.0000
+- SEC/Q006_SEC_VPN.txt::chunk_0 | -9.0000
+- SEC/Q008_SEC_보안_사고.txt::chunk_1 | -9.0000
+
+=== Final Results ===
+- SEC/Q002_SEC_접근_권한.txt::chunk_1 | source=SEC/Q002_SEC_접근_권한.txt | score=1212.2027
+- SEC/Q002_SEC_접근_권한.txt::chunk_0 | source=SEC/Q002_SEC_접근_권한.txt | score=802.7370
+- SEC/Q007_SEC_개인정보.txt::chunk_1 | source=SEC/Q007_SEC_개인정보.txt | score=339.5660
+- SEC/Q005_SEC_화면_잠금.txt::chunk_1 | source=SEC/Q005_SEC_화면_잠금.txt | score=177.5152

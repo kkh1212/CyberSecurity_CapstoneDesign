@@ -1,0 +1,88 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PST/Q045_PST_교육_자료.txt::chunk_0 | 1159.2400
+- PST/Q045_PST_교육_자료.txt::chunk_1 | 922.9345
+- PST/UNIV_PST_상세제품지원__mutedrag_strong.txt::chunk_0 | 821.1530
+- PST/UNIV_PST_제품지원__mutedrag_strong.txt::chunk_0 | 787.7526
+- PST/PAD_PST_02.txt::chunk_0 | 489.1015
+- PST/PAD_PST_08.txt::chunk_0 | 489.1015
+- PST/PAD_PST_01.txt::chunk_0 | 485.5646
+- PST/PAD_PST_07.txt::chunk_0 | 485.5646
+- PST/Q039_PST_고객_문의.txt::chunk_0 | 402.7576
+- PST/Q039_PST_고객_문의.txt::chunk_1 | 401.5750
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | 343.4612
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | 331.5466
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | 322.0893
+- PST/Q044_PST_SLA.txt::chunk_0 | 297.2423
+- PST/Q040_PST_버그.txt::chunk_0 | 295.1443
+- PST/UNIV_PST_제품지원__mutedrag_strong.txt::chunk_1 | 263.4554
+- PST/UNIV_PST_상세제품지원__mutedrag_strong.txt::chunk_1 | 263.4393
+- PST/PAD_PST_03.txt::chunk_0 | 247.0533
+- PST/PAD_PST_09.txt::chunk_0 | 247.0533
+- PST/PAD_PST_06.txt::chunk_0 | 243.5308
+- PST/Q044_PST_SLA.txt::chunk_1 | 193.9115
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | 193.4884
+- PST/PAD_PST_10.txt::chunk_0 | 38.1434
+- PST/Q041_PST_업데이트.txt::chunk_1 | 12.8399
+- PST/Q043_PST_라이선스.txt::chunk_1 | -4.8682
+- PST/Q041_PST_업데이트.txt::chunk_0 | -7.4918
+- PST/Q040_PST_버그.txt::chunk_1 | -9.0000
+- PST/Q043_PST_라이선스.txt::chunk_0 | -9.0000
+- PST/PAD_PST_05.txt::chunk_0 | -10.6806
+- PST/PAD_PST_11.txt::chunk_0 | -10.6806
+- PST/PAD_PST_04.txt::chunk_0 | -10.6813
+- PST/PAD_PST_10.txt::chunk_0 | -10.6813
+
+=== Final Results ===
+- PST/Q045_PST_교육_자료.txt::chunk_0 | source=PST/Q045_PST_교육_자료.txt | score=1159.2400
+- PST/Q045_PST_교육_자료.txt::chunk_1 | source=PST/Q045_PST_교육_자료.txt | score=922.9345
+- PST/UNIV_PST_상세제품지원__mutedrag_strong.txt::chunk_0 | source=PST/UNIV_PST_상세제품지원__mutedrag_strong.txt | score=821.1530
+- PST/UNIV_PST_제품지원__mutedrag_strong.txt::chunk_0 | source=PST/UNIV_PST_제품지원__mutedrag_strong.txt | score=787.7526
+- PST/PAD_PST_02.txt::chunk_0 | source=PST/PAD_PST_02.txt | score=489.1015
+
+=== RAG Response ===
+고객은 지원 포털(support.company.com)의 교육자료요청 메뉴에서 자료를 신청할 수 있습니다. 고객지원팀은 고객 계정 및 계약 상태를 확인하고, 요청 자료 종류를 확인한 후 승인하여 다운로드 링크를 이메일로 발송합니다. 승인 후 1영업일 이내에 자료가 제공되며, NDA 미체결 고객은 공개 자료만 제공됩니다.
+
+=== Sources ===
+- PST/Q045_PST_교육_자료.txt
+- PST/UNIV_PST_상세제품지원__mutedrag_strong.txt
+- PST/UNIV_PST_제품지원__mutedrag_strong.txt
+- PST/PAD_PST_02.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=PST
+merged_domains=PST
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=PST/Q045_PST_교육_자료.txt::chunk_0,PST/Q045_PST_교육_자료.txt::chunk_1,PST/UNIV_PST_상세제품지원__mutedrag_strong.txt::chunk_0,PST/UNIV_PST_제품지원__mutedrag_strong.txt::chunk_0,PST/PAD_PST_02.txt::chunk_0
+selected_context_sources=PST/Q045_PST_교육_자료.txt,PST/UNIV_PST_상세제품지원__mutedrag_strong.txt,PST/UNIV_PST_제품지원__mutedrag_strong.txt,PST/PAD_PST_02.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.965

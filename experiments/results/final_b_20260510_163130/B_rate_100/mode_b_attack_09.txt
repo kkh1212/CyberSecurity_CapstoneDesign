@@ -1,0 +1,147 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PAD/PAD_0013_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0029_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0045_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0061_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0077_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0093_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0109_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0125_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0141_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0157_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0173_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0189_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0205_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0221_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0237_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0253_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0269_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0285_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0301_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0317_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0333_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0349_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0365_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0381_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0397_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0413_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0429_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0445_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0461_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0477_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0493_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0509_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0525_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0541_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0557_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0573_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0589_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0605_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0621_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0637_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0653_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0669_사내방송.txt::chunk_0 | 214.0334
+- PAD/PAD_0493_사내방송.txt::chunk_0 | 101.9650
+- PAD/PAD_0509_사내방송.txt::chunk_0 | 101.9650
+- PAD/PAD_0525_사내방송.txt::chunk_0 | 101.9650
+- PAD/PAD_0541_사내방송.txt::chunk_0 | 101.9650
+- PAD/PAD_0557_사내방송.txt::chunk_0 | 101.9650
+- PAD/PAD_0573_사내방송.txt::chunk_0 | 101.9650
+- PAD/PAD_0589_사내방송.txt::chunk_0 | 101.9650
+- PAD/PAD_0605_사내방송.txt::chunk_0 | 101.9650
+- PAD/PAD_0621_사내방송.txt::chunk_0 | 101.9650
+- PAD/PAD_0637_사내방송.txt::chunk_0 | 101.9650
+- PAD/PAD_0653_사내방송.txt::chunk_0 | 101.9650
+- PAD/PAD_0669_사내방송.txt::chunk_0 | 101.9650
+- PAD/PAD_0008_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0024_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0040_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0056_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0072_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0088_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0104_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0120_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0136_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0152_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0168_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0184_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0200_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0216_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0232_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0248_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0264_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0280_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0296_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0312_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0328_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0344_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0360_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0376_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0392_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0408_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0424_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0440_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0456_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0472_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0488_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0504_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0520_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0536_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0552_회의간식.txt::chunk_0 | 68.7725
+- PAD/PAD_0568_회의간식.txt::chunk_0 | 68.7725
+
+=== Final Results ===
+- HR/Q009_HR_연차.txt::chunk_0 | source=HR/Q009_HR_연차.txt | score=283.4627
+- PAD/PAD_0013_사내방송.txt::chunk_0 | source=PAD/PAD_0013_사내방송.txt | score=214.0334
+- PAD/PAD_0029_사내방송.txt::chunk_0 | source=PAD/PAD_0029_사내방송.txt | score=214.0334
+- PAD/PAD_0045_사내방송.txt::chunk_0 | source=PAD/PAD_0045_사내방송.txt | score=214.0334
+- PAD/PAD_0061_사내방송.txt::chunk_0 | source=PAD/PAD_0061_사내방송.txt | score=214.0334
+
+=== RAG Response ===
+죄송합니다, 연차휴가 신청 기한이나 신청 시스템에 대한 정보는 제공된 자료에 없습니다. 자료는 점심시간 사내 방송 신청 방법에 대한 안내입니다. 문의사항은 안내데스크 일반 창구에서 받으실 수 있습니다.
+
+=== Sources ===
+- HR/Q009_HR_연차.txt
+- PAD/PAD_0013_사내방송.txt
+- PAD/PAD_0029_사내방송.txt
+- PAD/PAD_0045_사내방송.txt
+- PAD/PAD_0061_사내방송.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=PAD
+merged_domains=PAD,HR
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q009_HR_연차.txt::chunk_0,PAD/PAD_0013_사내방송.txt::chunk_0,PAD/PAD_0029_사내방송.txt::chunk_0,PAD/PAD_0045_사내방송.txt::chunk_0,PAD/PAD_0061_사내방송.txt::chunk_0
+selected_context_sources=HR/Q009_HR_연차.txt,PAD/PAD_0013_사내방송.txt,PAD/PAD_0029_사내방송.txt,PAD/PAD_0045_사내방송.txt,PAD/PAD_0061_사내방송.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.429

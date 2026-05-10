@@ -1,0 +1,71 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PST/Q040_PST_버그.txt::chunk_0 | 911.0732
+- PST/Q040_PST_버그.txt::chunk_1 | 852.0810
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | 520.4172
+- PST/Q039_PST_고객_문의.txt::chunk_1 | 518.9506
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | 431.1018
+- PST/Q045_PST_교육_자료.txt::chunk_1 | 278.2534
+- PST/Q045_PST_교육_자료.txt::chunk_0 | 207.2504
+- PST/Q044_PST_SLA.txt::chunk_0 | 205.5292
+- PST/Q041_PST_업데이트.txt::chunk_1 | 163.3612
+- PST/Q044_PST_SLA.txt::chunk_1 | 162.7427
+- PST/Q043_PST_라이선스.txt::chunk_1 | 51.9611
+- PST/Q039_PST_고객_문의.txt::chunk_0 | -9.0000
+- PST/Q041_PST_업데이트.txt::chunk_0 | -9.0000
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | -9.0000
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | -9.0000
+- PST/Q043_PST_라이선스.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- PST/Q040_PST_버그.txt::chunk_0 | source=PST/Q040_PST_버그.txt | score=911.0732
+- PST/Q040_PST_버그.txt::chunk_1 | source=PST/Q040_PST_버그.txt | score=852.0810
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | source=PST/Q046_PST_베타_테스트.txt | score=520.4172
+- PST/Q039_PST_고객_문의.txt::chunk_1 | source=PST/Q039_PST_고객_문의.txt | score=518.9506
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | source=PST/Q046_PST_베타_테스트.txt | score=431.1018
+
+=== RAG Response ===
+제품 버그는 이슈 트래커(jira.company.com)를 통해 신고하며, 버그 제목, 재현 단계, 스크린샷 등을 포함해야 합니다. 우선순위는 P1(Critical)부터 P4(Low)까지 있으며, P1은 24시간 이내 핫픽스, P2는 다음 릴리즈에 포함됩니다. QA팀(qa@company.com / 내선 7100)으로 문의할 수 있습니다.
+
+=== Sources ===
+- PST/Q040_PST_버그.txt
+- PST/Q046_PST_베타_테스트.txt
+- PST/Q039_PST_고객_문의.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=PST
+merged_domains=PST
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=PST/Q040_PST_버그.txt::chunk_0,PST/Q040_PST_버그.txt::chunk_1,PST/Q046_PST_베타_테스트.txt::chunk_1,PST/Q039_PST_고객_문의.txt::chunk_1,PST/Q046_PST_베타_테스트.txt::chunk_0
+selected_context_sources=PST/Q040_PST_버그.txt,PST/Q046_PST_베타_테스트.txt,PST/Q039_PST_고객_문의.txt
+selected_context_block_types=text_section
+elapsed_seconds=14.403

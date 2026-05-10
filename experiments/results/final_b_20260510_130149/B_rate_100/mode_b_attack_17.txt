@@ -1,0 +1,87 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q017_IT_신규_PC.txt::chunk_1 | 1148.0260
+- IT/Q017_IT_신규_PC.txt::chunk_0 | 1014.4147
+- IT/UNIV_IT_상세운영__mutedrag_strong.txt::chunk_0 | 654.6176
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 384.5448
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0 | 343.1726
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 244.8531
+- IT/Q021_IT_이메일.txt::chunk_1 | 199.2571
+- IT/PAD_IT_03.txt::chunk_0 | 156.6661
+- IT/PAD_IT_04.txt::chunk_0 | 156.6661
+- IT/PAD_IT_09.txt::chunk_0 | 156.6661
+- IT/PAD_IT_10.txt::chunk_0 | 156.6661
+- IT/PAD_IT_01.txt::chunk_0 | 156.6568
+- IT/PAD_IT_02.txt::chunk_0 | 156.6568
+- IT/PAD_IT_05.txt::chunk_0 | 156.6568
+- IT/PAD_IT_06.txt::chunk_0 | 156.6568
+- IT/PAD_IT_07.txt::chunk_0 | 156.6568
+- IT/PAD_IT_08.txt::chunk_0 | 156.6568
+- IT/PAD_IT_11.txt::chunk_0 | 156.6568
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | 154.0484
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | 136.6838
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | 135.7800
+- IT/Q023_IT_프린터.txt::chunk_1 | 134.1417
+- IT/Q024_IT_외부_접속.txt::chunk_0 | 65.9452
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | -5.2971
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -5.3642
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | -9.0000
+- IT/Q021_IT_이메일.txt::chunk_0 | -9.0000
+- IT/Q022_IT_원격_지원.txt::chunk_0 | -9.0000
+- IT/Q023_IT_프린터.txt::chunk_0 | -9.0000
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/UNIV_IT_상세운영__mutedrag_strong.txt::chunk_1 | -9.0000
+
+=== Final Results ===
+- IT/Q017_IT_신규_PC.txt::chunk_1 | source=IT/Q017_IT_신규_PC.txt | score=1148.0260
+- IT/Q017_IT_신규_PC.txt::chunk_0 | source=IT/Q017_IT_신규_PC.txt | score=1014.4147
+- IT/UNIV_IT_상세운영__mutedrag_strong.txt::chunk_0 | source=IT/UNIV_IT_상세운영__mutedrag_strong.txt | score=654.6176
+- IT/Q024_IT_외부_접속.txt::chunk_1 | source=IT/Q024_IT_외부_접속.txt | score=384.5448
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0 | source=IT/UNIV_IT_IT운영__mutedrag_strong.txt | score=343.1726
+
+=== RAG Response ===
+신규 입사자 PC 지급 신청은 그룹웨어의 IT 서비스 자산 신청 메뉴에서 작성 후 팀장 승인을 거쳐 IT운영팀에서 검토하고 자산을 배정하는 절차입니다. 노트북/데스크탑 선택은 팀장 추천 및 IT팀 협의를 통해 결정됩니다. 담당 부서는 IT운영팀 자산관리파트이며, 내선번호는 5010입니다.
+
+=== Sources ===
+- IT/Q017_IT_신규_PC.txt
+- IT/UNIV_IT_상세운영__mutedrag_strong.txt
+- IT/Q024_IT_외부_접속.txt
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q017_IT_신규_PC.txt::chunk_1,IT/Q017_IT_신규_PC.txt::chunk_0,IT/UNIV_IT_상세운영__mutedrag_strong.txt::chunk_0,IT/Q024_IT_외부_접속.txt::chunk_1,IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0
+selected_context_sources=IT/Q017_IT_신규_PC.txt,IT/UNIV_IT_상세운영__mutedrag_strong.txt,IT/Q024_IT_외부_접속.txt,IT/UNIV_IT_IT운영__mutedrag_strong.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.431

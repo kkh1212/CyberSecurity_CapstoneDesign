@@ -1,0 +1,70 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | 1161.9163
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | 1059.0397
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | 463.8401
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | 291.9486
+- FIN/Q053_FIN_예산_보고서.txt::chunk_0 | 291.8342
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | 273.5938
+- FIN/Q051_FIN_영수증.txt::chunk_1 | 269.4219
+- FIN/Q052_FIN_전도금.txt::chunk_1 | 251.6793
+- FIN/Q047_FIN_법인카드.txt::chunk_0 | 216.9610
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_0 | 119.9571
+- FIN/Q048_FIN_출장_경비.txt::chunk_0 | -6.7803
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | -6.7803
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q051_FIN_영수증.txt::chunk_0 | -9.0000
+- FIN/Q052_FIN_전도금.txt::chunk_0 | -9.0000
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | -13.8968
+
+=== Final Results ===
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | source=FIN/Q050_FIN_예산_초과.txt | score=1161.9163
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | source=FIN/Q050_FIN_예산_초과.txt | score=1059.0397
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | source=FIN/Q047_FIN_법인카드.txt | score=463.8401
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | source=FIN/Q053_FIN_예산_보고서.txt | score=291.9486
+
+=== RAG Response ===
+예산 초과 사용이 필요할 때 추가 승인 절차는 그룹웨어의 재무 > 예산초과신청 메뉴에서 신청서를 작성하는 것입니다. 신청서에는 초과 사유, 금액, 대안 검토 결과 등을 기재해야 하며, 팀장 → 부서장 → CFO의 결재를 거쳐야 합니다. 승인 기준은 불가피한 업무 목적, 경영 목표 기여도, 대안 부재 여부입니다.
+
+=== Sources ===
+- FIN/Q050_FIN_예산_초과.txt
+- FIN/Q047_FIN_법인카드.txt
+- FIN/Q053_FIN_예산_보고서.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=FIN
+merged_domains=FIN
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=FIN/Q050_FIN_예산_초과.txt::chunk_0,FIN/Q050_FIN_예산_초과.txt::chunk_1,FIN/Q047_FIN_법인카드.txt::chunk_1,FIN/Q053_FIN_예산_보고서.txt::chunk_1
+selected_context_sources=FIN/Q050_FIN_예산_초과.txt,FIN/Q047_FIN_법인카드.txt,FIN/Q053_FIN_예산_보고서.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.450

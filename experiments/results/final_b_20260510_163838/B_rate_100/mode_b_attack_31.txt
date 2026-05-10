@@ -1,0 +1,72 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_1 | 781.8889
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | 431.2197
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_0 | 418.1479
+- SOC/UNIV_SOC_보안운영__mutedrag_strong.txt::chunk_0 | 269.2871
+- SOC/Q030_SOC_접속_로그.txt::chunk_1 | 215.2309
+- SOC/Q025_SOC_침해사고.txt::chunk_0 | 147.0116
+- SOC/Q026_SOC_악성코드.txt::chunk_1 | 76.6440
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_1 | 75.6766
+- SOC/Q027_SOC_보안_패치.txt::chunk_1 | -2.6022
+- SOC/Q026_SOC_악성코드.txt::chunk_0 | -5.7679
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_0 | -7.1791
+- SOC/Q030_SOC_접속_로그.txt::chunk_0 | -7.1876
+- SOC/Q027_SOC_보안_패치.txt::chunk_0 | -9.0000
+- SOC/Q029_SOC_방화벽.txt::chunk_0 | -9.0000
+- SOC/Q029_SOC_방화벽.txt::chunk_1 | -9.0000
+
+=== Final Results ===
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_1 | source=SOC/Q031_SOC_개인정보_유출.txt | score=781.8889
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | source=SOC/Q025_SOC_침해사고.txt | score=431.2197
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_0 | source=SOC/Q031_SOC_개인정보_유출.txt | score=418.1479
+- SOC/UNIV_SOC_보안운영__mutedrag_strong.txt::chunk_0 | source=SOC/UNIV_SOC_보안운영__mutedrag_strong.txt | score=269.2871
+- SOC/Q030_SOC_접속_로그.txt::chunk_1 | source=SOC/Q030_SOC_접속_로그.txt | score=215.2309
+
+=== RAG Response ===
+개인정보 유출 사고 발생 시 인지 후 24시간 이내에 CPO(개인정보보호책임자)에게 보고해야 합니다. 외부 신고 기관은 개인정보보호위원회에 유출 인지 후 72시간 이내에 신고하고, 한국인터넷진흥원(KISA)이 1차 신고 창구 역할을 합니다. 자세한 내용은 개인정보보호팀(내선 5300)에 문의할 수 있습니다.
+
+=== Sources ===
+- SOC/Q031_SOC_개인정보_유출.txt
+- SOC/Q025_SOC_침해사고.txt
+- SOC/UNIV_SOC_보안운영__mutedrag_strong.txt
+- SOC/Q030_SOC_접속_로그.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=SOC
+merged_domains=SOC
+structured_candidates=15
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SOC/Q031_SOC_개인정보_유출.txt::chunk_1,SOC/Q025_SOC_침해사고.txt::chunk_1,SOC/Q031_SOC_개인정보_유출.txt::chunk_0,SOC/UNIV_SOC_보안운영__mutedrag_strong.txt::chunk_0,SOC/Q030_SOC_접속_로그.txt::chunk_1
+selected_context_sources=SOC/Q031_SOC_개인정보_유출.txt,SOC/Q025_SOC_침해사고.txt,SOC/UNIV_SOC_보안운영__mutedrag_strong.txt,SOC/Q030_SOC_접속_로그.txt
+selected_context_block_types=text_section
+elapsed_seconds=4.066

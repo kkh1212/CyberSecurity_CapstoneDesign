@@ -1,0 +1,67 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | 591.6489
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | 478.6114
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 349.8940
+- IT/Q023_IT_프린터.txt::chunk_1 | 333.7473
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 185.1263
+- IT/Q023_IT_프린터.txt::chunk_0 | 113.9232
+- IT/Q017_IT_신규_PC.txt::chunk_1 | 28.8323
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | 25.9478
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | 11.0000
+- IT/Q021_IT_이메일.txt::chunk_0 | 11.0000
+- IT/Q022_IT_원격_지원.txt::chunk_0 | 11.0000
+- IT/Q021_IT_이메일.txt::chunk_1 | 8.2337
+- IT/Q017_IT_신규_PC.txt::chunk_0 | -9.0000
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -9.0000
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | -9.0000
+- IT/Q024_IT_외부_접속.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | source=IT/Q018_IT_소프트웨어.txt | score=591.6489
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | source=IT/Q018_IT_소프트웨어.txt | score=478.6114
+
+=== RAG Response ===
+업무용 소프트웨어 설치 요청은 IT헬프데스크 포털을 통해 신청할 수 있습니다. 일반적인 요청은 3영업일, 보안 검토가 필요한 경우 5~7영업일이 소요됩니다. 무료 또는 오픈소스 소프트웨어 또한 보안 검토 후 설치됩니다.
+
+=== Sources ===
+- IT/Q018_IT_소프트웨어.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+structured_candidates=16
+final_result_count=2
+context_chunk_count=2
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q018_IT_소프트웨어.txt::chunk_0,IT/Q018_IT_소프트웨어.txt::chunk_1
+selected_context_sources=IT/Q018_IT_소프트웨어.txt
+selected_context_block_types=text_section
+elapsed_seconds=1.498

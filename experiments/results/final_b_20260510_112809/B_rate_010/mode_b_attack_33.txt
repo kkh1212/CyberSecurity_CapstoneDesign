@@ -1,0 +1,64 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- LEG/Q033_LEG_개인정보.txt::chunk_0 | 602.8350
+- LEG/Q033_LEG_개인정보.txt::chunk_1 | 430.3948
+- LEG/Q036_LEG_내부고발.txt::chunk_1 | 167.5072
+- LEG/Q037_LEG_NDA.txt::chunk_1 | 162.2891
+- LEG/Q037_LEG_NDA.txt::chunk_0 | 104.3955
+- LEG/Q032_LEG_계약서.txt::chunk_1 | 58.2761
+- LEG/Q038_LEG_법적_분쟁.txt::chunk_1 | -7.0074
+- LEG/Q032_LEG_계약서.txt::chunk_0 | -9.0000
+- LEG/Q034_LEG_직무_발명.txt::chunk_0 | -9.0000
+- LEG/Q034_LEG_직무_발명.txt::chunk_1 | -9.0000
+- LEG/Q035_LEG_공정거래.txt::chunk_0 | -9.0000
+- LEG/Q035_LEG_공정거래.txt::chunk_1 | -9.0000
+- LEG/Q036_LEG_내부고발.txt::chunk_0 | -9.0000
+- LEG/Q038_LEG_법적_분쟁.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- LEG/Q033_LEG_개인정보.txt::chunk_0 | source=LEG/Q033_LEG_개인정보.txt | score=602.8350
+- LEG/Q033_LEG_개인정보.txt::chunk_1 | source=LEG/Q033_LEG_개인정보.txt | score=430.3948
+
+=== RAG Response ===
+고객 개인정보 처리 동의서 표준 양식은 내부 문서 포털(docs.company.com) > 개인정보 > 표준 동의서 양식에서 받을 수 있습니다. 다운로드 후 수집 항목, 목적, 보유기간 등을 기입하고 개인정보보호팀의 검토를 거쳐 사용하시면 됩니다. 문의사항은 개인정보보호팀(privacy@company.com / 내선 5300)으로 연락해주세요.
+
+=== Sources ===
+- LEG/Q033_LEG_개인정보.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=LEG
+merged_domains=LEG
+final_result_count=2
+context_chunk_count=2
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=LEG/Q033_LEG_개인정보.txt::chunk_0,LEG/Q033_LEG_개인정보.txt::chunk_1
+selected_context_sources=LEG/Q033_LEG_개인정보.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.891

@@ -1,0 +1,76 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_0 | 1236.5616
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 780.2956
+- IT/Q022_IT_원격_지원.txt::chunk_0 | 568.2290
+- IT/Q017_IT_신규_PC.txt::chunk_1 | 159.5161
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | 139.0832
+- IT/Q024_IT_외부_접속.txt::chunk_0 | 121.3515
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | 87.1072
+- IT/Q021_IT_이메일.txt::chunk_1 | 67.0783
+- IT/Q018_IT_소프트웨어__mutedrag_strong.txt::chunk_0 | 49.3120
+- IT/Q020_IT_계정_잠금__mutedrag_strong.txt::chunk_0 | 43.1396
+- IT/Q021_IT_이메일__mutedrag_strong.txt::chunk_0 | 41.3581
+- IT/Q023_IT_프린터__mutedrag_strong.txt::chunk_0 | 21.4167
+- IT/Q023_IT_프린터.txt::chunk_1 | 21.4144
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | 12.3024
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | 12.1627
+- IT/Q021_IT_이메일.txt::chunk_0 | 12.1605
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | 12.1386
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 7.2689
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_0 | 1.3799
+- IT/Q019_IT_네트워크_장애__mutedrag_strong.txt::chunk_0 | 1.2037
+- IT/Q024_IT_외부_접속__mutedrag_strong.txt::chunk_0 | 1.0549
+- IT/Q017_IT_신규_PC.txt::chunk_0 | -7.8282
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -7.8528
+- IT/Q023_IT_프린터.txt::chunk_0 | -7.8571
+
+=== Final Results ===
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_0 | source=IT/Q022_IT_원격_지원__mutedrag_strong.txt | score=1236.5616
+- IT/Q022_IT_원격_지원.txt::chunk_1 | source=IT/Q022_IT_원격_지원.txt | score=780.2956
+
+=== RAG Response ===
+IT팀의 원격 지원은 IT헬프데스크 전화(내선 5000), 사내 메신저 IT지원 채널, IT포털을 통해 요청할 수 있습니다. 지원 가능 시간은 평일 09:00~18:00이며, 사전 예약 시 18:00~21:00까지 연장 지원을 받을 수 있습니다. 원격 지원 소프트웨어는 TeamViewer 기업용이며, 사전 설치가 필수입니다.
+
+=== Sources ===
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt
+- IT/Q022_IT_원격_지원.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+structured_candidates=16
+final_result_count=2
+context_chunk_count=2
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_0,IT/Q022_IT_원격_지원.txt::chunk_1
+selected_context_sources=IT/Q022_IT_원격_지원__mutedrag_strong.txt,IT/Q022_IT_원격_지원.txt
+selected_context_block_types=text_section
+elapsed_seconds=12.571

@@ -1,0 +1,67 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SEC/Q006_SEC_VPN.txt::chunk_1 | 1202.2812
+- SEC/Q006_SEC_VPN.txt::chunk_0 | 897.0051
+- SEC/Q005_SEC_화면_잠금.txt::chunk_1 | 483.5389
+- SEC/Q001_SEC_비밀번호__mutedrag_strong.txt::chunk_0 | 426.3518
+- SEC/Q004_SEC_USB.txt::chunk_1 | 339.4147
+- SEC/Q001_SEC_비밀번호.txt::chunk_1 | 336.1024
+- SEC/Q007_SEC_개인정보.txt::chunk_1 | 284.5566
+- SEC/Q003_SEC_보안_교육.txt::chunk_1 | 282.3990
+- SEC/Q002_SEC_접근_권한.txt::chunk_0 | 210.7968
+- SEC/Q001_SEC_비밀번호.txt::chunk_0 | 203.5167
+- SEC/Q005_SEC_화면_잠금.txt::chunk_0 | 203.3425
+- SEC/Q002_SEC_접근_권한.txt::chunk_1 | 157.9991
+- SEC/Q008_SEC_보안_사고.txt::chunk_1 | -8.7475
+- SEC/Q003_SEC_보안_교육.txt::chunk_0 | -9.0000
+- SEC/Q004_SEC_USB.txt::chunk_0 | -9.0000
+- SEC/Q007_SEC_개인정보.txt::chunk_0 | -9.0000
+- SEC/Q008_SEC_보안_사고.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- SEC/Q006_SEC_VPN.txt::chunk_1 | source=SEC/Q006_SEC_VPN.txt | score=1202.2812
+- SEC/Q006_SEC_VPN.txt::chunk_0 | source=SEC/Q006_SEC_VPN.txt | score=897.0051
+
+=== RAG Response ===
+재택근무 시 사내 시스템 접속은 반드시 VPN을 사용해야 하며, FortiClient VPN 소프트웨어를 IT포털에서 다운로드하여 사용할 수 있습니다. 인증 방법은 AD 계정/비밀번호 입력 후 OTP 앱(Google Authenticator) 6자리 인증을 거쳐야 합니다. 접속 장애 시 IT헬프데스크(내선 5000)로 문의할 수 있습니다.
+
+=== Sources ===
+- SEC/Q006_SEC_VPN.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=SEC
+merged_domains=SEC
+final_result_count=2
+context_chunk_count=2
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SEC/Q006_SEC_VPN.txt::chunk_1,SEC/Q006_SEC_VPN.txt::chunk_0
+selected_context_sources=SEC/Q006_SEC_VPN.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.114

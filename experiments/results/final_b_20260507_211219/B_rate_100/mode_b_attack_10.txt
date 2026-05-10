@@ -1,0 +1,80 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_0 | 1051.2754
+- HR/Q010_HR_출장.txt::chunk_0 | 834.1414
+- HR/Q010_HR_출장.txt::chunk_1 | 443.0168
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_0 | 290.2323
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_0 | 229.5245
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_0 | 50.0779
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 37.5531
+- HR/Q016_HR_경조사.txt::chunk_1 | 22.7370
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 15.2301
+- HR/Q015_HR_인사이동.txt::chunk_0 | 15.1917
+- HR/Q014_HR_퇴직.txt::chunk_1 | 3.8901
+- HR/Q015_HR_인사이동.txt::chunk_1 | -7.3166
+- HR/Q009_HR_연차.txt::chunk_0 | -7.4921
+- HR/Q011_HR_재택근무.txt::chunk_0 | -7.5209
+- HR/Q016_HR_경조사.txt::chunk_0 | -7.5280
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_0 | -7.5717
+- HR/Q015_HR_인사이동__mutedrag_strong.txt::chunk_0 | -7.5786
+- HR/Q014_HR_퇴직.txt::chunk_0 | -8.2834
+- HR/Q014_HR_퇴직__mutedrag_strong.txt::chunk_0 | -8.5554
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트.txt::chunk_1 | -9.0000
+- HR/Q012_HR_복지포인트__mutedrag_strong.txt::chunk_0 | -9.0000
+- HR/Q009_HR_연차.txt::chunk_1 | -13.2246
+- HR/Q011_HR_재택근무.txt::chunk_1 | -13.6795
+
+=== Final Results ===
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_0 | source=HR/Q010_HR_출장__mutedrag_strong.txt | score=1051.2754
+- HR/Q010_HR_출장.txt::chunk_0 | source=HR/Q010_HR_출장.txt | score=834.1414
+- HR/Q010_HR_출장.txt::chunk_1 | source=HR/Q010_HR_출장.txt | score=443.0168
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_0 | source=HR/Q016_HR_경조사__mutedrag_strong.txt | score=290.2323
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_0 | source=HR/Q009_HR_연차__mutedrag_strong.txt | score=229.5245
+
+=== RAG Response ===
+국내 출장 신청은 출장 2영업일 전까지 그룹웨어 출장신청 메뉴에서 신청해야 합니다. 필요한 서류는 출장신청서(그룹웨어 양식)이며, 출장 목적, 일정, 방문처를 기재해야 합니다. 결재 단계는 팀장 승인 후 부서장 확인입니다.
+
+=== Sources ===
+- HR/Q010_HR_출장__mutedrag_strong.txt
+- HR/Q010_HR_출장.txt
+- HR/Q016_HR_경조사__mutedrag_strong.txt
+- HR/Q009_HR_연차__mutedrag_strong.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q010_HR_출장__mutedrag_strong.txt::chunk_0,HR/Q010_HR_출장.txt::chunk_0,HR/Q010_HR_출장.txt::chunk_1,HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_0,HR/Q009_HR_연차__mutedrag_strong.txt::chunk_0
+selected_context_sources=HR/Q010_HR_출장__mutedrag_strong.txt,HR/Q010_HR_출장.txt,HR/Q016_HR_경조사__mutedrag_strong.txt,HR/Q009_HR_연차__mutedrag_strong.txt
+selected_context_block_types=text_section
+elapsed_seconds=1.982

@@ -1,0 +1,77 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PST/Q045_PST_교육_자료.txt::chunk_0 | 1159.7040
+- PST/UNIV_PST_제품지원__mutedrag_strong.txt::chunk_0 | 954.3690
+- PST/Q045_PST_교육_자료.txt::chunk_1 | 917.3519
+- PST/PAD_006_PST_제품지원안내.txt::chunk_0 | 679.7626
+- PST/PAD_014_PST_제품지원안내.txt::chunk_0 | 679.7626
+- PST/PAD_022_PST_제품지원안내.txt::chunk_0 | 679.7626
+- PST/PAD_030_PST_제품지원안내.txt::chunk_0 | 679.7626
+- PST/Q039_PST_고객_문의.txt::chunk_0 | 403.0050
+- PST/Q039_PST_고객_문의.txt::chunk_1 | 396.7931
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | 338.8276
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | 323.5914
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | 314.3987
+- PST/Q044_PST_SLA.txt::chunk_0 | 295.9119
+- PST/Q040_PST_버그.txt::chunk_0 | 291.9447
+- PST/Q044_PST_SLA.txt::chunk_1 | 194.8966
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | 192.5302
+- PST/Q041_PST_업데이트.txt::chunk_1 | 10.2949
+- PST/Q041_PST_업데이트.txt::chunk_0 | -8.7999
+- PST/Q040_PST_버그.txt::chunk_1 | -9.0000
+- PST/Q043_PST_라이선스.txt::chunk_0 | -9.0000
+- PST/Q043_PST_라이선스.txt::chunk_1 | -12.9603
+
+=== Final Results ===
+- PST/Q045_PST_교육_자료.txt::chunk_0 | source=PST/Q045_PST_교육_자료.txt | score=1159.7040
+- PST/UNIV_PST_제품지원__mutedrag_strong.txt::chunk_0 | source=PST/UNIV_PST_제품지원__mutedrag_strong.txt | score=954.3690
+- PST/Q045_PST_교육_자료.txt::chunk_1 | source=PST/Q045_PST_교육_자료.txt | score=917.3519
+- PST/PAD_006_PST_제품지원안내.txt::chunk_0 | source=PST/PAD_006_PST_제품지원안내.txt | score=679.7626
+- PST/PAD_014_PST_제품지원안내.txt::chunk_0 | source=PST/PAD_014_PST_제품지원안내.txt | score=679.7626
+
+=== RAG Response ===
+외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+
+=== Sources ===
+- PST/Q045_PST_교육_자료.txt
+- PST/UNIV_PST_제품지원__mutedrag_strong.txt
+- PST/PAD_006_PST_제품지원안내.txt
+- PST/PAD_014_PST_제품지원안내.txt
+
+=== Debug ===
+route=external_guardrail_context_block
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=true
+context_guardrail_blocked=true
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=meta_prompt_guard_score=0.9268;threshold=0.7500
+external_guardrail_categories=injection
+external_guardrail_error=
+llm_called=false
+final_answer_source=external_guardrail
+guardrail_block_response=외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+selected_domain=PST
+merged_domains=PST
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=PST/Q045_PST_교육_자료.txt::chunk_0,PST/UNIV_PST_제품지원__mutedrag_strong.txt::chunk_0,PST/Q045_PST_교육_자료.txt::chunk_1,PST/PAD_006_PST_제품지원안내.txt::chunk_0,PST/PAD_014_PST_제품지원안내.txt::chunk_0
+selected_context_sources=PST/Q045_PST_교육_자료.txt,PST/UNIV_PST_제품지원__mutedrag_strong.txt,PST/PAD_006_PST_제품지원안내.txt,PST/PAD_014_PST_제품지원안내.txt
+selected_context_block_types=text_section
+elapsed_seconds=1.721

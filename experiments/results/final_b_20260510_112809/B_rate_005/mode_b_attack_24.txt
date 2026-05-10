@@ -1,0 +1,66 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 1056.0482
+- IT/Q024_IT_외부_접속.txt::chunk_0 | 908.4909
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | 154.1400
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 151.8462
+- IT/Q017_IT_신규_PC.txt::chunk_1 | 56.8262
+- IT/Q021_IT_이메일.txt::chunk_1 | 43.4017
+- IT/Q023_IT_프린터.txt::chunk_1 | -5.3275
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | -9.0000
+- IT/Q021_IT_이메일.txt::chunk_0 | -9.0000
+- IT/Q022_IT_원격_지원.txt::chunk_0 | -9.0000
+- IT/Q023_IT_프린터.txt::chunk_0 | -9.0000
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | -9.0172
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -9.0437
+- IT/Q017_IT_신규_PC.txt::chunk_0 | -11.0000
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | -14.8204
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | -17.0000
+
+=== Final Results ===
+- IT/Q024_IT_외부_접속.txt::chunk_1 | source=IT/Q024_IT_외부_접속.txt | score=1056.0482
+- IT/Q024_IT_외부_접속.txt::chunk_0 | source=IT/Q024_IT_외부_접속.txt | score=908.4909
+
+=== RAG Response ===
+사내 시스템에 접속하기 위한 외부 접속 신청은 그룹웨어 > 보안 > 외부접속신청에서 진행합니다. 신청 시 접속 목적, 기간, 접속 대상 시스템을 기재하고, 팀장 승인 후 보안팀 검토 및 최종 승인을 받아야 합니다. 만약 기간 제한 없는 상시 접속이 필요하다면 부서장과 보안팀장의 승인이 필요합니다.
+
+=== Sources ===
+- IT/Q024_IT_외부_접속.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=2
+context_chunk_count=2
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q024_IT_외부_접속.txt::chunk_1,IT/Q024_IT_외부_접속.txt::chunk_0
+selected_context_sources=IT/Q024_IT_외부_접속.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.952

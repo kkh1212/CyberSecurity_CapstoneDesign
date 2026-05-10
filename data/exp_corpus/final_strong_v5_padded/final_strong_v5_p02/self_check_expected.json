@@ -1,0 +1,12 @@
+{
+  "name": "final_strong_v5_p02",
+  "path": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v5_padded/final_strong_v5_p02",
+  "queries": 60,
+  "fixed_benign_chunks": 120,
+  "fixed_attack_chunks": 8,
+  "padding_chunks": 272,
+  "actual_total_chunks_expected": 400,
+  "target_attack_ratio": 0.02,
+  "actual_attack_ratio_expected": 0.02,
+  "ratio_percent": 2.0
+}

@@ -221,13 +221,21 @@ def detect_requested_fields(query: str) -> List[str]:
 def extract_document_hints(query: str) -> List[str]:
     hints: List[str] = []
     seen = set()
+    explicit_multi_signal = bool(
+        re.search(r"\ube44\uad50|\ucc28\uc774|\ub2e4\ub978\uc9c0|\uac01\uac01|\ud568\uaed8\s*\ubcf4\uace0|\uc885\ud569", query)
+        or re.search(r"\bvs\b|[/&]", query, flags=re.IGNORECASE)
+    )
 
     def split_hint_candidates(text: str) -> List[str]:
         text = normalize_text(text)
         if not text:
             return []
 
-        parts = re.split(r"\s*(?:와|과|및|,|/|&|\bvs\b)\s*", text, flags=re.IGNORECASE)
+        delimiter_pattern = r"\s*(?:/|&|\bvs\b)\s*"
+        if explicit_multi_signal:
+            delimiter_pattern = r"\s*(?:\uc640|\uacfc|\ubc0f|/|&|\bvs\b)\s*"
+
+        parts = re.split(delimiter_pattern, text, flags=re.IGNORECASE)
         split_parts: List[str] = []
         for part in parts:
             candidate = normalize_keyword(part)
@@ -253,12 +261,12 @@ def extract_document_hints(query: str) -> List[str]:
             seen.add(hint)
             hints.append(hint)
 
-    for match in re.finditer(r"([가-힣A-Za-z0-9\s]+?)\s*문서", query):
+    for match in re.finditer(r"([\uac00-\ud7a3A-Za-z0-9\s]+?)\s*\ubb38\uc11c", query):
         append_hint(match.group(1))
 
     for match in DOCUMENT_TITLE_PATTERN.finditer(query):
         candidate = normalize_text(match.group(1))
-        candidate = re.sub(r"(기준으로|기준|바탕으로|함께 보고|함께)$", "", candidate).strip()
+        candidate = re.sub(r"(\uae30\uc900\uc73c\ub85c|\uae30\uc900|\ubc14\ud0d5\uc73c\ub85c|\ud568\uaed8 \ubcf4\uace0|\ud568\uaed8)$", "", candidate).strip()
         append_hint(candidate)
 
     return hints
@@ -317,10 +325,15 @@ def build_query_profile(query: str) -> QueryProfile:
     compare_requested = any(keyword in normalized_query for keyword in COMPARE_KEYWORDS)
     info_requested = any(keyword in normalized_query for keyword in INFO_KEYWORDS)
     document_hints = extract_document_hints(normalized_query)
-    multi_document_requested = len(document_hints) >= 2
+    explicit_multi_document_requested = bool(
+        compare_requested
+        or synthesis_requested
+        or re.search(r"\ud568\uaed8\s*\ubcf4\uace0|\uc885\ud569|\bvs\b|[/&]", normalized_query, flags=re.IGNORECASE)
+    )
+    multi_document_requested = len(document_hints) >= 2 and explicit_multi_document_requested
     compare_entities = extract_compare_entities(normalized_query, requested_fields, document_hints)
 
-    if len(compare_entities) >= 2:
+    if len(compare_entities) >= 2 and (compare_requested or multi_document_requested):
         compare_requested = True
 
     tokens = tokenize_keywords(normalized_query)

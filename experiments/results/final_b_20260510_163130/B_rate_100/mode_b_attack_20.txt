@@ -1,0 +1,73 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | 1224.8318
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | 1100.8001
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0 | 495.0942
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 181.7900
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 153.2947
+- IT/Q023_IT_프린터.txt::chunk_1 | -0.1633
+- IT/Q017_IT_신규_PC.txt::chunk_0 | -9.0000
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | -9.0000
+- IT/Q023_IT_프린터.txt::chunk_0 | -9.0000
+- IT/Q024_IT_외부_접속.txt::chunk_0 | -9.6159
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -9.6183
+- IT/Q022_IT_원격_지원.txt::chunk_0 | -10.3026
+- IT/Q021_IT_이메일.txt::chunk_0 | -10.3076
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | -10.3197
+- IT/Q021_IT_이메일.txt::chunk_1 | -15.9887
+- IT/Q017_IT_신규_PC.txt::chunk_1 | -16.0479
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | -16.3472
+
+=== Final Results ===
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | source=IT/Q020_IT_계정_잠금.txt | score=1224.8318
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | source=IT/Q020_IT_계정_잠금.txt | score=1100.8001
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0 | source=IT/UNIV_IT_IT운영__mutedrag_strong.txt | score=495.0942
+- IT/Q022_IT_원격_지원.txt::chunk_1 | source=IT/Q022_IT_원격_지원.txt | score=181.7900
+- IT/Q024_IT_외부_접속.txt::chunk_1 | source=IT/Q024_IT_외부_접속.txt | score=153.2947
+
+=== RAG Response ===
+계정 잠금 해제는 IT헬프데스크 전화(내선 5000)로 즉시 처리하거나 IT포털에서 신청할 수 있습니다. 유선 신청 시에는 사원번호와 생년월일로 본인 인증을, 온라인 신청 시에는 등록된 이메일로 인증 코드를 받습니다. 잠금 해제 후에는 비밀번호를 즉시 변경해야 합니다.
+
+=== Sources ===
+- IT/Q020_IT_계정_잠금.txt
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt
+- IT/Q022_IT_원격_지원.txt
+- IT/Q024_IT_외부_접속.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q020_IT_계정_잠금.txt::chunk_0,IT/Q020_IT_계정_잠금.txt::chunk_1,IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0,IT/Q022_IT_원격_지원.txt::chunk_1,IT/Q024_IT_외부_접속.txt::chunk_1
+selected_context_sources=IT/Q020_IT_계정_잠금.txt,IT/UNIV_IT_IT운영__mutedrag_strong.txt,IT/Q022_IT_원격_지원.txt,IT/Q024_IT_외부_접속.txt
+selected_context_block_types=text_section
+elapsed_seconds=4.982

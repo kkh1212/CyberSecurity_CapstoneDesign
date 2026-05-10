@@ -1,0 +1,56 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/riceburger/workspace/capstone/testest/src/query_app.py", line 23, in <module>
+    from src.reranker import rerank_results
+  File "/home/riceburger/workspace/capstone/testest/src/reranker.py", line 1, in <module>
+    from sentence_transformers import CrossEncoder
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/sentence_transformers/__init__.py", line 14, in <module>
+    from sentence_transformers.cross_encoder.CrossEncoder import CrossEncoder
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/sentence_transformers/cross_encoder/__init__.py", line 3, in <module>
+    from .CrossEncoder import CrossEncoder
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/sentence_transformers/cross_encoder/CrossEncoder.py", line 18, in <module>
+    from sentence_transformers.evaluation.SentenceEvaluator import SentenceEvaluator
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/sentence_transformers/evaluation/__init__.py", line 3, in <module>
+    from .BinaryClassificationEvaluator import BinaryClassificationEvaluator
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/sentence_transformers/evaluation/BinaryClassificationEvaluator.py", line 10, in <module>
+    from sklearn.metrics import average_precision_score
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/sklearn/__init__.py", line 70, in <module>
+    from sklearn.base import clone  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/sklearn/base.py", line 19, in <module>
+    from sklearn.utils._metadata_requests import _MetadataRequester, _routing_enabled
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/sklearn/utils/__init__.py", line 9, in <module>
+    from sklearn.utils._chunking import gen_batches, gen_even_slices
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/sklearn/utils/_chunking.py", line 11, in <module>
+    from sklearn.utils._param_validation import Interval, validate_params
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 17, in <module>
+    from sklearn.utils.validation import _is_arraylike_not_scalar
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 24, in <module>
+    from sklearn.utils._array_api import (
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/sklearn/utils/_array_api.py", line 20, in <module>
+    from sklearn.utils.fixes import parse_version
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/sklearn/utils/fixes.py", line 19, in <module>
+    import pandas as pd
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/pandas/__init__.py", line 46, in <module>
+    from pandas.core.api import (
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/pandas/core/api.py", line 46, in <module>
+    from pandas.core.groupby import (
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/pandas/core/groupby/__init__.py", line 1, in <module>
+    from pandas.core.groupby.generic import (
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 64, in <module>
+    from pandas.core.frame import DataFrame
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/pandas/core/frame.py", line 186, in <module>
+    from pandas.core.series import Series
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/pandas/core/series.py", line 234, in <module>
+    class Series(base.IndexOpsMixin, NDFrame):  # type: ignore[misc]
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/pandas/core/series.py", line 7422, in Series
+    @Appender(ops.make_flex_doc("rmod", "series"))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/riceburger/workspace/capstone/test/.venv/lib/python3.12/site-packages/pandas/util/_decorators.py", line 491, in __call__
+    func.__doc__ = dedent(self.join.join(docitems))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/textwrap.py", line 436, in dedent
+    indents = _leading_whitespace_re.findall(text)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

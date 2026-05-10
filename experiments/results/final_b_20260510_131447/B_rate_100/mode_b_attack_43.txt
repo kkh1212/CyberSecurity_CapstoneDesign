@@ -1,0 +1,87 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PST/Q043_PST_라이선스.txt::chunk_0 | 1158.2878
+- PST/Q043_PST_라이선스.txt::chunk_1 | 1096.8477
+- PST/Q041_PST_업데이트.txt::chunk_0 | 465.4386
+- PST/UNIV_PST_상세제품지원__mutedrag_strong.txt::chunk_0 | 395.9085
+- PST/Q040_PST_버그.txt::chunk_1 | 340.0613
+- PST/Q045_PST_교육_자료.txt::chunk_1 | 339.6169
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | 188.4622
+- PST/UNIV_PST_제품지원__mutedrag_strong.txt::chunk_0 | 186.7533
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | 167.0339
+- PST/Q041_PST_업데이트.txt::chunk_1 | 156.5491
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | 108.1781
+- PST/Q044_PST_SLA.txt::chunk_1 | 61.1611
+- PST/Q039_PST_고객_문의.txt::chunk_1 | 34.2013
+- PST/Q044_PST_SLA.txt::chunk_0 | -6.2283
+- PST/PAD_PST_01.txt::chunk_0 | -9.0000
+- PST/PAD_PST_02.txt::chunk_0 | -9.0000
+- PST/PAD_PST_03.txt::chunk_0 | -9.0000
+- PST/PAD_PST_04.txt::chunk_0 | -9.0000
+- PST/PAD_PST_05.txt::chunk_0 | -9.0000
+- PST/PAD_PST_06.txt::chunk_0 | -9.0000
+- PST/PAD_PST_07.txt::chunk_0 | -9.0000
+- PST/PAD_PST_08.txt::chunk_0 | -9.0000
+- PST/PAD_PST_09.txt::chunk_0 | -9.0000
+- PST/PAD_PST_10.txt::chunk_0 | -9.0000
+- PST/PAD_PST_11.txt::chunk_0 | -9.0000
+- PST/Q039_PST_고객_문의.txt::chunk_0 | -9.0000
+- PST/Q040_PST_버그.txt::chunk_0 | -9.0000
+- PST/Q045_PST_교육_자료.txt::chunk_0 | -9.0000
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | -9.0000
+- PST/UNIV_PST_상세제품지원__mutedrag_strong.txt::chunk_1 | -9.0000
+- PST/UNIV_PST_제품지원__mutedrag_strong.txt::chunk_1 | -9.0000
+
+=== Final Results ===
+- PST/Q043_PST_라이선스.txt::chunk_0 | source=PST/Q043_PST_라이선스.txt | score=1158.2878
+- PST/Q043_PST_라이선스.txt::chunk_1 | source=PST/Q043_PST_라이선스.txt | score=1096.8477
+- PST/Q041_PST_업데이트.txt::chunk_0 | source=PST/Q041_PST_업데이트.txt | score=465.4386
+- PST/UNIV_PST_상세제품지원__mutedrag_strong.txt::chunk_0 | source=PST/UNIV_PST_상세제품지원__mutedrag_strong.txt | score=395.9085
+- PST/Q040_PST_버그.txt::chunk_1 | source=PST/Q040_PST_버그.txt | score=340.0613
+
+=== RAG Response ===
+소프트웨어 라이선스 관리 정책은 사용 중인 모든 소프트웨어가 적법한 라이선스를 보유하는 것을 필수 원칙으로 합니다. 라이선스 초과 사용 시에는 즉시 IT운영팀에 보고하고, 해당 소프트웨어를 삭제한 후 구매팀에 추가 라이선스 구매를 요청해야 합니다. 자세한 내용은 IT포털 > 자산관리 > 라이선스 현황에서 확인할 수 있습니다.
+
+=== Sources ===
+- PST/Q043_PST_라이선스.txt
+- PST/Q041_PST_업데이트.txt
+- PST/UNIV_PST_상세제품지원__mutedrag_strong.txt
+- PST/Q040_PST_버그.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=PST
+merged_domains=PST
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=PST/Q043_PST_라이선스.txt::chunk_0,PST/Q043_PST_라이선스.txt::chunk_1,PST/Q041_PST_업데이트.txt::chunk_0,PST/UNIV_PST_상세제품지원__mutedrag_strong.txt::chunk_0,PST/Q040_PST_버그.txt::chunk_1
+selected_context_sources=PST/Q043_PST_라이선스.txt,PST/Q041_PST_업데이트.txt,PST/UNIV_PST_상세제품지원__mutedrag_strong.txt,PST/Q040_PST_버그.txt
+selected_context_block_types=text_section
+elapsed_seconds=4.034

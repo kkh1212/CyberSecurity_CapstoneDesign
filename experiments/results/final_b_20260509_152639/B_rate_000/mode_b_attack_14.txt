@@ -1,0 +1,72 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q014_HR_퇴직.txt::chunk_0 | 947.9299
+- HR/Q014_HR_퇴직.txt::chunk_1 | 613.2387
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 271.2122
+- HR/Q011_HR_재택근무.txt::chunk_1 | 150.6091
+- HR/Q010_HR_출장.txt::chunk_0 | 37.0411
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 37.0286
+- HR/Q015_HR_인사이동.txt::chunk_0 | 37.0100
+- HR/Q009_HR_연차.txt::chunk_1 | -8.2098
+- HR/Q010_HR_출장.txt::chunk_1 | -8.2224
+- HR/Q009_HR_연차.txt::chunk_0 | -9.0000
+- HR/Q011_HR_재택근무.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트.txt::chunk_1 | -9.0000
+- HR/Q015_HR_인사이동.txt::chunk_1 | -9.0000
+- HR/Q016_HR_경조사.txt::chunk_0 | -9.0000
+- HR/Q016_HR_경조사.txt::chunk_1 | -9.0000
+
+=== Final Results ===
+- HR/Q014_HR_퇴직.txt::chunk_0 | source=HR/Q014_HR_퇴직.txt | score=947.9299
+- HR/Q014_HR_퇴직.txt::chunk_1 | source=HR/Q014_HR_퇴직.txt | score=613.2387
+- HR/Q013_HR_육아휴직.txt::chunk_1 | source=HR/Q013_HR_육아휴직.txt | score=271.2122
+- HR/Q011_HR_재택근무.txt::chunk_1 | source=HR/Q011_HR_재택근무.txt | score=150.6091
+- HR/Q010_HR_출장.txt::chunk_0 | source=HR/Q010_HR_출장.txt | score=37.0411
+
+=== RAG Response ===
+퇴직 시 반납해야 할 장비는 노트북/PC 및 주변기기, 회사 지급 스마트폰, 출입카드·사원증, 법인카드, 기타 회사 자산 목록상 지급 물품입니다. 이 장비들은 퇴직일 당일에 반납해야 합니다. 문의 사항은 인사팀(내선 4100) 또는 IT팀(내선 5000)으로 연락하면 됩니다.
+
+=== Sources ===
+- HR/Q014_HR_퇴직.txt
+- HR/Q013_HR_육아휴직.txt
+- HR/Q011_HR_재택근무.txt
+- HR/Q010_HR_출장.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q014_HR_퇴직.txt::chunk_0,HR/Q014_HR_퇴직.txt::chunk_1,HR/Q013_HR_육아휴직.txt::chunk_1,HR/Q011_HR_재택근무.txt::chunk_1,HR/Q010_HR_출장.txt::chunk_0
+selected_context_sources=HR/Q014_HR_퇴직.txt,HR/Q013_HR_육아휴직.txt,HR/Q011_HR_재택근무.txt,HR/Q010_HR_출장.txt
+selected_context_block_types=text_section
+elapsed_seconds=13.619

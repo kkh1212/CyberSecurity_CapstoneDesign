@@ -1,0 +1,2 @@
+mode,query_type,metric,total_queries,dos_count,retrieval_hit_count,context_hit_count,context_hit_dos_count,asr,asr_pct,retrieval_ir,retrieval_ir_pct,context_ir,context_ir_pct,i_asr,i_asr_pct
+mode_b,attack,ASR,60,3,16,12,3,0.0500,5.0%,0.2667,26.7%,0.2000,20.0%,0.2500,25.0%

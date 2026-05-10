@@ -1,0 +1,70 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- LEG/Q033_LEG_개인정보.txt::chunk_0 | 601.6003
+- LEG/Q033_LEG_개인정보.txt::chunk_1 | 429.6640
+- LEG/Q036_LEG_내부고발.txt::chunk_1 | 166.4110
+- LEG/Q037_LEG_NDA.txt::chunk_1 | 162.5480
+- LEG/Q037_LEG_NDA.txt::chunk_0 | 105.0206
+- LEG/UNIV_LEG_법무컴플라이언스__mutedrag_strong.txt::chunk_0 | 62.9231
+- LEG/Q032_LEG_계약서.txt::chunk_1 | 58.7050
+- LEG/Q038_LEG_법적_분쟁.txt::chunk_1 | -7.4712
+- LEG/Q032_LEG_계약서.txt::chunk_0 | -9.0000
+- LEG/Q034_LEG_직무_발명.txt::chunk_0 | -9.0000
+- LEG/Q034_LEG_직무_발명.txt::chunk_1 | -9.0000
+- LEG/Q035_LEG_공정거래.txt::chunk_0 | -9.0000
+- LEG/Q035_LEG_공정거래.txt::chunk_1 | -9.0000
+- LEG/Q036_LEG_내부고발.txt::chunk_0 | -9.0000
+- LEG/Q038_LEG_법적_분쟁.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- LEG/Q033_LEG_개인정보.txt::chunk_0 | source=LEG/Q033_LEG_개인정보.txt | score=601.6003
+- LEG/Q033_LEG_개인정보.txt::chunk_1 | source=LEG/Q033_LEG_개인정보.txt | score=429.6640
+- LEG/Q036_LEG_내부고발.txt::chunk_1 | source=LEG/Q036_LEG_내부고발.txt | score=166.4110
+- LEG/Q037_LEG_NDA.txt::chunk_1 | source=LEG/Q037_LEG_NDA.txt | score=162.5480
+- LEG/Q037_LEG_NDA.txt::chunk_0 | source=LEG/Q037_LEG_NDA.txt | score=105.0206
+
+=== RAG Response ===
+고객 개인정보 처리 동의서 표준 양식은 내부 문서 포털(docs.company.com) > 개인정보 > 표준 동의서 양식에서 받을 수 있습니다. 사용 방법은 해당 양식을 다운로드하여 수집 항목, 목적, 보유기간 등을 기입한 후 개인정보보호팀의 검토를 받는 것입니다. 문의사항은 개인정보보호팀(privacy@company.com / 내선 5300)으로 연락할 수 있습니다.
+
+=== Sources ===
+- LEG/Q033_LEG_개인정보.txt
+- LEG/Q036_LEG_내부고발.txt
+- LEG/Q037_LEG_NDA.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=LEG
+merged_domains=LEG
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=LEG/Q033_LEG_개인정보.txt::chunk_0,LEG/Q033_LEG_개인정보.txt::chunk_1,LEG/Q036_LEG_내부고발.txt::chunk_1,LEG/Q037_LEG_NDA.txt::chunk_1,LEG/Q037_LEG_NDA.txt::chunk_0
+selected_context_sources=LEG/Q033_LEG_개인정보.txt,LEG/Q036_LEG_내부고발.txt,LEG/Q037_LEG_NDA.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.647

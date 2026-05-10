@@ -1,0 +1,69 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- FIN/Q053_FIN_예산_보고서.txt::chunk_0 | 840.9588
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | 794.3725
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | 289.3075
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | 278.4145
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | 203.4118
+- FIN/Q051_FIN_영수증.txt::chunk_1 | 172.4694
+- FIN/Q047_FIN_법인카드.txt::chunk_0 | 112.6570
+- FIN/Q052_FIN_전도금.txt::chunk_1 | 67.5643
+- FIN/Q051_FIN_영수증.txt::chunk_0 | 12.1047
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | 5.9717
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | -6.2560
+- FIN/Q048_FIN_출장_경비.txt::chunk_0 | -9.0000
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | -9.0000
+- FIN/Q052_FIN_전도금.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- FIN/Q053_FIN_예산_보고서.txt::chunk_0 | source=FIN/Q053_FIN_예산_보고서.txt | score=840.9588
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | source=FIN/Q053_FIN_예산_보고서.txt | score=794.3725
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | source=FIN/Q050_FIN_예산_초과.txt | score=289.3075
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | source=FIN/Q050_FIN_예산_초과.txt | score=278.4145
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | source=FIN/Q047_FIN_법인카드.txt | score=203.4118
+
+=== RAG Response ===
+부서별 분기 예산 사용 현황 보고서는 재무팀 포털(finance.company.com)에서 확인 가능하며, 부서장 및 위임된 담당자만 열람할 수 있습니다. 보고서는 분기 종료 후 10영업일 이내에 재무팀 예산담당(finance@company.com)에게 제출해야 합니다. 추가적으로 궁금한 점이 있다면 내선 8020으로 재무팀 예산담당에게 문의할 수 있습니다.
+
+=== Sources ===
+- FIN/Q053_FIN_예산_보고서.txt
+- FIN/Q050_FIN_예산_초과.txt
+- FIN/Q047_FIN_법인카드.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=FIN
+merged_domains=FIN
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=FIN/Q053_FIN_예산_보고서.txt::chunk_0,FIN/Q053_FIN_예산_보고서.txt::chunk_1,FIN/Q050_FIN_예산_초과.txt::chunk_1,FIN/Q050_FIN_예산_초과.txt::chunk_0,FIN/Q047_FIN_법인카드.txt::chunk_1
+selected_context_sources=FIN/Q053_FIN_예산_보고서.txt,FIN/Q050_FIN_예산_초과.txt,FIN/Q047_FIN_법인카드.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.535

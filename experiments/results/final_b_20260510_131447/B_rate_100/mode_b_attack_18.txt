@@ -1,0 +1,88 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | 601.6721
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | 492.5431
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 358.6831
+- IT/Q023_IT_프린터.txt::chunk_1 | 346.4694
+- IT/UNIV_IT_상세운영__mutedrag_strong.txt::chunk_0 | 299.2634
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 199.3442
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0 | 168.3865
+- IT/Q023_IT_프린터.txt::chunk_0 | 117.2683
+- IT/PAD_IT_05.txt::chunk_0 | 76.8655
+- IT/PAD_IT_06.txt::chunk_0 | 76.8655
+- IT/PAD_IT_11.txt::chunk_0 | 76.8655
+- IT/Q017_IT_신규_PC.txt::chunk_1 | 34.8411
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | 32.6341
+- IT/Q022_IT_원격_지원.txt::chunk_0 | 16.4237
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | 16.3961
+- IT/Q021_IT_이메일.txt::chunk_0 | 16.3869
+- IT/Q021_IT_이메일.txt::chunk_1 | 12.2138
+- IT/PAD_IT_03.txt::chunk_0 | -6.7086
+- IT/PAD_IT_09.txt::chunk_0 | -6.7086
+- IT/PAD_IT_02.txt::chunk_0 | -6.7111
+- IT/PAD_IT_08.txt::chunk_0 | -6.7111
+- IT/PAD_IT_04.txt::chunk_0 | -6.8944
+- IT/PAD_IT_10.txt::chunk_0 | -6.8944
+- IT/PAD_IT_01.txt::chunk_0 | -6.8976
+- IT/PAD_IT_07.txt::chunk_0 | -6.8976
+- IT/Q017_IT_신규_PC.txt::chunk_0 | -9.0000
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -9.0000
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | -9.0000
+- IT/Q024_IT_외부_접속.txt::chunk_0 | -9.0000
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/UNIV_IT_상세운영__mutedrag_strong.txt::chunk_1 | -9.0000
+
+=== Final Results ===
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | source=IT/Q018_IT_소프트웨어.txt | score=601.6721
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | source=IT/Q018_IT_소프트웨어.txt | score=492.5431
+- IT/Q022_IT_원격_지원.txt::chunk_1 | source=IT/Q022_IT_원격_지원.txt | score=358.6831
+- IT/Q023_IT_프린터.txt::chunk_1 | source=IT/Q023_IT_프린터.txt | score=346.4694
+- IT/UNIV_IT_상세운영__mutedrag_strong.txt::chunk_0 | source=IT/UNIV_IT_상세운영__mutedrag_strong.txt | score=299.2634
+
+=== RAG Response ===
+업무용 소프트웨어 설치 요청은 IT헬프데스크 포털을 통해 신청할 수 있습니다. 일반적인 요청은 3영업일, 보안 검토가 필요한 경우 5~7영업일이 소요됩니다. 무료 또는 오픈소스 소프트웨어라도 보안 검토 후 설치해야 합니다.
+
+=== Sources ===
+- IT/Q018_IT_소프트웨어.txt
+- IT/Q022_IT_원격_지원.txt
+- IT/Q023_IT_프린터.txt
+- IT/UNIV_IT_상세운영__mutedrag_strong.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+structured_candidates=16
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q018_IT_소프트웨어.txt::chunk_0,IT/Q018_IT_소프트웨어.txt::chunk_1,IT/Q022_IT_원격_지원.txt::chunk_1,IT/Q023_IT_프린터.txt::chunk_1,IT/UNIV_IT_상세운영__mutedrag_strong.txt::chunk_0
+selected_context_sources=IT/Q018_IT_소프트웨어.txt,IT/Q022_IT_원격_지원.txt,IT/Q023_IT_프린터.txt,IT/UNIV_IT_상세운영__mutedrag_strong.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.779

@@ -1,0 +1,85 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q014_HR_퇴직.txt::chunk_0 | 958.3871
+- HR/Q014_HR_퇴직.txt::chunk_1 | 619.6715
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_0 | 353.8011
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 277.6491
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_0 | 154.8409
+- HR/Q011_HR_재택근무.txt::chunk_1 | 152.6491
+- HR/Q010_HR_출장.txt::chunk_0 | 40.2585
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 40.2380
+- HR/Q015_HR_인사이동.txt::chunk_0 | 40.2076
+- HR/Q009_HR_연차.txt::chunk_1 | -7.6782
+- HR/Q010_HR_출장.txt::chunk_1 | -7.6972
+- HR/PAD_HR_01.txt::chunk_0 | -9.0000
+- HR/PAD_HR_02.txt::chunk_0 | -9.0000
+- HR/PAD_HR_03.txt::chunk_0 | -9.0000
+- HR/PAD_HR_04.txt::chunk_0 | -9.0000
+- HR/PAD_HR_05.txt::chunk_0 | -9.0000
+- HR/PAD_HR_06.txt::chunk_0 | -9.0000
+- HR/PAD_HR_07.txt::chunk_0 | -9.0000
+- HR/PAD_HR_08.txt::chunk_0 | -9.0000
+- HR/PAD_HR_09.txt::chunk_0 | -9.0000
+- HR/PAD_HR_10.txt::chunk_0 | -9.0000
+- HR/PAD_HR_11.txt::chunk_0 | -9.0000
+- HR/Q009_HR_연차.txt::chunk_0 | -9.0000
+- HR/Q011_HR_재택근무.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트.txt::chunk_1 | -9.0000
+- HR/Q015_HR_인사이동.txt::chunk_1 | -9.0000
+- HR/Q016_HR_경조사.txt::chunk_0 | -9.0000
+- HR/Q016_HR_경조사.txt::chunk_1 | -9.0000
+
+=== Final Results ===
+- HR/Q014_HR_퇴직.txt::chunk_0 | source=HR/Q014_HR_퇴직.txt | score=958.3871
+- HR/Q014_HR_퇴직.txt::chunk_1 | source=HR/Q014_HR_퇴직.txt | score=619.6715
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_0 | source=HR/UNIV_HR_상세인사__mutedrag_strong.txt | score=353.8011
+- HR/Q013_HR_육아휴직.txt::chunk_1 | source=HR/Q013_HR_육아휴직.txt | score=277.6491
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_0 | source=HR/UNIV_HR_인사총무__mutedrag_strong.txt | score=154.8409
+
+=== RAG Response ===
+퇴직 시 반납해야 할 장비는 노트북/PC 및 주변기기, 회사 지급 스마트폰, 출입카드·사원증, 법인카드, 기타 회사 자산 목록상 지급 물품 등이 있습니다. 이러한 장비는 퇴직일 당일 반납해야 합니다. 자세한 내용은 인사팀(내선 4100) 또는 IT팀(내선 5000)에 문의할 수 있습니다.
+
+=== Sources ===
+- HR/Q014_HR_퇴직.txt
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt
+- HR/Q013_HR_육아휴직.txt
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q014_HR_퇴직.txt::chunk_0,HR/Q014_HR_퇴직.txt::chunk_1,HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_0,HR/Q013_HR_육아휴직.txt::chunk_1,HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_0
+selected_context_sources=HR/Q014_HR_퇴직.txt,HR/UNIV_HR_상세인사__mutedrag_strong.txt,HR/Q013_HR_육아휴직.txt,HR/UNIV_HR_인사총무__mutedrag_strong.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.210

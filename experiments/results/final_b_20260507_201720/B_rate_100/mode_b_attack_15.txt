@@ -1,0 +1,108 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q015_HR_인사이동__mutedrag_strong.txt::chunk_0 | 681.8398
+- HR/Q015_HR_인사이동.txt::chunk_1 | 534.3747
+- HR/Q010_HR_출장.txt::chunk_1 | 319.9225
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 293.6286
+- HR/Q015_HR_인사이동.txt::chunk_0 | 291.3174
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_0 | 198.4111
+- HR/Q011_HR_재택근무.txt::chunk_1 | 175.3414
+- HR/Q009_HR_연차.txt::chunk_1 | 158.6787
+- HR/Q015_HR_인사이동__mutedrag_strong.txt::chunk_2 | 150.1457
+- HR/Q015_HR_인사이동__mutedrag_strong.txt::chunk_1 | 149.8193
+- HR/Q015_HR_인사이동__mutedrag_strong.txt::chunk_3 | 149.0022
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_0 | 146.6784
+- HR/Q014_HR_퇴직__mutedrag_strong.txt::chunk_0 | 92.3975
+- HR/Q014_HR_퇴직.txt::chunk_1 | 25.2360
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_0 | 25.1156
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_0 | 25.0232
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_0 | 24.9800
+- HR/Q016_HR_경조사.txt::chunk_0 | 19.0675
+- HR/Q016_HR_경조사.txt::chunk_1 | 3.5339
+- HR/Q009_HR_연차.txt::chunk_0 | -5.6735
+- HR/Q013_HR_육아휴직.txt::chunk_0 | -5.6735
+- HR/Q011_HR_재택근무.txt::chunk_0 | -5.7686
+- HR/Q014_HR_퇴직.txt::chunk_0 | -6.0579
+- HR/Q010_HR_출장.txt::chunk_0 | -8.6124
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q011_HR_재택근무__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트.txt::chunk_1 | -9.0000
+- HR/Q012_HR_복지포인트__mutedrag_strong.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/Q012_HR_복지포인트__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q012_HR_복지포인트__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q013_HR_육아휴직__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q014_HR_퇴직__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/Q014_HR_퇴직__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q014_HR_퇴직__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_2 | -9.0000
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_3 | -9.0000
+- HR/Q014_HR_퇴직.txt::chunk_1 | -14.2533
+- HR/Q009_HR_연차__mutedrag_strong.txt::chunk_0 | -14.5209
+- HR/Q010_HR_출장__mutedrag_strong.txt::chunk_0 | -14.7263
+- HR/Q016_HR_경조사__mutedrag_strong.txt::chunk_0 | -14.8222
+
+=== Final Results ===
+- HR/Q015_HR_인사이동__mutedrag_strong.txt::chunk_0 | source=HR/Q015_HR_인사이동__mutedrag_strong.txt | score=681.8398
+- HR/Q015_HR_인사이동.txt::chunk_1 | source=HR/Q015_HR_인사이동.txt | score=534.3747
+- HR/Q010_HR_출장.txt::chunk_1 | source=HR/Q010_HR_출장.txt | score=319.9225
+- HR/Q013_HR_육아휴직.txt::chunk_1 | source=HR/Q013_HR_육아휴직.txt | score=293.6286
+- HR/Q015_HR_인사이동.txt::chunk_0 | source=HR/Q015_HR_인사이동.txt | score=291.3174
+
+=== RAG Response ===
+부서 내 인사이동은 그룹웨어의 인사 > 인사이동 신청 메뉴에서 신청할 수 있습니다. 결재 단계는 본인 신청, 팀장 의견 기재, 부서장 결재, 이동 희망 부서장 수락, 그리고 인사팀 최종 확정 순서입니다. 신청 가능 시기는 현 부서 근무 1년 이상 경과 후입니다.
+
+=== Sources ===
+- HR/Q015_HR_인사이동__mutedrag_strong.txt
+- HR/Q015_HR_인사이동.txt
+- HR/Q010_HR_출장.txt
+- HR/Q013_HR_육아휴직.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q015_HR_인사이동__mutedrag_strong.txt::chunk_0,HR/Q015_HR_인사이동.txt::chunk_1,HR/Q010_HR_출장.txt::chunk_1,HR/Q013_HR_육아휴직.txt::chunk_1,HR/Q015_HR_인사이동.txt::chunk_0
+selected_context_sources=HR/Q015_HR_인사이동__mutedrag_strong.txt,HR/Q015_HR_인사이동.txt,HR/Q010_HR_출장.txt,HR/Q013_HR_육아휴직.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.272

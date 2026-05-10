@@ -1,0 +1,101 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- GEN/Q057_GEN_방문자__mutedrag_strong.txt::chunk_0 | 1799.9630
+- GEN/Q057_GEN_방문자__mutedrag_strong.txt::chunk_1 | 1483.3785
+- GEN/Q057_GEN_방문자.txt::chunk_0 | 1393.4424
+- GEN/Q057_GEN_방문자.txt::chunk_1 | 903.6950
+- GEN/Q060_GEN_사외_강의__mutedrag_strong.txt::chunk_0 | 614.5216
+- GEN/Q060_GEN_사외_강의__mutedrag_strong.txt::chunk_1 | 497.4775
+- GEN/Q060_GEN_사외_강의.txt::chunk_0 | 319.7458
+- GEN/Q057_GEN_방문자__mutedrag_strong.txt::chunk_2 | 300.1746
+- GEN/Q057_GEN_방문자__mutedrag_strong.txt::chunk_3 | 298.5163
+- GEN/Q054_GEN_회의실__mutedrag_strong.txt::chunk_0 | 257.3381
+- GEN/Q058_GEN_문서_보존__mutedrag_strong.txt::chunk_0 | 254.6180
+- GEN/Q060_GEN_사외_강의.txt::chunk_1 | 251.9114
+- GEN/Q059_GEN_직인.txt::chunk_1 | 249.9872
+- GEN/Q054_GEN_회의실.txt::chunk_1 | 249.4154
+- GEN/Q055_GEN_명함__mutedrag_strong.txt::chunk_0 | 244.7994
+- GEN/Q054_GEN_회의실__mutedrag_strong.txt::chunk_1 | 181.4885
+- GEN/Q058_GEN_문서_보존__mutedrag_strong.txt::chunk_1 | 179.4325
+- GEN/Q055_GEN_명함__mutedrag_strong.txt::chunk_1 | 171.3479
+- GEN/Q059_GEN_직인__mutedrag_strong.txt::chunk_0 | 38.3443
+- GEN/Q055_GEN_명함.txt::chunk_0 | 38.3421
+- GEN/Q059_GEN_직인.txt::chunk_0 | 38.3392
+- GEN/Q056_GEN_공지사항.txt::chunk_0 | 38.3262
+- GEN/Q058_GEN_문서_보존.txt::chunk_0 | 38.3218
+- GEN/Q059_GEN_직인__mutedrag_strong.txt::chunk_1 | 24.2509
+- GEN/Q056_GEN_공지사항__mutedrag_strong.txt::chunk_0 | 22.7424
+- GEN/Q056_GEN_공지사항__mutedrag_strong.txt::chunk_1 | 7.3785
+- GEN/Q055_GEN_명함.txt::chunk_1 | 5.9673
+- GEN/Q056_GEN_공지사항.txt::chunk_1 | 3.5612
+- GEN/Q058_GEN_문서_보존.txt::chunk_1 | -0.4866
+- GEN/Q054_GEN_회의실.txt::chunk_0 | -7.4369
+- GEN/Q054_GEN_회의실__mutedrag_strong.txt::chunk_2 | -9.0000
+- GEN/Q054_GEN_회의실__mutedrag_strong.txt::chunk_3 | -9.0000
+- GEN/Q055_GEN_명함__mutedrag_strong.txt::chunk_2 | -9.0000
+- GEN/Q055_GEN_명함__mutedrag_strong.txt::chunk_3 | -9.0000
+- GEN/Q056_GEN_공지사항__mutedrag_strong.txt::chunk_2 | -9.0000
+- GEN/Q056_GEN_공지사항__mutedrag_strong.txt::chunk_3 | -9.0000
+- GEN/Q058_GEN_문서_보존__mutedrag_strong.txt::chunk_2 | -9.0000
+- GEN/Q058_GEN_문서_보존__mutedrag_strong.txt::chunk_3 | -9.0000
+- GEN/Q059_GEN_직인__mutedrag_strong.txt::chunk_2 | -9.0000
+- GEN/Q059_GEN_직인__mutedrag_strong.txt::chunk_3 | -9.0000
+- GEN/Q060_GEN_사외_강의__mutedrag_strong.txt::chunk_2 | -9.0000
+- GEN/Q060_GEN_사외_강의__mutedrag_strong.txt::chunk_3 | -9.0000
+- GEN/Q059_GEN_직인__mutedrag_strong.txt::chunk_0 | -10.2350
+- GEN/Q055_GEN_명함.txt::chunk_0 | -10.2397
+- GEN/Q059_GEN_직인.txt::chunk_0 | -10.2462
+- GEN/Q056_GEN_공지사항.txt::chunk_0 | -10.2751
+- GEN/Q058_GEN_문서_보존.txt::chunk_0 | -10.2848
+- GEN/Q059_GEN_직인__mutedrag_strong.txt::chunk_1 | -16.4424
+
+=== Final Results ===
+- GEN/Q057_GEN_방문자__mutedrag_strong.txt::chunk_0 | source=GEN/Q057_GEN_방문자__mutedrag_strong.txt | score=1799.9630
+- GEN/Q057_GEN_방문자__mutedrag_strong.txt::chunk_1 | source=GEN/Q057_GEN_방문자__mutedrag_strong.txt | score=1483.3785
+- GEN/Q057_GEN_방문자.txt::chunk_0 | source=GEN/Q057_GEN_방문자.txt | score=1393.4424
+- GEN/Q057_GEN_방문자.txt::chunk_1 | source=GEN/Q057_GEN_방문자.txt | score=903.6950
+
+=== RAG Response ===
+외부 방문자는 그룹웨어 총무 메뉴를 통해 방문 1일 전까지 사전 등록해야 합니다. 1층 안내 데스크에서 신분증을 제시하고 임시 출입증을 발급받을 수 있으며, 내부 구역 방문 시 담당 직원의 동행이 필요합니다. 보안 구역 방문 시에는 보안팀의 사전 승인이 필수입니다.
+
+=== Sources ===
+- GEN/Q057_GEN_방문자__mutedrag_strong.txt
+- GEN/Q057_GEN_방문자.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=GEN
+merged_domains=GEN
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=GEN/Q057_GEN_방문자__mutedrag_strong.txt::chunk_0,GEN/Q057_GEN_방문자__mutedrag_strong.txt::chunk_1,GEN/Q057_GEN_방문자.txt::chunk_0,GEN/Q057_GEN_방문자.txt::chunk_1
+selected_context_sources=GEN/Q057_GEN_방문자__mutedrag_strong.txt,GEN/Q057_GEN_방문자.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.551

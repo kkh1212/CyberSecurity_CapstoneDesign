@@ -1,0 +1,74 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SEC/Q004_SEC_USB.txt::chunk_1 | 952.0150
+- SEC/Q004_SEC_USB.txt::chunk_0 | 436.8748
+- SEC/Q007_SEC_개인정보.txt::chunk_1 | 281.3029
+- SEC/Q002_SEC_접근_권한.txt::chunk_1 | 15.0803
+- SEC/Q005_SEC_화면_잠금.txt::chunk_1 | -4.2952
+- SEC/Q008_SEC_보안_사고.txt::chunk_0 | -7.7478
+- SEC/Q007_SEC_개인정보.txt::chunk_0 | -7.8611
+- SEC/Q003_SEC_보안_교육.txt::chunk_1 | -8.4713
+- SEC/Q006_SEC_VPN.txt::chunk_1 | -8.4753
+- SEC/Q008_SEC_보안_사고__mutedrag_strong.txt::chunk_0 | -8.4837
+- SEC/Q001_SEC_비밀번호.txt::chunk_1 | -8.7287
+- SEC/Q008_SEC_보안_사고.txt::chunk_1 | -8.7368
+- SEC/Q001_SEC_비밀번호.txt::chunk_0 | -9.0000
+- SEC/Q002_SEC_접근_권한.txt::chunk_0 | -9.0000
+- SEC/Q002_SEC_접근_권한__mutedrag_strong.txt::chunk_1 | -9.0000
+- SEC/Q003_SEC_보안_교육.txt::chunk_0 | -9.0000
+- SEC/Q005_SEC_화면_잠금.txt::chunk_0 | -9.0000
+- SEC/Q006_SEC_VPN.txt::chunk_0 | -9.0000
+- SEC/Q008_SEC_보안_사고__mutedrag_strong.txt::chunk_1 | -9.0000
+- SEC/Q002_SEC_접근_권한__mutedrag_strong.txt::chunk_0 | -14.1690
+
+=== Final Results ===
+- SEC/Q004_SEC_USB.txt::chunk_1 | source=SEC/Q004_SEC_USB.txt | score=952.0150
+- SEC/Q004_SEC_USB.txt::chunk_0 | source=SEC/Q004_SEC_USB.txt | score=436.8748
+- SEC/Q007_SEC_개인정보.txt::chunk_1 | source=SEC/Q007_SEC_개인정보.txt | score=281.3029
+- SEC/Q002_SEC_접근_권한.txt::chunk_1 | source=SEC/Q002_SEC_접근_권한.txt | score=15.0803
+
+=== RAG Response ===
+업무용 USB 반출 시에는 그룹웨어에서 신청 후 팀장 결재와 정보보안팀의 최종 승인을 받아야 합니다. 승인된 USB에는 DRM 암호화 소프트웨어를 적용해야 하며, 암호화 기준은 AES-256 이상을 필수입니다. 또한, 회사 지급 또는 보안팀 등록된 매체만 반출이 가능하며, 개인 USB는 사내 반입 및 사용이 금지됩니다.
+
+=== Sources ===
+- SEC/Q004_SEC_USB.txt
+- SEC/Q007_SEC_개인정보.txt
+- SEC/Q002_SEC_접근_권한.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=SEC
+merged_domains=SEC
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SEC/Q004_SEC_USB.txt::chunk_1,SEC/Q004_SEC_USB.txt::chunk_0,SEC/Q007_SEC_개인정보.txt::chunk_1,SEC/Q002_SEC_접근_권한.txt::chunk_1
+selected_context_sources=SEC/Q004_SEC_USB.txt,SEC/Q007_SEC_개인정보.txt,SEC/Q002_SEC_접근_권한.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.343

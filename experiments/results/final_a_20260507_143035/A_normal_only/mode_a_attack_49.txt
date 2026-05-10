@@ -1,0 +1,68 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | 901.6001
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | 450.4783
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | 344.4869
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | 223.2017
+- FIN/Q052_FIN_전도금.txt::chunk_1 | 85.0603
+- FIN/Q048_FIN_출장_경비.txt::chunk_0 | -7.4787
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | -7.4981
+- FIN/Q047_FIN_법인카드.txt::chunk_0 | -9.0000
+- FIN/Q051_FIN_영수증.txt::chunk_0 | -9.0000
+- FIN/Q051_FIN_영수증.txt::chunk_1 | -9.0000
+- FIN/Q052_FIN_전도금.txt::chunk_0 | -9.0000
+- FIN/Q053_FIN_예산_보고서.txt::chunk_0 | -9.0000
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | -12.7465
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | -13.3912
+
+=== Final Results ===
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | source=FIN/Q049_FIN_물품_구매.txt | score=901.6001
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | source=FIN/Q049_FIN_물품_구매.txt | score=450.4783
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | source=FIN/Q047_FIN_법인카드.txt | score=344.4869
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | source=FIN/Q050_FIN_예산_초과.txt | score=223.2017
+
+=== RAG Response ===
+사무용품 및 비품 구매 요청은 그룹웨어의 총무 > 물품구매신청 메뉴를 통해 신청할 수 있습니다. 구매 금액에 따라 결재 한도가 팀장, 부서장, 재무팀장의 결재를 필요로 하며, 50만원 이하의 긴급 구매는 팀장의 구두 승인 후 사후 결재가 가능합니다. 표준 구매 목록은 총무팀 포털에서 확인 가능하며, 결재 완료 후 3~5영업일 이내에 물품을 수령할 수 있습니다.
+
+=== Sources ===
+- FIN/Q049_FIN_물품_구매.txt
+- FIN/Q047_FIN_법인카드.txt
+- FIN/Q050_FIN_예산_초과.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=FIN
+merged_domains=FIN
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=FIN/Q049_FIN_물품_구매.txt::chunk_0,FIN/Q049_FIN_물품_구매.txt::chunk_1,FIN/Q047_FIN_법인카드.txt::chunk_1,FIN/Q050_FIN_예산_초과.txt::chunk_1
+selected_context_sources=FIN/Q049_FIN_물품_구매.txt,FIN/Q047_FIN_법인카드.txt,FIN/Q050_FIN_예산_초과.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.848

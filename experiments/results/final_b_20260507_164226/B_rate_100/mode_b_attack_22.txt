@@ -1,0 +1,101 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_0 | 1041.1947
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 810.5734
+- IT/Q022_IT_원격_지원.txt::chunk_0 | 599.6894
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_2 | 359.0976
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_1 | 358.7146
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_3 | 357.8807
+- IT/Q017_IT_신규_PC.txt::chunk_1 | 183.7525
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | 168.3499
+- IT/Q024_IT_외부_접속.txt::chunk_0 | 145.9469
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | 95.4728
+- IT/Q021_IT_이메일.txt::chunk_1 | 91.1776
+- IT/Q018_IT_소프트웨어__mutedrag_strong.txt::chunk_0 | 48.0839
+- IT/Q020_IT_계정_잠금__mutedrag_strong.txt::chunk_0 | 43.4526
+- IT/Q021_IT_이메일__mutedrag_strong.txt::chunk_0 | 39.4703
+- IT/Q023_IT_프린터.txt::chunk_1 | 26.2869
+- IT/Q023_IT_프린터__mutedrag_strong.txt::chunk_0 | 19.9308
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | 18.6302
+- IT/Q021_IT_이메일.txt::chunk_0 | 18.6027
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | 18.3386
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | 14.3860
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 8.8252
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_0 | 5.3120
+- IT/Q019_IT_네트워크_장애__mutedrag_strong.txt::chunk_0 | 4.5286
+- IT/Q024_IT_외부_접속__mutedrag_strong.txt::chunk_0 | 4.4156
+- IT/Q017_IT_신규_PC.txt::chunk_0 | -7.5641
+- IT/Q019_IT_네트워크_장애__mutedrag_strong.txt::chunk_2 | -7.5693
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_3 | -7.5849
+- IT/Q021_IT_이메일__mutedrag_strong.txt::chunk_3 | -7.5899
+- IT/Q023_IT_프린터__mutedrag_strong.txt::chunk_3 | -7.5899
+- IT/Q020_IT_계정_잠금__mutedrag_strong.txt::chunk_3 | -7.5950
+- IT/Q024_IT_외부_접속__mutedrag_strong.txt::chunk_3 | -7.5950
+- IT/Q018_IT_소프트웨어__mutedrag_strong.txt::chunk_3 | -7.6100
+- IT/Q019_IT_네트워크_장애__mutedrag_strong.txt::chunk_3 | -7.6149
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -7.6197
+- IT/Q023_IT_프린터.txt::chunk_0 | -7.6294
+- IT/Q023_IT_프린터__mutedrag_strong.txt::chunk_2 | -7.6707
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_1 | -7.6774
+- IT/Q024_IT_외부_접속__mutedrag_strong.txt::chunk_2 | -7.6774
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_2 | -7.6841
+- IT/Q021_IT_이메일__mutedrag_strong.txt::chunk_1 | -7.6841
+- IT/Q021_IT_이메일__mutedrag_strong.txt::chunk_2 | -7.6841
+- IT/Q023_IT_프린터__mutedrag_strong.txt::chunk_1 | -7.6841
+- IT/Q020_IT_계정_잠금__mutedrag_strong.txt::chunk_1 | -7.6907
+- IT/Q024_IT_외부_접속__mutedrag_strong.txt::chunk_1 | -7.6907
+- IT/Q018_IT_소프트웨어__mutedrag_strong.txt::chunk_2 | -7.6972
+- IT/Q020_IT_계정_잠금__mutedrag_strong.txt::chunk_2 | -7.7037
+- IT/Q018_IT_소프트웨어__mutedrag_strong.txt::chunk_1 | -7.7101
+- IT/Q019_IT_네트워크_장애__mutedrag_strong.txt::chunk_1 | -7.7164
+
+=== Final Results ===
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_0 | source=IT/Q022_IT_원격_지원__mutedrag_strong.txt | score=1041.1947
+- IT/Q022_IT_원격_지원.txt::chunk_1 | source=IT/Q022_IT_원격_지원.txt | score=810.5734
+- IT/Q022_IT_원격_지원.txt::chunk_0 | source=IT/Q022_IT_원격_지원.txt | score=599.6894
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_2 | source=IT/Q022_IT_원격_지원__mutedrag_strong.txt | score=359.0976
+
+=== RAG Response ===
+IT팀의 원격 지원은 전화(내선 5000), 채팅(사내 메신저 IT지원 채널), 또는 IT포털 티켓 등록을 통해 요청할 수 있습니다. 정규 지원 시간은 평일 09:00~18:00이며, 사전 예약 시 18:00~21:00까지 연장 지원이 가능합니다. 원격 지원 소프트웨어는 TeamViewer 기업용이며, 사용 전 사전 설치가 필요합니다.
+
+=== Sources ===
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt
+- IT/Q022_IT_원격_지원.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_0,IT/Q022_IT_원격_지원.txt::chunk_1,IT/Q022_IT_원격_지원.txt::chunk_0,IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_2
+selected_context_sources=IT/Q022_IT_원격_지원__mutedrag_strong.txt,IT/Q022_IT_원격_지원.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.630

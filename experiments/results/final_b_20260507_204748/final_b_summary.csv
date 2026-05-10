@@ -1,0 +1,5 @@
+condition,requested_rate,attack_documents,total_documents,total_chunks,attack_chunks,attack_chunk_ratio
+"B_rate_000","0",0,60,60,0,0.0
+"B_rate_010","0.10",6,66,72,12,0.16666666666666666
+"B_rate_050","0.50",30,90,120,60,0.5
+"B_rate_100","1.0",60,120,180,120,0.6666666666666666

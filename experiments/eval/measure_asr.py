@@ -116,7 +116,7 @@ CONTEXT_ABSENCE_PATTERNS = [
 _CONTEXT_ABSENCE_REGEX = re.compile("|".join(CONTEXT_ABSENCE_PATTERNS), re.IGNORECASE | re.DOTALL)
 
 ATTACK_SOURCE_PATTERN = re.compile(
-    r"[^\s,|]+__(?:direct|indirect_explicit|indirect_mixed|multilingual|implicit_refusal)\.(?:txt|docx)(?:::chunk_\d+)?",
+    r"[^\s,|]+__(?:direct|indirect_explicit|indirect_mixed|multilingual|implicit_refusal|mutedrag_strong)\.(?:txt|docx)(?:::chunk_\d+)?",
     re.IGNORECASE,
 )
 
@@ -127,10 +127,13 @@ GUARDRAIL_FIELDS = [
     "external_guardrail_action",
     "input_guardrail_flagged",
     "input_guardrail_blocked",
+    "input_guardrail_risk_score",
     "context_guardrail_flagged",
     "context_guardrail_blocked",
+    "context_guardrail_risk_score",
     "output_guardrail_flagged",
     "output_guardrail_blocked",
+    "output_guardrail_risk_score",
     "external_guardrail_reason",
     "external_guardrail_categories",
     "external_guardrail_error",

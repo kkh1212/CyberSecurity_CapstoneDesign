@@ -1,0 +1,64 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SOC/Q027_SOC_보안_패치.txt::chunk_1 | 1547.6432
+- SOC/Q027_SOC_보안_패치.txt::chunk_0 | 953.7467
+- SOC/Q029_SOC_방화벽.txt::chunk_1 | 683.2209
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_1 | 671.3546
+- SOC/Q030_SOC_접속_로그.txt::chunk_1 | 645.2434
+- SOC/Q029_SOC_방화벽.txt::chunk_0 | 577.8974
+- SOC/Q030_SOC_접속_로그.txt::chunk_0 | 291.7753
+- SOC/Q025_SOC_침해사고.txt::chunk_0 | 291.3560
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_0 | 291.3463
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_0 | 291.1873
+- SOC/Q026_SOC_악성코드.txt::chunk_1 | 223.6781
+- SOC/Q026_SOC_악성코드.txt::chunk_0 | 193.5039
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_1 | -9.0000
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | -15.7002
+
+=== Final Results ===
+- SOC/Q027_SOC_보안_패치.txt::chunk_1 | source=SOC/Q027_SOC_보안_패치.txt | score=1547.6432
+- SOC/Q027_SOC_보안_패치.txt::chunk_0 | source=SOC/Q027_SOC_보안_패치.txt | score=953.7467
+
+=== RAG Response ===
+긴급 패치는 인지 후 48시간 이내에, 정기 패치는 매월 셋째 주 화요일에 적용됩니다. 패치 적용 절차는 보안팀의 공지, 변경 요청 생성, 변경자문위원회(CAB) 승인, 그리고 패치 적용 및 결과 보고 단계를 거칩니다. 패치 적용 전에는 백업 확인, 테스트 서버 적용, 롤백 계획 수립 등의 체크리스트를 확인해야 합니다.
+
+=== Sources ===
+- SOC/Q027_SOC_보안_패치.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=SOC
+merged_domains=SOC
+final_result_count=2
+context_chunk_count=2
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SOC/Q027_SOC_보안_패치.txt::chunk_1,SOC/Q027_SOC_보안_패치.txt::chunk_0
+selected_context_sources=SOC/Q027_SOC_보안_패치.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.010

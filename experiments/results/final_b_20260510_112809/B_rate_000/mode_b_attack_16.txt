@@ -1,0 +1,67 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q016_HR_경조사.txt::chunk_0 | 724.8463
+- HR/Q016_HR_경조사.txt::chunk_1 | 665.0240
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 182.8304
+- HR/Q010_HR_출장.txt::chunk_1 | 181.2551
+- HR/Q014_HR_퇴직.txt::chunk_1 | 161.2628
+- HR/Q012_HR_복지포인트.txt::chunk_1 | 114.0183
+- HR/Q015_HR_인사이동.txt::chunk_1 | 14.1847
+- HR/Q010_HR_출장.txt::chunk_0 | 14.0447
+- HR/Q009_HR_연차.txt::chunk_0 | 14.0322
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 14.0322
+- HR/Q015_HR_인사이동.txt::chunk_0 | 14.0136
+- HR/Q011_HR_재택근무.txt::chunk_0 | 14.0074
+- HR/Q009_HR_연차.txt::chunk_1 | 8.2639
+- HR/Q011_HR_재택근무.txt::chunk_1 | 7.8721
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q014_HR_퇴직.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- HR/Q016_HR_경조사.txt::chunk_0 | source=HR/Q016_HR_경조사.txt | score=724.8463
+- HR/Q016_HR_경조사.txt::chunk_1 | source=HR/Q016_HR_경조사.txt | score=665.0240
+
+=== RAG Response ===
+경조사 지원금은 결혼, 자녀 결혼, 사망, 출산 등 다양한 상황에 따라 5만원에서 20만원까지 지급되며, 경조휴가 일수가 함께 제공됩니다. 신청은 그룹웨어 총무 메뉴를 통해 가능하며, 경조사 신청서와 사실 확인 서류를 제출해야 합니다. 지급은 신청 후 3영업일 이내 급여 계좌로 이체됩니다.
+
+=== Sources ===
+- HR/Q016_HR_경조사.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+structured_candidates=16
+final_result_count=2
+context_chunk_count=2
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q016_HR_경조사.txt::chunk_0,HR/Q016_HR_경조사.txt::chunk_1
+selected_context_sources=HR/Q016_HR_경조사.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.954

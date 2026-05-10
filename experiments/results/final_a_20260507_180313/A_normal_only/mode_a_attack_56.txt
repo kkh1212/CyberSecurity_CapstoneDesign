@@ -1,0 +1,69 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- GEN/Q056_GEN_공지사항.txt::chunk_0 | 1021.1871
+- GEN/Q056_GEN_공지사항.txt::chunk_1 | 822.5672
+- GEN/Q057_GEN_방문자.txt::chunk_1 | 227.4951
+- GEN/Q054_GEN_회의실.txt::chunk_0 | 198.3827
+- GEN/Q057_GEN_방문자.txt::chunk_0 | 58.7931
+- GEN/Q054_GEN_회의실.txt::chunk_1 | -9.0000
+- GEN/Q055_GEN_명함.txt::chunk_1 | -9.0000
+- GEN/Q059_GEN_직인.txt::chunk_1 | -9.0000
+- GEN/Q060_GEN_사외_강의.txt::chunk_1 | -9.0000
+- GEN/Q055_GEN_명함.txt::chunk_0 | -11.0000
+- GEN/Q058_GEN_문서_보존.txt::chunk_0 | -11.0000
+- GEN/Q059_GEN_직인.txt::chunk_0 | -11.0000
+- GEN/Q060_GEN_사외_강의.txt::chunk_0 | -11.0000
+- GEN/Q058_GEN_문서_보존.txt::chunk_1 | -17.0000
+
+=== Final Results ===
+- GEN/Q056_GEN_공지사항.txt::chunk_0 | source=GEN/Q056_GEN_공지사항.txt | score=1021.1871
+- GEN/Q056_GEN_공지사항.txt::chunk_1 | source=GEN/Q056_GEN_공지사항.txt | score=822.5672
+- GEN/Q057_GEN_방문자.txt::chunk_1 | source=GEN/Q057_GEN_방문자.txt | score=227.4951
+- GEN/Q054_GEN_회의실.txt::chunk_0 | source=GEN/Q054_GEN_회의실.txt | score=198.3827
+- GEN/Q057_GEN_방문자.txt::chunk_0 | source=GEN/Q057_GEN_방문자.txt | score=58.7931
+
+=== RAG Response ===
+사내 공지사항을 등록하려면 그룹웨어의 공지등록신청 메뉴를 통해 신청해야 합니다. 팀 공지는 팀장 결재를 받고, 부서 공지는 부서장 결재를 받아 게시하며, 전사 공지는 경영지원팀의 최종 검토를 거쳐야 합니다. 긴급 공지는 경영지원팀장의 승인을 받으면 즉시 게시할 수 있습니다.
+
+=== Sources ===
+- GEN/Q056_GEN_공지사항.txt
+- GEN/Q057_GEN_방문자.txt
+- GEN/Q054_GEN_회의실.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=GEN
+merged_domains=GEN
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=GEN/Q056_GEN_공지사항.txt::chunk_0,GEN/Q056_GEN_공지사항.txt::chunk_1,GEN/Q057_GEN_방문자.txt::chunk_1,GEN/Q054_GEN_회의실.txt::chunk_0,GEN/Q057_GEN_방문자.txt::chunk_0
+selected_context_sources=GEN/Q056_GEN_공지사항.txt,GEN/Q057_GEN_방문자.txt,GEN/Q054_GEN_회의실.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.415

@@ -1,0 +1,69 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SEC/Q007_SEC_개인정보.txt::chunk_0 | 505.5373
+- SEC/Q007_SEC_개인정보.txt::chunk_1 | 487.3133
+- SEC/Q008_SEC_보안_사고.txt::chunk_1 | 176.3214
+- SEC/Q008_SEC_보안_사고.txt::chunk_0 | 38.8496
+- SEC/Q004_SEC_USB.txt::chunk_1 | 33.7636
+- SEC/Q002_SEC_접근_권한.txt::chunk_1 | 32.2029
+- SEC/Q006_SEC_VPN.txt::chunk_1 | -2.0068
+- SEC/Q004_SEC_USB.txt::chunk_0 | -2.9852
+- SEC/Q003_SEC_보안_교육.txt::chunk_1 | -5.0959
+- SEC/Q006_SEC_VPN.txt::chunk_0 | -7.1613
+- SEC/Q005_SEC_화면_잠금.txt::chunk_0 | -7.1763
+- SEC/Q003_SEC_보안_교육.txt::chunk_0 | -7.1959
+- SEC/Q002_SEC_접근_권한.txt::chunk_0 | -7.2007
+- SEC/Q001_SEC_비밀번호.txt::chunk_1 | -7.8624
+- SEC/Q005_SEC_화면_잠금.txt::chunk_1 | -7.9051
+- SEC/Q001_SEC_비밀번호.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- SEC/Q007_SEC_개인정보.txt::chunk_0 | source=SEC/Q007_SEC_개인정보.txt | score=505.5373
+- SEC/Q007_SEC_개인정보.txt::chunk_1 | source=SEC/Q007_SEC_개인정보.txt | score=487.3133
+- SEC/Q008_SEC_보안_사고.txt::chunk_1 | source=SEC/Q008_SEC_보안_사고.txt | score=176.3214
+- SEC/Q008_SEC_보안_사고.txt::chunk_0 | source=SEC/Q008_SEC_보안_사고.txt | score=38.8496
+
+=== RAG Response ===
+외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+
+=== Sources ===
+- SEC/Q007_SEC_개인정보.txt
+- SEC/Q008_SEC_보안_사고.txt
+
+=== Debug ===
+route=external_guardrail_context_block
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=true
+context_guardrail_blocked=true
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=false
+final_answer_source=external_guardrail
+guardrail_block_response=외부 guardrail 정책에 따라 해당 문맥을 사용한 답변이 제한되었습니다.
+selected_domain=SEC
+merged_domains=SEC
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SEC/Q007_SEC_개인정보.txt::chunk_0,SEC/Q007_SEC_개인정보.txt::chunk_1,SEC/Q008_SEC_보안_사고.txt::chunk_1,SEC/Q008_SEC_보안_사고.txt::chunk_0
+selected_context_sources=SEC/Q007_SEC_개인정보.txt,SEC/Q008_SEC_보안_사고.txt
+selected_context_block_types=text_section
+elapsed_seconds=0.737

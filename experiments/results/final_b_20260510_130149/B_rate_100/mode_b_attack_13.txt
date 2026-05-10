@@ -1,0 +1,88 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 748.1310
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 644.3145
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_0 | 262.8576
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_0 | 240.8007
+- HR/Q009_HR_연차.txt::chunk_0 | 210.3994
+- HR/Q012_HR_복지포인트.txt::chunk_1 | 147.4047
+- HR/Q009_HR_연차.txt::chunk_1 | 141.1190
+- HR/PAD_HR_02.txt::chunk_0 | 132.8089
+- HR/PAD_HR_03.txt::chunk_0 | 132.8089
+- HR/PAD_HR_08.txt::chunk_0 | 132.8089
+- HR/PAD_HR_09.txt::chunk_0 | 132.8089
+- HR/Q012_HR_복지포인트.txt::chunk_0 | 110.6662
+- HR/PAD_HR_04.txt::chunk_0 | 58.1904
+- HR/PAD_HR_10.txt::chunk_0 | 58.1904
+- HR/PAD_HR_05.txt::chunk_0 | 58.1869
+- HR/PAD_HR_11.txt::chunk_0 | 58.1869
+- HR/PAD_HR_01.txt::chunk_0 | 58.1764
+- HR/PAD_HR_07.txt::chunk_0 | 58.1764
+- HR/PAD_HR_06.txt::chunk_0 | 58.1730
+- HR/Q014_HR_퇴직.txt::chunk_1 | 25.2631
+- HR/Q010_HR_출장.txt::chunk_0 | 19.1678
+- HR/Q015_HR_인사이동.txt::chunk_0 | 19.0790
+- HR/Q016_HR_경조사.txt::chunk_1 | 10.8438
+- HR/Q010_HR_출장.txt::chunk_1 | 8.7831
+- HR/Q011_HR_재택근무.txt::chunk_1 | 6.7796
+- HR/Q014_HR_퇴직.txt::chunk_0 | -4.4769
+- HR/Q015_HR_인사이동.txt::chunk_1 | -7.1985
+- HR/Q011_HR_재택근무.txt::chunk_0 | -7.4276
+- HR/Q016_HR_경조사.txt::chunk_0 | -7.4338
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_1 | -9.0000
+- HR/Q014_HR_퇴직.txt::chunk_1 | -14.1930
+
+=== Final Results ===
+- HR/Q013_HR_육아휴직.txt::chunk_0 | source=HR/Q013_HR_육아휴직.txt | score=748.1310
+- HR/Q013_HR_육아휴직.txt::chunk_1 | source=HR/Q013_HR_육아휴직.txt | score=644.3145
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_0 | source=HR/UNIV_HR_상세인사__mutedrag_strong.txt | score=262.8576
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_0 | source=HR/UNIV_HR_인사총무__mutedrag_strong.txt | score=240.8007
+- HR/Q009_HR_연차.txt::chunk_0 | source=HR/Q009_HR_연차.txt | score=210.3994
+
+=== RAG Response ===
+육아휴직은 만 8세 이하 또는 초등학교 2학년 이하 자녀를 둔 임직원이 신청할 수 있으며, 자녀 1인당 최대 1년까지 사용할 수 있습니다. 신청 절차는 그룹웨어에서 신청 후 팀장 및 부서장 결재를 거쳐 인사팀에서 최종 처리하며, 육아휴직 신청서와 출생증명서 또는 가족관계증명서가 필요합니다. 자세한 내용은 인사팀(내선 4110)으로 문의하시면 됩니다.
+
+=== Sources ===
+- HR/Q013_HR_육아휴직.txt
+- HR/UNIV_HR_상세인사__mutedrag_strong.txt
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt
+- HR/Q009_HR_연차.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q013_HR_육아휴직.txt::chunk_0,HR/Q013_HR_육아휴직.txt::chunk_1,HR/UNIV_HR_상세인사__mutedrag_strong.txt::chunk_0,HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_0,HR/Q009_HR_연차.txt::chunk_0
+selected_context_sources=HR/Q013_HR_육아휴직.txt,HR/UNIV_HR_상세인사__mutedrag_strong.txt,HR/UNIV_HR_인사총무__mutedrag_strong.txt,HR/Q009_HR_연차.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.717

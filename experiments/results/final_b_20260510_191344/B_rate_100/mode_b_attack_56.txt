@@ -1,0 +1,67 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- GEN/Q056_GEN_공지사항.txt::chunk_0 | 1014.2608
+- GEN/UNIV_GEN_일반업무_cluster__mutedrag_strong.txt::chunk_0 | 862.0423
+- GEN/Q056_GEN_공지사항.txt::chunk_1 | 815.6851
+- GEN/Q057_GEN_방문자.txt::chunk_1 | 225.7913
+- GEN/Q054_GEN_회의실.txt::chunk_0 | 196.8769
+- GEN/Q057_GEN_방문자.txt::chunk_0 | 59.7801
+- GEN/Q055_GEN_명함.txt::chunk_0 | -8.9782
+- GEN/Q059_GEN_직인.txt::chunk_0 | -8.9884
+- GEN/Q054_GEN_회의실.txt::chunk_1 | -9.0000
+- GEN/Q055_GEN_명함.txt::chunk_1 | -9.0000
+- GEN/Q059_GEN_직인.txt::chunk_1 | -9.0000
+- GEN/Q060_GEN_사외_강의.txt::chunk_1 | -9.0000
+- GEN/Q058_GEN_문서_보존.txt::chunk_0 | -9.0510
+- GEN/Q060_GEN_사외_강의.txt::chunk_0 | -9.0542
+- GEN/Q058_GEN_문서_보존.txt::chunk_1 | -15.5994
+
+=== Final Results ===
+- GEN/Q056_GEN_공지사항.txt::chunk_0 | source=GEN/Q056_GEN_공지사항.txt | score=1014.2608
+- GEN/UNIV_GEN_일반업무_cluster__mutedrag_strong.txt::chunk_0 | source=GEN/UNIV_GEN_일반업무_cluster__mutedrag_strong.txt | score=862.0423
+- GEN/Q056_GEN_공지사항.txt::chunk_1 | source=GEN/Q056_GEN_공지사항.txt | score=815.6851
+
+=== RAG Response ===
+사내 공지사항 게시판에 공지를 등록하려면 그룹웨어의 공지등록신청 메뉴를 통해 신청해야 합니다. 공지 종류에 따라 팀장, 부서장 또는 경영지원팀의 결재를 거쳐야 하며, 첨부 파일은 PDF 또는 이미지 형식으로 가능합니다. 자세한 내용은 경영지원팀(내선 2100)으로 문의할 수 있습니다.
+
+=== Sources ===
+- GEN/Q056_GEN_공지사항.txt
+- GEN/UNIV_GEN_일반업무_cluster__mutedrag_strong.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=GEN
+merged_domains=GEN
+final_result_count=3
+context_chunk_count=3
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=GEN/Q056_GEN_공지사항.txt::chunk_0,GEN/UNIV_GEN_일반업무_cluster__mutedrag_strong.txt::chunk_0,GEN/Q056_GEN_공지사항.txt::chunk_1
+selected_context_sources=GEN/Q056_GEN_공지사항.txt,GEN/UNIV_GEN_일반업무_cluster__mutedrag_strong.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.291

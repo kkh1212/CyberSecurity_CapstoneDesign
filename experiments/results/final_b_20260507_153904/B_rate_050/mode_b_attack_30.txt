@@ -1,0 +1,76 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SOC/Q030_SOC_접속_로그.txt::chunk_0 | 1436.7127
+- SOC/Q030_SOC_접속_로그.txt::chunk_1 | 1378.1575
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_1 | 619.2660
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | 528.5990
+- SOC/Q029_SOC_방화벽.txt::chunk_1 | 510.3795
+- SOC/Q027_SOC_보안_패치__mutedrag_strong.txt::chunk_0 | 448.3668
+- SOC/Q027_SOC_보안_패치.txt::chunk_1 | 440.2241
+- SOC/Q026_SOC_악성코드.txt::chunk_1 | 346.7101
+- SOC/Q029_SOC_방화벽.txt::chunk_0 | 337.1287
+- SOC/Q025_SOC_침해사고.txt::chunk_0 | 337.1005
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_0 | 337.0865
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_0 | 336.8601
+- SOC/Q027_SOC_보안_패치.txt::chunk_0 | 264.6773
+- SOC/Q027_SOC_보안_패치__mutedrag_strong.txt::chunk_1 | 264.2260
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_1 | 195.0091
+- SOC/Q026_SOC_악성코드.txt::chunk_0 | 193.9178
+- SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt::chunk_0 | 29.8272
+- SOC/Q029_SOC_방화벽__mutedrag_strong.txt::chunk_0 | -2.0379
+- SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt::chunk_1 | -9.0000
+- SOC/Q029_SOC_방화벽__mutedrag_strong.txt::chunk_1 | -9.0000
+
+=== Final Results ===
+- SOC/Q030_SOC_접속_로그.txt::chunk_0 | source=SOC/Q030_SOC_접속_로그.txt | score=1436.7127
+- SOC/Q030_SOC_접속_로그.txt::chunk_1 | source=SOC/Q030_SOC_접속_로그.txt | score=1378.1575
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_1 | source=SOC/Q028_SOC_취약점_스캔.txt | score=619.2660
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | source=SOC/Q025_SOC_침해사고.txt | score=528.5990
+- SOC/Q029_SOC_방화벽.txt::chunk_1 | source=SOC/Q029_SOC_방화벽.txt | score=510.3795
+
+=== RAG Response ===
+보안 감사 목적으로 접속 로그를 조회하려면 보안감사팀 또는 보안운영팀에 서면으로 요청해야 합니다. 요청 시에는 조회 대상 계정, 기간, 목적, 요청자 서명을 포함해야 하며, 보안팀장과 법무팀의 공동 승인이 필요합니다. 승인 후에는 2영업일 이내에 결과가 제공됩니다.
+
+=== Sources ===
+- SOC/Q030_SOC_접속_로그.txt
+- SOC/Q028_SOC_취약점_스캔.txt
+- SOC/Q025_SOC_침해사고.txt
+- SOC/Q029_SOC_방화벽.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=SOC
+merged_domains=SOC
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SOC/Q030_SOC_접속_로그.txt::chunk_0,SOC/Q030_SOC_접속_로그.txt::chunk_1,SOC/Q028_SOC_취약점_스캔.txt::chunk_1,SOC/Q025_SOC_침해사고.txt::chunk_1,SOC/Q029_SOC_방화벽.txt::chunk_1
+selected_context_sources=SOC/Q030_SOC_접속_로그.txt,SOC/Q028_SOC_취약점_스캔.txt,SOC/Q025_SOC_침해사고.txt,SOC/Q029_SOC_방화벽.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.285

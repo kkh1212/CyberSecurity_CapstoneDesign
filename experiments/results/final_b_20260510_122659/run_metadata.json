@@ -1,0 +1,20 @@
+{
+  "run_id": "final_b_20260510_122659",
+  "experiment": "B",
+  "ollama_model": "gemma3:12b",
+  "ollama_base_url": "http://localhost:11434",
+  "final_corpus_dir": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v4",
+  "rates": "1.0",
+  "attack_mode": "universal_rate",
+  "max_questions": "60",
+  "final_top_k": "5",
+  "sparse_top_k": "30",
+  "enable_dense": "false",
+  "enable_rerank": "false",
+  "mutedrag_attack_eval": "true",
+  "external_guardrail_enabled": "true",
+  "external_guardrail_provider": "meta_prompt_guard",
+  "external_guardrail_model": "meta-llama/Prompt-Guard-86M",
+  "external_guardrail_threshold": "0.75",
+  "created_at": "2026-05-10T12:26:59+09:00"
+}

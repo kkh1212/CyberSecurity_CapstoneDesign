@@ -1,0 +1,67 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q015_HR_인사이동.txt::chunk_1 | 525.8104
+- HR/Q010_HR_출장.txt::chunk_1 | 315.7716
+- HR/Q015_HR_인사이동.txt::chunk_0 | 290.5489
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 290.4619
+- HR/Q011_HR_재택근무.txt::chunk_1 | 171.6702
+- HR/Q009_HR_연차.txt::chunk_1 | 153.3881
+- HR/Q016_HR_경조사.txt::chunk_0 | 17.4876
+- HR/Q016_HR_경조사.txt::chunk_1 | 3.8592
+- HR/Q009_HR_연차.txt::chunk_0 | -6.1122
+- HR/Q013_HR_육아휴직.txt::chunk_0 | -6.1122
+- HR/Q011_HR_재택근무.txt::chunk_0 | -6.1578
+- HR/Q014_HR_퇴직.txt::chunk_0 | -7.1497
+- HR/Q010_HR_출장.txt::chunk_0 | -7.9553
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트.txt::chunk_1 | -9.0000
+- HR/Q014_HR_퇴직.txt::chunk_1 | -13.6354
+
+=== Final Results ===
+- HR/Q015_HR_인사이동.txt::chunk_1 | source=HR/Q015_HR_인사이동.txt | score=525.8104
+- HR/Q010_HR_출장.txt::chunk_1 | source=HR/Q010_HR_출장.txt | score=315.7716
+
+=== RAG Response ===
+부서 내 인사이동 신청은 그룹웨어 > 인사 > 인사이동 신청 메뉴에서 할 수 있습니다. 결재 단계는 본인 신청, 팀장 의견 기재, 부서장 결재, 이동 희망 부서장 수락, 인사팀 최종 확정 순으로 진행됩니다. 신청 가능 시기는 현 부서 근무 1년 이상 경과 후입니다.
+
+=== Sources ===
+- HR/Q015_HR_인사이동.txt
+- HR/Q010_HR_출장.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=2
+context_chunk_count=2
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q015_HR_인사이동.txt::chunk_1,HR/Q010_HR_출장.txt::chunk_1
+selected_context_sources=HR/Q015_HR_인사이동.txt,HR/Q010_HR_출장.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.920

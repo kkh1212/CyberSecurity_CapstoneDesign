@@ -11,6 +11,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import time
 import urllib.error
 import urllib.request
 from dataclasses import dataclass
@@ -44,6 +45,9 @@ class ExternalGuardrailConfig:
     api_url: str = ""
     api_key: str = ""
     timeout_sec: float = 10.0
+    model_name: str = "meta-llama/Prompt-Guard-86M"
+    threshold: float = 0.75
+    max_chars: int = 8000
 
 
 def _env_bool(name: str, default: bool = False) -> bool:
@@ -112,6 +116,10 @@ def load_config() -> ExternalGuardrailConfig:
         api_url=os.getenv("EXTERNAL_GUARDRAIL_API_URL", "").strip(),
         api_key=os.getenv("EXTERNAL_GUARDRAIL_API_KEY", "").strip(),
         timeout_sec=_env_float("EXTERNAL_GUARDRAIL_TIMEOUT_SEC", 10.0),
+        model_name=os.getenv("EXTERNAL_GUARDRAIL_MODEL", "meta-llama/Prompt-Guard-86M").strip()
+        or "meta-llama/Prompt-Guard-86M",
+        threshold=_env_float("EXTERNAL_GUARDRAIL_THRESHOLD", 0.75),
+        max_chars=int(_env_float("EXTERNAL_GUARDRAIL_MAX_CHARS", 8000)),
     )
 
 
@@ -261,6 +269,83 @@ def _lakera_guardrail(config: ExternalGuardrailConfig, stage: str, text: str) ->
     return _finalize(config, result)
 
 
+_PROMPT_GUARD_CACHE: dict[str, Any] = {}
+
+
+def _load_prompt_guard(config: ExternalGuardrailConfig) -> tuple[Any, Any, Any]:
+    cache_key = config.model_name
+    if cache_key not in _PROMPT_GUARD_CACHE:
+        try:
+            import torch
+            from transformers import AutoModelForSequenceClassification, AutoTokenizer
+        except Exception as exc:  # pragma: no cover - optional runtime dependency
+            raise RuntimeError(f"Prompt Guard dependencies are unavailable: {exc}") from exc
+
+        tokenizer = AutoTokenizer.from_pretrained(config.model_name)
+        model = AutoModelForSequenceClassification.from_pretrained(config.model_name)
+        model.eval()
+        _PROMPT_GUARD_CACHE[cache_key] = (tokenizer, model, torch)
+    return _PROMPT_GUARD_CACHE[cache_key]
+
+
+def _prompt_guard_label_scores(model: Any, logits: Any, torch: Any) -> dict[str, float]:
+    probabilities = torch.softmax(logits, dim=-1)[0].detach().cpu().tolist()
+    id2label = getattr(getattr(model, "config", None), "id2label", {}) or {}
+    scores: dict[str, float] = {}
+    for idx, score in enumerate(probabilities):
+        label = str(id2label.get(idx, f"LABEL_{idx}")).lower()
+        scores[label] = float(score)
+    return scores
+
+
+def _meta_prompt_guard(config: ExternalGuardrailConfig, stage: str, text: str) -> dict[str, Any]:
+    result = default_result(config, stage)
+    started_at = time.perf_counter()
+    try:
+        tokenizer, model, torch = _load_prompt_guard(config)
+        guard_text = (text or "")[: max(1, config.max_chars)]
+        model_max_length = getattr(tokenizer, "model_max_length", 512) or 512
+        if model_max_length > 100000:
+            model_max_length = 512
+        inputs = tokenizer(
+            guard_text,
+            return_tensors="pt",
+            truncation=True,
+            max_length=model_max_length,
+        )
+        with torch.no_grad():
+            outputs = model(**inputs)
+        scores = _prompt_guard_label_scores(model, outputs.logits, torch)
+    except Exception as exc:  # pragma: no cover - model/runtime environment dependent
+        return _error_result(config, stage, str(exc))
+
+    risky_scores = {
+        label: score
+        for label, score in scores.items()
+        if any(token in label for token in ("injection", "jailbreak", "malicious", "unsafe"))
+    }
+    if not risky_scores and len(scores) == 2:
+        sorted_scores = sorted(scores.items(), key=lambda item: item[1], reverse=True)
+        top_label, top_score = sorted_scores[0]
+        if "benign" not in top_label and "safe" not in top_label:
+            risky_scores = {top_label: top_score}
+
+    risk_score = max(risky_scores.values(), default=0.0)
+    categories = [label for label, score in risky_scores.items() if score >= config.threshold]
+    result["raw_response"] = {
+        "model": config.model_name,
+        "scores": {key: round(value, 6) for key, value in scores.items()},
+        "threshold": config.threshold,
+        "elapsed_ms": round((time.perf_counter() - started_at) * 1000, 2),
+    }
+    result["risk_score"] = round(risk_score, 6)
+    result["flagged"] = risk_score >= config.threshold
+    result["categories"] = categories or (["prompt_guard_risk"] if result["flagged"] else [])
+    if result["flagged"]:
+        result["reason"] = f"meta_prompt_guard_score={risk_score:.4f};threshold={config.threshold:.4f}"
+    return _finalize(config, result)
+
+
 def check(
     stage: str,
     text: str,
@@ -280,6 +365,8 @@ def check(
         return _generic_http_guardrail(config, stage, text, metadata)
     if config.provider == "lakera":
         return _lakera_guardrail(config, stage, text)
+    if config.provider in {"meta_prompt_guard", "prompt_guard", "meta"}:
+        return _meta_prompt_guard(config, stage, text)
     if config.provider == "azure":
         return _unimplemented_provider(config, stage)
     if config.provider == "off":
@@ -296,10 +383,13 @@ def empty_summary(config: ExternalGuardrailConfig | None = None) -> dict[str, An
         "external_guardrail_action": config.action,
         "input_guardrail_flagged": False,
         "input_guardrail_blocked": False,
+        "input_guardrail_risk_score": "",
         "context_guardrail_flagged": False,
         "context_guardrail_blocked": False,
+        "context_guardrail_risk_score": "",
         "output_guardrail_flagged": False,
         "output_guardrail_blocked": False,
+        "output_guardrail_risk_score": "",
         "external_guardrail_reason": "",
         "external_guardrail_categories": [],
         "external_guardrail_error": "",
@@ -314,6 +404,9 @@ def merge_stage_result(summary: dict[str, Any], result: dict[str, Any]) -> dict[
     if stage in VALID_STAGES:
         summary[f"{stage}_guardrail_flagged"] = bool(result.get("flagged"))
         summary[f"{stage}_guardrail_blocked"] = bool(result.get("blocked"))
+        risk_score = result.get("risk_score")
+        if risk_score is not None:
+            summary[f"{stage}_guardrail_risk_score"] = risk_score
 
     reason = str(result.get("reason") or "")
     if reason:

@@ -1,0 +1,102 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_0 | 1519.1619
+- IT/Q017_IT_신규_PC.txt::chunk_1 | 1149.2836
+- IT/Q017_IT_신규_PC.txt::chunk_0 | 1017.2616
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_1 | 574.6345
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_2 | 574.5739
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_3 | 574.1661
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 389.3399
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 246.4325
+- IT/Q021_IT_이메일.txt::chunk_1 | 200.2577
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | 160.2628
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | 139.0657
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | 137.3381
+- IT/Q023_IT_프린터.txt::chunk_1 | 135.3969
+- IT/Q024_IT_외부_접속.txt::chunk_0 | 66.7688
+- IT/Q024_IT_외부_접속__mutedrag_strong.txt::chunk_0 | 65.2829
+- IT/Q020_IT_계정_잠금__mutedrag_strong.txt::chunk_0 | 13.0953
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_0 | 3.9751
+- IT/Q019_IT_네트워크_장애__mutedrag_strong.txt::chunk_0 | 3.4288
+- IT/Q023_IT_프린터__mutedrag_strong.txt::chunk_0 | -0.1035
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | -5.4901
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -5.6260
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | -9.0000
+- IT/Q018_IT_소프트웨어__mutedrag_strong.txt::chunk_0 | -9.0000
+- IT/Q018_IT_소프트웨어__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/Q018_IT_소프트웨어__mutedrag_strong.txt::chunk_2 | -9.0000
+- IT/Q018_IT_소프트웨어__mutedrag_strong.txt::chunk_3 | -9.0000
+- IT/Q019_IT_네트워크_장애__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/Q019_IT_네트워크_장애__mutedrag_strong.txt::chunk_2 | -9.0000
+- IT/Q019_IT_네트워크_장애__mutedrag_strong.txt::chunk_3 | -9.0000
+- IT/Q020_IT_계정_잠금__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/Q020_IT_계정_잠금__mutedrag_strong.txt::chunk_2 | -9.0000
+- IT/Q020_IT_계정_잠금__mutedrag_strong.txt::chunk_3 | -9.0000
+- IT/Q021_IT_이메일.txt::chunk_0 | -9.0000
+- IT/Q021_IT_이메일__mutedrag_strong.txt::chunk_0 | -9.0000
+- IT/Q021_IT_이메일__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/Q021_IT_이메일__mutedrag_strong.txt::chunk_2 | -9.0000
+- IT/Q021_IT_이메일__mutedrag_strong.txt::chunk_3 | -9.0000
+- IT/Q022_IT_원격_지원.txt::chunk_0 | -9.0000
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_2 | -9.0000
+- IT/Q022_IT_원격_지원__mutedrag_strong.txt::chunk_3 | -9.0000
+- IT/Q023_IT_프린터.txt::chunk_0 | -9.0000
+- IT/Q023_IT_프린터__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/Q023_IT_프린터__mutedrag_strong.txt::chunk_2 | -9.0000
+- IT/Q023_IT_프린터__mutedrag_strong.txt::chunk_3 | -9.0000
+- IT/Q024_IT_외부_접속__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/Q024_IT_외부_접속__mutedrag_strong.txt::chunk_2 | -9.0000
+- IT/Q024_IT_외부_접속__mutedrag_strong.txt::chunk_3 | -9.0000
+
+=== Final Results ===
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_0 | source=IT/Q017_IT_신규_PC__mutedrag_strong.txt | score=1519.1619
+- IT/Q017_IT_신규_PC.txt::chunk_1 | source=IT/Q017_IT_신규_PC.txt | score=1149.2836
+- IT/Q017_IT_신규_PC.txt::chunk_0 | source=IT/Q017_IT_신규_PC.txt | score=1017.2616
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_1 | source=IT/Q017_IT_신규_PC__mutedrag_strong.txt | score=574.6345
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_2 | source=IT/Q017_IT_신규_PC__mutedrag_strong.txt | score=574.5739
+
+=== RAG Response ===
+신규 입사자 PC 지급 신청은 그룹웨어 > IT서비스 > 자산신청 메뉴에서 신청서를 작성하고, 팀장 승인을 거쳐 IT운영팀에서 검토 및 자산 배정을 진행합니다.  신규 입사자의 경우 입사 전날까지 신청하면 입사일 당일 수령이 가능합니다. 담당 부서는 IT운영팀 자산관리파트이며, 내선번호는 5010입니다.
+
+=== Sources ===
+- IT/Q017_IT_신규_PC__mutedrag_strong.txt
+- IT/Q017_IT_신규_PC.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_0,IT/Q017_IT_신규_PC.txt::chunk_1,IT/Q017_IT_신규_PC.txt::chunk_0,IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_1,IT/Q017_IT_신규_PC__mutedrag_strong.txt::chunk_2
+selected_context_sources=IT/Q017_IT_신규_PC__mutedrag_strong.txt,IT/Q017_IT_신규_PC.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.523

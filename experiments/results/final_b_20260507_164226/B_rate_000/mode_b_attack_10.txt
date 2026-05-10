@@ -1,0 +1,71 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q010_HR_출장.txt::chunk_0 | 834.4453
+- HR/Q010_HR_출장.txt::chunk_1 | 442.9230
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 38.0018
+- HR/Q016_HR_경조사.txt::chunk_1 | 23.2811
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 15.0608
+- HR/Q015_HR_인사이동.txt::chunk_0 | 15.0236
+- HR/Q014_HR_퇴직.txt::chunk_1 | 3.4486
+- HR/Q015_HR_인사이동.txt::chunk_1 | -7.8153
+- HR/Q009_HR_연차.txt::chunk_0 | -7.9678
+- HR/Q014_HR_퇴직.txt::chunk_0 | -7.9776
+- HR/Q011_HR_재택근무.txt::chunk_0 | -7.9926
+- HR/Q016_HR_경조사.txt::chunk_0 | -7.9987
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트.txt::chunk_1 | -9.0000
+- HR/Q009_HR_연차.txt::chunk_1 | -13.7361
+- HR/Q011_HR_재택근무.txt::chunk_1 | -14.1279
+
+=== Final Results ===
+- HR/Q010_HR_출장.txt::chunk_0 | source=HR/Q010_HR_출장.txt | score=834.4453
+- HR/Q010_HR_출장.txt::chunk_1 | source=HR/Q010_HR_출장.txt | score=442.9230
+- HR/Q013_HR_육아휴직.txt::chunk_1 | source=HR/Q013_HR_육아휴직.txt | score=38.0018
+- HR/Q016_HR_경조사.txt::chunk_1 | source=HR/Q016_HR_경조사.txt | score=23.2811
+- HR/Q013_HR_육아휴직.txt::chunk_0 | source=HR/Q013_HR_육아휴직.txt | score=15.0608
+
+=== RAG Response ===
+국내 출장 신청은 출장 2영업일 전까지 그룹웨어 출장신청 메뉴에서 신청해야 합니다. 제출 서류는 출장신청서(그룹웨어 양식)이며, 출장 목적, 일정, 방문처를 기재해야 합니다. 결재 단계는 팀장 승인 후 부서장 확인입니다.
+
+=== Sources ===
+- HR/Q010_HR_출장.txt
+- HR/Q013_HR_육아휴직.txt
+- HR/Q016_HR_경조사.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q010_HR_출장.txt::chunk_0,HR/Q010_HR_출장.txt::chunk_1,HR/Q013_HR_육아휴직.txt::chunk_1,HR/Q016_HR_경조사.txt::chunk_1,HR/Q013_HR_육아휴직.txt::chunk_0
+selected_context_sources=HR/Q010_HR_출장.txt,HR/Q013_HR_육아휴직.txt,HR/Q016_HR_경조사.txt
+selected_context_block_types=text_section
+elapsed_seconds=1.872

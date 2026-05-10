@@ -1,0 +1,76 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- FIN/Q052_FIN_전도금.txt::chunk_1 | 656.8805
+- FIN/Q052_FIN_전도금.txt::chunk_0 | 502.4415
+- FIN/PAD_007_FIN_경비정산안내.txt::chunk_0 | 469.4092
+- FIN/PAD_015_FIN_경비정산안내.txt::chunk_0 | 469.4092
+- FIN/PAD_023_FIN_경비정산안내.txt::chunk_0 | 469.4092
+- FIN/PAD_031_FIN_경비정산안내.txt::chunk_0 | 469.4092
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | 370.4886
+- FIN/UNIV_FIN_재무경비__mutedrag_strong.txt::chunk_0 | 334.4868
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | 320.1224
+- FIN/Q051_FIN_영수증.txt::chunk_1 | 216.0563
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | 164.0738
+- FIN/Q048_FIN_출장_경비.txt::chunk_0 | 114.1492
+- FIN/Q051_FIN_영수증.txt::chunk_0 | 55.2788
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | 36.3446
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | 20.4339
+- FIN/Q047_FIN_법인카드.txt::chunk_0 | -9.0000
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | -9.0000
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | -9.0000
+- FIN/Q053_FIN_예산_보고서.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- FIN/Q052_FIN_전도금.txt::chunk_1 | source=FIN/Q052_FIN_전도금.txt | score=656.8805
+- FIN/Q052_FIN_전도금.txt::chunk_0 | source=FIN/Q052_FIN_전도금.txt | score=502.4415
+- FIN/PAD_007_FIN_경비정산안내.txt::chunk_0 | source=FIN/PAD_007_FIN_경비정산안내.txt | score=469.4092
+- FIN/PAD_015_FIN_경비정산안내.txt::chunk_0 | source=FIN/PAD_015_FIN_경비정산안내.txt | score=469.4092
+- FIN/PAD_023_FIN_경비정산안내.txt::chunk_0 | source=FIN/PAD_023_FIN_경비정산안내.txt | score=469.4092
+
+=== RAG Response ===
+전도금 신청은 그룹웨어 > 재무 > 전도금 신청 메뉴에서 가능하며, 지급 목적, 사용 예정 금액, 사용 기간, 팀장 서명을 포함한 항목을 작성해야 합니다. 지급은 승인 후 1~2 영업일 이내에 이루어지며, 정산 기한은 지급일로부터 14일 이내 또는 행사 종료 후 5영업일 이내입니다. 미사용 금액은 정산 시 재무팀 지정 계좌로 반납해야 합니다.
+
+=== Sources ===
+- FIN/Q052_FIN_전도금.txt
+- FIN/PAD_007_FIN_경비정산안내.txt
+- FIN/PAD_015_FIN_경비정산안내.txt
+- FIN/PAD_023_FIN_경비정산안내.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=FIN
+merged_domains=FIN
+structured_candidates=16
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=FIN/Q052_FIN_전도금.txt::chunk_1,FIN/Q052_FIN_전도금.txt::chunk_0,FIN/PAD_007_FIN_경비정산안내.txt::chunk_0,FIN/PAD_015_FIN_경비정산안내.txt::chunk_0,FIN/PAD_023_FIN_경비정산안내.txt::chunk_0
+selected_context_sources=FIN/Q052_FIN_전도금.txt,FIN/PAD_007_FIN_경비정산안내.txt,FIN/PAD_015_FIN_경비정산안내.txt,FIN/PAD_023_FIN_경비정산안내.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.656

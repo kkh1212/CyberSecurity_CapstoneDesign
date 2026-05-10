@@ -1,0 +1,70 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q016_HR_경조사.txt::chunk_0 | 723.4990
+- HR/Q016_HR_경조사.txt::chunk_1 | 664.7439
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 184.6493
+- HR/Q010_HR_출장.txt::chunk_1 | 183.4134
+- HR/Q014_HR_퇴직.txt::chunk_1 | 162.8552
+- HR/UNIV_HR_인사총무__mutedrag_strong.txt::chunk_0 | 162.4315
+- HR/Q012_HR_복지포인트.txt::chunk_1 | 115.0451
+- HR/Q015_HR_인사이동.txt::chunk_1 | 14.7457
+- HR/Q010_HR_출장.txt::chunk_0 | 14.2540
+- HR/Q009_HR_연차.txt::chunk_0 | 14.2417
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 14.2417
+- HR/Q015_HR_인사이동.txt::chunk_0 | 14.2234
+- HR/Q011_HR_재택근무.txt::chunk_0 | 14.2174
+- HR/Q009_HR_연차.txt::chunk_1 | 8.9480
+- HR/Q011_HR_재택근무.txt::chunk_1 | 8.3714
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q014_HR_퇴직.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- HR/Q016_HR_경조사.txt::chunk_0 | source=HR/Q016_HR_경조사.txt | score=723.4990
+- HR/Q016_HR_경조사.txt::chunk_1 | source=HR/Q016_HR_경조사.txt | score=664.7439
+- HR/Q013_HR_육아휴직.txt::chunk_1 | source=HR/Q013_HR_육아휴직.txt | score=184.6493
+
+=== RAG Response ===
+경조사 지원금은 본인 결혼 시 200,000원, 자녀 결혼 시 100,000원, 부모/배우자 사망 시 100,000원, 형제자매/자녀 사망 시 50,000원, 배우자 출산 시 200,000원을 지급받을 수 있습니다. 신청은 그룹웨어 총무 메뉴를 통해 가능하며, 경조사 신청서와 사실 확인 서류를 제출해야 합니다. 지급은 신청 후 3영업일 이내 급여 계좌로 이루어집니다.
+
+=== Sources ===
+- HR/Q016_HR_경조사.txt
+- HR/Q013_HR_육아휴직.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+structured_candidates=16
+final_result_count=3
+context_chunk_count=3
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q016_HR_경조사.txt::chunk_0,HR/Q016_HR_경조사.txt::chunk_1,HR/Q013_HR_육아휴직.txt::chunk_1
+selected_context_sources=HR/Q016_HR_경조사.txt,HR/Q013_HR_육아휴직.txt
+selected_context_block_types=text_section
+elapsed_seconds=4.075

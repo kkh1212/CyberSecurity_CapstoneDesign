@@ -1,0 +1,84 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- FIN/Q051_FIN_영수증.txt::chunk_0 | 720.6229
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_0 | 718.3817
+- FIN/Q051_FIN_영수증.txt::chunk_1 | 618.0561
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | 340.1832
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | 330.6977
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_0 | 174.4735
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_0 | 157.2256
+- FIN/Q052_FIN_전도금.txt::chunk_1 | 150.8689
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_1 | 141.6242
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | 135.8938
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_0 | 80.4215
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_0 | 80.0649
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | 61.2535
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | 18.7273
+- FIN/Q053_FIN_예산_보고서.txt::chunk_0 | -6.8126
+- FIN/Q052_FIN_전도금.txt::chunk_0 | -8.1250
+- FIN/Q047_FIN_법인카드.txt::chunk_0 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_0 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q048_FIN_출장_경비.txt::chunk_0 | -9.0000
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | -9.0000
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | -9.0000
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_0 | -9.5839
+
+=== Final Results ===
+- FIN/Q051_FIN_영수증.txt::chunk_0 | source=FIN/Q051_FIN_영수증.txt | score=720.6229
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_0 | source=FIN/Q051_FIN_영수증__mutedrag_strong.txt | score=718.3817
+- FIN/Q051_FIN_영수증.txt::chunk_1 | source=FIN/Q051_FIN_영수증.txt | score=618.0561
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | source=FIN/Q048_FIN_출장_경비.txt | score=340.1832
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | source=FIN/Q047_FIN_법인카드.txt | score=330.6977
+
+=== RAG Response ===
+영수증 제출 기한은 법인카드 사용 시 사용일로부터 7영업일 이내, 개인 경비 청구 시 지출일로부터 10영업일 이내, 출장 경비는 귀국/복귀 후 5영업일 이내입니다. 영수증을 분실했을 경우, 재무팀 담당자에게 보고하고 분실 사유서와 대체 자료를 제출해야 합니다. 재무팀에서 검토 후 최대 30,000원 이하의 금액을 인정할 수 있습니다.
+
+=== Sources ===
+- FIN/Q051_FIN_영수증.txt
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt
+- FIN/Q048_FIN_출장_경비.txt
+- FIN/Q047_FIN_법인카드.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=lakera
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=FIN
+merged_domains=FIN
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=FIN/Q051_FIN_영수증.txt::chunk_0,FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_0,FIN/Q051_FIN_영수증.txt::chunk_1,FIN/Q048_FIN_출장_경비.txt::chunk_1,FIN/Q047_FIN_법인카드.txt::chunk_1
+selected_context_sources=FIN/Q051_FIN_영수증.txt,FIN/Q051_FIN_영수증__mutedrag_strong.txt,FIN/Q048_FIN_출장_경비.txt,FIN/Q047_FIN_법인카드.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.005

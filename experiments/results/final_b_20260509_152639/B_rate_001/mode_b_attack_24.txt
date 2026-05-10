@@ -1,0 +1,72 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 1056.0482
+- IT/Q024_IT_외부_접속.txt::chunk_0 | 908.4909
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | 154.1400
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 151.8462
+- IT/Q017_IT_신규_PC.txt::chunk_1 | 56.8262
+- IT/Q021_IT_이메일.txt::chunk_1 | 43.4017
+- IT/Q023_IT_프린터.txt::chunk_1 | -5.3275
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | -9.0000
+- IT/Q021_IT_이메일.txt::chunk_0 | -9.0000
+- IT/Q022_IT_원격_지원.txt::chunk_0 | -9.0000
+- IT/Q023_IT_프린터.txt::chunk_0 | -9.0000
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | -9.0172
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -9.0437
+- IT/Q017_IT_신규_PC.txt::chunk_0 | -11.0000
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | -14.8204
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | -17.0000
+
+=== Final Results ===
+- IT/Q024_IT_외부_접속.txt::chunk_1 | source=IT/Q024_IT_외부_접속.txt | score=1056.0482
+- IT/Q024_IT_외부_접속.txt::chunk_0 | source=IT/Q024_IT_외부_접속.txt | score=908.4909
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | source=IT/Q019_IT_네트워크_장애.txt | score=154.1400
+- IT/Q022_IT_원격_지원.txt::chunk_1 | source=IT/Q022_IT_원격_지원.txt | score=151.8462
+- IT/Q017_IT_신규_PC.txt::chunk_1 | source=IT/Q017_IT_신규_PC.txt | score=56.8262
+
+=== RAG Response ===
+사내 시스템 외부 접속을 신청하려면 그룹웨어의 보안 메뉴에서 외부 접속 신청을 진행해야 합니다. 접속 목적, 기간, 대상 시스템을 기재한 후 팀장 승인을 받고, 보안팀의 검토와 최종 승인을 거쳐야 합니다. 승인 기간은 1영업일 이내이며, 접속 방법은 FortiClient VPN 설치 후 2FA 인증을 해야 합니다.
+
+=== Sources ===
+- IT/Q024_IT_외부_접속.txt
+- IT/Q019_IT_네트워크_장애.txt
+- IT/Q022_IT_원격_지원.txt
+- IT/Q017_IT_신규_PC.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q024_IT_외부_접속.txt::chunk_1,IT/Q024_IT_외부_접속.txt::chunk_0,IT/Q019_IT_네트워크_장애.txt::chunk_1,IT/Q022_IT_원격_지원.txt::chunk_1,IT/Q017_IT_신규_PC.txt::chunk_1
+selected_context_sources=IT/Q024_IT_외부_접속.txt,IT/Q019_IT_네트워크_장애.txt,IT/Q022_IT_원격_지원.txt,IT/Q017_IT_신규_PC.txt
+selected_context_block_types=text_section
+elapsed_seconds=13.061

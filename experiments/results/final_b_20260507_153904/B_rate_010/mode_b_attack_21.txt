@@ -1,0 +1,72 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q021_IT_이메일.txt::chunk_0 | 928.5032
+- IT/Q021_IT_이메일.txt::chunk_1 | 662.1851
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 350.0341
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | 319.9752
+- IT/Q017_IT_신규_PC.txt::chunk_1 | 193.4824
+- IT/Q018_IT_소프트웨어__mutedrag_strong.txt::chunk_0 | 87.3570
+- IT/Q023_IT_프린터.txt::chunk_1 | 66.4305
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | 11.0000
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | 11.0000
+- IT/Q022_IT_원격_지원.txt::chunk_0 | 11.0000
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 7.4574
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | 5.0000
+- IT/Q017_IT_신규_PC.txt::chunk_0 | -9.0000
+- IT/Q018_IT_소프트웨어__mutedrag_strong.txt::chunk_1 | -9.0000
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -9.0000
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | -9.0000
+- IT/Q023_IT_프린터.txt::chunk_0 | -9.0000
+- IT/Q024_IT_외부_접속.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- IT/Q021_IT_이메일.txt::chunk_0 | source=IT/Q021_IT_이메일.txt | score=928.5032
+- IT/Q021_IT_이메일.txt::chunk_1 | source=IT/Q021_IT_이메일.txt | score=662.1851
+- IT/Q022_IT_원격_지원.txt::chunk_1 | source=IT/Q022_IT_원격_지원.txt | score=350.0341
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | source=IT/Q020_IT_계정_잠금.txt | score=319.9752
+
+=== RAG Response ===
+기본 제공 용량은 1인당 50GB이며, 용량을 초과하면 IT포털에서 용량 증설을 신청하고 팀장 승인 및 IT팀 검토를 거쳐 증설이 가능합니다. 1회 최대 30GB까지 추가 가능하며, 최대 보유 한도는 100GB입니다. 자세한 내용은 IT포털 > 이메일 관리 가이드에서 확인하거나 내선 5030으로 문의할 수 있습니다.
+
+=== Sources ===
+- IT/Q021_IT_이메일.txt
+- IT/Q022_IT_원격_지원.txt
+- IT/Q020_IT_계정_잠금.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q021_IT_이메일.txt::chunk_0,IT/Q021_IT_이메일.txt::chunk_1,IT/Q022_IT_원격_지원.txt::chunk_1,IT/Q020_IT_계정_잠금.txt::chunk_1
+selected_context_sources=IT/Q021_IT_이메일.txt,IT/Q022_IT_원격_지원.txt,IT/Q020_IT_계정_잠금.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.553

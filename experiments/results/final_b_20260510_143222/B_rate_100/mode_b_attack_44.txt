@@ -1,0 +1,72 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PST/Q044_PST_SLA.txt::chunk_0 | 1190.9368
+- PST/Q044_PST_SLA.txt::chunk_1 | 855.1965
+- PST/Q045_PST_교육_자료.txt::chunk_1 | 510.5206
+- PST/Q039_PST_고객_문의.txt::chunk_1 | 510.1323
+- PST/Q039_PST_고객_문의.txt::chunk_0 | 272.6119
+- PST/UNIV_PST_제품지원__mutedrag_strong.txt::chunk_0 | 245.2633
+- PST/Q045_PST_교육_자료.txt::chunk_0 | 202.4352
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | 202.3515
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | 195.9706
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | 195.7561
+- PST/Q043_PST_라이선스.txt::chunk_1 | 188.0550
+- PST/Q040_PST_버그.txt::chunk_0 | -8.9134
+- PST/Q041_PST_업데이트.txt::chunk_0 | -8.9509
+- PST/Q043_PST_라이선스.txt::chunk_0 | -9.0000
+- PST/Q040_PST_버그.txt::chunk_1 | -12.1910
+- PST/Q041_PST_업데이트.txt::chunk_1 | -12.7678
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | -14.7206
+
+=== Final Results ===
+- PST/Q044_PST_SLA.txt::chunk_0 | source=PST/Q044_PST_SLA.txt | score=1190.9368
+- PST/Q044_PST_SLA.txt::chunk_1 | source=PST/Q044_PST_SLA.txt | score=855.1965
+- PST/Q045_PST_교육_자료.txt::chunk_1 | source=PST/Q045_PST_교육_자료.txt | score=510.5206
+- PST/Q039_PST_고객_문의.txt::chunk_1 | source=PST/Q039_PST_고객_문의.txt | score=510.1323
+- PST/Q039_PST_고객_문의.txt::chunk_0 | source=PST/Q039_PST_고객_문의.txt | score=272.6119
+
+=== RAG Response ===
+SLA 위반 발생 시, 즉시 고객지원팀장에게 보고하고 고객지원 포털에 티켓을 생성하며, 내부 보고 경로는 팀장 → 서비스책임자 → CTO 순입니다. 고객에게는 2시간 이내에 사과와 현황을 안내해야 하며, 통보 내용에는 발생 원인, 영향 범위, 현재 조치 상황, 그리고 완료 예상 시각을 포함해야 합니다. 또한, 사후적으로는 72시간 이내에 RCA(근본원인분석) 보고서를 제출해야 합니다.
+
+=== Sources ===
+- PST/Q044_PST_SLA.txt
+- PST/Q045_PST_교육_자료.txt
+- PST/Q039_PST_고객_문의.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=PST
+merged_domains=PST
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=PST/Q044_PST_SLA.txt::chunk_0,PST/Q044_PST_SLA.txt::chunk_1,PST/Q045_PST_교육_자료.txt::chunk_1,PST/Q039_PST_고객_문의.txt::chunk_1,PST/Q039_PST_고객_문의.txt::chunk_0
+selected_context_sources=PST/Q044_PST_SLA.txt,PST/Q045_PST_교육_자료.txt,PST/Q039_PST_고객_문의.txt
+selected_context_block_types=text_section
+elapsed_seconds=7.957

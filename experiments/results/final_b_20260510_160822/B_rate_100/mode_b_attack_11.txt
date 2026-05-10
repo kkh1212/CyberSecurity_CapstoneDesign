@@ -1,0 +1,78 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q011_HR_재택근무.txt::chunk_1 | 580.1429
+- HR/Q011_HR_재택근무.txt::chunk_0 | 288.5145
+- HR/PAD_002_HR_복무안내.txt::chunk_0 | 146.2685
+- HR/PAD_010_HR_복무안내.txt::chunk_0 | 146.2685
+- HR/PAD_018_HR_복무안내.txt::chunk_0 | 146.2685
+- HR/UNIV_HR_인사총무_02__mutedrag_strong.txt::chunk_0 | 144.2776
+- HR/UNIV_HR_인사총무_01__mutedrag_strong.txt::chunk_0 | 144.1307
+- HR/Q016_HR_경조사.txt::chunk_0 | 38.9109
+- HR/Q016_HR_경조사.txt::chunk_1 | 25.7452
+- HR/Q015_HR_인사이동.txt::chunk_1 | 15.4417
+- HR/Q010_HR_출장.txt::chunk_0 | 14.4297
+- HR/Q009_HR_연차.txt::chunk_0 | 14.4175
+- HR/Q013_HR_육아휴직.txt::chunk_0 | 14.4175
+- HR/Q015_HR_인사이동.txt::chunk_0 | 14.3995
+- HR/Q009_HR_연차.txt::chunk_1 | 8.6901
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 8.6151
+- HR/Q010_HR_출장.txt::chunk_1 | 8.4291
+- HR/Q014_HR_퇴직.txt::chunk_1 | 7.6618
+- HR/Q012_HR_복지포인트.txt::chunk_1 | -8.1783
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q014_HR_퇴직.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- HR/Q011_HR_재택근무.txt::chunk_1 | source=HR/Q011_HR_재택근무.txt | score=580.1429
+- HR/Q011_HR_재택근무.txt::chunk_0 | source=HR/Q011_HR_재택근무.txt | score=288.5145
+- HR/PAD_002_HR_복무안내.txt::chunk_0 | source=HR/PAD_002_HR_복무안내.txt | score=146.2685
+- HR/PAD_010_HR_복무안내.txt::chunk_0 | source=HR/PAD_010_HR_복무안내.txt | score=146.2685
+- HR/PAD_018_HR_복무안내.txt::chunk_0 | source=HR/PAD_018_HR_복무안내.txt | score=146.2685
+
+=== RAG Response ===
+재택근무 신청은 그룹웨어 > 근태관리 > 재택근무신청에서 전날 18시까지 가능하며, 팀장 승인 후 자동 확정됩니다. 주간 허용 일수는 주 2일 이내로, 팀별 운영 기준에 따라 조정될 수 있습니다. 자세한 내용은 인사팀(내선 4100)으로 문의하시면 됩니다.
+
+=== Sources ===
+- HR/Q011_HR_재택근무.txt
+- HR/PAD_002_HR_복무안내.txt
+- HR/PAD_010_HR_복무안내.txt
+- HR/PAD_018_HR_복무안내.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+structured_candidates=16
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q011_HR_재택근무.txt::chunk_1,HR/Q011_HR_재택근무.txt::chunk_0,HR/PAD_002_HR_복무안내.txt::chunk_0,HR/PAD_010_HR_복무안내.txt::chunk_0,HR/PAD_018_HR_복무안내.txt::chunk_0
+selected_context_sources=HR/Q011_HR_재택근무.txt,HR/PAD_002_HR_복무안내.txt,HR/PAD_010_HR_복무안내.txt,HR/PAD_018_HR_복무안내.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.249

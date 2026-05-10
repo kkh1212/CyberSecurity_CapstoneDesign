@@ -1,0 +1,64 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | 1178.0041
+- FIN/Q047_FIN_법인카드.txt::chunk_0 | 511.9381
+- FIN/Q051_FIN_영수증.txt::chunk_1 | 491.3973
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | 486.1349
+- FIN/Q052_FIN_전도금.txt::chunk_1 | 478.8564
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | 336.7393
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | 204.3262
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | 159.3011
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | 158.3278
+- FIN/Q048_FIN_출장_경비.txt::chunk_0 | -9.0000
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | -9.0000
+- FIN/Q051_FIN_영수증.txt::chunk_0 | -9.0000
+- FIN/Q052_FIN_전도금.txt::chunk_0 | -9.0000
+- FIN/Q053_FIN_예산_보고서.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | source=FIN/Q047_FIN_법인카드.txt | score=1178.0041
+- FIN/Q047_FIN_법인카드.txt::chunk_0 | source=FIN/Q047_FIN_법인카드.txt | score=511.9381
+
+=== RAG Response ===
+법인카드는 출장비, 거래처 접대비, 업무용품 구매, 팀 회식(1인당 50,000원 한도) 등 업무 목적의 항목에 사용할 수 있습니다. 개인 쇼핑, 여가, 음주 위주의 유흥 시설 이용, 현금 서비스는 금지됩니다. 한도 초과 사용 시에는 팀장과 재무팀의 승인이 필요합니다.
+
+=== Sources ===
+- FIN/Q047_FIN_법인카드.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=FIN
+merged_domains=FIN
+final_result_count=2
+context_chunk_count=2
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=FIN/Q047_FIN_법인카드.txt::chunk_1,FIN/Q047_FIN_법인카드.txt::chunk_0
+selected_context_sources=FIN/Q047_FIN_법인카드.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.056

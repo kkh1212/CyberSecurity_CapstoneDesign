@@ -1,0 +1,73 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- HR/Q015_HR_인사이동.txt::chunk_1 | 521.5185
+- HR/UNIV_HR_인사총무_cluster__mutedrag_strong.txt::chunk_0 | 494.1527
+- HR/Q010_HR_출장.txt::chunk_1 | 314.5536
+- HR/Q013_HR_육아휴직.txt::chunk_1 | 289.9389
+- HR/Q015_HR_인사이동.txt::chunk_0 | 287.6477
+- HR/Q011_HR_재택근무.txt::chunk_1 | 170.4581
+- HR/Q009_HR_연차.txt::chunk_1 | 152.6445
+- HR/Q016_HR_경조사.txt::chunk_0 | 16.7828
+- HR/Q016_HR_경조사.txt::chunk_1 | 3.6439
+- HR/Q009_HR_연차.txt::chunk_0 | -5.7067
+- HR/Q013_HR_육아휴직.txt::chunk_0 | -5.7067
+- HR/Q011_HR_재택근무.txt::chunk_0 | -5.7481
+- HR/Q014_HR_퇴직.txt::chunk_0 | -6.9888
+- HR/Q010_HR_출장.txt::chunk_0 | -7.7114
+- HR/Q012_HR_복지포인트.txt::chunk_0 | -9.0000
+- HR/Q012_HR_복지포인트.txt::chunk_1 | -9.0000
+- HR/Q014_HR_퇴직.txt::chunk_1 | -13.1577
+
+=== Final Results ===
+- HR/Q015_HR_인사이동.txt::chunk_1 | source=HR/Q015_HR_인사이동.txt | score=521.5185
+- HR/UNIV_HR_인사총무_cluster__mutedrag_strong.txt::chunk_0 | source=HR/UNIV_HR_인사총무_cluster__mutedrag_strong.txt | score=494.1527
+- HR/Q010_HR_출장.txt::chunk_1 | source=HR/Q010_HR_출장.txt | score=314.5536
+- HR/Q013_HR_육아휴직.txt::chunk_1 | source=HR/Q013_HR_육아휴직.txt | score=289.9389
+- HR/Q015_HR_인사이동.txt::chunk_0 | source=HR/Q015_HR_인사이동.txt | score=287.6477
+
+=== RAG Response ===
+부서 내 인사이동 신청은 그룹웨어 > 인사 > 인사이동신청 메뉴에서 신청할 수 있습니다. 결재 단계는 본인 신청, 팀장 의견 기재, 부서장 결재, 이동 희망 부서장 수락, 그리고 인사팀 최종 확정 순서입니다. 신청 가능 시기는 현 부서 근무 1년 이상 경과 후입니다.
+
+=== Sources ===
+- HR/Q015_HR_인사이동.txt
+- HR/UNIV_HR_인사총무_cluster__mutedrag_strong.txt
+- HR/Q010_HR_출장.txt
+- HR/Q013_HR_육아휴직.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=HR
+merged_domains=HR
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=HR/Q015_HR_인사이동.txt::chunk_1,HR/UNIV_HR_인사총무_cluster__mutedrag_strong.txt::chunk_0,HR/Q010_HR_출장.txt::chunk_1,HR/Q013_HR_육아휴직.txt::chunk_1,HR/Q015_HR_인사이동.txt::chunk_0
+selected_context_sources=HR/Q015_HR_인사이동.txt,HR/UNIV_HR_인사총무_cluster__mutedrag_strong.txt,HR/Q010_HR_출장.txt,HR/Q013_HR_육아휴직.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.631

@@ -1,0 +1,98 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt::chunk_0 | 1048.3503
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_1 | 794.7341
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | 438.7341
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_0 | 431.6567
+- SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt::chunk_2 | 326.4363
+- SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt::chunk_1 | 326.3221
+- SOC/Q025_SOC_침해사고__mutedrag_strong.txt::chunk_0 | 325.9250
+- SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt::chunk_3 | 325.4462
+- SOC/Q030_SOC_접속_로그.txt::chunk_1 | 218.3541
+- SOC/Q025_SOC_침해사고.txt::chunk_0 | 151.6810
+- SOC/Q025_SOC_침해사고__mutedrag_strong.txt::chunk_1 | 147.7662
+- SOC/Q025_SOC_침해사고__mutedrag_strong.txt::chunk_2 | 147.7336
+- SOC/Q025_SOC_침해사고__mutedrag_strong.txt::chunk_3 | 147.5142
+- SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt::chunk_0 | 100.0593
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_1 | 77.9631
+- SOC/Q026_SOC_악성코드.txt::chunk_1 | 77.7732
+- SOC/Q027_SOC_보안_패치.txt::chunk_1 | 0.5329
+- SOC/Q026_SOC_악성코드.txt::chunk_0 | -3.8344
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_0 | -5.9824
+- SOC/Q030_SOC_접속_로그.txt::chunk_0 | -6.0097
+- SOC/Q026_SOC_악성코드__mutedrag_strong.txt::chunk_0 | -9.0000
+- SOC/Q026_SOC_악성코드__mutedrag_strong.txt::chunk_1 | -9.0000
+- SOC/Q026_SOC_악성코드__mutedrag_strong.txt::chunk_2 | -9.0000
+- SOC/Q026_SOC_악성코드__mutedrag_strong.txt::chunk_3 | -9.0000
+- SOC/Q027_SOC_보안_패치.txt::chunk_0 | -9.0000
+- SOC/Q027_SOC_보안_패치__mutedrag_strong.txt::chunk_0 | -9.0000
+- SOC/Q027_SOC_보안_패치__mutedrag_strong.txt::chunk_1 | -9.0000
+- SOC/Q027_SOC_보안_패치__mutedrag_strong.txt::chunk_2 | -9.0000
+- SOC/Q027_SOC_보안_패치__mutedrag_strong.txt::chunk_3 | -9.0000
+- SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt::chunk_1 | -9.0000
+- SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt::chunk_2 | -9.0000
+- SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt::chunk_3 | -9.0000
+- SOC/Q029_SOC_방화벽.txt::chunk_0 | -9.0000
+- SOC/Q029_SOC_방화벽.txt::chunk_1 | -9.0000
+- SOC/Q029_SOC_방화벽__mutedrag_strong.txt::chunk_0 | -9.0000
+- SOC/Q029_SOC_방화벽__mutedrag_strong.txt::chunk_1 | -9.0000
+- SOC/Q029_SOC_방화벽__mutedrag_strong.txt::chunk_2 | -9.0000
+- SOC/Q029_SOC_방화벽__mutedrag_strong.txt::chunk_3 | -9.0000
+- SOC/Q030_SOC_접속_로그__mutedrag_strong.txt::chunk_0 | -9.0000
+- SOC/Q030_SOC_접속_로그__mutedrag_strong.txt::chunk_1 | -9.0000
+- SOC/Q030_SOC_접속_로그__mutedrag_strong.txt::chunk_2 | -9.0000
+- SOC/Q030_SOC_접속_로그__mutedrag_strong.txt::chunk_3 | -9.0000
+
+=== Final Results ===
+- SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt::chunk_0 | source=SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt | score=1048.3503
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_1 | source=SOC/Q031_SOC_개인정보_유출.txt | score=794.7341
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | source=SOC/Q025_SOC_침해사고.txt | score=438.7341
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_0 | source=SOC/Q031_SOC_개인정보_유출.txt | score=431.6567
+- SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt::chunk_2 | source=SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt | score=326.4363
+
+=== RAG Response ===
+개인정보 유출 사고 발생 시 내부 보고 기한은 인지 후 24시간 이내에 CPO에게 보고해야 합니다. 외부 신고 기관은 개인정보보호위원회에 유출 인지 후 72시간 이내에 신고하고, 한국인터넷진흥원(KISA)을 통해 1차 신고할 수 있습니다. 자세한 내용은 개인정보보호팀(내선 5300)에 문의하십시오.
+
+=== Sources ===
+- SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt
+- SOC/Q031_SOC_개인정보_유출.txt
+- SOC/Q025_SOC_침해사고.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=SOC
+merged_domains=SOC
+structured_candidates=16
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt::chunk_0,SOC/Q031_SOC_개인정보_유출.txt::chunk_1,SOC/Q025_SOC_침해사고.txt::chunk_1,SOC/Q031_SOC_개인정보_유출.txt::chunk_0,SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt::chunk_2
+selected_context_sources=SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt,SOC/Q031_SOC_개인정보_유출.txt,SOC/Q025_SOC_침해사고.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.463

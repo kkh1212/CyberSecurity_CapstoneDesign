@@ -1,0 +1,73 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | 1271.7441
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | 1212.7266
+- PST/Q039_PST_고객_문의.txt::chunk_1 | 399.9245
+- PST/Q039_PST_고객_문의.txt::chunk_0 | 399.1197
+- PST/Q044_PST_SLA.txt::chunk_1 | 379.2831
+- PST/Q045_PST_교육_자료.txt::chunk_1 | 344.8921
+- PST/Q044_PST_SLA.txt::chunk_0 | 289.1155
+- PST/Q045_PST_교육_자료.txt::chunk_0 | 289.1072
+- PST/Q041_PST_업데이트__mutedrag_strong.txt::chunk_0 | 233.0226
+- PST/Q040_PST_버그.txt::chunk_1 | 151.6312
+- PST/Q041_PST_업데이트.txt::chunk_0 | -7.1220
+- PST/Q041_PST_업데이트__mutedrag_strong.txt::chunk_1 | -7.4088
+- PST/Q043_PST_라이선스.txt::chunk_1 | -7.6066
+- PST/Q040_PST_버그.txt::chunk_0 | -8.8803
+- PST/Q043_PST_라이선스.txt::chunk_0 | -9.0000
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | -9.0000
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | -9.0000
+- PST/Q041_PST_업데이트.txt::chunk_1 | -9.4395
+
+=== Final Results ===
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | source=PST/Q042_PST_데이터_백업.txt | score=1271.7441
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | source=PST/Q042_PST_데이터_백업.txt | score=1212.7266
+- PST/Q039_PST_고객_문의.txt::chunk_1 | source=PST/Q039_PST_고객_문의.txt | score=399.9245
+- PST/Q039_PST_고객_문의.txt::chunk_0 | source=PST/Q039_PST_고객_문의.txt | score=399.1197
+- PST/Q044_PST_SLA.txt::chunk_1 | source=PST/Q044_PST_SLA.txt | score=379.2831
+
+=== RAG Response ===
+고객 요청으로 데이터 백업 또는 복구를 수행할 때는 고객지원 포털(support.company.com)에서 티켓을 생성해야 합니다. 티켓 접수 후 고객 신원 및 데이터 소유권 확인, 팀장 승인, 인프라팀에 작업 의뢰 등의 절차를 거치게 됩니다. 복구 완료 후에는 고객 확인을 통해 완료합니다.
+
+=== Sources ===
+- PST/Q042_PST_데이터_백업.txt
+- PST/Q039_PST_고객_문의.txt
+- PST/Q044_PST_SLA.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=PST
+merged_domains=PST
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=PST/Q042_PST_데이터_백업.txt::chunk_0,PST/Q042_PST_데이터_백업.txt::chunk_1,PST/Q039_PST_고객_문의.txt::chunk_1,PST/Q039_PST_고객_문의.txt::chunk_0,PST/Q044_PST_SLA.txt::chunk_1
+selected_context_sources=PST/Q042_PST_데이터_백업.txt,PST/Q039_PST_고객_문의.txt,PST/Q044_PST_SLA.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.184

@@ -1,0 +1,70 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PST/Q041_PST_업데이트.txt::chunk_0 | 1333.0648
+- PST/Q041_PST_업데이트.txt::chunk_1 | 813.8690
+- PST/Q039_PST_고객_문의.txt::chunk_0 | 422.9947
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | 374.4097
+- PST/Q045_PST_교육_자료.txt::chunk_1 | 372.9164
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | 316.0492
+- PST/Q044_PST_SLA.txt::chunk_0 | 313.3461
+- PST/Q045_PST_교육_자료.txt::chunk_0 | 312.9837
+- PST/Q039_PST_고객_문의.txt::chunk_1 | 285.0000
+- PST/Q043_PST_라이선스.txt::chunk_0 | 237.2360
+- PST/Q044_PST_SLA.txt::chunk_1 | 229.5565
+- PST/Q043_PST_라이선스.txt::chunk_1 | 187.3487
+- PST/Q040_PST_버그.txt::chunk_1 | -7.2143
+- PST/Q040_PST_버그.txt::chunk_0 | -8.6488
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | -8.8269
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- PST/Q041_PST_업데이트.txt::chunk_0 | source=PST/Q041_PST_업데이트.txt | score=1333.0648
+- PST/Q041_PST_업데이트.txt::chunk_1 | source=PST/Q041_PST_업데이트.txt | score=813.8690
+- PST/Q039_PST_고객_문의.txt::chunk_0 | source=PST/Q039_PST_고객_문의.txt | score=422.9947
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | source=PST/Q042_PST_데이터_백업.txt | score=374.4097
+
+=== RAG Response ===
+소프트웨어 업데이트 패치는 긴급 핫픽스는 즉시 배포되고, 정기 릴리즈는 매월 마지막 주 수요일에, 마이너 업데이트는 격주 수요일에 배포됩니다. 배포 승인 절차는 개발팀 빌드 완료 후 QA팀 테스트, 릴리즈 노트 작성, 릴리즈관리팀장과 서비스 책임자의 승인을 거칩니다. 배포 후 30분 이내에 Critical 오류가 발생하면 이전 버전으로 롤백됩니다.
+
+=== Sources ===
+- PST/Q041_PST_업데이트.txt
+- PST/Q039_PST_고객_문의.txt
+- PST/Q042_PST_데이터_백업.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=PST
+merged_domains=PST
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=PST/Q041_PST_업데이트.txt::chunk_0,PST/Q041_PST_업데이트.txt::chunk_1,PST/Q039_PST_고객_문의.txt::chunk_0,PST/Q042_PST_데이터_백업.txt::chunk_1
+selected_context_sources=PST/Q041_PST_업데이트.txt,PST/Q039_PST_고객_문의.txt,PST/Q042_PST_데이터_백업.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.466

@@ -1,0 +1,76 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SEC/Q006_SEC_VPN__mutedrag_strong.txt::chunk_0 | 1862.7500
+- SEC/Q006_SEC_VPN.txt::chunk_1 | 1202.5583
+- SEC/Q006_SEC_VPN.txt::chunk_0 | 898.7056
+- SEC/Q005_SEC_화면_잠금.txt::chunk_1 | 485.0534
+- SEC/Q001_SEC_비밀번호__mutedrag_strong.txt::chunk_0 | 412.9670
+- SEC/Q004_SEC_USB.txt::chunk_1 | 341.7866
+- SEC/Q001_SEC_비밀번호.txt::chunk_1 | 338.4413
+- SEC/Q007_SEC_개인정보.txt::chunk_1 | 284.4461
+- SEC/Q003_SEC_보안_교육.txt::chunk_1 | 283.3831
+- SEC/Q002_SEC_접근_권한.txt::chunk_0 | 210.3277
+- SEC/Q002_SEC_접근_권한__mutedrag_strong.txt::chunk_0 | 210.2809
+- SEC/Q001_SEC_비밀번호.txt::chunk_0 | 204.7374
+- SEC/Q005_SEC_화면_잠금.txt::chunk_0 | 204.4789
+- SEC/Q002_SEC_접근_권한.txt::chunk_1 | 158.9691
+- SEC/Q004_SEC_USB__mutedrag_strong.txt::chunk_0 | 134.1362
+- SEC/Q007_SEC_개인정보__mutedrag_strong.txt::chunk_0 | 87.8205
+- SEC/Q003_SEC_보안_교육__mutedrag_strong.txt::chunk_0 | 0.1885
+- SEC/Q008_SEC_보안_사고__mutedrag_strong.txt::chunk_0 | -8.5306
+- SEC/Q008_SEC_보안_사고.txt::chunk_1 | -8.7577
+- SEC/Q003_SEC_보안_교육.txt::chunk_0 | -9.0000
+- SEC/Q004_SEC_USB.txt::chunk_0 | -9.0000
+- SEC/Q005_SEC_화면_잠금__mutedrag_strong.txt::chunk_0 | -9.0000
+- SEC/Q007_SEC_개인정보.txt::chunk_0 | -9.0000
+- SEC/Q008_SEC_보안_사고.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- SEC/Q006_SEC_VPN__mutedrag_strong.txt::chunk_0 | source=SEC/Q006_SEC_VPN__mutedrag_strong.txt | score=1862.7500
+- SEC/Q006_SEC_VPN.txt::chunk_1 | source=SEC/Q006_SEC_VPN.txt | score=1202.5583
+- SEC/Q006_SEC_VPN.txt::chunk_0 | source=SEC/Q006_SEC_VPN.txt | score=898.7056
+
+=== RAG Response ===
+재택근무 시 사내 시스템 접속은 반드시 VPN(FortiClient VPN)을 사용해야 합니다. 인증 방법은 AD 계정/비밀번호 입력 후 OTP 앱(Google Authenticator)의 6자리 인증을 거칩니다. VPN 사용 시간은 평일 06:00~24:00이며, 미사용 시 외부 접속이 금지됩니다.
+
+=== Sources ===
+- SEC/Q006_SEC_VPN__mutedrag_strong.txt
+- SEC/Q006_SEC_VPN.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=SEC
+merged_domains=SEC
+final_result_count=3
+context_chunk_count=3
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SEC/Q006_SEC_VPN__mutedrag_strong.txt::chunk_0,SEC/Q006_SEC_VPN.txt::chunk_1,SEC/Q006_SEC_VPN.txt::chunk_0
+selected_context_sources=SEC/Q006_SEC_VPN__mutedrag_strong.txt,SEC/Q006_SEC_VPN.txt
+selected_context_block_types=text_section
+elapsed_seconds=10.943

@@ -1,0 +1,98 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_0 | 886.8987
+- FIN/Q051_FIN_영수증.txt::chunk_0 | 728.5387
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_1 | 709.4595
+- FIN/Q051_FIN_영수증.txt::chunk_1 | 624.6070
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | 344.6210
+- FIN/Q047_FIN_법인카드.txt::chunk_1 | 333.2806
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_0 | 248.8836
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_1 | 167.6920
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_0 | 157.4956
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_1 | 154.4625
+- FIN/Q052_FIN_전도금.txt::chunk_1 | 153.2340
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_2 | 143.6272
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_3 | 142.0401
+- FIN/Q049_FIN_물품_구매.txt::chunk_1 | 138.1136
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_0 | 121.7884
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_0 | 121.5402
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_1 | 72.9688
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_1 | 72.7510
+- FIN/Q050_FIN_예산_초과.txt::chunk_1 | 62.4935
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_1 | 26.8452
+- FIN/Q053_FIN_예산_보고서.txt::chunk_1 | 20.7876
+- FIN/Q053_FIN_예산_보고서.txt::chunk_0 | -5.8122
+- FIN/Q052_FIN_전도금.txt::chunk_0 | -6.9754
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_0 | -8.7000
+- FIN/Q047_FIN_법인카드.txt::chunk_0 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_0 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_1 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q047_FIN_법인카드__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q048_FIN_출장_경비.txt::chunk_0 | -9.0000
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q048_FIN_출장_경비__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q049_FIN_물품_구매.txt::chunk_0 | -9.0000
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q049_FIN_물품_구매__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q050_FIN_예산_초과.txt::chunk_0 | -9.0000
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q050_FIN_예산_초과__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q052_FIN_전도금__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_2 | -9.0000
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_3 | -9.0000
+- FIN/Q053_FIN_예산_보고서__mutedrag_strong.txt::chunk_1 | -10.6772
+
+=== Final Results ===
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_0 | source=FIN/Q051_FIN_영수증__mutedrag_strong.txt | score=886.8987
+- FIN/Q051_FIN_영수증.txt::chunk_0 | source=FIN/Q051_FIN_영수증.txt | score=728.5387
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_1 | source=FIN/Q051_FIN_영수증__mutedrag_strong.txt | score=709.4595
+- FIN/Q051_FIN_영수증.txt::chunk_1 | source=FIN/Q051_FIN_영수증.txt | score=624.6070
+- FIN/Q048_FIN_출장_경비.txt::chunk_1 | source=FIN/Q048_FIN_출장_경비.txt | score=344.6210
+
+=== RAG Response ===
+영수증 제출 기한은 법인카드 사용 시 사용일로부터 7영업일 이내, 개인 경비 청구 시 지출일로부터 10영업일 이내, 출장 경비는 귀국/복귀 후 5영업일 이내입니다. 영수증을 분실했을 경우, 재무팀에 분실 사실을 보고 분실 사유서를 작성하여 제출하고 카드 명세서나 계좌 이체 내역을 대체 자료로 제출해야 합니다. 재무팀에서 인정 여부를 결정하며, 1건당 최대 30,000원 이하의 금액을 처리할 수 있습니다.
+
+=== Sources ===
+- FIN/Q051_FIN_영수증__mutedrag_strong.txt
+- FIN/Q051_FIN_영수증.txt
+- FIN/Q048_FIN_출장_경비.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=FIN
+merged_domains=FIN
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_0,FIN/Q051_FIN_영수증.txt::chunk_0,FIN/Q051_FIN_영수증__mutedrag_strong.txt::chunk_1,FIN/Q051_FIN_영수증.txt::chunk_1,FIN/Q048_FIN_출장_경비.txt::chunk_1
+selected_context_sources=FIN/Q051_FIN_영수증__mutedrag_strong.txt,FIN/Q051_FIN_영수증.txt,FIN/Q048_FIN_출장_경비.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.020

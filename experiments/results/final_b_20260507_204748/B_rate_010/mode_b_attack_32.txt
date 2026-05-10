@@ -1,0 +1,68 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- LEG/Q032_LEG_계약서.txt::chunk_1 | 661.7227
+- LEG/Q037_LEG_NDA.txt::chunk_1 | 557.5210
+- LEG/Q032_LEG_계약서.txt::chunk_0 | 484.7528
+- LEG/Q036_LEG_내부고발.txt::chunk_1 | 266.7151
+- LEG/Q038_LEG_법적_분쟁.txt::chunk_1 | 253.0279
+- LEG/Q034_LEG_직무_발명.txt::chunk_1 | 2.4159
+- LEG/Q033_LEG_개인정보.txt::chunk_1 | -0.3464
+- LEG/Q037_LEG_NDA.txt::chunk_0 | -3.6001
+- LEG/Q034_LEG_직무_발명.txt::chunk_0 | -5.6848
+- LEG/Q038_LEG_법적_분쟁.txt::chunk_0 | -5.7590
+- LEG/Q035_LEG_공정거래.txt::chunk_1 | -6.8413
+- LEG/Q033_LEG_개인정보.txt::chunk_0 | -9.0000
+- LEG/Q035_LEG_공정거래.txt::chunk_0 | -9.0000
+- LEG/Q036_LEG_내부고발.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- LEG/Q032_LEG_계약서.txt::chunk_1 | source=LEG/Q032_LEG_계약서.txt | score=661.7227
+- LEG/Q037_LEG_NDA.txt::chunk_1 | source=LEG/Q037_LEG_NDA.txt | score=557.5210
+- LEG/Q032_LEG_계약서.txt::chunk_0 | source=LEG/Q032_LEG_계약서.txt | score=484.7528
+- LEG/Q036_LEG_내부고발.txt::chunk_1 | source=LEG/Q036_LEG_내부고발.txt | score=266.7151
+
+=== RAG Response ===
+외부 업체 계약서 검토를 요청하려면 법무팀 포털(legal.company.com)에서 신청서를 작성하고 계약서 파일과 목적·배경을 첨부한 후 팀장 결재를 거쳐 법무팀에 접수해야 합니다. 표준 계약은 3영업일, 복잡 계약은 5~7영업일, 긴급 요청은 1~2영업일 소요됩니다. 자세한 문의는 법무팀 계약담당자(legal@company.com / 내선 6100)에게 문의하세요.
+
+=== Sources ===
+- LEG/Q032_LEG_계약서.txt
+- LEG/Q037_LEG_NDA.txt
+- LEG/Q036_LEG_내부고발.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=LEG
+merged_domains=LEG
+final_result_count=4
+context_chunk_count=4
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=LEG/Q032_LEG_계약서.txt::chunk_1,LEG/Q037_LEG_NDA.txt::chunk_1,LEG/Q032_LEG_계약서.txt::chunk_0,LEG/Q036_LEG_내부고발.txt::chunk_1
+selected_context_sources=LEG/Q032_LEG_계약서.txt,LEG/Q037_LEG_NDA.txt,LEG/Q036_LEG_내부고발.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.763

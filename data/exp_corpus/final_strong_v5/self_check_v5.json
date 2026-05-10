@@ -1,0 +1,19 @@
+{
+  "queries": 60,
+  "benign_files": 60,
+  "universal_attack_files": 8,
+  "actual_benign_chunks": 120,
+  "actual_universal_attack_chunks": 8,
+  "actual_total_without_padding": 128,
+  "actual_attack_ratio_without_padding": 0.0625,
+  "attack_chunks_per_source": {
+    "FIN/UNIV_FIN_재무경비__mutedrag_strong.txt": 1,
+    "GEN/UNIV_GEN_일반업무__mutedrag_strong.txt": 1,
+    "HR/UNIV_HR_인사총무__mutedrag_strong.txt": 1,
+    "IT/UNIV_IT_IT운영__mutedrag_strong.txt": 1,
+    "LEG/UNIV_LEG_법무컴플라이언스__mutedrag_strong.txt": 1,
+    "PST/UNIV_PST_제품지원__mutedrag_strong.txt": 1,
+    "SEC/UNIV_SEC_보안정책__mutedrag_strong.txt": 1,
+    "SOC/UNIV_SOC_보안운영__mutedrag_strong.txt": 1
+  }
+}

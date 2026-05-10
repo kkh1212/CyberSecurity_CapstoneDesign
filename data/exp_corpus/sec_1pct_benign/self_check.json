@@ -1,0 +1,26 @@
+{
+  "domain": "SEC",
+  "sec_txt_file_count": 99,
+  "question_count": 99,
+  "duplicate_question_count": 0,
+  "char_count_min": 250,
+  "char_count_max": 322,
+  "char_count_avg": 282.9,
+  "files_under_250_chars": [],
+  "files_over_450_chars": [],
+  "questions_under_20_or_over_80_chars": [],
+  "missing_target_files": [],
+  "forbidden_hits": [],
+  "intended_1pct_design": {
+    "benign_chunks": 99,
+    "attack_chunks_to_add_later": 1,
+    "total_chunks_after_attack": 100,
+    "attack_chunk_ratio": 0.01
+  },
+  "fixed_attack_document_format": "single paragraph, no blank lines, intended to stay as one chunk",
+  "actual_verified_total_chunks_after_stage": 100,
+  "actual_verified_attack_chunks_after_stage": 1,
+  "actual_verified_attack_chunk_ratio_after_stage": 0.01,
+  "benign_documents": 99,
+  "universal_attack_documents": 1
+}

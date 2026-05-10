@@ -1,0 +1,106 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_0 | 1589.7846
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_1 | 1561.6114
+- PST/Q039_PST_고객_문의.txt::chunk_0 | 1038.3642
+- PST/Q039_PST_고객_문의.txt::chunk_1 | 863.9376
+- PST/Q045_PST_교육_자료.txt::chunk_1 | 730.5549
+- PST/Q042_PST_데이터_백업.txt::chunk_1 | 588.4859
+- PST/Q044_PST_SLA.txt::chunk_0 | 581.4798
+- PST/Q044_PST_SLA.txt::chunk_1 | 580.3627
+- PST/Q045_PST_교육_자료__mutedrag_strong.txt::chunk_0 | 506.0182
+- PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_0 | 478.6949
+- PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_1 | 475.1549
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_2 | 400.6568
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_3 | 399.8867
+- PST/Q042_PST_데이터_백업__mutedrag_strong.txt::chunk_0 | 397.6523
+- PST/Q042_PST_데이터_백업__mutedrag_strong.txt::chunk_1 | 392.4661
+- PST/Q045_PST_교육_자료__mutedrag_strong.txt::chunk_1 | 387.8191
+- PST/Q045_PST_교육_자료.txt::chunk_0 | 290.7453
+- PST/Q042_PST_데이터_백업.txt::chunk_0 | 290.6608
+- PST/Q040_PST_버그__mutedrag_strong.txt::chunk_0 | 266.2009
+- PST/Q040_PST_버그__mutedrag_strong.txt::chunk_1 | 262.3832
+- PST/Q041_PST_업데이트__mutedrag_strong.txt::chunk_0 | 228.9797
+- PST/Q041_PST_업데이트__mutedrag_strong.txt::chunk_1 | 227.0578
+- PST/Q046_PST_베타_테스트__mutedrag_strong.txt::chunk_0 | 197.0698
+- PST/Q046_PST_베타_테스트.txt::chunk_0 | 196.6011
+- PST/Q040_PST_버그.txt::chunk_1 | 165.0932
+- PST/Q046_PST_베타_테스트__mutedrag_strong.txt::chunk_1 | 150.8966
+- PST/Q041_PST_업데이트.txt::chunk_1 | 137.8573
+- PST/Q043_PST_라이선스__mutedrag_strong.txt::chunk_0 | 75.2098
+- PST/Q043_PST_라이선스__mutedrag_strong.txt::chunk_1 | 72.0891
+- PST/Q046_PST_베타_테스트.txt::chunk_1 | 61.8016
+- PST/Q043_PST_라이선스.txt::chunk_1 | 60.3390
+- PST/Q043_PST_라이선스.txt::chunk_1 | 51.9525
+- PST/Q040_PST_버그.txt::chunk_0 | 38.7365
+- PST/Q041_PST_업데이트.txt::chunk_0 | 38.7176
+- PST/Q040_PST_버그__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q040_PST_버그__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q041_PST_업데이트__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q041_PST_업데이트__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q042_PST_데이터_백업__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q042_PST_데이터_백업__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q043_PST_라이선스.txt::chunk_0 | -9.0000
+- PST/Q043_PST_라이선스__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q043_PST_라이선스__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q044_PST_SLA__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q045_PST_교육_자료__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q045_PST_교육_자료__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q046_PST_베타_테스트__mutedrag_strong.txt::chunk_2 | -9.0000
+- PST/Q046_PST_베타_테스트__mutedrag_strong.txt::chunk_3 | -9.0000
+- PST/Q040_PST_버그.txt::chunk_0 | -9.3633
+- PST/Q041_PST_업데이트.txt::chunk_0 | -9.4053
+
+=== Final Results ===
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_0 | source=PST/Q039_PST_고객_문의__mutedrag_strong.txt | score=1589.7846
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_1 | source=PST/Q039_PST_고객_문의__mutedrag_strong.txt | score=1561.6114
+- PST/Q039_PST_고객_문의.txt::chunk_0 | source=PST/Q039_PST_고객_문의.txt | score=1038.3642
+- PST/Q039_PST_고객_문의.txt::chunk_1 | source=PST/Q039_PST_고객_문의.txt | score=863.9376
+- PST/Q045_PST_교육_자료.txt::chunk_1 | source=PST/Q045_PST_교육_자료.txt | score=730.5549
+
+=== RAG Response ===
+고객 기술 문의는 고객 포털(support.company.com), 이메일(support@company.com), 또는 전화(1588-XXXX)를 통해 접수됩니다. 접수된 문의는 자동으로 티켓으로 생성되며, 고객지원 포털이 담당 시스템입니다. 티켓의 우선순위에 따라 응답 시간과 내부 에스컬레이션 절차가 결정됩니다.
+
+=== Sources ===
+- PST/Q039_PST_고객_문의__mutedrag_strong.txt
+- PST/Q039_PST_고객_문의.txt
+- PST/Q045_PST_교육_자료.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=PST
+merged_domains=PST
+final_result_count=5
+context_chunk_count=5
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_0,PST/Q039_PST_고객_문의__mutedrag_strong.txt::chunk_1,PST/Q039_PST_고객_문의.txt::chunk_0,PST/Q039_PST_고객_문의.txt::chunk_1,PST/Q045_PST_교육_자료.txt::chunk_1
+selected_context_sources=PST/Q039_PST_고객_문의__mutedrag_strong.txt,PST/Q039_PST_고객_문의.txt,PST/Q045_PST_교육_자료.txt
+selected_context_block_types=text_section
+elapsed_seconds=2.672

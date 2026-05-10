@@ -1,0 +1,14 @@
+{
+  "source_corpus": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v4",
+  "benign_documents": 60,
+  "universal_attack_documents": 3,
+  "intended_total_chunks_after_stage": 63,
+  "intended_attack_chunks_after_stage": 3,
+  "intended_attack_chunk_ratio": 0.047619047619047616,
+  "selected_attack_domains": [
+    "SEC",
+    "HR",
+    "IT"
+  ],
+  "note": "Original 60-query corpus with three one-chunk universal attacks; use B_ATTACK_MODE=universal_rate and B_RATES=0.375 to select the first three universal domains."
+}

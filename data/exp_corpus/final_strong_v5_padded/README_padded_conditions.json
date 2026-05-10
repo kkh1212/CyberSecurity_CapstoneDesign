@@ -1,0 +1,89 @@
+{
+  "base": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v5",
+  "fixed_components": [
+    "queries_final.json",
+    "benign_controlled",
+    "attack_universal_txt"
+  ],
+  "fixed_benign_chunks": 120,
+  "fixed_attack_chunks": 8,
+  "formula": "attack_ratio = 8 / (120 + 8 + padding_chunks)",
+  "created_conditions": [
+    {
+      "name": "final_strong_v5_p01",
+      "path": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v5_padded/final_strong_v5_p01",
+      "queries": 60,
+      "fixed_benign_chunks": 120,
+      "fixed_attack_chunks": 8,
+      "padding_chunks": 672,
+      "actual_total_chunks_expected": 800,
+      "target_attack_ratio": 0.01,
+      "actual_attack_ratio_expected": 0.01,
+      "ratio_percent": 1.0
+    },
+    {
+      "name": "final_strong_v5_p02",
+      "path": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v5_padded/final_strong_v5_p02",
+      "queries": 60,
+      "fixed_benign_chunks": 120,
+      "fixed_attack_chunks": 8,
+      "padding_chunks": 272,
+      "actual_total_chunks_expected": 400,
+      "target_attack_ratio": 0.02,
+      "actual_attack_ratio_expected": 0.02,
+      "ratio_percent": 2.0
+    },
+    {
+      "name": "final_strong_v5_p03",
+      "path": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v5_padded/final_strong_v5_p03",
+      "queries": 60,
+      "fixed_benign_chunks": 120,
+      "fixed_attack_chunks": 8,
+      "padding_chunks": 139,
+      "actual_total_chunks_expected": 267,
+      "target_attack_ratio": 0.03,
+      "actual_attack_ratio_expected": 0.0299625468164794,
+      "ratio_percent": 2.9963
+    },
+    {
+      "name": "final_strong_v5_p04",
+      "path": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v5_padded/final_strong_v5_p04",
+      "queries": 60,
+      "fixed_benign_chunks": 120,
+      "fixed_attack_chunks": 8,
+      "padding_chunks": 72,
+      "actual_total_chunks_expected": 200,
+      "target_attack_ratio": 0.04,
+      "actual_attack_ratio_expected": 0.04,
+      "ratio_percent": 4.0
+    },
+    {
+      "name": "final_strong_v5_p05",
+      "path": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v5_padded/final_strong_v5_p05",
+      "queries": 60,
+      "fixed_benign_chunks": 120,
+      "fixed_attack_chunks": 8,
+      "padding_chunks": 32,
+      "actual_total_chunks_expected": 160,
+      "target_attack_ratio": 0.05,
+      "actual_attack_ratio_expected": 0.05,
+      "ratio_percent": 5.0
+    },
+    {
+      "name": "final_strong_v5_p0625_max",
+      "path": "/home/riceburger/workspace/capstone/testest/data/exp_corpus/final_strong_v5_padded/final_strong_v5_p0625_max",
+      "queries": 60,
+      "fixed_benign_chunks": 120,
+      "fixed_attack_chunks": 8,
+      "padding_chunks": 0,
+      "actual_total_chunks_expected": 128,
+      "target_attack_ratio": 0.0625,
+      "actual_attack_ratio_expected": 0.0625,
+      "ratio_percent": 6.25
+    }
+  ],
+  "impossible_10pct_under_fixed_attack_and_benign": {
+    "reason": "With fixed 120 benign chunks and fixed 8 attack chunks, the maximum ratio occurs with zero padding: 8/(120+8)=6.25%. Reaching 10% requires increasing attack chunks or reducing fixed benign chunks.",
+    "max_ratio": 0.0625
+  }
+}

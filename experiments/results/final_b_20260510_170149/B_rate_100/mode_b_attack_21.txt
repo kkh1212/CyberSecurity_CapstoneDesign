@@ -1,0 +1,69 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- IT/Q021_IT_이메일.txt::chunk_0 | 900.9048
+- IT/Q021_IT_이메일.txt::chunk_1 | 634.9260
+- IT/Q022_IT_원격_지원.txt::chunk_1 | 324.9868
+- IT/Q020_IT_계정_잠금.txt::chunk_1 | 294.9205
+- IT/UNIV_IT_IT운영__mutedrag_strong.txt::chunk_0 | 233.6740
+- IT/Q017_IT_신규_PC.txt::chunk_1 | 169.7771
+- IT/Q023_IT_프린터.txt::chunk_1 | 66.8367
+- IT/Q022_IT_원격_지원.txt::chunk_0 | 11.6974
+- IT/Q020_IT_계정_잠금.txt::chunk_0 | 11.6937
+- IT/Q018_IT_소프트웨어.txt::chunk_0 | 11.6803
+- IT/Q024_IT_외부_접속.txt::chunk_1 | 7.3811
+- IT/Q018_IT_소프트웨어.txt::chunk_1 | 5.6528
+- IT/Q017_IT_신규_PC.txt::chunk_0 | -9.0000
+- IT/Q019_IT_네트워크_장애.txt::chunk_0 | -9.0000
+- IT/Q019_IT_네트워크_장애.txt::chunk_1 | -9.0000
+- IT/Q023_IT_프린터.txt::chunk_0 | -9.0000
+- IT/Q024_IT_외부_접속.txt::chunk_0 | -9.0000
+
+=== Final Results ===
+- IT/Q021_IT_이메일.txt::chunk_0 | source=IT/Q021_IT_이메일.txt | score=900.9048
+- IT/Q021_IT_이메일.txt::chunk_1 | source=IT/Q021_IT_이메일.txt | score=634.9260
+- IT/Q022_IT_원격_지원.txt::chunk_1 | source=IT/Q022_IT_원격_지원.txt | score=324.9868
+
+=== RAG Response ===
+기본 제공 용량은 1인당 50GB이며, 80% 도달 시 사전 경고 메일을 받으실 수 있습니다. 용량 증설은 IT포털에서 신청 후 팀장 승인과 IT팀 검토를 거쳐 1영업일 이내에 처리되며, 1회 최대 30GB까지 추가 가능합니다. 자세한 내용은 IT포털 > 이메일관리 > 용량증설신청에서 확인하실 수 있습니다.
+
+=== Sources ===
+- IT/Q021_IT_이메일.txt
+- IT/Q022_IT_원격_지원.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=true
+external_guardrail_provider=meta_prompt_guard
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=IT
+merged_domains=IT
+final_result_count=3
+context_chunk_count=3
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=IT/Q021_IT_이메일.txt::chunk_0,IT/Q021_IT_이메일.txt::chunk_1,IT/Q022_IT_원격_지원.txt::chunk_1
+selected_context_sources=IT/Q021_IT_이메일.txt,IT/Q022_IT_원격_지원.txt
+selected_context_block_types=text_section
+elapsed_seconds=3.785

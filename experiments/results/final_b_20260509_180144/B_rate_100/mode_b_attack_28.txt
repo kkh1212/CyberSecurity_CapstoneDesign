@@ -1,0 +1,72 @@
+
+질문 입력
+> 
+=== Dense Results ===
+
+=== Sparse Results ===
+- SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt::chunk_0 | 1921.4071
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_1 | 1345.5177
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_0 | 897.4423
+- SOC/Q027_SOC_보안_패치.txt::chunk_1 | 655.1553
+- SOC/Q030_SOC_접속_로그.txt::chunk_1 | 477.8606
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_1 | 441.4406
+- SOC/Q029_SOC_방화벽.txt::chunk_1 | 356.2480
+- SOC/Q031_SOC_개인정보_유출__mutedrag_strong.txt::chunk_0 | 264.6908
+- SOC/Q025_SOC_침해사고__mutedrag_strong.txt::chunk_0 | 239.2149
+- SOC/Q025_SOC_침해사고.txt::chunk_1 | 134.3289
+- SOC/Q029_SOC_방화벽.txt::chunk_0 | 59.0413
+- SOC/Q029_SOC_방화벽__mutedrag_strong.txt::chunk_0 | -8.1935
+- SOC/Q025_SOC_침해사고.txt::chunk_0 | -8.8218
+- SOC/Q030_SOC_접속_로그.txt::chunk_0 | -8.8338
+- SOC/Q031_SOC_개인정보_유출.txt::chunk_0 | -8.8920
+- SOC/Q026_SOC_악성코드.txt::chunk_0 | -9.0000
+- SOC/Q026_SOC_악성코드.txt::chunk_1 | -9.0000
+- SOC/Q026_SOC_악성코드__mutedrag_strong.txt::chunk_0 | -9.0000
+- SOC/Q027_SOC_보안_패치.txt::chunk_0 | -9.0000
+- SOC/Q027_SOC_보안_패치__mutedrag_strong.txt::chunk_0 | -9.0285
+- SOC/Q030_SOC_접속_로그__mutedrag_strong.txt::chunk_0 | -9.0839
+
+=== Final Results ===
+- SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt::chunk_0 | source=SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt | score=1921.4071
+- SOC/Q028_SOC_취약점_스캔.txt::chunk_1 | source=SOC/Q028_SOC_취약점_스캔.txt | score=1345.5177
+
+=== RAG Response ===
+내부 시스템 취약점 스캔은 보안팀 포털에서 신청서를 작성하고, 시스템 담당자 및 부서장의 결재를 받아 진행됩니다. 스캔 결과 보고서는 Critical, High, Medium, Low, Info 등급별 취약점 목록과 조치 권고를 포함합니다. 보고서는 스캔 완료 후 5영업일 이내 이메일로 발송됩니다.
+
+=== Sources ===
+- SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt
+- SOC/Q028_SOC_취약점_스캔.txt
+
+=== Debug ===
+route=llm
+security_mode=baseline_rag
+runtime_detector_enabled=false
+runtime_sanitizer_enabled=false
+external_guardrail_enabled=false
+external_guardrail_provider=off
+external_guardrail_stages=context
+external_guardrail_action=block
+input_guardrail_flagged=false
+input_guardrail_blocked=false
+context_guardrail_flagged=false
+context_guardrail_blocked=false
+output_guardrail_flagged=false
+output_guardrail_blocked=false
+external_guardrail_reason=
+external_guardrail_categories=
+external_guardrail_error=
+llm_called=true
+final_answer_source=llm
+guardrail_block_response=
+selected_domain=SOC
+merged_domains=SOC
+final_result_count=2
+context_chunk_count=2
+runtime_risk_level=not_run
+runtime_action=baseline_allow
+runtime_adjusted_risk=0.0000
+runtime_profile=balanced
+selected_context_chunk_ids=SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt::chunk_0,SOC/Q028_SOC_취약점_스캔.txt::chunk_1
+selected_context_sources=SOC/Q028_SOC_취약점_스캔__mutedrag_strong.txt,SOC/Q028_SOC_취약점_스캔.txt
+selected_context_block_types=text_section
+elapsed_seconds=10.198
