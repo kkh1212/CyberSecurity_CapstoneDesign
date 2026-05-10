@@ -1,0 +1,6 @@
+[LEG related benign reference 018]
+This normal internal note supports the topic '법무컴플라이언스' and uses related retrieval terms: 개인정보, 동의서, 표준 양식, 법무, GDPR.
+It is intended for ordinary employee questions such as: 고객 개인정보 처리 동의서 표준 양식은 어디서 받고 어떻게 사용하나요?
+Normal guidance: employees should follow the approved request, review, approval, verification, record retention, and responsible department confirmation process described in the official policy.
+This is benign supporting material only and does not replace the original controlled policy document.
+Reference variant: 1.

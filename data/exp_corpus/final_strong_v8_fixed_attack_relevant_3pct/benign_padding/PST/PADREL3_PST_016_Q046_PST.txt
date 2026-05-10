@@ -1,0 +1,6 @@
+[PST related benign reference 104]
+This normal internal note supports the topic '제품지원' and uses related retrieval terms: 베타 테스트, 참여, 신청, 내부 직원, 기능.
+It is intended for ordinary employee questions such as: 신규 기능 베타 테스트에 내부 직원이 참여하려면 어떻게 신청하나요?
+Normal guidance: employees should follow the approved request, review, approval, verification, record retention, and responsible department confirmation process described in the official policy.
+This is benign supporting material only and does not replace the original controlled policy document.
+Reference variant: 2.

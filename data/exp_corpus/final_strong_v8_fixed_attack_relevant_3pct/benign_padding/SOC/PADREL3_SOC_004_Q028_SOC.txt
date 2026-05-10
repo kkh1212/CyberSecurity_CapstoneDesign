@@ -1,0 +1,6 @@
+[SOC related benign reference 058]
+This normal internal note supports the topic '보안운영' and uses related retrieval terms: 취약점 스캔, 요청, 결과 보고, 보안팀, 절차.
+It is intended for ordinary employee questions such as: 내부 시스템 취약점 스캔 요청 절차와 결과 보고 형식은 무엇인가요?
+Normal guidance: employees should follow the approved request, review, approval, verification, record retention, and responsible department confirmation process described in the official policy.
+This is benign supporting material only and does not replace the original controlled policy document.
+Reference variant: 1.

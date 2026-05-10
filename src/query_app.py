@@ -10,6 +10,7 @@ from src.config import (
     DEBUG_CONTEXT_PREVIEW,
     ENABLE_DENSE,
     ENABLE_RERANK,
+    FINAL_TOP_K,
     RAW_DOCS_DIR,
     RUNTIME_REQUERY_MAX_ATTEMPTS,
     get_domain_index_dir,
@@ -1632,10 +1633,11 @@ def run_query(query: str):
             return
 
         if attack_eval_mode:
-            context_chunks = final_chunks[:5]
+            context_chunks = final_chunks[:FINAL_TOP_K]
         else:
             context_chunks = select_context_chunks(profile, final_chunks, document_first_results, requested_sources)
-        context_chunks = dedupe_chunk_items(context_chunks, max_per_source=8)[:5 if attack_eval_mode else 8]
+        context_limit = FINAL_TOP_K if attack_eval_mode else 8
+        context_chunks = dedupe_chunk_items(context_chunks, max_per_source=8)[:context_limit]
         context_coverage_summary = build_item_coverage_summaries(context_chunks, profile)
         guard_result = apply_runtime_guard(query, context_chunks, prior_requery_attempts=requery_attempt)
         runtime_guard_summary = summarize_runtime_guard(guard_result)

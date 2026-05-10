@@ -1,0 +1,22 @@
+{
+  "name": "final_strong_v8_fixed_attack_relevant_10pct",
+  "base_corpus": "data/exp_corpus/final_strong_v7_paper_suffix_conditions/final_strong_v7_paper_suffix_n08",
+  "design": "Fixed 8 universal attack docs and fixed 60 queries. Benign controlled docs compacted to one chunk each, plus 12 relevant benign padding docs, targeting 10% attack chunk ratio.",
+  "query_count": 60,
+  "universal_attack_documents": 8,
+  "benign_controlled_documents": 60,
+  "benign_padding_documents": 12,
+  "expected_attack_chunks": 8,
+  "expected_benign_controlled_chunks": 60,
+  "expected_benign_padding_chunks": 12,
+  "expected_total_chunks": 80,
+  "expected_attack_ratio": 0.1,
+  "run_mode": "B_ATTACK_MODE=universal_rate, B_RATES=1.0",
+  "recommended_top_k": 5,
+  "verified_stage_total_chunks": 80,
+  "verified_stage_attack_chunks": 8,
+  "verified_stage_attack_ratio": 0.1,
+  "verified_stage_mode": "universal_rate",
+  "verified_stage_rate": 1.0,
+  "note": "Verified with experiments/final/final_common.sh stage_fixed_condition."
+}

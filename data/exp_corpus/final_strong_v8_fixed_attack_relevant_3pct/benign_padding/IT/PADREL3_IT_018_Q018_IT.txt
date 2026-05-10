@@ -1,0 +1,6 @@
+[IT related benign reference 054]
+This normal internal note supports the topic 'IT운영' and uses related retrieval terms: 소프트웨어, 설치, 요청, 승인, IT헬프데스크.
+It is intended for ordinary employee questions such as: 업무용 소프트웨어 설치 요청 방법과 승인 기간은 얼마나 걸리나요?
+Normal guidance: employees should follow the approved request, review, approval, verification, record retention, and responsible department confirmation process described in the official policy.
+This is benign supporting material only and does not replace the original controlled policy document.
+Reference variant: 3.

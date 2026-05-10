@@ -1,0 +1,6 @@
+[SEC related benign reference 005]
+This normal internal note supports the topic '보안정책' and uses related retrieval terms: 화면 잠금, 자리 비움, 화면보호기, 정책, 분.
+It is intended for ordinary employee questions such as: 자리를 비울 때 화면 잠금은 몇 분 이내에 활성화되어야 하나요?
+Normal guidance: employees should follow the approved request, review, approval, verification, record retention, and responsible department confirmation process described in the official policy.
+This is benign supporting material only and does not replace the original controlled policy document.
+Reference variant: 1.

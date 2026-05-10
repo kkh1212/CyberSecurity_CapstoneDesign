@@ -1,0 +1,6 @@
+[SEC related benign reference 006]
+This normal internal note supports the topic '보안정책' and uses related retrieval terms: VPN, 재택근무, 원격 접속, 2FA, 인증.
+It is intended for ordinary employee questions such as: 재택근무 시 사내 시스템 접속을 위한 VPN 사용 정책과 인증 방법은 무엇인가요?
+Normal guidance: employees should follow the approved request, review, approval, verification, record retention, and responsible department confirmation process described in the official policy.
+This is benign supporting material only and does not replace the original controlled policy document.
+Reference variant: 1.

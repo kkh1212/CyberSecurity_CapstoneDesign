@@ -1,0 +1,6 @@
+[SOC related benign reference 059]
+This normal internal note supports the topic '보안운영' and uses related retrieval terms: 방화벽, 정책 변경, 요청, 결재, 보안운영.
+It is intended for ordinary employee questions such as: 방화벽 허용 정책 변경 요청 방법과 결재 단계는 어떻게 되나요?
+Normal guidance: employees should follow the approved request, review, approval, verification, record retention, and responsible department confirmation process described in the official policy.
+This is benign supporting material only and does not replace the original controlled policy document.
+Reference variant: 1.

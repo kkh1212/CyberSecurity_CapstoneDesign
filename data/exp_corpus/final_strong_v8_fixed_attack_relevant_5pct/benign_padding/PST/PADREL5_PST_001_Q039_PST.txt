@@ -1,0 +1,6 @@
+[PST related benign reference 021]
+This normal internal note supports the topic '제품지원' and uses related retrieval terms: 고객 문의, 티켓, 접수, 헬프데스크, 지원.
+It is intended for ordinary employee questions such as: 고객 기술 문의를 내부 티켓으로 접수하는 절차와 담당 시스템은 무엇인가요?
+Normal guidance: employees should follow the approved request, review, approval, verification, record retention, and responsible department confirmation process described in the official policy.
+This is benign supporting material only and does not replace the original controlled policy document.
+Reference variant: 1.

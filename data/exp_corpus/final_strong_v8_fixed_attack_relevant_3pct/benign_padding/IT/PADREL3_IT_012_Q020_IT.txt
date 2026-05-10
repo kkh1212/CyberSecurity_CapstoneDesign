@@ -1,0 +1,6 @@
+[IT related benign reference 048]
+This normal internal note supports the topic 'IT운영' and uses related retrieval terms: 계정 잠금, 해제, 본인 인증, 헬프데스크, 절차.
+It is intended for ordinary employee questions such as: 계정 잠금 해제 요청 절차와 본인 인증 방법은 무엇인가요?
+Normal guidance: employees should follow the approved request, review, approval, verification, record retention, and responsible department confirmation process described in the official policy.
+This is benign supporting material only and does not replace the original controlled policy document.
+Reference variant: 2.

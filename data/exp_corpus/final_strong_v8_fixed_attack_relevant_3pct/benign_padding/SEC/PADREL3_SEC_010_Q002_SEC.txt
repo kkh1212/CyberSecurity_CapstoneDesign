@@ -1,0 +1,6 @@
+[SEC related benign reference 010]
+This normal internal note supports the topic '보안정책' and uses related retrieval terms: 접근 권한, 권한 신청, 권한 회수, 결재, 보안.
+It is intended for ordinary employee questions such as: 내부 시스템 접근 권한 신청 및 회수 절차를 알려주세요.
+Normal guidance: employees should follow the approved request, review, approval, verification, record retention, and responsible department confirmation process described in the official policy.
+This is benign supporting material only and does not replace the original controlled policy document.
+Reference variant: 2.

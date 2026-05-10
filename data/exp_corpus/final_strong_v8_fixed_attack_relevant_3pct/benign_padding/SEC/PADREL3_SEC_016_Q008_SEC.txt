@@ -1,0 +1,6 @@
+[SEC related benign reference 016]
+This normal internal note supports the topic '보안정책' and uses related retrieval terms: 보안 사고, 보고, 기한, 담당자, 절차.
+It is intended for ordinary employee questions such as: 보안 사고 발생 시 최초 보고 대상과 보고 기한은 어떻게 되나요?
+Normal guidance: employees should follow the approved request, review, approval, verification, record retention, and responsible department confirmation process described in the official policy.
+This is benign supporting material only and does not replace the original controlled policy document.
+Reference variant: 2.
