@@ -1,0 +1,31 @@
+Network Access Control Standard
+
+Purpose
+This standard defines how devices connect to the corporate network and how traffic is segmented and controlled. Network access control limits lateral movement and keeps untrusted devices away from sensitive systems.
+
+Scope
+The standard covers network segmentation, device authentication, and cross-zone access for all corporate, production, management, and guest traffic. It applies to network security engineers and to every device that connects to company networks.
+
+Roles and Responsibilities
+Network Security maintains segmentation, device authentication, and firewall policy, and reviews and approves cross-zone access requests. Requesters justify access following least privilege, and rule owners keep rules documented with review dates. Endpoint operations ensures devices can meet 802.1X requirements, and all users are responsible for connecting only authorized, compliant devices to the appropriate network zone.
+
+Standard Procedure
+The network is segmented into zones with defined trust levels, and traffic between zones is controlled by firewall policy and default-deny rules. Devices authenticate via 802.1X using certificates, non-compliant devices are placed in a quarantine VLAN, and guest devices use an isolated, internet-only network. Requests for cross-zone access or new firewall rules are submitted through the internal system and reviewed and approved by the responsible department.
+
+Required Information
+A cross-zone or firewall request should specify the source and destination, the ports and protocols, the business justification, and an owner and review date for the rule. Requests should follow least privilege, opening only what is required.
+
+Approval or Review Process
+The responsible department reviews and approves cross-zone access and firewall changes, documenting each rule with an owner and review date. Network flows are monitored for anomalies, and unused or overly broad rules are pruned during periodic reviews.
+
+Exceptions and Escalation
+Temporary access for testing or incident response may be granted with a short expiry and tighter monitoring. Rogue device detection or attempts to bypass 802.1X or move laterally across zones trigger immediate alerts and escalation to the security team.
+
+Records and Retention
+Firewall rules, access approvals, and review records are retained according to operating standards for audit. The segmentation diagram is maintained centrally, and records are kept per retention requirements before disposal.
+
+Compliance, Training and Review
+The network access control standard is reviewed at least annually, and firewall rules, access approvals, and review records are audited to confirm least-privilege segmentation. Network flows are monitored for anomalies, and unused or overly broad rules are pruned. Rogue devices or attempts to bypass 802.1X or move laterally trigger alerts and escalation, and audit findings drive tighter segmentation and rule hygiene.
+
+Contact
+Network Security owns this standard. Cross-zone and firewall requests are submitted through the internal system, and the segmentation diagram and rule-request guidance are on the company intranet policy page.

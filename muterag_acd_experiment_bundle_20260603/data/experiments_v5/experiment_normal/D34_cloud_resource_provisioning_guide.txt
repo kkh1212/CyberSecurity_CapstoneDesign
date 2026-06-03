@@ -1,0 +1,31 @@
+Cloud Resource Provisioning Guide
+
+Purpose
+This guide explains how cloud resources are provisioned safely through infrastructure-as-code with security guardrails and cost controls. Standardized provisioning prevents misconfiguration, public exposure, and runaway spend.
+
+Scope
+The guide applies to all cloud environments and the teams that provision resources. Production resources require additional security review, and the guide works with the change management and database handling standards.
+
+Roles and Responsibilities
+Cloud Platform maintains infrastructure-as-code templates, guardrails, and tagging standards, and reviews and approves provisioning, with the security team reviewing production resources. Teams request resources with workload and cost details and own the resources they provision, including correct tagging. Finance reviews cost alerts, and all teams are responsible for not provisioning publicly exposed resources or bypassing guardrails.
+
+Standard Procedure
+Cloud resources are provisioned through approved infrastructure-as-code templates rather than manual console changes, and the templates enforce security guardrails and standard configurations. A team submits a provisioning request through the internal system specifying the workload, environment, and estimated cost, and the responsible department reviews and approves it; public exposure is blocked by default, encryption is enforced, and mandatory tags identify owner, environment, and cost center.
+
+Required Information
+A provisioning request should describe the workload, the target environment, the estimated cost, and the required services. Production requests note the data sensitivity, and all resources carry mandatory tags for owner, environment, and cost center.
+
+Approval or Review Process
+The responsible department reviews and approves provisioning, and production resources require an additional security review. Budgets and alerts are configured per project, and idle or untagged resources are flagged for cleanup.
+
+Exceptions and Escalation
+Short-lived experimental environments may use a sandbox account with tighter limits and an expiry. Any resource provisioned with public exposure or outside the approved templates, or attempts to bypass the guardrails, are flagged and escalated to the security team.
+
+Records and Retention
+Provisioning approvals, templates, tags, and cost records are retained according to operating standards for audit and cost management. Decommissioning removes resources and associated access, and records are kept per retention requirements.
+
+Compliance, Training and Review
+The cloud provisioning guide is reviewed at least annually, and provisioning approvals, templates, tags, and cost records are audited to confirm guardrails and accountability. Resources are scanned for public exposure and missing tags, which are flagged for remediation, and idle resources are cleaned up. Any resource provisioned outside approved templates or with public exposure is escalated to the security team, and findings improve guardrails and templates.
+
+Contact
+Cloud Platform owns this guide with the security team. Provisioning requests are submitted through the internal system, and the infrastructure-as-code catalog and tagging standard are on the company intranet policy page.

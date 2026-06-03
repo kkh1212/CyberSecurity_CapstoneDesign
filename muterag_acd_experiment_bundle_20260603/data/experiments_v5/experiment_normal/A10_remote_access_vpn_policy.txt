@@ -1,0 +1,31 @@
+Remote Access and VPN Policy
+
+Purpose
+This policy defines how employees connect securely to internal systems from outside the corporate network using the VPN and zero-trust access gateway. Secure remote access enables flexible work while ensuring that off-site connections meet the same security standards as on-site ones.
+
+Scope
+The policy covers all remote connections to internal resources, whether from home, while traveling, or from any off-site location, and applies to every employee and contractor. It works with the endpoint management and network access control standards that define device compliance.
+
+Roles and Responsibilities
+Employees connect only from enrolled, compliant devices, complete MFA each session, and avoid privileged access from shared computers. The responsible department approves VPN access, and Network Access operates the gateway and posture checks with the security team monitoring connections. Endpoint operations ensures devices can meet posture requirements, and resource owners may impose additional approval for privileged environments reached over the VPN.
+
+Standard Procedure
+Remote access requires an enrolled, compliant device that passes posture checks for disk encryption, patch level, and an active security agent, and MFA is mandatory for every VPN session. To obtain access, an employee submits a request through the internal system, and the responsible department reviews and approves it; authentication and connection events are recorded.
+
+Required Information
+A VPN access request should identify the employee, the device to be used, the systems or environments needed, and the business justification. The device must already be enrolled in endpoint management, and the requester confirms it meets the posture requirements before access is granted.
+
+Approval or Review Process
+The responsible department reviews and approves access, and results are communicated within one to two business days. Split tunneling is restricted, idle sessions disconnect after thirty minutes, and access to privileged environments may require additional approval and stronger authentication.
+
+Exceptions and Escalation
+Temporary access from a managed but slightly non-compliant device may be granted with a remediation deadline under a documented exception. Shared or public computers must not be used for privileged access, and suspected misuse or compromise of remote sessions is escalated to the security team.
+
+Records and Retention
+Connection logs, posture results, and access approvals are retained according to operating standards to support monitoring and investigation. Records are kept in line with audit requirements, and access for departed users is removed promptly.
+
+Compliance, Training and Review
+Remote-access expectations are covered in security awareness training, and the policy is reviewed at least annually and as the access architecture evolves. Connection logs, posture results, and access approvals are audited to confirm that only compliant devices connect and that access for departed users is removed. Anomalous remote sessions are investigated, non-compliant devices are blocked from sensitive resources, and audit findings drive tightening of posture rules and session controls where needed.
+
+Contact
+Network Access owns this policy with the IT help desk. Employees request access through the internal system, and the VPN setup guide and troubleshooting steps are on the company intranet policy page or available from the IT help desk.

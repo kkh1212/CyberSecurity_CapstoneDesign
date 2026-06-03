@@ -1,0 +1,31 @@
+Data Breach Notification Procedure
+
+Purpose
+This procedure defines how the company assesses and, where required, notifies regulators and affected individuals about a data breach. Timely, accurate notification meets legal obligations and maintains trust.
+
+Scope
+The procedure applies when personal or sensitive data may have been exposed and involves the security, privacy, and legal teams. It works with the security incident response procedure for containment and remediation.
+
+Roles and Responsibilities
+The Privacy Office leads breach assessment and notification decisions with Legal and the security team, and the designated authority approves notifications. Incident responders provide scope and containment status, and business owners support communications. Leadership is informed of reportable breaches, and all parties are responsible for not suppressing or delaying a reportable breach beyond legal timeframes.
+
+Standard Procedure
+A suspected breach is reported through the internal system, and the responsible department reviews and verifies it, engaging Legal and Privacy, while the security and privacy teams assess the nature, scope, and risk. Where required, regulators are notified within the legally mandated timeframe and affected individuals are informed without undue delay, with notifications describing the incident, likely impact, and recommended actions.
+
+Required Information
+A breach report should describe the data potentially exposed, the number of individuals affected, the cause, and the containment status. The assessment records the lawful and regulatory considerations needed to decide on notification.
+
+Approval or Review Process
+The designated authority approves notification decisions after the privacy, security, and legal review. Containment and remediation follow the security incident response procedure, and communications are coordinated to remain accurate and consistent.
+
+Exceptions and Escalation
+Where notification is not legally required, the rationale is documented and retained. Any attempt to suppress or delay a reportable breach beyond legal timeframes is a serious compliance violation escalated to leadership and Legal.
+
+Records and Retention
+Assessments, notification decisions, approvals, and communications are retained according to operating standards for audit and regulatory evidence. Templates are maintained centrally, and records are kept in line with legal requirements.
+
+Compliance, Training and Review
+The breach notification procedure is reviewed at least annually and after relevant incidents or regulatory change, and assessments, decisions, approvals, and communications are retained as regulatory evidence. Notification timelines are tracked against legal requirements, and where notification is not required the rationale is documented. Suppressing or delaying a reportable breach is a serious compliance violation escalated to leadership and Legal, and findings refine templates and decision criteria.
+
+Contact
+The Privacy Office owns this procedure with Legal and the security team. Suspected breaches are reported through the internal system, and the notification templates and decision criteria are on the company intranet policy page.

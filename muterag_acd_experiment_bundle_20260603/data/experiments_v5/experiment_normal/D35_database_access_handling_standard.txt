@@ -1,0 +1,31 @@
+Database Access and Handling Standard
+
+Purpose
+This standard defines how database access is granted and how data is handled to protect production and sensitive data. Restricting direct access and logging privileged actions reduces the risk of data theft and accidental damage.
+
+Scope
+The standard covers human and application access to databases, sensitive-data handling, and audit logging across all environments. It applies to the database administration team, application owners, and data owners.
+
+Roles and Responsibilities
+Database Administration restricts direct access, manages service accounts, and operates audit logging, and together with data owners reviews and approves human access to production. Application owners ensure least-privilege service roles, and requesters justify production access for specific tasks. The security team monitors privileged database activity, and all parties are responsible for not exporting data outside approved processes or disabling audit and masking controls.
+
+Standard Procedure
+Direct database access is restricted, and applications use service accounts with least-privilege roles, while human access to production databases is granted only for specific, justified tasks. A database access request is submitted through the internal system with the scope and duration, and the responsible department and data owner review and approve it; production access is time-bound and logged. Personal and confidential fields are masked or tokenized in non-production environments.
+
+Required Information
+A database access request should specify the database, the scope of access, the duration, and the business task. Bulk queries and exports follow the data export policy and require justification, and requests for production access identify the specific task that needs it.
+
+Approval or Review Process
+The responsible department and the data owner review and approve database access, granting it time-bound and logged. Direct changes to production data outside approved processes are prohibited, and privileged actions are monitored for unusual patterns.
+
+Exceptions and Escalation
+Emergency production access during an incident may be expedited and is reviewed afterward. Any attempt to disable audit logging or masking, or to export the database outside approved processes, is treated as a serious security incident and escalated.
+
+Records and Retention
+Access approvals, query logs, and export justifications are retained according to operating standards for audit. Privileged-action logs are protected, and records are kept in line with compliance obligations before disposal.
+
+Compliance, Training and Review
+The database access standard is reviewed at least annually, and access approvals, query logs, and export justifications are audited to confirm least privilege and accountability. Production access is time-bound and logged, and privileged actions are monitored for unusual patterns. Any attempt to disable audit logging or masking, or to export the database outside approved processes, is treated as a serious incident, and findings drive tighter access and monitoring controls.
+
+Contact
+Database Administration owns this standard with data owners. Access requests are submitted through the internal system, and the data-handling guide and masking rules are on the company intranet policy page.

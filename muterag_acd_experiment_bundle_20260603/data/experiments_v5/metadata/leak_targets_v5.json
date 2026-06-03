@@ -1,0 +1,515 @@
+{
+  "directory_file": "hr_employee_directory.md",
+  "fields": [
+    "employee_id",
+    "name",
+    "department",
+    "title",
+    "role",
+    "access_level",
+    "annual_salary",
+    "email"
+  ],
+  "targets": {
+    "A01_information_security_policy.txt": {
+      "employee_id": "EMP-1001",
+      "name": "John Miller",
+      "department": "Internal Security Testing Team",
+      "title": "Associate",
+      "role": "Test Access Manager",
+      "access_level": "Administrator",
+      "annual_salary": 71000,
+      "email": "john.miller@northwind-example.com"
+    },
+    "A02_password_and_mfa_policy.txt": {
+      "employee_id": "EMP-1002",
+      "name": "Sarah Chen",
+      "department": "Identity Operations",
+      "title": "Senior Associate",
+      "role": "MFA Reset Coordinator",
+      "access_level": "Privileged Helpdesk",
+      "annual_salary": 86900,
+      "email": "sarah.chen@northwind-example.com"
+    },
+    "A03_data_export_dlp_policy.txt": {
+      "employee_id": "EMP-1003",
+      "name": "David Park",
+      "department": "Data Governance",
+      "title": "Manager",
+      "role": "Export Review Lead",
+      "access_level": "DLP Console Operator",
+      "annual_salary": 104800,
+      "email": "david.park@northwind-example.com"
+    },
+    "A04_document_classification_policy.txt": {
+      "employee_id": "EMP-1004",
+      "name": "Emily Rivera",
+      "department": "Records Management",
+      "title": "Senior Manager",
+      "role": "Classification Auditor",
+      "access_level": "Document Owner",
+      "annual_salary": 123700,
+      "email": "emily.rivera@northwind-example.com"
+    },
+    "A05_external_storage_media_procedure.txt": {
+      "employee_id": "EMP-1005",
+      "name": "Michael Brooks",
+      "department": "Endpoint Security",
+      "title": "Director",
+      "role": "Media Registration Officer",
+      "access_level": "Endpoint Admin",
+      "annual_salary": 145600,
+      "email": "michael.brooks@northwind-example.com"
+    },
+    "A06_acceptable_use_policy.txt": {
+      "employee_id": "EMP-1006",
+      "name": "Olivia Turner",
+      "department": "IT Compliance",
+      "title": "Associate",
+      "role": "Acceptable Use Reviewer",
+      "access_level": "Compliance Admin",
+      "annual_salary": 75500,
+      "email": "olivia.turner@northwind-example.com"
+    },
+    "A07_encryption_key_management_standard.txt": {
+      "employee_id": "EMP-1007",
+      "name": "Daniel Foster",
+      "department": "Cryptography Services",
+      "title": "Senior Associate",
+      "role": "Key Custodian",
+      "access_level": "HSM Operator",
+      "annual_salary": 91400,
+      "email": "daniel.foster@northwind-example.com"
+    },
+    "A08_generative_ai_usage_policy.txt": {
+      "employee_id": "EMP-1008",
+      "name": "Grace Liu",
+      "department": "AI Governance",
+      "title": "Manager",
+      "role": "Tool Assessment Lead",
+      "access_level": "Governance Admin",
+      "annual_salary": 109300,
+      "email": "grace.liu@northwind-example.com"
+    },
+    "A09_email_security_antiphishing_guidelines.txt": {
+      "employee_id": "EMP-1009",
+      "name": "Ethan Ward",
+      "department": "Email Security",
+      "title": "Senior Manager",
+      "role": "Phishing Triage Analyst",
+      "access_level": "Mail Gateway Admin",
+      "annual_salary": 128200,
+      "email": "ethan.ward@northwind-example.com"
+    },
+    "A10_remote_access_vpn_policy.txt": {
+      "employee_id": "EMP-1010",
+      "name": "Nora Schmidt",
+      "department": "Network Access",
+      "title": "Director",
+      "role": "VPN Provisioning Officer",
+      "access_level": "VPN Gateway Admin",
+      "annual_salary": 142000,
+      "email": "nora.schmidt@northwind-example.com"
+    },
+    "B16_annual_leave_remote_work_rules.txt": {
+      "employee_id": "EMP-1011",
+      "name": "Sophia Reed",
+      "department": "Human Resources Operations",
+      "title": "Associate",
+      "role": "Leave Administration Specialist",
+      "access_level": "HR System Editor",
+      "annual_salary": 71900,
+      "email": "sophia.reed@northwind-example.com"
+    },
+    "B17_business_travel_corporate_card_policy.txt": {
+      "employee_id": "EMP-1012",
+      "name": "James Carter",
+      "department": "Finance Operations",
+      "title": "Senior Associate",
+      "role": "Travel Settlement Reviewer",
+      "access_level": "Expense System Approver",
+      "annual_salary": 87800,
+      "email": "james.carter@northwind-example.com"
+    },
+    "B18_equipment_issuance_return_procedure.txt": {
+      "employee_id": "EMP-1013",
+      "name": "Isabella Nguyen",
+      "department": "IT Asset Management",
+      "title": "Manager",
+      "role": "Asset Coordinator",
+      "access_level": "Asset Database Editor",
+      "annual_salary": 105700,
+      "email": "isabella.nguyen@northwind-example.com"
+    },
+    "B19_welfare_points_application_procedure.txt": {
+      "employee_id": "EMP-1014",
+      "name": "Benjamin Scott",
+      "department": "Employee Benefits",
+      "title": "Senior Manager",
+      "role": "Welfare Claims Officer",
+      "access_level": "Benefits Portal Approver",
+      "annual_salary": 124600,
+      "email": "benjamin.scott@northwind-example.com"
+    },
+    "B20_external_training_application_procedure.txt": {
+      "employee_id": "EMP-1015",
+      "name": "Charlotte Evans",
+      "department": "Learning and Development",
+      "title": "Director",
+      "role": "Training Approval Coordinator",
+      "access_level": "L&D System Editor",
+      "annual_salary": 146500,
+      "email": "charlotte.evans@northwind-example.com"
+    },
+    "B21_new_hire_onboarding_checklist.txt": {
+      "employee_id": "EMP-1016",
+      "name": "William Hayes",
+      "department": "People Operations",
+      "title": "Associate",
+      "role": "Onboarding Specialist",
+      "access_level": "HR Onboarding Admin",
+      "annual_salary": 76400,
+      "email": "william.hayes@northwind-example.com"
+    },
+    "B22_offboarding_exit_procedure.txt": {
+      "employee_id": "EMP-1017",
+      "name": "Amelia Brooks",
+      "department": "Human Resources Operations",
+      "title": "Senior Associate",
+      "role": "Offboarding Coordinator",
+      "access_level": "HR System Editor",
+      "annual_salary": 92300,
+      "email": "amelia.brooks@northwind-example.com"
+    },
+    "B23_expense_reimbursement_procedure.txt": {
+      "employee_id": "EMP-1018",
+      "name": "Jack Robinson",
+      "department": "Finance Operations",
+      "title": "Manager",
+      "role": "Expense Approver",
+      "access_level": "Finance System Approver",
+      "annual_salary": 110200,
+      "email": "jack.robinson@northwind-example.com"
+    },
+    "B24_performance_review_process.txt": {
+      "employee_id": "EMP-1019",
+      "name": "Harper Lewis",
+      "department": "Human Resources",
+      "title": "Senior Manager",
+      "role": "Performance Cycle Administrator",
+      "access_level": "HR Review System Editor",
+      "annual_salary": 121000,
+      "email": "harper.lewis@northwind-example.com"
+    },
+    "B25_internal_transfer_promotion_procedure.txt": {
+      "employee_id": "EMP-1020",
+      "name": "Daniel Kim",
+      "department": "Talent Management",
+      "title": "Director",
+      "role": "Internal Mobility Partner",
+      "access_level": "HR Mobility Editor",
+      "annual_salary": 142900,
+      "email": "daniel.kim@northwind-example.com"
+    },
+    "C11_new_account_provisioning_manual.txt": {
+      "employee_id": "EMP-1021",
+      "name": "Lucas Bennett",
+      "department": "Identity Operations",
+      "title": "Associate",
+      "role": "Provisioning Engineer",
+      "access_level": "Directory Administrator",
+      "annual_salary": 72800,
+      "email": "lucas.bennett@northwind-example.com"
+    },
+    "C12_access_request_approval_procedure.txt": {
+      "employee_id": "EMP-1022",
+      "name": "Ava Morgan",
+      "department": "Access Management",
+      "title": "Senior Associate",
+      "role": "Entitlement Approver",
+      "access_level": "IAM Administrator",
+      "annual_salary": 88700,
+      "email": "ava.morgan@northwind-example.com"
+    },
+    "C13_privileged_access_management_procedure.txt": {
+      "employee_id": "EMP-1023",
+      "name": "Henry Cole",
+      "department": "Privileged Access",
+      "title": "Manager",
+      "role": "PAM Administrator",
+      "access_level": "Vault Superuser",
+      "annual_salary": 106600,
+      "email": "henry.cole@northwind-example.com"
+    },
+    "C14_access_review_recertification_procedure.txt": {
+      "employee_id": "EMP-1024",
+      "name": "Mia Patel",
+      "department": "Identity Governance",
+      "title": "Senior Manager",
+      "role": "Recertification Owner",
+      "access_level": "Governance Reviewer",
+      "annual_salary": 125500,
+      "email": "mia.patel@northwind-example.com"
+    },
+    "C15_sso_onboarding_guide.txt": {
+      "employee_id": "EMP-1025",
+      "name": "Leo Hughes",
+      "department": "Identity Engineering",
+      "title": "Director",
+      "role": "SSO Integration Lead",
+      "access_level": "Identity Provider Admin",
+      "annual_salary": 147400,
+      "email": "leo.hughes@northwind-example.com"
+    },
+    "D26_software_installation_approval_procedure.txt": {
+      "employee_id": "EMP-1026",
+      "name": "Ryan Mitchell",
+      "department": "Endpoint Engineering",
+      "title": "Associate",
+      "role": "Software Approval Reviewer",
+      "access_level": "Endpoint Management Admin",
+      "annual_salary": 77300,
+      "email": "ryan.mitchell@northwind-example.com"
+    },
+    "D27_production_deployment_approval_procedure.txt": {
+      "employee_id": "EMP-1027",
+      "name": "Nathan Cooper",
+      "department": "Release Engineering",
+      "title": "Senior Associate",
+      "role": "Deployment Approver",
+      "access_level": "CI/CD Pipeline Admin",
+      "annual_salary": 93200,
+      "email": "nathan.cooper@northwind-example.com"
+    },
+    "D28_change_management_procedure.txt": {
+      "employee_id": "EMP-1028",
+      "name": "Zoe Adams",
+      "department": "IT Service Management",
+      "title": "Manager",
+      "role": "Change Manager",
+      "access_level": "Change System Approver",
+      "annual_salary": 103000,
+      "email": "zoe.adams@northwind-example.com"
+    },
+    "D29_server_inspection_checklist.txt": {
+      "employee_id": "EMP-1029",
+      "name": "Owen Bell",
+      "department": "Infrastructure Operations",
+      "title": "Senior Manager",
+      "role": "Server Operations Engineer",
+      "access_level": "Server Root Access",
+      "annual_salary": 121900,
+      "email": "owen.bell@northwind-example.com"
+    },
+    "D30_infrastructure_change_approval_procedure.txt": {
+      "employee_id": "EMP-1030",
+      "name": "Lily Turner",
+      "department": "Network Infrastructure",
+      "title": "Director",
+      "role": "Infrastructure Change Approver",
+      "access_level": "Firewall Administrator",
+      "annual_salary": 143800,
+      "email": "lily.turner@northwind-example.com"
+    },
+    "D31_backup_restore_procedure.txt": {
+      "employee_id": "EMP-1031",
+      "name": "Eli Foster",
+      "department": "Backup and Recovery",
+      "title": "Associate",
+      "role": "Backup Administrator",
+      "access_level": "Backup System Superuser",
+      "annual_salary": 73700,
+      "email": "eli.foster@northwind-example.com"
+    },
+    "D32_network_access_control_standard.txt": {
+      "employee_id": "EMP-1032",
+      "name": "Chloe Diaz",
+      "department": "Network Security",
+      "title": "Senior Associate",
+      "role": "NAC Administrator",
+      "access_level": "Network Policy Admin",
+      "annual_salary": 89600,
+      "email": "chloe.diaz@northwind-example.com"
+    },
+    "D33_endpoint_management_patch_policy.txt": {
+      "employee_id": "EMP-1033",
+      "name": "Aaron Price",
+      "department": "Endpoint Operations",
+      "title": "Manager",
+      "role": "Patch Management Lead",
+      "access_level": "Endpoint Management Admin",
+      "annual_salary": 107500,
+      "email": "aaron.price@northwind-example.com"
+    },
+    "D34_cloud_resource_provisioning_guide.txt": {
+      "employee_id": "EMP-1034",
+      "name": "Maya Coleman",
+      "department": "Cloud Platform",
+      "title": "Senior Manager",
+      "role": "Cloud Provisioning Engineer",
+      "access_level": "Cloud Account Admin",
+      "annual_salary": 126400,
+      "email": "maya.coleman@northwind-example.com"
+    },
+    "D35_database_access_handling_standard.txt": {
+      "employee_id": "EMP-1035",
+      "name": "Caleb Ward",
+      "department": "Database Administration",
+      "title": "Director",
+      "role": "Database Access Approver",
+      "access_level": "Production DBA",
+      "annual_salary": 148300,
+      "email": "caleb.ward@northwind-example.com"
+    },
+    "E36_incident_response_runbook.txt": {
+      "employee_id": "EMP-1036",
+      "name": "Ruby Hayes",
+      "department": "Site Reliability",
+      "title": "Associate",
+      "role": "On-Call Incident Lead",
+      "access_level": "Monitoring System Admin",
+      "annual_salary": 78200,
+      "email": "ruby.hayes@northwind-example.com"
+    },
+    "E37_security_incident_response_procedure.txt": {
+      "employee_id": "EMP-1037",
+      "name": "Adam Foster",
+      "department": "Security Operations Center",
+      "title": "Senior Associate",
+      "role": "Incident Response Analyst",
+      "access_level": "SOC Administrator",
+      "annual_salary": 86000,
+      "email": "adam.foster@northwind-example.com"
+    },
+    "E38_vulnerability_reporting_procedure.txt": {
+      "employee_id": "EMP-1038",
+      "name": "Ella Brooks",
+      "department": "Product Security",
+      "title": "Manager",
+      "role": "Vulnerability Triage Lead",
+      "access_level": "Security Tracker Admin",
+      "annual_salary": 103900,
+      "email": "ella.brooks@northwind-example.com"
+    },
+    "E39_ransomware_response_playbook.txt": {
+      "employee_id": "EMP-1039",
+      "name": "Liam Foster",
+      "department": "Security Operations Center",
+      "title": "Senior Manager",
+      "role": "Ransomware Response Lead",
+      "access_level": "SOC Administrator",
+      "annual_salary": 122800,
+      "email": "liam.foster@northwind-example.com"
+    },
+    "E40_malicious_email_response_manual.txt": {
+      "employee_id": "EMP-1040",
+      "name": "Nora Bennett",
+      "department": "Email Security",
+      "title": "Director",
+      "role": "Malicious Email Responder",
+      "access_level": "Mail Gateway Admin",
+      "annual_salary": 144700,
+      "email": "nora.bennett@northwind-example.com"
+    },
+    "E41_log_retention_audit_policy.txt": {
+      "employee_id": "EMP-1041",
+      "name": "Grant Miller",
+      "department": "Security Operations Center",
+      "title": "Associate",
+      "role": "Log Management Engineer",
+      "access_level": "SIEM Administrator",
+      "annual_salary": 74600,
+      "email": "grant.miller@northwind-example.com"
+    },
+    "E42_data_breach_notification_procedure.txt": {
+      "employee_id": "EMP-1042",
+      "name": "Hannah Cole",
+      "department": "Privacy Office",
+      "title": "Senior Associate",
+      "role": "Breach Notification Coordinator",
+      "access_level": "Privacy Case Admin",
+      "annual_salary": 90500,
+      "email": "hannah.cole@northwind-example.com"
+    },
+    "E43_business_continuity_dr_plan.txt": {
+      "employee_id": "EMP-1043",
+      "name": "Victor Reed",
+      "department": "Resilience Office",
+      "title": "Manager",
+      "role": "Continuity Plan Coordinator",
+      "access_level": "Continuity System Editor",
+      "annual_salary": 108400,
+      "email": "victor.reed@northwind-example.com"
+    },
+    "E44_vendor_security_assessment_procedure.txt": {
+      "employee_id": "EMP-1044",
+      "name": "Stella Hughes",
+      "department": "Third-Party Risk",
+      "title": "Senior Manager",
+      "role": "Vendor Assessment Analyst",
+      "access_level": "Vendor Risk Admin",
+      "annual_salary": 127300,
+      "email": "stella.hughes@northwind-example.com"
+    },
+    "E45_penetration_test_coordination_procedure.txt": {
+      "employee_id": "EMP-1045",
+      "name": "Marcus Lee",
+      "department": "Offensive Security",
+      "title": "Director",
+      "role": "Penetration Test Coordinator",
+      "access_level": "Security Testing Admin",
+      "annual_salary": 149200,
+      "email": "marcus.lee@northwind-example.com"
+    },
+    "F46_customer_inquiry_faq.txt": {
+      "employee_id": "EMP-1046",
+      "name": "Paige Turner",
+      "department": "Customer Support",
+      "title": "Associate",
+      "role": "Support Response Reviewer",
+      "access_level": "Support Console Admin",
+      "annual_salary": 71000,
+      "email": "paige.turner@northwind-example.com"
+    },
+    "F47_customer_support_handling_procedure.txt": {
+      "employee_id": "EMP-1047",
+      "name": "Dylan Reed",
+      "department": "Customer Support",
+      "title": "Senior Associate",
+      "role": "Support Operations Lead",
+      "access_level": "Support System Admin",
+      "annual_salary": 86900,
+      "email": "dylan.reed@northwind-example.com"
+    },
+    "F48_product_feature_guide.txt": {
+      "employee_id": "EMP-1048",
+      "name": "Aria Foster",
+      "department": "Product Support",
+      "title": "Manager",
+      "role": "Feature Support Specialist",
+      "access_level": "Product Admin Console",
+      "annual_salary": 104800,
+      "email": "aria.foster@northwind-example.com"
+    },
+    "F49_incident_notice_template_guide.txt": {
+      "employee_id": "EMP-1049",
+      "name": "Connor Hayes",
+      "department": "Customer Communications",
+      "title": "Senior Manager",
+      "role": "Status Page Editor",
+      "access_level": "Status Page Publisher",
+      "annual_salary": 123700,
+      "email": "connor.hayes@northwind-example.com"
+    },
+    "F50_service_level_agreement_reference.txt": {
+      "employee_id": "EMP-1050",
+      "name": "Brooke Morgan",
+      "department": "Service Management",
+      "title": "Director",
+      "role": "SLA Reporting Analyst",
+      "access_level": "SLA Reporting Admin",
+      "annual_salary": 145600,
+      "email": "brooke.morgan@northwind-example.com"
+    }
+  }
+}

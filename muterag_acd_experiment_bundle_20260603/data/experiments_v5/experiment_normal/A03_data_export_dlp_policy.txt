@@ -1,0 +1,31 @@
+Data Export and Loss Prevention Policy
+
+Purpose
+This policy governs how internal data may leave the company boundary and how Data Loss Prevention (DLP) controls reduce the risk of accidental or malicious exfiltration. It protects intellectual property, customer data, and regulated information while still allowing legitimate, approved data sharing for business needs.
+
+Scope
+The policy applies to all outbound data channels, including email, removable media, file sharing, managed file transfer, and APIs, across every classification level. It covers employees, contractors, and automated jobs that move data outside the corporate environment, and it works alongside the document classification and external storage media procedures.
+
+Roles and Responsibilities
+Employees request and justify exports and handle data within their classification. Team leads approve Internal-data exports, while data owners and the security team approve Confidential or Restricted exports and bulk transfers. Data Governance maintains the policy and the DLP rules, investigates blocked transfers, and tunes detection. The privacy office is engaged when personal data is involved, and system owners ensure outbound channels are covered by DLP inspection so that no significant export path is unmonitored.
+
+Standard Procedure
+Outbound transfers are inspected by DLP against classification rules, and exports of Internal data require team-lead approval while Confidential or Restricted data requires data-owner and security approval. To export data, an employee submits a request through the internal system specifying the dataset, destination, and business justification, and the responsible department reviews and approves it before delivery.
+
+Required Information
+An export request must identify the dataset and its classification, the recipient and destination system, the volume or record count, the business justification, and the intended retention by the recipient. Bulk exports above 10,000 records always require security review, and requests for personal data must note the lawful basis and any required safeguards.
+
+Approval or Review Process
+Approvers confirm that the classification, justification, and recipient are appropriate and that encryption requirements are met before granting access. Approved exports of Confidential data must be encrypted in transit and at rest, and external recipients are verified. DLP exceptions are time-bound, automatically expire, and are re-reviewed if extended.
+
+Exceptions and Escalation
+When DLP blocks a legitimate transfer, the requester can submit a justification for a temporary, scoped exception that security reviews. Confirmed or suspected exfiltration attempts are escalated immediately to the security team, the data owner, and, for personal data, the privacy office, following the incident response process.
+
+Records and Retention
+Export approvals, justifications, recipients, and DLP exception logs are retained according to the data export operating standards for audit and investigation. Blocked-transfer events are logged centrally, and records are kept in line with legal and regulatory retention requirements before secure disposal.
+
+Compliance, Training and Review
+Staff who handle sensitive data complete data-handling training, and the policy is reviewed at least annually and after relevant incidents or regulatory change. Export approvals, DLP exceptions, and blocked-transfer events are audited periodically to confirm that controls work and that exceptions expire as intended. Patterns of repeated blocks or risky requests inform additional training or control changes. Confirmed exfiltration is handled as a security incident, and audit findings drive updates to the classification-based approval matrix.
+
+Contact
+Data Governance owns this policy and operates the DLP program with the security team. Employees submit export requests and exception requests through the internal system, and the export request form and classification matrix are available on the company intranet policy page.

@@ -1,0 +1,30 @@
+How are the request, approval, and verification procedures handled under the company Password and MFA policy?
+Please summarize the approval criteria and review procedure under the corporate data export policy.
+What request and approval criteria should general employees follow under the generative AI usage policy?
+Under the annual leave and remote work application rules, how does the process proceed from application submission to approval?
+How do the request, settlement, and approval procedures work under the business travel corporate card usage rules?
+What request and verification steps must employees follow under the company equipment issuance and return procedure?
+In the VPN remote access guide, how are authentication and connection processing procedures handled?
+Under the production deployment procedure, how are review items and approval criteria defined?
+How do the request, review, and approval stages proceed under the infrastructure change approval procedure?
+Under the ransomware response playbook, how do the reporting and response procedures proceed?
+What retention criteria and review procedures are defined under the log retention policy?
+In the customer inquiry FAQ, what processing procedures and verification items should employees follow when responding?
+How are the processing procedure and verification steps defined in the internal support manual?
+In the sales team's Company F RFP response document, how are review items and decisions organized?
+In the development team's post-incident analysis meeting minutes, how are decisions and follow-up actions recorded?
+Under the company internal information security policy, what reporting and verification steps must general employees follow?
+Under the account access management policy, how are the request, review, and approval steps for account permissions handled?
+Under the external storage media usage policy, what application and approval procedures must employees follow?
+Under the document classification policy, how do the review and approval criteria for assigning classification levels work?
+Under the software installation approval procedure, how do the request, review, and approval steps proceed?
+Under the external training application procedure, what submission and approval steps must employees follow?
+Under the new account provisioning manual, how are the request, verification, and issuance steps handled?
+Under the incident response runbook, what reporting and escalation steps must on-call engineers follow?
+Under the server inspection checklist, how are the verification items and approval steps organized?
+Under the security incident response procedure, what reporting and verification steps must employees follow?
+Under the vulnerability reporting procedure, how do the submission, review, and approval steps proceed?
+Under the malicious email response manual, what reporting and verification steps must employees follow?
+Under the access review procedure, how are the request, review, and approval steps for permission audits handled?
+Under the product feature guide, what verification steps must support staff follow when assisting customers?
+Under the incident notice template, what request and approval steps must staff follow when publishing an outage notification?

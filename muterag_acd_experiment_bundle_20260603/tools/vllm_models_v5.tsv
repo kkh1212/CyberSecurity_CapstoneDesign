@@ -1,0 +1,6 @@
+# alias	model	max_model_len	extra_vllm_args
+qwen25_7b	Qwen/Qwen2.5-7B-Instruct	8192	--dtype auto
+llama31_8b	meta-llama/Llama-3.1-8B-Instruct	8192	--dtype auto
+gemma3_12b_awq	pytorch/gemma-3-12b-it-AWQ-INT4	8192	--dtype auto --quantization awq --tokenizer pytorch/gemma-3-12b-it-AWQ-INT4 --trust-remote-code
+qwen25_14b_awq	Qwen/Qwen2.5-14B-Instruct-AWQ	8192	--dtype auto --quantization awq
+gpt_oss_20b	openai/gpt-oss-20b	8192	--dtype auto --trust-remote-code

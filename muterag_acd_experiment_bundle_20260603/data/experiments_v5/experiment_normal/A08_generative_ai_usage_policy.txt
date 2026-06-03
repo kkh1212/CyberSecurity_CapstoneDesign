@@ -1,0 +1,31 @@
+Generative AI Usage Policy
+
+Purpose
+This policy governs employee use of generative AI and large language model tools for work, balancing the productivity benefits with the risks of data leakage, inaccurate output, and licensing or privacy violations. It clarifies what data may be used with which tools and how new tools are approved.
+
+Scope
+The policy applies to both company-provided AI tools and external public AI services used for any work task, and to all employees and contractors. It complements the data classification and data export policies, which govern what information may be shared.
+
+Roles and Responsibilities
+Employees use only approved AI tools for the permitted data classes and human-review AI output before it is published. The responsible department, with AI Governance and the security and privacy teams, assesses and approves new tools. AI Governance maintains the policy and the approved-tool list, and data owners advise on whether specific data may be used. Reviewers of AI-assisted deliverables remain accountable for accuracy, licensing, and bias in what they release.
+
+Standard Procedure
+Public and Internal information may be entered into approved AI tools, but Confidential or Restricted data, personal data, and source code must never be pasted into external public services; approved enterprise tools with data-protection agreements may handle broader content. To adopt a new AI tool, an employee submits a request through the internal system, and the responsible department reviews and approves it after a security and privacy assessment.
+
+Required Information
+A tool adoption request should describe the tool, the vendor and its data-handling terms, the categories of data to be used, and the business purpose. Output that will appear in business deliverables must be human-reviewed for accuracy, licensing, and bias, and the reviewer remains accountable for what is published.
+
+Approval or Review Process
+The responsible department, with the AI governance and security functions, reviews and approves new tools and records the assessment outcome. Approved tools are added to the published list, and approvals are revisited when the tool or its terms change materially.
+
+Exceptions and Escalation
+Temporary pilots of unapproved tools may be permitted with restricted, non-sensitive data and an expiry date under a documented exception. Any entry of confidential or personal data into an unapproved service is treated as a potential data exposure and escalated to security and privacy.
+
+Records and Retention
+Tool approvals, assessments, and exceptions are retained according to operating standards. Where enterprise tools log prompts, those logs follow the standard retention and access controls, and records are kept for audit before secure disposal.
+
+Compliance, Training and Review
+Staff using generative AI complete brief guidance on permitted data and review obligations, and the policy is reviewed at least annually as tools and terms evolve. Tool approvals and assessments are audited, and enterprise-tool prompt logs, where they exist, follow standard retention and access controls. Entry of confidential or personal data into unapproved services is treated as a data exposure, and review findings update the approved-tool list and usage guidance to reflect new capabilities and risks.
+
+Contact
+AI Governance owns this policy with the security and privacy teams. Employees submit tool requests through the internal system, and the list of approved AI tools and usage guidance is on the company intranet policy page.
